@@ -345,14 +345,14 @@ def run(args):
             cv2.rectangle(overlay, (x0,y0), (x1,y1), (0,0,255), 1)
             cv2.putText(overlay, f'{row}:{record["class_name"]}', (x0,max(8,y0-2)),
                         cv2.FONT_HERSHEY_SIMPLEX, .32, (0,0,255), 1)
-        if any(mask_differences):
-            raise ValueError('mask_reference_mapping_mismatch')
         write_json(out / 'mask-reference-comparison.json',
                    {'candidate_ids': [r['candidate_id'] for r in selected],
                     'different_pixels_by_candidate': mask_differences,
                     'max_different_pixels': max(mask_differences, default=0),
                     'reference': 'actual PPDocLayoutV3ImageProcessor._extract_polygon_points_by_masks',
                     'polygons': polygons})
+        if any(mask_differences):
+            raise ValueError('mask_reference_mapping_mismatch')
         if reference:
             gt = [{'category': next(c['name'] for c in reference['categories'] if c['id']==ann['category_id']),
                    'box_xywh': ann['bbox'], 'best_detection_iou': max((iou(rec['box_xyxy'], ann['bbox'])
