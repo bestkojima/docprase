@@ -1,0 +1,180 @@
+# 拟议配置格式：需要后续实现 ConfigLoader / PlanBuilder。
+# 当前两个模型的运行时契约尚未 probe，production 应拒绝执行。
+schema_version: "1.1"
+pipeline_id: doclayout_ovis_mnn
+mode: development
+platform_profile: windows_cpu
+
+validation:
+  reject_unknown_fields: true
+  require_verified_io_contract: true
+  reject_duplicate_processing: true
+  reject_missing_required_processing: true
+  freeze_plan_per_job: true
+
+models:
+  layout:
+    repository: https://modelscope.cn/models/dr3334/PP-DocLayoutV3-mnn
+    revision: c67c1a858d5f6c855172d4cfdf931798dafa2edd
+    entrypoint: PP-DocLayoutV3.mnn
+    sha256: 5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67
+    root: ./models/doclayout
+    engine: mnn.tensor
+    adapter: pp_doclayout_v3
+    contract_status: pending_probe
+    reference_profile: rapiddoc.doclayout_v3.800_rgb01_nchw
+    io_contract: null # names/shapes/dtypes/scale_factor/outputs 须探测后填写
+    required_skills: [layout.detect]
+    processing:
+      preprocess:
+        owner: adapter
+        required: true
+        preset: pp_doclayout_v3_reference
+        # 参考值，不保证该 MNN 图未内置 resize/normalize。
+        params:
+          resize_hw: [800, 800]
+          interpolation: cubic
+          scale: 0.00392156862745098
+          mean: [0.0, 0.0, 0.0]
+          std: [1.0, 1.0, 1.0]
+          dtype: float32
+          layout: NCHW
+      postprocess:
+        owner: adapter
+        required: true
+        preset: pp_doclayout_v3_decode
+        params:
+          score_threshold: 0.3 # 开发基线，需要业务集验证
+          nms_owner: unresolved
+          output_coordinate_space: unresolved
+          reading_order_encoding: unresolved
+  ovis:
+    repository: https://modelscope.cn/models/dr3334/ovrics-ocrv2_mnn
+    revision: 20f12e49d846941e67829a7a7c3645693e485942
+    root: ./models/ovis
+    entrypoint: config.json
+    engine: mnn.generation
+    adapter: ovis_ocr2
+    contract_status: pending_probe
+    required_files:
+      - config.json
+      - llm_config.json
+      - llm.mnn
+      - llm.mnn.weight
+      - visual.mnn
+      - visual.mnn.weight
+      - tokenizer.mtok
+    declared_skills: [ocr.transcribe]
+    quality_validation: pending_region_dataset
+    session_policy: fresh_per_region
+    prompt_profile: ovis_markdown_baseline
+    processing:
+      preprocess:
+        owner: runtime
+        required: true
+        preset: mnn_multimodal_from_package
+        external_normalize: false
+        external_fixed_resize: false
+      postprocess:
+        owner: adapter
+        required: true
+        preset: ovis_fragment_decoder
+        preserve_raw: true
+        reject_truncated_as_success: true
+    package_observations: # 只用于核对，不另外施加一次预处理
+      model_type: qwen3_5
+      image_size: 420
+      image_size_unit: 32
+      image_min_pixels: 65536
+      image_max_pixels: 16777216
+      image_mean: [127.5, 127.5, 127.5]
+      image_norm: [0.00784313725490196, 0.00784313725490196, 0.00784313725490196]
+
+prompts:
+  ovis_markdown_baseline:
+    template_owner: runtime
+    source: converted_package_readme
+    text: >-
+      Extract all readable content from the image in natural human reading order
+      and output the result as a single Markdown document. Format formulas as
+      LaTeX and tables as HTML. Preserve the original text without translation
+      or paraphrasing.
+
+skills:
+  layout.detect: {model: layout, output: layout_blocks}
+  text.recognize: {model: ovis, task: transcribe, output_parser: markdown_fragment}
+  formula.recognize: {model: ovis, task: transcribe, output_parser: formula_fragment}
+  table.recognize: {model: ovis, task: transcribe, output_parser: html_table_fragment}
+  image.preserve: {processor: asset_writer}
+  document.assemble: {processor: document_assembler}
+
+page_processing:
+  canonical_color: RGB8
+  decode_orientation: {mode: required, owner: page_loader}
+  deskew: {mode: disabled}
+  dewarp: {mode: disabled}
+  binarize: {mode: disabled}
+  sharpen: {mode: disabled}
+  # conditional 模式必须配置已注册 detector/predicate、测量阈值。
+
+region_processing:
+  crop: {mode: required, preserve_original: true, track_transform: true}
+  pre_recognition_merge: {mode: disabled}
+  formula_mask: {mode: disabled}
+  inline_formula_policy: parent_owns_inline
+  table_children_policy: table_owns_children
+
+routes:
+  text: text.recognize
+  title: text.recognize
+  caption: text.recognize
+  list: text.recognize
+  display_formula: formula.recognize
+  table: table.recognize
+  image: image.preserve
+  chart: image.preserve
+  unknown: image.preserve
+  # inline_formula 由归属规划消费，不发起重复独立识别。
+
+flow:
+  - {id: load, processor: page_loader, depends_on: []}
+  - {id: prepare_page, processor: page_processing_chain, depends_on: [load]}
+  - {id: layout, skill: layout.detect, depends_on: [prepare_page]}
+  - {id: plan_regions, processor: region_planner, depends_on: [layout]}
+  - {id: recognize, processor: region_router, depends_on: [plan_regions]}
+  - {id: assemble, skill: document.assemble, depends_on: [recognize]}
+  - {id: export, processor: document_exporter, depends_on: [assemble]}
+
+execution:
+  on_region_error: keep_raw_and_image
+  allow_cloud_fallback: false
+  max_region_retries: 1
+  # 以下是拟议 API 语义，由 backend 映射到锁定 SDK 的合法参数。
+  generation_strategy: greedy
+  max_new_tokens: 4096
+  region_timeout_ms: 120000
+  max_tiles_per_region: 4
+  max_page_pixels: 16000000
+  # 上述预算为开发起点，未作为性能/精度承诺。
+
+platforms:
+  windows_cpu:
+    device: cpu
+    threads: 4
+    vlm_instances: 1
+    max_inflight_pages: 1
+    allow_device_fallback: false
+  android_cpu:
+    device: cpu
+    threads: 4
+    vlm_instances: 1
+    max_inflight_pages: 1
+    allow_device_fallback: false
+    status: pending_device_validation
+
+exports:
+  formats: [markdown, json]
+  assets: true
+  effective_config: true
+  execution_plan: true
+  processing_trace: true
