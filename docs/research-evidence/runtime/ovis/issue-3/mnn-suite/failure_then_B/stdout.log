@@ -1,0 +1,2 @@
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+OVIS_PROBE {"status":"NORMAL_FINISHED","tokens":139,"vision_us":529878,"pixels_mp":0.258048}

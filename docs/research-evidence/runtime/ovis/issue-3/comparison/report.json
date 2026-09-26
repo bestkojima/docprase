@@ -1,0 +1,44 @@
+{
+  "kind": "same_image_same_prompt_original_framework_vs_MNN",
+  "samples": {
+    "chinese_text": {
+      "image_sha256": "90d55dac7653019970fa2cda9943acbd6d09558fc03f08e12d1837c4535fdbad",
+      "original_stop_reason": "normal",
+      "mnn_stop_reason": "normal",
+      "original_generated_tokens": 39,
+      "mnn_generated_tokens": 39,
+      "original_raw_sha256": "60edeedd053e743ab92284611e0a450a8a831b2e40d33ae14282a9a006dbb402",
+      "mnn_raw_sha256": "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546",
+      "byte_exact": false,
+      "equal_ignoring_terminal_newline": true,
+      "diff": "chinese_text.original-vs-mnn.diff"
+    },
+    "printed_formula": {
+      "image_sha256": "800eb57b9113d1c53465595b66ea8b8e090e3d4e90aae19c78340724bf7fa53d",
+      "original_stop_reason": "normal",
+      "mnn_stop_reason": "normal",
+      "original_generated_tokens": 15,
+      "mnn_generated_tokens": 13,
+      "original_raw_sha256": "742c139c955311fedd9fd04d16acb878c48b28545270961d7466aaff3572073d",
+      "mnn_raw_sha256": "52e809937841d20b6b14b615d05e89ec58a27c963cacc225d84ebc0ca59a9a90",
+      "byte_exact": false,
+      "equal_ignoring_terminal_newline": false,
+      "diff": "printed_formula.original-vs-mnn.diff"
+    },
+    "complete_table": {
+      "image_sha256": "731414df2b519919cd9997a12b801a5c037a3b9866adc725fbf39845aa210cbc",
+      "original_stop_reason": "normal",
+      "mnn_stop_reason": "normal",
+      "original_generated_tokens": 139,
+      "mnn_generated_tokens": 139,
+      "original_raw_sha256": "796799c311649f9b38ab06e21c33236f92e46eee4931c43a89a780d55c1f4cfa",
+      "mnn_raw_sha256": "f5f90f8fa95ff4fc823311196df525ad975463c5daab867945b539f98e4c33ee",
+      "byte_exact": false,
+      "equal_ignoring_terminal_newline": true,
+      "diff": "complete_table.original-vs-mnn.diff"
+    }
+  },
+  "all_original_runs_normal": true,
+  "prompt_sha256": "de9617f877f6110d22adf1a6ba2a96221189dc246fb1fef161e408d37bff5267",
+  "max_tokens": 512
+}

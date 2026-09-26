@@ -1,0 +1,35 @@
+{
+  "image": "/home/dr/project/docprase/tests/fixtures/ovis/printed_formula.png",
+  "image_sha256": "800eb57b9113d1c53465595b66ea8b8e090e3d4e90aae19c78340724bf7fa53d",
+  "command": [
+    "/home/dr/project/docprase/output/model-probe-ovis/model_probe_ovis",
+    "/home/dr/project/docprase/output/ovis-suite-issue3-author-prompt/effective-config.json",
+    "/home/dr/project/docprase/tests/fixtures/ovis/printed_formula.png",
+    "\nExtract all readable content from the image in natural human reading order and output the result as a single Markdown document. For charts or images, represent them using an HTML image tag: <img src=\"images/bbox_{left}_{top}_{right}_{bottom}.jpg\" />, where left, top, right, bottom are bounding box coordinates scaled to [0, 1000). Format formulas as LaTeX. Format tables as HTML: <table>...</table>. Transcribe all other text as standard Markdown. Preserve the original text without translation or paraphrasing.",
+    "512",
+    "/home/dr/project/docprase/output/ovis-suite-issue3-author-prompt/printed_formula/raw.txt"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 2.436,
+  "stop_reason": "normal",
+  "completeness": "complete",
+  "runtime": {
+    "status": "NORMAL_FINISHED",
+    "tokens": 13,
+    "vision_us": 116865,
+    "pixels_mp": 0.089088
+  },
+  "visual_processing_confirmed": true,
+  "process_group_terminated": null,
+  "raw_sha256": "52e809937841d20b6b14b615d05e89ec58a27c963cacc225d84ebc0ca59a9a90",
+  "raw_bytes": 58,
+  "reference": {
+    "path": "/home/dr/project/docprase/tests/fixtures/ovis/printed_formula.reference.txt",
+    "sha256": "4de01fb45ac2fc51c5a989f0692184a06c85c0c565041c8eb56b4da4c6beed8d",
+    "exact_match": false
+  },
+  "format_check": {
+    "valid": false,
+    "requirement": "LaTeX 公式标记"
+  }
+}

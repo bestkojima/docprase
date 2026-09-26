@@ -1,0 +1,108 @@
+{
+  "source_dataset": "opendatalab/OmniDocBench",
+  "source_revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "source_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench",
+  "source_annotation_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496",
+  "crop_margin_pixels": 4,
+  "samples": [
+    {
+      "name": "chinese_text",
+      "image": "chinese_text.png",
+      "image_sha256": "90d55dac7653019970fa2cda9943acbd6d09558fc03f08e12d1837c4535fdbad",
+      "reference": "chinese_text.reference.txt",
+      "reference_sha256": "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546",
+      "reference_kind": "OmniDocBench_ground_truth",
+      "source_page": "images/docstructbench_dianzishu_zhongwenzaixian-o.O-61520788.pdf_391.jpg",
+      "source_page_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+      "source_data_source": "book",
+      "annotation_id": 16,
+      "annotation_field": "text",
+      "source_polygon": [
+        97.659965,
+        173.874894,
+        1239.452045,
+        173.874894,
+        1239.452045,
+        255.836715,
+        97.659965,
+        255.836715
+      ],
+      "crop_xyxy": [
+        93,
+        169,
+        1244,
+        260
+      ],
+      "image_size": [
+        1151,
+        91
+      ]
+    },
+    {
+      "name": "printed_formula",
+      "image": "printed_formula.png",
+      "image_sha256": "800eb57b9113d1c53465595b66ea8b8e090e3d4e90aae19c78340724bf7fa53d",
+      "reference": "printed_formula.reference.txt",
+      "reference_sha256": "4de01fb45ac2fc51c5a989f0692184a06c85c0c565041c8eb56b4da4c6beed8d",
+      "reference_kind": "OmniDocBench_ground_truth",
+      "source_page": "images/docstructbench_dianzishu_zhongwenzaixian-o.O-61520788.pdf_391.jpg",
+      "source_page_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+      "source_data_source": "book",
+      "annotation_id": 0,
+      "annotation_field": "latex",
+      "source_polygon": [
+        389.99044499999997,
+        1748.5037360000001,
+        947.176464,
+        1748.5037360000001,
+        947.176464,
+        1784.604415,
+        389.99044499999997,
+        1784.604415
+      ],
+      "crop_xyxy": [
+        385,
+        1744,
+        952,
+        1789
+      ],
+      "image_size": [
+        567,
+        45
+      ]
+    },
+    {
+      "name": "complete_table",
+      "image": "complete_table.png",
+      "image_sha256": "731414df2b519919cd9997a12b801a5c037a3b9866adc725fbf39845aa210cbc",
+      "reference": "complete_table.reference.txt",
+      "reference_sha256": "a855eb98c52af11564964babe33cfc603b5c92d9b729b5b28172d3e6f8d321d7",
+      "reference_kind": "OmniDocBench_ground_truth",
+      "source_page": "images/docstructbench_dianzishu_zhongwenzaixian-o.O-61520788.pdf_391.jpg",
+      "source_page_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+      "source_data_source": "book",
+      "annotation_id": 10,
+      "annotation_field": "html",
+      "source_polygon": [
+        98.32601364760193,
+        883.3424019180816,
+        1239.615403,
+        883.3424019180816,
+        1239.615403,
+        1110.1507995409593,
+        98.32601364760193,
+        1110.1507995409593
+      ],
+      "crop_xyxy": [
+        94,
+        879,
+        1244,
+        1115
+      ],
+      "image_size": [
+        1150,
+        236
+      ]
+    }
+  ]
+}

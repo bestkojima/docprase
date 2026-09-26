@@ -1,0 +1,8 @@
+{
+  "original_repository": "https://huggingface.co/ATH-MaaS/OvisOCR2",
+  "verified_hub_revision": "1fc9221b7823a371d6e97f92d527cc847e24e107",
+  "model_safetensors_lfs_sha256": "9270560288656ece5cb3a6989001afcf5af8d223bceed4a423c33a008861d009",
+  "verification": "2026-09-26 Hugging Face model API siblings model.safetensors LFS SHA-256 equals local SHA-256",
+  "original_prompt_source": "local README.md Inference section",
+  "runtime": "Transformers 5.16.1, Torch 2.13.0+cu130, CPU float32, original AutoProcessor defaults"
+}

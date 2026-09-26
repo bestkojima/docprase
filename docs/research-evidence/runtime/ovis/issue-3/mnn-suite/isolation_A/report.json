@@ -1,0 +1,26 @@
+{
+  "image": "/home/dr/project/docprase/tests/fixtures/ovis/chinese_text.png",
+  "image_sha256": "90d55dac7653019970fa2cda9943acbd6d09558fc03f08e12d1837c4535fdbad",
+  "command": [
+    "/home/dr/project/docprase/output/model-probe-ovis/model_probe_ovis",
+    "/home/dr/project/docprase/output/ovis-suite-issue3-author-prompt/effective-config.json",
+    "/home/dr/project/docprase/tests/fixtures/ovis/chinese_text.png",
+    "\nExtract all readable content from the image in natural human reading order and output the result as a single Markdown document. For charts or images, represent them using an HTML image tag: <img src=\"images/bbox_{left}_{top}_{right}_{bottom}.jpg\" />, where left, top, right, bottom are bounding box coordinates scaled to [0, 1000). Format formulas as LaTeX. Format tables as HTML: <table>...</table>. Transcribe all other text as standard Markdown. Preserve the original text without translation or paraphrasing.",
+    "512",
+    "/home/dr/project/docprase/output/ovis-suite-issue3-author-prompt/isolation_A/raw.txt"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 2.875,
+  "stop_reason": "normal",
+  "completeness": "complete",
+  "runtime": {
+    "status": "NORMAL_FINISHED",
+    "tokens": 39,
+    "vision_us": 162559,
+    "pixels_mp": 0.110592
+  },
+  "visual_processing_confirmed": true,
+  "process_group_terminated": null,
+  "raw_sha256": "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546",
+  "raw_bytes": 190
+}
