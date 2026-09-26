@@ -22,7 +22,11 @@ public:
     std::vector<ArtifactInfo> loaded_artifacts() const override { return loaded_; }
     const EngineCapabilities& capabilities() const override { return capabilities_; }
     std::string profile() const override {
-        return loaded_.empty() ? "test_fixture" : "test_fixture/" + loaded_.front().sha256.substr(0, 8);
+        if (loaded_.empty()) return "test_fixture";
+        std::string profile = "test_fixture";
+        for (const auto& artifact : loaded_)
+            profile += "/" + artifact.model + "=" + artifact.sha256;
+        return profile;
     }
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {

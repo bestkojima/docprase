@@ -24,7 +24,7 @@ def config(root):
     model = {"contract_status": "verified_fixture", "root": str(root), "artifacts": [
         {"path": artifact.name, "sha256": hashlib.sha256(artifact.read_bytes()).hexdigest()}]}
     return {"schema_version": "1.0", "mode": "development", "backend": "fixture:normalized",
-            "models": {"layout": model, "recognition": model},
+            "models": {"layout": model, "recognition": copy.deepcopy(model)},
             "skills": {"layout.detect": "layout", "ocr.transcribe": "recognition"},
             "flow": FLOW, "processing": [
                 {"id": "decode", "owner": "adapter", "enabled": True},
@@ -62,7 +62,9 @@ def main():
         assert plan["config_hash"] == hashlib.sha256(canonical.encode()).hexdigest()
         assert [step["output_kind"] for step in plan["resolved_flow"]] == [
             "page", "layout_blocks", "block_results", "document", "output"]
-        assert manifest["actual_backend"] == "test_fixture/" + good["models"]["layout"]["artifacts"][0]["sha256"][:8]
+        layout_hash = good["models"]["layout"]["artifacts"][0]["sha256"]
+        recognition_hash = good["models"]["recognition"]["artifacts"][0]["sha256"]
+        assert manifest["actual_backend"] == f"test_fixture/layout={layout_hash}/recognition={recognition_hash}"
         assert manifest["actual_device"] == "cpu"
         assert trace["decode"]["status"] == "executed"
         assert trace["normalize"]["status"] == "executed"
@@ -170,7 +172,15 @@ def main():
         result = invoke(binary, changed_cfg, source, root)
         assert result.returncode == 0, result.stderr
         changed_document = json.loads((root / "out/document.json").read_text())
-        assert changed_document["pages"][0]["blocks"][0]["provenance"]["model_profile"] == "test_fixture/" + digest[:8]
+        assert changed_document["pages"][0]["blocks"][0]["provenance"]["model_profile"] == \
+            f"test_fixture/layout={digest}/recognition={digest}"
+        recognition_only = copy.deepcopy(good)
+        recognition_only["models"]["recognition"]["artifacts"][0] = {"path": changed.name, "sha256": digest}
+        result = invoke(binary, recognition_only, source, root)
+        assert result.returncode == 0, result.stderr
+        recognition_document = json.loads((root / "out/document.json").read_text())
+        assert recognition_document["pages"][0]["blocks"][0]["provenance"]["model_profile"] == \
+            f"test_fixture/layout={layout_hash}/recognition={digest}"
         for backend, expected_reset, expected_crop in [
             ("fixture:reset_failure", "failed", "executed"),
             ("fixture:blank", "identity_validated", "identity_validated"),
