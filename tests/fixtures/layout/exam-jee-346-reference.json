@@ -1,0 +1,121 @@
+{
+  "source_revision": "3bb962636c14b2630d308a77df2b3f5b768bb434",
+  "image": {
+    "id": 169,
+    "license": 1,
+    "file_name": "2288acd7-JEE_346_jpg.rf.dfdce22db409f96a0773f4b07b058e7b.jpg",
+    "height": 640,
+    "width": 640,
+    "date_captured": "2024-10-14T14:40:41+00:00"
+  },
+  "categories": [
+    {
+      "id": 0,
+      "name": "class_check",
+      "supercategory": "none"
+    },
+    {
+      "id": 1,
+      "name": "Answer_Block",
+      "supercategory": "class_check"
+    },
+    {
+      "id": 2,
+      "name": "Description",
+      "supercategory": "class_check"
+    },
+    {
+      "id": 3,
+      "name": "Instruction",
+      "supercategory": "class_check"
+    },
+    {
+      "id": 4,
+      "name": "Question_Answer_Block",
+      "supercategory": "class_check"
+    },
+    {
+      "id": 5,
+      "name": "Question_Block",
+      "supercategory": "class_check"
+    },
+    {
+      "id": 6,
+      "name": "Question_Paper_Area",
+      "supercategory": "class_check"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1602,
+      "image_id": 169,
+      "category_id": 6,
+      "bbox": [
+        41,
+        37,
+        553,
+        341
+      ],
+      "area": 188573,
+      "segmentation": [],
+      "iscrowd": 0
+    },
+    {
+      "id": 1603,
+      "image_id": 169,
+      "category_id": 4,
+      "bbox": [
+        41,
+        37,
+        553,
+        221
+      ],
+      "area": 122213,
+      "segmentation": [],
+      "iscrowd": 0
+    },
+    {
+      "id": 1604,
+      "image_id": 169,
+      "category_id": 5,
+      "bbox": [
+        41,
+        37,
+        553,
+        220
+      ],
+      "area": 121660,
+      "segmentation": [],
+      "iscrowd": 0
+    },
+    {
+      "id": 1605,
+      "image_id": 169,
+      "category_id": 4,
+      "bbox": [
+        41,
+        260,
+        553,
+        118
+      ],
+      "area": 65254,
+      "segmentation": [],
+      "iscrowd": 0
+    },
+    {
+      "id": 1606,
+      "image_id": 169,
+      "category_id": 5,
+      "bbox": [
+        41,
+        260,
+        553,
+        118
+      ],
+      "area": 65254,
+      "segmentation": [],
+      "iscrowd": 0
+    }
+  ],
+  "image_sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade"
+}

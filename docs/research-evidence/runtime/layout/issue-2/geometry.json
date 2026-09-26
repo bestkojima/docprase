@@ -1,0 +1,8 @@
+{
+  "class_score_rank_max_abs": 0.0,
+  "twice_box_max_abs": 0.0,
+  "masks_exactly_equal": true,
+  "rank_unique": 122,
+  "rank_duplicate_count": 178,
+  "rank_is_continuous": false
+}

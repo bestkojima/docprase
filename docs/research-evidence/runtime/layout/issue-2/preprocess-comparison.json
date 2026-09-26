@@ -1,0 +1,19 @@
+{
+  "reference": "torch.nn.functional.interpolate bicubic align_corners=False, antialias=False",
+  "candidate": "OpenCV INTER_CUBIC RGB uint8",
+  "pillow": "Pillow BICUBIC RGB uint8",
+  "tolerance_max_abs": 0.003921668627450981,
+  "candidate_vs_reference": {
+    "max_abs": 0.003921568393707275,
+    "mean_abs": 1.1029410984519927e-07,
+    "p99_abs": 0.0,
+    "different_fraction": 2.8125e-05
+  },
+  "pillow_vs_reference": {
+    "max_abs": 0.09803920984268188,
+    "mean_abs": 0.0007173345074988902,
+    "p99_abs": 0.019607841968536377,
+    "different_fraction": 0.07046875
+  },
+  "reference_pass": true
+}

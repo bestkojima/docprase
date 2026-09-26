@@ -1,0 +1,5 @@
+command: c++ -std=c++17 -O2 -I /home/dr/project/MNN/include /home/dr/project/docprase/scripts/model_probe_layout.cpp -L /home/dr/project/MNN/build -lMNN -Wl,-rpath,/home/dr/project/MNN/build -o /home/dr/project/docprase/output/layout-issue-2/model_probe_layout_runner
+exit_code: 0
+stdout:
+
+stderr:

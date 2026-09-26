@@ -1,0 +1,22 @@
+command: /home/dr/project/MNN/build/GetMNNInfo /home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn
+exit_code: 0
+stdout:
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Model default dimensionFormat is NCHW
+Model Inputs:
+[ im_shape ]: dimensionFormat: NCHW, size: [ 1,2 ], type is float
+[ image ]: dimensionFormat: NCHW, size: [ 1,3,800,800 ], type is float
+[ scale_factor ]: dimensionFormat: NCHW, size: [ 1,2 ], type is float
+Model Outputs:
+[ fetch_name_0 ]
+[ fetch_name_1 ]
+[ fetch_name_2 ]
+Model Version: 3.6.1 
+Model bizCode: PPDocLayoutV3
+Get Op info to op.txt
+Appen op lists to op.txt
+Origin Op: 33
+Current Op: 33
+Appen op lists to op.txt
+
+stderr:

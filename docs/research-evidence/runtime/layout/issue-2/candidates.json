@@ -1,0 +1,5670 @@
+[
+  {
+    "candidate_id": 0,
+    "mask_row": 0,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.8826355338096619,
+    "box_xyxy": [
+      65.29190063476562,
+      41.02151870727539,
+      561.322998046875,
+      63.28407287597656
+    ],
+    "rank": 26.0,
+    "mask_nonzero": 1082,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 1,
+    "mask_row": 1,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.8814817667007446,
+    "box_xyxy": [
+      102.28240966796875,
+      218.3667755126953,
+      568.0321044921875,
+      241.90676879882812
+    ],
+    "rank": 145.0,
+    "mask_nonzero": 1121,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 2,
+    "mask_row": 2,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.8752582669258118,
+    "box_xyxy": [
+      65.13042449951172,
+      279.90179443359375,
+      543.6095581054688,
+      302.547119140625
+    ],
+    "rank": 171.0,
+    "mask_nonzero": 1137,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 3,
+    "mask_row": 3,
+    "class_id": 12,
+    "class_name": "header",
+    "score": 0.8064542412757874,
+    "box_xyxy": [
+      55.751243591308594,
+      26.416540145874023,
+      136.28656005859375,
+      34.617767333984375
+    ],
+    "rank": 0.0,
+    "mask_nonzero": 78,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 4,
+    "mask_row": 4,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.8063304424285889,
+    "box_xyxy": [
+      184.52818298339844,
+      194.73468017578125,
+      283.1476745605469,
+      206.54067993164062
+    ],
+    "rank": 135.0,
+    "mask_nonzero": 125,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 5,
+    "mask_row": 5,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.7966179251670837,
+    "box_xyxy": [
+      102.71348571777344,
+      194.96939086914062,
+      432.5394287109375,
+      207.19949340820312
+    ],
+    "rank": 108.0,
+    "mask_nonzero": 431,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 6,
+    "mask_row": 6,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.7646616697311401,
+    "box_xyxy": [
+      105.4489517211914,
+      196.16610717773438,
+      161.6087646484375,
+      206.2853240966797
+    ],
+    "rank": 121.0,
+    "mask_nonzero": 69,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 7,
+    "mask_row": 7,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.7186025381088257,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 8,
+    "mask_row": 8,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.7041523456573486,
+    "box_xyxy": [
+      343.0357360839844,
+      53.032501220703125,
+      357.61572265625,
+      62.67474365234375
+    ],
+    "rank": 57.0,
+    "mask_nonzero": 19,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 9,
+    "mask_row": 9,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.6986595392227173,
+    "box_xyxy": [
+      308.7655029296875,
+      52.86829376220703,
+      321.9603271484375,
+      62.76813888549805
+    ],
+    "rank": 53.0,
+    "mask_nonzero": 17,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 10,
+    "mask_row": 10,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.6842779517173767,
+    "box_xyxy": [
+      550.4081420898438,
+      220.1118621826172,
+      566.3704223632812,
+      229.33526611328125
+    ],
+    "rank": 166.0,
+    "mask_nonzero": 15,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 11,
+    "mask_row": 11,
+    "class_id": 3,
+    "class_name": "chart",
+    "score": 0.6840654611587524,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 12,
+    "mask_row": 12,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.6828503012657166,
+    "box_xyxy": [
+      202.4895477294922,
+      280.68670654296875,
+      219.2340087890625,
+      290.4873046875
+    ],
+    "rank": 182.0,
+    "mask_nonzero": 18,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 13,
+    "mask_row": 13,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.6558908820152283,
+    "box_xyxy": [
+      153.1410369873047,
+      219.23202514648438,
+      176.16346740722656,
+      229.64633178710938
+    ],
+    "rank": 159.0,
+    "mask_nonzero": 28,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 14,
+    "mask_row": 14,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.634965717792511,
+    "box_xyxy": [
+      516.2636108398438,
+      220.3697509765625,
+      529.9974975585938,
+      229.14649963378906
+    ],
+    "rank": 163.0,
+    "mask_nonzero": 15,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 15,
+    "mask_row": 15,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.5667667984962463,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": true,
+    "reasons": []
+  },
+  {
+    "candidate_id": 16,
+    "mask_row": 16,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.4974822998046875,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 17,
+    "mask_row": 17,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.4832287132740021,
+    "box_xyxy": [
+      371.9908142089844,
+      41.690155029296875,
+      438.67730712890625,
+      51.32442855834961
+    ],
+    "rank": 47.0,
+    "mask_nonzero": 63,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 18,
+    "mask_row": 18,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.4823104739189148,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 19,
+    "mask_row": 19,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.4532417953014374,
+    "box_xyxy": [
+      294.8193664550781,
+      316.41583251953125,
+      319.704345703125,
+      327.3565979003906
+    ],
+    "rank": 247.0,
+    "mask_nonzero": 25,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 20,
+    "mask_row": 20,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.4408588707447052,
+    "box_xyxy": [
+      105.364990234375,
+      218.83657836914062,
+      132.08290100097656,
+      230.32861328125
+    ],
+    "rank": 152.0,
+    "mask_nonzero": 33,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 21,
+    "mask_row": 21,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.4342474341392517,
+    "box_xyxy": [
+      178.93373107910156,
+      331.55926513671875,
+      312.4190368652344,
+      341.0861511230469
+    ],
+    "rank": 270.0,
+    "mask_nonzero": 151,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 22,
+    "mask_row": 22,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.3516809046268463,
+    "box_xyxy": [
+      176.49539184570312,
+      314.84625244140625,
+      346.0491638183594,
+      328.707275390625
+    ],
+    "rank": 227.0,
+    "mask_nonzero": 237,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 23,
+    "mask_row": 23,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.3442128300666809,
+    "box_xyxy": [
+      410.1047058105469,
+      197.59036254882812,
+      430.2349548339844,
+      205.87783813476562
+    ],
+    "rank": 143.0,
+    "mask_nonzero": 14,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 24,
+    "mask_row": 24,
+    "class_id": 12,
+    "class_name": "header",
+    "score": 0.3014618754386902,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 25,
+    "mask_row": 25,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.3007092773914337,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 26,
+    "mask_row": 26,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.26302674412727356,
+    "box_xyxy": [
+      193.2852783203125,
+      314.8747253417969,
+      340.2845764160156,
+      329.294677734375
+    ],
+    "rank": 245.0,
+    "mask_nonzero": 212,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 27,
+    "mask_row": 27,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.2468343824148178,
+    "box_xyxy": [
+      389.7822570800781,
+      196.83485412597656,
+      431.14404296875,
+      206.08018493652344
+    ],
+    "rank": 142.0,
+    "mask_nonzero": 48,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 28,
+    "mask_row": 28,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.21851050853729248,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 29,
+    "mask_row": 29,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.2069552093744278,
+    "box_xyxy": [
+      323.6885070800781,
+      168.45620727539062,
+      367.93115234375,
+      178.259033203125
+    ],
+    "rank": 105.0,
+    "mask_nonzero": 45,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 30,
+    "mask_row": 30,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.17003659904003143,
+    "box_xyxy": [
+      193.36952209472656,
+      315.6392517089844,
+      265.33978271484375,
+      326.0169982910156
+    ],
+    "rank": 238.0,
+    "mask_nonzero": 66,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 31,
+    "mask_row": 31,
+    "class_id": 21,
+    "class_name": "table",
+    "score": 0.16064533591270447,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 32,
+    "mask_row": 32,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.15714719891548157,
+    "box_xyxy": [
+      438.028564453125,
+      280.733154296875,
+      449.1778564453125,
+      289.6481018066406
+    ],
+    "rank": 196.0,
+    "mask_nonzero": 9,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 33,
+    "mask_row": 33,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.13140986859798431,
+    "box_xyxy": [
+      296.7062683105469,
+      315.6561584472656,
+      344.7563171386719,
+      330.684326171875
+    ],
+    "rank": 254.0,
+    "mask_nonzero": 61,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 34,
+    "mask_row": 34,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.11945780366659164,
+    "box_xyxy": [
+      105.37969970703125,
+      334.15032958984375,
+      160.72369384765625,
+      344.1300048828125
+    ],
+    "rank": 267.0,
+    "mask_nonzero": 58,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 35,
+    "mask_row": 35,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.11383585631847382,
+    "box_xyxy": [
+      433.1974792480469,
+      132.44631958007812,
+      447.19207763671875,
+      143.73724365234375
+    ],
+    "rank": 98.0,
+    "mask_nonzero": 19,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 36,
+    "mask_row": 36,
+    "class_id": 2,
+    "class_name": "aside_text",
+    "score": 0.10620182752609253,
+    "box_xyxy": [
+      67.2904281616211,
+      280.5274353027344,
+      92.32164001464844,
+      291.01153564453125
+    ],
+    "rank": 170.0,
+    "mask_nonzero": 31,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 37,
+    "mask_row": 37,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.0992143303155899,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 38,
+    "mask_row": 38,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.09496240317821503,
+    "box_xyxy": [
+      262.44268798828125,
+      220.5509796142578,
+      273.16162109375,
+      228.58575439453125
+    ],
+    "rank": 162.0,
+    "mask_nonzero": 9,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 39,
+    "mask_row": 39,
+    "class_id": 1,
+    "class_name": "algorithm",
+    "score": 0.09348468482494354,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 40,
+    "mask_row": 40,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.09306997805833817,
+    "box_xyxy": [
+      103.69876861572266,
+      330.5810852050781,
+      331.0986022949219,
+      343.2229919433594
+    ],
+    "rank": 260.0,
+    "mask_nonzero": 254,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 41,
+    "mask_row": 41,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.08870633691549301,
+    "box_xyxy": [
+      180.03753662109375,
+      315.61676025390625,
+      330.59979248046875,
+      327.31512451171875
+    ],
+    "rank": 228.0,
+    "mask_nonzero": 193,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 42,
+    "mask_row": 42,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.08574952930212021,
+    "box_xyxy": [
+      103.74189758300781,
+      331.2113952636719,
+      312.9174499511719,
+      342.93572998046875
+    ],
+    "rank": 261.0,
+    "mask_nonzero": 250,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 43,
+    "mask_row": 43,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0853593647480011,
+    "box_xyxy": [
+      262.61102294921875,
+      52.396358489990234,
+      321.9142150878906,
+      62.40300750732422
+    ],
+    "rank": 50.0,
+    "mask_nonzero": 59,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 44,
+    "mask_row": 44,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.08023034036159515,
+    "box_xyxy": [
+      176.49539184570312,
+      314.84625244140625,
+      346.0491638183594,
+      328.707275390625
+    ],
+    "rank": 227.0,
+    "mask_nonzero": 237,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 45,
+    "mask_row": 45,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.07928832620382309,
+    "box_xyxy": [
+      185.91400146484375,
+      315.58660888671875,
+      227.5987548828125,
+      326.01837158203125
+    ],
+    "rank": 224.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 46,
+    "mask_row": 46,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0781046599149704,
+    "box_xyxy": [
+      195.2291259765625,
+      332.0934753417969,
+      207.96685791015625,
+      340.1867980957031
+    ],
+    "rank": 275.0,
+    "mask_nonzero": 16,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 47,
+    "mask_row": 47,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.07689322531223297,
+    "box_xyxy": [
+      53.01830291748047,
+      596.0038452148438,
+      401.3351135253906,
+      606.933837890625
+    ],
+    "rank": 290.0,
+    "mask_nonzero": 335,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 48,
+    "mask_row": 48,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.06976325809955597,
+    "box_xyxy": [
+      433.4646301269531,
+      109.47080993652344,
+      446.97894287109375,
+      120.33573150634766
+    ],
+    "rank": 91.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 49,
+    "mask_row": 49,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0666142925620079,
+    "box_xyxy": [
+      250.28750610351562,
+      42.15222930908203,
+      261.222412109375,
+      50.903411865234375
+    ],
+    "rank": 35.0,
+    "mask_nonzero": 20,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 50,
+    "mask_row": 50,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0665832906961441,
+    "box_xyxy": [
+      238.48464965820312,
+      220.16482543945312,
+      272.94549560546875,
+      228.78448486328125
+    ],
+    "rank": 161.0,
+    "mask_nonzero": 35,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 51,
+    "mask_row": 51,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.06628978997468948,
+    "box_xyxy": [
+      105.37969970703125,
+      334.15032958984375,
+      160.72369384765625,
+      344.1300048828125
+    ],
+    "rank": 267.0,
+    "mask_nonzero": 58,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 52,
+    "mask_row": 52,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.06609100103378296,
+    "box_xyxy": [
+      193.2852783203125,
+      314.8747253417969,
+      340.2845764160156,
+      329.294677734375
+    ],
+    "rank": 245.0,
+    "mask_nonzero": 212,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 53,
+    "mask_row": 53,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.06523814797401428,
+    "box_xyxy": [
+      105.37969970703125,
+      334.15032958984375,
+      160.72369384765625,
+      344.1300048828125
+    ],
+    "rank": 267.0,
+    "mask_nonzero": 58,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 54,
+    "mask_row": 54,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.06462070345878601,
+    "box_xyxy": [
+      176.49539184570312,
+      314.84625244140625,
+      346.0491638183594,
+      328.707275390625
+    ],
+    "rank": 227.0,
+    "mask_nonzero": 237,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 55,
+    "mask_row": 55,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.06317654252052307,
+    "box_xyxy": [
+      180.03753662109375,
+      315.61676025390625,
+      330.59979248046875,
+      327.31512451171875
+    ],
+    "rank": 228.0,
+    "mask_nonzero": 193,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 56,
+    "mask_row": 56,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.062043700367212296,
+    "box_xyxy": [
+      193.2852783203125,
+      314.8747253417969,
+      340.2845764160156,
+      329.294677734375
+    ],
+    "rank": 245.0,
+    "mask_nonzero": 212,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 57,
+    "mask_row": 57,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.061983853578567505,
+    "box_xyxy": [
+      261.1853332519531,
+      195.92144775390625,
+      283.26898193359375,
+      205.63308715820312
+    ],
+    "rank": 136.0,
+    "mask_nonzero": 34,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 58,
+    "mask_row": 58,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.061889078468084335,
+    "box_xyxy": [
+      337.5625,
+      323.9425354003906,
+      347.78570556640625,
+      331.7491455078125
+    ],
+    "rank": 258.0,
+    "mask_nonzero": 6,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 59,
+    "mask_row": 59,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.06075121834874153,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 60,
+    "mask_row": 60,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.060679543763399124,
+    "box_xyxy": [
+      194.07281494140625,
+      332.3556823730469,
+      204.93356323242188,
+      340.3150634765625
+    ],
+    "rank": 276.0,
+    "mask_nonzero": 9,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 61,
+    "mask_row": 61,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.05550410971045494,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 62,
+    "mask_row": 62,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.05543072894215584,
+    "box_xyxy": [
+      185.9010009765625,
+      331.9080810546875,
+      205.56320190429688,
+      340.63494873046875
+    ],
+    "rank": 273.0,
+    "mask_nonzero": 12,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 63,
+    "mask_row": 63,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.05480107665061951,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 64,
+    "mask_row": 64,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.05404481664299965,
+    "box_xyxy": [
+      193.2852783203125,
+      314.8747253417969,
+      340.2845764160156,
+      329.294677734375
+    ],
+    "rank": 245.0,
+    "mask_nonzero": 212,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 65,
+    "mask_row": 65,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.05334897339344025,
+    "box_xyxy": [
+      105.37969970703125,
+      334.15032958984375,
+      160.72369384765625,
+      344.1300048828125
+    ],
+    "rank": 267.0,
+    "mask_nonzero": 58,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 66,
+    "mask_row": 66,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.051934175193309784,
+    "box_xyxy": [
+      371.8548278808594,
+      42.22032165527344,
+      383.4628601074219,
+      50.8509407043457
+    ],
+    "rank": 40.0,
+    "mask_nonzero": 38,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 67,
+    "mask_row": 67,
+    "class_id": 3,
+    "class_name": "chart",
+    "score": 0.05156930908560753,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 68,
+    "mask_row": 68,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.050672970712184906,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 69,
+    "mask_row": 69,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.049249425530433655,
+    "box_xyxy": [
+      141.41561889648438,
+      313.8240966796875,
+      160.45474243164062,
+      331.39764404296875
+    ],
+    "rank": 221.0,
+    "mask_nonzero": 70,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 70,
+    "mask_row": 70,
+    "class_id": 8,
+    "class_name": "footer",
+    "score": 0.0490231066942215,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 71,
+    "mask_row": 71,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.048503246158361435,
+    "box_xyxy": [
+      105.3165054321289,
+      312.71453857421875,
+      160.57997131347656,
+      325.8060302734375
+    ],
+    "rank": 213.0,
+    "mask_nonzero": 61,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 72,
+    "mask_row": 72,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0478157177567482,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 73,
+    "mask_row": 73,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.04776659235358238,
+    "box_xyxy": [
+      323.6885070800781,
+      168.45620727539062,
+      367.93115234375,
+      178.259033203125
+    ],
+    "rank": 105.0,
+    "mask_nonzero": 45,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 74,
+    "mask_row": 74,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.04726916551589966,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 75,
+    "mask_row": 75,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.045753173530101776,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 76,
+    "mask_row": 76,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.04556240886449814,
+    "box_xyxy": [
+      185.91400146484375,
+      315.58660888671875,
+      227.5987548828125,
+      326.01837158203125
+    ],
+    "rank": 224.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 77,
+    "mask_row": 77,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.04495999589562416,
+    "box_xyxy": [
+      337.5625,
+      323.9425354003906,
+      347.78570556640625,
+      331.7491455078125
+    ],
+    "rank": 258.0,
+    "mask_nonzero": 6,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 78,
+    "mask_row": 78,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.04459146037697792,
+    "box_xyxy": [
+      107.1467514038086,
+      331.24249267578125,
+      314.60821533203125,
+      342.5375671386719
+    ],
+    "rank": 262.0,
+    "mask_nonzero": 236,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 79,
+    "mask_row": 79,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0444289967417717,
+    "box_xyxy": [
+      200.35519409179688,
+      281.1446838378906,
+      216.24465942382812,
+      289.755859375
+    ],
+    "rank": 180.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 80,
+    "mask_row": 80,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.043729543685913086,
+    "box_xyxy": [
+      178.93373107910156,
+      331.55926513671875,
+      312.4190368652344,
+      341.0861511230469
+    ],
+    "rank": 270.0,
+    "mask_nonzero": 151,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 81,
+    "mask_row": 81,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.04309298098087311,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 82,
+    "mask_row": 82,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.04257393628358841,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 83,
+    "mask_row": 83,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.042036283761262894,
+    "box_xyxy": [
+      104.64676666259766,
+      313.1063537597656,
+      349.17578125,
+      332.9773254394531
+    ],
+    "rank": 219.0,
+    "mask_nonzero": 441,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 84,
+    "mask_row": 84,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.04157320037484169,
+    "box_xyxy": [
+      102.71348571777344,
+      194.96939086914062,
+      432.5394287109375,
+      207.19949340820312
+    ],
+    "rank": 108.0,
+    "mask_nonzero": 431,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 85,
+    "mask_row": 85,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.04079330340027809,
+    "box_xyxy": [
+      103.17760467529297,
+      195.69580078125,
+      135.7803192138672,
+      206.9520263671875
+    ],
+    "rank": 114.0,
+    "mask_nonzero": 46,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 86,
+    "mask_row": 86,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.04053421691060066,
+    "box_xyxy": [
+      184.52818298339844,
+      194.73468017578125,
+      283.1476745605469,
+      206.54067993164062
+    ],
+    "rank": 135.0,
+    "mask_nonzero": 125,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 87,
+    "mask_row": 87,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.04040757939219475,
+    "box_xyxy": [
+      55.751243591308594,
+      26.416540145874023,
+      136.28656005859375,
+      34.617767333984375
+    ],
+    "rank": 0.0,
+    "mask_nonzero": 78,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 88,
+    "mask_row": 88,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.03975548595190048,
+    "box_xyxy": [
+      176.49539184570312,
+      314.84625244140625,
+      346.0491638183594,
+      328.707275390625
+    ],
+    "rank": 227.0,
+    "mask_nonzero": 237,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 89,
+    "mask_row": 89,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.03931574895977974,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 90,
+    "mask_row": 90,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.03856027126312256,
+    "box_xyxy": [
+      337.5625,
+      323.9425354003906,
+      347.78570556640625,
+      331.7491455078125
+    ],
+    "rank": 258.0,
+    "mask_nonzero": 6,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 91,
+    "mask_row": 91,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.038421597331762314,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 92,
+    "mask_row": 92,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.0377822108566761,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 93,
+    "mask_row": 93,
+    "class_id": 20,
+    "class_name": "seal",
+    "score": 0.037438083440065384,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 94,
+    "mask_row": 94,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.037334244698286057,
+    "box_xyxy": [
+      296.7062683105469,
+      315.6561584472656,
+      344.7563171386719,
+      330.684326171875
+    ],
+    "rank": 254.0,
+    "mask_nonzero": 61,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 95,
+    "mask_row": 95,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.037003591656684875,
+    "box_xyxy": [
+      193.59068298339844,
+      315.67327880859375,
+      319.0930480957031,
+      326.3660888671875
+    ],
+    "rank": 244.0,
+    "mask_nonzero": 143,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 96,
+    "mask_row": 96,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.03699420019984245,
+    "box_xyxy": [
+      103.69876861572266,
+      330.5810852050781,
+      331.0986022949219,
+      343.2229919433594
+    ],
+    "rank": 260.0,
+    "mask_nonzero": 254,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 97,
+    "mask_row": 97,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.036765698343515396,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 98,
+    "mask_row": 98,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.03589074686169624,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 99,
+    "mask_row": 99,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.03586016967892647,
+    "box_xyxy": [
+      308.7655029296875,
+      52.86829376220703,
+      321.9603271484375,
+      62.76813888549805
+    ],
+    "rank": 53.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 100,
+    "mask_row": 100,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.03556615486741066,
+    "box_xyxy": [
+      105.4489517211914,
+      196.16610717773438,
+      161.6087646484375,
+      206.2853240966797
+    ],
+    "rank": 121.0,
+    "mask_nonzero": 69,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 101,
+    "mask_row": 101,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.035380661487579346,
+    "box_xyxy": [
+      178.93373107910156,
+      331.55926513671875,
+      312.4190368652344,
+      341.0861511230469
+    ],
+    "rank": 270.0,
+    "mask_nonzero": 151,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 102,
+    "mask_row": 102,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.03474633768200874,
+    "box_xyxy": [
+      102.71348571777344,
+      194.96939086914062,
+      432.5394287109375,
+      207.19949340820312
+    ],
+    "rank": 108.0,
+    "mask_nonzero": 431,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 103,
+    "mask_row": 103,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.03437625616788864,
+    "box_xyxy": [
+      343.0357360839844,
+      53.032501220703125,
+      357.61572265625,
+      62.67474365234375
+    ],
+    "rank": 57.0,
+    "mask_nonzero": 19,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 104,
+    "mask_row": 104,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.034240782260894775,
+    "box_xyxy": [
+      180.15097045898438,
+      195.50132751464844,
+      277.908203125,
+      206.09161376953125
+    ],
+    "rank": 133.0,
+    "mask_nonzero": 127,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 105,
+    "mask_row": 105,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.033891480416059494,
+    "box_xyxy": [
+      293.7530212402344,
+      293.3389892578125,
+      315.90704345703125,
+      301.1654357910156
+    ],
+    "rank": 207.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 106,
+    "mask_row": 106,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.0337577685713768,
+    "box_xyxy": [
+      102.71348571777344,
+      194.96939086914062,
+      432.5394287109375,
+      207.19949340820312
+    ],
+    "rank": 108.0,
+    "mask_nonzero": 431,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 107,
+    "mask_row": 107,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.03366417437791824,
+    "box_xyxy": [
+      178.93373107910156,
+      331.55926513671875,
+      312.4190368652344,
+      341.0861511230469
+    ],
+    "rank": 270.0,
+    "mask_nonzero": 151,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 108,
+    "mask_row": 108,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.0335848405957222,
+    "box_xyxy": [
+      176.49539184570312,
+      314.84625244140625,
+      346.0491638183594,
+      328.707275390625
+    ],
+    "rank": 227.0,
+    "mask_nonzero": 237,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 109,
+    "mask_row": 109,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.0326635017991066,
+    "box_xyxy": [
+      184.52818298339844,
+      194.73468017578125,
+      283.1476745605469,
+      206.54067993164062
+    ],
+    "rank": 135.0,
+    "mask_nonzero": 125,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 110,
+    "mask_row": 110,
+    "class_id": 2,
+    "class_name": "aside_text",
+    "score": 0.03233831003308296,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 111,
+    "mask_row": 111,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.031948089599609375,
+    "box_xyxy": [
+      103.69876861572266,
+      330.5810852050781,
+      331.0986022949219,
+      343.2229919433594
+    ],
+    "rank": 260.0,
+    "mask_nonzero": 254,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 112,
+    "mask_row": 112,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.03191320225596428,
+    "box_xyxy": [
+      102.71348571777344,
+      194.96939086914062,
+      432.5394287109375,
+      207.19949340820312
+    ],
+    "rank": 108.0,
+    "mask_nonzero": 431,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 113,
+    "mask_row": 113,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.031867075711488724,
+    "box_xyxy": [
+      294.9246826171875,
+      316.34185791015625,
+      331.5481262207031,
+      329.89166259765625
+    ],
+    "rank": 257.0,
+    "mask_nonzero": 63,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 114,
+    "mask_row": 114,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0316871739923954,
+    "box_xyxy": [
+      371.15118408203125,
+      42.50074005126953,
+      381.36846923828125,
+      50.46223068237305
+    ],
+    "rank": 38.0,
+    "mask_nonzero": 29,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 115,
+    "mask_row": 115,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.03140769526362419,
+    "box_xyxy": [
+      343.0357360839844,
+      53.032501220703125,
+      357.61572265625,
+      62.67474365234375
+    ],
+    "rank": 57.0,
+    "mask_nonzero": 19,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 116,
+    "mask_row": 116,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.03130767121911049,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 117,
+    "mask_row": 117,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.03125493600964546,
+    "box_xyxy": [
+      103.74189758300781,
+      331.2113952636719,
+      312.9174499511719,
+      342.93572998046875
+    ],
+    "rank": 261.0,
+    "mask_nonzero": 250,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 118,
+    "mask_row": 118,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.03110422007739544,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 119,
+    "mask_row": 119,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.0310201533138752,
+    "box_xyxy": [
+      180.03753662109375,
+      315.61676025390625,
+      330.59979248046875,
+      327.31512451171875
+    ],
+    "rank": 228.0,
+    "mask_nonzero": 193,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 120,
+    "mask_row": 120,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.03089979849755764,
+    "box_xyxy": [
+      105.37969970703125,
+      334.15032958984375,
+      160.72369384765625,
+      344.1300048828125
+    ],
+    "rank": 267.0,
+    "mask_nonzero": 58,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 121,
+    "mask_row": 121,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.030851446092128754,
+    "box_xyxy": [
+      148.5769500732422,
+      219.56063842773438,
+      174.77560424804688,
+      228.47830200195312
+    ],
+    "rank": 156.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 122,
+    "mask_row": 122,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.030822930857539177,
+    "box_xyxy": [
+      55.751243591308594,
+      26.416540145874023,
+      136.28656005859375,
+      34.617767333984375
+    ],
+    "rank": 0.0,
+    "mask_nonzero": 78,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 123,
+    "mask_row": 123,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.030133284628391266,
+    "box_xyxy": [
+      105.4489517211914,
+      196.16610717773438,
+      161.6087646484375,
+      206.2853240966797
+    ],
+    "rank": 121.0,
+    "mask_nonzero": 69,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 124,
+    "mask_row": 124,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.03000151552259922,
+    "box_xyxy": [
+      189.48040771484375,
+      315.5986633300781,
+      255.38418579101562,
+      326.09039306640625
+    ],
+    "rank": 226.0,
+    "mask_nonzero": 62,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 125,
+    "mask_row": 125,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02992226928472519,
+    "box_xyxy": [
+      151.63766479492188,
+      313.6966552734375,
+      337.61993408203125,
+      341.56915283203125
+    ],
+    "rank": 246.0,
+    "mask_nonzero": 448,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 126,
+    "mask_row": 126,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.029906805604696274,
+    "box_xyxy": [
+      268.1131896972656,
+      53.29290008544922,
+      280.7886657714844,
+      61.230770111083984
+    ],
+    "rank": 48.0,
+    "mask_nonzero": 10,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 127,
+    "mask_row": 127,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.029878342524170876,
+    "box_xyxy": [
+      455.80792236328125,
+      53.72480010986328,
+      467.5172119140625,
+      61.87919998168945
+    ],
+    "rank": 59.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 128,
+    "mask_row": 128,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.029818186536431313,
+    "box_xyxy": [
+      103.74189758300781,
+      331.2113952636719,
+      312.9174499511719,
+      342.93572998046875
+    ],
+    "rank": 261.0,
+    "mask_nonzero": 250,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 129,
+    "mask_row": 129,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.0294328723102808,
+    "box_xyxy": [
+      153.1410369873047,
+      219.23202514648438,
+      176.16346740722656,
+      229.64633178710938
+    ],
+    "rank": 159.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 130,
+    "mask_row": 130,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.029272161424160004,
+    "box_xyxy": [
+      53.01830291748047,
+      596.0038452148438,
+      401.3351135253906,
+      606.933837890625
+    ],
+    "rank": 290.0,
+    "mask_nonzero": 335,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 131,
+    "mask_row": 131,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02910662069916725,
+    "box_xyxy": [
+      437.6151123046875,
+      279.73724365234375,
+      541.4367065429688,
+      291.98822021484375
+    ],
+    "rank": 200.0,
+    "mask_nonzero": 101,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 132,
+    "mask_row": 132,
+    "class_id": 3,
+    "class_name": "chart",
+    "score": 0.029060136526823044,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 133,
+    "mask_row": 133,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.029040496796369553,
+    "box_xyxy": [
+      202.77496337890625,
+      281.45074462890625,
+      219.92840576171875,
+      290.4951171875
+    ],
+    "rank": 188.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 134,
+    "mask_row": 134,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.028864489868283272,
+    "box_xyxy": [
+      343.0357360839844,
+      53.032501220703125,
+      357.61572265625,
+      62.67474365234375
+    ],
+    "rank": 57.0,
+    "mask_nonzero": 19,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 135,
+    "mask_row": 135,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.028742801398038864,
+    "box_xyxy": [
+      295.627197265625,
+      316.45367431640625,
+      318.6002197265625,
+      325.9771423339844
+    ],
+    "rank": 251.0,
+    "mask_nonzero": 24,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 136,
+    "mask_row": 136,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.028735211119055748,
+    "box_xyxy": [
+      337.5625,
+      323.9425354003906,
+      347.78570556640625,
+      331.7491455078125
+    ],
+    "rank": 258.0,
+    "mask_nonzero": 6,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 137,
+    "mask_row": 137,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.028696557506918907,
+    "box_xyxy": [
+      55.751243591308594,
+      26.416540145874023,
+      136.28656005859375,
+      34.617767333984375
+    ],
+    "rank": 0.0,
+    "mask_nonzero": 78,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 138,
+    "mask_row": 138,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02867121249437332,
+    "box_xyxy": [
+      202.1324920654297,
+      280.5129089355469,
+      221.66531372070312,
+      291.6089172363281
+    ],
+    "rank": 195.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 139,
+    "mask_row": 139,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.02864636480808258,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 140,
+    "mask_row": 140,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.02848943881690502,
+    "box_xyxy": [
+      55.751243591308594,
+      26.416540145874023,
+      136.28656005859375,
+      34.617767333984375
+    ],
+    "rank": 0.0,
+    "mask_nonzero": 78,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 141,
+    "mask_row": 141,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.028453994542360306,
+    "box_xyxy": [
+      203.25990295410156,
+      281.1191101074219,
+      218.78782653808594,
+      290.267578125
+    ],
+    "rank": 183.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 142,
+    "mask_row": 142,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.028407905250787735,
+    "box_xyxy": [
+      184.52818298339844,
+      194.73468017578125,
+      283.1476745605469,
+      206.54067993164062
+    ],
+    "rank": 135.0,
+    "mask_nonzero": 125,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 143,
+    "mask_row": 143,
+    "class_id": 21,
+    "class_name": "table",
+    "score": 0.027847666293382645,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 144,
+    "mask_row": 144,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.02755625545978546,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 145,
+    "mask_row": 145,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.027533236891031265,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 146,
+    "mask_row": 146,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.027473237365484238,
+    "box_xyxy": [
+      65.29190063476562,
+      41.02151870727539,
+      561.322998046875,
+      63.28407287597656
+    ],
+    "rank": 26.0,
+    "mask_nonzero": 1082,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 147,
+    "mask_row": 147,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.026947088539600372,
+    "box_xyxy": [
+      153.1410369873047,
+      219.23202514648438,
+      176.16346740722656,
+      229.64633178710938
+    ],
+    "rank": 159.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 148,
+    "mask_row": 148,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02680325321853161,
+    "box_xyxy": [
+      157.49978637695312,
+      314.2717590332031,
+      337.8887634277344,
+      341.1749572753906
+    ],
+    "rank": 249.0,
+    "mask_nonzero": 409,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 149,
+    "mask_row": 149,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.02630600892007351,
+    "box_xyxy": [
+      294.8193664550781,
+      316.41583251953125,
+      319.704345703125,
+      327.3565979003906
+    ],
+    "rank": 247.0,
+    "mask_nonzero": 25,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 150,
+    "mask_row": 150,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.02627626806497574,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 151,
+    "mask_row": 151,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.026211373507976532,
+    "box_xyxy": [
+      67.2904281616211,
+      280.5274353027344,
+      92.32164001464844,
+      291.01153564453125
+    ],
+    "rank": 170.0,
+    "mask_nonzero": 31,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 152,
+    "mask_row": 152,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02619456872344017,
+    "box_xyxy": [
+      141.41561889648438,
+      313.8240966796875,
+      160.45474243164062,
+      331.39764404296875
+    ],
+    "rank": 221.0,
+    "mask_nonzero": 70,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 153,
+    "mask_row": 153,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.026161229237914085,
+    "box_xyxy": [
+      67.23011016845703,
+      41.43394470214844,
+      95.64096069335938,
+      50.93667984008789
+    ],
+    "rank": 27.0,
+    "mask_nonzero": 27,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 154,
+    "mask_row": 154,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.02609221823513508,
+    "box_xyxy": [
+      294.8193664550781,
+      316.41583251953125,
+      319.704345703125,
+      327.3565979003906
+    ],
+    "rank": 247.0,
+    "mask_nonzero": 25,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 155,
+    "mask_row": 155,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.025933334603905678,
+    "box_xyxy": [
+      343.0357360839844,
+      53.032501220703125,
+      357.61572265625,
+      62.67474365234375
+    ],
+    "rank": 57.0,
+    "mask_nonzero": 19,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 156,
+    "mask_row": 156,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.025699490681290627,
+    "box_xyxy": [
+      187.57046508789062,
+      194.91744995117188,
+      281.72088623046875,
+      206.57203674316406
+    ],
+    "rank": 134.0,
+    "mask_nonzero": 129,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 157,
+    "mask_row": 157,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.025672672316432,
+    "box_xyxy": [
+      550.4081420898438,
+      220.1118621826172,
+      566.3704223632812,
+      229.33526611328125
+    ],
+    "rank": 166.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 158,
+    "mask_row": 158,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.025657910853624344,
+    "box_xyxy": [
+      187.05856323242188,
+      315.1900634765625,
+      319.95184326171875,
+      327.5638427734375
+    ],
+    "rank": 230.0,
+    "mask_nonzero": 133,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 159,
+    "mask_row": 159,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.025575032457709312,
+    "box_xyxy": [
+      65.13042449951172,
+      279.90179443359375,
+      543.6095581054688,
+      302.547119140625
+    ],
+    "rank": 171.0,
+    "mask_nonzero": 1137,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 160,
+    "mask_row": 160,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.0255476925522089,
+    "box_xyxy": [
+      550.4081420898438,
+      220.1118621826172,
+      566.3704223632812,
+      229.33526611328125
+    ],
+    "rank": 166.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 161,
+    "mask_row": 161,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.025502612814307213,
+    "box_xyxy": [
+      105.4489517211914,
+      196.16610717773438,
+      161.6087646484375,
+      206.2853240966797
+    ],
+    "rank": 121.0,
+    "mask_nonzero": 69,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 162,
+    "mask_row": 162,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.025326665490865707,
+    "box_xyxy": [
+      193.36952209472656,
+      315.6392517089844,
+      265.33978271484375,
+      326.0169982910156
+    ],
+    "rank": 238.0,
+    "mask_nonzero": 66,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 163,
+    "mask_row": 163,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.025296686217188835,
+    "box_xyxy": [
+      102.71348571777344,
+      194.96939086914062,
+      432.5394287109375,
+      207.19949340820312
+    ],
+    "rank": 108.0,
+    "mask_nonzero": 431,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 164,
+    "mask_row": 164,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.0251841489225626,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 165,
+    "mask_row": 165,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.025110697373747826,
+    "box_xyxy": [
+      202.4895477294922,
+      280.68670654296875,
+      219.2340087890625,
+      290.4873046875
+    ],
+    "rank": 182.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 166,
+    "mask_row": 166,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02506653591990471,
+    "box_xyxy": [
+      106.21421813964844,
+      196.16549682617188,
+      165.23727416992188,
+      206.290283203125
+    ],
+    "rank": 116.0,
+    "mask_nonzero": 75,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 167,
+    "mask_row": 167,
+    "class_id": 21,
+    "class_name": "table",
+    "score": 0.025049110874533653,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 168,
+    "mask_row": 168,
+    "class_id": 23,
+    "class_name": "text",
+    "score": 0.024969356134533882,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 169,
+    "mask_row": 169,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.024950124323368073,
+    "box_xyxy": [
+      122.44169616699219,
+      334.0766906738281,
+      159.97134399414062,
+      343.72735595703125
+    ],
+    "rank": 269.0,
+    "mask_nonzero": 40,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 170,
+    "mask_row": 170,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.024819912388920784,
+    "box_xyxy": [
+      323.6885070800781,
+      168.45620727539062,
+      367.93115234375,
+      178.259033203125
+    ],
+    "rank": 105.0,
+    "mask_nonzero": 45,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 171,
+    "mask_row": 171,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02480241283774376,
+    "box_xyxy": [
+      105.3165054321289,
+      312.71453857421875,
+      160.57997131347656,
+      325.8060302734375
+    ],
+    "rank": 213.0,
+    "mask_nonzero": 61,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 172,
+    "mask_row": 172,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02475803904235363,
+    "box_xyxy": [
+      187.39280700683594,
+      314.7294921875,
+      320.3008728027344,
+      327.9534606933594
+    ],
+    "rank": 229.0,
+    "mask_nonzero": 145,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 173,
+    "mask_row": 173,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.02469525672495365,
+    "box_xyxy": [
+      308.7655029296875,
+      52.86829376220703,
+      321.9603271484375,
+      62.76813888549805
+    ],
+    "rank": 53.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 174,
+    "mask_row": 174,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.02466350980103016,
+    "box_xyxy": [
+      189.48040771484375,
+      315.5986633300781,
+      255.38418579101562,
+      326.09039306640625
+    ],
+    "rank": 226.0,
+    "mask_nonzero": 62,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 175,
+    "mask_row": 175,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.024538127705454826,
+    "box_xyxy": [
+      102.28240966796875,
+      218.3667755126953,
+      568.0321044921875,
+      241.90676879882812
+    ],
+    "rank": 145.0,
+    "mask_nonzero": 1121,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 176,
+    "mask_row": 176,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.02453138493001461,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 177,
+    "mask_row": 177,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.024526236578822136,
+    "box_xyxy": [
+      296.7062683105469,
+      315.6561584472656,
+      344.7563171386719,
+      330.684326171875
+    ],
+    "rank": 254.0,
+    "mask_nonzero": 61,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 178,
+    "mask_row": 178,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.02451149746775627,
+    "box_xyxy": [
+      516.2636108398438,
+      220.3697509765625,
+      529.9974975585938,
+      229.14649963378906
+    ],
+    "rank": 163.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 179,
+    "mask_row": 179,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.024364152923226357,
+    "box_xyxy": [
+      181.13540649414062,
+      315.63885498046875,
+      325.4052734375,
+      326.9603271484375
+    ],
+    "rank": 231.0,
+    "mask_nonzero": 165,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 180,
+    "mask_row": 180,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.024197805672883987,
+    "box_xyxy": [
+      103.69876861572266,
+      330.5810852050781,
+      331.0986022949219,
+      343.2229919433594
+    ],
+    "rank": 260.0,
+    "mask_nonzero": 254,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 181,
+    "mask_row": 181,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02419470064342022,
+    "box_xyxy": [
+      187.9588623046875,
+      194.79385375976562,
+      284.34283447265625,
+      206.5373992919922
+    ],
+    "rank": 132.0,
+    "mask_nonzero": 128,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 182,
+    "mask_row": 182,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.024015935137867928,
+    "box_xyxy": [
+      105.364990234375,
+      218.83657836914062,
+      132.08290100097656,
+      230.32861328125
+    ],
+    "rank": 152.0,
+    "mask_nonzero": 33,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 183,
+    "mask_row": 183,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.02388766035437584,
+    "box_xyxy": [
+      371.9908142089844,
+      41.690155029296875,
+      438.67730712890625,
+      51.32442855834961
+    ],
+    "rank": 47.0,
+    "mask_nonzero": 63,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 184,
+    "mask_row": 184,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.02379964478313923,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 185,
+    "mask_row": 185,
+    "class_id": 8,
+    "class_name": "footer",
+    "score": 0.023765267804265022,
+    "box_xyxy": [
+      53.01830291748047,
+      596.0038452148438,
+      401.3351135253906,
+      606.933837890625
+    ],
+    "rank": 290.0,
+    "mask_nonzero": 335,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 186,
+    "mask_row": 186,
+    "class_id": 1,
+    "class_name": "algorithm",
+    "score": 0.023757262155413628,
+    "box_xyxy": [
+      176.49539184570312,
+      314.84625244140625,
+      346.0491638183594,
+      328.707275390625
+    ],
+    "rank": 227.0,
+    "mask_nonzero": 237,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 187,
+    "mask_row": 187,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.023744065314531326,
+    "box_xyxy": [
+      370.6442565917969,
+      42.843204498291016,
+      379.6554260253906,
+      50.29484176635742
+    ],
+    "rank": 39.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 188,
+    "mask_row": 188,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.023697856813669205,
+    "box_xyxy": [
+      389.7822570800781,
+      196.83485412597656,
+      431.14404296875,
+      206.08018493652344
+    ],
+    "rank": 142.0,
+    "mask_nonzero": 48,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 189,
+    "mask_row": 189,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.02366962656378746,
+    "box_xyxy": [
+      202.4895477294922,
+      280.68670654296875,
+      219.2340087890625,
+      290.4873046875
+    ],
+    "rank": 182.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 190,
+    "mask_row": 190,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.02361331507563591,
+    "box_xyxy": [
+      308.7655029296875,
+      52.86829376220703,
+      321.9603271484375,
+      62.76813888549805
+    ],
+    "rank": 53.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 191,
+    "mask_row": 191,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.023545995354652405,
+    "box_xyxy": [
+      105.3165054321289,
+      312.71453857421875,
+      160.57997131347656,
+      325.8060302734375
+    ],
+    "rank": 213.0,
+    "mask_nonzero": 61,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 192,
+    "mask_row": 192,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.02352156862616539,
+    "box_xyxy": [
+      180.03753662109375,
+      315.61676025390625,
+      330.59979248046875,
+      327.31512451171875
+    ],
+    "rank": 228.0,
+    "mask_nonzero": 193,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 193,
+    "mask_row": 193,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.023404547944664955,
+    "box_xyxy": [
+      186.631103515625,
+      194.81716918945312,
+      283.86212158203125,
+      206.258056640625
+    ],
+    "rank": 131.0,
+    "mask_nonzero": 128,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 194,
+    "mask_row": 194,
+    "class_id": 11,
+    "class_name": "formula_number",
+    "score": 0.0233882088214159,
+    "box_xyxy": [
+      323.6885070800781,
+      168.45620727539062,
+      367.93115234375,
+      178.259033203125
+    ],
+    "rank": 105.0,
+    "mask_nonzero": 45,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 195,
+    "mask_row": 195,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.023365261033177376,
+    "box_xyxy": [
+      103.74189758300781,
+      331.2113952636719,
+      312.9174499511719,
+      342.93572998046875
+    ],
+    "rank": 261.0,
+    "mask_nonzero": 250,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 196,
+    "mask_row": 196,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02325093001127243,
+    "box_xyxy": [
+      274.3150634765625,
+      52.47981262207031,
+      323.7545166015625,
+      61.758079528808594
+    ],
+    "rank": 49.0,
+    "mask_nonzero": 21,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 197,
+    "mask_row": 197,
+    "class_id": 11,
+    "class_name": "formula_number",
+    "score": 0.023224644362926483,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 198,
+    "mask_row": 198,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02321862243115902,
+    "box_xyxy": [
+      239.79049682617188,
+      292.3334655761719,
+      314.5352478027344,
+      301.5710144042969
+    ],
+    "rank": 209.0,
+    "mask_nonzero": 41,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 199,
+    "mask_row": 199,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.023191414773464203,
+    "box_xyxy": [
+      103.90589904785156,
+      196.13104248046875,
+      161.78756713867188,
+      206.3077392578125
+    ],
+    "rank": 111.0,
+    "mask_nonzero": 55,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 200,
+    "mask_row": 200,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02315352112054825,
+    "box_xyxy": [
+      182.8292694091797,
+      195.72264099121094,
+      218.4518585205078,
+      206.89012145996094
+    ],
+    "rank": 122.0,
+    "mask_nonzero": 63,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 201,
+    "mask_row": 201,
+    "class_id": 21,
+    "class_name": "table",
+    "score": 0.023059934377670288,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 202,
+    "mask_row": 202,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.023049382492899895,
+    "box_xyxy": [
+      153.1410369873047,
+      219.23202514648438,
+      176.16346740722656,
+      229.64633178710938
+    ],
+    "rank": 159.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 203,
+    "mask_row": 203,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.022962724789977074,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 204,
+    "mask_row": 204,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.022887976840138435,
+    "box_xyxy": [
+      293.7530212402344,
+      293.3389892578125,
+      315.90704345703125,
+      301.1654357910156
+    ],
+    "rank": 207.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 205,
+    "mask_row": 205,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.022823259234428406,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 206,
+    "mask_row": 206,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.02265794761478901,
+    "box_xyxy": [
+      343.0357360839844,
+      53.032501220703125,
+      357.61572265625,
+      62.67474365234375
+    ],
+    "rank": 57.0,
+    "mask_nonzero": 19,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 207,
+    "mask_row": 207,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.02262083627283573,
+    "box_xyxy": [
+      516.2636108398438,
+      220.3697509765625,
+      529.9974975585938,
+      229.14649963378906
+    ],
+    "rank": 163.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 208,
+    "mask_row": 208,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.022479461506009102,
+    "box_xyxy": [
+      104.64676666259766,
+      313.1063537597656,
+      349.17578125,
+      332.9773254394531
+    ],
+    "rank": 219.0,
+    "mask_nonzero": 441,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 209,
+    "mask_row": 209,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.022439584136009216,
+    "box_xyxy": [
+      308.7655029296875,
+      52.86829376220703,
+      321.9603271484375,
+      62.76813888549805
+    ],
+    "rank": 53.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 210,
+    "mask_row": 210,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.022344615310430527,
+    "box_xyxy": [
+      102.28240966796875,
+      218.3667755126953,
+      568.0321044921875,
+      241.90676879882812
+    ],
+    "rank": 145.0,
+    "mask_nonzero": 1121,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 211,
+    "mask_row": 211,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.022297542542219162,
+    "box_xyxy": [
+      105.37969970703125,
+      334.15032958984375,
+      160.72369384765625,
+      344.1300048828125
+    ],
+    "rank": 267.0,
+    "mask_nonzero": 58,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 212,
+    "mask_row": 212,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.021984850987792015,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 213,
+    "mask_row": 213,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.021969636902213097,
+    "box_xyxy": [
+      153.1410369873047,
+      219.23202514648438,
+      176.16346740722656,
+      229.64633178710938
+    ],
+    "rank": 159.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 214,
+    "mask_row": 214,
+    "class_id": 11,
+    "class_name": "formula_number",
+    "score": 0.021908437833189964,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 215,
+    "mask_row": 215,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.02187398634850979,
+    "box_xyxy": [
+      104.64676666259766,
+      313.1063537597656,
+      349.17578125,
+      332.9773254394531
+    ],
+    "rank": 219.0,
+    "mask_nonzero": 441,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 216,
+    "mask_row": 216,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.021853486075997353,
+    "box_xyxy": [
+      178.93373107910156,
+      331.55926513671875,
+      312.4190368652344,
+      341.0861511230469
+    ],
+    "rank": 270.0,
+    "mask_nonzero": 151,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 217,
+    "mask_row": 217,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.021636348217725754,
+    "box_xyxy": [
+      184.0730438232422,
+      195.0056610107422,
+      282.1932678222656,
+      205.75624084472656
+    ],
+    "rank": 130.0,
+    "mask_nonzero": 126,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 218,
+    "mask_row": 218,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.021343359723687172,
+    "box_xyxy": [
+      294.8193664550781,
+      316.41583251953125,
+      319.704345703125,
+      327.3565979003906
+    ],
+    "rank": 247.0,
+    "mask_nonzero": 25,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 219,
+    "mask_row": 219,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.021151287481188774,
+    "box_xyxy": [
+      308.7655029296875,
+      52.86829376220703,
+      321.9603271484375,
+      62.76813888549805
+    ],
+    "rank": 53.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 220,
+    "mask_row": 220,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.021117549389600754,
+    "box_xyxy": [
+      181.13540649414062,
+      315.63885498046875,
+      325.4052734375,
+      326.9603271484375
+    ],
+    "rank": 231.0,
+    "mask_nonzero": 165,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 221,
+    "mask_row": 221,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.02111429162323475,
+    "box_xyxy": [
+      104.64676666259766,
+      313.1063537597656,
+      349.17578125,
+      332.9773254394531
+    ],
+    "rank": 219.0,
+    "mask_nonzero": 441,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 222,
+    "mask_row": 222,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.02102028578519821,
+    "box_xyxy": [
+      151.63766479492188,
+      313.6966552734375,
+      337.61993408203125,
+      341.56915283203125
+    ],
+    "rank": 246.0,
+    "mask_nonzero": 448,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 223,
+    "mask_row": 223,
+    "class_id": 23,
+    "class_name": "text",
+    "score": 0.020986713469028473,
+    "box_xyxy": [
+      229.5748748779297,
+      76.4238510131836,
+      454.7483825683594,
+      178.61985778808594
+    ],
+    "rank": 72.0,
+    "mask_nonzero": 2220,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 224,
+    "mask_row": 224,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020919231697916985,
+    "box_xyxy": [
+      186.0933074951172,
+      195.33505249023438,
+      278.830322265625,
+      206.33242797851562
+    ],
+    "rank": 129.0,
+    "mask_nonzero": 114,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 225,
+    "mask_row": 225,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.02085140161216259,
+    "box_xyxy": [
+      185.91400146484375,
+      315.58660888671875,
+      227.5987548828125,
+      326.01837158203125
+    ],
+    "rank": 224.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 226,
+    "mask_row": 226,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020774604752659798,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 227,
+    "mask_row": 227,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020773330703377724,
+    "box_xyxy": [
+      295.30633544921875,
+      316.4908142089844,
+      318.4979553222656,
+      325.83392333984375
+    ],
+    "rank": 248.0,
+    "mask_nonzero": 23,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 228,
+    "mask_row": 228,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020708555355668068,
+    "box_xyxy": [
+      200.27386474609375,
+      277.2060852050781,
+      221.19189453125,
+      292.0589904785156
+    ],
+    "rank": 179.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 229,
+    "mask_row": 229,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020690124481916428,
+    "box_xyxy": [
+      201.7680206298828,
+      280.5711364746094,
+      220.43458557128906,
+      291.53887939453125
+    ],
+    "rank": 186.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 230,
+    "mask_row": 230,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020678382366895676,
+    "box_xyxy": [
+      201.20933532714844,
+      280.8006591796875,
+      220.76080322265625,
+      292.6784362792969
+    ],
+    "rank": 197.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 231,
+    "mask_row": 231,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.020528608933091164,
+    "box_xyxy": [
+      151.63766479492188,
+      313.6966552734375,
+      337.61993408203125,
+      341.56915283203125
+    ],
+    "rank": 246.0,
+    "mask_nonzero": 448,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 232,
+    "mask_row": 232,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02050151862204075,
+    "box_xyxy": [
+      201.7503204345703,
+      280.6580810546875,
+      220.13063049316406,
+      291.8283996582031
+    ],
+    "rank": 192.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 233,
+    "mask_row": 233,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020398268476128578,
+    "box_xyxy": [
+      200.36074829101562,
+      278.2926940917969,
+      221.60140991210938,
+      292.12615966796875
+    ],
+    "rank": 181.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 234,
+    "mask_row": 234,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02038693055510521,
+    "box_xyxy": [
+      201.62075805664062,
+      280.688232421875,
+      219.97909545898438,
+      291.82958984375
+    ],
+    "rank": 191.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 235,
+    "mask_row": 235,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.020345252007246017,
+    "box_xyxy": [
+      550.4081420898438,
+      220.1118621826172,
+      566.3704223632812,
+      229.33526611328125
+    ],
+    "rank": 166.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 236,
+    "mask_row": 236,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.02030121348798275,
+    "box_xyxy": [
+      550.4081420898438,
+      220.1118621826172,
+      566.3704223632812,
+      229.33526611328125
+    ],
+    "rank": 166.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 237,
+    "mask_row": 237,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020293327048420906,
+    "box_xyxy": [
+      200.3977813720703,
+      276.8169860839844,
+      221.1581573486328,
+      292.1158447265625
+    ],
+    "rank": 178.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 238,
+    "mask_row": 238,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.020235763862729073,
+    "box_xyxy": [
+      176.49539184570312,
+      314.84625244140625,
+      346.0491638183594,
+      328.707275390625
+    ],
+    "rank": 227.0,
+    "mask_nonzero": 237,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 239,
+    "mask_row": 239,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02019529789686203,
+    "box_xyxy": [
+      185.31333923339844,
+      315.3702087402344,
+      326.728759765625,
+      327.59661865234375
+    ],
+    "rank": 242.0,
+    "mask_nonzero": 171,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 240,
+    "mask_row": 240,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.020181383937597275,
+    "box_xyxy": [
+      323.6885070800781,
+      168.45620727539062,
+      367.93115234375,
+      178.259033203125
+    ],
+    "rank": 105.0,
+    "mask_nonzero": 45,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 241,
+    "mask_row": 241,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.02003783918917179,
+    "box_xyxy": [
+      201.39625549316406,
+      281.2268981933594,
+      220.4462890625,
+      292.501953125
+    ],
+    "rank": 199.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 242,
+    "mask_row": 242,
+    "class_id": 1,
+    "class_name": "algorithm",
+    "score": 0.02002842351794243,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 243,
+    "mask_row": 243,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.019955595955252647,
+    "box_xyxy": [
+      105.4489517211914,
+      196.16610717773438,
+      161.6087646484375,
+      206.2853240966797
+    ],
+    "rank": 121.0,
+    "mask_nonzero": 69,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 244,
+    "mask_row": 244,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.01989714615046978,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 245,
+    "mask_row": 245,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.019781997427344322,
+    "box_xyxy": [
+      202.0498504638672,
+      280.5375671386719,
+      219.25439453125,
+      290.76641845703125
+    ],
+    "rank": 184.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 246,
+    "mask_row": 246,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.019693857058882713,
+    "box_xyxy": [
+      201.1036376953125,
+      280.65850830078125,
+      220.06004333496094,
+      291.9427490234375
+    ],
+    "rank": 194.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 247,
+    "mask_row": 247,
+    "class_id": 20,
+    "class_name": "seal",
+    "score": 0.019691402092576027,
+    "box_xyxy": [
+      103.99330139160156,
+      312.45538330078125,
+      161.62469482421875,
+      344.35675048828125
+    ],
+    "rank": 216.0,
+    "mask_nonzero": 198,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 248,
+    "mask_row": 248,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.01968032494187355,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 249,
+    "mask_row": 249,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01967385970056057,
+    "box_xyxy": [
+      201.52178955078125,
+      280.5780029296875,
+      219.98690795898438,
+      291.81866455078125
+    ],
+    "rank": 193.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 250,
+    "mask_row": 250,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.019666625186800957,
+    "box_xyxy": [
+      410.1047058105469,
+      197.59036254882812,
+      430.2349548339844,
+      205.87783813476562
+    ],
+    "rank": 143.0,
+    "mask_nonzero": 14,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 251,
+    "mask_row": 251,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.01964409463107586,
+    "box_xyxy": [
+      178.93373107910156,
+      331.55926513671875,
+      312.4190368652344,
+      341.0861511230469
+    ],
+    "rank": 270.0,
+    "mask_nonzero": 151,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 252,
+    "mask_row": 252,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.019573111087083817,
+    "box_xyxy": [
+      343.0357360839844,
+      53.032501220703125,
+      357.61572265625,
+      62.67474365234375
+    ],
+    "rank": 57.0,
+    "mask_nonzero": 19,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 253,
+    "mask_row": 253,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01953868940472603,
+    "box_xyxy": [
+      199.4746551513672,
+      41.91017150878906,
+      207.4508819580078,
+      49.756317138671875
+    ],
+    "rank": 29.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 254,
+    "mask_row": 254,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.019458485767245293,
+    "box_xyxy": [
+      67.2904281616211,
+      280.5274353027344,
+      92.32164001464844,
+      291.01153564453125
+    ],
+    "rank": 170.0,
+    "mask_nonzero": 31,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 255,
+    "mask_row": 255,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.019386008381843567,
+    "box_xyxy": [
+      193.59068298339844,
+      315.67327880859375,
+      319.0930480957031,
+      326.3660888671875
+    ],
+    "rank": 244.0,
+    "mask_nonzero": 143,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 256,
+    "mask_row": 256,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.019362516701221466,
+    "box_xyxy": [
+      105.3165054321289,
+      312.71453857421875,
+      160.57997131347656,
+      325.8060302734375
+    ],
+    "rank": 213.0,
+    "mask_nonzero": 61,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 257,
+    "mask_row": 257,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01927829720079899,
+    "box_xyxy": [
+      194.84661865234375,
+      195.50320434570312,
+      286.1351013183594,
+      206.416015625
+    ],
+    "rank": 128.0,
+    "mask_nonzero": 103,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 258,
+    "mask_row": 258,
+    "class_id": 21,
+    "class_name": "table",
+    "score": 0.01925685629248619,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 259,
+    "mask_row": 259,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01924913004040718,
+    "box_xyxy": [
+      201.91497802734375,
+      280.57763671875,
+      219.07562255859375,
+      291.2796325683594
+    ],
+    "rank": 185.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 260,
+    "mask_row": 260,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.0191530492156744,
+    "box_xyxy": [
+      187.05856323242188,
+      315.1900634765625,
+      319.95184326171875,
+      327.5638427734375
+    ],
+    "rank": 230.0,
+    "mask_nonzero": 133,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 261,
+    "mask_row": 261,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.019128156825900078,
+    "box_xyxy": [
+      55.751243591308594,
+      26.416540145874023,
+      136.28656005859375,
+      34.617767333984375
+    ],
+    "rank": 0.0,
+    "mask_nonzero": 78,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 262,
+    "mask_row": 262,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.019122414290905,
+    "box_xyxy": [
+      188.5994110107422,
+      195.16622924804688,
+      285.1302490234375,
+      206.55859375
+    ],
+    "rank": 127.0,
+    "mask_nonzero": 109,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 263,
+    "mask_row": 263,
+    "class_id": 2,
+    "class_name": "aside_text",
+    "score": 0.01903471350669861,
+    "box_xyxy": [
+      68.78157043457031,
+      280.871826171875,
+      90.0880126953125,
+      290.604736328125
+    ],
+    "rank": 172.0,
+    "mask_nonzero": 27,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 264,
+    "mask_row": 264,
+    "class_id": 2,
+    "class_name": "aside_text",
+    "score": 0.01898706704378128,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 265,
+    "mask_row": 265,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.01897381618618965,
+    "box_xyxy": [
+      105.364990234375,
+      218.83657836914062,
+      132.08290100097656,
+      230.32861328125
+    ],
+    "rank": 152.0,
+    "mask_nonzero": 33,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 266,
+    "mask_row": 266,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01862722635269165,
+    "box_xyxy": [
+      106.6358871459961,
+      196.05551147460938,
+      165.49819946289062,
+      206.36849975585938
+    ],
+    "rank": 113.0,
+    "mask_nonzero": 73,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 267,
+    "mask_row": 267,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.01862046867609024,
+    "box_xyxy": [
+      193.36952209472656,
+      315.6392517089844,
+      265.33978271484375,
+      326.0169982910156
+    ],
+    "rank": 238.0,
+    "mask_nonzero": 66,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 268,
+    "mask_row": 268,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.01858421601355076,
+    "box_xyxy": [
+      157.49978637695312,
+      314.2717590332031,
+      337.8887634277344,
+      341.1749572753906
+    ],
+    "rank": 249.0,
+    "mask_nonzero": 409,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 269,
+    "mask_row": 269,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01846538670361042,
+    "box_xyxy": [
+      65.29190063476562,
+      41.02151870727539,
+      561.322998046875,
+      63.28407287597656
+    ],
+    "rank": 26.0,
+    "mask_nonzero": 1082,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 270,
+    "mask_row": 270,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.01844630017876625,
+    "box_xyxy": [
+      185.9010009765625,
+      331.9080810546875,
+      205.56320190429688,
+      340.63494873046875
+    ],
+    "rank": 273.0,
+    "mask_nonzero": 12,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 271,
+    "mask_row": 271,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.018274670466780663,
+    "box_xyxy": [
+      107.1467514038086,
+      331.24249267578125,
+      314.60821533203125,
+      342.5375671386719
+    ],
+    "rank": 262.0,
+    "mask_nonzero": 236,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 272,
+    "mask_row": 272,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01825965940952301,
+    "box_xyxy": [
+      106.07341766357422,
+      195.9638671875,
+      164.70968627929688,
+      206.48165893554688
+    ],
+    "rank": 115.0,
+    "mask_nonzero": 73,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 273,
+    "mask_row": 273,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01815081760287285,
+    "box_xyxy": [
+      389.818115234375,
+      196.9688720703125,
+      430.4548645019531,
+      205.980712890625
+    ],
+    "rank": 141.0,
+    "mask_nonzero": 49,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 274,
+    "mask_row": 274,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.01803954318165779,
+    "box_xyxy": [
+      185.9010009765625,
+      331.9080810546875,
+      205.56320190429688,
+      340.63494873046875
+    ],
+    "rank": 273.0,
+    "mask_nonzero": 12,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 275,
+    "mask_row": 275,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.018030041828751564,
+    "box_xyxy": [
+      252.21266174316406,
+      41.83211898803711,
+      260.76068115234375,
+      48.695770263671875
+    ],
+    "rank": 32.0,
+    "mask_nonzero": 8,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 276,
+    "mask_row": 276,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.017993388697504997,
+    "box_xyxy": [
+      65.13042449951172,
+      279.90179443359375,
+      543.6095581054688,
+      302.547119140625
+    ],
+    "rank": 171.0,
+    "mask_nonzero": 1137,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 277,
+    "mask_row": 277,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.017947817221283913,
+    "box_xyxy": [
+      308.7655029296875,
+      52.86829376220703,
+      321.9603271484375,
+      62.76813888549805
+    ],
+    "rank": 53.0,
+    "mask_nonzero": 17,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 278,
+    "mask_row": 278,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01775440201163292,
+    "box_xyxy": [
+      113.62969970703125,
+      218.83932495117188,
+      175.00778198242188,
+      231.11802673339844
+    ],
+    "rank": 150.0,
+    "mask_nonzero": 88,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 279,
+    "mask_row": 279,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.017656004056334496,
+    "box_xyxy": [
+      122.44169616699219,
+      334.0766906738281,
+      159.97134399414062,
+      343.72735595703125
+    ],
+    "rank": 269.0,
+    "mask_nonzero": 40,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 280,
+    "mask_row": 280,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.017631499096751213,
+    "box_xyxy": [
+      291.762451171875,
+      293.804443359375,
+      315.7279052734375,
+      302.32440185546875
+    ],
+    "rank": 211.0,
+    "mask_nonzero": 0,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 281,
+    "mask_row": 281,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.017625367268919945,
+    "box_xyxy": [
+      101.08930969238281,
+      219.04403686523438,
+      566.1809692382812,
+      229.29489135742188
+    ],
+    "rank": 146.0,
+    "mask_nonzero": 520,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 282,
+    "mask_row": 282,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.01759232021868229,
+    "box_xyxy": [
+      159.88253784179688,
+      313.3141174316406,
+      234.5684051513672,
+      341.35015869140625
+    ],
+    "rank": 243.0,
+    "mask_nonzero": 35,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 283,
+    "mask_row": 283,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.017537139356136322,
+    "box_xyxy": [
+      550.4081420898438,
+      220.1118621826172,
+      566.3704223632812,
+      229.33526611328125
+    ],
+    "rank": 166.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 284,
+    "mask_row": 284,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.017436856403946877,
+    "box_xyxy": [
+      108.44741821289062,
+      41.186988830566406,
+      206.45046997070312,
+      50.36161422729492
+    ],
+    "rank": 28.0,
+    "mask_nonzero": 60,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 285,
+    "mask_row": 285,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01743384264409542,
+    "box_xyxy": [
+      200.40545654296875,
+      279.7788391113281,
+      220.15826416015625,
+      293.7882080078125
+    ],
+    "rank": 190.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 286,
+    "mask_row": 286,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.0174267441034317,
+    "box_xyxy": [
+      178.2099609375,
+      194.86239624023438,
+      281.7319030761719,
+      206.00189208984375
+    ],
+    "rank": 124.0,
+    "mask_nonzero": 120,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 287,
+    "mask_row": 287,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01742207631468773,
+    "box_xyxy": [
+      151.42953491210938,
+      280.33074951171875,
+      220.56336975097656,
+      289.8048400878906
+    ],
+    "rank": 175.0,
+    "mask_nonzero": 36,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 288,
+    "mask_row": 288,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.01741686649620533,
+    "box_xyxy": [
+      195.2291259765625,
+      332.0934753417969,
+      207.96685791015625,
+      340.1867980957031
+    ],
+    "rank": 275.0,
+    "mask_nonzero": 16,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 289,
+    "mask_row": 289,
+    "class_id": 20,
+    "class_name": "seal",
+    "score": 0.017411846667528152,
+    "box_xyxy": [
+      102.23439025878906,
+      313.0965576171875,
+      351.6316223144531,
+      343.09814453125
+    ],
+    "rank": 218.0,
+    "mask_nonzero": 760,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 290,
+    "mask_row": 290,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.017340131103992462,
+    "box_xyxy": [
+      148.38877868652344,
+      219.40248107910156,
+      176.98883056640625,
+      229.36865234375
+    ],
+    "rank": 154.0,
+    "mask_nonzero": 28,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 291,
+    "mask_row": 291,
+    "class_id": 23,
+    "class_name": "text",
+    "score": 0.01732289046049118,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 292,
+    "mask_row": 292,
+    "class_id": 19,
+    "class_name": "reference_content",
+    "score": 0.01729508489370346,
+    "box_xyxy": [
+      551.938232421875,
+      27.12164306640625,
+      582.027587890625,
+      35.02975082397461
+    ],
+    "rank": 22.0,
+    "mask_nonzero": 30,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 293,
+    "mask_row": 293,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.017159106209874153,
+    "box_xyxy": [
+      563.7857666015625,
+      604.9772338867188,
+      583.137451171875,
+      613.111083984375
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 18,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 294,
+    "mask_row": 294,
+    "class_id": 9,
+    "class_name": "footer",
+    "score": 0.017150044441223145,
+    "box_xyxy": [
+      550.4081420898438,
+      220.1118621826172,
+      566.3704223632812,
+      229.33526611328125
+    ],
+    "rank": 166.0,
+    "mask_nonzero": 15,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 295,
+    "mask_row": 295,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01709423027932644,
+    "box_xyxy": [
+      120.85968780517578,
+      313.1216125488281,
+      342.2992248535156,
+      342.3616027832031
+    ],
+    "rank": 239.0,
+    "mask_nonzero": 715,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 296,
+    "mask_row": 296,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.01708938553929329,
+    "box_xyxy": [
+      265.3661804199219,
+      331.8510437011719,
+      279.97796630859375,
+      340.678955078125
+    ],
+    "rank": 279.0,
+    "mask_nonzero": 26,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 297,
+    "mask_row": 297,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.017068790271878242,
+    "box_xyxy": [
+      191.80996704101562,
+      195.30189514160156,
+      278.9456787109375,
+      206.2085723876953
+    ],
+    "rank": 126.0,
+    "mask_nonzero": 103,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 298,
+    "mask_row": 298,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.017065702006220818,
+    "box_xyxy": [
+      150.18536376953125,
+      194.8045654296875,
+      285.74853515625,
+      206.33934020996094
+    ],
+    "rank": 119.0,
+    "mask_nonzero": 226,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  },
+  {
+    "candidate_id": 299,
+    "mask_row": 299,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.017042143270373344,
+    "box_xyxy": [
+      159.88253784179688,
+      313.3141174316406,
+      234.5684051513672,
+      341.35015869140625
+    ],
+    "rank": 243.0,
+    "mask_nonzero": 35,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold"
+    ]
+  }
+]
