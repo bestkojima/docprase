@@ -40,7 +40,11 @@
     },
     "layoutBlock": {
       "type": "object", "additionalProperties": false,
-      "required": ["id", "page_id", "label", "bbox", "coordinate_space", "detection_score", "candidate_rank", "original_class_id", "provenance"],
+      "required": ["id", "page_id", "label", "bbox", "coordinate_space", "detection_score", "candidate_rank", "provenance"],
+      "allOf": [{
+        "if": {"properties": {"label": {"const": "unknown"}}},
+        "then": {"required": ["original_class_id"]}
+      }],
       "properties": {
         "id": {"type": "string", "pattern": "^l[0-9]{4,}$"},
         "page_id": {"const": "p0001"},
