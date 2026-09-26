@@ -32,6 +32,7 @@ struct GenerationRequest {
     Box source_box;
     std::string task; // text, formula, table
     std::string request_id;
+    uint64_t max_new_tokens = 4096;
 };
 struct InferenceRequest { std::string request_id; std::variant<TensorRequest, GenerationRequest> payload; };
 struct TensorOutput { std::vector<Tensor> outputs; };
@@ -66,14 +67,23 @@ struct JobOutput {
     std::string markdown;
     std::vector<Asset> assets;
 };
-enum class RunCode { Ok, Partial, Blank, InputError, Unsupported, Failed, Cancelled };
-struct RunResult { RunCode code; JobOutput output; };
+enum class RunCode { Ok, Partial, Blank, InputError, Unsupported, Failed, Cancelled, BudgetExceeded };
+struct RunResult {
+    RunCode code;
+    JobOutput output;
+    uint64_t page_pixels = 0;
+    bool did_decode = false, did_layout = false, did_normalize = false, did_crop = false,
+         did_reset = false, reset_failed = false;
+    uint64_t decode_ms = 0, layout_ms = 0, recognition_ms = 0, export_ms = 0;
+};
 struct InputView {
     const uint8_t* data;
     size_t size;
     uint32_t format, width, height;
     size_t row_stride;
 };
-RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled);
+struct ExecutionPlan;
+RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled,
+                   const ExecutionPlan* plan = nullptr);
 } // namespace dococr
 #endif

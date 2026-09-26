@@ -1,7 +1,9 @@
 #include "dococr/dococr.h"
 #include "dococr/inference.hpp"
 #include "backend_factory.hpp"
+#include "config.hpp"
 #include <atomic>
+#include <cctype>
 #include <cstdlib>
 #include <cstring>
 #include <map>
@@ -12,6 +14,7 @@
 namespace {
 struct Engine {
     std::string config;
+    std::shared_ptr<const dococr::ExecutionPlan> plan;
     std::unique_ptr<dococr::IInferenceEngine> backend;
     size_t jobs = 0;
     bool running = false;
@@ -19,6 +22,7 @@ struct Engine {
 };
 struct Job {
     DocOcrHandle engine = 0;
+    std::shared_ptr<const dococr::ExecutionPlan> plan;
     bool started = false;
     bool running = false;
     std::atomic_bool cancelled{false};
@@ -28,7 +32,9 @@ struct Job {
     std::string error_message;
     dococr::JobOutput output;
     bool has_result = false;
+    std::string manifest;
 };
+thread_local std::string last_error;
 std::mutex registry_mutex;
 std::map<DocOcrHandle, std::shared_ptr<Engine>> engines;
 std::map<DocOcrJob, std::shared_ptr<Job>> jobs;
@@ -58,6 +64,52 @@ std::string event_json(const Job& job) {
                "\",\"code\":\"" + job.error_code + "\",\"message\":\"" + job.error_message + "\"}";
     return out + "}";
 }
+std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunResult& result,
+                          const std::string& actual_backend) {
+    std::string out = "{\"schema_version\":\"1.0\",\"config_hash\":" + dococr::json_quote(plan.config_hash) +
+        ",\"actual_backend\":" + dococr::json_quote(actual_backend) +
+        ",\"backend_id\":" + dococr::json_quote(plan.backend) +
+        ",\"actual_device\":\"cpu\",\"runtime_version\":\"fixture-only\","
+        "\"effective_parameters\":{\"threads\":1,\"max_new_tokens\":" + std::to_string(plan.max_new_tokens) +
+        ",\"max_page_pixels\":" + std::to_string(plan.max_page_pixels) +
+        ",\"max_output_bytes\":" + std::to_string(plan.max_output_bytes) + "},\"artifacts\":[";
+    for (size_t i = 0; i < plan.artifacts.size(); ++i) {
+        const auto& a = plan.artifacts[i];
+        if (i) out += ',';
+        out += "{\"model\":" + dococr::json_quote(a.model) + ",\"path\":" + dococr::json_quote(a.path) +
+            ",\"sha256\":" + dococr::json_quote(a.sha256) +
+            ",\"contract_status\":" + dococr::json_quote(a.contract_status) + "}";
+    }
+    out += "],\"processing\":[";
+    for (size_t i = 0; i < plan.processing.size(); ++i) {
+        const auto& step = plan.processing[i];
+        std::string status, reason;
+        if (!step.enabled) { status = "skipped_disabled"; reason = "optional_disabled"; }
+        else if (step.id == "decode") { status = result.did_decode ? "executed" : "failed"; reason = "image_decoded"; }
+        else if (step.id == "normalize") {
+            status = step.owner == "adapter" ? (result.did_normalize ? "executed" : "failed") :
+                     step.owner == "runtime" ? (result.did_layout ? "delegated_runtime" : "failed") :
+                     (result.did_layout ? "provided_by_graph" : "failed");
+            reason = step.owner == "adapter" ? "rgb8_to_float32_0_1" :
+                     step.owner == "runtime" ? "fixture_runtime_normalized" : "fixture_graph_normalized";
+        }
+        else if (step.id == "crop") { status = result.did_crop ? "executed" : "identity_validated"; reason = result.did_crop ? "region_crop" : "no_regions"; }
+        else if (step.id == "session_reset") {
+            status = result.reset_failed ? "failed" : result.did_reset ? "delegated_runtime" : "identity_validated";
+            reason = result.reset_failed ? "fixture_reset_failed" : result.did_reset ? "fixture_reset_succeeded" : "no_recognition_regions";
+        }
+        else { status = "identity_validated"; reason = "owned_rgb8_source"; }
+        if (i) out += ',';
+        out += "{\"id\":" + dococr::json_quote(step.id) + ",\"owner\":" + dococr::json_quote(step.owner) +
+            ",\"status\":" + dococr::json_quote(status) + ",\"reason\":" + dococr::json_quote(reason) + "}";
+    }
+    out += "],\"timings_ms\":{\"decode\":" + std::to_string(result.decode_ms) +
+        ",\"layout\":" + std::to_string(result.layout_ms) +
+        ",\"recognition\":" + std::to_string(result.recognition_ms) +
+        ",\"export\":" + std::to_string(result.export_ms) +
+        "},\"metrics\":{\"peak_memory_bytes\":{\"status\":\"unavailable\",\"reason\":\"portable sampler not implemented\"}}}";
+    return out;
+}
 }
 
 extern "C" {
@@ -65,17 +117,85 @@ uint32_t dococr_abi_version(void) { return DOCOCR_ABI_VERSION; }
 
 DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
     return guarded([&] {
-        if (!out || (!config.data && config.size)) return DOCOCR_INVALID_ARGUMENT;
+        if (!out || (!config.data && config.size) || config.size > 1024 * 1024) return DOCOCR_INVALID_ARGUMENT;
         *out = 0;
+        last_error.clear();
         std::string value(config.data ? config.data : "", config.size);
-        if (!dococr::config_supported(value)) return DOCOCR_UNSUPPORTED;
+        std::shared_ptr<const dococr::ExecutionPlan> plan;
+        auto first = value.find_first_not_of(" \t\r\n");
+        if (first != std::string::npos && value[first] == '{') {
+            try { plan = dococr::build_plan(value, dococr::config_supported("fixture:sample")); }
+            catch (const dococr::ConfigError& error) {
+                last_error = "{\"code\":" + dococr::json_quote(error.code) +
+                    ",\"detail\":" + dococr::json_quote(error.detail) + "}";
+                return DOCOCR_CONFIG_ERROR;
+            }
+        }
+        const std::string backend_name = plan ? plan->backend : value;
+        if (!dococr::config_supported(backend_name)) {
+            if (!plan) return DOCOCR_UNSUPPORTED;
+            last_error = "{\"code\":\"unsupported_backend\",\"detail\":" +
+                dococr::json_quote(backend_name) + "}";
+            return DOCOCR_CONFIG_ERROR;
+        }
         auto engine = std::make_shared<Engine>();
-        engine->config = value;
-        engine->backend = dococr::make_backend(value);
+        engine->config = backend_name;
+        engine->plan = std::move(plan);
+        engine->backend = dococr::make_backend(backend_name);
+        if (engine->plan && (!engine->backend || !engine->backend->capabilities().tensor ||
+            !engine->backend->capabilities().generation ||
+            engine->backend->capabilities().max_concurrent_requests != 1)) {
+            last_error = "{\"code\":\"missing_capability\",\"detail\":\"tensor/generation/serial required\"}";
+            return DOCOCR_CONFIG_ERROR;
+        }
         if (engine->backend && !engine->backend->load()) return DOCOCR_FAILED;
         std::lock_guard<std::mutex> lock(registry_mutex);
         *out = next_handle++;
         engines[*out] = std::move(engine);
+        return DOCOCR_OK;
+    });
+}
+
+DocOcrStatus dococr_last_error(DocOcrBytes* out_json) {
+    return guarded([&] {
+        if (!out_json) return DOCOCR_INVALID_ARGUMENT;
+        *out_json = {};
+        std::lock_guard<std::mutex> lock(registry_mutex);
+        *out_json = copy_bytes(last_error.data(), last_error.size());
+        return DOCOCR_OK;
+    });
+}
+
+DocOcrStatus dococr_reconfigure(DocOcrHandle handle, DocOcrStringView config) {
+    return guarded([&] {
+        if (!config.data || !config.size || config.size > 1024 * 1024) return DOCOCR_INVALID_ARGUMENT;
+        last_error.clear();
+        std::shared_ptr<const dococr::ExecutionPlan> plan;
+        try { plan = dococr::build_plan(std::string(config.data, config.size), dococr::config_supported("fixture:sample")); }
+        catch (const dococr::ConfigError& error) {
+            last_error = "{\"code\":" + dococr::json_quote(error.code) +
+                ",\"detail\":" + dococr::json_quote(error.detail) + "}";
+            return DOCOCR_CONFIG_ERROR;
+        }
+        std::lock_guard<std::mutex> lock(registry_mutex);
+        auto it = engines.find(handle);
+        if (it == engines.end()) return DOCOCR_INVALID_HANDLE;
+        if (it->second->config != plan->backend) return DOCOCR_UNSUPPORTED;
+        it->second->plan = std::move(plan);
+        return DOCOCR_OK;
+    });
+}
+
+DocOcrStatus dococr_execution_plan(DocOcrHandle handle, DocOcrBytes* out_json) {
+    return guarded([&] {
+        if (!out_json) return DOCOCR_INVALID_ARGUMENT;
+        *out_json = {};
+        std::lock_guard<std::mutex> lock(registry_mutex);
+        auto it = engines.find(handle);
+        if (it == engines.end()) return DOCOCR_INVALID_HANDLE;
+        if (!it->second->plan) return DOCOCR_NO_RESULT;
+        const auto& text = it->second->plan->json;
+        *out_json = copy_bytes(text.data(), text.size());
         return DOCOCR_OK;
     });
 }
@@ -102,6 +222,7 @@ DocOcrStatus dococr_job_create(DocOcrHandle handle, DocOcrJob* out) {
         if (it == engines.end()) return DOCOCR_INVALID_HANDLE;
         auto job = std::make_shared<Job>();
         job->engine = handle;
+        job->plan = it->second->plan;
         *out = next_handle++;
         jobs[*out] = std::move(job);
         ++it->second->jobs;
@@ -131,7 +252,7 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
         try {
             dococr::InputView view{input->data, input->size, input->format,
                                    input->width, input->height, input->row_stride};
-            result = dococr::run_page(engine->backend.get(), view, job->cancelled);
+            result = dococr::run_page(engine->backend.get(), view, job->cancelled, job->plan.get());
         } catch (...) { result.code = dococr::RunCode::Failed; }
         std::lock_guard<std::mutex> lock(registry_mutex);
         job->running = false;
@@ -156,9 +277,27 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             job->state = "failed"; job->error_stage = "inference";
             job->error_code = "inference_error"; job->error_message = "inference contract failed";
             return DOCOCR_FAILED;
+        case dococr::RunCode::BudgetExceeded:
+            job->state = "failed"; job->error_stage = "budget";
+            job->error_code = "budget_exceeded"; job->error_message = "input or output budget exceeded";
+            return DOCOCR_BUDGET_EXCEEDED;
         }
+        if (job->plan) job->manifest = manifest_json(*job->plan, result, engine->backend->profile());
         job->output = std::move(result.output);
         job->has_result = true;
+        return DOCOCR_OK;
+    });
+}
+
+DocOcrStatus dococr_job_manifest(DocOcrJob handle, DocOcrBytes* out_json) {
+    return guarded([&] {
+        if (!out_json) return DOCOCR_INVALID_ARGUMENT;
+        *out_json = {};
+        std::lock_guard<std::mutex> lock(registry_mutex);
+        auto it = jobs.find(handle);
+        if (it == jobs.end()) return DOCOCR_INVALID_HANDLE;
+        if (!it->second->has_result || it->second->manifest.empty()) return DOCOCR_NO_RESULT;
+        *out_json = copy_bytes(it->second->manifest.data(), it->second->manifest.size());
         return DOCOCR_OK;
     });
 }

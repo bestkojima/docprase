@@ -1,6 +1,8 @@
 #include "dococr/inference.hpp"
 #include "dococr/dococr.h"
+#include "config.hpp"
 #include <algorithm>
+#include <chrono>
 #include <cmath>
 #include <cstdint>
 #include <cstring>
@@ -288,9 +290,20 @@ std::string serialize(const Image& image, const std::string& state,
 }
 } // namespace
 
-RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled) {
+RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled,
+                   const ExecutionPlan* plan) {
+    using Clock = std::chrono::steady_clock;
+    auto elapsed = [](Clock::time_point from) {
+        return uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - from).count());
+    };
+    RunResult audit{RunCode::Failed, {}};
+    auto start = Clock::now();
     Image image;
     if (!decode(input, image)) return {RunCode::InputError, {}};
+    audit.did_decode = true;
+    audit.page_pixels = uint64_t(image.width) * image.height;
+    audit.decode_ms = elapsed(start);
+    if (plan && audit.page_pixels > plan->max_page_pixels) return {RunCode::BudgetExceeded, {}};
     if (!backend) return {RunCode::Unsupported, {}};
     if (!backend->capabilities().tensor || !backend->capabilities().generation ||
         backend->capabilities().max_concurrent_requests < 1) return {RunCode::Unsupported, {}};
@@ -298,12 +311,27 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     ExecutionContext context{cancelled};
     Tensor page_tensor{"page_rgb", DataType::UInt8, TensorLayout::HWC,
                        {image.height, image.width, 3}, image.rgb};
+    if (plan && std::any_of(plan->processing.begin(), plan->processing.end(),
+                            [](const ProcessingStep& step) { return step.id == "normalize" && step.owner == "adapter"; })) {
+        page_tensor.name = "page_rgb_normalized";
+        page_tensor.dtype = DataType::Float32;
+        page_tensor.data.resize(image.rgb.size() * sizeof(float));
+        for (size_t i = 0; i < image.rgb.size(); ++i) {
+            float value = float(image.rgb[i]) / 255.0f;
+            std::memcpy(page_tensor.data.data() + i*sizeof(float), &value, sizeof(float));
+        }
+        audit.did_normalize = true;
+    }
+    start = Clock::now();
     auto response = backend->execute({"layout-p0001", TensorRequest{{std::move(page_tensor)}, {"layout_candidates"}}}, context);
+    audit.layout_ms = elapsed(start);
     if (cancelled) return {RunCode::Cancelled, {}};
     auto* layout = std::get_if<TensorOutput>(&response.payload);
     if (!layout) return {RunCode::Failed, {}};
+    audit.did_layout = true;
     std::vector<LayoutCandidate> candidates;
     if (!decode_layout(*layout, candidates)) return {RunCode::Failed, {}};
+    start = Clock::now();
     for (const auto& candidate : candidates) {
         Box b = candidate.box;
         if (b.x0 < 0 || b.y0 < 0 || b.x1 > image.width || b.y1 > image.height ||
@@ -333,21 +361,28 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         if (block.type == "image" || block.type == "chart") {
             block.type = "image";
             block.resource = "assets/p0001-" + block.id + ".png";
+            audit.did_crop = true;
             output.assets.push_back({block.resource, crop_png(image, block.box)});
         } else if (block.type == "text" || block.type == "formula" || block.type == "table") {
             Image crop = crop_rgb(image, block.box);
+            audit.did_crop = true;
             GenerationOutput generation;
             std::string local_error;
             bool skipped_after_backend_failure = recognition_unavailable;
+            bool reset_completed = false;
             try {
                 if (recognition_unavailable) local_error = "region backend unavailable after prior failure";
                 else if (!backend->reset()) {
                     local_error = "region reset failed";
+                    audit.reset_failed = true;
                     recognition_unavailable = true;
                 }
                 else {
+                    reset_completed = true;
+                    audit.did_reset = true;
                     auto recognized = backend->execute({"req" + block.region_id,
-                        GenerationRequest{std::move(crop), block.box, block.type, "req" + block.region_id}}, context);
+                        GenerationRequest{std::move(crop), block.box, block.type, "req" + block.region_id,
+                                          plan ? plan->max_new_tokens : 4096}}, context);
                     if (auto* value = std::get_if<GenerationOutput>(&recognized.payload)) generation = std::move(*value);
                     else {
                         local_error = "generation response type mismatch";
@@ -357,6 +392,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
             } catch (const std::bad_alloc&) { throw; }
               catch (...) {
                   local_error = "region inference exception";
+                  if (!reset_completed) audit.reset_failed = true;
                   recognition_unavailable = true;
               }
             if (cancelled) return {RunCode::Cancelled, {}};
@@ -376,6 +412,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
                               (!text_valid || !raw_valid) ? "invalid backend UTF-8" :
                               generation.error.empty() ? "recognition incomplete" : generation.error;
                 block.resource = "assets/p0001-" + block.id + ".png";
+                audit.did_crop = true;
                 output.assets.push_back({block.resource, crop_png(image, block.box)});
                 partial = true;
             } else block.text = generation.text;
@@ -383,11 +420,14 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
             block.status = "skipped";
             block.error = "unsupported layout label";
             block.resource = "assets/p0001-" + block.id + ".png";
+            audit.did_crop = true;
             output.assets.push_back({block.resource, crop_png(image, block.box)});
             partial = true;
         }
         blocks.push_back(std::move(block));
     }
+    audit.recognition_ms = elapsed(start);
+    start = Clock::now();
     std::string state = candidates.empty() ? "blank" : partial ? "partial" : "ok";
     for (const auto& block : blocks) {
         if (!output.markdown.empty()) output.markdown += "\n\n";
@@ -395,7 +435,14 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     }
     if (!output.markdown.empty()) output.markdown += '\n';
     output.json = serialize(image, state, blocks, backend->profile());
-    return {candidates.empty() ? RunCode::Blank : partial ? RunCode::Partial : RunCode::Ok,
-            std::move(output)};
+    audit.export_ms = elapsed(start);
+    if (plan) {
+        uint64_t output_size = output.json.size() + output.markdown.size();
+        for (const auto& asset : output.assets) output_size += asset.png.size();
+        if (output_size > plan->max_output_bytes) return {RunCode::BudgetExceeded, {}};
+    }
+    audit.code = candidates.empty() ? RunCode::Blank : partial ? RunCode::Partial : RunCode::Ok;
+    audit.output = std::move(output);
+    return audit;
 }
 } // namespace dococr

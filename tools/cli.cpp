@@ -16,13 +16,19 @@ bool write_file(const fs::path& path, const DocOcrBytes& bytes) {
 }
 }
 int main(int argc, char** argv) {
-    if (argc != 7 || std::string(argv[1]) != "--backend" ||
+    if (argc != 7 || (std::string(argv[1]) != "--backend" && std::string(argv[1]) != "--config") ||
         std::string(argv[3]) != "--input" || std::string(argv[5]) != "--out") {
-        std::cerr << "用法：dococr_cli --backend none --input page.png --out 输出目录\n";
+        std::cerr << "用法：dococr_cli (--backend none | --config config.json) --input page.png --out 输出目录\n";
         return 2;
     }
     try {
-        const std::string backend = argv[2];
+        std::string backend = argv[2];
+        bool configured = std::string(argv[1]) == "--config";
+        if (configured) {
+            std::ifstream config_file(fs::u8path(backend), std::ios::binary);
+            if (!config_file) { std::cerr << "无法打开配置文件\n"; return 3; }
+            backend.assign(std::istreambuf_iterator<char>(config_file), {});
+        }
         fs::path input_path = fs::u8path(argv[4]);
         fs::path output_path = fs::u8path(argv[6]);
         std::ifstream input_file(input_path, std::ios::binary);
@@ -33,22 +39,42 @@ int main(int argc, char** argv) {
             ? DOCOCR_IMAGE_PNG : DOCOCR_IMAGE_JPEG;
         DocOcrHandle engine = 0;
         DocOcrStatus status = dococr_create({backend.data(), backend.size()}, &engine);
-        if (status != DOCOCR_OK) { std::cerr << "创建引擎失败，状态码：" << status << '\n'; return 3; }
+        if (status != DOCOCR_OK) {
+            DocOcrBytes error{};
+            if (dococr_last_error(&error) == DOCOCR_OK && error.size)
+                std::cerr << std::string(reinterpret_cast<const char*>(error.data), error.size) << '\n';
+            else std::cerr << "创建引擎失败，状态码：" << status << '\n';
+            if (error.data) dococr_bytes_free(&error);
+            return 3;
+        }
         DocOcrJob job = 0;
         status = dococr_job_create(engine, &job);
         if (status != DOCOCR_OK) { dococr_destroy(engine); return 3; }
         DocOcrInput request{sizeof(DocOcrInput), image.data(), image.size(), format, 0, 0, 0};
         status = dococr_job_run(job, &request);
         if (status != DOCOCR_OK) {
-            std::cerr << "作业运行失败，状态码：" << status << '\n';
+            DocOcrBytes event{};
+            if (dococr_job_poll_events(job, &event) == DOCOCR_OK && event.size)
+                std::cerr << std::string(reinterpret_cast<const char*>(event.data), event.size) << '\n';
+            else std::cerr << "作业运行失败，状态码：" << status << '\n';
+            if (event.data) dococr_bytes_free(&event);
             dococr_job_destroy(job); dococr_destroy(engine);
-            return status == DOCOCR_UNSUPPORTED ? 4 : 3;
+            return status == DOCOCR_UNSUPPORTED ? 4 : status == DOCOCR_BUDGET_EXCEEDED ? 5 : 3;
         }
         DocOcrResult result{sizeof(DocOcrResult), {}, {}};
         status = dococr_job_result(job, &result);
         if (status != DOCOCR_OK) { dococr_job_destroy(job); dococr_destroy(engine); return 3; }
         bool ok = write_file(output_path / "document.json", result.json) &&
                   write_file(output_path / "document.md", result.markdown);
+        if (configured) {
+            DocOcrBytes plan{}, manifest{};
+            if (dococr_execution_plan(engine, &plan) != DOCOCR_OK ||
+                dococr_job_manifest(job, &manifest) != DOCOCR_OK) ok = false;
+            else ok = ok && write_file(output_path / "execution-plan.json", plan) &&
+                           write_file(output_path / "run-manifest.json", manifest);
+            if (plan.data) dococr_bytes_free(&plan);
+            if (manifest.data) dococr_bytes_free(&manifest);
+        }
         size_t count = 0;
         if (dococr_job_asset_count(job, &count) != DOCOCR_OK) ok = false;
         for (size_t i = 0; ok && i < count; ++i) {

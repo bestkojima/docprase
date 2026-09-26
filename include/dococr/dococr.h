@@ -33,7 +33,9 @@ typedef enum {
     DOCOCR_INPUT_ERROR = 5,
     DOCOCR_FAILED = 6,
     DOCOCR_CANCELLED = 7,
-    DOCOCR_NO_RESULT = 8
+    DOCOCR_NO_RESULT = 8,
+    DOCOCR_CONFIG_ERROR = 9,
+    DOCOCR_BUDGET_EXCEEDED = 10
 } DocOcrStatus;
 
 typedef enum {
@@ -60,13 +62,17 @@ typedef struct {
 } DocOcrResult;
 
 DOCOCR_API uint32_t dococr_abi_version(void);
-/* config 使用明确长度的 UTF-8；本阶段唯一生产配置为 "none"。 */
+/* config 使用明确长度的 UTF-8；接受旧后端名或 schema 1.0 JSON。 */
 DOCOCR_API DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out);
+DOCOCR_API DocOcrStatus dococr_reconfigure(DocOcrHandle engine, DocOcrStringView config);
+DOCOCR_API DocOcrStatus dococr_last_error(DocOcrBytes* out_json);
+DOCOCR_API DocOcrStatus dococr_execution_plan(DocOcrHandle engine, DocOcrBytes* out_json);
 DOCOCR_API DocOcrStatus dococr_capabilities(DocOcrHandle engine, DocOcrBytes* out_json);
 DOCOCR_API DocOcrStatus dococr_job_create(DocOcrHandle engine, DocOcrJob* out);
 /* 同步运行；推理前复制输入图像。调用方须保持缓冲区有效直至函数返回。 */
 DOCOCR_API DocOcrStatus dococr_job_run(DocOcrJob job, const DocOcrInput* input);
 DOCOCR_API DocOcrStatus dococr_job_result(DocOcrJob job, DocOcrResult* out);
+DOCOCR_API DocOcrStatus dococr_job_manifest(DocOcrJob job, DocOcrBytes* out_json);
 DOCOCR_API DocOcrStatus dococr_job_asset_count(DocOcrJob job, size_t* out_count);
 DOCOCR_API DocOcrStatus dococr_job_asset(DocOcrJob job, size_t index,
                                          DocOcrBytes* out_name, DocOcrBytes* out_data);

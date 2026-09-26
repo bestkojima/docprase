@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "mode": "development",
+  "backend": "fixture:normalized",
+  "models": {
+    "layout": {
+      "contract_status": "verified_fixture",
+      "root": "tests/fixtures",
+      "artifacts": [{"path": "rgb2x2.jpg", "sha256": "1bd8b829eee3160443ad3bada64f6ec0a0c76965c9b356421ba093db82947be8"}]
+    },
+    "recognition": {
+      "contract_status": "verified_fixture",
+      "root": "tests/fixtures",
+      "artifacts": [{"path": "rgb2x2.jpg", "sha256": "1bd8b829eee3160443ad3bada64f6ec0a0c76965c9b356421ba093db82947be8"}]
+    }
+  },
+  "skills": {"layout.detect": "layout", "ocr.transcribe": "recognition"},
+  "flow": [
+    {"id": "load", "processor": "page_loader", "depends_on": []},
+    {"id": "layout", "skill": "layout.detect", "depends_on": ["load"]},
+    {"id": "recognize", "skill": "ocr.transcribe", "depends_on": ["layout"]},
+    {"id": "assemble", "processor": "document_assembler", "depends_on": ["recognize"]},
+    {"id": "export", "processor": "document_exporter", "depends_on": ["assemble"]}
+  ],
+  "processing": [
+    {"id": "decode", "owner": "adapter", "enabled": true},
+    {"id": "crop", "owner": "adapter", "enabled": true},
+    {"id": "normalize", "owner": "adapter", "enabled": true},
+    {"id": "session_reset", "owner": "runtime", "enabled": true},
+    {"id": "rgb_identity", "owner": "none", "enabled": true},
+    {"id": "deskew", "owner": "none", "enabled": false}
+  ],
+  "platform": {"device": "cpu", "threads": 1},
+  "execution": {"max_page_pixels": 16000000, "max_output_bytes": 1048576, "max_new_tokens": 4096}
+}
