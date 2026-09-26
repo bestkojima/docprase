@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """用官方 Transformers 接口运行本地原始 OvisOCR2 权重作转换基线。"""
 import argparse
-import hashlib
 import json
 from pathlib import Path
 import time
@@ -10,11 +9,7 @@ from PIL import Image
 import torch
 from transformers import AutoModelForMultimodalLM, AutoProcessor
 
-from model_probe_ovis import PROMPT
-
-
-def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+from model_probe_ovis import PROMPT, digest
 
 
 def main():
@@ -53,14 +48,14 @@ def main():
                    else "token_limit" if len(tokens) >= args.max_tokens else "unknown")
     report = {"source": "ATH-MaaS/OvisOCR2 Transformers original framework",
               "model_path": str(args.model.resolve()),
-              "model_weight_sha256": sha256(args.model / "model.safetensors"),
-              "image_sha256": sha256(args.image), "prompt": PROMPT,
+              "model_weight_sha256": digest(args.model / "model.safetensors"),
+              "image_sha256": digest(args.image), "prompt": PROMPT,
               "max_new_tokens": args.max_tokens, "do_sample": False,
               "generated_tokens": len(tokens), "stop_reason": stop_reason,
               "last_token_id": tokens[-1].item() if len(tokens) else None,
               "eos_token_ids": eos_ids, "elapsed_seconds": round(time.monotonic() - started, 3),
               "torch": torch.__version__, "transformers": __import__("transformers").__version__,
-              "cpu": True, "dtype": "float32", "raw_sha256": sha256(args.out / "raw.txt")}
+              "cpu": True, "dtype": "float32", "raw_sha256": digest(args.out / "raw.txt")}
     (args.out / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
 
 

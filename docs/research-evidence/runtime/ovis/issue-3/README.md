@@ -31,20 +31,24 @@
 
 - 策略是**每个识别区域启动独立子进程并重新构建模型实例**，不依赖尚未实测的同实例 `reset()`。独立 B、A→B、损坏 PNG 失败→B 均在 `mnn-suite/` 保存各次 `raw.txt` 和 `report.json`。B 三次原始 SHA-256 均为 `f5f90f8fa95ff4fc823311196df525ad975463c5daab867945b539f98e4c33ee`，停止状态均正常且有视觉工作；此样本没有残余差异。这只验证当前独立进程策略与样本，不证明同实例重置安全。
 - 损坏 PNG 由 MNN 返回进程码 0，但视觉耗时及像素数均为 0，最后触 512-token 上限并产生无意义文本；入口判 `error` / `incomplete`，随后 B 正常且与独立 B 字节相同。不能把退出 0 当作成功识别。
-- 真实正常图片的 8-token 用例见 [`token-limit/report.json`](token-limit/report.json)：进程码 0、MNN `MAX_TOKENS_FINISHED`、输出仅 23 字节，标记 `incomplete`。1 秒真实超时见 [`timeout/report.json`](timeout/report.json)：约 1.378 秒有界结束，进程码 -15，`process_group_terminated=true`。入口用独立进程组，先 TERM、最多等 2 秒后 KILL；[`timeout/post-timeout-process-check.json`](timeout/post-timeout-process-check.json) 记录无存活探针进程，超时后再次识别 B 与独立 B 字节相同。
+- 真实正常图片的 8-token 用例见 [`token-limit/report.json`](token-limit/report.json)：进程码 0、MNN `MAX_TOKENS_FINISHED`，标记 `incomplete`。1 秒真实超时见 [`timeout/report.json`](timeout/report.json)：约 2.634 秒有界结束，进程码 -15，`process_group_terminated=true`。入口用独立进程组，先 TERM、最多等 2 秒后检查整个进程组，仍有成员则 KILL；[`timeout/post-timeout-process-check.json`](timeout/post-timeout-process-check.json) 记录无存活探针进程，超时后再次识别 B 与独立 B 字节相同。另有忽略 TERM 且主进程先退出的子进程回归，见 [`timeout/term-ignoring-child-regression.log`](timeout/term-ignoring-child-regression.log)。
 
 ## 复现命令
 
 在仓库根目录，需已有 `/home/dr/project/MNN/build/libllm.so` 与模型权重；入口自动编译小型 C++ 探针，不修改 MNN 或模型目录。
 
 ```bash
-python3 scripts/model_probe_ovis.py --suite --out output/ovis-suite-issue3-author-prompt --max-tokens 512 --timeout 120
-python3 scripts/model_probe_ovis.py --out output/ovis-token-limit-issue3 --image tests/fixtures/ovis/complete_table.png --reference tests/fixtures/ovis/complete_table.reference.txt --max-tokens 8 --timeout 120
-python3 scripts/model_probe_ovis.py --out output/ovis-timeout-issue3 --image tests/fixtures/ovis/complete_table.png --max-tokens 512 --timeout 1
-OMP_NUM_THREADS=4 /home/dr/project/google_edge/litert-env/bin/python scripts/model_probe_ovis_original.py --image tests/fixtures/ovis/chinese_text.png --out output/ovis-original-author-text --max-tokens 512
-OMP_NUM_THREADS=4 /home/dr/project/google_edge/litert-env/bin/python scripts/model_probe_ovis_original.py --image tests/fixtures/ovis/printed_formula.png --out output/ovis-original-author-formula --max-tokens 512
-OMP_NUM_THREADS=4 /home/dr/project/google_edge/litert-env/bin/python scripts/model_probe_ovis_original.py --image tests/fixtures/ovis/complete_table.png --out output/ovis-original-author-table --max-tokens 512
-python3 scripts/compare_model_probe_ovis.py --mnn-suite output/ovis-suite-issue3-author-prompt --original-text output/ovis-original-author-text --original-formula output/ovis-original-author-formula --original-table output/ovis-original-author-table --out output/ovis-comparison-issue3
+python3 scripts/model_probe_ovis.py --suite --out output/ovis-suite-issue3-final --max-tokens 512 --timeout 120
+python3 scripts/model_probe_ovis.py --out output/ovis-token-limit-issue3-final --image tests/fixtures/ovis/complete_table.png --reference tests/fixtures/ovis/complete_table.reference.txt --max-tokens 8 --timeout 120
+python3 scripts/model_probe_ovis.py --out output/ovis-timeout-issue3-final --image tests/fixtures/ovis/complete_table.png --max-tokens 512 --timeout 1
+OMP_NUM_THREADS=4 timeout --signal=TERM --kill-after=5s 180s /home/dr/project/google_edge/litert-env/bin/python scripts/model_probe_ovis_original.py --image tests/fixtures/ovis/chinese_text.png --out output/ovis-original-author-text --max-tokens 512
+OMP_NUM_THREADS=4 timeout --signal=TERM --kill-after=5s 180s /home/dr/project/google_edge/litert-env/bin/python scripts/model_probe_ovis_original.py --image tests/fixtures/ovis/printed_formula.png --out output/ovis-original-author-formula --max-tokens 512
+OMP_NUM_THREADS=4 timeout --signal=TERM --kill-after=5s 180s /home/dr/project/google_edge/litert-env/bin/python scripts/model_probe_ovis_original.py --image tests/fixtures/ovis/complete_table.png --out output/ovis-original-author-table --max-tokens 512
+python3 scripts/compare_model_probe_ovis.py --mnn-suite output/ovis-suite-issue3-final --original-text output/ovis-original-author-text --original-formula output/ovis-original-author-formula --original-table output/ovis-original-author-table --out output/ovis-comparison-issue3-final
 ```
 
-本次实际退出码依次为 `0、0、1、0、0、0、0`；超时命令返回 1 是预期诊断结果。原框架三次实际运行外层另加 GNU `timeout --signal=TERM --kill-after=5s 180s`，均未触外层限时。`python3 -m unittest tests/test_model_probe_ovis.py -v` 验证探测入口的状态判定、无视觉拒绝、套件结构检查和进程组清理。完整测试使用已有隔离环境 `/home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests -v`，本次 11 项通过；系统 `python3` 未安装既有 Layout 测试需要的 NumPy，故不作为完整测试解释器。
+本次实际退出码依次为 `0、0、1、0、0、0、0`；超时命令返回 1 是预期诊断结果。原框架三次均未触外层 180 秒限时。`python3 -m unittest tests/test_model_probe_ovis.py -v` 验证探测入口的状态判定、无视觉拒绝、套件结构检查和进程组清理。完整测试使用已有隔离环境 `/home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests -v`，本次 12 项通过；系统 `python3` 未安装既有 Layout 测试需要的 NumPy，故不作为完整测试解释器。
+
+## 双轴审查
+
+以 `755ac74f32b78cf72a7f97aa69acdf4b0013169c` 为固定基点、Issue #3 为规格执行 `/code-review`。Standards 轴发现 C++ 用法提示未按仓库约定使用中文，以及三份脚本重复哈希实现；已改中文并共用流式 SHA-256。Spec 轴发现超时后主进程可能先退出、忽略 TERM 的同组子进程仍存活；先以入口测试复现，再加全组检查和 KILL，原审查者复核同场景通过。两轴修复后无剩余明确规格缺失；公式 LaTeX 格式仍保留为模型质量差异。

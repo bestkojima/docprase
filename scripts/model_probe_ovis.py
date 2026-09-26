@@ -138,14 +138,29 @@ def run_one(args, runner, config, image, out, reference=None):
             os.killpg(process.pid, signal.SIGTERM)
         except ProcessLookupError:
             pass
+        still_draining = False
         try:
             stdout, stderr = process.communicate(timeout=2)
-        except subprocess.TimeoutExpired:
+        except subprocess.TimeoutExpired as expired:
+            stdout, stderr = expired.stdout or b"", expired.stderr or b""
+            still_draining = True
+        # The leader can exit and close its pipes while an inference child
+        # ignores TERM. Always inspect the whole group, even after communicate returns.
+        if process_group_has_live_members(process.pid):
             try:
                 os.killpg(process.pid, signal.SIGKILL)
             except ProcessLookupError:
                 pass
-            stdout, stderr = process.communicate()
+        if still_draining:
+            try:
+                stdout, stderr = process.communicate(timeout=2)
+            except subprocess.TimeoutExpired as expired:
+                stdout, stderr = expired.stdout or stdout, expired.stderr or stderr
+                process.stdout.close()
+                process.stderr.close()
+        deadline = time.monotonic() + 2
+        while process_group_has_live_members(process.pid) and time.monotonic() < deadline:
+            time.sleep(0.05)
         group_terminated = not process_group_has_live_members(process.pid)
     (out / "stdout.log").write_bytes(stdout)
     (out / "stderr.log").write_bytes(stderr)

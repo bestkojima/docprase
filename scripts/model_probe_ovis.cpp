@@ -23,7 +23,7 @@ static const char* statusName(LlmStatus status) {
 
 int main(int argc, char** argv) {
     if (argc != 6) {
-        std::cerr << "usage: model_probe_ovis CONFIG IMAGE PROMPT MAX_TOKENS RAW_OUTPUT\n";
+        std::cerr << "用法：model_probe_ovis CONFIG IMAGE PROMPT MAX_TOKENS RAW_OUTPUT\n";
         return 2;
     }
     const int maxTokens = std::stoi(argv[4]);

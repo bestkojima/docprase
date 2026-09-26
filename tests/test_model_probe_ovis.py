@@ -2,6 +2,7 @@
 import json
 import os
 from pathlib import Path
+import signal
 import subprocess
 import sys
 import tempfile
@@ -64,6 +65,33 @@ time.sleep(60)
             self.assertEqual(report["stop_reason"], "timeout")
             self.assertEqual(report["completeness"], "incomplete")
             self.assertTrue(report["process_group_terminated"])
+
+    def test_timeout_kills_term_ignoring_child_after_leader_exits(self):
+        with tempfile.TemporaryDirectory() as folder:
+            process = None
+            child_pid = None
+            try:
+                process, report, out = self.invoke(folder, """
+import subprocess,sys,time
+from pathlib import Path
+child = subprocess.Popen([sys.executable, '-c',
+    'import os,signal,time;signal.signal(signal.SIGTERM,signal.SIG_IGN);time.sleep(60)'],
+    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+Path(sys.argv[5]+'.childpid').write_text(str(child.pid))
+time.sleep(60)
+""", timeout=1)
+                child_pid = int((out / "raw.txt.childpid").read_text())
+                self.assertNotEqual(process.returncode, 0)
+                self.assertEqual(report["stop_reason"], "timeout")
+                self.assertTrue(report["process_group_terminated"])
+                stat = Path("/proc") / str(child_pid) / "stat"
+                self.assertTrue(not stat.exists() or stat.read_text().rsplit(") ", 1)[1][0] == "Z")
+            finally:
+                if child_pid is not None:
+                    try:
+                        os.kill(child_pid, signal.SIGKILL)
+                    except ProcessLookupError:
+                        pass
 
     def test_suite_rejects_normal_eos_when_formula_or_table_format_is_missing(self):
         with tempfile.TemporaryDirectory() as folder:

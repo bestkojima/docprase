@@ -6,12 +6,10 @@ import hashlib
 import json
 from pathlib import Path
 
+from model_probe_ovis import digest
+
 
 NAMES = ("chinese_text", "printed_formula", "complete_table")
-
-
-def sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def main():
@@ -38,9 +36,9 @@ def main():
             raise ValueError("提示词或 token 上限不相同: " + name)
         mnn_raw = (args.mnn_suite / name / "raw.txt").read_text()
         original_raw = (original[name] / "raw.txt").read_text()
-        if sha256(args.mnn_suite / name / "raw.txt") != mnn_report["raw_sha256"]:
+        if digest(args.mnn_suite / name / "raw.txt") != mnn_report["raw_sha256"]:
             raise ValueError("MNN 原始输出哈希不符: " + name)
-        if sha256(original[name] / "raw.txt") != ref_report["raw_sha256"]:
+        if digest(original[name] / "raw.txt") != ref_report["raw_sha256"]:
             raise ValueError("原框架输出哈希不符: " + name)
         diff = "".join(difflib.unified_diff([line + "\n" for line in original_raw.splitlines()],
                                             [line + "\n" for line in mnn_raw.splitlines()],

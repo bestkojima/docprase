@@ -11,7 +11,7 @@
     "export_args.json": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334"
   },
   "effective_config_sha256": "adf91fd2d33248f48da88e739032fe75cc2a8f0f4de88a8ddf7ef45ca66f519d",
-  "runner_sha256": "7158a07090a4a82bd0ca8ec32e9c948eaba2b9f881a6d5c0f54034ef2a01e605",
+  "runner_sha256": "1fd3678a0c1d7f2eac779210a86d7cda3e4af971f412d6e26279418559c1685c",
   "mnn_git_commit": "baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6",
   "prompt": "\nExtract all readable content from the image in natural human reading order and output the result as a single Markdown document. For charts or images, represent them using an HTML image tag: <img src=\"images/bbox_{left}_{top}_{right}_{bottom}.jpg\" />, where left, top, right, bottom are bounding box coordinates scaled to [0, 1000). Format formulas as LaTeX. Format tables as HTML: <table>...</table>. Transcribe all other text as standard Markdown. Preserve the original text without translation or paraphrasing.",
   "max_tokens": 8,

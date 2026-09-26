@@ -1,0 +1,6 @@
+test_timeout_kills_term_ignoring_child_after_leader_exits (tests.test_model_probe_ovis.OvisProbeTests.test_timeout_kills_term_ignoring_child_after_leader_exits) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.281s
+
+OK

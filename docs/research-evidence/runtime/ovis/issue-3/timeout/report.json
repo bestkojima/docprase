@@ -3,19 +3,19 @@
   "image_sha256": "731414df2b519919cd9997a12b801a5c037a3b9866adc725fbf39845aa210cbc",
   "command": [
     "/home/dr/project/docprase/output/model-probe-ovis/model_probe_ovis",
-    "/home/dr/project/docprase/output/ovis-timeout-issue3/effective-config.json",
+    "/home/dr/project/docprase/output/ovis-timeout-issue3-final/effective-config.json",
     "/home/dr/project/docprase/tests/fixtures/ovis/complete_table.png",
     "\nExtract all readable content from the image in natural human reading order and output the result as a single Markdown document. For charts or images, represent them using an HTML image tag: <img src=\"images/bbox_{left}_{top}_{right}_{bottom}.jpg\" />, where left, top, right, bottom are bounding box coordinates scaled to [0, 1000). Format formulas as LaTeX. Format tables as HTML: <table>...</table>. Transcribe all other text as standard Markdown. Preserve the original text without translation or paraphrasing.",
     "512",
-    "/home/dr/project/docprase/output/ovis-timeout-issue3/raw.txt"
+    "/home/dr/project/docprase/output/ovis-timeout-issue3-final/raw.txt"
   ],
   "exit_code": -15,
-  "elapsed_seconds": 1.378,
+  "elapsed_seconds": 2.634,
   "stop_reason": "timeout",
   "completeness": "incomplete",
   "runtime": {},
   "visual_processing_confirmed": false,
   "process_group_terminated": true,
-  "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "raw_bytes": 0
+  "raw_sha256": "ea8c92a5435c902b0667a8e5da05e5281807ec6d38af5488be571a4b5ac2ce8c",
+  "raw_bytes": 6
 }

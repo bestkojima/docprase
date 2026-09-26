@@ -93,6 +93,7 @@
   },
   "isolation_exact_match": true,
   "failure_recovery_exact_match": true,
+  "model_evidence": "real_mnn",
   "reference_model_output": "not_verified",
   "reference_note": "OmniDocBench 标注是人工/数据集真值，不是 OvisOCR2 原框架输出。",
   "checks": {
