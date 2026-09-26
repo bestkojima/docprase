@@ -209,9 +209,9 @@ const std::map<std::string, std::pair<std::string, bool>> processors = {
 };
 const std::map<std::string, std::pair<std::string, std::string>> flow_types = {
     {"page_loader", {"source", "page"}},
-    {"layout.detect", {"page", "layout"}},
-    {"ocr.transcribe", {"layout", "fragments"}},
-    {"document_assembler", {"fragments", "document"}},
+    {"layout.detect", {"page", "layout_blocks"}},
+    {"ocr.transcribe", {"layout_blocks", "block_results"}},
+    {"document_assembler", {"block_results", "document"}},
     {"document_exporter", {"document", "output"}}
 };
 } // namespace
@@ -253,6 +253,8 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
         if (status != "verified_fixture" && status != "pending_probe" && status != "contract_verified")
             throw ConfigError("invalid_contract_status", name);
         if (plan->mode == "production" && (status != "contract_verified" || plan->backend == "none"))
+            throw ConfigError("contract_unverified", name);
+        if (plan->backend.rfind("fixture:", 0) == 0 && status != "verified_fixture")
             throw ConfigError("contract_unverified", name);
         if (status == "verified_fixture" && plan->backend.rfind("fixture:", 0) != 0)
             throw ConfigError("contract_unverified", name);

@@ -3,7 +3,6 @@
 #include "backend_factory.hpp"
 #include "config.hpp"
 #include <atomic>
-#include <cctype>
 #include <cstdlib>
 #include <cstring>
 #include <map>
@@ -35,6 +34,14 @@ struct Job {
     std::string manifest;
 };
 thread_local std::string last_error;
+std::shared_ptr<const dococr::ExecutionPlan> checked_plan(const std::string& value) {
+    try { return dococr::build_plan(value, dococr::config_supported("fixture:sample")); }
+    catch (const dococr::ConfigError& error) {
+        last_error = "{\"code\":" + dococr::json_quote(error.code) +
+            ",\"detail\":" + dococr::json_quote(error.detail) + "}";
+        return {};
+    }
+}
 std::mutex registry_mutex;
 std::map<DocOcrHandle, std::shared_ptr<Engine>> engines;
 std::map<DocOcrJob, std::shared_ptr<Job>> jobs;
@@ -64,9 +71,22 @@ std::string event_json(const Job& job) {
                "\",\"code\":\"" + job.error_code + "\",\"message\":\"" + job.error_message + "\"}";
     return out + "}";
 }
+bool same_artifacts(const std::vector<dococr::ArtifactInfo>& a,
+                    const std::vector<dococr::ArtifactInfo>& b) {
+    if (a.size() != b.size()) return false;
+    for (size_t i = 0; i < a.size(); ++i)
+        if (a[i].model != b[i].model || a[i].path != b[i].path ||
+            a[i].sha256 != b[i].sha256 || a[i].contract_status != b[i].contract_status) return false;
+    return true;
+}
 std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunResult& result,
                           const std::string& actual_backend) {
+    std::string job_status = result.code == dococr::RunCode::BudgetExceeded ? "budget_exceeded" :
+        result.code == dococr::RunCode::Ok ? "ok" : result.code == dococr::RunCode::Partial ? "partial" :
+        result.code == dococr::RunCode::Blank ? "blank" : "failed";
     std::string out = "{\"schema_version\":\"1.0\",\"config_hash\":" + dococr::json_quote(plan.config_hash) +
+        ",\"job_status\":" + dococr::json_quote(job_status) +
+        ",\"budget_stage\":" + (result.budget_stage.empty() ? "null" : dococr::json_quote(result.budget_stage)) +
         ",\"actual_backend\":" + dococr::json_quote(actual_backend) +
         ",\"backend_id\":" + dococr::json_quote(plan.backend) +
         ",\"actual_device\":\"cpu\",\"runtime_version\":\"fixture-only\","
@@ -85,20 +105,31 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         const auto& step = plan.processing[i];
         std::string status, reason;
         if (!step.enabled) { status = "skipped_disabled"; reason = "optional_disabled"; }
-        else if (step.id == "decode") { status = result.did_decode ? "executed" : "failed"; reason = "image_decoded"; }
+        else if (step.id == "decode") {
+            status = result.did_decode ? "executed" : result.code == dococr::RunCode::InputError ? "failed" : "not_run";
+            reason = result.did_decode ? "image_decoded" : "decode_unavailable";
+        }
         else if (step.id == "normalize") {
-            status = step.owner == "adapter" ? (result.did_normalize ? "executed" : "failed") :
-                     step.owner == "runtime" ? (result.did_layout ? "delegated_runtime" : "failed") :
-                     (result.did_layout ? "provided_by_graph" : "failed");
+            status = step.owner == "adapter" ? (result.did_normalize ? "executed" : "not_run") :
+                     step.owner == "runtime" ? (result.did_layout ? "delegated_runtime" : "not_run") :
+                     (result.did_layout ? "provided_by_graph" : "not_run");
             reason = step.owner == "adapter" ? "rgb8_to_float32_0_1" :
                      step.owner == "runtime" ? "fixture_runtime_normalized" : "fixture_graph_normalized";
         }
-        else if (step.id == "crop") { status = result.did_crop ? "executed" : "identity_validated"; reason = result.did_crop ? "region_crop" : "no_regions"; }
-        else if (step.id == "session_reset") {
-            status = result.reset_failed ? "failed" : result.did_reset ? "delegated_runtime" : "identity_validated";
-            reason = result.reset_failed ? "fixture_reset_failed" : result.did_reset ? "fixture_reset_succeeded" : "no_recognition_regions";
+        else if (step.id == "crop") {
+            status = result.did_crop ? "executed" : result.did_layout ? "identity_validated" : "not_run";
+            reason = result.did_crop ? "region_crop" : result.did_layout ? "no_regions" : "layout_not_completed";
         }
-        else { status = "identity_validated"; reason = "owned_rgb8_source"; }
+        else if (step.id == "session_reset") {
+            status = result.reset_failed ? "failed" : result.did_reset ? "delegated_runtime" :
+                     result.did_layout ? "identity_validated" : "not_run";
+            reason = result.reset_failed ? "fixture_reset_failed" : result.did_reset ?
+                     "fixture_reset_succeeded" : result.did_layout ? "no_recognition_regions" : "layout_not_completed";
+        }
+        else {
+            status = result.did_decode ? "identity_validated" : "not_run";
+            reason = result.did_decode ? "owned_rgb8_source" : "decode_not_completed";
+        }
         if (i) out += ',';
         out += "{\"id\":" + dococr::json_quote(step.id) + ",\"owner\":" + dococr::json_quote(step.owner) +
             ",\"status\":" + dococr::json_quote(status) + ",\"reason\":" + dococr::json_quote(reason) + "}";
@@ -107,6 +138,10 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         ",\"layout\":" + std::to_string(result.layout_ms) +
         ",\"recognition\":" + std::to_string(result.recognition_ms) +
         ",\"export\":" + std::to_string(result.export_ms) +
+        "},\"timing_status\":{\"decode\":" + dococr::json_quote(result.did_decode ? "measured" : "not_run") +
+        ",\"layout\":" + dococr::json_quote(result.did_layout ? "measured" : "not_run") +
+        ",\"recognition\":" + dococr::json_quote(result.did_recognition ? "measured" : "not_run") +
+        ",\"export\":" + dococr::json_quote(result.did_export ? "measured" : "not_run") +
         "},\"metrics\":{\"peak_memory_bytes\":{\"status\":\"unavailable\",\"reason\":\"portable sampler not implemented\"}}}";
     return out;
 }
@@ -122,18 +157,12 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
         last_error.clear();
         std::string value(config.data ? config.data : "", config.size);
         std::shared_ptr<const dococr::ExecutionPlan> plan;
-        auto first = value.find_first_not_of(" \t\r\n");
-        if (first != std::string::npos && value[first] == '{') {
-            try { plan = dococr::build_plan(value, dococr::config_supported("fixture:sample")); }
-            catch (const dococr::ConfigError& error) {
-                last_error = "{\"code\":" + dococr::json_quote(error.code) +
-                    ",\"detail\":" + dococr::json_quote(error.detail) + "}";
-                return DOCOCR_CONFIG_ERROR;
-            }
+        if (!dococr::config_supported(value)) {
+            plan = checked_plan(value);
+            if (!plan) return DOCOCR_CONFIG_ERROR;
         }
         const std::string backend_name = plan ? plan->backend : value;
         if (!dococr::config_supported(backend_name)) {
-            if (!plan) return DOCOCR_UNSUPPORTED;
             last_error = "{\"code\":\"unsupported_backend\",\"detail\":" +
                 dococr::json_quote(backend_name) + "}";
             return DOCOCR_CONFIG_ERROR;
@@ -148,7 +177,14 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
             last_error = "{\"code\":\"missing_capability\",\"detail\":\"tensor/generation/serial required\"}";
             return DOCOCR_CONFIG_ERROR;
         }
-        if (engine->backend && !engine->backend->load()) return DOCOCR_FAILED;
+        dococr::BackendLoadSpec load_spec{backend_name, engine->plan ? engine->plan->config_hash : "",
+            engine->plan ? engine->plan->device : "cpu", engine->plan ? engine->plan->artifacts :
+            std::vector<dococr::ArtifactInfo>{}};
+        if (engine->backend && !engine->backend->load(load_spec)) return DOCOCR_FAILED;
+        if (engine->plan && !same_artifacts(engine->plan->artifacts, engine->backend->loaded_artifacts())) {
+            last_error = "{\"code\":\"artifact_binding_mismatch\"}";
+            return DOCOCR_CONFIG_ERROR;
+        }
         std::lock_guard<std::mutex> lock(registry_mutex);
         *out = next_handle++;
         engines[*out] = std::move(engine);
@@ -170,17 +206,19 @@ DocOcrStatus dococr_reconfigure(DocOcrHandle handle, DocOcrStringView config) {
     return guarded([&] {
         if (!config.data || !config.size || config.size > 1024 * 1024) return DOCOCR_INVALID_ARGUMENT;
         last_error.clear();
-        std::shared_ptr<const dococr::ExecutionPlan> plan;
-        try { plan = dococr::build_plan(std::string(config.data, config.size), dococr::config_supported("fixture:sample")); }
-        catch (const dococr::ConfigError& error) {
-            last_error = "{\"code\":" + dococr::json_quote(error.code) +
-                ",\"detail\":" + dococr::json_quote(error.detail) + "}";
-            return DOCOCR_CONFIG_ERROR;
-        }
+        auto plan = checked_plan(std::string(config.data, config.size));
+        if (!plan) return DOCOCR_CONFIG_ERROR;
         std::lock_guard<std::mutex> lock(registry_mutex);
         auto it = engines.find(handle);
         if (it == engines.end()) return DOCOCR_INVALID_HANDLE;
-        if (it->second->config != plan->backend) return DOCOCR_UNSUPPORTED;
+        if (it->second->config != plan->backend) {
+            last_error = "{\"code\":\"backend_change_requires_new_engine\"}";
+            return DOCOCR_CONFIG_ERROR;
+        }
+        if (!it->second->plan || !same_artifacts(it->second->plan->artifacts, plan->artifacts)) {
+            last_error = "{\"code\":\"artifact_change_requires_new_engine\"}";
+            return DOCOCR_CONFIG_ERROR;
+        }
         it->second->plan = std::move(plan);
         return DOCOCR_OK;
     });
@@ -257,6 +295,8 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
         std::lock_guard<std::mutex> lock(registry_mutex);
         job->running = false;
         engine->running = false;
+        if (job->plan && engine->backend)
+            job->manifest = manifest_json(*job->plan, result, engine->backend->profile());
         switch (result.code) {
         case dococr::RunCode::Ok: job->state = "completed"; break;
         case dococr::RunCode::Partial: job->state = "partial"; break;
@@ -279,10 +319,9 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             return DOCOCR_FAILED;
         case dococr::RunCode::BudgetExceeded:
             job->state = "failed"; job->error_stage = "budget";
-            job->error_code = "budget_exceeded"; job->error_message = "input or output budget exceeded";
+            job->error_code = "budget_exceeded"; job->error_message = result.budget_stage;
             return DOCOCR_BUDGET_EXCEEDED;
         }
-        if (job->plan) job->manifest = manifest_json(*job->plan, result, engine->backend->profile());
         job->output = std::move(result.output);
         job->has_result = true;
         return DOCOCR_OK;
@@ -296,7 +335,7 @@ DocOcrStatus dococr_job_manifest(DocOcrJob handle, DocOcrBytes* out_json) {
         std::lock_guard<std::mutex> lock(registry_mutex);
         auto it = jobs.find(handle);
         if (it == jobs.end()) return DOCOCR_INVALID_HANDLE;
-        if (!it->second->has_result || it->second->manifest.empty()) return DOCOCR_NO_RESULT;
+        if (it->second->manifest.empty()) return DOCOCR_NO_RESULT;
         *out_json = copy_bytes(it->second->manifest.data(), it->second->manifest.size());
         return DOCOCR_OK;
     });

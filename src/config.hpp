@@ -6,13 +6,13 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include "dococr/inference.hpp"
 
 namespace dococr {
 struct ProcessingStep {
     std::string id, owner;
     bool enabled = true;
 };
-struct ArtifactInfo { std::string model, path, sha256, contract_status; };
 struct ExecutionPlan {
     std::string config_hash, backend, mode, device, json;
     int threads = 1;

@@ -14,6 +14,16 @@ bool write_file(const fs::path& path, const DocOcrBytes& bytes) {
     file.write(reinterpret_cast<const char*>(bytes.data), static_cast<std::streamsize>(bytes.size));
     return bool(file);
 }
+bool write_audit(const fs::path& output_path, DocOcrHandle engine, DocOcrJob job) {
+    DocOcrBytes plan{}, manifest{};
+    bool ok = dococr_execution_plan(engine, &plan) == DOCOCR_OK &&
+              dococr_job_manifest(job, &manifest) == DOCOCR_OK;
+    if (ok) ok = write_file(output_path / "execution-plan.json", plan) &&
+                 write_file(output_path / "run-manifest.json", manifest);
+    if (plan.data) dococr_bytes_free(&plan);
+    if (manifest.data) dococr_bytes_free(&manifest);
+    return ok;
+}
 }
 int main(int argc, char** argv) {
     if (argc != 7 || (std::string(argv[1]) != "--backend" && std::string(argv[1]) != "--config") ||
@@ -58,6 +68,8 @@ int main(int argc, char** argv) {
                 std::cerr << std::string(reinterpret_cast<const char*>(event.data), event.size) << '\n';
             else std::cerr << "作业运行失败，状态码：" << status << '\n';
             if (event.data) dococr_bytes_free(&event);
+            if (configured && !write_audit(output_path, engine, job))
+                std::cerr << "运行清单导出失败\n";
             dococr_job_destroy(job); dococr_destroy(engine);
             return status == DOCOCR_UNSUPPORTED ? 4 : status == DOCOCR_BUDGET_EXCEEDED ? 5 : 3;
         }
@@ -66,15 +78,7 @@ int main(int argc, char** argv) {
         if (status != DOCOCR_OK) { dococr_job_destroy(job); dococr_destroy(engine); return 3; }
         bool ok = write_file(output_path / "document.json", result.json) &&
                   write_file(output_path / "document.md", result.markdown);
-        if (configured) {
-            DocOcrBytes plan{}, manifest{};
-            if (dococr_execution_plan(engine, &plan) != DOCOCR_OK ||
-                dococr_job_manifest(job, &manifest) != DOCOCR_OK) ok = false;
-            else ok = ok && write_file(output_path / "execution-plan.json", plan) &&
-                           write_file(output_path / "run-manifest.json", manifest);
-            if (plan.data) dococr_bytes_free(&plan);
-            if (manifest.data) dococr_bytes_free(&manifest);
-        }
+        if (configured) ok = write_audit(output_path, engine, job) && ok;
         size_t count = 0;
         if (dococr_job_asset_count(job, &count) != DOCOCR_OK) ok = false;
         for (size_t i = 0; ok && i < count; ++i) {

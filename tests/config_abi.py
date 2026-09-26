@@ -1,6 +1,7 @@
 """公共 C ABI 验证运行中配置快照和后续作业预算。"""
 import copy
 import ctypes as c
+import hashlib
 import json
 import pathlib
 import sys
@@ -84,6 +85,14 @@ def main():
         assert old_manifest["config_hash"] != new_plan["config_hash"]
         assert lib.dococr_bytes_free(c.byref(manifest_bytes)) == 0
         assert lib.dococr_job_destroy(old_job) == 0
+
+        changed_file = root / "replacement.bin"
+        changed_file.write_bytes(b"replacement contract\n")
+        changed = copy.deepcopy(new)
+        for model in changed["models"].values():
+            model["artifacts"][0] = {"path": changed_file.name,
+                                       "sha256": hashlib.sha256(changed_file.read_bytes()).hexdigest()}
+        assert lib.dococr_reconfigure(engine, view(changed)) == 9
 
         new_job = c.c_uint64()
         assert lib.dococr_job_create(engine, c.byref(new_job)) == 0

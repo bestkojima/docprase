@@ -28,25 +28,6 @@ namespace {
 constexpr uint64_t max_pixels = 16000000;
 constexpr size_t max_encoded_bytes = 64 * 1024 * 1024;
 
-std::string quote(const std::string& s) {
-    std::ostringstream out;
-    out << '"';
-    for (unsigned char c : s) {
-        switch (c) {
-        case '"': out << "\\\""; break;
-        case '\\': out << "\\\\"; break;
-        case '\n': out << "\\n"; break;
-        case '\r': out << "\\r"; break;
-        case '\t': out << "\\t"; break;
-        default:
-            if (c < 0x20) out << "\\u" << std::hex << std::setw(4) << std::setfill('0') << int(c) << std::dec;
-            else out << static_cast<char>(c);
-        }
-    }
-    out << '"';
-    return out.str();
-}
-
 std::string id(const char prefix, size_t index) {
     std::ostringstream out;
     out << prefix << std::setw(4) << std::setfill('0') << index;
@@ -224,64 +205,64 @@ std::string serialize(const Image& image, const std::string& state,
                       const std::vector<Block>& blocks, const std::string& profile) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
-    out << "{\"schema_version\":\"1.0\",\"document_id\":" << quote(document_id(image))
-        << ",\"status\":" << quote(state)
+    out << "{\"schema_version\":\"1.0\",\"document_id\":" << json_quote(document_id(image))
+        << ",\"status\":" << json_quote(state)
         << ",\"source\":{\"type\":\"image\"},\"pages\":[{\"page_id\":\"p0001\",\"page_index\":0,"
         << "\"raster_size\":[" << image.width << ',' << image.height << "],\"coordinate_space\":\"raster_page\","
-        << "\"status\":" << quote(state) << ",\"reading_order\":[";
+        << "\"status\":" << json_quote(state) << ",\"reading_order\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
-        out << quote(blocks[i].id);
+        out << json_quote(blocks[i].id);
     }
     out << "],\"layout_blocks\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << quote(b.layout_id) << ",\"page_id\":\"p0001\",\"label\":" << quote(b.type)
+        out << "{\"id\":" << json_quote(b.layout_id) << ",\"page_id\":\"p0001\",\"label\":" << json_quote(b.type)
             << ",\"bbox\":" << box_json(b.box) << ",\"coordinate_space\":\"raster_page\","
             << "\"detection_score\":" << b.detection_score << ",\"candidate_rank\":" << b.candidate_rank
             << ",\"original_class_id\":" << b.original_class_id
-            << ",\"provenance\":{\"model_profile\":" << quote(profile)
+            << ",\"provenance\":{\"model_profile\":" << json_quote(profile)
             << ",\"request_id\":\"layout-p0001\"}}";
     }
     out << "],\"regions\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << quote(b.region_id) << ",\"page_id\":\"p0001\",\"source_layout_block_ids\":["
-            << quote(b.layout_id) << "],\"bbox\":" << box_json(b.box)
+        out << "{\"id\":" << json_quote(b.region_id) << ",\"page_id\":\"p0001\",\"source_layout_block_ids\":["
+            << json_quote(b.layout_id) << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\"}";
     }
     out << "],\"blocks\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << quote(b.id) << ",\"page_id\":\"p0001\",\"type\":" << quote(b.type)
-            << ",\"source_region_ids\":[" << quote(b.region_id) << "],\"bbox\":" << box_json(b.box)
+        out << "{\"id\":" << json_quote(b.id) << ",\"page_id\":\"p0001\",\"type\":" << json_quote(b.type)
+            << ",\"source_region_ids\":[" << json_quote(b.region_id) << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
             << "\"reading_order_source\":\"geometry\","
-            << "\"status\":" << quote(b.status) << ",\"confidence\":null,\"content\":{\"format\":"
-            << quote(b.type == "image" || b.type == "unknown" ? "resource" :
+            << "\"status\":" << json_quote(b.status) << ",\"confidence\":null,\"content\":{\"format\":"
+            << json_quote(b.type == "image" || b.type == "unknown" ? "resource" :
                      b.type == "formula" ? "latex" : b.type == "table" ? "html" : "markdown")
-            << ",\"text\":" << quote(b.text) << ",\"resource\":"
-            << (b.resource.empty() ? "null" : quote(b.resource));
+            << ",\"text\":" << json_quote(b.text) << ",\"resource\":"
+            << (b.resource.empty() ? "null" : json_quote(b.resource));
         if (b.type == "formula") out << ",\"display\":true";
         out
-            << "},\"provenance\":{\"model_profile\":" << quote(profile)
-            << ",\"request_id\":" << quote("req" + id('r', i+1))
-            << ",\"raw_output\":" << (b.raw_base64.empty() ? quote(b.raw) : "null")
-            << ",\"raw_output_base64\":" << (b.raw_base64.empty() ? "null" : quote(b.raw_base64))
-            << ",\"text_base64\":" << (b.text_base64.empty() ? "null" : quote(b.text_base64))
-            << "},\"error\":" << (b.error.empty() ? "null" : quote(b.error))
-            << ",\"error_base64\":" << (b.error_base64.empty() ? "null" : quote(b.error_base64)) << "}";
+            << "},\"provenance\":{\"model_profile\":" << json_quote(profile)
+            << ",\"request_id\":" << json_quote("req" + id('r', i+1))
+            << ",\"raw_output\":" << (b.raw_base64.empty() ? json_quote(b.raw) : "null")
+            << ",\"raw_output_base64\":" << (b.raw_base64.empty() ? "null" : json_quote(b.raw_base64))
+            << ",\"text_base64\":" << (b.text_base64.empty() ? "null" : json_quote(b.text_base64))
+            << "},\"error\":" << (b.error.empty() ? "null" : json_quote(b.error))
+            << ",\"error_base64\":" << (b.error_base64.empty() ? "null" : json_quote(b.error_base64)) << "}";
     }
     out << "],\"relations\":[]}],\"resources\":[";
     bool first = true;
     for (const Block& b : blocks) if (!b.resource.empty()) {
         if (!first) out << ',';
         first = false;
-        out << "{\"id\":" << quote("asset-" + b.id) << ",\"path\":" << quote(b.resource)
-            << ",\"media_type\":\"image/png\",\"source_block_id\":" << quote(b.id)
+        out << "{\"id\":" << json_quote("asset-" + b.id) << ",\"path\":" << json_quote(b.resource)
+            << ",\"media_type\":\"image/png\",\"source_block_id\":" << json_quote(b.id)
             << ",\"width\":" << b.box.x1-b.box.x0 << ",\"height\":" << b.box.y1-b.box.y0
             << ",\"bbox\":" << box_json(b.box) << ",\"coordinate_space\":\"raster_page\"}";
     }
@@ -303,7 +284,11 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     audit.did_decode = true;
     audit.page_pixels = uint64_t(image.width) * image.height;
     audit.decode_ms = elapsed(start);
-    if (plan && audit.page_pixels > plan->max_page_pixels) return {RunCode::BudgetExceeded, {}};
+    if (plan && audit.page_pixels > plan->max_page_pixels) {
+        audit.code = RunCode::BudgetExceeded;
+        audit.budget_stage = "input_pixels";
+        return audit;
+    }
     if (!backend) return {RunCode::Unsupported, {}};
     if (!backend->capabilities().tensor || !backend->capabilities().generation ||
         backend->capabilities().max_concurrent_requests < 1) return {RunCode::Unsupported, {}};
@@ -333,6 +318,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     if (!decode_layout(*layout, candidates)) return {RunCode::Failed, {}};
     start = Clock::now();
     for (const auto& candidate : candidates) {
+        audit.did_recognition = true;
         Box b = candidate.box;
         if (b.x0 < 0 || b.y0 < 0 || b.x1 > image.width || b.y1 > image.height ||
             b.x0 >= b.x1 || b.y0 >= b.y1) return {RunCode::Failed, {}};
@@ -435,11 +421,16 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     }
     if (!output.markdown.empty()) output.markdown += '\n';
     output.json = serialize(image, state, blocks, backend->profile());
+    audit.did_export = true;
     audit.export_ms = elapsed(start);
     if (plan) {
         uint64_t output_size = output.json.size() + output.markdown.size();
         for (const auto& asset : output.assets) output_size += asset.png.size();
-        if (output_size > plan->max_output_bytes) return {RunCode::BudgetExceeded, {}};
+        if (output_size > plan->max_output_bytes) {
+            audit.code = RunCode::BudgetExceeded;
+            audit.budget_stage = "output_bytes";
+            return audit;
+        }
     }
     audit.code = candidates.empty() ? RunCode::Blank : partial ? RunCode::Partial : RunCode::Ok;
     audit.output = std::move(output);

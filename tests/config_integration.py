@@ -61,8 +61,8 @@ def main():
         canonical = json.dumps(good, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
         assert plan["config_hash"] == hashlib.sha256(canonical.encode()).hexdigest()
         assert [step["output_kind"] for step in plan["resolved_flow"]] == [
-            "page", "layout", "fragments", "document", "output"]
-        assert manifest["actual_backend"] == "test_fixture"
+            "page", "layout_blocks", "block_results", "document", "output"]
+        assert manifest["actual_backend"] == "test_fixture/" + good["models"]["layout"]["artifacts"][0]["sha256"][:8]
         assert manifest["actual_device"] == "cpu"
         assert trace["decode"]["status"] == "executed"
         assert trace["normalize"]["status"] == "executed"
@@ -78,6 +78,12 @@ def main():
         bad["execution"]["max_page_pixels"] = 1
         result = invoke(binary, bad, source, root)
         assert result.returncode == 5 and "budget_exceeded" in result.stderr
+        budget_manifest = json.loads((root / "out/run-manifest.json").read_text())
+        assert budget_manifest["job_status"] == "budget_exceeded"
+        assert budget_manifest["budget_stage"] == "input_pixels"
+        assert budget_manifest["timing_status"]["decode"] == "measured"
+        assert budget_manifest["timing_status"]["layout"] == "not_run"
+        assert {step["id"]: step for step in budget_manifest["processing"]}["normalize"]["status"] == "not_run"
         cases = []
         bad = copy.deepcopy(good); bad["processing"][0]["mystery"] = 1
         cases.append((bad, "unknown_field"))
@@ -101,11 +107,19 @@ def main():
         cases.append((bad, "artifact_hash_mismatch"))
         bad = copy.deepcopy(good); bad["mode"] = "production"
         cases.append((bad, "contract_unverified"))
+        bad = copy.deepcopy(good); bad["models"]["layout"]["contract_status"] = "pending_probe"
+        cases.append((bad, "contract_unverified"))
         bad = copy.deepcopy(good); bad["platform"]["threads"] = 4294967297
         cases.append((bad, "unsupported_parameter"))
         for bad, code in cases:
             result = invoke(binary, bad, source, root)
             assert result.returncode == 3 and code in result.stderr, (code, result.stderr)
+
+        yaml_path = root / "pipeline.yaml"
+        yaml_path.write_text("schema_version: 1.1\n", encoding="utf-8")
+        result = subprocess.run([binary, "--config", str(yaml_path), "--input", str(source),
+                                 "--out", str(root / "out")], capture_output=True, text=True)
+        assert result.returncode == 3 and "invalid_json" in result.stderr
 
         for backend, owner, marker, status in [
             ("fixture:runtime", "runtime", "运行时归一化", "delegated_runtime"),
@@ -139,11 +153,24 @@ def main():
         cfg["execution"]["max_output_bytes"] = 1
         result = invoke(binary, cfg, source, root)
         assert result.returncode == 5 and "budget_exceeded" in result.stderr
+        budget_manifest = json.loads((root / "out/run-manifest.json").read_text())
+        assert budget_manifest["budget_stage"] == "output_bytes"
+        assert budget_manifest["timing_status"]["export"] == "measured"
         cfg = copy.deepcopy(good)
         cfg["execution"]["max_new_tokens"] = 1
         result = invoke(binary, cfg, source, root)
         assert result.returncode == 0, result.stderr
         assert json.loads((root / "out/document.json").read_text())["status"] == "partial"
+        changed = root / "changed.bin"
+        changed.write_bytes(b"another verified fixture contract\n")
+        changed_cfg = copy.deepcopy(good)
+        digest = hashlib.sha256(changed.read_bytes()).hexdigest()
+        for model in changed_cfg["models"].values():
+            model["artifacts"][0] = {"path": changed.name, "sha256": digest}
+        result = invoke(binary, changed_cfg, source, root)
+        assert result.returncode == 0, result.stderr
+        changed_document = json.loads((root / "out/document.json").read_text())
+        assert changed_document["pages"][0]["blocks"][0]["provenance"]["model_profile"] == "test_fixture/" + digest[:8]
         for backend, expected_reset, expected_crop in [
             ("fixture:reset_failure", "failed", "executed"),
             ("fixture:blank", "identity_validated", "identity_validated"),

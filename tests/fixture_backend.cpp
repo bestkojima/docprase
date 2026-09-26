@@ -1,4 +1,5 @@
 #include "backend_factory.hpp"
+#include "config.hpp"
 #include <chrono>
 #include <cstring>
 #include <stdexcept>
@@ -7,9 +8,22 @@ namespace dococr {
 class FixtureBackend final : public IInferenceEngine {
 public:
     explicit FixtureBackend(std::string scenario) : scenario_(std::move(scenario)) {}
-    bool load() override { return true; }
+    bool load(const BackendLoadSpec& spec) override {
+        if (spec.backend_id != "fixture:" + scenario_) return false;
+        loaded_.clear();
+        for (const auto& artifact : spec.artifacts) {
+            if (artifact.contract_status != "verified_fixture" ||
+                sha256_file(artifact.path) != artifact.sha256) return false;
+            loaded_.push_back(artifact);
+        }
+        if (!spec.config_hash.empty() && loaded_.size() != 2) return false;
+        return true;
+    }
+    std::vector<ArtifactInfo> loaded_artifacts() const override { return loaded_; }
     const EngineCapabilities& capabilities() const override { return capabilities_; }
-    std::string profile() const override { return "test_fixture"; }
+    std::string profile() const override {
+        return loaded_.empty() ? "test_fixture" : "test_fixture/" + loaded_.front().sha256.substr(0, 8);
+    }
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
             if (scenario_ == "slow") {
@@ -86,6 +100,7 @@ public:
 private:
     EngineCapabilities capabilities_{true, true, true, 1};
     std::string scenario_;
+    std::vector<ArtifactInfo> loaded_;
 };
 bool config_supported(const std::string& config) {
     return config == "fixture:normalized" || config == "fixture:runtime" ||

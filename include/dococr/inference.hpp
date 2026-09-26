@@ -50,10 +50,16 @@ struct EngineCapabilities {
     bool isolated_sessions = false;
     int max_concurrent_requests = 1;
 };
+struct ArtifactInfo { std::string model, path, sha256, contract_status; };
+struct BackendLoadSpec {
+    std::string backend_id, config_hash, device;
+    std::vector<ArtifactInfo> artifacts;
+};
 class IInferenceEngine {
 public:
     virtual ~IInferenceEngine() = default;
-    virtual bool load() = 0;
+    virtual bool load(const BackendLoadSpec&) = 0;
+    virtual std::vector<ArtifactInfo> loaded_artifacts() const = 0;
     virtual const EngineCapabilities& capabilities() const = 0;
     virtual std::string profile() const = 0;
     virtual InferenceResponse execute(const InferenceRequest&, ExecutionContext&) = 0;
@@ -73,7 +79,8 @@ struct RunResult {
     JobOutput output;
     uint64_t page_pixels = 0;
     bool did_decode = false, did_layout = false, did_normalize = false, did_crop = false,
-         did_reset = false, reset_failed = false;
+         did_reset = false, reset_failed = false, did_recognition = false, did_export = false;
+    std::string budget_stage;
     uint64_t decode_ms = 0, layout_ms = 0, recognition_ms = 0, export_ms = 0;
 };
 struct InputView {
