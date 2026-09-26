@@ -4,6 +4,8 @@
 
 要求 CMake ≥ 3.20、C++17 编译器。依赖的 stb 头文件已固定在 `third_party/stb/`，不需要 MNN、模型权重或网络。测试额外需要 Python 3 标准库。
 
+JPEG 验收样本 `tests/fixtures/rgb2x2.jpg` 由本项目绘制的四个色块经 Pillow 10.2.0 生成并提交，运行测试不依赖 Pillow。
+
 ```sh
 cmake -S . -B /tmp/dococr-build -DDOCOCR_BUILD_TESTS=ON
 cmake --build /tmp/dococr-build -j2
@@ -35,5 +37,7 @@ cmake --build /tmp/dococr-production -j2
 版本化结构见 [`document-ir-1.0.schema.json`](document-ir-1.0.schema.json)。页面、LayoutBlock、Region、内容块和资源分别有自己的 ID。当前单页 ID 为 `p0001`；块 `b0001`、区域 `r0001`、版面块 `l0001` 在稳定阅读顺序中编号。候选 `rank` 保留为版面元数据，可能重复，绝不充当 ID。所有坐标都是源栅格页的左上原点、整数像素、半开区间 `[x0,y0,x1,y1]`；区域裁剪没有重采样。当前几何粒度仅为 region，识别置信度未知时保持 `null`，不生成字符或单元格坐标。`provenance` 保存后端 profile、请求 ID 和原始文本输出。
 
 当前 `TensorRequest`/`TensorOutput` 在 `IInferenceEngine` 处使用带名称、dtype、layout、shape 和自有字节的张量，`GenerationRequest`/`GenerationOutput` 独立。上层从候选张量解码版面块，再规划单块区域、识别与组装。若后端文字、原始输出或错误含非法 UTF-8，块标记失败，原始字节分别保存在 `text_base64`、`raw_output_base64`、`error_base64`，JSON 仍保持合法 UTF-8。测试 fixture 产生固定张量和生成结果；后续真实模型适配不得把 fixture 作为协议或质量证据。
+
+未知 Layout 类别保留 `original_class_id`，内容块标为 `skipped` 并记录原因及裁剪证据。区域识别受控失败会保留占位与裁剪图；若引擎重置失败、抛异常或返回错误响应类型，当前作业余下识别区域标为 `skipped`，避免继续使用状态不明的引擎，图片资源仍可导出。
 
 此 1.0 结构只覆盖单页、单块对应单区域、简单几何阅读顺序及基本文字/独立公式/HTML 表格/图片。复杂列序、内容归属、图注关系、多页 PDF、JSON 再导出及真实推理均由后续任务处理。新增可选字段可在 1.x 版本发布；改变已有字段语义、坐标空间或 ID 规则时必须发布新的主版本及显式迁移器。读取器必须检查 `schema_version`，不能静默按 1.0 解释未知主版本。基本 Schema 不能表达跨字段关系；读取器还须校验 ID 唯一、reading_order 和 source 引用存在、bbox 在页面范围内、资源路径在输出目录内。

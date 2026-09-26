@@ -60,11 +60,11 @@ typedef struct {
 } DocOcrResult;
 
 DOCOCR_API uint32_t dococr_abi_version(void);
-/* config is UTF-8; "none" is the only production backend in this milestone. */
+/* config 使用明确长度的 UTF-8；本阶段唯一生产配置为 "none"。 */
 DOCOCR_API DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out);
 DOCOCR_API DocOcrStatus dococr_capabilities(DocOcrHandle engine, DocOcrBytes* out_json);
 DOCOCR_API DocOcrStatus dococr_job_create(DocOcrHandle engine, DocOcrJob* out);
-/* Synchronous run. Input bytes are copied before inference; keep the caller buffer valid until return. */
+/* 同步运行；推理前复制输入图像。调用方须保持缓冲区有效直至函数返回。 */
 DOCOCR_API DocOcrStatus dococr_job_run(DocOcrJob job, const DocOcrInput* input);
 DOCOCR_API DocOcrStatus dococr_job_result(DocOcrJob job, DocOcrResult* out);
 DOCOCR_API DocOcrStatus dococr_job_asset_count(DocOcrJob job, size_t* out_count);
@@ -74,7 +74,7 @@ DOCOCR_API DocOcrStatus dococr_job_cancel(DocOcrJob job);
 DOCOCR_API DocOcrStatus dococr_job_poll_events(DocOcrJob job, DocOcrBytes* out_json);
 DOCOCR_API DocOcrStatus dococr_job_destroy(DocOcrJob job);
 DOCOCR_API DocOcrStatus dococr_destroy(DocOcrHandle engine);
-/* Only bytes returned by this ABI may be passed here. A second free returns INVALID_ARGUMENT. */
+/* 只能释放本 ABI 返回的字节；重复释放返回 INVALID_ARGUMENT。 */
 DOCOCR_API DocOcrStatus dococr_bytes_free(DocOcrBytes* bytes);
 
 #ifdef __cplusplus

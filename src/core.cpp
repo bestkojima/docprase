@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <limits>
 #include <locale>
+#include <memory>
 #include <sstream>
 #include <stdexcept>
 
@@ -124,9 +125,9 @@ bool decode(InputView in, Image& image) {
     int decoded_channels = 0;
     stbi_uc* decoded = stbi_load_from_memory(in.data, int(in.size), &w, &h, &decoded_channels, 3);
     if (!decoded) return false;
+    std::unique_ptr<stbi_uc, void(*)(void*)> decoded_owner(decoded, stbi_image_free);
     image.width = w; image.height = h;
     image.rgb.assign(decoded, decoded + size_t(w) * h * 3);
-    stbi_image_free(decoded);
     return true;
 }
 
@@ -136,15 +137,23 @@ void png_write(void* context, void* data, int size) {
     result->insert(result->end(), bytes, bytes + size);
 }
 
-std::vector<uint8_t> crop_png(const Image& image, Box b) {
+Image crop_rgb(const Image& image, Box b) {
     int w = b.x1 - b.x0, h = b.y1 - b.y0;
-    std::vector<uint8_t> crop(size_t(w) * h * 3);
+    Image crop;
+    crop.width = w; crop.height = h;
+    crop.rgb.resize(size_t(w) * h * 3);
     for (int y = 0; y < h; ++y)
-        std::memcpy(crop.data() + size_t(y)*w*3,
+        std::memcpy(crop.rgb.data() + size_t(y)*w*3,
                     image.rgb.data() + (size_t(b.y0+y)*image.width+b.x0)*3,
                     size_t(w)*3);
+    return crop;
+}
+
+std::vector<uint8_t> crop_png(const Image& image, Box b) {
+    Image crop = crop_rgb(image, b);
     std::vector<uint8_t> png;
-    if (!stbi_write_png_to_func(png_write, &png, w, h, 3, crop.data(), w*3))
+    if (!stbi_write_png_to_func(png_write, &png, crop.width, crop.height, 3,
+                                crop.rgb.data(), crop.width*3))
         throw std::runtime_error("PNG encoding failed");
     return png;
 }
@@ -165,6 +174,7 @@ struct Block {
     Box box;
     float detection_score = 0;
     int candidate_rank = 0;
+    int original_class_id = 0;
 };
 
 struct LayoutCandidate {
@@ -172,6 +182,7 @@ struct LayoutCandidate {
     Box box;
     int rank;
     float detection_score;
+    int class_id;
 };
 
 bool decode_layout(const TensorOutput& result, std::vector<LayoutCandidate>& candidates) {
@@ -186,19 +197,22 @@ bool decode_layout(const TensorOutput& result, std::vector<LayoutCandidate>& can
         float row[7];
         std::memcpy(row, tensor.data.data() + size_t(i)*7*sizeof(float), sizeof(row));
         for (float v : row) if (!std::isfinite(v)) return false;
-        if (row[0] < 0 || row[0] > 3 || std::trunc(row[0]) != row[0] ||
+        if (row[0] < 0 || row[0] > 1000000 || std::trunc(row[0]) != row[0] ||
             row[1] < 0 || row[1] > 1 || std::trunc(row[6]) != row[6] ||
             row[6] < 0 || row[6] > 1000000) return false;
         for (int j = 2; j <= 5; ++j)
             if (row[j] < -1000000 || row[j] > 1000000 || std::trunc(row[j]) != row[j]) return false;
-        candidates.push_back({labels[int(row[0])],
-            {int(row[2]), int(row[3]), int(row[4]), int(row[5])}, int(row[6]), row[1]});
+        int class_id = int(row[0]);
+        candidates.push_back({class_id < 4 ? labels[class_id] : "unknown",
+            {int(row[2]), int(row[3]), int(row[4]), int(row[5])}, int(row[6]), row[1], class_id});
     }
     return true;
 }
 
 std::string render(const Block& b) {
-    if (b.status != "ok") return "[识别失败：" + b.id + "](" + b.resource + ")";
+    if (b.status != "ok")
+        return "[" + std::string(b.status == "skipped" ? "未处理：" : "识别失败：") +
+               b.id + "](" + b.resource + ")";
     if (b.type == "image") return "![插图](" + b.resource + ")";
     if (b.type == "formula") return "$$\n" + b.text + "\n$$";
     return b.text;
@@ -224,6 +238,7 @@ std::string serialize(const Image& image, const std::string& state,
         out << "{\"id\":" << quote(b.layout_id) << ",\"page_id\":\"p0001\",\"label\":" << quote(b.type)
             << ",\"bbox\":" << box_json(b.box) << ",\"coordinate_space\":\"raster_page\","
             << "\"detection_score\":" << b.detection_score << ",\"candidate_rank\":" << b.candidate_rank
+            << ",\"original_class_id\":" << b.original_class_id
             << ",\"provenance\":{\"model_profile\":" << quote(profile)
             << ",\"request_id\":\"layout-p0001\"}}";
     }
@@ -244,7 +259,8 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
             << "\"reading_order_source\":\"geometry\","
             << "\"status\":" << quote(b.status) << ",\"confidence\":null,\"content\":{\"format\":"
-            << quote(b.type == "image" ? "resource" : b.type == "formula" ? "latex" : b.type == "table" ? "html" : "markdown")
+            << quote(b.type == "image" || b.type == "unknown" ? "resource" :
+                     b.type == "formula" ? "latex" : b.type == "table" ? "html" : "markdown")
             << ",\"text\":" << quote(b.text) << ",\"resource\":"
             << (b.resource.empty() ? "null" : quote(b.resource));
         if (b.type == "formula") out << ",\"display\":true";
@@ -303,6 +319,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     std::vector<Block> blocks;
     JobOutput output;
     bool partial = false;
+    bool recognition_unavailable = false;
     for (const auto& candidate : candidates) {
         if (cancelled) return {RunCode::Cancelled, {}};
         size_t n = blocks.size() + 1;
@@ -311,42 +328,57 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         block.type = candidate.label; block.box = candidate.box;
         block.detection_score = candidate.detection_score;
         block.candidate_rank = candidate.rank;
+        block.original_class_id = candidate.class_id;
         block.status = "ok";
         if (block.type == "image" || block.type == "chart") {
             block.type = "image";
             block.resource = "assets/p0001-" + block.id + ".png";
             output.assets.push_back({block.resource, crop_png(image, block.box)});
         } else if (block.type == "text" || block.type == "formula" || block.type == "table") {
-            Image crop;
-            crop.width = block.box.x1 - block.box.x0;
-            crop.height = block.box.y1 - block.box.y0;
-            crop.rgb.resize(size_t(crop.width) * crop.height * 3);
-            for (int y = 0; y < crop.height; ++y)
-                std::memcpy(crop.rgb.data() + size_t(y)*crop.width*3,
-                            image.rgb.data() + (size_t(block.box.y0+y)*image.width+block.box.x0)*3,
-                            size_t(crop.width)*3);
-            if (!backend->reset()) return {RunCode::Failed, {}};
-            auto recognized = backend->execute({"req" + block.region_id,
-                GenerationRequest{std::move(crop), block.box, block.type, "req" + block.region_id}}, context);
+            Image crop = crop_rgb(image, block.box);
+            GenerationOutput generation;
+            std::string local_error;
+            bool skipped_after_backend_failure = recognition_unavailable;
+            try {
+                if (recognition_unavailable) local_error = "region backend unavailable after prior failure";
+                else if (!backend->reset()) {
+                    local_error = "region reset failed";
+                    recognition_unavailable = true;
+                }
+                else {
+                    auto recognized = backend->execute({"req" + block.region_id,
+                        GenerationRequest{std::move(crop), block.box, block.type, "req" + block.region_id}}, context);
+                    if (auto* value = std::get_if<GenerationOutput>(&recognized.payload)) generation = std::move(*value);
+                    else {
+                        local_error = "generation response type mismatch";
+                        recognition_unavailable = true;
+                    }
+                }
+            } catch (const std::bad_alloc&) { throw; }
+              catch (...) {
+                  local_error = "region inference exception";
+                  recognition_unavailable = true;
+              }
             if (cancelled) return {RunCode::Cancelled, {}};
-            auto* generation = std::get_if<GenerationOutput>(&recognized.payload);
-            if (!generation) return {RunCode::Failed, {}};
-            bool text_valid = valid_utf8(generation->text);
-            bool raw_valid = valid_utf8(generation->raw_output);
-            bool error_valid = valid_utf8(generation->error);
-            if (raw_valid) block.raw = generation->raw_output;
-            else block.raw_base64 = base64(generation->raw_output);
-            if (!text_valid) block.text_base64 = base64(generation->text);
-            if (!error_valid) block.error_base64 = base64(generation->error);
-            if (generation->finish_reason != "complete" || !text_valid || !raw_valid || !error_valid) {
-                block.status = generation->finish_reason == "truncated" ? "partial" : "failed";
-                block.error = !error_valid ? "invalid backend error encoding" :
+            bool text_valid = valid_utf8(generation.text);
+            bool raw_valid = valid_utf8(generation.raw_output);
+            bool error_valid = valid_utf8(generation.error);
+            if (raw_valid) block.raw = generation.raw_output;
+            else block.raw_base64 = base64(generation.raw_output);
+            if (!text_valid) block.text_base64 = base64(generation.text);
+            if (!error_valid) block.error_base64 = base64(generation.error);
+            if (!local_error.empty() || generation.finish_reason != "complete" ||
+                !text_valid || !raw_valid || !error_valid) {
+                block.status = skipped_after_backend_failure ? "skipped" :
+                               generation.finish_reason == "truncated" ? "partial" : "failed";
+                block.error = !local_error.empty() ? local_error :
+                              !error_valid ? "invalid backend error encoding" :
                               (!text_valid || !raw_valid) ? "invalid backend UTF-8" :
-                              generation->error.empty() ? "recognition incomplete" : generation->error;
+                              generation.error.empty() ? "recognition incomplete" : generation.error;
                 block.resource = "assets/p0001-" + block.id + ".png";
                 output.assets.push_back({block.resource, crop_png(image, block.box)});
                 partial = true;
-            } else block.text = generation->text;
+            } else block.text = generation.text;
         } else {
             block.status = "skipped";
             block.error = "unsupported layout label";

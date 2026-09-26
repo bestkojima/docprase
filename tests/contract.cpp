@@ -68,7 +68,9 @@ int main() {
     CHECK(dococr_destroy(engine) == DOCOCR_OK);
 
     // Blank is a successful, explicit state; controlled recognition failure keeps evidence.
-    for (const char* scenario : {"fixture:blank", "fixture:failure", "fixture:formula_table", "fixture:invalid_utf8"}) {
+    for (const char* scenario : {"fixture:blank", "fixture:failure", "fixture:formula_table",
+                                 "fixture:invalid_utf8", "fixture:unknown", "fixture:reset_failure",
+                                 "fixture:generation_exception", "fixture:wrong_response"}) {
         auto e = create_engine(scenario);
         auto j = create_job(e);
         CHECK(dococr_job_run(j, &input) == DOCOCR_OK);
@@ -80,9 +82,22 @@ int main() {
         } else if (std::strcmp(scenario, "fixture:failure") == 0) {
             CHECK(result_json.find("\"status\":\"partial\"") != std::string::npos);
             CHECK(result_json.find("partial raw output") != std::string::npos);
+            CHECK(result_json.find("测试文字") != std::string::npos);
             CHECK(result_json.find("\"confidence\":null") != std::string::npos);
             size_t assets = 0;
             CHECK(dococr_job_asset_count(j, &assets) == DOCOCR_OK && assets == 1);
+        } else if (std::strcmp(scenario, "fixture:unknown") == 0) {
+            CHECK(result_json.find("\"original_class_id\":99") != std::string::npos);
+            CHECK(result_json.find("unsupported layout label") != std::string::npos);
+            CHECK(result_json.find("测试文字") != std::string::npos);
+        } else if (std::strcmp(scenario, "fixture:reset_failure") == 0 ||
+                   std::strcmp(scenario, "fixture:generation_exception") == 0 ||
+                   std::strcmp(scenario, "fixture:wrong_response") == 0) {
+            CHECK(result_json.find("\"status\":\"partial\"") != std::string::npos);
+            CHECK(result_json.find("\"status\":\"failed\"") != std::string::npos);
+            CHECK(result_json.find("\"status\":\"skipped\"") != std::string::npos);
+            size_t assets = 0;
+            CHECK(dococr_job_asset_count(j, &assets) == DOCOCR_OK && assets == 2);
         } else if (std::strcmp(scenario, "fixture:invalid_utf8") == 0) {
             CHECK(result_json.find("\"raw_output_base64\":\"/g==\"") != std::string::npos);
             CHECK(result_json.find("\"text_base64\":\"/w==\"") != std::string::npos);

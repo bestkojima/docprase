@@ -130,7 +130,26 @@ def main():
         assert partial_json["status"] == "partial"
         assert "[识别失败：b0001]" in partial_md
         assert partial_json["pages"][0]["blocks"][0]["provenance"]["raw_output"] == "partial raw output"
+        assert partial_json["pages"][0]["blocks"][1]["content"]["text"] == "测试文字"
         assert len(partial_json["resources"]) == 1
+
+        unknown = root / "unknown"
+        run(fixture, "fixture:unknown", source, unknown)
+        unknown_json, unknown_md = inspect(unknown)
+        assert unknown_json["status"] == "partial"
+        assert unknown_json["pages"][0]["layout_blocks"][0]["original_class_id"] == 99
+        assert unknown_json["pages"][0]["blocks"][0]["status"] == "skipped"
+        assert "unsupported layout label" == unknown_json["pages"][0]["blocks"][0]["error"]
+        assert "测试文字" in unknown_md
+
+        for scenario in ["reset_failure", "generation_exception", "wrong_response"]:
+            destination = root / scenario
+            run(fixture, f"fixture:{scenario}", source, destination)
+            failed_json, failed_md = inspect(destination)
+            assert failed_json["status"] == "partial"
+            assert [block["status"] for block in failed_json["pages"][0]["blocks"]] == ["failed", "skipped"]
+            assert len(failed_json["resources"]) == 2
+            assert "[识别失败：b0001]" in failed_md and "[未处理：b0002]" in failed_md
 
         bad_encoding = root / "bad-utf8"
         run(fixture, "fixture:invalid_utf8", source, bad_encoding)
@@ -144,6 +163,16 @@ def main():
 
         run(production, "none", source, root / "production", expected=4)
         assert not (root / "production" / "document.json").exists()
+        jpeg = pathlib.Path(__file__).parent / "fixtures" / "rgb2x2.jpg"
+        jpeg_before = jpeg.read_bytes()
+        jpeg_out = root / "jpeg"
+        run(fixture, "fixture:sample", jpeg, jpeg_out)
+        jpeg_json, jpeg_md = inspect(jpeg_out)
+        assert jpeg_json["status"] == "ok" and jpeg_json["pages"][0]["raster_size"] == [2, 2]
+        assert "测试文字" in jpeg_md and jpeg.read_bytes() == jpeg_before
+        damaged_jpeg = root / "damaged.jpg"
+        damaged_jpeg.write_bytes(jpeg_before[:20])
+        run(fixture, "fixture:sample", damaged_jpeg, root / "damaged-jpeg", expected=3)
         broken = root / "broken.png"
         broken.write_bytes(b"\x89PNG\r\n\x1a\ninvalid")
         run(fixture, "fixture:sample", broken, root / "broken-out", expected=3)
