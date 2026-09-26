@@ -5,11 +5,11 @@
     "--model",
     "models/doclayout/PP-DocLayoutV3.mnn",
     "--image",
-    "tests/fixtures/layout/exam-jee-346.jpg",
+    "/home/dr/project/MNN/test_img/1.png",
     "--mnn",
     "/home/dr/project/MNN",
     "--out",
-    "output/layout-issue-2"
+    "output/layout-issue-2-nonsquare-hf"
   ],
   "exit_code": 0,
   "checks": {
@@ -104,14 +104,14 @@
     "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67"
   },
   "sample": {
-    "path": "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346.jpg",
-    "sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade",
-    "human_reference": "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346-reference.json",
+    "path": "/home/dr/project/MNN/test_img/1.png",
+    "sha256": "8c306ef0218c4846e43a2f6114f788bb3028787c25739e54e75991d13b1d253e",
+    "human_reference": null,
     "hw": [
-      640,
-      640
+      1419,
+      2000
     ],
-    "input_sha256": "11cfa14ad44d289dfb628df25933de74b35f84f5a4400263defab3b2efda1610"
+    "input_sha256": "ee75935931101de0b0973b721ea14a9dc67277dc1f8ce12ba717ac5a4ac8d36b"
   },
   "preprocess": {
     "reference": "PPDocLayoutV3ImageProcessor(images=PIL RGB, return_tensors=pt)",
@@ -126,16 +126,16 @@
       "different_fraction": 0.0
     },
     "opencv_vs_reference": {
-      "max_abs": 0.10588234663009644,
-      "mean_abs": 0.000133596797240898,
+      "max_abs": 0.027450978755950928,
+      "mean_abs": 0.0004457189643289894,
       "p99_abs": 0.003921568393707275,
-      "different_fraction": 0.027528125
+      "different_fraction": 0.11296875
     },
     "pillow_vs_reference": {
-      "max_abs": 0.07450980693101883,
-      "mean_abs": 0.000682879879605025,
-      "p99_abs": 0.019607841968536377,
-      "different_fraction": 0.06729375
+      "max_abs": 0.32941174507141113,
+      "mean_abs": 0.01277365256100893,
+      "p99_abs": 0.1254902184009552,
+      "different_fraction": 0.46224739583333335
     },
     "reference_pass": true
   },
@@ -143,8 +143,8 @@
     "normal": {
       "exit_code": 0,
       "scale_factor": [
-        1.25,
-        1.25
+        0.5637773079633545,
+        0.4
       ],
       "im_shape": [
         800,
@@ -155,8 +155,8 @@
     "scale_factor_half": {
       "exit_code": 0,
       "scale_factor": [
-        0.625,
-        0.625
+        0.28188865398167723,
+        0.2
       ],
       "im_shape": [
         800,
@@ -167,11 +167,11 @@
   },
   "outputs": {
     "candidate_count": 300,
-    "selected_count": 16,
+    "selected_count": 26,
     "selected_reference_order": "selected-reference-order.json",
     "rejected_by_reason": {
-      "below_score_threshold": 284,
-      "outside_page": 0,
+      "below_score_threshold": 274,
+      "outside_page": 46,
       "degenerate_box": 0,
       "unknown_class": 0,
       "nonintegral_rank": 0
@@ -188,12 +188,12 @@
       "class_score_rank_max_abs": 0.0,
       "twice_box_max_abs": 0.0,
       "masks_exactly_equal": true,
-      "rank_unique": 118,
-      "rank_duplicate_count": 182,
+      "rank_unique": 92,
+      "rank_duplicate_count": 208,
       "rank_is_continuous": false
     },
     "overlay": "overlay.jpg",
     "mask_reference_max_different_pixels": 0,
-    "business_reference": "business-reference-comparison.json"
+    "business_reference": null
   }
 }

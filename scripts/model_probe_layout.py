@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """PP-DocLayoutV3-MNN 的单页可复核诊断入口。只生成证据，不充当文档解析器。"""
 import argparse
+import gzip
 import hashlib
 import json
 import math
 import platform
+import shutil
 import subprocess
 import sys
 from pathlib import Path
+from unittest.mock import patch
 
 import cv2
 import numpy as np
@@ -19,6 +22,7 @@ FIXTURES = ROOT / 'tests/fixtures/layout'
 EXPECTED_MODEL_SHA256 = '5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67'
 EXAM_SAMPLE_SHA256 = 'e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade'
 REFERENCE_TRANSFORMERS_COMMIT = '27166ea03f12c940f23176a904ab1d2ff1a3dcbb'
+REFERENCE_PROCESSOR_SHA256 = '5b064fa7383dda12b3550448eae77d4f627a102c25e8b4db25d99e85fba4abc6'
 REFERENCE_MODEL_REVISION = '97d101e6db2642e162a1d05392d1b0231c91033e'
 REFERENCE_MODEL_CONFIG_SHA256 = '3cf834b91d23a756b1519bce4db42c09e852f3e35c35092dd5a3e253a50c071a'
 REFERENCE_PREPROCESS_CONFIG_SHA256 = '519fe0187a43a1ca429e3ad8317bab8700f0d5e8fb3a6e3a0a413ffac078ba42'
@@ -36,37 +40,52 @@ def write_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2, allow_nan=False) + '\n')
 
 
+def write_gzip(source, target):
+    with open(source, 'rb') as source_file, open(target, 'wb') as compressed_file:
+        with gzip.GzipFile(fileobj=compressed_file, mode='wb', mtime=0) as archive:
+            shutil.copyfileobj(source_file, archive)
+
+
 def compare_arrays(a, b):
     difference = np.abs(a.astype(np.float32) - b.astype(np.float32))
     return {'max_abs': float(difference.max()), 'mean_abs': float(difference.mean()),
             'p99_abs': float(np.percentile(difference, 99)), 'different_fraction': float(np.mean(difference != 0))}
 
 
-def preprocess(image_path, out, max_ref_abs):
+def preprocess(image_path, out, max_ref_abs, backend, processor_config):
+    from torchvision.transforms.v2 import functional as tvf
+    from transformers.models.pp_doclayout_v3 import image_processing_pp_doclayout_v3 as reference_module
+    from transformers.models.pp_doclayout_v3.image_processing_pp_doclayout_v3 import PPDocLayoutV3ImageProcessor
+    if sha256(reference_module.__file__) != REFERENCE_PROCESSOR_SHA256:
+        raise ValueError('reference_processor_source_hash_mismatch')
+
     source = Image.open(image_path).convert('RGB')
     rgb = np.asarray(source)
     h, w = rgb.shape[:2]
-    # PaddlePaddle / HF 参考规定 RGB、800x800、BICUBIC、1/255、mean=0、std=1。
-    # OpenCV INTER_CUBIC 是 MNN 的候选实现；torch bicubic antialias=False 是独立数值参照。
+    processor = PPDocLayoutV3ImageProcessor(**processor_config)
+    reference = processor(images=source, return_tensors='pt')['pixel_values'].numpy()[0]
+    # 候选路径独立调用 torchvision 公共 resize；参考是锁定的完整 HF 处理器。
+    tensor = torch.from_numpy(rgb.copy()).permute(2, 0, 1)
+    tv_resized = tvf.resize(tensor, [800, 800], interpolation=tvf.InterpolationMode.BICUBIC,
+                            antialias=False)
+    tv_tensor = np.ascontiguousarray(tv_resized.numpy().astype(np.float32) / 255.0)
     cv_resized = cv2.resize(rgb, (800, 800), interpolation=cv2.INTER_CUBIC)
-    torch_resized = torch.nn.functional.interpolate(
-        torch.from_numpy(rgb.copy()).permute(2, 0, 1).unsqueeze(0).float(),
-        size=(800, 800), mode='bicubic', align_corners=False,
-    ).clamp(0, 255).round().to(torch.uint8).squeeze(0).permute(1, 2, 0).numpy()
     pillow_resized = np.asarray(source.resize((800, 800), Image.Resampling.BICUBIC))
     cv_tensor = np.ascontiguousarray(cv_resized.transpose(2, 0, 1).astype(np.float32) / 255.0)
-    torch_tensor = np.ascontiguousarray(torch_resized.transpose(2, 0, 1).astype(np.float32) / 255.0)
     pillow_tensor = np.ascontiguousarray(pillow_resized.transpose(2, 0, 1).astype(np.float32) / 255.0)
+    candidates = {'torchvision': tv_tensor, 'opencv': cv_tensor, 'pillow': pillow_tensor}
+    candidate = candidates[backend]
     input_path = out / 'image.f32'
-    cv_tensor.tofile(input_path)
-    comparison = {'reference': 'torch.nn.functional.interpolate bicubic align_corners=False, antialias=False',
-                  'candidate': 'OpenCV INTER_CUBIC RGB uint8', 'pillow': 'Pillow BICUBIC RGB uint8',
+    candidate.tofile(input_path)
+    comparison = {'reference': 'PPDocLayoutV3ImageProcessor(images=PIL RGB, return_tensors=pt)',
+                  'candidate': backend, 'color': 'RGB', 'rescale_factor': 1/255,
                   'tolerance_max_abs': max_ref_abs,
-                  'candidate_vs_reference': compare_arrays(cv_tensor, torch_tensor),
-                  'pillow_vs_reference': compare_arrays(pillow_tensor, torch_tensor),
-                  'reference_pass': compare_arrays(cv_tensor, torch_tensor)['max_abs'] <= max_ref_abs}
+                  'candidate_vs_reference': compare_arrays(candidate, reference),
+                  'opencv_vs_reference': compare_arrays(cv_tensor, reference),
+                  'pillow_vs_reference': compare_arrays(pillow_tensor, reference),
+                  'reference_pass': compare_arrays(candidate, reference)['max_abs'] <= max_ref_abs}
     write_json(out / 'preprocess-comparison.json', comparison)
-    return (h, w), input_path, comparison
+    return (h, w), input_path, comparison, processor
 
 
 def map_mask_to_page(mask, box, page_hw):
@@ -90,35 +109,28 @@ def map_mask_to_page(mask, box, page_hw):
     return result
 
 
-def reference_mask_patch(mask, box, page_hw):
-    """固定 HF 处理器 _extract_polygon_points_by_masks 的 crop + resize 数值路径。"""
+def compare_mask_with_reference(processor, mask, box, page_hw):
+    """调用锁定 HF 处理器，并截取其实际 resize patch 与页面映射逐像素比较。"""
     height, width = page_hw
-    x_min, y_min, x_max, y_max = np.asarray(box).astype(np.int32)
-    box_w, box_h = x_max - x_min, y_max - y_min
-    if box_w <= 0 or box_h <= 0:
-        return np.empty((0, 0), dtype=np.uint8)
-    scale_width, scale_height = (800 / width) / 4, (800 / height) / 4
-    x_coordinates = [int(round((x_min * scale_width).item())), int(round((x_max * scale_width).item()))]
-    y_coordinates = [int(round((y_min * scale_height).item())), int(round((y_max * scale_height).item()))]
-    x_start, x_end = np.clip(x_coordinates, 0, mask.shape[1])
-    y_start, y_end = np.clip(y_coordinates, 0, mask.shape[0])
-    cropped = mask[y_start:y_end, x_start:x_end]
-    if cropped.size == 0 or np.sum(cropped) == 0:
-        return np.zeros((box_h, box_w), dtype=np.uint8)
-    return cv2.resize(cropped.astype(np.uint8), (box_w, box_h), interpolation=cv2.INTER_NEAREST)
+    original_resize = cv2.resize
+    patches = []
 
+    def capture_resize(*args, **kwargs):
+        resized = original_resize(*args, **kwargs)
+        patches.append(resized.copy())
+        return resized
 
-def reference_page_mask(mask, box, page_hw):
-    """将参考局部 patch 放入页面，仅用于数值对照。"""
-    height, width = page_hw
-    x0, y0, x1, y1 = np.asarray(box).astype(np.int32)
-    result = np.zeros((height, width), dtype=np.uint8)
-    patch = reference_mask_patch(mask, box, page_hw)
+    with patch.object(cv2, 'resize', side_effect=capture_resize):
+        polygon = processor._extract_polygon_points_by_masks(
+            np.asarray([box], dtype=np.float32), mask[np.newaxis], [800 / width, 800 / height])[0]
+    reference_page = np.zeros((height, width), dtype=np.uint8)
+    x0, y0, x1, y1 = [int(v) for v in box]
     px0, px1 = max(0, x0), min(width, x1)
     py0, py1 = max(0, y0), min(height, y1)
-    if patch.size and px1 > px0 and py1 > py0:
-        result[py0:py1, px0:px1] = patch[py0-y0:py1-y0, px0-x0:px1-x0]
-    return result
+    if patches and px1 > px0 and py1 > py0:
+        reference_page[py0:py1, px0:px1] = patches[0][py0-y0:py1-y0, px0-x0:px1-x0]
+    actual = map_mask_to_page(mask, box, page_hw)
+    return int(np.count_nonzero(actual != reference_page)), np.asarray(polygon).tolist() if polygon is not None else None
 
 
 def evaluate_candidates(boxes, masks, threshold, page_hw, labels=None):
@@ -174,9 +186,10 @@ def run_logged(command, log_path, cwd=None):
     try:
         result = subprocess.run(command, capture_output=True, text=True, cwd=cwd, timeout=120)
     except subprocess.TimeoutExpired as error:
-        result = subprocess.CompletedProcess(command, 124, error.stdout.decode(errors='replace') if error.stdout else '',
-                                             'timeout_after_120_seconds\n' +
-                                             (error.stderr.decode(errors='replace') if error.stderr else ''))
+        def as_text(value):
+            return value.decode(errors='replace') if isinstance(value, bytes) else (value or '')
+        result = subprocess.CompletedProcess(command, 124, as_text(error.stdout),
+                                             'timeout_after_120_seconds\n' + as_text(error.stderr))
     log_path.write_text('command: ' + ' '.join(map(str, command)) + '\nexit_code: ' + str(result.returncode)
                         + '\nstdout:\n' + result.stdout + '\nstderr:\n' + result.stderr)
     return result
@@ -192,8 +205,12 @@ def run(args):
                               'opencv': cv2.__version__, 'pillow': Image.__version__, 'torch': torch.__version__,
                               'mnn_source_commit': None, 'mnn_version': None},
               'reference': {'transformers_commit': REFERENCE_TRANSFORMERS_COMMIT,
-                            'model_config_revision': REFERENCE_MODEL_REVISION},
-              'parameters': {'threshold': args.threshold, 'max_ref_abs': args.max_ref_abs, 'backend': 'CPU',
+                            'processor_source_sha256': REFERENCE_PROCESSOR_SHA256,
+                            'model_config_revision': REFERENCE_MODEL_REVISION,
+                            'model_config_sha256': REFERENCE_MODEL_CONFIG_SHA256,
+                            'preprocessor_config_sha256': REFERENCE_PREPROCESS_CONFIG_SHA256},
+              'parameters': {'threshold': args.threshold, 'max_ref_abs': args.max_ref_abs,
+                             'preprocess': args.preprocess, 'backend': 'CPU',
                              'threads': 4, 'target_hw': [800, 800]},
               'tensor_contract': {'inputs': {'image': {'dtype': 'float32', 'shape': [1,3,800,800]},
                                              'im_shape': {'dtype': 'float32', 'shape': [1,2]},
@@ -252,7 +269,12 @@ def run(args):
              'size: [ 1,2 ]', 'Model Version: 3.6.1', 'Model bizCode: PPDocLayoutV3')):
             raise ValueError('static_input_contract_mismatch')
         report['checks']['static'] = 'passed'
-        page_hw, input_path, comparison = preprocess(args.image, out, args.max_ref_abs)
+        page_hw, input_path, comparison, processor = preprocess(
+            args.image, out, args.max_ref_abs, args.preprocess, reference_preprocess)
+        import torchvision
+        import transformers
+        report['environment']['torchvision'] = torchvision.__version__
+        report['environment']['transformers'] = transformers.__version__
         report['sample'].update({'hw': list(page_hw), 'input_sha256': sha256(input_path)})
         report['preprocess'] = comparison
         if not comparison['reference_pass']:
@@ -310,11 +332,14 @@ def run(args):
         mask_dir.mkdir(exist_ok=True)
         overlay = cv2.cvtColor(np.asarray(Image.open(args.image).convert('RGB')), cv2.COLOR_RGB2BGR)
         mask_differences = []
+        polygons = []
         for record in selected:
             row = record['candidate_id']
             page_mask = map_mask_to_page(masks[row], record['box_xyxy'], page_hw)
-            ref_page_mask = reference_page_mask(masks[row], record['box_xyxy'], page_hw)
-            mask_differences.append(int(np.count_nonzero(page_mask != ref_page_mask)))
+            difference, polygon = compare_mask_with_reference(
+                processor, masks[row], record['box_xyxy'], page_hw)
+            mask_differences.append(difference)
+            polygons.append({'candidate_id': row, 'polygon_xy': polygon})
             cv2.imwrite(str(mask_dir / f'{row:03d}.png'), page_mask * 255)
             x0,y0,x1,y1 = [int(x) for x in record['box_xyxy']]
             cv2.rectangle(overlay, (x0,y0), (x1,y1), (0,0,255), 1)
@@ -326,7 +351,8 @@ def run(args):
                    {'candidate_ids': [r['candidate_id'] for r in selected],
                     'different_pixels_by_candidate': mask_differences,
                     'max_different_pixels': max(mask_differences, default=0),
-                    'reference': 'HF _extract_polygon_points_by_masks crop + INTER_NEAREST resize'})
+                    'reference': 'actual PPDocLayoutV3ImageProcessor._extract_polygon_points_by_masks',
+                    'polygons': polygons})
         if reference:
             gt = [{'category': next(c['name'] for c in reference['categories'] if c['id']==ann['category_id']),
                    'box_xywh': ann['bbox'], 'best_detection_iou': max((iou(rec['box_xyxy'], ann['bbox'])
@@ -350,12 +376,23 @@ def run(args):
             'selected_reference_order': 'selected-reference-order.json',
             'rejected_by_reason': {reason: sum(reason in rec['reasons'] for rec in records)
             for reason in ('below_score_threshold','outside_page','degenerate_box','unknown_class','nonintegral_rank')},
-            'raw_masks': ['normal.fetch_name_2.bin','scale_factor_half.fetch_name_2.bin'],
+            'raw_masks': ['normal.masks.i32.gz','scale-factor-half.masks.i32.gz'],
+            'runtime_mask_files': ['normal.fetch_name_2.bin','scale_factor_half.fetch_name_2.bin'],
             'geometry': geometry, 'overlay': 'overlay.jpg',
             'mask_reference_max_different_pixels': max(mask_differences, default=0),
             'business_reference': 'business-reference-comparison.json' if reference else None}
+        for source_name, archive_name in (
+            ('image.f32', 'image.f32.gz'),
+            ('normal.fetch_name_0.bin', 'normal.candidates.f32.gz'),
+            ('normal.fetch_name_1.bin', 'normal.count.i32.gz'),
+            ('normal.fetch_name_2.bin', 'normal.masks.i32.gz'),
+            ('scale_factor_half.fetch_name_0.bin', 'scale-factor-half.candidates.f32.gz'),
+            ('scale_factor_half.fetch_name_1.bin', 'scale-factor-half.count.i32.gz'),
+            ('scale_factor_half.fetch_name_2.bin', 'scale-factor-half.masks.i32.gz'),
+        ):
+            write_gzip(out / source_name, out / archive_name)
         report['overall'] = 'diagnostic_passed'
-    except (OSError, ValueError, RuntimeError, cv2.error) as error:
+    except (OSError, ValueError, RuntimeError, ImportError, cv2.error) as error:
         report['errors'].append(str(error))
     finally:
         save()
@@ -371,7 +408,8 @@ def main():
     parser.add_argument('--reference', type=Path,
                         help='仅接受带 image_sha256 且与 --image 匹配的人工参考 JSON')
     parser.add_argument('--threshold', type=float, default=.5)
-    parser.add_argument('--max-ref-abs', type=float, default=1/255 + 1e-7)
+    parser.add_argument('--preprocess', choices=('torchvision', 'opencv', 'pillow'), default='torchvision')
+    parser.add_argument('--max-ref-abs', type=float, default=1e-7)
     args = parser.parse_args()
     if not math.isfinite(args.threshold) or not 0 <= args.threshold <= 1 or not math.isfinite(args.max_ref_abs) or args.max_ref_abs < 0:
         parser.error('threshold must be in [0,1] and max-ref-abs must be nonnegative')

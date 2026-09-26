@@ -30,7 +30,8 @@
   },
   "parameters": {
     "threshold": 0.5,
-    "max_ref_abs": 0.003921668627450981,
+    "max_ref_abs": 1e-07,
+    "preprocess": "torchvision",
     "backend": "CPU",
     "threads": 4,
     "target_hw": [

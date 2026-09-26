@@ -2,10 +2,10 @@
   "overall": "failed",
   "command": [
     "scripts/model_probe_layout.py",
+    "--preprocess",
+    "opencv",
     "--out",
-    "output/layout-issue-2-ref-fail",
-    "--max-ref-abs",
-    "0"
+    "output/layout-issue-2-ref-fail"
   ],
   "exit_code": 1,
   "checks": {
@@ -22,15 +22,21 @@
     "pillow": "12.3.0",
     "torch": "2.13.0+cu130",
     "mnn_source_commit": "baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6",
-    "mnn_version": null
+    "mnn_version": null,
+    "torchvision": "0.28.0+cu130",
+    "transformers": "5.16.1"
   },
   "reference": {
     "transformers_commit": "27166ea03f12c940f23176a904ab1d2ff1a3dcbb",
-    "model_config_revision": "97d101e6db2642e162a1d05392d1b0231c91033e"
+    "processor_source_sha256": "5b064fa7383dda12b3550448eae77d4f627a102c25e8b4db25d99e85fba4abc6",
+    "model_config_revision": "97d101e6db2642e162a1d05392d1b0231c91033e",
+    "model_config_sha256": "3cf834b91d23a756b1519bce4db42c09e852f3e35c35092dd5a3e253a50c071a",
+    "preprocessor_config_sha256": "519fe0187a43a1ca429e3ad8317bab8700f0d5e8fb3a6e3a0a413ffac078ba42"
   },
   "parameters": {
     "threshold": 0.5,
-    "max_ref_abs": 0.0,
+    "max_ref_abs": 1e-07,
+    "preprocess": "opencv",
     "backend": "CPU",
     "threads": 4,
     "target_hw": [
@@ -106,21 +112,28 @@
     "input_sha256": "8837a07c2ecadc5e120818333c9b8ab732f5bd5d4fab3fe95e1596993a46b3b2"
   },
   "preprocess": {
-    "reference": "torch.nn.functional.interpolate bicubic align_corners=False, antialias=False",
-    "candidate": "OpenCV INTER_CUBIC RGB uint8",
-    "pillow": "Pillow BICUBIC RGB uint8",
-    "tolerance_max_abs": 0.0,
+    "reference": "PPDocLayoutV3ImageProcessor(images=PIL RGB, return_tensors=pt)",
+    "candidate": "opencv",
+    "color": "RGB",
+    "rescale_factor": 0.00392156862745098,
+    "tolerance_max_abs": 1e-07,
     "candidate_vs_reference": {
-      "max_abs": 0.003921568393707275,
-      "mean_abs": 1.1029410984519927e-07,
-      "p99_abs": 0.0,
-      "different_fraction": 2.8125e-05
+      "max_abs": 0.10588234663009644,
+      "mean_abs": 0.000133596797240898,
+      "p99_abs": 0.003921568393707275,
+      "different_fraction": 0.027528125
+    },
+    "opencv_vs_reference": {
+      "max_abs": 0.10588234663009644,
+      "mean_abs": 0.000133596797240898,
+      "p99_abs": 0.003921568393707275,
+      "different_fraction": 0.027528125
     },
     "pillow_vs_reference": {
-      "max_abs": 0.09803920984268188,
-      "mean_abs": 0.0007173345074988902,
+      "max_abs": 0.07450980693101883,
+      "mean_abs": 0.000682879879605025,
       "p99_abs": 0.019607841968536377,
-      "different_fraction": 0.07046875
+      "different_fraction": 0.06729375
     },
     "reference_pass": false
   }

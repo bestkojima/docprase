@@ -1,19 +1,26 @@
 {
-  "reference": "torch.nn.functional.interpolate bicubic align_corners=False, antialias=False",
-  "candidate": "OpenCV INTER_CUBIC RGB uint8",
-  "pillow": "Pillow BICUBIC RGB uint8",
-  "tolerance_max_abs": 0.003921668627450981,
+  "reference": "PPDocLayoutV3ImageProcessor(images=PIL RGB, return_tensors=pt)",
+  "candidate": "torchvision",
+  "color": "RGB",
+  "rescale_factor": 0.00392156862745098,
+  "tolerance_max_abs": 1e-07,
   "candidate_vs_reference": {
-    "max_abs": 0.003921568393707275,
-    "mean_abs": 1.1029410984519927e-07,
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
     "p99_abs": 0.0,
-    "different_fraction": 2.8125e-05
+    "different_fraction": 0.0
+  },
+  "opencv_vs_reference": {
+    "max_abs": 0.10588234663009644,
+    "mean_abs": 0.000133596797240898,
+    "p99_abs": 0.003921568393707275,
+    "different_fraction": 0.027528125
   },
   "pillow_vs_reference": {
-    "max_abs": 0.09803920984268188,
-    "mean_abs": 0.0007173345074988902,
+    "max_abs": 0.07450980693101883,
+    "mean_abs": 0.000682879879605025,
     "p99_abs": 0.019607841968536377,
-    "different_fraction": 0.07046875
+    "different_fraction": 0.06729375
   },
   "reference_pass": true
 }

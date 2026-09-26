@@ -10,7 +10,7 @@
         553,
         341
       ],
-      "best_detection_iou": 0.122031432482167,
+      "best_detection_iou": 0.12209410912010252,
       "fine_box_union_coverage": 0.31745796057760123
     },
     {
@@ -21,7 +21,7 @@
         553,
         221
       ],
-      "best_detection_iou": 0.18829284378470112,
+      "best_detection_iou": 0.18838955298622154,
       "fine_box_union_coverage": 0.3998756269791266
     },
     {
@@ -32,7 +32,7 @@
         553,
         220
       ],
-      "best_detection_iou": 0.18914872034735886,
+      "best_detection_iou": 0.1892458691361589,
       "fine_box_union_coverage": 0.40169324346539537
     },
     {
@@ -43,7 +43,7 @@
         553,
         118
       ],
-      "best_detection_iou": 0.16604829353060174,
+      "best_detection_iou": 0.16617705986458303,
       "fine_box_union_coverage": 0.1684800931743648
     },
     {
@@ -54,7 +54,7 @@
         553,
         118
       ],
-      "best_detection_iou": 0.16604829353060174,
+      "best_detection_iou": 0.16617705986458303,
       "fine_box_union_coverage": 0.1684800931743648
     }
   ],

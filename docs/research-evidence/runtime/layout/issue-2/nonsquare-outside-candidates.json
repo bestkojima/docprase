@@ -1,0 +1,922 @@
+[
+  {
+    "candidate_id": 27,
+    "mask_row": 27,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.21753917634487152,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 28,
+    "mask_row": 28,
+    "class_id": 12,
+    "class_name": "header",
+    "score": 0.1696617156267166,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 32,
+    "mask_row": 32,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.10449492186307907,
+    "box_xyxy": [
+      114.78155517578125,
+      -2.0188369750976562,
+      1848.2938232421875,
+      181.8682403564453
+    ],
+    "rank": 28.0,
+    "mask_nonzero": 4169,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 34,
+    "mask_row": 34,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.08231499046087265,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 40,
+    "mask_row": 40,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.0654897540807724,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 43,
+    "mask_row": 43,
+    "class_id": 8,
+    "class_name": "footer",
+    "score": 0.05644948035478592,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 51,
+    "mask_row": 51,
+    "class_id": 21,
+    "class_name": "table",
+    "score": 0.0498049221932888,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 58,
+    "mask_row": 58,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.04580172151327133,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 63,
+    "mask_row": 63,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.043176230043172836,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 64,
+    "mask_row": 64,
+    "class_id": 8,
+    "class_name": "footer",
+    "score": 0.04300174117088318,
+    "box_xyxy": [
+      535.0573120117188,
+      1409.3621826171875,
+      1693.825927734375,
+      1419.45654296875
+    ],
+    "rank": 289.0,
+    "mask_nonzero": 136,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 66,
+    "mask_row": 66,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.041962116956710815,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 68,
+    "mask_row": 68,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.04109756276011467,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 76,
+    "mask_row": 76,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.03727157786488533,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 81,
+    "mask_row": 81,
+    "class_id": 9,
+    "class_name": "footer",
+    "score": 0.035479556769132614,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 88,
+    "mask_row": 88,
+    "class_id": 3,
+    "class_name": "chart",
+    "score": 0.03358200937509537,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 94,
+    "mask_row": 94,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.032508645206689835,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 113,
+    "mask_row": 113,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.028388705104589462,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 118,
+    "mask_row": 118,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.027754953131079674,
+    "box_xyxy": [
+      114.78155517578125,
+      -2.0188369750976562,
+      1848.2938232421875,
+      181.8682403564453
+    ],
+    "rank": 28.0,
+    "mask_nonzero": 4169,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 124,
+    "mask_row": 124,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.02683917060494423,
+    "box_xyxy": [
+      535.0573120117188,
+      1409.3621826171875,
+      1693.825927734375,
+      1419.45654296875
+    ],
+    "rank": 289.0,
+    "mask_nonzero": 136,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 129,
+    "mask_row": 129,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.02558732219040394,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 148,
+    "mask_row": 148,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.02362436056137085,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 150,
+    "mask_row": 150,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.02349204383790493,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 153,
+    "mask_row": 153,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.02298511378467083,
+    "box_xyxy": [
+      535.0573120117188,
+      1409.3621826171875,
+      1693.825927734375,
+      1419.45654296875
+    ],
+    "rank": 289.0,
+    "mask_nonzero": 136,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 154,
+    "mask_row": 154,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.022978056222200394,
+    "box_xyxy": [
+      535.0573120117188,
+      1409.3621826171875,
+      1693.825927734375,
+      1419.45654296875
+    ],
+    "rank": 289.0,
+    "mask_nonzero": 136,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 169,
+    "mask_row": 169,
+    "class_id": 8,
+    "class_name": "footer",
+    "score": 0.021409960463643074,
+    "box_xyxy": [
+      3.5791993141174316,
+      -22.815479278564453,
+      2001.03662109375,
+      1396.1702880859375
+    ],
+    "rank": 206.0,
+    "mask_nonzero": 21732,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 178,
+    "mask_row": 178,
+    "class_id": 16,
+    "class_name": "number",
+    "score": 0.02073333039879799,
+    "box_xyxy": [
+      3.5791993141174316,
+      -22.815479278564453,
+      2001.03662109375,
+      1396.1702880859375
+    ],
+    "rank": 206.0,
+    "mask_nonzero": 21732,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 183,
+    "mask_row": 183,
+    "class_id": 17,
+    "class_name": "paragraph_title",
+    "score": 0.02018306590616703,
+    "box_xyxy": [
+      114.78155517578125,
+      -2.0188369750976562,
+      1848.2938232421875,
+      181.8682403564453
+    ],
+    "rank": 28.0,
+    "mask_nonzero": 4169,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 204,
+    "mask_row": 204,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.018455512821674347,
+    "box_xyxy": [
+      188.33541870117188,
+      -0.8405420184135437,
+      915.5325927734375,
+      34.05009078979492
+    ],
+    "rank": 2.0,
+    "mask_nonzero": 488,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 206,
+    "mask_row": 206,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.018362460657954216,
+    "box_xyxy": [
+      535.0573120117188,
+      1409.3621826171875,
+      1693.825927734375,
+      1419.45654296875
+    ],
+    "rank": 289.0,
+    "mask_nonzero": 136,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 209,
+    "mask_row": 209,
+    "class_id": 8,
+    "class_name": "footer",
+    "score": 0.018170364201068878,
+    "box_xyxy": [
+      1122.14990234375,
+      1410.5865478515625,
+      1979.45068359375,
+      1419.48779296875
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 158,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 214,
+    "mask_row": 214,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.017910819500684738,
+    "box_xyxy": [
+      1122.14990234375,
+      1410.5865478515625,
+      1979.45068359375,
+      1419.48779296875
+    ],
+    "rank": 292.0,
+    "mask_nonzero": 158,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 215,
+    "mask_row": 215,
+    "class_id": 7,
+    "class_name": "figure_title",
+    "score": 0.0178931076079607,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 216,
+    "mask_row": 216,
+    "class_id": 5,
+    "class_name": "formula",
+    "score": 0.01787622831761837,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 220,
+    "mask_row": 220,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.017761122435331345,
+    "box_xyxy": [
+      114.78155517578125,
+      -2.0188369750976562,
+      1848.2938232421875,
+      181.8682403564453
+    ],
+    "rank": 28.0,
+    "mask_nonzero": 4169,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 227,
+    "mask_row": 227,
+    "class_id": 12,
+    "class_name": "header",
+    "score": 0.017566995695233345,
+    "box_xyxy": [
+      114.78155517578125,
+      -2.0188369750976562,
+      1848.2938232421875,
+      181.8682403564453
+    ],
+    "rank": 28.0,
+    "mask_nonzero": 4169,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 234,
+    "mask_row": 234,
+    "class_id": 14,
+    "class_name": "image",
+    "score": 0.017203891649842262,
+    "box_xyxy": [
+      1919.9908447265625,
+      6.381411075592041,
+      2000.8466796875,
+      127.90803527832031
+    ],
+    "rank": 165.0,
+    "mask_nonzero": 37,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 236,
+    "mask_row": 236,
+    "class_id": 24,
+    "class_name": "vision_footnote",
+    "score": 0.017141148447990417,
+    "box_xyxy": [
+      1922.1204833984375,
+      -0.6246971487998962,
+      1990.2017822265625,
+      7.436466217041016
+    ],
+    "rank": 11.0,
+    "mask_nonzero": 7,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 254,
+    "mask_row": 254,
+    "class_id": 15,
+    "class_name": "formula",
+    "score": 0.016712380573153496,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 260,
+    "mask_row": 260,
+    "class_id": 20,
+    "class_name": "seal",
+    "score": 0.016500985249876976,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 262,
+    "mask_row": 262,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.016465364024043083,
+    "box_xyxy": [
+      9.029030799865723,
+      -1.880332350730896,
+      2008.994140625,
+      28.603166580200195
+    ],
+    "rank": 7.0,
+    "mask_nonzero": 901,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 274,
+    "mask_row": 274,
+    "class_id": 12,
+    "class_name": "header",
+    "score": 0.016001854091882706,
+    "box_xyxy": [
+      505.33355712890625,
+      -1.0651350021362305,
+      920.6774291992188,
+      31.072105407714844
+    ],
+    "rank": 1.0,
+    "mask_nonzero": 440,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 286,
+    "mask_row": 286,
+    "class_id": 13,
+    "class_name": "header",
+    "score": 0.015621143393218517,
+    "box_xyxy": [
+      505.33355712890625,
+      -1.0651350021362305,
+      920.6774291992188,
+      31.072105407714844
+    ],
+    "rank": 1.0,
+    "mask_nonzero": 440,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 289,
+    "mask_row": 289,
+    "class_id": 10,
+    "class_name": "footnote",
+    "score": 0.015568447299301624,
+    "box_xyxy": [
+      13.218700408935547,
+      1275.921142578125,
+      2001.7261962890625,
+      1417.4573974609375
+    ],
+    "rank": 250.0,
+    "mask_nonzero": 3999,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 291,
+    "mask_row": 291,
+    "class_id": 12,
+    "class_name": "header",
+    "score": 0.015524806454777718,
+    "box_xyxy": [
+      188.33541870117188,
+      -0.8405420184135437,
+      915.5325927734375,
+      34.05009078979492
+    ],
+    "rank": 2.0,
+    "mask_nonzero": 488,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 293,
+    "mask_row": 293,
+    "class_id": 22,
+    "class_name": "text",
+    "score": 0.015461253002285957,
+    "box_xyxy": [
+      114.78155517578125,
+      -2.0188369750976562,
+      1848.2938232421875,
+      181.8682403564453
+    ],
+    "rank": 28.0,
+    "mask_nonzero": 4169,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  },
+  {
+    "candidate_id": 298,
+    "mask_row": 298,
+    "class_id": 6,
+    "class_name": "doc_title",
+    "score": 0.015274756588041782,
+    "box_xyxy": [
+      505.33355712890625,
+      -1.0651350021362305,
+      920.6774291992188,
+      31.072105407714844
+    ],
+    "rank": 1.0,
+    "mask_nonzero": 440,
+    "selected": false,
+    "reasons": [
+      "below_score_threshold",
+      "outside_page"
+    ]
+  }
+]
