@@ -36,9 +36,9 @@ def main():
     assert process.returncode == 0, (process.returncode, process.stderr)
     job = output / 'job'
     document = json.loads((job / 'document.json').read_text())
-    schema = json.loads((ROOT / 'docs/issue-8/document-ir-1.1.schema.json').read_text())
+    schema = json.loads((ROOT / 'docs/issue-10/document-ir-1.3.schema.json').read_text())
     jsonschema.validate(document, schema)
-    assert document['schema_version'] == '1.1'
+    assert document['schema_version'] == '1.3'
     assert json.loads(json.dumps(document, ensure_ascii=False)) == document
     page = document['pages'][0]
     blocks = page['blocks']
@@ -46,8 +46,16 @@ def main():
     regions = {item['id']: item for item in page['regions']}
     owners = {item['id']: item for item in blocks}
     assert len(page['reading_order']) == len(blocks)
-    assert len(page['relations']) >= 1
+    ownership = [r for r in page['relations'] if r['type'] == 'content_owned_by']
+    assert ownership
     for relation in page['relations']:
+        if relation['type'] != 'content_owned_by':
+            assert relation['source_block_id'] in owners
+            assert relation['target_block_id'] in owners
+            assert owners[relation['source_block_id']]['type'] == 'text'
+            if relation['type'] == 'caption_of':
+                assert owners[relation['target_block_id']]['type'] in ('image', 'table')
+    for relation in ownership:
         child = layouts[relation['source_layout_block_id']]
         owner = owners[relation['owner_block_id']]
         assert child['label'] == 'formula' and owner['type'] == 'text'
@@ -59,7 +67,7 @@ def main():
                        for block in blocks)
     with Image.open(FIXTURE) as source:
         source = source.convert('RGB')
-        for relation in page['relations']:
+        for relation in ownership:
             owner = owners[relation['owner_block_id']]
             crop = job / owner['content']['resource']
             with Image.open(crop) as exported:
@@ -87,7 +95,7 @@ def main():
             blocks.index(first)]['content']['text']
     text_parent = next(block for block in blocks if block['type'] == 'text' and
                        '$r^{n}' in block['content']['text'])
-    assert any(item['owner_block_id'] == text_parent['id'] for item in page['relations'])
+    assert any(item['owner_block_id'] == text_parent['id'] for item in ownership)
     assert markdown.count(text_parent['content']['text']) == 1
     numbered = next(block for block in blocks if block['type'] == 'text' and
                     '1 写出特征方程' in block['content']['text'])
@@ -120,7 +128,7 @@ def main():
         'formula_content_quality': 'partial' if not second_exact else 'passed',
         'layout_selected': sum(x['selected'] for x in
                                document['layout_diagnostics']['candidates']),
-        'content_blocks': len(blocks), 'ownership_relations': len(page['relations']),
+        'content_blocks': len(blocks), 'ownership_relations': len(ownership),
         'formula_blocks': sum(x['type'] == 'formula' for x in blocks),
         'first_formula_gt_exact_ignoring_whitespace': True,
         'second_formula_format_ok': second['status'] == 'ok',

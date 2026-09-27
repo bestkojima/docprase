@@ -10,7 +10,7 @@ import tempfile
 from cli_integration import png_2x2
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SCHEMA = json.loads((ROOT / 'docs/issue-4/document-ir-1.0.schema.json').read_text())
+SCHEMA = json.loads((ROOT / 'docs/issue-10/document-ir-1.3.schema.json').read_text())
 
 
 def config(backend):
@@ -99,7 +99,7 @@ def main():
         assert completed.returncode == 0, completed.stderr
         inline_doc = json.loads((inline_out / 'document.json').read_text())
         jsonschema.validate(inline_doc, SCHEMA)
-        assert inline_doc['schema_version'] == '1.0'
+        assert inline_doc['schema_version'] == '1.3'
         assert [block['type'] for block in inline_doc['pages'][0]['blocks']] == [
             'text', 'formula']
         assert inline_doc['pages'][0]['relations'] == []

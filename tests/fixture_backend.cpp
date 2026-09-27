@@ -59,7 +59,8 @@ public:
                 if (geometry[0] != 800 || geometry[1] != 800)
                     throw std::runtime_error("layout im_shape mismatch");
                 std::memcpy(geometry, layout->inputs[2].data.data(), sizeof(geometry));
-                if (geometry[0] != 400 || geometry[1] != 400)
+                if (geometry[0] != (scenario_.rfind("printed_page_reading", 0) == 0 ? 8 : 400) ||
+                    geometry[1] != (scenario_.rfind("printed_page_reading", 0) == 0 ? 8 : 400))
                     throw std::runtime_error("layout scale_factor mismatch");
                 std::vector<float> rows(300*7);
                 const float samples[][7] = {
@@ -73,6 +74,56 @@ public:
                         {5,.9f,1,1,2,2,2}, {21,.9f,1,0,2,1,3},
                         {99,.9f,1,1,2,2,4}, {14,.9f,0,0,1,1,5}};
                     std::memcpy(rows.data(), page_samples, sizeof(page_samples));
+                    if (scenario_.rfind("printed_page_reading", 0) == 0) {
+                        const float reading_samples[][7] = {
+                            {22,.9f,5,10,40,20,20}, {22,.9f,60,10,95,20,10},
+                            {17,.9f,5,30,95,40,30}, {22,.9f,5,50,40,60,60},
+                            {22,.9f,60,50,95,60,50}, {14,.9f,5,63,40,78,61},
+                            {7,.9f,5,79,40,86,62}, {21,.9f,60,63,95,78,51},
+                            {17,.9f,60,79,95,86,52}, {10,.9f,5,90,40,98,63},
+                            {99,.9f,60,89,95,98,53}, {22,.2f,0,0,100,100,99}};
+                        std::memcpy(rows.data(), reading_samples, sizeof(reading_samples));
+                        if (scenario_ == "printed_page_reading_rank" ||
+                            scenario_ == "printed_page_reading_owned_rank") {
+                            const float ranks[] = {10,20,30,40,80,50,60,90,100,70,110};
+                            for (size_t i = 0; i < 11; ++i) rows[i*7+6] = ranks[i];
+                        }
+                        if (scenario_ == "printed_page_reading_missing") rows[4*7+6] = -1;
+                        if (scenario_ == "printed_page_reading_duplicate") rows[4*7+6] = 60;
+                        if (scenario_ == "printed_page_reading_ambiguous") {
+                            const float second_image[] = {14,.9f,5,63,40,78,54};
+                            const float second_table[] = {21,.9f,60,63,95,78,55};
+                            std::memcpy(rows.data()+10*7, second_image, sizeof(second_image));
+                            std::memcpy(rows.data()+11*7, second_table, sizeof(second_table));
+                        }
+                        if (scenario_ == "printed_page_reading_footer") {
+                            const float footer[] = {8,.9f,45,95,55,99,99};
+                            std::memcpy(rows.data()+11*7, footer, sizeof(footer));
+                        }
+                        if (scenario_ == "printed_page_reading_owned" ||
+                            scenario_ == "printed_page_reading_owned_rank") {
+                            const float table_text[] = {22,.9f,62,65,80,70,54};
+                            const float table_formula[] = {5,.9f,82,65,90,70,55};
+                            std::memcpy(rows.data()+10*7, table_text, sizeof(table_text));
+                            std::memcpy(rows.data()+11*7, table_formula, sizeof(table_formula));
+                        }
+                        if (scenario_ == "printed_page_reading_columns") {
+                            const float left_title[] = {17,.9f,5,30,40,40,30};
+                            std::memcpy(rows.data()+2*7, left_title, sizeof(left_title));
+                        }
+                        if (scenario_ == "printed_page_reading_single") {
+                            const float single[][7] = {
+                                {22,.9f,5,10,40,20,10}, {17,.9f,5,30,40,40,30},
+                                {14,.9f,5,50,40,65,50}, {7,.9f,5,66,40,75,70}};
+                            std::memcpy(rows.data(), single, sizeof(single));
+                        }
+                        if (scenario_ == "printed_page_reading_model_order") {
+                            const float single[][7] = {
+                                {22,.9f,5,10,20,20,20}, {22,.9f,22,10,40,20,10},
+                                {22,.9f,5,30,40,40,30}};
+                            std::memcpy(rows.data(), single, sizeof(single));
+                        }
+                    }
                     if (scenario_.rfind("printed_page_formula", 0) == 0) {
                         const float formula_samples[][7] = {
                             {22,.9f,0,0,2,1,0}, {5,.9f,1,0,2,1,1},
@@ -96,7 +147,10 @@ public:
                     std::memcpy(rows.data(), inline_samples, sizeof(inline_samples));
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
-                int32_t count = scenario_ == "printed_page_filtered" || scenario_ == "printed_page_slow" ? 1 :
+                int32_t count = scenario_ == "printed_page_reading_single" ? 4 :
+                    scenario_ == "printed_page_reading_model_order" ? 3 :
+                    scenario_.rfind("printed_page_reading", 0) == 0 ? 12 :
+                    scenario_ == "printed_page_filtered" || scenario_ == "printed_page_slow" ? 1 :
                     scenario_.rfind("printed_page_formula", 0) == 0 ? 4 :
                     scenario_.rfind("printed_page_table", 0) == 0 ? 4 :
                     scenario_.rfind("printed_page", 0) == 0 ? 6 :
@@ -169,6 +223,20 @@ public:
                 throw std::runtime_error(std::string("\xff", 1));
             GenerationOutput result;
             result.elapsed_ms = 2;
+            if (scenario_.rfind("printed_page_reading", 0) == 0) {
+                result.text = result.raw_output = generation.task == "table" ?
+                    "<table><tr><td>值</td></tr></table>" :
+                    generation.source_box.x0 == 60 && generation.source_box.y0 == 79 ?
+                        scenario_ == "printed_page_reading_table_prose" ? "表明上述结果" : "表1 统计" :
+                    generation.source_box.x0 == 5 && generation.source_box.y0 == 79 ? "图1 插图" :
+                    generation.source_box.y0 == 90 ? "¹ 来源说明" :
+                    generation.source_box.x0 == 5 && generation.source_box.y0 == 50 ? "左段¹" :
+                    generation.source_box.y0 == 30 ? "第一节" :
+                    generation.source_box.x0 == 60 ? "右段" : "左段";
+                result.finish_reason = "complete";
+                result.stop_reason = "normal";
+                return {result};
+            }
             if (scenario_.rfind("printed_page_formula", 0) == 0) {
                 if (generation.task == "formula") {
                     result.text = result.raw_output =
@@ -320,7 +388,8 @@ private:
     int reset_count_ = 0;
 };
 bool config_supported(const std::string& config) {
-    return config == "fixture:normalized" || config == "fixture:runtime" ||
+    return config.rfind("fixture:printed_page_reading", 0) == 0 ||
+           config == "fixture:normalized" || config == "fixture:runtime" ||
            config == "fixture:graph" || config == "fixture:sample" || config == "fixture:blank" ||
            config == "fixture:failure" || config == "fixture:formula_table" ||
            config == "fixture:slow" || config == "fixture:invalid_utf8" ||

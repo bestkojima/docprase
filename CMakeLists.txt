@@ -76,6 +76,8 @@ if(DOCOCR_BUILD_TESTS)
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_formula_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME printed_table_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_table_integration.py $<TARGET_FILE:dococr_cli_fixture>)
+  add_test(NAME reading_order_integration COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/reading_order_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME printed_page_cancel COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_cancel.py $<TARGET_FILE:dococr_c_test>)
 endif()

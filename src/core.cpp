@@ -11,6 +11,8 @@
 #include <iomanip>
 #include <limits>
 #include <locale>
+#include <numeric>
+#include <set>
 #include <memory>
 #include <sstream>
 #include <stdexcept>
@@ -171,6 +173,159 @@ struct Block {
     ParsedTable table;
 };
 
+struct ReadingOrderEvidence {
+    std::string source = "geometry";
+    std::string reason = "page_geometry";
+};
+
+struct SemanticRelation {
+    std::string type, source_block_id, target_block_id, evidence;
+};
+
+bool spans_columns(const Block& block, int page_width) {
+    return block.box.x0 < page_width * 0.45 && block.box.x1 > page_width * 0.55 &&
+           block.box.x1 - block.box.x0 >= page_width * 0.65;
+}
+
+// Assign order to already identified blocks. Detection and recognition IDs never depend on this pass.
+ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_width) {
+    if (blocks.empty()) return {"geometry", "empty_page"};
+    const size_t size = blocks.size();
+    std::vector<size_t> spans;
+    for (size_t i = 0; i < size; ++i)
+        if (page_width >= 64 && spans_columns(blocks[i], page_width)) spans.push_back(i);
+    std::stable_sort(spans.begin(), spans.end(), [&](size_t a, size_t b) {
+        return blocks[a].box.y0 < blocks[b].box.y0;
+    });
+    std::vector<int> segment(size), column(size, 0);
+    std::vector<bool> is_span(size, false);
+    for (size_t i : spans) is_span[i] = true;
+    for (size_t i = 0; i < size; ++i) {
+        int before = 0;
+        for (size_t span : spans) if (blocks[span].box.y0 < blocks[i].box.y0) ++before;
+        segment[i] = 2 * before + (is_span[i] ? 1 : 0);
+    }
+    for (int band = 0; band <= 2 * int(spans.size()); band += 2) {
+        bool left = false, right = false;
+        for (size_t i = 0; i < size; ++i) if (segment[i] == band) {
+            if (blocks[i].box.x1 <= page_width * 0.48) left = true;
+            else if (blocks[i].box.x0 >= page_width * 0.52) right = true;
+        }
+        if (!left || !right) continue;
+        for (size_t i = 0; i < size; ++i) if (segment[i] == band)
+            column[i] = blocks[i].box.x1 <= page_width * 0.48 ? 0 :
+                blocks[i].box.x0 >= page_width * 0.52 ? 1 : 2;
+    }
+    std::vector<size_t> geometry(size);
+    std::iota(geometry.begin(), geometry.end(), 0);
+    std::stable_sort(geometry.begin(), geometry.end(), [&](size_t a, size_t b) {
+        if (segment[a] != segment[b]) return segment[a] < segment[b];
+        if (column[a] != column[b]) return column[a] < column[b];
+        if (blocks[a].box.y0 != blocks[b].box.y0) return blocks[a].box.y0 < blocks[b].box.y0;
+        if (blocks[a].box.x0 != blocks[b].box.x0) return blocks[a].box.x0 < blocks[b].box.x0;
+        return a < b;
+    });
+    ReadingOrderEvidence evidence;
+    std::set<int> ranks;
+    bool missing = false, duplicate = false;
+    for (const Block& block : blocks) {
+        if (block.candidate_rank < 0) missing = true;
+        else if (!ranks.insert(block.candidate_rank).second) duplicate = true;
+    }
+    std::vector<size_t> chosen = geometry;
+    if (missing) evidence.reason = "missing_rank";
+    else if (duplicate) evidence.reason = "duplicate_rank";
+    else {
+        std::vector<size_t> ranked(size);
+        std::iota(ranked.begin(), ranked.end(), 0);
+        std::stable_sort(ranked.begin(), ranked.end(), [&](size_t a, size_t b) {
+            return blocks[a].candidate_rank < blocks[b].candidate_rank;
+        });
+        bool conflict = false, column_conflict = false;
+        for (size_t i = 1; i < size; ++i) {
+            size_t previous = ranked[i-1], current = ranked[i];
+            if (segment[previous] > segment[current]) conflict = true;
+            if (segment[previous] == segment[current] && column[previous] > column[current])
+                column_conflict = true;
+            if (segment[previous] == segment[current] && column[previous] == column[current] &&
+                blocks[previous].box.y0 > blocks[current].box.y0 &&
+                blocks[previous].box.y0 >= blocks[current].box.y1)
+                conflict = true;
+        }
+        if (column_conflict) evidence.reason = "model_column_conflict";
+        else if (conflict) evidence.reason = "model_geometry_conflict";
+        else { evidence = {"model", "unique_rank"}; chosen = std::move(ranked); }
+    }
+    std::vector<Block> reordered;
+    reordered.reserve(size);
+    for (size_t i : chosen) reordered.push_back(std::move(blocks[i]));
+    blocks = std::move(reordered);
+    return evidence;
+}
+
+std::string footnote_marker(const std::string& text) {
+    for (const std::string& marker : {"¹", "²", "³", "⁴", "⁵", "①", "②", "③", "④", "⑤",
+                                      "[1]", "[2]", "[3]", "[4]", "[5]"})
+        if (text.rfind(marker, 0) == 0) return marker;
+    return {};
+}
+
+bool numbered_table_caption(const std::string& text) {
+    size_t offset = text.rfind("表", 0) == 0 ? std::string("表").size() :
+        text.rfind("Table ", 0) == 0 ? std::string("Table ").size() : 0;
+    if (!offset) return false;
+    while (offset < text.size() && text[offset] == ' ') ++offset;
+    if (offset == text.size()) return false;
+    if (text[offset] >= '0' && text[offset] <= '9') return true;
+    for (const std::string& numeral : {"一", "二", "三", "四", "五", "六", "七", "八", "九", "十"})
+        if (text.compare(offset, numeral.size(), numeral) == 0) return true;
+    return false;
+}
+
+std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& blocks,
+                                                     int page_height) {
+    std::vector<SemanticRelation> relations;
+    for (const Block& caption : blocks) {
+        bool figure = caption.model_label == "figure_title";
+        bool table = caption.type == "text" && caption.status == "ok" &&
+            numbered_table_caption(caption.text);
+        bool footnote = caption.model_label == "footnote" || caption.model_label == "vision_footnote";
+        if (!figure && !table && !footnote) continue;
+        const std::string marker = footnote ? footnote_marker(caption.text) : "";
+        if (footnote && marker.empty()) continue;
+        const Block* target = nullptr;
+        int best_distance = std::numeric_limits<int>::max();
+        bool tie = false;
+        int footnote_matches = 0;
+        for (const Block& other : blocks) {
+            if (other.id == caption.id) continue;
+            if (figure && other.type != "image") continue;
+            if (table && other.type != "table") continue;
+            if (footnote) {
+                if (other.type != "text" || other.model_label == "footnote" ||
+                    other.text.find(marker) == std::string::npos)
+                    continue;
+            }
+            int overlap = std::min(caption.box.x1, other.box.x1) -
+                          std::max(caption.box.x0, other.box.x0);
+            if (overlap <= 0) continue;
+            int gap = caption.box.y0 >= other.box.y1 ? caption.box.y0 - other.box.y1 :
+                other.box.y0 >= caption.box.y1 ? other.box.y0 - caption.box.y1 : -1;
+            int max_gap = std::max(8, std::min(page_height * 3 / 100,
+                std::max(caption.box.y1 - caption.box.y0, other.box.y1 - other.box.y0)));
+            if (gap < 0 || (!footnote && gap > max_gap) ||
+                (footnote && other.box.y1 > caption.box.y0)) continue;
+            if (footnote) ++footnote_matches;
+            if (gap < best_distance) { target = &other; best_distance = gap; tie = false; }
+            else if (gap == best_distance) tie = true;
+        }
+        if (target && !tie && (!footnote || footnote_matches == 1)) relations.push_back({footnote ? "footnote_of" : "caption_of",
+            caption.id, target->id, footnote ? "model_footnote_marker_and_geometry" :
+            figure ? "model_figure_title_and_geometry" : "table_prefix_and_geometry"});
+    }
+    return relations;
+}
+
 struct RawLayoutCandidate {
     int id = 0, class_id = 0, rank = 0, mask_nonzero = 0;
     float score = 0, box[4]{};
@@ -278,7 +433,7 @@ bool decode_real_layout(const TensorOutput& output, const Image& image,
         std::memcpy(row, rows->data.data() + size_t(i)*7*sizeof(float), sizeof(row));
         for (float value : row) if (!std::isfinite(value)) return false;
         if (row[1] < 0 || row[1] > 1 || row[0] < 0 || row[0] > 1000000 ||
-            std::trunc(row[0]) != row[0] || row[6] < 0 || row[6] > 1000000 ||
+            std::trunc(row[0]) != row[0] || row[6] < -1 || row[6] > 1000000 ||
             std::trunc(row[6]) != row[6]) return false;
         RawLayoutCandidate candidate;
         candidate.id = i;
@@ -688,13 +843,16 @@ std::string serialize(const Image& image, const std::string& state,
                       const std::vector<RawLayoutCandidate>* raw = nullptr,
                       const std::string& overlay = {},
                       const std::vector<OwnershipEvidence>& ownership = {},
-                      bool structured_tables = false) {
+                      bool structured_tables = false,
+                      const ReadingOrderEvidence* order_evidence = nullptr,
+                      const std::vector<SemanticRelation>& semantic = {}) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
     bool has_table = structured_tables &&
         std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.type == "table"; });
-    out << "{\"schema_version\":" << json_quote(has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
+    out << "{\"schema_version\":" << json_quote(order_evidence ? "1.3" :
+        has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
         << ",\"source\":{\"type\":\"image\"},\"pages\":[{\"page_id\":\"p0001\",\"page_index\":0,"
@@ -704,7 +862,11 @@ std::string serialize(const Image& image, const std::string& state,
         if (i) out << ',';
         out << json_quote(blocks[i].id);
     }
-    out << "],\"layout_blocks\":[";
+    out << ']';
+    if (order_evidence)
+        out << ",\"reading_order_evidence\":{\"source\":" << json_quote(order_evidence->source)
+            << ",\"reason\":" << json_quote(order_evidence->reason) << '}';
+    out << ",\"layout_blocks\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
@@ -757,7 +919,7 @@ std::string serialize(const Image& image, const std::string& state,
         out << "{\"id\":" << json_quote(b.id) << ",\"page_id\":\"p0001\",\"type\":" << json_quote(b.type)
             << ",\"source_region_ids\":[" << json_quote(b.region_id) << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
-            << "\"reading_order_source\":\"geometry\","
+            << "\"reading_order_source\":" << json_quote(order_evidence ? order_evidence->source : "geometry") << ','
             << "\"status\":" << json_quote(b.status) << ",\"confidence\":null,\"content\":{\"format\":"
             << json_quote(!b.format_override.empty() ? b.format_override :
                      b.type == "image" || b.type == "unknown" ? "resource" :
@@ -784,7 +946,7 @@ std::string serialize(const Image& image, const std::string& state,
         }
         out
             << "},\"provenance\":{\"model_profile\":" << json_quote(profile)
-            << ",\"request_id\":" << json_quote("req" + id('r', i+1))
+            << ",\"request_id\":" << json_quote("req" + b.region_id)
             << ",\"raw_output\":" << (b.raw_base64.empty() ? json_quote(b.raw) : "null")
             << ",\"raw_output_base64\":" << (b.raw_base64.empty() ? "null" : json_quote(b.raw_base64))
             << ",\"text_base64\":" << (b.text_base64.empty() ? "null" : json_quote(b.text_base64))
@@ -798,6 +960,13 @@ std::string serialize(const Image& image, const std::string& state,
         out << "{\"type\":\"content_owned_by\",\"source_layout_block_id\":"
             << json_quote(evidence.layout_id) << ",\"owner_block_id\":"
             << json_quote(evidence.owner_block_id) << "}";
+    }
+    for (const auto& relation : semantic) {
+        if (!ownership.empty() || &relation != &semantic.front()) out << ',';
+        out << "{\"type\":" << json_quote(relation.type)
+            << ",\"source_block_id\":" << json_quote(relation.source_block_id)
+            << ",\"target_block_id\":" << json_quote(relation.target_block_id)
+            << ",\"evidence\":" << json_quote(relation.evidence) << '}';
     }
     out << "]}],\"resources\":[";
     bool first = true;
@@ -1172,6 +1341,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         if (owner == blocks.end()) throw std::runtime_error("content_owner_missing");
         evidence.owner_block_id = owner->id;
     }
+    const ReadingOrderEvidence order_evidence = arrange_reading_order(blocks, image.width);
+    const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.height);
     if (cancelled) return {RunCode::Cancelled, {}};
     const std::string overlay_name = "assets/p0001-layout-overlay.png";
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
@@ -1185,7 +1356,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     }
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,
-                            overlay_name, ownership, transcribe);
+                            overlay_name, ownership, transcribe, &order_evidence, semantic);
     audit.did_export = true;
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
     uint64_t bytes = result.json.size() + result.markdown.size();

@@ -64,9 +64,9 @@ def box_overlap(block, poly):
 
 def compare(job, image, references, min_tables):
     document = json.loads((job / 'document.json').read_text())
-    schema = json.loads((ROOT / 'docs/issue-9/document-ir-1.2.schema.json').read_text())
+    schema = json.loads((ROOT / 'docs/issue-10/document-ir-1.3.schema.json').read_text())
     jsonschema.validate(document, schema)
-    assert document['schema_version'] == '1.2'
+    assert document['schema_version'] == '1.3'
     assert json.loads(json.dumps(document, ensure_ascii=False)) == document
     page = document['pages'][0]
     blocks = page['blocks']
@@ -135,7 +135,15 @@ def compare(job, image, references, min_tables):
                         'content_nonempty_cells': len(actual['cells']),
                         'cell_differences': cell_differences})
     assert len(reports) >= min_tables
+    ownership = [r for r in page['relations'] if r['type'] == 'content_owned_by']
     for relation in page['relations']:
+        if relation['type'] != 'content_owned_by':
+            assert relation['source_block_id'] in owners
+            assert relation['target_block_id'] in owners
+            assert owners[relation['source_block_id']]['type'] == 'text'
+            if relation['type'] == 'caption_of':
+                assert owners[relation['target_block_id']]['type'] in ('image', 'table')
+    for relation in ownership:
         child = layouts[relation['source_layout_block_id']]
         owner = owners[relation['owner_block_id']]
         if owner['type'] == 'table':
@@ -149,7 +157,7 @@ def compare(job, image, references, min_tables):
     return {'document_status': document['status'], 'layout_selected': sum(
         c['selected'] for c in document['layout_diagnostics']['candidates']),
         'content_blocks': len(blocks), 'table_ownership_relations': sum(
-            owners[r['owner_block_id']]['type'] == 'table' for r in page['relations']),
+            owners[r['owner_block_id']]['type'] == 'table' for r in ownership),
         'tables': reports}
 
 
