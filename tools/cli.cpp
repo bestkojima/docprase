@@ -1,4 +1,5 @@
 #include "dococr/dococr.h"
+#include "reexport.hpp"
 #include <atomic>
 #include <chrono>
 #include <csignal>
@@ -40,6 +41,58 @@ bool write_file(const fs::path& path, const DocOcrBytes& bytes) {
     file.write(reinterpret_cast<const char*>(bytes.data), static_cast<std::streamsize>(bytes.size));
     return bool(file);
 }
+bool contains_path(const fs::path& parent, const fs::path& child) {
+    auto a = parent.begin(), b = child.begin();
+    for (; a != parent.end(); ++a, ++b)
+        if (b == child.end() || *a != *b) return false;
+    return true;
+}
+bool has_symlink_component(const fs::path& path, const fs::path& root) {
+    fs::path current = root;
+    for (const auto& part : path) {
+        current /= part;
+        if (fs::is_symlink(fs::symlink_status(current))) return true;
+    }
+    return false;
+}
+int reexport(const fs::path& input, const fs::path& asset_root, const fs::path& output) {
+    if (!fs::is_regular_file(input) || !fs::is_directory(asset_root) || fs::exists(output))
+        throw std::invalid_argument("重新导出要求现有 JSON/资源根和新的输出目录");
+    const auto source = fs::canonical(asset_root);
+    const auto target = fs::weakly_canonical(output);
+    if (contains_path(source, target) || contains_path(target, source))
+        throw std::invalid_argument("输出目录不能与资源根重叠");
+    std::ifstream stream(input, std::ios::binary);
+    if (!stream) throw std::invalid_argument("无法打开 DocumentIR JSON");
+    const std::string json(std::istreambuf_iterator<char>{stream}, {});
+    auto document = dococr::validate_and_render_document(json);
+    for (const auto& path : document.asset_paths) {
+        auto relative = fs::u8path(path);
+        if (has_symlink_component(relative, source) ||
+            !contains_path(source, fs::weakly_canonical(source / relative)) ||
+            !fs::is_regular_file(source / relative))
+            throw std::invalid_argument("资源缺失或越界：" + path);
+    }
+    fs::create_directories(output);
+    try {
+        for (const auto& path : document.asset_paths) {
+            auto relative = fs::u8path(path);
+            fs::create_directories((output / relative).parent_path());
+            fs::copy_file(source / relative, output / relative);
+        }
+        std::ofstream json_file(output / "document.json", std::ios::binary);
+        json_file.write(json.data(), static_cast<std::streamsize>(json.size()));
+        if (!json_file) throw std::runtime_error("写入 document.json 失败");
+        std::ofstream markdown_file(output / "document.md", std::ios::binary);
+        markdown_file.write(document.markdown.data(), static_cast<std::streamsize>(document.markdown.size()));
+        if (!markdown_file) throw std::runtime_error("写入 document.md 失败");
+    } catch (...) {
+        fs::remove_all(output);
+        throw;
+    }
+    std::cout << "已重新导出：" << output.u8string() << '\n';
+    return 0;
+}
 bool write_audit(const fs::path& output_path, DocOcrHandle engine, DocOcrJob job) {
     OwnedBytes plan, manifest;
     DocOcrStatus plan_status = dococr_execution_plan(engine, &plan.value);
@@ -60,9 +113,15 @@ uint64_t positive_number(const std::string& value) {
 }
 }
 int main(int argc, char** argv) {
+    if (argc == 7 && std::string(argv[1]) == "--reexport" &&
+        std::string(argv[3]) == "--asset-root" && std::string(argv[5]) == "--out") {
+        try { return reexport(fs::u8path(argv[2]), fs::u8path(argv[4]), fs::u8path(argv[6])); }
+        catch (const std::exception& error) { std::cerr << error.what() << '\n'; return 3; }
+    }
     if (argc < 7 || argc % 2 == 0 || (std::string(argv[1]) != "--backend" && std::string(argv[1]) != "--config") ||
         std::string(argv[3]) != "--input" || std::string(argv[5]) != "--out") {
-        std::cerr << "用法：dococr_cli (--backend NAME | --config config.json) --input 文件 --out 输出目录 [--pages 首-末] [--dpi 72..600] [--max-page-pixels 正整数] [--timeout-ms 正整数]\n";
+        std::cerr << "用法：dococr_cli (--backend NAME | --config config.json) --input 文件 --out 输出目录 [--pages 首-末] [--dpi 72..600] [--max-page-pixels 正整数] [--timeout-ms 正整数]\n"
+                  << "      dococr_cli --reexport document.json --asset-root 原资源目录 --out 新输出目录\n";
         return 2;
     }
     try {

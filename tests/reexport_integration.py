@@ -1,0 +1,212 @@
+"""从用户 CLI 边界核对保存的 DocumentIR 可以重新导出。"""
+import json
+import copy
+import pathlib
+import subprocess
+import sys
+import tempfile
+from printed_page_integration import config
+from PIL import Image
+import jsonschema
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+
+def run(*args, code=0, cwd=ROOT):
+    result = subprocess.run(args, cwd=cwd, capture_output=True, text=True)
+    assert result.returncode == code, (result.returncode, result.stdout, result.stderr)
+    return result
+
+
+def main():
+    fixture, production, image = sys.argv[1:]
+    with tempfile.TemporaryDirectory(prefix="dococr-reexport-") as directory:
+        root = pathlib.Path(directory)
+        source, copied = root / "source", root / "copied"
+        run(fixture, "--backend", "fixture:sample", "--input", image, "--out", str(source))
+        run(production, "--reexport", str(source / "document.json"),
+            "--asset-root", str(source), "--out", str(copied), cwd=root)
+        assert (copied / "document.json").read_bytes() == (source / "document.json").read_bytes()
+        assert (copied / "document.md").read_bytes() == (source / "document.md").read_bytes()
+        document = json.loads((copied / "document.json").read_text())
+        for resource in document["resources"]:
+            path = resource["path"]
+            assert (copied / path).read_bytes() == (source / path).read_bytes()
+
+        attempts = 0
+        def reexport(saved, value=None, code=0, asset_root=None):
+            nonlocal attempts
+            attempts += 1
+            target = root / (saved.name + '-copy-' + str(attempts))
+            input_json = saved / 'document.json'
+            if value is not None:
+                input_json = root / (saved.name + '-modified.json')
+                input_json.write_text(json.dumps(value, ensure_ascii=False), encoding='utf-8')
+            result = run(production, '--reexport', str(input_json), '--asset-root',
+                         str(asset_root or saved), '--out', str(target), code=code, cwd=root)
+            if code == 0:
+                assert json.loads((target / 'document.json').read_text()) == json.loads(input_json.read_text())
+                assert (target / 'document.md').read_bytes() == (saved / 'document.md').read_bytes()
+                for path in collect_assets(value or json.loads(input_json.read_text())):
+                    assert (target / path).read_bytes() == (saved / path).read_bytes(), path
+            else:
+                assert not target.exists()
+            return result
+
+        def generate(scenario):
+            setting = root / (scenario + '.json')
+            setting.write_text(json.dumps(config(scenario)), encoding='utf-8')
+            saved = root / scenario
+            input_image = image
+            if scenario == 'printed_page_reading':
+                input_image = root / 'large.png'
+                Image.new('RGB', (100, 100), 'white').save(input_image)
+            run(fixture, '--config', str(setting), '--input', str(input_image), '--out', str(saved))
+            return saved, json.loads((saved / 'document.json').read_text())
+
+        generated = {}
+        for scenario, version in [('formula_table', '1.0'),
+                                  ('printed_page_formula', '1.3'),
+                                  ('printed_page_table', '1.3'),
+                                  ('printed_page_reading', '1.3'),
+                                  ('printed_page_failure', '1.3')]:
+            if scenario == 'formula_table':
+                saved = root / scenario
+                run(fixture, '--backend', 'fixture:formula_table', '--input', image, '--out', str(saved))
+                data = json.loads((saved / 'document.json').read_text())
+            else:
+                saved, data = generate(scenario)
+            assert data['schema_version'] == version, (scenario, data['schema_version'])
+            generated[scenario] = (saved, data)
+            reexport(saved)
+            assert [b['id'] for b in data['pages'][0]['blocks']] == data['pages'][0]['reading_order'] or scenario == 'printed_page_reading'
+            assert all(b['confidence'] is None for b in data['pages'][0]['blocks'])
+
+        table_saved, table = generated['printed_page_table']
+        formula_saved, formula = generated['printed_page_formula']
+        old_formula = copy.deepcopy(formula)
+        old_formula['schema_version'] = '1.1'
+        old_formula['pages'][0].pop('reading_order_evidence', None)
+        for block in old_formula['pages'][0]['blocks']:
+            block['reading_order_source'] = 'geometry'
+        jsonschema.validate(old_formula, json.loads((ROOT / 'docs/issue-8/document-ir-1.1.schema.json').read_text()))
+        reexport(formula_saved, old_formula)
+        legacy = copy.deepcopy(table)
+        legacy['schema_version'] = '1.2'
+        legacy['pages'][0].pop('reading_order_evidence', None)
+        for block in legacy['pages'][0]['blocks']:
+            block['reading_order_source'] = 'geometry'
+        # 1.2 的表格语义与 1.3 相同；保存后的旧版文件仍须可读。
+        jsonschema.validate(legacy, json.loads((ROOT / 'docs/issue-9/document-ir-1.2.schema.json').read_text()))
+        reexport(table_saved, legacy)
+
+        without_optional_diagnostics = copy.deepcopy(table)
+        without_optional_diagnostics.pop('layout_diagnostics')
+        for block in without_optional_diagnostics['pages'][0]['blocks']:
+            block['provenance']['model_profile'] = 'MNN/3.0/PP-DocLayoutV3=fixture'
+        reexport(table_saved, without_optional_diagnostics)
+
+        current = copy.deepcopy(table)
+        current['schema_version'] = '9.9'
+        assert 'schema_version' in reexport(table_saved, current, code=3).stderr
+        current = copy.deepcopy(table)
+        current['pages'][0]['reading_order'][0] = 'b9999'
+        assert 'reading_order' in reexport(table_saved, current, code=3).stderr
+        current = copy.deepcopy(table)
+        current['pages'][0]['relations'][0]['owner_block_id'] = 'b9999'
+        assert '归属' in reexport(table_saved, current, code=3).stderr
+        current = copy.deepcopy(table)
+        current['pages'][0]['blocks'][0]['content']['resource'] = 'assets/absent.png'
+        assert 'resource' in reexport(table_saved, current, code=3).stderr
+        missing = root / 'missing-assets'
+        missing.mkdir()
+        assert '资源缺失' in reexport(table_saved, code=3, asset_root=missing).stderr
+        current = copy.deepcopy(table)
+        current['layout_diagnostics']['candidates'][0]['mask_asset'] = 'assets/missing-mask.png'
+        assert '资源缺失' in reexport(table_saved, current, code=3).stderr
+        current = copy.deepcopy(table)
+        current['resources'][0]['path'] = '../outside.png'
+        assert '资源路径' in reexport(table_saved, current, code=3).stderr
+
+        pdf = root / 'mixed.pdf'
+        pdf_images = [Image.new('RGB', (100, 100), color) for color in
+                      ('white', 'black', '#e6e6e6')]
+        pdf_images[0].save(pdf, save_all=True, append_images=pdf_images[1:])
+        setting = root / 'pdf-config.json'
+        setting.write_text(json.dumps(config('printed_page_reading_pdf_mixed')))
+        pdf_saved = root / 'pdf-saved'
+        run(fixture, '--config', str(setting), '--input', str(pdf), '--out', str(pdf_saved),
+            '--dpi', '72')
+        pdf_data = json.loads((pdf_saved / 'document.json').read_text())
+        assert pdf_data['schema_version'] == '1.4'
+        assert [p['status'] for p in pdf_data['pages']] == ['partial', 'failed', 'blank']
+        reexport(pdf_saved)
+        broken_pdf = copy.deepcopy(pdf_data)
+        broken_pdf['pages'][0]['regions'][0]['page_id'] = 'p0003'
+        assert 'region ID/page_id' in reexport(pdf_saved, broken_pdf, code=3).stderr
+        broken_pdf = copy.deepcopy(pdf_data)
+        broken_pdf['source']['selected_pages'] = [2, 4]
+        assert 'selected_pages' in reexport(pdf_saved, broken_pdf, code=3).stderr
+        broken_pdf = copy.deepcopy(pdf_data)
+        broken_pdf['pages'][1]['page_index'] = 0
+        assert 'page_id' in reexport(pdf_saved, broken_pdf, code=3).stderr
+        broken_pdf = copy.deepcopy(pdf_data)
+        broken_pdf['pages'][0]['pdf_points_to_raster_affine'] = [1, 2]
+        assert 'affine' in reexport(pdf_saved, broken_pdf, code=3).stderr
+        broken_pdf = copy.deepcopy(pdf_data)
+        broken_pdf['pages'][1]['blocks'] = [copy.deepcopy(pdf_data['pages'][0]['blocks'][0])]
+        assert '失败页' in reexport(pdf_saved, broken_pdf, code=3).stderr
+
+        bad = copy.deepcopy(table)
+        bad['pages'][0]['blocks'][0]['type'] = 'script'
+        assert 'type' in reexport(table_saved, bad, code=3).stderr
+        bad = copy.deepcopy(table)
+        bad['pages'][0]['blocks'][0]['content']['format'] = 'script'
+        assert 'format' in reexport(table_saved, bad, code=3).stderr
+        bad = copy.deepcopy(table)
+        bad['pages'][0]['blocks'][0]['source_region_ids'] = []
+        assert 'source_region_ids' in reexport(table_saved, bad, code=3).stderr
+        bad = copy.deepcopy(table)
+        bad['resources'][0]['source_block_id'] = next(
+            b['id'] for b in table['pages'][0]['blocks']
+            if b['id'] != table['resources'][0]['source_block_id'])
+        assert 'resource' in reexport(table_saved, bad, code=3).stderr
+        bad = copy.deepcopy(table)
+        bad['resources'][0]['bbox'] = [0, 0, 1, 1]
+        assert 'bbox' in reexport(table_saved, bad, code=3).stderr
+        bad = copy.deepcopy(table)
+        bad['resources'][0]['path'] = 'assets/evil\x00name.png'
+        assert '路径' in reexport(table_saved, bad, code=3).stderr
+        bad = copy.deepcopy(table)
+        next(b for b in bad['pages'][0]['blocks'] if b['type'] == 'table')['content']['table']['cells'][0]['text'] = '伪造'
+        assert '表格单元格' in reexport(table_saved, bad, code=3).stderr
+        duplicate = root / 'duplicate.json'
+        duplicate.write_text((table_saved / 'document.json').read_text().replace(
+            '"schema_version":"1.3"', '"schema_version":"1.3","schema_version":"1.3"', 1))
+        target = root / 'duplicate-out'
+        assert '重复' in run(production, '--reexport', str(duplicate), '--asset-root',
+                            str(table_saved), '--out', str(target), code=3, cwd=root).stderr
+        assert not target.exists()
+        # 即使资源名在 JSON 中合法，输入根中的符号链接也不得穿出资源根。
+        linked_root = root / 'linked-assets'
+        linked_root.mkdir()
+        (linked_root / 'assets').symlink_to(table_saved / 'assets', target_is_directory=True)
+        assert '资源缺失或越界' in reexport(table_saved, code=3, asset_root=linked_root).stderr
+        overlap = run(production, '--reexport', str(table_saved / 'document.json'),
+                      '--asset-root', str(table_saved), '--out', str(table_saved / 'nested'), code=3,
+                      cwd=root)
+        assert '重叠' in overlap.stderr
+
+
+def collect_assets(document):
+    paths = {r['path'] for r in document['resources']}
+    for holder in [document, *document['pages']]:
+        d = holder.get('layout_diagnostics')
+        if d:
+            paths.add(d['overlay_asset'])
+            paths.update(d['raw_tensor_assets'].values())
+            paths.update(c['mask_asset'] for c in d['candidates'] if c['mask_asset'])
+    return paths
+
+
+if __name__ == "__main__":
+    main()
