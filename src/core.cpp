@@ -184,7 +184,8 @@ struct SemanticRelation {
 
 bool spans_columns(const Block& block, int page_width) {
     return block.box.x0 < page_width * 0.45 && block.box.x1 > page_width * 0.55 &&
-           block.box.x1 - block.box.x0 >= page_width * 0.65;
+           block.box.x1 - block.box.x0 >= page_width *
+               ((block.model_label == "doc_title" || block.model_label == "paragraph_title") ? 0.25 : 0.65);
 }
 
 // Assign order to already identified blocks. Detection and recognition IDs never depend on this pass.
@@ -265,9 +266,31 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
 
 std::string footnote_marker(const std::string& text) {
     for (const std::string& marker : {"¹", "²", "³", "⁴", "⁵", "①", "②", "③", "④", "⑤",
-                                      "[1]", "[2]", "[3]", "[4]", "[5]"})
-        if (text.rfind(marker, 0) == 0) return marker;
+                                      "[1]", "[2]", "[3]", "[4]", "[5]"}) {
+        if (text.rfind(marker, 0) != 0) continue;
+        if (marker.front() != '[') {
+            for (const std::string& digit : {"⁰", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"})
+                if (text.compare(marker.size(), digit.size(), digit) == 0) return {};
+        }
+        return marker;
+    }
     return {};
+}
+
+int count_footnote_references(const std::string& text, const std::string& marker) {
+    const bool superscript = marker.front() != '[';
+    const std::vector<std::string> superscripts = {"⁰", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"};
+    int count = 0;
+    for (size_t pos = text.find(marker); pos != std::string::npos;
+         pos = text.find(marker, pos + marker.size())) {
+        bool adjacent = false;
+        if (superscript) for (const auto& digit : superscripts) {
+            adjacent |= pos >= digit.size() && text.compare(pos - digit.size(), digit.size(), digit) == 0;
+            adjacent |= text.compare(pos + marker.size(), digit.size(), digit) == 0;
+        }
+        if (!adjacent) ++count;
+    }
+    return count;
 }
 
 bool numbered_table_caption(const std::string& text) {
@@ -283,7 +306,7 @@ bool numbered_table_caption(const std::string& text) {
 }
 
 std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& blocks,
-                                                     int page_height) {
+                                                     int page_width, int page_height) {
     std::vector<SemanticRelation> relations;
     for (const Block& caption : blocks) {
         bool figure = caption.model_label == "figure_title";
@@ -303,7 +326,8 @@ std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& bl
             if (table && other.type != "table") continue;
             if (footnote) {
                 if (other.type != "text" || other.model_label == "footnote" ||
-                    other.text.find(marker) == std::string::npos)
+                    other.model_label == "vision_footnote" ||
+                    count_footnote_references(other.text, marker) == 0)
                     continue;
             }
             int overlap = std::min(caption.box.x1, other.box.x1) -
@@ -315,13 +339,45 @@ std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& bl
                 std::max(caption.box.y1 - caption.box.y0, other.box.y1 - other.box.y0)));
             if (gap < 0 || (!footnote && gap > max_gap) ||
                 (footnote && other.box.y1 > caption.box.y0)) continue;
-            if (footnote) ++footnote_matches;
+            if (footnote) footnote_matches += count_footnote_references(other.text, marker);
             if (gap < best_distance) { target = &other; best_distance = gap; tie = false; }
             else if (gap == best_distance) tie = true;
         }
         if (target && !tie && (!footnote || footnote_matches == 1)) relations.push_back({footnote ? "footnote_of" : "caption_of",
             caption.id, target->id, footnote ? "model_footnote_marker_and_geometry" :
             figure ? "model_figure_title_and_geometry" : "table_prefix_and_geometry"});
+    }
+    for (const Block& heading : blocks) {
+        if (heading.type != "text" || heading.status != "ok" || heading.text.empty() ||
+            (heading.model_label != "doc_title" && heading.model_label != "paragraph_title") ||
+            numbered_table_caption(heading.text)) continue;
+        const bool span = spans_columns(heading, page_width);
+        const Block* first[3] = {nullptr, nullptr, nullptr};
+        int best_gap[3] = {std::numeric_limits<int>::max(), std::numeric_limits<int>::max(),
+                           std::numeric_limits<int>::max()};
+        bool ties[3] = {false, false, false};
+        for (const Block& other : blocks) {
+            if (other.id == heading.id || other.type == "unknown" ||
+                other.model_label == "figure_title" || other.model_label == "footnote" ||
+                other.model_label == "vision_footnote" || other.model_label == "footer" ||
+                other.model_label == "doc_title" || other.model_label == "paragraph_title" ||
+                other.box.y0 < heading.box.y1) continue;
+            int overlap = std::min(heading.box.x1, other.box.x1) -
+                          std::max(heading.box.x0, other.box.x0);
+            if (overlap <= 0) continue;
+            int gap = other.box.y0 - heading.box.y1;
+            int max_gap = std::max(12, std::min(page_height * 5 / 100,
+                2 * (heading.box.y1 - heading.box.y0)));
+            if (gap > max_gap) continue;
+            int column = span ? other.box.x1 <= page_width * 0.48 ? 0 :
+                other.box.x0 >= page_width * 0.52 ? 1 : 2 : 0;
+            if (gap < best_gap[column]) {
+                first[column] = &other; best_gap[column] = gap; ties[column] = false;
+            } else if (gap == best_gap[column]) ties[column] = true;
+        }
+        for (int column = 0; column < (span ? 3 : 1); ++column)
+            if (first[column] && !ties[column]) relations.push_back({
+                "heading_precedes", heading.id, first[column]->id, "model_heading_and_geometry"});
     }
     return relations;
 }
@@ -1342,7 +1398,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         evidence.owner_block_id = owner->id;
     }
     const ReadingOrderEvidence order_evidence = arrange_reading_order(blocks, image.width);
-    const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.height);
+    const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.width, image.height);
     if (cancelled) return {RunCode::Cancelled, {}};
     const std::string overlay_name = "assets/p0001-layout-overlay.png";
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});

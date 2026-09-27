@@ -29,6 +29,8 @@ def check(binary, root, image, scenario, source, reason):
         ('caption_of', 'b0008', 'b0006'),
         ('caption_of', 'b0009', 'b0007'),
         ('footnote_of', 'b0011', 'b0004'),
+        ('heading_precedes', 'b0003', 'b0004'),
+        ('heading_precedes', 'b0003', 'b0005'),
     }
     assert document['layout_diagnostics']['candidates'][11]['filter_reason'] == 'below_score_threshold'
     assert next(b for b in blocks if candidate_of(b) == 10)['type'] == 'unknown'
@@ -49,6 +51,14 @@ def main():
         check(sys.argv[1], root, image, 'printed_page_reading_rank', 'model', 'unique_rank')
         check(sys.argv[1], root, image, 'printed_page_reading_duplicate', 'geometry', 'duplicate_rank')
         check(sys.argv[1], root, image, 'printed_page_reading_missing', 'geometry', 'missing_rank')
+        _, short_title, _ = run(sys.argv[1], 'printed_page_reading_short_title', root, image)
+        short_page = short_title['pages'][0]
+        short_map = {b['id']: b['candidate_id'] for b in short_page['layout_blocks']
+                     if 'candidate_id' in b}
+        assert [short_map[b['source_region_ids'][0].replace('r', 'l')]
+                for b in short_page['blocks']] == [0, 1, 2, 3, 5, 6, 9, 4, 7, 8, 10]
+        assert {(r['source_block_id'], r['target_block_id']) for r in short_page['relations']
+                if r['type'] == 'heading_precedes'} == {('b0003', 'b0004'), ('b0003', 'b0005')}
         _, columns, _ = run(sys.argv[1], 'printed_page_reading_columns', root, image)
         page = columns['pages'][0]
         by_layout = {b['id']: b['candidate_id'] for b in page['layout_blocks'] if 'candidate_id' in b}
@@ -66,6 +76,11 @@ def main():
         assert not any(r['type'] == 'caption_of' for r in ambiguous['pages'][0]['relations'])
         _, prose, _ = run(sys.argv[1], 'printed_page_reading_table_prose', root, image)
         assert len([r for r in prose['pages'][0]['relations'] if r['type'] == 'caption_of']) == 1
+        for scenario in ('printed_page_reading_footnote_double',
+                         'printed_page_reading_footnote_vision',
+                         'printed_page_reading_footnote_composite'):
+            _, unlinked, _ = run(sys.argv[1], scenario, root, image)
+            assert not any(r['type'] == 'footnote_of' for r in unlinked['pages'][0]['relations'])
         _, footer, _ = run(sys.argv[1], 'printed_page_reading_footer', root, image)
         footer_page = footer['pages'][0]
         footer_candidates = {b['id']: b['candidate_id'] for b in footer_page['layout_blocks']

@@ -174,7 +174,8 @@
                   "type": {
                     "enum": [
                       "caption_of",
-                      "footnote_of"
+                      "footnote_of",
+                      "heading_precedes"
                     ]
                   },
                   "source_block_id": {
@@ -189,7 +190,8 @@
                     "enum": [
                       "model_figure_title_and_geometry",
                       "table_prefix_and_geometry",
-                      "model_footnote_marker_and_geometry"
+                      "model_footnote_marker_and_geometry",
+                      "model_heading_and_geometry"
                     ]
                   }
                 }

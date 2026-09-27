@@ -100,6 +100,10 @@ public:
                             const float footer[] = {8,.9f,45,95,55,99,99};
                             std::memcpy(rows.data()+11*7, footer, sizeof(footer));
                         }
+                        if (scenario_ == "printed_page_reading_footnote_vision") {
+                            const float note[] = {24,.9f,5,50,40,60,60};
+                            std::memcpy(rows.data()+3*7, note, sizeof(note));
+                        }
                         if (scenario_ == "printed_page_reading_owned" ||
                             scenario_ == "printed_page_reading_owned_rank") {
                             const float table_text[] = {22,.9f,62,65,80,70,54};
@@ -110,6 +114,10 @@ public:
                         if (scenario_ == "printed_page_reading_columns") {
                             const float left_title[] = {17,.9f,5,30,40,40,30};
                             std::memcpy(rows.data()+2*7, left_title, sizeof(left_title));
+                        }
+                        if (scenario_ == "printed_page_reading_short_title") {
+                            const float short_title[] = {17,.9f,30,30,70,40,30};
+                            std::memcpy(rows.data()+2*7, short_title, sizeof(short_title));
                         }
                         if (scenario_ == "printed_page_reading_single") {
                             const float single[][7] = {
@@ -229,8 +237,12 @@ public:
                     generation.source_box.x0 == 60 && generation.source_box.y0 == 79 ?
                         scenario_ == "printed_page_reading_table_prose" ? "表明上述结果" : "表1 统计" :
                     generation.source_box.x0 == 5 && generation.source_box.y0 == 79 ? "图1 插图" :
-                    generation.source_box.y0 == 90 ? "¹ 来源说明" :
-                    generation.source_box.x0 == 5 && generation.source_box.y0 == 50 ? "左段¹" :
+                    generation.source_box.y0 == 90 ?
+                        scenario_ == "printed_page_reading_footnote_composite" ? "¹² 来源说明" :
+                        "¹ 来源说明" :
+                    generation.source_box.x0 == 5 && generation.source_box.y0 == 50 ?
+                        scenario_ == "printed_page_reading_footnote_double" ? "左段¹，续¹" :
+                        scenario_ == "printed_page_reading_footnote_vision" ? "¹ 另一脚注" : "左段¹" :
                     generation.source_box.y0 == 30 ? "第一节" :
                     generation.source_box.x0 == 60 ? "右段" : "左段";
                 result.finish_reason = "complete";
