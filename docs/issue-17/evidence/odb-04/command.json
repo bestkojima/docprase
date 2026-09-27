@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/dr/project/docprase/build/linux-current/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_1564.jpg",
+    "--out",
+    "/home/dr/project/docprase/output/issue-17/odb-04/job"
+  ],
+  "returncode": 0
+}

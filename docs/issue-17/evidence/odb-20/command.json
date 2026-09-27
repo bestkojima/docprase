@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/dr/project/docprase/build/linux-current/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/output/omnidocbench/selected-20/images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+    "--out",
+    "/home/dr/project/docprase/output/issue-17/odb-20/job"
+  ],
+  "returncode": 0
+}

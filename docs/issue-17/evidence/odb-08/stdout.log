@@ -1,0 +1,73 @@
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+{"kind":"started","state":"running","page":0,"request_id":null,"page_completed":0,"page_total":0,"region_completed":0,"region_total":0}
+{"kind":"page_started","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"decode_completed","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"layout_started","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"layout_completed","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0001","page_completed":0,"page_total":1,"region_completed":0,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0001","page_completed":0,"page_total":1,"region_completed":1,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0002","page_completed":0,"page_total":1,"region_completed":1,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0002","page_completed":0,"page_total":1,"region_completed":2,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0003","page_completed":0,"page_total":1,"region_completed":2,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0003","page_completed":0,"page_total":1,"region_completed":3,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0004","page_completed":0,"page_total":1,"region_completed":3,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0004","page_completed":0,"page_total":1,"region_completed":4,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0005","page_completed":0,"page_total":1,"region_completed":4,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0005","page_completed":0,"page_total":1,"region_completed":5,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0006","page_completed":0,"page_total":1,"region_completed":5,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0006","page_completed":0,"page_total":1,"region_completed":6,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0007","page_completed":0,"page_total":1,"region_completed":6,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0007","page_completed":0,"page_total":1,"region_completed":7,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0012","page_completed":0,"page_total":1,"region_completed":7,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0012","page_completed":0,"page_total":1,"region_completed":8,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0013","page_completed":0,"page_total":1,"region_completed":8,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0013","page_completed":0,"page_total":1,"region_completed":9,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0014","page_completed":0,"page_total":1,"region_completed":9,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0014","page_completed":0,"page_total":1,"region_completed":10,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0015","page_completed":0,"page_total":1,"region_completed":10,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0015","page_completed":0,"page_total":1,"region_completed":11,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0020","page_completed":0,"page_total":1,"region_completed":11,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0020","page_completed":0,"page_total":1,"region_completed":12,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0021","page_completed":0,"page_total":1,"region_completed":12,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0021","page_completed":0,"page_total":1,"region_completed":13,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0022","page_completed":0,"page_total":1,"region_completed":13,"region_total":27}
+Qwen-VL smart resize requires height and width >= factor, got 31x48 with factor 32
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0022","page_completed":0,"page_total":1,"region_completed":14,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0023","page_completed":0,"page_total":1,"region_completed":14,"region_total":27}
+Qwen-VL smart resize requires height and width >= factor, got 30x48 with factor 32
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0023","page_completed":0,"page_total":1,"region_completed":15,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0028","page_completed":0,"page_total":1,"region_completed":15,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0028","page_completed":0,"page_total":1,"region_completed":16,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0029","page_completed":0,"page_total":1,"region_completed":16,"region_total":27}
+Qwen-VL smart resize requires height and width >= factor, got 31x50 with factor 32
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0029","page_completed":0,"page_total":1,"region_completed":17,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0030","page_completed":0,"page_total":1,"region_completed":17,"region_total":27}
+Qwen-VL smart resize requires height and width >= factor, got 31x50 with factor 32
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0030","page_completed":0,"page_total":1,"region_completed":18,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0035","page_completed":0,"page_total":1,"region_completed":18,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0035","page_completed":0,"page_total":1,"region_completed":19,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0036","page_completed":0,"page_total":1,"region_completed":19,"region_total":27}
+Qwen-VL smart resize requires height and width >= factor, got 30x54 with factor 32
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0036","page_completed":0,"page_total":1,"region_completed":20,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0037","page_completed":0,"page_total":1,"region_completed":20,"region_total":27}
+Qwen-VL smart resize requires height and width >= factor, got 30x47 with factor 32
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0037","page_completed":0,"page_total":1,"region_completed":21,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0038","page_completed":0,"page_total":1,"region_completed":21,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0038","page_completed":0,"page_total":1,"region_completed":22,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0039","page_completed":0,"page_total":1,"region_completed":22,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0039","page_completed":0,"page_total":1,"region_completed":23,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0040","page_completed":0,"page_total":1,"region_completed":23,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0040","page_completed":0,"page_total":1,"region_completed":24,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0041","page_completed":0,"page_total":1,"region_completed":24,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0041","page_completed":0,"page_total":1,"region_completed":25,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0042","page_completed":0,"page_total":1,"region_completed":25,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0042","page_completed":0,"page_total":1,"region_completed":26,"region_total":27}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0043","page_completed":0,"page_total":1,"region_completed":26,"region_total":27}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0043","page_completed":0,"page_total":1,"region_completed":27,"region_total":27}
+{"kind":"export_started","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":27,"region_total":27}
+{"kind":"export_completed","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":27,"region_total":27}
+{"kind":"page_completed","state":"running","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":27,"region_total":27}
+{"kind":"recovery_started","state":"recovering","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":27,"region_total":27}
+{"kind":"recovery_completed","state":"recovering","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":27,"region_total":27}
+{"kind":"terminal","state":"partial","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":27,"region_total":27}
+已导出：/home/dr/project/docprase/output/issue-17/odb-08/job

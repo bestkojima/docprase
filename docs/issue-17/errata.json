@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "policy": "原始标注文件不变；仅另报勘误口径",
+  "items": [
+    {
+      "page_id": "odb-15",
+      "annotation_id": 17,
+      "field": "text",
+      "upstream_fragment": "取 t=4时刻",
+      "corrected_fragment": "取 t=0时刻",
+      "verification": "原图该处清楚显示 t = 0；只更正数字，保留上游其他空格及文字",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "review_bbox_xyxy": [149, 190, 791, 297]
+    }
+  ]
+}

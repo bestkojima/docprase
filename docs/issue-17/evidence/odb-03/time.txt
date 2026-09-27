@@ -1,0 +1,23 @@
+	Command being timed: "/home/dr/project/docprase/build/linux-current/dococr_cli --config /home/dr/project/docprase/configs/printed-page.example.json --input /home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg --out /home/dr/project/docprase/output/issue-17/odb-03/job"
+	User time (seconds): 60.47
+	System time (seconds): 4.79
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:05.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2367896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 971562
+	Voluntary context switches: 1418
+	Involuntary context switches: 440
+	Swaps: 0
+	File system inputs: 97944
+	File system outputs: 21472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

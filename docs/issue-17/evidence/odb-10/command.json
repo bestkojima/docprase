@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/dr/project/docprase/build/linux-current/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+    "--out",
+    "/home/dr/project/docprase/output/issue-17/odb-10/job"
+  ],
+  "returncode": 0
+}

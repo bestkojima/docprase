@@ -1,0 +1,12 @@
+{
+  "command": [
+    "build/linux-current/dococr_cli",
+    "--config",
+    "configs/printed-page.example.json",
+    "--input",
+    "output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+    "--out",
+    "output/issue-17/odb-01/job"
+  ],
+  "returncode": 0
+}

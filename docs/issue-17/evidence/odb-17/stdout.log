@@ -1,0 +1,5 @@
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+{"kind":"started","state":"running","page":0,"request_id":null,"page_completed":0,"page_total":0,"region_completed":0,"region_total":0}
+{"kind":"page_started","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"page_completed","state":"running","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"terminal","state":"failed","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":0,"region_total":0,"error":{"code":"input_error","stage":"decode","message":"invalid input"}}
