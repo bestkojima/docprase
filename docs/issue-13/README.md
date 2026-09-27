@@ -15,7 +15,7 @@ dococr_cli --reexport old-output/document.json \
 
 输出资源包括 `resources[]` 中的插图/区域裁剪，以及文档级或页面级 `layout_diagnostics` 的 overlay、原始张量和候选 mask。所有引用资源须在资源根内真实存在且为普通文件；相对路径不得越界，符号链接资源被拒绝。逐字节复制后，Markdown 中的图片和状态占位引用仍指向新目录中的同一路径。缺少任一资源时不会留下半成品输出目录。
 
-Markdown 使用与原作业共同的 `render_markdown_block`。所有正文、公式和失败占位都按相同展示规则转义 HTML 特殊字符及外部图片语法；仅通过严格表格解析器且文本与规范化 HTML 一致的成功表格作为 HTML 输出。展示转义不改变保存的正文、公式、状态、ID、原页、源区域、关系、`confidence:null`、原始输出及来源信息，也不重跑识别。
+Markdown 使用与原作业共同的 `render_markdown_block`。所有正文、公式和失败占位都按相同展示规则转义 HTML 特殊字符、原文图片语法，以及原文普通/引用式 Markdown 链接；仅通过严格表格解析器且文本与规范化 HTML 一致的成功表格作为 HTML 输出。产品自己生成的插图与占位资源链接仍由已校验的资源路径构成。展示转义不改变保存的正文、公式、状态、ID、原页、源区域、关系、`confidence:null`、原始输出及来源信息，也不重跑识别。
 
 ## 验收
 

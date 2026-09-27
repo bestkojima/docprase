@@ -8,6 +8,7 @@ import tempfile
 from printed_page_integration import config
 from PIL import Image
 import jsonschema
+from markdown_it import MarkdownIt
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
@@ -139,7 +140,11 @@ def main():
         bad_schema['pages'][0].pop('reading_order_evidence')
         assert 'reading_order_evidence' in reexport(table_saved, bad_schema, code=3).stderr
         untrusted = copy.deepcopy(document)
-        untrusted['pages'][0]['blocks'][0]['content']['text'] = '<img src=x onerror=alert(1)> ![外图](https://x)'
+        untrusted['pages'][0]['blocks'][0]['content']['text'] = (
+            '<img src=x onerror=alert(1)> ![外图](https://x)\n'
+            '[点我](javascript:alert(1)) [遗失](missing.png) [引用][恶意] ![引用图][恶意]\n\n'
+            '[恶意]: javascript:alert(1)\n\n'
+            r'\[已转义](javascript:alert(1)) \\[双反斜杠](javascript:alert(1))')
         input_json = root / 'untrusted.json'
         input_json.write_text(json.dumps(untrusted, ensure_ascii=False))
         safe_out = root / 'safe-out'
@@ -148,6 +153,16 @@ def main():
         safe_markdown = (safe_out / 'document.md').read_text()
         assert '&lt;img src=x onerror=alert(1)&gt;' in safe_markdown
         assert r'\![外图]' in safe_markdown
+        assert r'\[点我](javascript:alert(1))' in safe_markdown
+        assert r'\[遗失](missing.png)' in safe_markdown
+        assert r'\[引用][恶意]' in safe_markdown
+        assert r'\[恶意]: javascript:alert(1)' in safe_markdown
+        assert r'\[已转义](javascript:alert(1))' in safe_markdown
+        assert r'\\\[双反斜杠](javascript:alert(1))' in safe_markdown
+        rendered = MarkdownIt().render(safe_markdown)
+        assert '<a ' not in rendered, rendered
+        assert 'src="https://x"' not in rendered, rendered
+        assert 'src="assets/p0001-b0002.png"' in rendered
         assert json.loads((safe_out / 'document.json').read_text()) == untrusted
         old_table, _ = generated['formula_table']
         unsafe_table = json.loads((old_table / 'document.json').read_text())
