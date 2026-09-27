@@ -11,6 +11,10 @@
 #include <string>
 #include <thread>
 #include <vector>
+#ifdef _WIN32
+#define NOMINMAX
+#include <windows.h>
+#endif
 
 namespace fs = std::filesystem;
 namespace {
@@ -112,7 +116,7 @@ uint64_t positive_number(const std::string& value) {
     return number;
 }
 }
-int main(int argc, char** argv) {
+int cli_main(int argc, char** argv) {
     if (argc == 7 && std::string(argv[1]) == "--reexport" &&
         std::string(argv[3]) == "--asset-root" && std::string(argv[5]) == "--out") {
         try { return reexport(fs::u8path(argv[2]), fs::u8path(argv[4]), fs::u8path(argv[6])); }
@@ -266,3 +270,26 @@ int main(int argc, char** argv) {
         return 3;
     }
 }
+#ifdef _WIN32
+int wmain(int argc, wchar_t** wide_argv) {
+    SetConsoleOutputCP(CP_UTF8);
+    std::vector<std::string> arguments;
+    std::vector<char*> argv;
+    arguments.reserve(static_cast<size_t>(argc));
+    argv.reserve(static_cast<size_t>(argc));
+    for (int i = 0; i < argc; ++i) {
+        const int length = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, wide_argv[i], -1,
+                                               nullptr, 0, nullptr, nullptr);
+        if (length <= 0) { std::cerr << "命令行 UTF-8 转换失败\n"; return 2; }
+        std::string value(static_cast<size_t>(length), '\0');
+        if (!WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, wide_argv[i], -1,
+                                 value.data(), length, nullptr, nullptr)) return 2;
+        value.pop_back();
+        arguments.push_back(std::move(value));
+    }
+    for (auto& argument : arguments) argv.push_back(argument.data());
+    return cli_main(argc, argv.data());
+}
+#else
+int main(int argc, char** argv) { return cli_main(argc, argv); }
+#endif

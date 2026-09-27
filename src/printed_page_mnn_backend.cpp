@@ -9,16 +9,23 @@
 #include <algorithm>
 #include <chrono>
 #include <cstdio>
+#include <cstring>
 #include <filesystem>
 #include <fstream>
 #include <memory>
 #include <mutex>
+#include <random>
 #include <sstream>
 #include <set>
 #include <stdexcept>
 #include <string>
-#include <unistd.h>
 #include <vector>
+#ifdef _WIN32
+#define NOMINMAX
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif
 
 namespace dococr {
 std::unique_ptr<IInferenceEngine> make_layout_mnn_backend();
@@ -38,16 +45,41 @@ const std::vector<std::pair<std::string, std::string>> ovis_hashes = {
 };
 class TempFile {
 public:
-    explicit TempFile(const char* pattern, int suffix) {
-        std::string name(pattern);
+    explicit TempFile(const char* prefix, const char* extension) {
+        namespace fs = std::filesystem;
+#ifdef _WIN32
+        std::random_device random;
+        for (int attempt = 0; attempt < 32; ++attempt) {
+            const auto candidate = fs::temp_directory_path() /
+                fs::u8path(std::string(prefix) + std::to_string(random()) + extension);
+            HANDLE file = CreateFileW(candidate.c_str(), GENERIC_WRITE, 0, nullptr,
+                                      CREATE_NEW, FILE_ATTRIBUTE_TEMPORARY, nullptr);
+            if (file != INVALID_HANDLE_VALUE) {
+                CloseHandle(file);
+                path_ = candidate;
+                utf8_path_ = path_.u8string();
+                return;
+            }
+            if (GetLastError() != ERROR_FILE_EXISTS && GetLastError() != ERROR_ALREADY_EXISTS)
+                break;
+        }
+#else
+        std::string name = (fs::temp_directory_path() / fs::u8path(std::string(prefix) +
+                            "XXXXXX" + extension)).u8string();
         std::vector<char> chars(name.begin(), name.end()); chars.push_back(0);
+        int suffix = static_cast<int>(std::strlen(extension));
         int fd = mkstemps(chars.data(), suffix);
-        if (fd < 0) throw std::runtime_error("temporary_file_create_failed");
-        path_ = chars.data();
-        close(fd);
+        if (fd >= 0) {
+            path_ = fs::u8path(chars.data());
+            utf8_path_ = path_.u8string();
+            close(fd);
+            return;
+        }
+#endif
+        throw std::runtime_error("temporary_file_create_failed");
     }
-    ~TempFile() { if (!path_.empty()) std::remove(path_.c_str()); }
-    const std::string& path() const { return path_; }
+    ~TempFile() { if (!path_.empty()) { std::error_code ec; std::filesystem::remove(path_, ec); } }
+    const std::string& path() const { return utf8_path_; }
     void write(const std::string& data) const {
         std::ofstream out(path_, std::ios::binary | std::ios::trunc);
         out.write(data.data(), std::streamsize(data.size()));
@@ -57,7 +89,8 @@ public:
         write(std::string(reinterpret_cast<const char*>(data.data()), data.size()));
     }
 private:
-    std::string path_;
+    std::filesystem::path path_;
+    std::string utf8_path_;
 };
 void png_write(void* opaque, void* bytes, int size) {
     auto& data = *static_cast<std::vector<uint8_t>*>(opaque);
@@ -122,8 +155,8 @@ public:
             R"("n_gram":8,"ngram_factor":1.0,"tokenizer_file":"tokenizer.mtok",)"
             R"("mllm":{"backend_type":"cpu","thread_num":1,"precision":"normal","memory":"low"},)"
             R"("reuse_kv":false,"prompt_cache":false,"use_mmap":false,"kvcache_mmap":false,"async":false,"timeout_ms":120000,)"
-            "\"base_dir\":" + json_quote(root.string() + "/") + "}";
-        TempFile temporary("/tmp/dococr-ovis-config-XXXXXX.json", 5);
+            "\"base_dir\":" + json_quote(root.u8string() + "/") + "}";
+        TempFile temporary("dococr-ovis-config-", ".json");
         temporary.write(effective);
         llm_.reset(Llm::createLLM(temporary.path()));
         if (!llm_ || !llm_->load()) { error_ = "ovis_model_load_failed"; unload(); return false; }
@@ -166,7 +199,7 @@ public:
             output.finish_reason = "failed"; output.stop_reason = "cancelled";
             output.error = "cancelled"; return {output};
         }
-        TempFile image("/tmp/dococr-ovis-region-XXXXXX.png", 4);
+        TempFile image("dococr-ovis-region-", ".png");
         image.write(png(generation->image));
         std::ostringstream raw;
         if (generation->max_new_tokens == 0 || generation->max_new_tokens > 4096)

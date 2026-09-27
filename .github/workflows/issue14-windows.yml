@@ -1,0 +1,84 @@
+name: Issue 14 Windows single page
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/issue-14-windows]
+
+permissions:
+  contents: read
+
+jobs:
+  windows-cpu:
+    runs-on: windows-2022
+    timeout-minutes: 360
+    steps:
+      - name: Checkout dococr
+        uses: actions/checkout@v4
+      - name: Checkout pinned MNN
+        uses: actions/checkout@v4
+        with:
+          repository: alibaba/MNN
+          ref: baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6
+          path: mnn
+          persist-credentials: false
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Record toolchain
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force evidence | Out-Null
+          git rev-parse HEAD | Out-File evidence/source-commit.txt
+          git -C mnn rev-parse HEAD | Out-File evidence/mnn-commit.txt
+          cmake --version | Out-File evidence/cmake-version.txt
+          python --version 2>&1 | Out-File evidence/python-version.txt
+          (Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,OSArchitecture | Format-List | Out-String) | Out-File evidence/windows-version.txt
+          & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -property installationVersion | Out-File evidence/vs-version.txt
+      - name: Build MNN with image LLM runtime
+        shell: pwsh
+        run: |
+          cmake -S mnn -B mnn/build -G "Visual Studio 17 2022" -A x64 -DMNN_BUILD_SHARED_LIBS=ON -DMNN_WIN_RUNTIME_MT=OFF -DMNN_BUILD_LLM=ON -DMNN_BUILD_LLM_OMNI=ON -DMNN_BUILD_TEST=OFF -DMNN_BUILD_DEMO=OFF -DMNN_BUILD_CONVERTER=OFF 2>&1 | Tee-Object evidence/mnn-configure.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cmake --build mnn/build --config Release --parallel 4 2>&1 | Tee-Object evidence/mnn-build.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-FileHash mnn/build/Release/MNN.dll -Algorithm SHA256 | Format-List | Out-File evidence/mnn-dll-sha256.txt
+      - name: Build dococr core, C ABI and CLI
+        shell: pwsh
+        run: |
+          cmake -S . -B build-win -G "Visual Studio 17 2022" -A x64 -DDOCOCR_MNN_ROOT="$PWD/mnn" -DDOCOCR_REQUIRE_MNN=ON -DDOCOCR_REQUIRE_LLM=ON -DDOCOCR_BUILD_TESTS=ON 2>&1 | Tee-Object evidence/dococr-configure.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cmake --build build-win --config Release --parallel 4 2>&1 | Tee-Object evidence/dococr-build.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Copy-Item mnn/build/Release/MNN.dll build-win/Release/
+          Get-ChildItem build-win/Release/*.dll,build-win/Release/*.exe | Get-FileHash -Algorithm SHA256 | Format-Table -AutoSize | Out-File evidence/binary-sha256.txt
+      - name: Run CTest
+        shell: pwsh
+        run: |
+          python -m pip install jsonschema markdown-it-py
+          ctest --test-dir build-win -C Release --output-on-failure --parallel 2 -R '^(contract|cli_integration|config_integration|config_abi|layout_integration|printed_page_integration)$' 2>&1 | Tee-Object evidence/ctest.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Download pinned external models
+        shell: pwsh
+        run: |
+          python -m pip install "modelscope>=1.20,<2"
+          python scripts/issue14_windows.py download --models models 2>&1 | Tee-Object evidence/model-download.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Parse Chinese filename and verify ABI
+        shell: pwsh
+        run: |
+          python scripts/issue14_windows.py verify --cli build-win/Release/dococr_cli.exe --dll build-win/Release/dococr_c.dll --models models --out evidence/real-page 2>&1 | Tee-Object evidence/verify.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Upload logs, outputs and binaries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue14-windows-${{ github.run_id }}
+          path: |
+            evidence/
+            build-win/Release/dococr_cli.exe
+            build-win/Release/dococr_c.dll
+            build-win/Release/MNN.dll
+          if-no-files-found: warn
+          retention-days: 14
