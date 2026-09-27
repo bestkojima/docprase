@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/tmp/dococr-issue7/dococr_cli",
+    "--config",
+    "/tmp/dococr-issue7-evidence/config-failures/token_over_limit.json",
+    "--input",
+    "tests/fixtures/rgb2x2.png",
+    "--out",
+    "/tmp/dococr-issue7-evidence/config-failures/token_over_limit"
+  ],
+  "exit_code": 3,
+  "stderr": "{\"code\":\"unsupported_parameter\",\"detail\":\"max_new_tokens exceeds Ovis runtime limit\"}\n"
+}

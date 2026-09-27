@@ -154,7 +154,7 @@ std::string document_id(const Image& image) {
 
 struct Block {
     std::string id, layout_id, region_id, type, status, text, raw, raw_base64, text_base64,
-                error, error_base64, resource;
+                error, error_base64, resource, format_override;
     Box box;
     float detection_score = 0;
     int candidate_rank = 0;
@@ -297,10 +297,12 @@ bool decode_layout(const TensorOutput& result, std::vector<LayoutCandidate>& can
 }
 
 std::string render(const Block& b) {
-    if (b.status != "ok")
-        return "[" + std::string(b.status == "skipped" ? "未处理：" : "识别失败：") +
-               b.id + "](" + b.resource + ")";
-    if (b.type == "image") return "![插图](" + b.resource + ")";
+    if (b.type == "image" && !b.resource.empty()) return "![插图](" + b.resource + ")";
+    if (b.status != "ok") {
+        std::string marker = "[" + std::string(b.status == "skipped" ? "未处理：" :
+            b.status == "partial" ? "待核验：" : "识别失败：") + b.id + "](" + b.resource + ")";
+        return b.text.empty() ? marker : b.text + "\n\n" + marker;
+    }
     if (b.type == "formula") return "$$\n" + b.text + "\n$$";
     return b.text;
 }
@@ -357,7 +359,8 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
             << "\"reading_order_source\":\"geometry\","
             << "\"status\":" << json_quote(b.status) << ",\"confidence\":null,\"content\":{\"format\":"
-            << json_quote(b.type == "image" || b.type == "unknown" ? "resource" :
+            << json_quote(!b.format_override.empty() ? b.format_override :
+                     b.type == "image" || b.type == "unknown" ? "resource" :
                      b.type == "formula" ? "latex" : b.type == "table" ? "html" : "markdown")
             << ",\"text\":" << json_quote(b.text) << ",\"resource\":"
             << (b.resource.empty() ? "null" : json_quote(b.resource));
@@ -515,7 +518,11 @@ std::vector<uint8_t> layout_page_mask(const Image& image, const RawLayoutCandida
 RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::atomic_bool& cancelled,
                           const ExecutionPlan* plan, RunResult audit) {
     using Clock = std::chrono::steady_clock;
-    if (!backend->capabilities().tensor || backend->capabilities().max_concurrent_requests != 1)
+    const bool transcribe = plan && (plan->backend == "mnn:pp-doclayout-v3+ovisocr2" ||
+        plan->backend.rfind("fixture:printed_page", 0) == 0);
+    if (!backend->capabilities().tensor ||
+        (transcribe && (!backend->capabilities().generation || !backend->capabilities().isolated_sessions)) ||
+        backend->capabilities().max_concurrent_requests != 1)
         return {RunCode::Unsupported, {}};
     if (cancelled) return {RunCode::Cancelled, {}};
     auto start = Clock::now();
@@ -567,6 +574,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     std::vector<Block> blocks;
     JobOutput result;
     result.assets = std::move(audit.output.assets);
+    bool recognition_unavailable = false;
     for (const auto* candidate : selected) {
         if (cancelled) return {RunCode::Cancelled, {}};
         Block block;
@@ -595,11 +603,91 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             throw std::runtime_error("layout mask PNG encoding failed");
         result.assets.push_back({mutable_candidate.mask_asset, std::move(mask_png)});
         audit.did_crop = true;
+        if (transcribe) {
+            const std::string request_id = "req" + block.region_id;
+            RunResult::RegionRun region{request_id, "skipped", block.error, 0};
+            if (block.type == "text" || block.type == "formula" || block.type == "table") {
+                auto region_start = Clock::now();
+                if (recognition_unavailable) {
+                    block.status = "skipped";
+                    block.error = "recognition_unavailable_after_backend_failure";
+                    region.stop_reason = "backend_unavailable";
+                } else try {
+                    if (!backend->reset()) {
+                        audit.reset_failed = true;
+                        recognition_unavailable = true;
+                        block.status = "failed"; block.error = "region_reset_failed";
+                        region.stop_reason = "reset_failed";
+                    } else {
+                        audit.did_reset = true;
+                        audit.did_recognition = true;
+                        Image crop = crop_rgb(image, block.box);
+                        auto response = backend->execute({request_id, GenerationRequest{
+                            std::move(crop), block.box, block.type, request_id,
+                            plan->max_new_tokens}}, context);
+                        auto* generation = std::get_if<GenerationOutput>(&response.payload);
+                        if (!generation) {
+                            recognition_unavailable = true;
+                            block.status = "failed"; block.error = "generation_response_type_mismatch";
+                            region.stop_reason = "error";
+                        } else {
+                            region.stop_reason = generation->stop_reason;
+                            region.elapsed_ms = generation->elapsed_ms;
+                            if (valid_utf8(generation->raw_output)) block.raw = generation->raw_output;
+                            else block.raw_base64 = base64(generation->raw_output);
+                            if (valid_utf8(generation->text)) block.text = generation->text;
+                            else block.text_base64 = base64(generation->text);
+                            if (!valid_utf8(generation->error)) block.error_base64 = base64(generation->error);
+                            if (generation->finish_reason == "complete" &&
+                                !generation->raw_output.empty() && !generation->text.empty() &&
+                                valid_utf8(generation->raw_output) && valid_utf8(generation->text)) {
+                                if (block.type == "text") {
+                                    block.status = "ok"; block.error.clear();
+                                } else {
+                                    block.status = "partial"; block.error = "specialized_parser_pending";
+                                    block.format_override = "markdown";
+                                }
+                            } else if (generation->finish_reason == "truncated") {
+                                block.status = "partial"; block.error = "ovis_token_limit";
+                                block.format_override = "markdown";
+                            } else {
+                                block.status = "failed";
+                                block.error = !valid_utf8(generation->error) ? "invalid_backend_error_utf8" :
+                                    generation->error.empty() ?
+                                    (generation->text.empty() ? "ovis_empty_output" : "ovis_inference_failed") :
+                                    generation->error;
+                            }
+                            if (!valid_utf8(generation->raw_output) || !valid_utf8(generation->text)) {
+                                block.status = "failed"; block.error = "invalid_backend_utf8";
+                                block.text.clear();
+                            }
+                        }
+                    }
+                } catch (const std::bad_alloc&) { throw; }
+                  catch (const std::exception& e) {
+                    recognition_unavailable = true;
+                    block.status = "failed";
+                    std::string detail = e.what();
+                    if (valid_utf8(detail)) block.error = "region_inference_exception:" + detail;
+                    else {
+                        block.error = "region_inference_exception:invalid_utf8";
+                        block.error_base64 = base64(detail);
+                    }
+                    region.stop_reason = "error";
+                }
+                region.elapsed_ms = std::max(region.elapsed_ms, uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-region_start).count()));
+                region.status = block.status;
+                audit.recognition_ms += region.elapsed_ms;
+            }
+            audit.regions.push_back(std::move(region));
+        }
         blocks.push_back(std::move(block));
     }
     const std::string overlay_name = "assets/p0001-layout-overlay.png";
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
-    const std::string state = records.empty() ? "blank" : "partial";
+    bool incomplete = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.status != "ok"; });
+    const std::string state = records.empty() ? "blank" :
+        (blocks.empty() || incomplete) ? "partial" : "ok";
     start = Clock::now();
     for (const auto& block : blocks) {
         if (!result.markdown.empty()) result.markdown += "\n\n";
@@ -616,7 +704,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         audit.budget_stage = "output_bytes";
         return audit;
     }
-    audit.code = records.empty() ? RunCode::Blank : RunCode::Partial;
+    audit.code = records.empty() ? RunCode::Blank :
+        (blocks.empty() || incomplete) ? RunCode::Partial : RunCode::Ok;
     audit.output = std::move(result);
     return audit;
 }
@@ -641,7 +730,9 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         return audit;
     }
     if (!backend) return {RunCode::Unsupported, {}};
-    if (plan && plan->layout_only) return run_layout_only(backend, image, cancelled, plan, audit);
+    if (plan && (plan->layout_only || plan->backend == "mnn:pp-doclayout-v3+ovisocr2" ||
+                 plan->backend.rfind("fixture:printed_page", 0) == 0))
+        return run_layout_only(backend, image, cancelled, plan, audit);
     if (!backend->capabilities().tensor || !backend->capabilities().generation ||
         backend->capabilities().max_concurrent_requests < 1) return {RunCode::Unsupported, {}};
     if (cancelled) return {RunCode::Cancelled, {}};

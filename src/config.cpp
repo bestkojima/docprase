@@ -238,13 +238,14 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     plan->mode = str(config.at("mode"));
     if (plan->mode != "development" && plan->mode != "production") throw ConfigError("invalid_mode", plan->mode);
     plan->backend = str(config.at("backend"));
+    const bool real_pair = plan->backend == "mnn:pp-doclayout-v3+ovisocr2";
     plan->layout_only = plan->backend == "mnn:pp-doclayout-v3" ||
                         plan->backend == "fixture:layout_contract" ||
                         plan->backend == "fixture:layout_empty" ||
                         plan->backend == "fixture:layout_infer_failure";
     if (plan->backend.rfind("fixture:", 0) == 0 && !fixture_build)
         throw ConfigError("unsupported_backend", plan->backend);
-    if (plan->backend != "none" && plan->backend.rfind("fixture:", 0) != 0 && !plan->layout_only)
+    if (plan->backend != "none" && plan->backend.rfind("fixture:", 0) != 0 && !plan->layout_only && !real_pair)
         throw ConfigError("unsupported_backend", plan->backend);
     if (plan->backend == "none") throw ConfigError("missing_capability", "backend has no inference capabilities");
     if (plan->mode == "production" && plan->backend.rfind("fixture:", 0) == 0)
@@ -263,7 +264,7 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
             throw ConfigError("contract_unverified", name);
         if (plan->backend.rfind("fixture:", 0) == 0 && status != "verified_fixture")
             throw ConfigError("contract_unverified", name);
-        if (plan->backend == "mnn:pp-doclayout-v3" && status != "contract_verified")
+        if ((plan->backend == "mnn:pp-doclayout-v3" || real_pair) && status != "contract_verified")
             throw ConfigError("contract_unverified", name);
         if (status == "verified_fixture" && plan->backend.rfind("fixture:", 0) != 0)
             throw ConfigError("contract_unverified", name);
@@ -334,6 +335,7 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
         bool enabled = boolean(item.at("enabled"));
         std::string expected_owner = registered->second.first;
         if (id == "session_reset" && plan->layout_only) expected_owner = "none";
+        if (id == "normalize" && real_pair) expected_owner = "adapter";
         if (id == "normalize" && plan->backend == "fixture:runtime") expected_owner = "runtime";
         if (id == "normalize" && plan->backend == "fixture:graph") expected_owner = "graph";
         if (owner != expected_owner) throw ConfigError("processing_owner_mismatch", id);
@@ -365,6 +367,8 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     plan->max_output_bytes = positive(config.at("execution").at("max_output_bytes"), "max_output_bytes");
     if (plan->max_output_bytes > 67108864) throw ConfigError("unsupported_parameter", "max_output_bytes exceeds decoder limit");
     plan->max_new_tokens = positive(config.at("execution").at("max_new_tokens"), "max_new_tokens");
+    if (real_pair && plan->max_new_tokens > 4096)
+        throw ConfigError("unsupported_parameter", "max_new_tokens exceeds Ovis runtime limit");
     plan->config_hash = sha256(dump(config));
     std::string resolved_processing = "[";
     for (const auto& step : plan->processing) {

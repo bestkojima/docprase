@@ -1,0 +1,20 @@
+[  7%] Built target dococr_layout_jpeg_decode_probe
+[ 11%] Building CXX object CMakeFiles/dococr_core.dir/src/core.cpp.o
+[ 18%] Built target dococr_layout_mnn_probe
+[ 25%] Built target dococr_ovis_same_instance_probe
+[ 29%] Linking CXX static library libdococr_core.a
+[ 40%] Built target dococr_core
+[ 44%] Building CXX object CMakeFiles/dococr_c_test.dir/src/abi.cpp.o
+[ 48%] Building CXX object CMakeFiles/dococr_c.dir/src/abi.cpp.o
+[ 51%] Linking CXX shared library libdococr_c.so
+[ 55%] Linking CXX shared library libdococr_c_test.so
+[ 66%] Built target dococr_c
+[ 70%] Linking CXX executable dococr_layout_preprocess_probe
+[ 74%] Built target dococr_c_test
+[ 77%] Linking CXX executable dococr_cli
+[ 81%] Built target dococr_layout_preprocess_probe
+[ 85%] Linking CXX executable dococr_contract_test
+[ 88%] Built target dococr_cli
+[ 92%] Linking CXX executable dococr_cli_fixture
+[ 96%] Built target dococr_contract_test
+[100%] Built target dococr_cli_fixture

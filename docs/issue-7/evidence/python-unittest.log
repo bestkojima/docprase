@@ -1,0 +1,17 @@
+test_exam_page_has_reproducible_candidates_and_masks (test_model_probe_layout.LayoutProbeTests.test_exam_page_has_reproducible_candidates_and_masks) ... ok
+test_missing_model_writes_failed_report (test_model_probe_layout.LayoutProbeTests.test_missing_model_writes_failed_report) ... ok
+test_non_reference_resize_fails_and_keeps_difference (test_model_probe_layout.LayoutProbeTests.test_non_reference_resize_fails_and_keeps_difference) ... ok
+test_nonsquare_page_records_outside_candidates_and_reference_mask_geometry (test_model_probe_layout.LayoutProbeTests.test_nonsquare_page_records_outside_candidates_and_reference_mask_geometry) ... ok
+test_other_image_does_not_inherit_exam_reference (test_model_probe_layout.LayoutProbeTests.test_other_image_does_not_inherit_exam_reference) ... ok
+test_reference_hash_must_match_image (test_model_probe_layout.LayoutProbeTests.test_reference_hash_must_match_image) ... ok
+test_wrong_model_hash_is_rejected_with_report (test_model_probe_layout.LayoutProbeTests.test_wrong_model_hash_is_rejected_with_report) ... ok
+test_normal_stop_requires_actual_vision_work (test_model_probe_ovis.OvisProbeTests.test_normal_stop_requires_actual_vision_work) ... ok
+test_suite_rejects_normal_eos_when_formula_or_table_format_is_missing (test_model_probe_ovis.OvisProbeTests.test_suite_rejects_normal_eos_when_formula_or_table_format_is_missing) ... ok
+test_timeout_kills_child_process_group (test_model_probe_ovis.OvisProbeTests.test_timeout_kills_child_process_group) ... ok
+test_timeout_kills_term_ignoring_child_after_leader_exits (test_model_probe_ovis.OvisProbeTests.test_timeout_kills_term_ignoring_child_after_leader_exits) ... ok
+test_zero_exit_at_token_cap_is_incomplete (test_model_probe_ovis.OvisProbeTests.test_zero_exit_at_token_cap_is_incomplete) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 35.970s
+
+OK

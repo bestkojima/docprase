@@ -93,7 +93,7 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         ",\"actual_backend\":" + dococr::json_quote(actual_backend) +
         ",\"backend_id\":" + dococr::json_quote(plan.backend) +
         ",\"actual_device\":\"cpu\",\"runtime_version\":" +
-        dococr::json_quote(plan.layout_only && plan.backend == "mnn:pp-doclayout-v3" ? actual_backend : "fixture-only") + ","
+        dococr::json_quote(plan.backend.rfind("mnn:", 0) == 0 ? actual_backend : "fixture-only") + ","
         "\"effective_parameters\":{\"threads\":1,\"max_new_tokens\":" + std::to_string(plan.max_new_tokens) +
         ",\"max_page_pixels\":" + std::to_string(plan.max_page_pixels) +
         ",\"max_output_bytes\":" + std::to_string(plan.max_output_bytes) + "},\"artifacts\":[";
@@ -104,7 +104,16 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
             ",\"sha256\":" + dococr::json_quote(a.sha256) +
             ",\"contract_status\":" + dococr::json_quote(a.contract_status) + "}";
     }
-    out += "],\"processing\":[";
+    out += "]";
+    if (plan.backend == "mnn:pp-doclayout-v3+ovisocr2") {
+        out += ",\"runtime_configuration\":{\"layout_threads\":1,\"ovis_threads\":1,"
+            "\"device\":\"cpu\",\"sampler\":\"greedy\",\"reuse_kv\":false,"
+            "\"prompt_cache\":false,\"use_mmap\":false,\"kvcache_mmap\":false,"
+            "\"async\":false,\"timeout_ms\":120000,"
+            "\"session_strategy\":\"shared_model_reset_before_each_region\","
+            "\"prompt_sha256\":\"de9617f877f6110d22adf1a6ba2a96221189dc246fb1fef161e408d37bff5267\"}";
+    }
+    out += ",\"processing\":[";
     for (size_t i = 0; i < plan.processing.size(); ++i) {
         const auto& step = plan.processing[i];
         std::string status, reason;
@@ -117,7 +126,7 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
             status = step.owner == "adapter" ? (result.did_normalize ? "executed" : "not_run") :
                      step.owner == "runtime" ? (result.did_layout ? "delegated_runtime" : "not_run") :
                      (result.did_layout ? "provided_by_graph" : "not_run");
-            reason = step.owner == "adapter" ? (plan.layout_only ? "torchvision_uint8_bicubic_800_rgb_nchw" : "rgb8_to_float32_0_1") :
+            reason = step.owner == "adapter" ? (plan.backend.rfind("mnn:pp-doclayout-v3", 0) == 0 ? "torchvision_uint8_bicubic_800_rgb_nchw" : "rgb8_to_float32_0_1") :
                      step.owner == "runtime" ? "fixture_runtime_normalized" : "fixture_graph_normalized";
         }
         else if (step.id == "crop") {
@@ -127,8 +136,9 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         else if (step.id == "session_reset") {
             status = result.reset_failed ? "failed" : result.did_reset ? "delegated_runtime" :
                      result.did_layout ? "identity_validated" : "not_run";
-            reason = result.reset_failed ? "fixture_reset_failed" : result.did_reset ?
-                     "fixture_reset_succeeded" : result.did_layout ? "no_recognition_regions" : "layout_not_completed";
+            reason = result.reset_failed ? "region_reset_failed" : result.did_reset ?
+                     (plan.backend == "mnn:pp-doclayout-v3+ovisocr2" ? "ovis_same_instance_reset" : "fixture_reset_succeeded") :
+                     result.did_layout ? "no_recognition_regions" : "layout_not_completed";
         }
         else {
             status = result.did_decode ? "identity_validated" : "not_run";
@@ -137,6 +147,15 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         if (i) out += ',';
         out += "{\"id\":" + dococr::json_quote(step.id) + ",\"owner\":" + dococr::json_quote(step.owner) +
             ",\"status\":" + dococr::json_quote(status) + ",\"reason\":" + dococr::json_quote(reason) + "}";
+    }
+    out += "],\"regions\":[";
+    for (size_t i = 0; i < result.regions.size(); ++i) {
+        const auto& region = result.regions[i];
+        if (i) out += ',';
+        out += "{\"request_id\":" + dococr::json_quote(region.request_id) +
+            ",\"status\":" + dococr::json_quote(region.status) +
+            ",\"stop_reason\":" + dococr::json_quote(region.stop_reason) +
+            ",\"elapsed_ms\":" + std::to_string(region.elapsed_ms) + "}";
     }
     out += "],\"timings_ms\":{\"decode\":" + std::to_string(result.decode_ms) +
         ",\"layout\":" + std::to_string(result.layout_ms) +
@@ -161,7 +180,7 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
         last_error.clear();
         std::string value(config.data ? config.data : "", config.size);
         std::shared_ptr<const dococr::ExecutionPlan> plan;
-        if (value == "mnn:pp-doclayout-v3") {
+        if (value == "mnn:pp-doclayout-v3" || value == "mnn:pp-doclayout-v3+ovisocr2") {
             last_error = "{\"code\":\"configuration_required\",\"detail\":\"请通过 --config 指定已校验的版面模型工件\"}";
             return DOCOCR_CONFIG_ERROR;
         }
@@ -190,16 +209,21 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
             std::vector<dococr::ArtifactInfo>{}};
         if (engine->backend) {
             bool loaded = false;
+            const bool pair = backend_name == "mnn:pp-doclayout-v3+ovisocr2";
             try { loaded = engine->backend->load(load_spec); }
             catch (const std::exception& error) {
-                last_error = "{\"code\":\"layout_model_load_exception\",\"detail\":" +
+                last_error = pair ?
+                    "{\"code\":\"model_load_exception\",\"detail\":\"模型加载异常\","
+                    "\"stage\":\"model_initialization\"}" :
+                    "{\"code\":\"layout_model_load_exception\",\"detail\":" +
                     dococr::json_quote("版面模型加载异常：" + std::string(error.what())) +
                     ",\"stage\":\"layout_initialization\"}";
                 return DOCOCR_FAILED;
             }
             if (!loaded) {
                 last_error = "{\"code\":" + dococr::json_quote(engine->backend->last_error()) +
-                    ",\"stage\":\"layout_initialization\"}";
+                    (pair ? ",\"stage\":\"model_initialization\"}" :
+                            ",\"stage\":\"layout_initialization\"}");
                 return DOCOCR_FAILED;
             }
         }
@@ -336,7 +360,9 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             job->error_code = "cancelled"; job->error_message = "job cancelled";
             return DOCOCR_CANCELLED;
         case dococr::RunCode::Failed:
-            job->state = "failed"; job->error_stage = job->plan && job->plan->layout_only ? "layout" : "inference";
+            job->state = "failed";
+            job->error_stage = result.error_code.rfind("layout_", 0) == 0 ||
+                (job->plan && job->plan->layout_only) ? "layout" : "inference";
             job->error_code = result.error_code.empty() ? "inference_error" : result.error_code;
             job->error_message = result.error_message.empty() ? "inference contract failed" : result.error_message;
             return DOCOCR_FAILED;

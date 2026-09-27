@@ -36,7 +36,8 @@ public:
     }
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
-            if (scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
+            if (scenario_.rfind("printed_page", 0) == 0 ||
+                scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
                 scenario_ == "layout_infer_failure") {
                 if (scenario_ == "layout_infer_failure")
                     throw std::runtime_error("layout_inference_failed:controlled");
@@ -60,9 +61,18 @@ public:
                     {99,.85f,1,1,2,2,9}, {21,.2f,0,0,2,2,10},
                     {14,.9f,3,0,4,1,11}, {5,.9f,1,1,1,2,12},
                     {22,.9f,-1e30f,0,1,1,13}};
-                if (scenario_ == "layout_contract")
+                if (scenario_.rfind("printed_page", 0) == 0) {
+                    const float page_samples[][7] = {
+                        {22,.9f,0,0,2,1,0}, {22,.9f,0,1,2,2,1},
+                        {5,.9f,0,1,1,2,2}, {21,.9f,1,0,2,1,3},
+                        {99,.9f,1,1,2,2,4}, {14,.9f,0,0,1,1,5}};
+                    std::memcpy(rows.data(), page_samples, sizeof(page_samples));
+                    if (scenario_ == "printed_page_filtered") rows[1] = .2f;
+                } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
-                int32_t count = scenario_ == "layout_contract" ? 7 : 0;
+                int32_t count = scenario_ == "printed_page_filtered" ? 1 :
+                    scenario_.rfind("printed_page", 0) == 0 ? 6 :
+                    scenario_ == "layout_contract" ? 7 : 0;
                 std::vector<int32_t> masks(300*200*200);
                 if (scenario_ == "layout_contract") {
                     masks[66] = 1;
@@ -122,6 +132,32 @@ public:
             return {TensorOutput{{std::move(result)}}};
         }
         const auto& generation = std::get<GenerationRequest>(request.payload);
+        if (scenario_.rfind("printed_page", 0) == 0) {
+            if (scenario_ == "printed_page_invalid_utf8" && generation.source_box.y0 == 0)
+                throw std::runtime_error(std::string("\xff", 1));
+            GenerationOutput result;
+            result.elapsed_ms = 2;
+            if (generation.task == "formula") {
+                result.text = result.raw_output = "## 公式=原始片段";
+                result.finish_reason = "complete"; result.stop_reason = "normal";
+            } else if (generation.task == "table") {
+                result.text = result.raw_output = "<table><tr><td>甲</td></tr></table>";
+                result.finish_reason = "complete"; result.stop_reason = "normal";
+            } else if (scenario_ == "printed_page_failure" && generation.source_box.y0 == 0) {
+                result.raw_output = "partial raw"; result.finish_reason = "failed";
+                result.stop_reason = "error"; result.error = "controlled_failure";
+            } else if (scenario_ == "printed_page_empty" && generation.source_box.y0 == 0) {
+                result.finish_reason = "failed"; result.stop_reason = "empty_output";
+                result.error = "ovis_empty_output";
+            } else if (scenario_ == "printed_page_truncated" && generation.source_box.y0 == 0) {
+                result.text = result.raw_output = "截断"; result.finish_reason = "truncated";
+                result.stop_reason = "token_limit"; result.error = "ovis_token_limit";
+            } else {
+                result.text = result.raw_output = "中文，English!\n第二行。";
+                result.finish_reason = "complete"; result.stop_reason = "normal";
+            }
+            return {result};
+        }
         auto bounded = [&](std::string value) -> InferenceResponse {
             size_t pos = 0;
             for (uint64_t token = 0; token < generation.max_new_tokens && pos < value.size(); ++token) {
@@ -149,12 +185,17 @@ public:
             return bounded("<table><tr><td>甲</td></tr></table>");
         return bounded("测试文字");
     }
-    bool reset() override { return scenario_ != "reset_failure"; }
+    bool reset() override {
+        ++reset_count_;
+        return scenario_ != "reset_failure" &&
+            !(scenario_ == "printed_page_reset_failure" && reset_count_ == 1);
+    }
     void unload() override {}
 private:
     EngineCapabilities capabilities_{true, true, true, 1};
     std::string scenario_;
     std::vector<ArtifactInfo> loaded_;
+    int reset_count_ = 0;
 };
 bool config_supported(const std::string& config) {
     return config == "fixture:normalized" || config == "fixture:runtime" ||
@@ -164,7 +205,12 @@ bool config_supported(const std::string& config) {
            config == "fixture:unknown" || config == "fixture:reset_failure" ||
            config == "fixture:generation_exception" || config == "fixture:wrong_response" ||
            config == "fixture:layout_contract" || config == "fixture:layout_empty" ||
-           config == "fixture:layout_infer_failure";
+           config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||
+           config == "fixture:printed_page_failure" || config == "fixture:printed_page_empty" ||
+           config == "fixture:printed_page_truncated" ||
+           config == "fixture:printed_page_invalid_utf8" ||
+           config == "fixture:printed_page_reset_failure" ||
+           config == "fixture:printed_page_filtered";
 }
 std::unique_ptr<IInferenceEngine> make_backend(const std::string& config) {
     return std::make_unique<FixtureBackend>(config.substr(8));

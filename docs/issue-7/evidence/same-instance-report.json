@@ -1,0 +1,58 @@
+{
+  "command": [
+    "/tmp/dococr-issue7/dococr_ovis_same_instance_probe",
+    "/tmp/dococr-issue7-evidence/same-instance-table/effective-config.json",
+    "/home/dr/project/docprase/tests/fixtures/ovis/prompt.txt",
+    "/tmp/dococr-issue7-evidence/same-instance-table",
+    "/home/dr/project/docprase/tests/fixtures/ovis/complete_table.png",
+    "/home/dr/project/docprase/tests/fixtures/ovis/chinese_text.png",
+    "/home/dr/project/docprase/tests/fixtures/ovis/invalid.png"
+  ],
+  "exit_code": 0,
+  "runs": [
+    {
+      "index": 0,
+      "status": "NORMAL_FINISHED",
+      "tokens": 139,
+      "vision_us": 1657885,
+      "pixels_mp": 0.258048
+    },
+    {
+      "index": 1,
+      "status": "NORMAL_FINISHED",
+      "tokens": 39,
+      "vision_us": 660514,
+      "pixels_mp": 0.110592
+    },
+    {
+      "index": 2,
+      "status": "NORMAL_FINISHED",
+      "tokens": 139,
+      "vision_us": 1739848,
+      "pixels_mp": 0.258048
+    },
+    {
+      "index": 3,
+      "status": "MAX_TOKENS_FINISHED",
+      "tokens": 512,
+      "vision_us": 0,
+      "pixels_mp": 0
+    },
+    {
+      "index": 4,
+      "status": "NORMAL_FINISHED",
+      "tokens": 139,
+      "vision_us": 1563255,
+      "pixels_mp": 0.258048
+    }
+  ],
+  "raw_sha256": [
+    "f5f90f8fa95ff4fc823311196df525ad975463c5daab867945b539f98e4c33ee",
+    "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546",
+    "f5f90f8fa95ff4fc823311196df525ad975463c5daab867945b539f98e4c33ee",
+    "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+    "f5f90f8fa95ff4fc823311196df525ad975463c5daab867945b539f98e4c33ee"
+  ],
+  "shared_instance": true,
+  "thread_num": 1
+}

@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/tmp/dococr-issue7/dococr_cli",
+    "--config",
+    "configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+    "--out",
+    "/tmp/dococr-issue7-evidence/real-verified/job"
+  ],
+  "exit_code": 0,
+  "source_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+  "status": "partial",
+  "blocks": 19,
+  "normal_blocks": 13,
+  "partial_blocks": 6,
+  "truncated_blocks": 4,
+  "matched_text_block": "b0003",
+  "matched_text_bbox": [
+    93,
+    176,
+    1241,
+    256
+  ],
+  "matched_text_reference_crop": [
+    93,
+    169,
+    1244,
+    260
+  ],
+  "assets": 45
+}

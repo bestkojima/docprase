@@ -41,6 +41,8 @@ struct GenerationOutput {
     std::string raw_output;
     std::string finish_reason; // complete, truncated, failed
     std::string error;
+    std::string stop_reason;
+    uint64_t elapsed_ms = 0;
 };
 struct InferenceResponse { std::variant<TensorOutput, GenerationOutput> payload; };
 struct ExecutionContext { std::atomic_bool& cancelled; };
@@ -85,6 +87,8 @@ struct RunResult {
     std::string budget_stage;
     std::string error_code, error_message;
     uint64_t decode_ms = 0, layout_ms = 0, recognition_ms = 0, export_ms = 0;
+    struct RegionRun { std::string request_id, status, stop_reason; uint64_t elapsed_ms = 0; };
+    std::vector<RegionRun> regions;
 };
 struct InputView {
     const uint8_t* data;

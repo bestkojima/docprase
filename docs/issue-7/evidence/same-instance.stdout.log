@@ -1,0 +1,8 @@
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+OVIS_SAME_INSTANCE {"index":0,"status":"NORMAL_FINISHED","tokens":139,"vision_us":1657885,"pixels_mp":0.258048}
+OVIS_SAME_INSTANCE {"index":1,"status":"NORMAL_FINISHED","tokens":39,"vision_us":660514,"pixels_mp":0.110592}
+OVIS_SAME_INSTANCE {"index":2,"status":"NORMAL_FINISHED","tokens":139,"vision_us":1739848,"pixels_mp":0.258048}
+Can't open /home/dr/project/docprase/tests/fixtures/ovis/invalid.png
+Omni Can't open image
+OVIS_SAME_INSTANCE {"index":3,"status":"MAX_TOKENS_FINISHED","tokens":512,"vision_us":0,"pixels_mp":0}
+OVIS_SAME_INSTANCE {"index":4,"status":"NORMAL_FINISHED","tokens":139,"vision_us":1563255,"pixels_mp":0.258048}

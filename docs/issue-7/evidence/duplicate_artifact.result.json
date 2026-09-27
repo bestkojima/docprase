@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/tmp/dococr-issue7/dococr_cli",
+    "--config",
+    "/tmp/dococr-issue7-evidence/config-failures/duplicate_artifact.json",
+    "--input",
+    "tests/fixtures/rgb2x2.png",
+    "--out",
+    "/tmp/dococr-issue7-evidence/config-failures/duplicate_artifact"
+  ],
+  "exit_code": 3,
+  "stderr": "{\"code\":\"ovis_artifact_duplicate\",\"stage\":\"model_initialization\"}\n"
+}
