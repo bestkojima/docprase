@@ -25,7 +25,7 @@ std::unique_ptr<IInferenceEngine> make_layout_mnn_backend();
 namespace {
 using MNN::Transformer::Llm;
 using MNN::Transformer::LlmStatus;
-const char* prompt = "Extract all readable content from the image in natural human reading order and output the result as a single Markdown document. For charts or images, represent them using an HTML image tag: <img src=\"images/bbox_{left}_{top}_{right}_{bottom}.jpg\" />, where left, top, right, bottom are bounding box coordinates scaled to [0, 1000). Format formulas as LaTeX. Format tables as HTML: <table>...</table>. Transcribe all other text as standard Markdown. Preserve the original text without translation or paraphrasing.";
+const char* prompt = "\nExtract all readable content from the image in natural human reading order and output the result as a single Markdown document. For charts or images, represent them using an HTML image tag: <img src=\"images/bbox_{left}_{top}_{right}_{bottom}.jpg\" />, where left, top, right, bottom are bounding box coordinates scaled to [0, 1000). Format formulas as LaTeX. Format tables as HTML: <table>...</table>. Transcribe all other text as standard Markdown. Preserve the original text without translation or paraphrasing.";
 const std::vector<std::pair<std::string, std::string>> ovis_hashes = {
     {"config.json", "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4"},
     {"llm_config.json", "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770"},
@@ -78,6 +78,9 @@ class PrintedPageMnnBackend final : public IInferenceEngine {
 public:
     bool load(const BackendLoadSpec& spec) override {
         unload(); error_.clear();
+        if (sha256(prompt) != "de9617f877f6110d22adf1a6ba2a96221189dc246fb1fef161e408d37bff5267") {
+            error_ = "ovis_prompt_contract_mismatch"; return false;
+        }
         if (spec.backend_id != "mnn:pp-doclayout-v3+ovisocr2" || spec.device != "cpu" ||
             spec.artifacts.size() != ovis_hashes.size() + 1) {
             error_ = "printed_page_artifact_contract_mismatch"; return false;

@@ -107,7 +107,14 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
     out += "]";
     if (plan.backend == "mnn:pp-doclayout-v3+ovisocr2") {
         out += ",\"runtime_configuration\":{\"layout_threads\":1,\"ovis_threads\":1,"
-            "\"device\":\"cpu\",\"sampler\":\"greedy\",\"reuse_kv\":false,"
+            "\"device\":\"cpu\",\"sampler\":\"greedy\",\"seed\":null,"
+            "\"seed_status\":\"not_configured\",\"temperature\":0.8,\"top_k\":40,"
+            "\"top_p\":0.9,\"min_p\":0.05,\"tfs_z\":1.0,\"typical\":0.95,"
+            "\"repetition_penalty\":1.0,\"presence_penalty\":0.0,"
+            "\"frequency_penalty\":0.0,\"penalty_window\":0,\"n_gram\":8,"
+            "\"ngram_factor\":1.0,\"llm_precision\":\"low\",\"llm_memory\":\"low\","
+            "\"vision_precision\":\"normal\",\"vision_memory\":\"low\","
+            "\"reuse_kv\":false,"
             "\"prompt_cache\":false,\"use_mmap\":false,\"kvcache_mmap\":false,"
             "\"async\":false,\"timeout_ms\":120000,"
             "\"session_strategy\":\"shared_model_reset_before_each_region\","

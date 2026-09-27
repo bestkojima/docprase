@@ -45,6 +45,12 @@ def main():
     assert manifest['actual_device'] == 'cpu'
     assert manifest['runtime_configuration']['session_strategy'] == 'shared_model_reset_before_each_region'
     assert manifest['runtime_configuration']['ovis_threads'] == 1
+    assert manifest['runtime_configuration']['top_k'] == 40
+    assert manifest['runtime_configuration']['temperature'] == 0.8
+    assert manifest['runtime_configuration']['seed'] is None
+    assert manifest['runtime_configuration']['seed_status'] == 'not_configured'
+    prompt = (ROOT / 'tests/fixtures/ovis/prompt.txt').read_bytes().rstrip(b'\n')
+    assert manifest['runtime_configuration']['prompt_sha256'] == hashlib.sha256(prompt).hexdigest()
     assert all((job / b['content']['resource']).exists() for b in blocks)
     summary = {'command': command, 'exit_code': result.returncode, 'source_sha256': SOURCE_SHA,
                'status': document['status'], 'blocks': len(blocks),

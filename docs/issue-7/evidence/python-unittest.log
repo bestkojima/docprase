@@ -12,6 +12,6 @@ test_timeout_kills_term_ignoring_child_after_leader_exits (test_model_probe_ovis
 test_zero_exit_at_token_cap_is_incomplete (test_model_probe_ovis.OvisProbeTests.test_zero_exit_at_token_cap_is_incomplete) ... ok
 
 ----------------------------------------------------------------------
-Ran 12 tests in 35.970s
+Ran 12 tests in 34.475s
 
 OK

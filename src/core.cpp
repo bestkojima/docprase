@@ -163,6 +163,7 @@ struct Block {
     std::string model_label;
     float raw_box[4]{};
     bool clamped = false;
+    bool untrusted_output = false;
 };
 
 struct RawLayoutCandidate {
@@ -297,14 +298,28 @@ bool decode_layout(const TensorOutput& result, std::vector<LayoutCandidate>& can
 }
 
 std::string render(const Block& b) {
+    auto safe_text = [](const std::string& source) {
+        std::string result;
+        result.reserve(source.size());
+        for (size_t i = 0; i < source.size(); ++i) {
+            char ch = source[i];
+            if (ch == '&') result += "&amp;";
+            else if (ch == '<') result += "&lt;";
+            else if (ch == '>') result += "&gt;";
+            else if (ch == '!' && i + 1 < source.size() && source[i+1] == '[') result += "\\!";
+            else result += ch;
+        }
+        return result;
+    };
     if (b.type == "image" && !b.resource.empty()) return "![插图](" + b.resource + ")";
     if (b.status != "ok") {
         std::string marker = "[" + std::string(b.status == "skipped" ? "未处理：" :
             b.status == "partial" ? "待核验：" : "识别失败：") + b.id + "](" + b.resource + ")";
-        return b.text.empty() ? marker : b.text + "\n\n" + marker;
+        return b.text.empty() ? marker :
+            (b.untrusted_output ? safe_text(b.text) : b.text) + "\n\n" + marker;
     }
     if (b.type == "formula") return "$$\n" + b.text + "\n$$";
-    return b.text;
+    return b.untrusted_output ? safe_text(b.text) : b.text;
 }
 
 std::string serialize(const Image& image, const std::string& state,
@@ -607,6 +622,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             const std::string request_id = "req" + block.region_id;
             RunResult::RegionRun region{request_id, "skipped", block.error, 0};
             if (block.type == "text" || block.type == "formula" || block.type == "table") {
+                block.untrusted_output = true;
                 auto region_start = Clock::now();
                 if (recognition_unavailable) {
                     block.status = "skipped";
@@ -625,6 +641,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                         auto response = backend->execute({request_id, GenerationRequest{
                             std::move(crop), block.box, block.type, request_id,
                             plan->max_new_tokens}}, context);
+                        if (cancelled) return {RunCode::Cancelled, {}};
                         auto* generation = std::get_if<GenerationOutput>(&response.payload);
                         if (!generation) {
                             recognition_unavailable = true;
@@ -683,6 +700,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         }
         blocks.push_back(std::move(block));
     }
+    if (cancelled) return {RunCode::Cancelled, {}};
     const std::string overlay_name = "assets/p0001-layout-overlay.png";
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
     bool incomplete = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.status != "ok"; });

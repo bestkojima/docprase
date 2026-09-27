@@ -101,6 +101,27 @@ def main():
         assert filtered['layout_diagnostics']['candidate_count'] == 1
         assert filtered_manifest['regions'] == []
 
+        safe_out, safe_document, _ = run(sys.argv[1], 'printed_page_model_resource', root, image)
+        original = ('正文<img src="https://example.invalid/x.png" />\n![](images/fake.png)'
+                    '\n\\(x+1\\) \\[a+b\\]')
+        assert safe_document['pages'][0]['blocks'][0]['content']['text'] == original
+        assert safe_document['pages'][0]['blocks'][0]['provenance']['raw_output'] == original
+        safe_markdown = (safe_out / 'document.md').read_text()
+        assert '&lt;img src=' in safe_markdown
+        assert '\\![](images/fake.png)' in safe_markdown
+        assert '\\(x+1\\) \\[a+b\\]' in safe_markdown
+        assert '<img src=' not in safe_markdown
+
+        legacy = json.loads((ROOT / 'configs/fixture-plan.example.json').read_text())
+        legacy['backend'] = 'fixture:formula_table'
+        legacy_cfg = root / 'legacy.json'
+        legacy_cfg.write_text(json.dumps(legacy))
+        legacy_out = root / 'legacy'
+        process = subprocess.run([sys.argv[1], '--config', str(legacy_cfg), '--input',
+            str(image), '--out', str(legacy_out)], cwd=ROOT, capture_output=True, text=True)
+        assert process.returncode == 0, process.stderr
+        assert '<table><tr><td>甲</td></tr></table>' in (legacy_out / 'document.md').read_text()
+
 
 if __name__ == '__main__':
     main()

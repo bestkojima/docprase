@@ -70,7 +70,7 @@ public:
                     if (scenario_ == "printed_page_filtered") rows[1] = .2f;
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
-                int32_t count = scenario_ == "printed_page_filtered" ? 1 :
+                int32_t count = scenario_ == "printed_page_filtered" || scenario_ == "printed_page_slow" ? 1 :
                     scenario_.rfind("printed_page", 0) == 0 ? 6 :
                     scenario_ == "layout_contract" ? 7 : 0;
                 std::vector<int32_t> masks(300*200*200);
@@ -133,6 +133,8 @@ public:
         }
         const auto& generation = std::get<GenerationRequest>(request.payload);
         if (scenario_.rfind("printed_page", 0) == 0) {
+            if (scenario_ == "printed_page_slow")
+                std::this_thread::sleep_for(std::chrono::milliseconds(800));
             if (scenario_ == "printed_page_invalid_utf8" && generation.source_box.y0 == 0)
                 throw std::runtime_error(std::string("\xff", 1));
             GenerationOutput result;
@@ -152,6 +154,11 @@ public:
             } else if (scenario_ == "printed_page_truncated" && generation.source_box.y0 == 0) {
                 result.text = result.raw_output = "截断"; result.finish_reason = "truncated";
                 result.stop_reason = "token_limit"; result.error = "ovis_token_limit";
+            } else if (scenario_ == "printed_page_model_resource" && generation.source_box.y0 == 0) {
+                result.text = result.raw_output =
+                    "正文<img src=\"https://example.invalid/x.png\" />\n![](images/fake.png)"
+                    "\n\\(x+1\\) \\[a+b\\]";
+                result.finish_reason = "complete"; result.stop_reason = "normal";
             } else {
                 result.text = result.raw_output = "中文，English!\n第二行。";
                 result.finish_reason = "complete"; result.stop_reason = "normal";
@@ -209,8 +216,9 @@ bool config_supported(const std::string& config) {
            config == "fixture:printed_page_failure" || config == "fixture:printed_page_empty" ||
            config == "fixture:printed_page_truncated" ||
            config == "fixture:printed_page_invalid_utf8" ||
+           config == "fixture:printed_page_model_resource" ||
            config == "fixture:printed_page_reset_failure" ||
-           config == "fixture:printed_page_filtered";
+           config == "fixture:printed_page_filtered" || config == "fixture:printed_page_slow";
 }
 std::unique_ptr<IInferenceEngine> make_backend(const std::string& config) {
     return std::make_unique<FixtureBackend>(config.substr(8));
