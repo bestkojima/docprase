@@ -377,7 +377,7 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             job->manifest = "{\"schema_version\":\"1.1\",\"job_status\":" +
                 dococr::json_quote(status) + ",\"pdf\":" + pdf_manifest + "}";
         }
-        if (!pdf_manifest.empty() && !job->manifest.empty()) {
+        else if (!pdf_manifest.empty() && !job->manifest.empty()) {
             job->manifest.pop_back();
             job->manifest += ",\"pdf\":" + pdf_manifest + "}";
         }
@@ -410,7 +410,10 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             return DOCOCR_FAILED;
         case dococr::RunCode::BudgetExceeded:
             job->state = "failed"; job->error_stage = "budget";
-            job->error_code = "budget_exceeded"; job->error_message = result.budget_stage;
+            job->error_code = input->format == DOCOCR_DOCUMENT_PDF && !result.error_code.empty() ?
+                result.error_code : "budget_exceeded";
+            job->error_message = input->format == DOCOCR_DOCUMENT_PDF && !result.error_message.empty() ?
+                result.error_message : result.budget_stage;
             return DOCOCR_BUDGET_EXCEEDED;
         }
         job->output = std::move(result.output);

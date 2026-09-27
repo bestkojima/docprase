@@ -2,6 +2,7 @@
 #include "dococr/dococr.h"
 #include "config.hpp"
 #include "layout_preprocess.hpp"
+#include "pdf_page_id.hpp"
 #include "table_parser.hpp"
 #include <algorithm>
 #include <chrono>
@@ -40,10 +41,7 @@ struct PageScope {
 };
 
 std::string page_id() {
-    std::ostringstream out;
-    out << 'p' << std::setw(4) << std::setfill('0')
-        << (current_pdf_page ? current_pdf_page : 1);
-    return out.str();
+    return pdf_page_id(current_pdf_page ? current_pdf_page : 1);
 }
 
 std::string page_asset(const std::string& suffix) {

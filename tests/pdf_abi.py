@@ -71,7 +71,15 @@ def main():
             assert library.dococr_bytes_free(c.byref(result.markdown)) == 0
             manifest_bytes = Bytes()
             assert library.dococr_job_manifest(job, c.byref(manifest_bytes)) == 0
-            manifest = json.loads(c.string_at(manifest_bytes.data, manifest_bytes.size))
+            def unique_keys(pairs):
+                result = {}
+                for key, value in pairs:
+                    assert key not in result, f'duplicate manifest key: {key}'
+                    result[key] = value
+                return result
+
+            manifest = json.loads(c.string_at(manifest_bytes.data, manifest_bytes.size),
+                                  object_pairs_hook=unique_keys)
             assert [item['pdf_page_number'] for item in manifest['pdf']['pages']] == pages
             assert library.dococr_bytes_free(c.byref(manifest_bytes)) == 0
             assert library.dococr_job_destroy(job) == 0

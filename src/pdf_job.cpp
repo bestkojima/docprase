@@ -1,6 +1,7 @@
 #include "pdf_job.hpp"
 #include "config.hpp"
 #include "pdf_renderer.hpp"
+#include "pdf_page_id.hpp"
 #include "dococr/dococr.h"
 #include "json.hpp"
 #include <algorithm>
@@ -30,13 +31,9 @@ Json rss_bytes() {
 #endif
     return nullptr;
 }
-std::string page_id(uint32_t page) {
-    std::string digits = std::to_string(page);
-    return "p" + std::string(digits.size() < 4 ? 4 - digits.size() : 0, '0') + digits;
-}
 Json failed_page(uint32_t page, const Json& geometry, const Json& raster_size, const std::string& code,
                  const std::string& message) {
-    Json result = {{"page_id", page_id(page)}, {"page_index", page - 1},
+    Json result = {{"page_id", pdf_page_id(page)}, {"page_index", page - 1},
                    {"pdf_page_number", page}, {"status", "failed"},
                    {"raster_size", raster_size}, {"coordinate_space", "raster_page"},
                    {"reading_order", Json::array()}, {"layout_blocks", Json::array()},
@@ -116,10 +113,12 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
         size_t success_count = 0, blank_count = 0, failure_count = 0, partial_count = 0;
         uint64_t output_bytes = 0;
         bool budget_failed = false;
+        std::string first_failure_code, first_failure_message;
+        std::string first_budget_code, first_budget_message;
         for (uint32_t page = first; page <= last; ++page) {
             if (cancelled) { result.run.code = RunCode::Cancelled; return result; }
             auto page_start = Clock::now();
-            Json record = {{"page_id", page_id(page)}, {"pdf_page_number", page},
+            Json record = {{"page_id", pdf_page_id(page)}, {"pdf_page_number", page},
                            {"geometry_ms", 0}, {"render_ms", 0}, {"pipeline_ms", 0},
                            {"rss_before_bytes", rss_bytes()}};
             Json geometry = Json::object();
@@ -212,12 +211,24 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                 }
             } catch (const PdfError& error) {
                 ++failure_count;
+                if (first_failure_code.empty()) {
+                    first_failure_code = error.code;
+                    first_failure_message = error.what();
+                }
+                if (first_budget_code.empty() && error.code.find("budget") != std::string::npos) {
+                    first_budget_code = error.code;
+                    first_budget_message = error.what();
+                }
                 document["pages"].push_back(failed_page(page, geometry, raster_size, error.code, error.what()));
                 markdown += "## 第 " + std::to_string(page) + " 页\n\n> 页面失败：" + error.code + "\n\n";
                 record["status"] = "failed";
                 record["error"] = {{"code", error.code}, {"message", error.what()}};
             } catch (const std::exception& error) {
                 ++failure_count;
+                if (first_failure_code.empty()) {
+                    first_failure_code = "pdf_page_failed";
+                    first_failure_message = error.what();
+                }
                 document["pages"].push_back(failed_page(page, geometry, raster_size, "pdf_page_failed", error.what()));
                 markdown += "## 第 " + std::to_string(page) + " 页\n\n> 页面失败：pdf_page_failed\n\n";
                 record["status"] = "failed";
@@ -243,10 +254,12 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
         result.run.code = success_count ? (failure_count || partial_count ? RunCode::Partial :
                                            blank_count == success_count ? RunCode::Blank : RunCode::Ok) :
                                            budget_failed ? RunCode::BudgetExceeded : RunCode::Failed;
-        if (!success_count) {
-            result.run.error_code = budget_failed ? "pdf_page_pixel_budget" : "pdf_all_pages_failed";
-            result.run.error_message = "所选 PDF 页面均未成功解析";
-            result.run.budget_stage = budget_failed ? "pdf_pre_render_or_page_output" : "";
+        if (!success_count && result.run.error_code.empty()) {
+            result.run.error_code = budget_failed ? first_budget_code : first_failure_code;
+            if (result.run.error_code.empty()) result.run.error_code = "pdf_all_pages_failed";
+            result.run.error_message = budget_failed ? first_budget_message : first_failure_message;
+            if (result.run.error_message.empty()) result.run.error_message = "所选 PDF 页面均未成功解析";
+            if (budget_failed) result.run.budget_stage = result.run.error_code;
         }
         Json pdf_manifest = {{"source_sha256", source_hash}, {"page_count", renderer.page_count()},
                              {"selected_pages", {first, last}}, {"dpi", dpi},

@@ -19,3 +19,8 @@ writer = PdfWriter()
 writer.add_page(page)
 with Path(__file__).with_name('rotated_crop.pdf').open('wb') as output:
     writer.write(output)
+
+huge = PdfWriter()
+huge.add_blank_page(width=10000, height=10000)
+with Path(__file__).with_name('huge_page.pdf').open('wb') as output:
+    huge.write(output)

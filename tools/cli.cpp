@@ -107,7 +107,8 @@ int main(int argc, char** argv) {
                 std::cerr << std::string(reinterpret_cast<const char*>(event.data), event.size) << '\n';
             else std::cerr << "作业运行失败，状态码：" << status << '\n';
             if (event.data) dococr_bytes_free(&event);
-            if (configured && !write_audit(output_path, engine, job))
+            if ((configured || format == DOCOCR_DOCUMENT_PDF) &&
+                !write_audit(output_path, engine, job))
                 std::cerr << "运行清单导出失败\n";
             dococr_job_destroy(job); dococr_destroy(engine);
             return status == DOCOCR_UNSUPPORTED ? 4 : status == DOCOCR_BUDGET_EXCEEDED ? 5 : 3;

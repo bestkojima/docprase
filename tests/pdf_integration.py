@@ -69,9 +69,25 @@ def main():
         assert 'pdf_invalid_page_range' in bad_range.stderr
         too_large = run(sys.argv[1], setting, pdf, root / 'too-large', '--pages', '1-1',
                         '--max-page-pixels', '100', expected=5)
-        assert 'budget_exceeded' in too_large.stderr
+        assert 'pdf_page_pixel_budget' in too_large.stderr
         budget_manifest = json.loads((root / 'too-large' / 'run-manifest.json').read_text())
         assert budget_manifest['pdf']['pages'][0]['error']['code'] == 'pdf_page_pixel_budget'
+        huge = run(sys.argv[1], setting, ROOT / 'tests/fixtures/pdf/huge_page.pdf',
+                   root / 'huge', '--dpi', '150', expected=5)
+        assert 'pdf_page_pixel_budget' in huge.stderr
+        huge_manifest = json.loads((root / 'huge' / 'run-manifest.json').read_text())
+        assert huge_manifest['pdf']['pages'][0]['estimated_raster_pixels'] > 16_000_000
+        assert huge_manifest['pdf']['pages'][0].get('raster_size') is None
+        unconfigured_huge_path = root / 'unconfigured-huge'
+        unconfigured_huge = subprocess.run(
+            [sys.argv[1], '--backend', 'fixture:sample',
+             '--input', str(ROOT / 'tests/fixtures/pdf/huge_page.pdf'),
+             '--out', str(unconfigured_huge_path), '--dpi', '150'],
+            cwd=ROOT, capture_output=True, text=True)
+        assert unconfigured_huge.returncode == 5
+        unconfigured_huge_manifest = json.loads(
+            (unconfigured_huge_path / 'run-manifest.json').read_text())
+        assert unconfigured_huge_manifest['pdf']['pages'][0]['error']['code'] == 'pdf_page_pixel_budget'
         invalid = root / 'damaged.pdf'
         invalid.write_bytes(b'%PDF-1.7\nnot a valid PDF')
         damaged = run(sys.argv[1], setting, invalid, root / 'damaged', expected=3)
@@ -99,6 +115,16 @@ def main():
         budget_audit = json.loads((root / 'output-budget' / 'run-manifest.json').read_text())
         assert budget_audit['pdf']['pages'][1]['pipeline_audit']['did_layout'] is True
         assert budget_audit['pdf']['pages'][1]['pipeline_ms'] >= 0
+        all_budget_setting = root / 'all-output-budget-config.json'
+        all_limited = config('printed_page_reading')
+        all_limited['execution']['max_output_bytes'] = 1
+        all_budget_setting.write_text(json.dumps(all_limited))
+        all_budget = run(sys.argv[1], all_budget_setting, pdf, root / 'all-output-budget',
+                         '--pages', '1-1', '--dpi', '72', expected=5)
+        all_audit = json.loads((root / 'all-output-budget' / 'run-manifest.json').read_text())
+        assert all_audit['pdf']['pages'][0]['error']['code'] == 'pdf_page_output_budget'
+        assert all_audit['failure_code'] == 'pdf_document_output_budget'
+        assert 'pdf_document_output_budget' in all_budget.stderr, all_budget.stderr
         geometry = root / 'geometry'
         geometry_run = subprocess.run([sys.argv[1], '--backend', 'fixture:sample',
                                       '--input', str(ROOT / 'tests/fixtures/pdf/rotated_crop.pdf'),
