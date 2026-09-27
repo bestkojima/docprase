@@ -22,8 +22,8 @@ int main(int argc, char** argv) {
         if (!stbi_write_png(argv[2], adapted.canvas.width, adapted.canvas.height, 3,
                             adapted.canvas.rgb.data(), adapted.canvas.width * 3)) return 3;
         std::cout << width << 'x' << height << " -> " << adapted.canvas.width << 'x'
-                  << adapted.canvas.height << " content " << adapted.content_width << 'x'
-                  << adapted.content_height << " pad " << adapted.pad_x << ',' << adapted.pad_y << '\n';
+                  << adapted.canvas.height << " content " << adapted.transform.content_width << 'x'
+                  << adapted.transform.content_height << " pad " << adapted.transform.pad_x << ',' << adapted.transform.pad_y << '\n';
         return 0;
     }
     for (auto [width, height] : {std::pair{1,31}, {31,1}, {31,31}, {32,32},
@@ -31,14 +31,17 @@ int main(int argc, char** argv) {
         Image source{width, height, std::vector<uint8_t>(size_t(width) * height * 3, 127)};
         const auto result = adapt_visual(source);
         const auto& canvas = result.canvas;
+        const auto& transform = result.transform;
         assert(canvas.width % 32 == 0 && canvas.height % 32 == 0);
         assert(int64_t(canvas.width) * canvas.height >= 65536);
         assert(int64_t(canvas.width) * canvas.height <= 16777216);
-        assert(result.pad_x >= 0 && result.pad_y >= 0);
-        assert(result.pad_x + result.content_width <= canvas.width);
-        assert(result.pad_y + result.content_height <= canvas.height);
-        const double sx = double(result.content_width) / width;
-        const double sy = double(result.content_height) / height;
+        assert(transform.pad_x >= 0 && transform.pad_y >= 0);
+        assert(transform.pad_x + transform.content_width <= canvas.width);
+        assert(transform.pad_y + transform.content_height <= canvas.height);
+        const double sx = double(transform.content_width) / width;
+        const double sy = double(transform.content_height) / height;
+        assert(std::abs(transform.content_width - width * transform.scale - transform.rounding_error_x) < 1e-9);
+        assert(std::abs(transform.content_height - height * transform.scale - transform.rounding_error_y) < 1e-9);
         assert(std::abs(sx - sy) <= .5 / std::min(width, height) + .5 / std::max(width, height));
         if (width == 323) assert(canvas.width == 832 && canvas.height == 96);
         if (width == 82) assert(canvas.width == 416 && canvas.height == 160);

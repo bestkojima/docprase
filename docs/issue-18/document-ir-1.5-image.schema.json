@@ -528,14 +528,18 @@
                 "canvas_size",
                 "content_size",
                 "pad_offset",
-                "stop_reason"
+                "stop_reason",
+                "scale",
+                "rounding_error",
+                "canvas_to_page_affine"
               ],
               "properties": {
                 "evidence": {
                   "enum": [
                     "image_pad_tokens",
                     "no_visual_tokens",
-                    "adaptation_failed"
+                    "adaptation_failed",
+                    "explicit_success"
                   ]
                 },
                 "token_count": {
@@ -577,6 +581,28 @@
                 },
                 "stop_reason": {
                   "type": "string"
+                },
+                "scale": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "rounding_error": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": -0.5,
+                    "maximum": 0.5
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "canvas_to_page_affine": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 6,
+                  "maxItems": 6
                 }
               }
             }

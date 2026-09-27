@@ -211,12 +211,7 @@ public:
             output.error = error.what(); output.visual_evidence = "adaptation_failed";
             return {output};
         }
-        output.canvas_width = adapted.canvas.width;
-        output.canvas_height = adapted.canvas.height;
-        output.content_width = adapted.content_width;
-        output.content_height = adapted.content_height;
-        output.pad_x = adapted.pad_x;
-        output.pad_y = adapted.pad_y;
+        output.visual_transform = adapted.transform;
         TempFile image("dococr-ovis-region-", ".png");
         image.write(png(adapted.canvas));
         // Omni::tokenizer_encode runs visual forward and returns image-pad IDs.

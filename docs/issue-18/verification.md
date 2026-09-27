@@ -39,3 +39,13 @@ build/dococr_issue18_token_probe output/resolution-diagnosis/effective-config.js
 `dococr_cli --config configs/printed-page.example.json --input tests/fixtures/issue15/printed_science_2col.png --out /tmp/issue18-real-page` 通过公共作业入口完成。DocumentIR 1.5 含 12 块，其中 11 块 `ok`、1 块图片 `skipped`；图注 `b0008` 的原定位为 `[714,659,1037,690]`，原始识别输出为 `Figure 1. Recorded readings.`，有效视觉 token 78。没有无效编号正文。使用 `--reexport` 对该 JSON 重新导出，JSON 与 Markdown 均逐字节一致。此结果是工程回归，不代表整页质量评分已经达标。
 
 `python3 tests/job_control_real.py /tmp/docprase-issue18-build/libdococr_c.so /tmp/issue18-real-continuous` 在同一个公共引擎实例上连续完成两次教材页作业；每次 19 个区域，固定正文块 `b0003` 均匹配参考，原始输出 SHA-256 同为 `e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546`，两次 DocumentIR SHA-256 也相同。两次作业终态均为 `partial`，引擎均保持可用。`partial` 包含原有非正文图片/局部状态，不在此处改称全页质量通过。
+
+`dococr_cli` 对 `tests/fixtures/layout/exam-jee-346.jpg` 的真实整页作业也完成，DocumentIR 1.5 中页眉块 `b0001` 的原定位 `[55,26,137,35]`（82×9）识别为 `JEE (Advanced) 2023`，有效视觉 token 65。全页 9 块中 4 块正常、3 块待核验、2 块跳过；没有将这些其他状态计入页眉成功或宣称整页质量通过。
+
+复审后增加了公共作业层的证据门槛：即使适配后端错误返回 `complete` 和非空文本，没有有效视觉 token 或显式成功信号，块仍为 `failed`，正文不显示；原始输出留在 JSON。1.5 重新导出要求每个正常识别块带视觉证据，并校验名义缩放比例、逐轴整数取整误差与从画布回到页面的仿射变换。旧版本继续按原有证据范围读取。
+
+## 最终自动化
+
+CMake 编译（包含 MNN/LLM 后端）通过；`ctest --test-dir /tmp/docprase-issue18-build --output-on-failure` 16/16 通过。Python `unittest discover -s tests -p 'test_*.py'` 在本机已缓存的 CPU PyTorch/Transformers 参考环境中 25/25 通过；这包含独立 Layout 模型探针。依赖仅临时组合在运行环境中，未改仓库锁文件。真实页、视觉 token 与连续作业结果见上文。
+
+复审修正后的生产二次整页验证仍通过：图注 `b0008` 保存 `scale=2.5758513931888545`、`rounding_error=[0,0.14860681114551255]`、`canvas_to_page_affine=[0.38822115384615385,0,714,0,0.3875,655.9]`，原裁图资源为 `assets/p0001-b0008.png`；视觉 token 78，正文与先前真实结果一致。对该最终 JSON 的重新导出也保持 JSON 与 Markdown 逐字节相同。

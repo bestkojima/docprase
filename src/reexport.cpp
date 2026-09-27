@@ -329,6 +329,9 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             if (type == "image" || block.at("status") != "ok")
                 require(content.at("resource").is_string(), where + " 图片/占位块缺少 resource");
             const auto& provenance = field(block, "provenance", where);
+            if (version == "1.5" && block.at("status") == "ok" &&
+                (type == "text" || type == "formula" || type == "table"))
+                require(provenance.contains("visual"), where + " 正常识别缺少视觉证据");
             const auto& raw = field(provenance, "raw_output", where);
             require(raw.is_null() || raw.is_string(),
                     where + " provenance.raw_output 无效");
@@ -361,8 +364,37 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                             size[axis].get<int>() + offset[axis].get<int>() <= canvas[axis].get<int>(),
                             where + " 视觉变换超出画布");
                 }
-                if (evidence == "image_pad_tokens")
-                    require(tokens.get<uint64_t>() > 0 && canvas[0].get<int>() >= 32 &&
+                const auto& rounding = field(visual, "rounding_error", where);
+                const auto& affine = field(visual, "canvas_to_page_affine", where);
+                const auto& scale_value = field(visual, "scale", where);
+                require(rounding.is_array() && rounding.size() == 2 &&
+                        affine.is_array() && affine.size() == 6 &&
+                        scale_value.is_number() && scale_value.get<double>() >= 0,
+                        where + " 视觉比例与回映结构无效");
+                const double scale = scale_value.get<double>();
+                const auto& bbox = block.at("bbox");
+                for (int axis = 0; axis < 2; ++axis) {
+                    require(rounding[axis].is_number() &&
+                            std::abs(rounding[axis].get<double>()) <= .500001 &&
+                            std::abs(size[axis].get<double>() -
+                                (bbox[axis + 2].get<double>() - bbox[axis].get<double>()) * scale -
+                                rounding[axis].get<double>()) < 1e-6,
+                            where + " 视觉取整误差不一致");
+                }
+                for (const auto& component : affine)
+                    require(component.is_number(), where + " 页面回映无效");
+                const double inverse_x = size[0].get<int>() > 0 ?
+                    double(bbox[2].get<int>() - bbox[0].get<int>()) / size[0].get<int>() : 0;
+                const double inverse_y = size[1].get<int>() > 0 ?
+                    double(bbox[3].get<int>() - bbox[1].get<int>()) / size[1].get<int>() : 0;
+                const double expected[] = {inverse_x, 0, bbox[0].get<double>() - offset[0].get<double>() * inverse_x,
+                                           0, inverse_y, bbox[1].get<double>() - offset[1].get<double>() * inverse_y};
+                for (int axis = 0; axis < 6; ++axis)
+                    require(std::abs(affine[axis].get<double>() - expected[axis]) < 1e-6,
+                            where + " 页面回映与原裁图不一致");
+                if (evidence == "image_pad_tokens" || evidence == "explicit_success")
+                    require((evidence == "image_pad_tokens" ? tokens.get<uint64_t>() > 0 :
+                             tokens.get<uint64_t>() == 0) && canvas[0].get<int>() >= 32 &&
                             canvas[1].get<int>() >= 32 && canvas[0].get<int>() % 32 == 0 &&
                             canvas[1].get<int>() % 32 == 0 &&
                             int64_t(canvas[0].get<int>()) * canvas[1].get<int>() >= 65536 &&

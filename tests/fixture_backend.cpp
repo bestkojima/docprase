@@ -1,5 +1,6 @@
 #include "backend_factory.hpp"
 #include "config.hpp"
+#include "visual_adaptation.hpp"
 #include <chrono>
 #include <atomic>
 #include <cstring>
@@ -53,6 +54,20 @@ public:
         return profile;
     }
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
+        auto response = execute_impl(request, context);
+        if (std::holds_alternative<GenerationRequest>(request.payload)) {
+            auto* output = std::get_if<GenerationOutput>(&response.payload);
+            const auto& generation = std::get<GenerationRequest>(request.payload);
+            if (output && output->finish_reason == "complete" && output->visual_evidence.empty() &&
+                !(scenario_ == "printed_page_visual_missing_complete" && generation.source_box.y0 == 0))
+            {
+                output->visual_evidence = "explicit_success";
+                output->visual_transform = adapt_visual(generation.image).transform;
+            }
+        }
+        return response;
+    }
+    InferenceResponse execute_impl(const InferenceRequest& request, ExecutionContext& context) {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
             if (scenario_ == "printed_page_layout_gate_error") {
                 const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
@@ -329,10 +344,13 @@ public:
                 result.stop_reason = "vision_missing";
                 result.error = "ovis_visual_tokens_missing";
                 result.visual_evidence = "no_visual_tokens";
-                result.canvas_width = result.canvas_height = 256;
-                result.content_width = 256;
-                result.content_height = 128;
-                result.pad_y = 64;
+                result.visual_transform = adapt_visual(generation.image).transform;
+                return {result};
+            }
+            if (scenario_ == "printed_page_visual_missing_complete" && generation.source_box.y0 == 0) {
+                result.raw_output = result.text = "spurious complete text";
+                result.finish_reason = "complete";
+                result.stop_reason = "normal";
                 return {result};
             }
             if (scenario_.rfind("printed_page_reading", 0) == 0) {
@@ -556,6 +574,7 @@ bool config_supported(const std::string& config) {
            config == "fixture:printed_page_finalization_oom" ||
            config == "fixture:printed_page_failure" || config == "fixture:printed_page_empty" ||
            config == "fixture:printed_page_visual_empty" ||
+           config == "fixture:printed_page_visual_missing_complete" ||
            config == "fixture:printed_page_truncated" ||
            config == "fixture:printed_page_invalid_utf8" ||
            config == "fixture:printed_page_model_resource" ||

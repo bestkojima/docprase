@@ -930,7 +930,7 @@ std::string serialize(const Image& image, const std::string& state,
     bool has_table = structured_tables &&
         std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.type == "table"; });
     const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
-        return !b.visual.visual_evidence.empty();
+        return !b.visual.visual_evidence.empty() && b.visual.visual_evidence != "explicit_success";
     });
     out << "{\"schema_version\":" << json_quote(has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
@@ -1033,15 +1033,27 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"raw_output\":" << (b.raw_base64.empty() ? json_quote(b.raw) : "null")
             << ",\"raw_output_base64\":" << (b.raw_base64.empty() ? "null" : json_quote(b.raw_base64))
             << ",\"text_base64\":" << (b.text_base64.empty() ? "null" : json_quote(b.text_base64));
-        if (!b.visual.visual_evidence.empty()) {
+        if (has_visual && !b.visual.visual_evidence.empty()) {
+            const auto& transform = b.visual.visual_transform;
+            const double inverse_x = transform.content_width > 0 ?
+                double(b.box.x1 - b.box.x0) / transform.content_width : 0;
+            const double inverse_y = transform.content_height > 0 ?
+                double(b.box.y1 - b.box.y0) / transform.content_height : 0;
+            out << std::setprecision(17);
             out << ",\"visual\":{\"evidence\":" << json_quote(b.visual.visual_evidence)
                 << ",\"token_count\":" << b.visual.visual_tokens
                 << ",\"source_crop\":" << json_quote(b.resource)
                 << ",\"source_bbox\":" << box_json(b.box)
-                << ",\"canvas_size\":[" << b.visual.canvas_width << ',' << b.visual.canvas_height << ']'
-                << ",\"content_size\":[" << b.visual.content_width << ',' << b.visual.content_height << ']'
-                << ",\"pad_offset\":[" << b.visual.pad_x << ',' << b.visual.pad_y << ']'
+                << ",\"canvas_size\":[" << transform.canvas_width << ',' << transform.canvas_height << ']'
+                << ",\"content_size\":[" << transform.content_width << ',' << transform.content_height << ']'
+                << ",\"pad_offset\":[" << transform.pad_x << ',' << transform.pad_y << ']'
+                << ",\"scale\":" << transform.scale
+                << ",\"rounding_error\":[" << transform.rounding_error_x << ',' << transform.rounding_error_y << ']'
+                << ",\"canvas_to_page_affine\":[" << inverse_x << ",0,"
+                << b.box.x0 - transform.pad_x * inverse_x << ",0," << inverse_y << ','
+                << b.box.y0 - transform.pad_y * inverse_y << ']'
                 << ",\"stop_reason\":" << json_quote(b.visual.stop_reason) << '}';
+            out << std::setprecision(9);
         }
         out
             << "},\"error\":" << (b.error.empty() ? "null" : json_quote(b.error))
@@ -1385,7 +1397,15 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                             if (valid_utf8(generation->text)) block.text = generation->text;
                             else block.text_base64 = base64(generation->text);
                             if (!valid_utf8(generation->error)) block.error_base64 = base64(generation->error);
-                            if (generation->finish_reason == "complete" &&
+                            const bool valid_visual =
+                                (generation->visual_evidence == "image_pad_tokens" &&
+                                 generation->visual_tokens > 0) ||
+                                generation->visual_evidence == "explicit_success";
+                            if (generation->finish_reason == "complete" && !valid_visual) {
+                                block.status = "failed";
+                                block.error = "visual_evidence_missing";
+                                block.text.clear();
+                            } else if (generation->finish_reason == "complete" &&
                                 !generation->raw_output.empty() && !generation->text.empty() &&
                                 valid_utf8(generation->raw_output) && valid_utf8(generation->text)) {
                                 if (block.type == "text") {

@@ -106,6 +106,9 @@ def main():
         invalid_visual = copy.deepcopy(visual)
         invalid_visual['pages'][0]['blocks'][0]['status'] = 'ok'
         assert '视觉' in reexport(visual_saved, invalid_visual, code=3).stderr
+        invalid_visual = copy.deepcopy(visual)
+        invalid_visual['pages'][0]['blocks'][3]['provenance'].pop('visual')
+        assert '视觉' in reexport(visual_saved, invalid_visual, code=3).stderr
         formula_saved, formula = generated['printed_page_formula']
         old_formula = copy.deepcopy(formula)
         old_formula['schema_version'] = '1.1'
@@ -214,11 +217,23 @@ def main():
         visual_pdf = copy.deepcopy(pdf_data)
         visual_pdf['schema_version'] = '1.5'
         block = next(b for b in visual_pdf['pages'][0]['blocks'] if b['status'] != 'ok')
-        block['provenance']['visual'] = {
-            'evidence': 'no_visual_tokens', 'token_count': 0,
-            'source_crop': block['content']['resource'], 'source_bbox': block['bbox'],
-            'canvas_size': [256, 256], 'content_size': [256, 256],
-            'pad_offset': [0, 0], 'stop_reason': 'vision_missing'}
+        for candidate in visual_pdf['pages'][0]['blocks']:
+            if candidate['status'] != 'ok' and candidate is not block:
+                continue
+            x0, y0, x1, y1 = candidate['bbox']
+            width, height = x1-x0, y1-y0
+            scale = min(256/width, 256/height)
+            cw, ch = round(width*scale), round(height*scale)
+            px, py = (256-cw)//2, (256-ch)//2
+            sx, sy = width/cw, height/ch
+            candidate['provenance']['visual'] = {
+                'evidence': 'explicit_success' if candidate['status'] == 'ok' else 'no_visual_tokens',
+                'token_count': 0, 'source_crop': candidate['content']['resource'],
+                'source_bbox': candidate['bbox'], 'canvas_size': [256, 256],
+                'content_size': [cw, ch], 'pad_offset': [px, py], 'scale': scale,
+                'rounding_error': [cw-width*scale, ch-height*scale],
+                'canvas_to_page_affine': [sx, 0, x0-px*sx, 0, sy, y0-py*sy],
+                'stop_reason': 'normal' if candidate['status'] == 'ok' else 'vision_missing'}
         jsonschema.validate(visual_pdf, json.loads((ROOT / 'docs/issue-18/document-ir-1.5-pdf.schema.json').read_text()))
         reexport(pdf_saved, visual_pdf)
         broken_pdf = copy.deepcopy(pdf_data)

@@ -86,11 +86,22 @@ def main():
         assert visual_block['provenance']['visual']['token_count'] == 0
         assert visual_block['provenance']['visual']['source_bbox'] == visual_block['bbox']
         assert visual_block['provenance']['visual']['source_crop'] == visual_block['content']['resource']
+        assert visual_block['provenance']['visual']['scale'] == 128
+        assert visual_block['provenance']['visual']['rounding_error'] == [0, 0]
+        assert visual_block['provenance']['visual']['canvas_to_page_affine'] == [1/128, 0, 0, 0, 1/128, -64/128]
         assert visual_manifest['regions'][0]['stop_reason'] == 'vision_missing'
         assert visual_doc['pages'][0]['blocks'][3]['status'] == 'ok'
         visual_markdown = (visual_out / 'document.md').read_text()
         assert '![原图](' in visual_markdown and '[识别失败：b0001]' in visual_markdown
         assert 'spurious text' not in visual_markdown
+
+        missing_out, missing_doc, _ = run(sys.argv[1], 'printed_page_visual_missing_complete', root, image)
+        missing_block = missing_doc['pages'][0]['blocks'][0]
+        assert missing_block['status'] == 'failed' and missing_block['error'] == 'visual_evidence_missing'
+        assert missing_block['content']['text'] == ''
+        assert missing_block['provenance']['raw_output'] == 'spurious complete text'
+        assert missing_doc['pages'][0]['blocks'][3]['status'] == 'ok'
+        assert 'spurious complete text' not in (missing_out / 'document.md').read_text()
 
         for scenario, expected_status, expected_reason in [
             ('printed_page_failure', 'failed', 'error'),
