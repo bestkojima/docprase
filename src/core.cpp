@@ -301,13 +301,19 @@ std::string render(const Block& b) {
     auto safe_text = [](const std::string& source) {
         std::string result;
         result.reserve(source.size());
+        size_t consecutive_backslashes = 0;
         for (size_t i = 0; i < source.size(); ++i) {
             char ch = source[i];
+            if (ch == '\\') { result += ch; ++consecutive_backslashes; continue; }
             if (ch == '&') result += "&amp;";
             else if (ch == '<') result += "&lt;";
             else if (ch == '>') result += "&gt;";
-            else if (ch == '!' && i + 1 < source.size() && source[i+1] == '[') result += "\\!";
+            else if (ch == '!' && i + 1 < source.size() && source[i+1] == '[') {
+                if (consecutive_backslashes % 2 == 0) result += '\\';
+                result += ch;
+            }
             else result += ch;
+            consecutive_backslashes = 0;
         }
         return result;
     };

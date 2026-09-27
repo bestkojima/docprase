@@ -157,6 +157,8 @@ public:
             } else if (scenario_ == "printed_page_model_resource" && generation.source_box.y0 == 0) {
                 result.text = result.raw_output =
                     "正文<img src=\"https://example.invalid/x.png\" />\n![](images/fake.png)"
+                    "\n\\![单](https://example.invalid/one.png)"
+                    "\n\\\\![双](https://example.invalid/two.png)"
                     "\n\\(x+1\\) \\[a+b\\]";
                 result.finish_reason = "complete"; result.stop_reason = "normal";
             } else {

@@ -103,6 +103,8 @@ def main():
 
         safe_out, safe_document, _ = run(sys.argv[1], 'printed_page_model_resource', root, image)
         original = ('正文<img src="https://example.invalid/x.png" />\n![](images/fake.png)'
+                    '\n\\![单](https://example.invalid/one.png)'
+                    '\n\\\\![双](https://example.invalid/two.png)'
                     '\n\\(x+1\\) \\[a+b\\]')
         assert safe_document['pages'][0]['blocks'][0]['content']['text'] == original
         assert safe_document['pages'][0]['blocks'][0]['provenance']['raw_output'] == original
@@ -111,6 +113,10 @@ def main():
         assert '\\![](images/fake.png)' in safe_markdown
         assert '\\(x+1\\) \\[a+b\\]' in safe_markdown
         assert '<img src=' not in safe_markdown
+        from markdown_it import MarkdownIt
+        rendered = MarkdownIt().render(safe_markdown)
+        assert 'src="https://example.invalid/' not in rendered
+        assert 'src="images/fake.png"' not in rendered
 
         legacy = json.loads((ROOT / 'configs/fixture-plan.example.json').read_text())
         legacy['backend'] = 'fixture:formula_table'

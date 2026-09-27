@@ -2,9 +2,9 @@
 [ 25%] Built target dococr_core
 [ 33%] Built target dococr_layout_mnn_probe
 [ 40%] Built target dococr_ovis_same_instance_probe
-[ 51%] Built target dococr_c_test
-[ 70%] Built target dococr_c
+[ 59%] Built target dococr_c
+[ 70%] Built target dococr_c_test
 [ 77%] Built target dococr_layout_preprocess_probe
-[ 85%] Built target dococr_cli_fixture
-[100%] Built target dococr_cli
-[100%] Built target dococr_contract_test
+[ 85%] Built target dococr_cli
+[ 92%] Built target dococr_contract_test
+[100%] Built target dococr_cli_fixture
