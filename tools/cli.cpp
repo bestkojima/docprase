@@ -1,14 +1,20 @@
 #include "dococr/dococr.h"
+#include <atomic>
+#include <chrono>
+#include <csignal>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <iterator>
 #include <limits>
 #include <string>
+#include <thread>
 #include <vector>
 
 namespace fs = std::filesystem;
 namespace {
+volatile std::sig_atomic_t interrupt_requested = 0;
+void on_interrupt(int) { interrupt_requested = 1; }
 bool write_file(const fs::path& path, const DocOcrBytes& bytes) {
     fs::create_directories(path.parent_path());
     std::ofstream file(path, std::ios::binary);
@@ -39,7 +45,7 @@ uint64_t positive_number(const std::string& value) {
 int main(int argc, char** argv) {
     if (argc < 7 || argc % 2 == 0 || (std::string(argv[1]) != "--backend" && std::string(argv[1]) != "--config") ||
         std::string(argv[3]) != "--input" || std::string(argv[5]) != "--out") {
-        std::cerr << "用法：dococr_cli (--backend NAME | --config config.json) --input 文件 --out 输出目录 [--pages 首-末] [--dpi 72..600] [--max-page-pixels 正整数]\n";
+        std::cerr << "用法：dococr_cli (--backend NAME | --config config.json) --input 文件 --out 输出目录 [--pages 首-末] [--dpi 72..600] [--max-page-pixels 正整数] [--timeout-ms 正整数]\n";
         return 2;
     }
     try {
@@ -61,7 +67,7 @@ int main(int argc, char** argv) {
             std::string(reinterpret_cast<const char*>(image.data()), 8) == std::string("\x89PNG\r\n\x1a\n", 8)
             ? DOCOCR_IMAGE_PNG : DOCOCR_IMAGE_JPEG;
         DocOcrInput request{sizeof(DocOcrInput), image.data(), image.size(), format, 0, 0, 0};
-        bool pages_set = false, dpi_set = false, pixels_set = false;
+        bool pages_set = false, dpi_set = false, pixels_set = false, timeout_set = false;
         for (int i = 7; i < argc; i += 2) {
             std::string option = argv[i], value = argv[i+1];
             if (option == "--pages" && !pages_set) {
@@ -83,6 +89,11 @@ int main(int argc, char** argv) {
             } else if (option == "--max-page-pixels" && !pixels_set) {
                 pixels_set = true;
                 request.max_page_pixels = positive_number(value);
+            } else if (option == "--timeout-ms" && !timeout_set) {
+                timeout_set = true;
+                uint64_t timeout = positive_number(value);
+                if (timeout > UINT32_MAX) throw std::invalid_argument("超时时间无效");
+                request.timeout_ms = static_cast<uint32_t>(timeout);
             } else throw std::invalid_argument("未知或重复的 PDF 参数：" + option);
         }
         if (format != DOCOCR_DOCUMENT_PDF && (pages_set || dpi_set || pixels_set))
@@ -100,7 +111,41 @@ int main(int argc, char** argv) {
         DocOcrJob job = 0;
         status = dococr_job_create(engine, &job);
         if (status != DOCOCR_OK) { dococr_destroy(engine); return 3; }
+        std::signal(SIGINT, on_interrupt);
+        std::atomic_bool finished{false};
+        std::thread monitor([&] {
+            bool cancel_sent = false;
+            try {
+                fs::create_directories(output_path);
+                std::ofstream stream(output_path / "job-events.jsonl", std::ios::binary);
+                auto drain = [&] {
+                    DocOcrBytes event{};
+                    while (dococr_job_next_event(job, &event) == DOCOCR_OK) {
+                        std::string line(reinterpret_cast<const char*>(event.data), event.size);
+                        std::cout << line << '\n' << std::flush;
+                        if (stream) stream << line << '\n' << std::flush;
+                        dococr_bytes_free(&event);
+                    }
+                };
+                while (!finished) {
+                    if (interrupt_requested && !cancel_sent) {
+                        dococr_job_cancel(job);
+                        cancel_sent = true;
+                    }
+                    drain();
+                    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                }
+                drain();
+            } catch (...) { /* 公共状态及原始运行结果仍可在主线程读取。 */ }
+        });
         status = dococr_job_run(job, &request);
+        finished = true;
+        monitor.join();
+        DocOcrBytes final_status{};
+        if (dococr_job_status(job, &final_status) == DOCOCR_OK) {
+            write_file(output_path / "job-status.json", final_status);
+            dococr_bytes_free(&final_status);
+        }
         if (status != DOCOCR_OK) {
             DocOcrBytes event{};
             if (dococr_job_poll_events(job, &event) == DOCOCR_OK && event.size)
@@ -111,7 +156,8 @@ int main(int argc, char** argv) {
                 !write_audit(output_path, engine, job))
                 std::cerr << "运行清单导出失败\n";
             dococr_job_destroy(job); dococr_destroy(engine);
-            return status == DOCOCR_UNSUPPORTED ? 4 : status == DOCOCR_BUDGET_EXCEEDED ? 5 : 3;
+            return status == DOCOCR_UNSUPPORTED ? 4 : status == DOCOCR_BUDGET_EXCEEDED ? 5 :
+                   status == DOCOCR_TIMEOUT ? 6 : status == DOCOCR_CANCELLED ? 130 : 3;
         }
         DocOcrResult result{sizeof(DocOcrResult), {}, {}};
         status = dococr_job_result(job, &result);

@@ -4,13 +4,17 @@
 #include "config.hpp"
 #include "pdf_job.hpp"
 #include <atomic>
+#include <chrono>
 #include <cstddef>
+#include <condition_variable>
 #include <cstdlib>
 #include <cstring>
+#include <deque>
 #include <map>
 #include <memory>
 #include <mutex>
 #include <string>
+#include <thread>
 
 namespace {
 struct Engine {
@@ -19,7 +23,9 @@ struct Engine {
     std::unique_ptr<dococr::IInferenceEngine> backend;
     size_t jobs = 0;
     bool running = false;
-    ~Engine() { if (backend) backend->unload(); }
+    bool ready = true;
+    std::string recovery_error;
+    ~Engine() { try { if (backend) backend->unload(); } catch (...) {} }
 };
 struct Job {
     DocOcrHandle engine = 0;
@@ -27,6 +33,13 @@ struct Job {
     bool started = false;
     bool running = false;
     std::atomic_bool cancelled{false};
+    bool timed_out = false;
+    bool execution_done = false;
+    std::condition_variable cv;
+    std::deque<std::string> events;
+    uint64_t events_dropped = 0;
+    uint32_t page_current = 0, page_completed = 0, page_total = 0;
+    uint32_t region_completed = 0, region_total = 0;
     std::string state = "created";
     std::string error_code;
     std::string error_request_id = "p0001";
@@ -35,6 +48,38 @@ struct Job {
     dococr::JobOutput output;
     bool has_result = false;
     std::string manifest;
+};
+extern std::mutex registry_mutex;
+struct RunCleanup {
+    Job& job;
+    Engine& engine;
+    std::thread& watcher;
+    bool committed = false;
+    ~RunCleanup() noexcept {
+        if (committed) return;
+        try {
+            {
+                std::lock_guard<std::mutex> lock(registry_mutex);
+                job.execution_done = true;
+                job.cv.notify_all();
+            }
+            if (watcher.joinable()) watcher.join();
+            std::lock_guard<std::mutex> lock(registry_mutex);
+            job.state = "failed";
+            job.error_stage = "job";
+            job.error_code = "failed";
+            job.has_result = false;
+            engine.ready = false;
+            engine.recovery_error = "failed";
+            try {
+                if (job.events.size() == 64) { job.events.pop_front(); ++job.events_dropped; }
+                job.events.emplace_back("{\"kind\":\"terminal\",\"state\":\"failed\"}");
+            } catch (...) { ++job.events_dropped; }
+            job.running = false;
+            engine.running = false;
+            job.cv.notify_all();
+        } catch (...) {}
+    }
 };
 thread_local std::string last_error;
 std::shared_ptr<const dococr::ExecutionPlan> checked_plan(const std::string& value) {
@@ -76,6 +121,44 @@ std::string event_json(const Job& job) {
                ",\"message\":" + dococr::json_quote(job.error_message) + "}";
     return out + "}";
 }
+void push_event(Job& job, const char* kind, uint32_t page = 0,
+                const std::string& request_id = {}) {
+    std::string event = "{\"kind\":" + dococr::json_quote(kind) +
+        ",\"state\":" + dococr::json_quote(job.state) +
+        ",\"page\":" + std::to_string(page) +
+        ",\"request_id\":" + (request_id.empty() ? "null" : dococr::json_quote(request_id)) +
+        ",\"page_completed\":" + std::to_string(job.page_completed) +
+        ",\"page_total\":" + std::to_string(job.page_total) +
+        ",\"region_completed\":" + std::to_string(job.region_completed) +
+        ",\"region_total\":" + std::to_string(job.region_total);
+    if (!job.error_code.empty())
+        event += ",\"error\":{\"code\":" + dococr::json_quote(job.error_code) +
+            ",\"stage\":" + dococr::json_quote(job.error_stage) +
+            ",\"message\":" + dococr::json_quote(job.error_message) + "}";
+    event += "}";
+    if (job.events.size() == 64) { job.events.pop_front(); ++job.events_dropped; }
+    job.events.push_back(std::move(event));
+}
+std::string status_json(const Job& job, const Engine& engine) {
+    std::string out = event_json(job);
+    out.pop_back();
+    out += ",\"running\":" + std::string(job.running ? "true" : "false") +
+        ",\"terminal\":" + std::string(job.started && !job.running ? "true" : "false") +
+        ",\"cancel_requested\":" + std::string(job.cancelled ? "true" : "false") +
+        ",\"timeout_requested\":" + std::string(job.timed_out ? "true" : "false") +
+        ",\"cancellation_granularity\":\"after_backend_call\"" +
+        ",\"page_current\":" + std::to_string(job.page_current) +
+        ",\"page_completed\":" + std::to_string(job.page_completed) +
+        ",\"page_total\":" + std::to_string(job.page_total) +
+        ",\"region_completed\":" + std::to_string(job.region_completed) +
+        ",\"region_total\":" + std::to_string(job.region_total) +
+        ",\"events_pending\":" + std::to_string(job.events.size()) +
+        ",\"events_dropped\":" + std::to_string(job.events_dropped) +
+        ",\"engine_ready\":" + std::string(engine.ready ? "true" : "false");
+    if (!engine.recovery_error.empty())
+        out += ",\"recovery_error\":" + dococr::json_quote(engine.recovery_error);
+    return out + "}";
+}
 bool same_artifacts(const std::vector<dococr::ArtifactInfo>& a,
                     const std::vector<dococr::ArtifactInfo>& b) {
     if (a.size() != b.size()) return false;
@@ -86,7 +169,8 @@ bool same_artifacts(const std::vector<dococr::ArtifactInfo>& a,
 }
 std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunResult& result,
                           const std::string& actual_backend) {
-    std::string job_status = result.code == dococr::RunCode::BudgetExceeded ? "budget_exceeded" :
+    std::string job_status = result.code == dococr::RunCode::Cancelled ? "cancelled" :
+        result.code == dococr::RunCode::BudgetExceeded ? "budget_exceeded" :
         result.code == dococr::RunCode::Ok ? "ok" : result.code == dococr::RunCode::Partial ? "partial" :
         result.code == dococr::RunCode::Blank ? "blank" : "failed";
     std::string out = "{\"schema_version\":\"1.0\",\"config_hash\":" + dococr::json_quote(plan.config_hash) +
@@ -338,87 +422,222 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             engine = engines.at(job->engine);
             if (job->running || engine->running) return DOCOCR_BUSY;
             if (job->started) return DOCOCR_INVALID_ARGUMENT;
+            if (!engine->ready) return DOCOCR_FAILED;
             job->started = true;
             job->running = true;
             engine->running = true;
             job->state = "running";
+            try { push_event(*job, "started"); } catch (...) { ++job->events_dropped; }
         }
-        dococr::RunResult result;
-        std::string pdf_manifest;
+        const bool has_timeout = input->struct_size >= offsetof(DocOcrInput, timeout_ms) + sizeof(input->timeout_ms);
+        const uint32_t timeout_ms = has_timeout ? input->timeout_ms : 0;
+        std::thread watcher;
+        RunCleanup cleanup{*job, *engine, watcher};
+        bool watchdog_ready = true;
         try {
-            dococr::InputView view{input->data, input->size, input->format,
-                                   input->width, input->height, input->row_stride};
-            if (input->format == DOCOCR_DOCUMENT_PDF) {
-                auto field = [&](size_t offset, size_t size) { return input->struct_size >= offset + size; };
-                uint32_t first = field(offsetof(DocOcrInput, first_page), sizeof(input->first_page)) ? input->first_page : 0;
-                uint32_t last = field(offsetof(DocOcrInput, last_page), sizeof(input->last_page)) ? input->last_page : 0;
-                uint32_t dpi = field(offsetof(DocOcrInput, dpi), sizeof(input->dpi)) ? input->dpi : 0;
-                uint64_t pixels = field(offsetof(DocOcrInput, max_page_pixels), sizeof(input->max_page_pixels)) ?
-                                  input->max_page_pixels : 0;
-                auto pdf = dococr::run_pdf(engine->backend.get(), view, first, last, dpi ? dpi : 150,
-                                           pixels, job->cancelled, job->plan.get());
-                result = std::move(pdf.run);
-                pdf_manifest = std::move(pdf.manifest_pdf);
-            } else {
-                result = dococr::run_page(engine->backend.get(), view, job->cancelled, job->plan.get());
+            if (timeout_ms) watcher = std::thread([job, timeout_ms] {
+                std::unique_lock<std::mutex> lock(registry_mutex);
+                if (!job->cv.wait_for(lock, std::chrono::milliseconds(timeout_ms),
+                                      [&] { return job->execution_done; })) {
+                    job->timed_out = true;
+                    job->cancelled = true;
+                    job->state = "cancelling";
+                    try { push_event(*job, "timeout_requested", job->page_current); } catch (...) {}
+                }
+            });
+        } catch (...) { watchdog_ready = false; }
+        dococr::RunResult result{dococr::RunCode::Failed, {}};
+        std::string pdf_manifest;
+        auto progress = [job](const char* kind, uint32_t page, const std::string& request_id,
+                              uint32_t done, uint32_t total) {
+            std::lock_guard<std::mutex> lock(registry_mutex);
+            job->page_current = page;
+            if (std::strcmp(kind, "page_completed") == 0) job->page_completed = done;
+            if (std::strcmp(kind, "page_started") == 0 || std::strcmp(kind, "page_completed") == 0)
+                job->page_total = total;
+            if (std::strcmp(kind, "region_started") == 0 || std::strcmp(kind, "region_completed") == 0) {
+                job->region_completed = done; job->region_total = total;
             }
-        } catch (...) { result.code = dococr::RunCode::Failed; }
+            try { push_event(*job, kind, page, request_id); } catch (...) { ++job->events_dropped; }
+        };
+        try {
+            if (!watchdog_ready) {
+                result.code = dococr::RunCode::Failed;
+                result.error_code = "timeout_monitor_unavailable";
+                result.error_message = "无法启动作业截止时间监视器";
+            } else {
+                dococr::InputView view{input->data, input->size, input->format,
+                                       input->width, input->height, input->row_stride};
+                if (input->format == DOCOCR_DOCUMENT_PDF) {
+                    auto field = [&](size_t offset, size_t size) { return input->struct_size >= offset + size; };
+                    uint32_t first = field(offsetof(DocOcrInput, first_page), sizeof(input->first_page)) ? input->first_page : 0;
+                    uint32_t last = field(offsetof(DocOcrInput, last_page), sizeof(input->last_page)) ? input->last_page : 0;
+                    uint32_t dpi = field(offsetof(DocOcrInput, dpi), sizeof(input->dpi)) ? input->dpi : 0;
+                    uint64_t pixels = field(offsetof(DocOcrInput, max_page_pixels), sizeof(input->max_page_pixels)) ?
+                                      input->max_page_pixels : 0;
+                    auto pdf = dococr::run_pdf(engine->backend.get(), view, first, last, dpi ? dpi : 150,
+                                               pixels, job->cancelled, job->plan.get(), progress);
+                    result = std::move(pdf.run);
+                    pdf_manifest = std::move(pdf.manifest_pdf);
+                } else {
+                    progress("page_started", 1, "", 0, 1);
+                    result = dococr::run_page(engine->backend.get(), view, job->cancelled,
+                                              job->plan.get(), 0, progress);
+                    if (result.code != dococr::RunCode::Cancelled && !job->cancelled)
+                        progress("page_completed", 1, "", 1, 1);
+                }
+            }
+        } catch (const std::bad_alloc&) {
+            result.code = dococr::RunCode::Failed;
+            result.error_code = "out_of_memory";
+        } catch (const std::exception& error) {
+            result.code = dococr::RunCode::Failed;
+            result.error_code = "job_exception";
+            try { result.error_message = error.what(); } catch (...) {}
+        } catch (...) {
+            result.code = dococr::RunCode::Failed;
+            result.error_code = "job_exception";
+        }
+        {
+            std::lock_guard<std::mutex> lock(registry_mutex);
+            job->execution_done = true;
+            job->cv.notify_all();
+        }
+        if (watcher.joinable()) watcher.join();
+        if (job->cancelled && (result.code == dococr::RunCode::Ok ||
+            result.code == dococr::RunCode::Partial || result.code == dococr::RunCode::Blank)) {
+            result.code = dococr::RunCode::Cancelled;
+            result.error_code = job->timed_out ? "timeout" : "cancelled";
+        }
+        std::string executed_profile;
+        try { if (engine->backend) executed_profile = engine->backend->profile(); }
+        catch (...) { executed_profile = "profile_unavailable"; }
+        const bool needs_rebuild = engine->backend && (result.code == dococr::RunCode::Cancelled ||
+            result.code == dococr::RunCode::Failed || result.code == dococr::RunCode::Partial ||
+            result.reset_failed);
+        if (needs_rebuild) {
+            std::lock_guard<std::mutex> lock(registry_mutex);
+            job->state = "recovering";
+            try { push_event(*job, "recovery_started", job->page_current); } catch (...) { ++job->events_dropped; }
+        }
+        if (needs_rebuild) {
+            bool recovered = false;
+            std::string recovery_error = "backend_rebuild_failed";
+            try {
+                engine->backend->unload();
+                engine->backend.reset();
+                auto replacement = dococr::make_backend(engine->config);
+                dococr::BackendLoadSpec spec{engine->config,
+                    job->plan ? job->plan->config_hash : "",
+                    job->plan ? job->plan->device : "cpu",
+                    job->plan ? job->plan->artifacts : std::vector<dococr::ArtifactInfo>{}};
+                if (replacement && replacement->load(spec) &&
+                    (!job->plan || same_artifacts(job->plan->artifacts, replacement->loaded_artifacts()))) {
+                    engine->backend = std::move(replacement);
+                    recovered = true;
+                } else if (replacement && !replacement->last_error().empty())
+                    recovery_error = replacement->last_error();
+            } catch (const std::bad_alloc&) { recovery_error = "out_of_memory"; }
+              catch (...) { recovery_error = "backend_rebuild_exception"; }
+            std::lock_guard<std::mutex> lock(registry_mutex);
+            engine->ready = recovered;
+            engine->recovery_error = recovered ? "" : recovery_error;
+            try { push_event(*job, recovered ? "recovery_completed" : "recovery_failed",
+                             job->page_current); } catch (...) { ++job->events_dropped; }
+        }
         std::lock_guard<std::mutex> lock(registry_mutex);
+        DocOcrStatus status = DOCOCR_OK;
+        try {
+            if (input->format == DOCOCR_DOCUMENT_PDF) job->error_request_id = "document";
+            if (job->plan)
+                job->manifest = manifest_json(*job->plan, result,
+                    engine->backend && engine->ready ? engine->backend->profile() : executed_profile);
+            if (!pdf_manifest.empty() && job->manifest.empty()) {
+                std::string manifest_status = result.code == dococr::RunCode::Ok ? "ok" :
+                    result.code == dococr::RunCode::Blank ? "blank" :
+                    result.code == dococr::RunCode::Partial ? "partial" :
+                    result.code == dococr::RunCode::Cancelled ? "cancelled" :
+                    result.code == dococr::RunCode::BudgetExceeded ? "budget_exceeded" : "failed";
+                job->manifest = "{\"schema_version\":\"1.1\",\"job_status\":" +
+                    dococr::json_quote(manifest_status) + ",\"pdf\":" + pdf_manifest + "}";
+            }
+            else if (!pdf_manifest.empty() && !job->manifest.empty()) {
+                job->manifest.pop_back();
+                job->manifest += ",\"pdf\":" + pdf_manifest + "}";
+            }
+            switch (result.code) {
+            case dococr::RunCode::Ok: job->state = "completed"; break;
+            case dococr::RunCode::Partial: job->state = "partial"; break;
+            case dococr::RunCode::Blank: job->state = "blank"; break;
+            case dococr::RunCode::InputError:
+                job->state = "failed"; job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" : "decode";
+                job->error_code = result.error_code.empty() ? "input_error" : result.error_code;
+                job->error_message = result.error_message.empty() ? "invalid input" : result.error_message;
+                status = DOCOCR_INPUT_ERROR; break;
+            case dococr::RunCode::Unsupported:
+                job->state = "failed"; job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" :
+                    job->plan && job->plan->layout_only ? "layout" : "inference";
+                job->error_code = result.error_code.empty() ? "unsupported_backend" : result.error_code;
+                job->error_message = result.error_message.empty() ? "no production model backend configured" : result.error_message;
+                status = DOCOCR_UNSUPPORTED; break;
+            case dococr::RunCode::Cancelled:
+                job->state = job->timed_out ? "timed_out" : "cancelled";
+                job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" : "inference";
+                job->error_code = job->timed_out ? "timeout" : "cancelled";
+                job->error_message = job->timed_out ? "job deadline exceeded" : "job cancelled";
+                status = job->timed_out ? DOCOCR_TIMEOUT : DOCOCR_CANCELLED; break;
+            case dococr::RunCode::Failed:
+                job->state = "failed";
+                job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" :
+                    result.error_code.rfind("layout_", 0) == 0 ||
+                    (job->plan && job->plan->layout_only) ? "layout" : "inference";
+                job->error_code = result.error_code.empty() ? "inference_error" : result.error_code;
+                job->error_message = result.error_message.empty() ? "inference contract failed" : result.error_message;
+                status = DOCOCR_FAILED; break;
+            case dococr::RunCode::BudgetExceeded:
+                job->state = "failed"; job->error_stage = "budget";
+                job->error_code = input->format == DOCOCR_DOCUMENT_PDF && !result.error_code.empty() ?
+                    result.error_code : "budget_exceeded";
+                job->error_message = input->format == DOCOCR_DOCUMENT_PDF && !result.error_message.empty() ?
+                    result.error_message : result.budget_stage;
+                status = DOCOCR_BUDGET_EXCEEDED; break;
+            }
+            if (status == DOCOCR_OK) {
+                job->output = std::move(result.output);
+                job->has_result = true;
+            }
+            if (job->timed_out && !job->manifest.empty()) {
+                job->manifest.pop_back();
+                job->manifest += ",\"control_status\":\"timed_out\"}";
+            }
+            if (!engine->ready && !job->manifest.empty()) {
+                job->manifest.pop_back();
+                job->manifest += ",\"recovery\":{\"status\":\"failed\",\"error\":" +
+                    dococr::json_quote(engine->recovery_error) + "}}";
+            }
+        } catch (const std::bad_alloc&) {
+            status = DOCOCR_FAILED;
+            job->state = "failed";
+            job->error_code = "out_of_memory";
+            job->error_stage = "finalization";
+            job->has_result = false;
+            engine->ready = false;
+            engine->recovery_error = "oom";
+        } catch (...) {
+            status = DOCOCR_FAILED;
+            job->state = "failed";
+            job->error_code = "finalization_failed";
+            job->error_stage = "finalization";
+            job->has_result = false;
+            engine->ready = false;
+            engine->recovery_error = "failed";
+        }
+        try { push_event(*job, "terminal", job->page_current); } catch (...) { ++job->events_dropped; }
         job->running = false;
         engine->running = false;
-        if (input->format == DOCOCR_DOCUMENT_PDF) job->error_request_id = "document";
-        if (job->plan && engine->backend)
-            job->manifest = manifest_json(*job->plan, result, engine->backend->profile());
-        if (!pdf_manifest.empty() && job->manifest.empty()) {
-            std::string status = result.code == dococr::RunCode::Ok ? "ok" :
-                result.code == dococr::RunCode::Blank ? "blank" :
-                result.code == dococr::RunCode::Partial ? "partial" :
-                result.code == dococr::RunCode::BudgetExceeded ? "budget_exceeded" : "failed";
-            job->manifest = "{\"schema_version\":\"1.1\",\"job_status\":" +
-                dococr::json_quote(status) + ",\"pdf\":" + pdf_manifest + "}";
-        }
-        else if (!pdf_manifest.empty() && !job->manifest.empty()) {
-            job->manifest.pop_back();
-            job->manifest += ",\"pdf\":" + pdf_manifest + "}";
-        }
-        switch (result.code) {
-        case dococr::RunCode::Ok: job->state = "completed"; break;
-        case dococr::RunCode::Partial: job->state = "partial"; break;
-        case dococr::RunCode::Blank: job->state = "blank"; break;
-        case dococr::RunCode::InputError:
-            job->state = "failed"; job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" : "decode";
-            job->error_code = result.error_code.empty() ? "input_error" : result.error_code;
-            job->error_message = result.error_message.empty() ? "invalid input" : result.error_message;
-            return DOCOCR_INPUT_ERROR;
-        case dococr::RunCode::Unsupported:
-            job->state = "failed"; job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" :
-                job->plan && job->plan->layout_only ? "layout" : "inference";
-            job->error_code = result.error_code.empty() ? "unsupported_backend" : result.error_code;
-            job->error_message = result.error_message.empty() ? "no production model backend configured" : result.error_message;
-            return DOCOCR_UNSUPPORTED;
-        case dococr::RunCode::Cancelled:
-            job->state = "cancelled"; job->error_stage = "inference";
-            job->error_code = "cancelled"; job->error_message = "job cancelled";
-            return DOCOCR_CANCELLED;
-        case dococr::RunCode::Failed:
-            job->state = "failed";
-            job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" :
-                result.error_code.rfind("layout_", 0) == 0 ||
-                (job->plan && job->plan->layout_only) ? "layout" : "inference";
-            job->error_code = result.error_code.empty() ? "inference_error" : result.error_code;
-            job->error_message = result.error_message.empty() ? "inference contract failed" : result.error_message;
-            return DOCOCR_FAILED;
-        case dococr::RunCode::BudgetExceeded:
-            job->state = "failed"; job->error_stage = "budget";
-            job->error_code = input->format == DOCOCR_DOCUMENT_PDF && !result.error_code.empty() ?
-                result.error_code : "budget_exceeded";
-            job->error_message = input->format == DOCOCR_DOCUMENT_PDF && !result.error_message.empty() ?
-                result.error_message : result.budget_stage;
-            return DOCOCR_BUDGET_EXCEEDED;
-        }
-        job->output = std::move(result.output);
-        job->has_result = true;
-        return DOCOCR_OK;
+        job->cv.notify_all();
+        cleanup.committed = true;
+        return status;
     });
 }
 
@@ -487,8 +706,59 @@ DocOcrStatus dococr_job_cancel(DocOcrJob handle) {
         std::lock_guard<std::mutex> lock(registry_mutex);
         auto it = jobs.find(handle);
         if (it == jobs.end()) return DOCOCR_INVALID_HANDLE;
+        if (it->second->started && !it->second->running) return DOCOCR_INVALID_ARGUMENT;
+        if (it->second->execution_done) return DOCOCR_BUSY;
         it->second->cancelled = true;
+        if (it->second->running) {
+            it->second->state = "cancelling";
+            try { push_event(*it->second, "cancel_requested", it->second->page_current); }
+            catch (...) { ++it->second->events_dropped; }
+        }
         return DOCOCR_OK;
+    });
+}
+
+DocOcrStatus dococr_job_status(DocOcrJob handle, DocOcrBytes* out_json) {
+    return guarded([&] {
+        if (!out_json) return DOCOCR_INVALID_ARGUMENT;
+        *out_json = {};
+        std::lock_guard<std::mutex> lock(registry_mutex);
+        auto it = jobs.find(handle);
+        if (it == jobs.end()) return DOCOCR_INVALID_HANDLE;
+        auto engine = engines.find(it->second->engine);
+        if (engine == engines.end()) return DOCOCR_INVALID_HANDLE;
+        std::string content = status_json(*it->second, *engine->second);
+        *out_json = copy_bytes(content.data(), content.size());
+        return DOCOCR_OK;
+    });
+}
+
+DocOcrStatus dococr_job_next_event(DocOcrJob handle, DocOcrBytes* out_json) {
+    return guarded([&] {
+        if (!out_json) return DOCOCR_INVALID_ARGUMENT;
+        *out_json = {};
+        std::lock_guard<std::mutex> lock(registry_mutex);
+        auto it = jobs.find(handle);
+        if (it == jobs.end()) return DOCOCR_INVALID_HANDLE;
+        if (it->second->events.empty()) return DOCOCR_NO_RESULT;
+        const std::string& content = it->second->events.front();
+        *out_json = copy_bytes(content.data(), content.size());
+        it->second->events.pop_front();
+        return DOCOCR_OK;
+    });
+}
+
+DocOcrStatus dococr_job_wait(DocOcrJob handle, uint32_t timeout_ms) {
+    return guarded([&] {
+        std::unique_lock<std::mutex> lock(registry_mutex);
+        auto it = jobs.find(handle);
+        if (it == jobs.end()) return DOCOCR_INVALID_HANDLE;
+        auto job = it->second;
+        if (!job->started) return DOCOCR_NO_RESULT;
+        if (!job->running) return DOCOCR_OK;
+        if (!timeout_ms) return DOCOCR_BUSY;
+        return job->cv.wait_for(lock, std::chrono::milliseconds(timeout_ms),
+                                [&] { return !job->running; }) ? DOCOCR_OK : DOCOCR_BUSY;
     });
 }
 

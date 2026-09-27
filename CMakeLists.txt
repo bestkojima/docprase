@@ -84,4 +84,8 @@ if(DOCOCR_BUILD_TESTS)
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/pdf_abi.py $<TARGET_FILE:dococr_c_test>)
   add_test(NAME printed_page_cancel COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_cancel.py $<TARGET_FILE:dococr_c_test>)
+  add_test(NAME job_control COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/job_control.py $<TARGET_FILE:dococr_c_test>)
+  add_test(NAME cli_job_control COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/cli_job_control.py $<TARGET_FILE:dococr_cli_fixture>)
 endif()

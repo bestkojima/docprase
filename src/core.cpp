@@ -1192,7 +1192,8 @@ std::vector<uint8_t> layout_page_mask(const Image& image, const RawLayoutCandida
 }
 
 RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::atomic_bool& cancelled,
-                          const ExecutionPlan* plan, RunResult audit) {
+                          const ExecutionPlan* plan, RunResult audit,
+                          uint32_t source_page, const ProgressCallback& progress) {
     using Clock = std::chrono::steady_clock;
     const bool transcribe = plan && (plan->backend == "mnn:pp-doclayout-v3+ovisocr2" ||
         plan->backend.rfind("fixture:printed_page", 0) == 0);
@@ -1200,7 +1201,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         (transcribe && (!backend->capabilities().generation || !backend->capabilities().isolated_sessions)) ||
         backend->capabilities().max_concurrent_requests != 1)
         return {RunCode::Unsupported, {}};
-    if (cancelled) return {RunCode::Cancelled, {}};
+    if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
     auto start = Clock::now();
     TensorRequest request;
     request.inputs.push_back(layout_image_tensor(image));
@@ -1214,16 +1215,18 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     audit.did_normalize = true;
     ExecutionContext context{cancelled};
     InferenceResponse response;
+    if (progress) progress("layout_started", source_page ? source_page : 1, "", 0, 0);
     try { response = backend->execute({"layout-" + page_id(), std::move(request)}, context); }
+    catch (const std::bad_alloc&) { throw; }
     catch (const std::exception& e) {
-        audit.code = RunCode::Failed;
-        audit.error_code = "layout_inference_failed";
+        audit.code = cancelled ? RunCode::Cancelled : RunCode::Failed;
+        audit.error_code = cancelled ? "layout_interrupted_error" : "layout_inference_failed";
         audit.error_message = "版面推理异常：" + std::string(e.what());
         audit.layout_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
         return audit;
     }
     audit.layout_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
-    if (cancelled) return {RunCode::Cancelled, {}};
+    if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
     auto* output = std::get_if<TensorOutput>(&response.payload);
     std::vector<RawLayoutCandidate> records;
     const uint8_t* masks = nullptr;
@@ -1234,6 +1237,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         return audit;
     }
     audit.did_layout = true;
+    if (progress) progress("layout_completed", source_page ? source_page : 1, "", 0, 0);
     for (const auto& tensor : output->outputs) {
         if (tensor.name == "fetch_name_0")
             audit.output.assets.push_back({page_asset("fetch_name_0.f32"), tensor.data});
@@ -1281,8 +1285,14 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         result.assets.push_back({mutable_candidate.mask_asset, std::move(mask_png)});
     }
     bool recognition_unavailable = false;
+    uint32_t region_total = 0, region_done = 0;
+    for (const auto* candidate : selected)
+        if (records[size_t(candidate->id)].handling_reason.empty() &&
+            (canonical_label(candidate->class_id) == "text" ||
+             canonical_label(candidate->class_id) == "formula" ||
+             canonical_label(candidate->class_id) == "table")) ++region_total;
     for (const auto* candidate : selected) {
-        if (cancelled) return {RunCode::Cancelled, {}};
+        if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
         if (!records[size_t(candidate->id)].handling_reason.empty())
             continue;
         Block block;
@@ -1310,6 +1320,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             const std::string request_id = "req" + block.region_id;
             RunResult::RegionRun region{request_id, "skipped", block.error, 0};
             if (block.type == "text" || block.type == "formula" || block.type == "table") {
+                if (progress) progress("region_started", source_page ? source_page : 1,
+                                       request_id, region_done, region_total);
                 block.untrusted_output = true;
                 auto region_start = Clock::now();
                 if (recognition_unavailable) {
@@ -1329,7 +1341,13 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                         auto response = backend->execute({request_id, GenerationRequest{
                             std::move(crop), block.box, block.type, request_id,
                             plan->max_new_tokens}}, context);
-                        if (cancelled) return {RunCode::Cancelled, {}};
+                        if (cancelled) {
+                            region.status = "cancelled";
+                            region.stop_reason = "cancelled_after_backend_call";
+                            audit.regions.push_back(std::move(region));
+                            audit.code = RunCode::Cancelled;
+                            return audit;
+                        }
                         auto* generation = std::get_if<GenerationOutput>(&response.payload);
                         if (!generation) {
                             recognition_unavailable = true;
@@ -1407,6 +1425,11 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                 audit.recognition_ms += region.elapsed_ms;
             }
             audit.regions.push_back(std::move(region));
+            if (block.type == "text" || block.type == "formula" || block.type == "table") {
+                ++region_done;
+                if (progress) progress("region_completed", source_page ? source_page : 1,
+                                       request_id, region_done, region_total);
+            }
         }
         if (transcribe && block.type == "table" && block.status != "ok") {
             block.text.clear();
@@ -1423,13 +1446,14 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     }
     const ReadingOrderEvidence order_evidence = arrange_reading_order(blocks, image.width);
     const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.width, image.height);
-    if (cancelled) return {RunCode::Cancelled, {}};
+    if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
     const std::string overlay_name = page_asset("layout-overlay.png");
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
     bool incomplete = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.status != "ok"; });
     const std::string state = records.empty() ? "blank" :
         (blocks.empty() || incomplete) ? "partial" : "ok";
     start = Clock::now();
+    if (progress) progress("export_started", source_page ? source_page : 1, "", region_done, region_total);
     for (const auto& block : blocks) {
         if (!result.markdown.empty()) result.markdown += "\n\n";
         result.markdown += render(block);
@@ -1438,6 +1462,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     result.json = serialize(image, state, blocks, backend->profile(), &records,
                             overlay_name, ownership, transcribe, &order_evidence, semantic);
     audit.did_export = true;
+    if (progress) progress("export_completed", source_page ? source_page : 1, "", region_done, region_total);
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
     uint64_t bytes = result.json.size() + result.markdown.size();
     for (const auto& asset : result.assets) bytes += asset.png.size();
@@ -1454,7 +1479,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
 } // namespace
 
 RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled,
-                   const ExecutionPlan* plan, uint32_t source_page) {
+                   const ExecutionPlan* plan, uint32_t source_page,
+                   const ProgressCallback& progress) {
     PageScope page_scope(source_page);
     using Clock = std::chrono::steady_clock;
     auto elapsed = [](Clock::time_point from) {
@@ -1465,6 +1491,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     Image image;
     if (!decode(input, image)) return {RunCode::InputError, {}};
     audit.did_decode = true;
+    if (progress) progress("decode_completed", source_page ? source_page : 1, "", 0, 0);
     audit.page_pixels = uint64_t(image.width) * image.height;
     audit.decode_ms = elapsed(start);
     if (plan && audit.page_pixels > plan->max_page_pixels) {
@@ -1475,10 +1502,10 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     if (!backend) return {RunCode::Unsupported, {}};
     if (plan && (plan->layout_only || plan->backend == "mnn:pp-doclayout-v3+ovisocr2" ||
                  plan->backend.rfind("fixture:printed_page", 0) == 0))
-        return run_layout_only(backend, image, cancelled, plan, audit);
+        return run_layout_only(backend, image, cancelled, plan, audit, source_page, progress);
     if (!backend->capabilities().tensor || !backend->capabilities().generation ||
         backend->capabilities().max_concurrent_requests < 1) return {RunCode::Unsupported, {}};
-    if (cancelled) return {RunCode::Cancelled, {}};
+    if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
     ExecutionContext context{cancelled};
     Tensor page_tensor{"page_rgb", DataType::UInt8, TensorLayout::HWC,
                        {image.height, image.width, 3}, image.rgb};
@@ -1494,12 +1521,14 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         audit.did_normalize = true;
     }
     start = Clock::now();
+    if (progress) progress("layout_started", source_page ? source_page : 1, "", 0, 0);
     auto response = backend->execute({"layout-" + page_id(), TensorRequest{{std::move(page_tensor)}, {"layout_candidates"}}}, context);
     audit.layout_ms = elapsed(start);
-    if (cancelled) return {RunCode::Cancelled, {}};
+    if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
     auto* layout = std::get_if<TensorOutput>(&response.payload);
     if (!layout) return {RunCode::Failed, {}};
     audit.did_layout = true;
+    if (progress) progress("layout_completed", source_page ? source_page : 1, "", 0, 0);
     std::vector<LayoutCandidate> candidates;
     if (!decode_layout(*layout, candidates)) return {RunCode::Failed, {}};
     start = Clock::now();
@@ -1520,8 +1549,11 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     JobOutput output;
     bool partial = false;
     bool recognition_unavailable = false;
+    uint32_t region_total = 0, region_done = 0;
+    for (const auto& candidate : candidates)
+        if (candidate.label == "text" || candidate.label == "formula" || candidate.label == "table") ++region_total;
     for (const auto& candidate : candidates) {
-        if (cancelled) return {RunCode::Cancelled, {}};
+        if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
         size_t n = blocks.size() + 1;
         Block block;
         block.id = id('b', n); block.layout_id = id('l', n); block.region_id = id('r', n);
@@ -1536,6 +1568,9 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
             audit.did_crop = true;
             output.assets.push_back({block.resource, crop_png(image, block.box)});
         } else if (block.type == "text" || block.type == "formula" || block.type == "table") {
+            const std::string request_id = "req" + block.region_id;
+            if (progress) progress("region_started", source_page ? source_page : 1,
+                                   request_id, region_done, region_total);
             Image crop = crop_rgb(image, block.box);
             audit.did_crop = true;
             GenerationOutput generation;
@@ -1567,7 +1602,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
                   if (!reset_completed) audit.reset_failed = true;
                   recognition_unavailable = true;
               }
-            if (cancelled) return {RunCode::Cancelled, {}};
+            if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
             bool text_valid = valid_utf8(generation.text);
             bool raw_valid = valid_utf8(generation.raw_output);
             bool error_valid = valid_utf8(generation.error);
@@ -1588,6 +1623,9 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
                 output.assets.push_back({block.resource, crop_png(image, block.box)});
                 partial = true;
             } else block.text = generation.text;
+            ++region_done;
+            if (progress) progress("region_completed", source_page ? source_page : 1,
+                                   request_id, region_done, region_total);
         } else {
             block.status = "skipped";
             block.error = "unsupported layout label";
@@ -1600,6 +1638,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     }
     audit.recognition_ms = elapsed(start);
     start = Clock::now();
+    if (progress) progress("export_started", source_page ? source_page : 1, "", region_done, region_total);
     std::string state = candidates.empty() ? "blank" : partial ? "partial" : "ok";
     for (const auto& block : blocks) {
         if (!output.markdown.empty()) output.markdown += "\n\n";
@@ -1608,6 +1647,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     if (!output.markdown.empty()) output.markdown += '\n';
     output.json = serialize(image, state, blocks, backend->profile());
     audit.did_export = true;
+    if (progress) progress("export_completed", source_page ? source_page : 1, "", region_done, region_total);
     audit.export_ms = elapsed(start);
     if (plan) {
         uint64_t output_size = output.json.size() + output.markdown.size();

@@ -1,7 +1,10 @@
 #include "backend_factory.hpp"
 #include "config.hpp"
 #include <chrono>
+#include <atomic>
 #include <cstring>
+#include <filesystem>
+#include <fstream>
 #include <stdexcept>
 #include <thread>
 namespace dococr {
@@ -16,6 +19,14 @@ public:
     }
     bool load(const BackendLoadSpec& spec) override {
         if (spec.backend_id != "fixture:" + scenario_) return false;
+        if (scenario_ == "printed_page_rebuild_failure") {
+            static std::atomic_uint loads{0};
+            if (loads.fetch_add(1) != 0) return false;
+        }
+        if (scenario_ == "printed_page_finalization_oom") {
+            static std::atomic_uint loads{0};
+            rebuilt_for_oom_ = loads.fetch_add(1) != 0;
+        }
         loaded_.clear();
         for (const auto& artifact : spec.artifacts) {
             if (artifact.contract_status != "verified_fixture" ||
@@ -32,6 +43,9 @@ public:
     std::vector<ArtifactInfo> loaded_artifacts() const override { return loaded_; }
     const EngineCapabilities& capabilities() const override { return capabilities_; }
     std::string profile() const override {
+        if (scenario_ == "printed_page_finalization_oom" && rebuilt_for_oom_ &&
+            ++profile_calls_ == 1)
+            throw std::bad_alloc();
         if (loaded_.empty()) return "test_fixture";
         std::string profile = "test_fixture";
         for (const auto& artifact : loaded_)
@@ -40,6 +54,14 @@ public:
     }
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
+            if (scenario_ == "printed_page_layout_gate_error") {
+                const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
+                const char* entered = std::getenv("DOCOCR_TEST_ENTERED_PATH");
+                if (entered) std::ofstream(entered).put('1');
+                if (gate) while (std::filesystem::exists(gate))
+                    std::this_thread::sleep_for(std::chrono::milliseconds(2));
+                if (context.cancelled) throw std::runtime_error("controlled_interrupt_failure");
+            }
             if (scenario_.rfind("printed_page", 0) == 0 ||
                 scenario_ == "layout_contract" || scenario_ == "layout_table" ||
                 scenario_ == "layout_inline_formula" ||
@@ -235,6 +257,29 @@ public:
         }
         const auto& generation = std::get<GenerationRequest>(request.payload);
         if (scenario_.rfind("printed_page", 0) == 0) {
+            if (scenario_ == "printed_page_gate") {
+                const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
+                const char* entered = std::getenv("DOCOCR_TEST_ENTERED_PATH");
+                const char* gate_page = std::getenv("DOCOCR_TEST_GATE_PAGE");
+                if (!gate_page || generation.request_id.find(std::string("p000") + gate_page) != std::string::npos) {
+                    if (entered) std::ofstream(entered).put('1');
+                    if (gate) while (std::filesystem::exists(gate))
+                        std::this_thread::sleep_for(std::chrono::milliseconds(2));
+                }
+            }
+            if (scenario_ == "printed_page_oom_once") {
+                static std::atomic_bool failed{false};
+                if (!failed.exchange(true)) throw std::bad_alloc();
+            }
+            if (scenario_ == "printed_page_fail_once") {
+                static std::atomic_bool failed{false};
+                if (!failed.exchange(true))
+                    return {GenerationOutput{"", "controlled raw", "failed",
+                                             "controlled_failure", "error"}};
+            }
+            if (scenario_ == "printed_page_rebuild_failure" && generation.source_box.y0 == 0)
+                return {GenerationOutput{"", "rebuild failure raw", "failed",
+                                         "controlled_failure", "error"}};
             if (scenario_ == "printed_page_slow")
                 std::this_thread::sleep_for(std::chrono::milliseconds(800));
             if (scenario_ == "printed_page_invalid_utf8" && generation.source_box.y0 == 0)
@@ -411,6 +456,8 @@ private:
     std::string scenario_;
     std::vector<ArtifactInfo> loaded_;
     int reset_count_ = 0;
+    mutable int profile_calls_ = 0;
+    bool rebuilt_for_oom_ = false;
 };
 bool config_supported(const std::string& config) {
     return config.rfind("fixture:printed_page_reading", 0) == 0 ||
@@ -424,6 +471,12 @@ bool config_supported(const std::string& config) {
            config == "fixture:layout_inline_formula" ||
            config == "fixture:layout_empty" ||
            config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||
+           config == "fixture:printed_page_gate" ||
+           config == "fixture:printed_page_layout_gate_error" ||
+           config == "fixture:printed_page_oom_once" ||
+           config == "fixture:printed_page_fail_once" ||
+           config == "fixture:printed_page_rebuild_failure" ||
+           config == "fixture:printed_page_finalization_oom" ||
            config == "fixture:printed_page_failure" || config == "fixture:printed_page_empty" ||
            config == "fixture:printed_page_truncated" ||
            config == "fixture:printed_page_invalid_utf8" ||

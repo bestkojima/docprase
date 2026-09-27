@@ -77,7 +77,7 @@ Json geometry_json(uint32_t page, uint32_t dpi, const PdfGeometry& geometry) {
 PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                      uint32_t first_page, uint32_t last_page, uint32_t dpi,
                      uint64_t request_max_pixels, std::atomic_bool& cancelled,
-                     const ExecutionPlan* plan) {
+                     const ExecutionPlan* plan, const ProgressCallback& progress) {
     PdfJobResult result;
     result.run.code = RunCode::InputError;
     auto document_start = Clock::now();
@@ -115,8 +115,25 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
         bool budget_failed = false;
         std::string first_failure_code, first_failure_message;
         std::string first_budget_code, first_budget_message;
+        auto cancel_with_evidence = [&](const Json* in_flight = nullptr) {
+            if (in_flight) {
+                Json interrupted = *in_flight;
+                interrupted["status"] = "cancelled";
+                page_runs.push_back(std::move(interrupted));
+            }
+            result.run.code = RunCode::Cancelled;
+            result.manifest_pdf = Json{{"source_sha256", source_hash},
+                {"page_count", renderer.page_count()}, {"selected_pages", {first, last}},
+                {"dpi", dpi}, {"renderer", "poppler"},
+                {"renderer_version", renderer.version()}, {"pages", page_runs},
+                {"completed_pages", in_flight ? page_runs.size() - 1 : page_runs.size()},
+                {"total_wall_ms", milliseconds(document_start)}}.dump();
+            return result;
+        };
+        const uint32_t selected_count = last - first + 1;
         for (uint32_t page = first; page <= last; ++page) {
-            if (cancelled) { result.run.code = RunCode::Cancelled; return result; }
+            if (cancelled) return cancel_with_evidence();
+            if (progress) progress("page_started", page, "", page - first, selected_count);
             auto page_start = Clock::now();
             Json record = {{"page_id", pdf_page_id(page)}, {"pdf_page_number", page},
                            {"geometry_ms", 0}, {"render_ms", 0}, {"pipeline_ms", 0},
@@ -126,6 +143,10 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
             try {
                 PdfGeometry size = renderer.geometry(page, dpi);
                 record["geometry_ms"] = milliseconds(page_start);
+                if (cancelled) {
+                    record["total_ms"] = milliseconds(page_start);
+                    return cancel_with_evidence(&record);
+                }
                 geometry = geometry_json(page, dpi, size);
                 record["estimated_raster_pixels"] = size.estimated_pixels;
                 if (size.estimated_pixels > max_pixels) {
@@ -135,14 +156,27 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                 auto render_start = Clock::now();
                 auto png = renderer.render(page, dpi);
                 record["render_ms"] = milliseconds(render_start);
+                if (cancelled) {
+                    record["total_ms"] = milliseconds(page_start);
+                    return cancel_with_evidence(&record);
+                }
                 raster_size = png_raster_size(png);
                 record["raster_size"] = raster_size;
                 auto pipeline_start = Clock::now();
                 InputView page_input{png.data(), png.size(), DOCOCR_IMAGE_PNG, 0, 0, 0};
-                RunResult run = run_page(backend, page_input, cancelled, plan, page);
+                RunResult run = run_page(backend, page_input, cancelled, plan, page, progress);
                 record["pipeline_ms"] = milliseconds(pipeline_start);
                 if (run.code == RunCode::Cancelled) {
-                    result.run.code = RunCode::Cancelled; return result;
+                    record["pipeline_status"] = "cancelled";
+                    record["decode_ms"] = run.decode_ms;
+                    record["layout_ms"] = run.layout_ms;
+                    record["recognition_ms"] = run.recognition_ms;
+                    record["regions"] = Json::array();
+                    for (const auto& region : run.regions)
+                        record["regions"].push_back({{"request_id", region.request_id},
+                            {"status", region.status}, {"stop_reason", region.stop_reason}});
+                    record["total_ms"] = milliseconds(page_start);
+                    return cancel_with_evidence(&record);
                 }
                 record["pipeline_status"] = run.code == RunCode::Ok ? "ok" :
                     run.code == RunCode::Partial ? "partial" : run.code == RunCode::Blank ? "blank" :
@@ -210,6 +244,10 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                     throw PdfError(code, run.error_message.empty() ? run.budget_stage : run.error_message);
                 }
             } catch (const PdfError& error) {
+                if (cancelled) {
+                    record["total_ms"] = milliseconds(page_start);
+                    return cancel_with_evidence(&record);
+                }
                 ++failure_count;
                 if (first_failure_code.empty()) {
                     first_failure_code = error.code;
@@ -223,7 +261,12 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                 markdown += "## 第 " + std::to_string(page) + " 页\n\n> 页面失败：" + error.code + "\n\n";
                 record["status"] = "failed";
                 record["error"] = {{"code", error.code}, {"message", error.what()}};
-            } catch (const std::exception& error) {
+            } catch (const std::bad_alloc&) { throw; }
+              catch (const std::exception& error) {
+                if (cancelled) {
+                    record["total_ms"] = milliseconds(page_start);
+                    return cancel_with_evidence(&record);
+                }
                 ++failure_count;
                 if (first_failure_code.empty()) {
                     first_failure_code = "pdf_page_failed";
@@ -237,6 +280,8 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
             record["total_ms"] = milliseconds(page_start);
             record["rss_after_bytes"] = rss_bytes();
             page_runs.push_back(std::move(record));
+            if (progress) progress("page_completed", page, "", page - first + 1, selected_count);
+            if (cancelled) return cancel_with_evidence();
             if (page == std::numeric_limits<uint32_t>::max()) break;
         }
         document["status"] = failure_count || partial_count ? "partial" :

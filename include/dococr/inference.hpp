@@ -2,6 +2,7 @@
 #define DOCOCR_INFERENCE_HPP
 #include <atomic>
 #include <cstdint>
+#include <functional>
 #include <memory>
 #include <string>
 #include <variant>
@@ -97,7 +98,9 @@ struct InputView {
     size_t row_stride;
 };
 struct ExecutionPlan;
+using ProgressCallback = std::function<void(const char*, uint32_t, const std::string&, uint32_t, uint32_t)>;
 RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled,
-                   const ExecutionPlan* plan = nullptr, uint32_t source_page = 0);
+                   const ExecutionPlan* plan = nullptr, uint32_t source_page = 0,
+                   const ProgressCallback& progress = {});
 } // namespace dococr
 #endif
