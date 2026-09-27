@@ -42,7 +42,8 @@ typedef enum {
     DOCOCR_IMAGE_PNG = 1,
     DOCOCR_IMAGE_JPEG = 2,
     DOCOCR_IMAGE_RGB8 = 3,
-    DOCOCR_IMAGE_GRAY8 = 4
+    DOCOCR_IMAGE_GRAY8 = 4,
+    DOCOCR_DOCUMENT_PDF = 5
 } DocOcrImageFormat;
 
 typedef struct {
@@ -53,6 +54,11 @@ typedef struct {
     uint32_t width;
     uint32_t height;
     size_t row_stride;
+    /* 仅 PDF 使用。页号从 1 开始且含终点；0 表示默认（首页/末页）。 */
+    uint32_t first_page;
+    uint32_t last_page;
+    uint32_t dpi;
+    uint64_t max_page_pixels;
 } DocOcrInput;
 
 typedef struct {

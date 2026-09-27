@@ -98,6 +98,6 @@ struct InputView {
 };
 struct ExecutionPlan;
 RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled,
-                   const ExecutionPlan* plan = nullptr);
+                   const ExecutionPlan* plan = nullptr, uint32_t source_page = 0);
 } // namespace dococr
 #endif

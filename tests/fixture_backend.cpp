@@ -169,6 +169,12 @@ public:
                     scenario_ == "layout_contract" ? 7 :
                     scenario_ == "layout_table" ? 2 :
                     scenario_ == "layout_inline_formula" ? 2 : 0;
+                if (scenario_ == "printed_page_reading_pdf_mixed") {
+                    float first_red = 0;
+                    std::memcpy(&first_red, layout->inputs[0].data.data(), sizeof(first_red));
+                    if (first_red < 0.1f) throw std::runtime_error("controlled_pdf_page_failure");
+                    if (first_red > 0.8f && first_red < 0.95f) count = 0;
+                }
                 std::vector<int32_t> masks(300*200*200);
                 if (scenario_ == "layout_contract") {
                     masks[66] = 1;
@@ -236,7 +242,10 @@ public:
             GenerationOutput result;
             result.elapsed_ms = 2;
             if (scenario_.rfind("printed_page_reading", 0) == 0) {
-                result.text = result.raw_output = generation.task == "table" ?
+                result.text = result.raw_output =
+                    scenario_ == "printed_page_reading_pdf_literals" &&
+                    generation.source_box.x0 == 5 && generation.source_box.y0 == 10 ?
+                    "字面 b0001 p0001 assets/p0001-b0001.png" : generation.task == "table" ?
                     "<table><tr><td>值</td></tr></table>" :
                     generation.source_box.x0 == 60 && generation.source_box.y0 == 79 ?
                         scenario_ == "printed_page_reading_table_prose" ? "表明上述结果" : "表1 统计" :

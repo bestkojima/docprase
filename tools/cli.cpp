@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
+#include <limits>
 #include <string>
 #include <vector>
 
@@ -16,19 +17,29 @@ bool write_file(const fs::path& path, const DocOcrBytes& bytes) {
 }
 bool write_audit(const fs::path& output_path, DocOcrHandle engine, DocOcrJob job) {
     DocOcrBytes plan{}, manifest{};
-    bool ok = dococr_execution_plan(engine, &plan) == DOCOCR_OK &&
-              dococr_job_manifest(job, &manifest) == DOCOCR_OK;
-    if (ok) ok = write_file(output_path / "execution-plan.json", plan) &&
-                 write_file(output_path / "run-manifest.json", manifest);
+    DocOcrStatus plan_status = dococr_execution_plan(engine, &plan);
+    DocOcrStatus manifest_status = dococr_job_manifest(job, &manifest);
+    bool ok = manifest_status == DOCOCR_OK &&
+              (plan_status == DOCOCR_NO_RESULT || plan_status == DOCOCR_OK);
+    if (ok && plan_status == DOCOCR_OK)
+        ok = write_file(output_path / "execution-plan.json", plan);
+    if (ok) ok = write_file(output_path / "run-manifest.json", manifest);
     if (plan.data) dococr_bytes_free(&plan);
     if (manifest.data) dococr_bytes_free(&manifest);
     return ok;
 }
+uint64_t positive_number(const std::string& value) {
+    if (value.empty() || value.find_first_not_of("0123456789") != std::string::npos)
+        throw std::invalid_argument("PDF 参数须为正整数");
+    uint64_t number = std::stoull(value);
+    if (!number) throw std::invalid_argument("PDF 参数须为正整数");
+    return number;
+}
 }
 int main(int argc, char** argv) {
-    if (argc != 7 || (std::string(argv[1]) != "--backend" && std::string(argv[1]) != "--config") ||
+    if (argc < 7 || argc % 2 == 0 || (std::string(argv[1]) != "--backend" && std::string(argv[1]) != "--config") ||
         std::string(argv[3]) != "--input" || std::string(argv[5]) != "--out") {
-        std::cerr << "用法：dococr_cli (--backend none | --config config.json) --input page.png --out 输出目录\n";
+        std::cerr << "用法：dococr_cli (--backend NAME | --config config.json) --input 文件 --out 输出目录 [--pages 首-末] [--dpi 72..600] [--max-page-pixels 正整数]\n";
         return 2;
     }
     try {
@@ -42,11 +53,40 @@ int main(int argc, char** argv) {
         fs::path input_path = fs::u8path(argv[4]);
         fs::path output_path = fs::u8path(argv[6]);
         std::ifstream input_file(input_path, std::ios::binary);
-        if (!input_file) { std::cerr << "无法打开输入图片\n"; return 2; }
+        if (!input_file) { std::cerr << "无法打开输入文件\n"; return 2; }
         std::vector<uint8_t> image((std::istreambuf_iterator<char>(input_file)), {});
-        uint32_t format = image.size() >= 8 &&
+        uint32_t format = image.size() >= 5 &&
+            std::string(reinterpret_cast<const char*>(image.data()), 5) == "%PDF-"
+            ? DOCOCR_DOCUMENT_PDF : image.size() >= 8 &&
             std::string(reinterpret_cast<const char*>(image.data()), 8) == std::string("\x89PNG\r\n\x1a\n", 8)
             ? DOCOCR_IMAGE_PNG : DOCOCR_IMAGE_JPEG;
+        DocOcrInput request{sizeof(DocOcrInput), image.data(), image.size(), format, 0, 0, 0};
+        bool pages_set = false, dpi_set = false, pixels_set = false;
+        for (int i = 7; i < argc; i += 2) {
+            std::string option = argv[i], value = argv[i+1];
+            if (option == "--pages" && !pages_set) {
+                pages_set = true;
+                auto dash = value.find('-');
+                if (dash == std::string::npos || value.find('-', dash+1) != std::string::npos)
+                    throw std::invalid_argument("页范围格式应为 首-末");
+                uint64_t first = positive_number(value.substr(0, dash));
+                uint64_t last = positive_number(value.substr(dash+1));
+                if (first > UINT32_MAX || last > UINT32_MAX || first > last)
+                    throw std::invalid_argument("页范围无效");
+                request.first_page = static_cast<uint32_t>(first);
+                request.last_page = static_cast<uint32_t>(last);
+            } else if (option == "--dpi" && !dpi_set) {
+                dpi_set = true;
+                uint64_t dpi = positive_number(value);
+                if (dpi > UINT32_MAX) throw std::invalid_argument("DPI 无效");
+                request.dpi = static_cast<uint32_t>(dpi);
+            } else if (option == "--max-page-pixels" && !pixels_set) {
+                pixels_set = true;
+                request.max_page_pixels = positive_number(value);
+            } else throw std::invalid_argument("未知或重复的 PDF 参数：" + option);
+        }
+        if (format != DOCOCR_DOCUMENT_PDF && (pages_set || dpi_set || pixels_set))
+            throw std::invalid_argument("PDF 参数仅适用于 PDF 输入");
         DocOcrHandle engine = 0;
         DocOcrStatus status = dococr_create({backend.data(), backend.size()}, &engine);
         if (status != DOCOCR_OK) {
@@ -60,7 +100,6 @@ int main(int argc, char** argv) {
         DocOcrJob job = 0;
         status = dococr_job_create(engine, &job);
         if (status != DOCOCR_OK) { dococr_destroy(engine); return 3; }
-        DocOcrInput request{sizeof(DocOcrInput), image.data(), image.size(), format, 0, 0, 0};
         status = dococr_job_run(job, &request);
         if (status != DOCOCR_OK) {
             DocOcrBytes event{};
@@ -78,7 +117,8 @@ int main(int argc, char** argv) {
         if (status != DOCOCR_OK) { dococr_job_destroy(job); dococr_destroy(engine); return 3; }
         bool ok = write_file(output_path / "document.json", result.json) &&
                   write_file(output_path / "document.md", result.markdown);
-        if (configured) ok = write_audit(output_path, engine, job) && ok;
+        if (configured || format == DOCOCR_DOCUMENT_PDF)
+            ok = write_audit(output_path, engine, job) && ok;
         size_t count = 0;
         if (dococr_job_asset_count(job, &count) != DOCOCR_OK) ok = false;
         for (size_t i = 0; ok && i < count; ++i) {

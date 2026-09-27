@@ -2,7 +2,9 @@
 #include "dococr/inference.hpp"
 #include "backend_factory.hpp"
 #include "config.hpp"
+#include "pdf_job.hpp"
 #include <atomic>
+#include <cstddef>
 #include <cstdlib>
 #include <cstring>
 #include <map>
@@ -27,6 +29,7 @@ struct Job {
     std::atomic_bool cancelled{false};
     std::string state = "created";
     std::string error_code;
+    std::string error_request_id = "p0001";
     std::string error_stage;
     std::string error_message;
     dococr::JobOutput output;
@@ -67,7 +70,8 @@ DocOcrBytes copy_bytes(const void* data, size_t size) {
 std::string event_json(const Job& job) {
     std::string out = "{\"state\":\"" + job.state + "\"";
     if (!job.error_code.empty())
-        out += ",\"error\":{\"request_id\":\"p0001\",\"stage\":" + dococr::json_quote(job.error_stage) +
+        out += ",\"error\":{\"request_id\":" + dococr::json_quote(job.error_request_id) +
+               ",\"stage\":" + dococr::json_quote(job.error_stage) +
                ",\"code\":" + dococr::json_quote(job.error_code) +
                ",\"message\":" + dococr::json_quote(job.error_message) + "}";
     return out + "}";
@@ -323,7 +327,7 @@ DocOcrStatus dococr_job_create(DocOcrHandle handle, DocOcrJob* out) {
 
 DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
     return guarded([&] {
-        if (!input || input->struct_size < sizeof(DocOcrInput)) return DOCOCR_INVALID_ARGUMENT;
+        if (!input || input->struct_size < offsetof(DocOcrInput, first_page)) return DOCOCR_INVALID_ARGUMENT;
         std::shared_ptr<Job> job;
         std::shared_ptr<Engine> engine;
         {
@@ -340,27 +344,57 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             job->state = "running";
         }
         dococr::RunResult result;
+        std::string pdf_manifest;
         try {
             dococr::InputView view{input->data, input->size, input->format,
                                    input->width, input->height, input->row_stride};
-            result = dococr::run_page(engine->backend.get(), view, job->cancelled, job->plan.get());
+            if (input->format == DOCOCR_DOCUMENT_PDF) {
+                auto field = [&](size_t offset, size_t size) { return input->struct_size >= offset + size; };
+                uint32_t first = field(offsetof(DocOcrInput, first_page), sizeof(input->first_page)) ? input->first_page : 0;
+                uint32_t last = field(offsetof(DocOcrInput, last_page), sizeof(input->last_page)) ? input->last_page : 0;
+                uint32_t dpi = field(offsetof(DocOcrInput, dpi), sizeof(input->dpi)) ? input->dpi : 0;
+                uint64_t pixels = field(offsetof(DocOcrInput, max_page_pixels), sizeof(input->max_page_pixels)) ?
+                                  input->max_page_pixels : 0;
+                auto pdf = dococr::run_pdf(engine->backend.get(), view, first, last, dpi ? dpi : 150,
+                                           pixels, job->cancelled, job->plan.get());
+                result = std::move(pdf.run);
+                pdf_manifest = std::move(pdf.manifest_pdf);
+            } else {
+                result = dococr::run_page(engine->backend.get(), view, job->cancelled, job->plan.get());
+            }
         } catch (...) { result.code = dococr::RunCode::Failed; }
         std::lock_guard<std::mutex> lock(registry_mutex);
         job->running = false;
         engine->running = false;
+        if (input->format == DOCOCR_DOCUMENT_PDF) job->error_request_id = "document";
         if (job->plan && engine->backend)
             job->manifest = manifest_json(*job->plan, result, engine->backend->profile());
+        if (!pdf_manifest.empty() && job->manifest.empty()) {
+            std::string status = result.code == dococr::RunCode::Ok ? "ok" :
+                result.code == dococr::RunCode::Blank ? "blank" :
+                result.code == dococr::RunCode::Partial ? "partial" :
+                result.code == dococr::RunCode::BudgetExceeded ? "budget_exceeded" : "failed";
+            job->manifest = "{\"schema_version\":\"1.1\",\"job_status\":" +
+                dococr::json_quote(status) + ",\"pdf\":" + pdf_manifest + "}";
+        }
+        if (!pdf_manifest.empty() && !job->manifest.empty()) {
+            job->manifest.pop_back();
+            job->manifest += ",\"pdf\":" + pdf_manifest + "}";
+        }
         switch (result.code) {
         case dococr::RunCode::Ok: job->state = "completed"; break;
         case dococr::RunCode::Partial: job->state = "partial"; break;
         case dococr::RunCode::Blank: job->state = "blank"; break;
         case dococr::RunCode::InputError:
-            job->state = "failed"; job->error_stage = "decode";
-            job->error_code = "input_error"; job->error_message = "invalid image";
+            job->state = "failed"; job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" : "decode";
+            job->error_code = result.error_code.empty() ? "input_error" : result.error_code;
+            job->error_message = result.error_message.empty() ? "invalid input" : result.error_message;
             return DOCOCR_INPUT_ERROR;
         case dococr::RunCode::Unsupported:
-            job->state = "failed"; job->error_stage = job->plan && job->plan->layout_only ? "layout" : "inference";
-            job->error_code = "unsupported_backend"; job->error_message = "no production model backend configured";
+            job->state = "failed"; job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" :
+                job->plan && job->plan->layout_only ? "layout" : "inference";
+            job->error_code = result.error_code.empty() ? "unsupported_backend" : result.error_code;
+            job->error_message = result.error_message.empty() ? "no production model backend configured" : result.error_message;
             return DOCOCR_UNSUPPORTED;
         case dococr::RunCode::Cancelled:
             job->state = "cancelled"; job->error_stage = "inference";
@@ -368,7 +402,8 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             return DOCOCR_CANCELLED;
         case dococr::RunCode::Failed:
             job->state = "failed";
-            job->error_stage = result.error_code.rfind("layout_", 0) == 0 ||
+            job->error_stage = input->format == DOCOCR_DOCUMENT_PDF ? "pdf" :
+                result.error_code.rfind("layout_", 0) == 0 ||
                 (job->plan && job->plan->layout_only) ? "layout" : "inference";
             job->error_code = result.error_code.empty() ? "inference_error" : result.error_code;
             job->error_message = result.error_message.empty() ? "inference contract failed" : result.error_message;

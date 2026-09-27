@@ -4,9 +4,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 option(DOCOCR_BUILD_TESTS "构建无模型验收测试" ON)
-add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/table_parser.cpp)
+add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/table_parser.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
 set_target_properties(dococr_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
-target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb)
+target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb third_party/nlohmann)
 target_compile_features(dococr_core PUBLIC cxx_std_17)
 set(DOCOCR_MNN_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../MNN" CACHE PATH "MNN 公共头文件与已构建库所在目录")
 find_path(DOCOCR_MNN_INCLUDE MNN/Interpreter.hpp PATHS "${DOCOCR_MNN_ROOT}/include" NO_DEFAULT_PATH)
@@ -78,6 +78,10 @@ if(DOCOCR_BUILD_TESTS)
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_table_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME reading_order_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/reading_order_integration.py $<TARGET_FILE:dococr_cli_fixture>)
+  add_test(NAME pdf_integration COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/pdf_integration.py $<TARGET_FILE:dococr_cli_fixture>)
+  add_test(NAME pdf_abi COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/pdf_abi.py $<TARGET_FILE:dococr_c_test>)
   add_test(NAME printed_page_cancel COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_cancel.py $<TARGET_FILE:dococr_c_test>)
 endif()

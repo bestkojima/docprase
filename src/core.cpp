@@ -32,9 +32,31 @@ namespace dococr {
 namespace {
 constexpr uint64_t max_pixels = 16000000;
 constexpr size_t max_encoded_bytes = 64 * 1024 * 1024;
+thread_local uint32_t current_pdf_page = 0;
+struct PageScope {
+    uint32_t previous;
+    explicit PageScope(uint32_t page) : previous(current_pdf_page) { current_pdf_page = page; }
+    ~PageScope() { current_pdf_page = previous; }
+};
+
+std::string page_id() {
+    std::ostringstream out;
+    out << 'p' << std::setw(4) << std::setfill('0')
+        << (current_pdf_page ? current_pdf_page : 1);
+    return out.str();
+}
+
+std::string page_asset(const std::string& suffix) {
+    return "assets/" + page_id() + "-" + suffix;
+}
+std::string block_asset(const std::string& block_id) {
+    return current_pdf_page ? "assets/" + block_id + ".png" :
+                              page_asset(block_id + ".png");
+}
 
 std::string id(const char prefix, size_t index) {
     std::ostringstream out;
+    if (current_pdf_page) out << page_id() << '-';
     out << prefix << std::setw(4) << std::setfill('0') << index;
     return out.str();
 }
@@ -912,7 +934,9 @@ std::string serialize(const Image& image, const std::string& state,
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
-        << ",\"source\":{\"type\":\"image\"},\"pages\":[{\"page_id\":\"p0001\",\"page_index\":0,"
+        << ",\"source\":{\"type\":" << json_quote(current_pdf_page ? "pdf" : "image")
+        << "},\"pages\":[{\"page_id\":" << json_quote(page_id())
+        << ",\"page_index\":" << (current_pdf_page ? current_pdf_page - 1 : 0) << ','
         << "\"raster_size\":[" << image.width << ',' << image.height << "],\"coordinate_space\":\"raster_page\","
         << "\"status\":" << json_quote(state) << ",\"reading_order\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
@@ -927,7 +951,7 @@ std::string serialize(const Image& image, const std::string& state,
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << json_quote(b.layout_id) << ",\"page_id\":\"p0001\",\"label\":" << json_quote(b.type)
+        out << "{\"id\":" << json_quote(b.layout_id) << ",\"page_id\":" << json_quote(page_id()) << ",\"label\":" << json_quote(b.type)
             << ",\"bbox\":" << box_json(b.box) << ",\"coordinate_space\":\"raster_page\","
             << "\"detection_score\":" << b.detection_score << ",\"candidate_rank\":" << b.candidate_rank
             << ",\"original_class_id\":" << b.original_class_id
@@ -940,13 +964,13 @@ std::string serialize(const Image& image, const std::string& state,
                 std::to_string(b.raw_box[3]) + "]" +
                 ",\"clamped\":" + (b.clamped ? "true" : "false"))
             << ",\"provenance\":{\"model_profile\":" << json_quote(profile)
-            << ",\"request_id\":\"layout-p0001\"}}";
+            << ",\"request_id\":" << json_quote("layout-" + page_id()) << "}}";
     }
     for (const auto& evidence : ownership) {
         const auto& c = *evidence.candidate;
         if (!blocks.empty() || &evidence != &ownership.front()) out << ',';
         out << "{\"id\":" << json_quote(evidence.layout_id)
-            << ",\"page_id\":\"p0001\",\"label\":" << json_quote(canonical_label(c.class_id))
+            << ",\"page_id\":" << json_quote(page_id()) << ",\"label\":" << json_quote(canonical_label(c.class_id))
             << ",\"bbox\":" << box_json(c.crop)
             << ",\"coordinate_space\":\"raster_page\",\"detection_score\":" << c.score
             << ",\"candidate_rank\":" << c.rank << ",\"original_class_id\":" << c.class_id
@@ -957,13 +981,13 @@ std::string serialize(const Image& image, const std::string& state,
             << c.box[2] << ',' << c.box[3] << "],\"clamped\":"
             << (c.clamped ? "true" : "false")
             << ",\"provenance\":{\"model_profile\":" << json_quote(profile)
-            << ",\"request_id\":\"layout-p0001\"}}";
+            << ",\"request_id\":" << json_quote("layout-" + page_id()) << "}}";
     }
     out << "],\"regions\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << json_quote(b.region_id) << ",\"page_id\":\"p0001\",\"source_layout_block_ids\":["
+        out << "{\"id\":" << json_quote(b.region_id) << ",\"page_id\":" << json_quote(page_id()) << ",\"source_layout_block_ids\":["
             << json_quote(b.layout_id);
         for (const auto& owned : b.owned_layout_ids) out << ',' << json_quote(owned);
         out << "],\"bbox\":" << box_json(b.box)
@@ -973,7 +997,7 @@ std::string serialize(const Image& image, const std::string& state,
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << json_quote(b.id) << ",\"page_id\":\"p0001\",\"type\":" << json_quote(b.type)
+        out << "{\"id\":" << json_quote(b.id) << ",\"page_id\":" << json_quote(page_id()) << ",\"type\":" << json_quote(b.type)
             << ",\"source_region_ids\":[" << json_quote(b.region_id) << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
             << "\"reading_order_source\":" << json_quote(order_evidence ? order_evidence->source : "geometry") << ','
@@ -1039,12 +1063,13 @@ std::string serialize(const Image& image, const std::string& state,
     if (raw) {
         out << ",\"layout_diagnostics\":{\"score_threshold\":0.5,\"candidate_count\":" << raw->size()
             << ",\"overlay_asset\":" << json_quote(overlay)
-            << ",\"raw_tensor_assets\":{\"image\":\"assets/p0001-image.f32\","
-               "\"im_shape\":\"assets/p0001-im_shape.f32\","
-               "\"scale_factor\":\"assets/p0001-scale_factor.f32\","
-               "\"fetch_name_0\":\"assets/p0001-fetch_name_0.f32\","
-               "\"fetch_name_1\":\"assets/p0001-fetch_name_1.i32\","
-               "\"fetch_name_2\":\"assets/p0001-fetch_name_2.rle\"},\"candidates\":[";
+            << ",\"raw_tensor_assets\":{\"image\":" << json_quote(page_asset("image.f32"))
+            << ",\"im_shape\":" << json_quote(page_asset("im_shape.f32"))
+            << ",\"scale_factor\":" << json_quote(page_asset("scale_factor.f32"))
+            << ",\"fetch_name_0\":" << json_quote(page_asset("fetch_name_0.f32"))
+            << ",\"fetch_name_1\":" << json_quote(page_asset("fetch_name_1.i32"))
+            << ",\"fetch_name_2\":" << json_quote(page_asset("fetch_name_2.rle"))
+            << "},\"candidates\":[";
         for (size_t i = 0; i < raw->size(); ++i) {
             const auto& c = (*raw)[i];
             if (i) out << ',';
@@ -1185,13 +1210,13 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     request.inputs.push_back(geometry_tensor("scale_factor", 800.0f/image.height, 800.0f/image.width));
     request.requested_outputs = {"fetch_name_0", "fetch_name_1", "fetch_name_2"};
     audit.layout_attempted = true;
-    audit.output.assets.push_back({"assets/p0001-image.f32", request.inputs[0].data});
-    audit.output.assets.push_back({"assets/p0001-im_shape.f32", request.inputs[1].data});
-    audit.output.assets.push_back({"assets/p0001-scale_factor.f32", request.inputs[2].data});
+    audit.output.assets.push_back({page_asset("image.f32"), request.inputs[0].data});
+    audit.output.assets.push_back({page_asset("im_shape.f32"), request.inputs[1].data});
+    audit.output.assets.push_back({page_asset("scale_factor.f32"), request.inputs[2].data});
     audit.did_normalize = true;
     ExecutionContext context{cancelled};
     InferenceResponse response;
-    try { response = backend->execute({"layout-p0001", std::move(request)}, context); }
+    try { response = backend->execute({"layout-" + page_id(), std::move(request)}, context); }
     catch (const std::exception& e) {
         audit.code = RunCode::Failed;
         audit.error_code = "layout_inference_failed";
@@ -1213,11 +1238,11 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     audit.did_layout = true;
     for (const auto& tensor : output->outputs) {
         if (tensor.name == "fetch_name_0")
-            audit.output.assets.push_back({"assets/p0001-fetch_name_0.f32", tensor.data});
+            audit.output.assets.push_back({page_asset("fetch_name_0.f32"), tensor.data});
         else if (tensor.name == "fetch_name_1")
-            audit.output.assets.push_back({"assets/p0001-fetch_name_1.i32", tensor.data});
+            audit.output.assets.push_back({page_asset("fetch_name_1.i32"), tensor.data});
     }
-    audit.output.assets.push_back({"assets/p0001-fetch_name_2.rle", encode_masks_rle(masks)});
+    audit.output.assets.push_back({page_asset("fetch_name_2.rle"), encode_masks_rle(masks)});
     std::vector<const RawLayoutCandidate*> selected;
     for (const auto& candidate : records) if (candidate.selected) selected.push_back(&candidate);
     std::stable_sort(selected.begin(), selected.end(), [](const auto* a, const auto* b) {
@@ -1248,7 +1273,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     result.assets = std::move(audit.output.assets);
     for (const auto* candidate : selected) {
         auto& mutable_candidate = records[size_t(candidate->id)];
-        mutable_candidate.mask_asset = "assets/p0001-mask-c" +
+        mutable_candidate.mask_asset = page_asset("mask-c") +
             std::to_string(candidate->id) + ".png";
         std::vector<uint8_t> mask_pixels = layout_page_mask(image, *candidate, masks);
         std::vector<uint8_t> mask_png;
@@ -1280,7 +1305,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             if (evidence.owner_candidate_id == candidate->id)
                 block.owned_layout_ids.push_back(evidence.layout_id);
         block.error = block.type == "unknown" ? "unknown_layout_class" : "recognition_not_executed";
-        block.resource = "assets/p0001-" + block.id + ".png";
+        block.resource = block_asset(block.id);
         result.assets.push_back({block.resource, crop_png(image, block.box)});
         audit.did_crop = true;
         if (transcribe) {
@@ -1401,7 +1426,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     const ReadingOrderEvidence order_evidence = arrange_reading_order(blocks, image.width);
     const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.width, image.height);
     if (cancelled) return {RunCode::Cancelled, {}};
-    const std::string overlay_name = "assets/p0001-layout-overlay.png";
+    const std::string overlay_name = page_asset("layout-overlay.png");
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
     bool incomplete = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.status != "ok"; });
     const std::string state = records.empty() ? "blank" :
@@ -1431,7 +1456,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
 } // namespace
 
 RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool& cancelled,
-                   const ExecutionPlan* plan) {
+                   const ExecutionPlan* plan, uint32_t source_page) {
+    PageScope page_scope(source_page);
     using Clock = std::chrono::steady_clock;
     auto elapsed = [](Clock::time_point from) {
         return uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - from).count());
@@ -1470,7 +1496,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         audit.did_normalize = true;
     }
     start = Clock::now();
-    auto response = backend->execute({"layout-p0001", TensorRequest{{std::move(page_tensor)}, {"layout_candidates"}}}, context);
+    auto response = backend->execute({"layout-" + page_id(), TensorRequest{{std::move(page_tensor)}, {"layout_candidates"}}}, context);
     audit.layout_ms = elapsed(start);
     if (cancelled) return {RunCode::Cancelled, {}};
     auto* layout = std::get_if<TensorOutput>(&response.payload);
@@ -1508,7 +1534,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         block.status = "ok";
         if (block.type == "image" || block.type == "chart") {
             block.type = "image";
-            block.resource = "assets/p0001-" + block.id + ".png";
+            block.resource = block_asset(block.id);
             audit.did_crop = true;
             output.assets.push_back({block.resource, crop_png(image, block.box)});
         } else if (block.type == "text" || block.type == "formula" || block.type == "table") {
@@ -1559,7 +1585,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
                               !error_valid ? "invalid backend error encoding" :
                               (!text_valid || !raw_valid) ? "invalid backend UTF-8" :
                               generation.error.empty() ? "recognition incomplete" : generation.error;
-                block.resource = "assets/p0001-" + block.id + ".png";
+                block.resource = block_asset(block.id);
                 audit.did_crop = true;
                 output.assets.push_back({block.resource, crop_png(image, block.box)});
                 partial = true;
@@ -1567,7 +1593,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         } else {
             block.status = "skipped";
             block.error = "unsupported layout label";
-            block.resource = "assets/p0001-" + block.id + ".png";
+            block.resource = block_asset(block.id);
             audit.did_crop = true;
             output.assets.push_back({block.resource, crop_png(image, block.box)});
             partial = true;
