@@ -33,6 +33,7 @@
 namespace dococr {
 namespace {
 constexpr uint64_t max_pixels = 16000000;
+constexpr uint64_t max_layout_source_pixels = 64000000;
 constexpr size_t max_encoded_bytes = 64 * 1024 * 1024;
 thread_local uint32_t current_pdf_page = 0;
 struct PageScope {
@@ -98,12 +99,12 @@ std::string base64(const std::string& bytes) {
     return out;
 }
 
-bool decode(InputView in, Image& image) {
+bool decode(InputView in, Image& image, uint64_t pixel_limit = max_pixels) {
     if (!in.data || in.size == 0) return false;
     if (in.format == DOCOCR_IMAGE_RGB8 || in.format == DOCOCR_IMAGE_GRAY8) {
         uint64_t pixels = uint64_t(in.width) * in.height;
         size_t channels = in.format == DOCOCR_IMAGE_RGB8 ? 3 : 1;
-        if (!in.width || !in.height || pixels > max_pixels ||
+        if (!in.width || !in.height || pixels > pixel_limit ||
             in.width > std::numeric_limits<size_t>::max() / channels) return false;
         size_t row_size = size_t(in.width) * channels;
         if (in.row_stride < row_size || in.row_stride > in.size ||
@@ -129,7 +130,7 @@ bool decode(InputView in, Image& image) {
     int w = 0, h = 0, channels = 0;
     if (!stbi_info_from_memory(in.data, int(in.size), &w, &h, &channels) ||
         stbi_is_16_bit_from_memory(in.data, int(in.size)) ||
-        w <= 0 || h <= 0 || uint64_t(w) * h > max_pixels ||
+        w <= 0 || h <= 0 || uint64_t(w) * h > pixel_limit ||
         (channels != 1 && channels != 3)) return false;
     int decoded_channels = 0;
     stbi_uc* decoded = stbi_load_from_memory(in.data, int(in.size), &w, &h, &decoded_channels, 3);
@@ -431,7 +432,7 @@ std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& bl
 
 struct RawLayoutCandidate {
     int id = 0, class_id = 0, rank = 0, mask_nonzero = 0;
-    float score = 0, box[4]{};
+    float score = 0, box[4]{}, model_box[4]{};
     std::string label, reason, handling_reason;
     std::string mask_asset;
     bool selected = false, clamped = false;
@@ -520,7 +521,8 @@ std::string canonical_label(int id) {
 
 bool decode_real_layout(const TensorOutput& output, const Image& image,
                         std::vector<RawLayoutCandidate>& records,
-                        const uint8_t*& masks) {
+                        const uint8_t*& masks,
+                        const LayoutPageTransform* transform = nullptr) {
     if (output.outputs.size() != 3) return false;
     const Tensor *rows = nullptr, *count = nullptr, *mask = nullptr;
     for (const Tensor& tensor : output.outputs) {
@@ -545,6 +547,15 @@ bool decode_real_layout(const TensorOutput& output, const Image& image,
         float row[7];
         std::memcpy(row, rows->data.data() + size_t(i)*7*sizeof(float), sizeof(row));
         for (float value : row) if (!std::isfinite(value)) return false;
+        float model_box[4];
+        std::copy(row+2, row+6, model_box);
+        if (transform && transform->applied) {
+            row[2] = float((row[2] - transform->pad_x) / transform->scale_x);
+            row[4] = float((row[4] - transform->pad_x) / transform->scale_x);
+            row[3] = float((row[3] - transform->pad_y) / transform->scale_y);
+            row[5] = float((row[5] - transform->pad_y) / transform->scale_y);
+            for (int k = 2; k < 6; ++k) if (!std::isfinite(row[k])) return false;
+        }
         if (row[1] < 0 || row[1] > 1 || row[0] < 0 || row[0] > 1000000 ||
             std::trunc(row[0]) != row[0] || row[6] < -1 || row[6] > 1000000 ||
             std::trunc(row[6]) != row[6]) return false;
@@ -553,7 +564,10 @@ bool decode_real_layout(const TensorOutput& output, const Image& image,
         candidate.class_id = int(row[0]);
         candidate.score = row[1];
         candidate.rank = int(row[6]);
-        for (int k = 0; k < 4; ++k) candidate.box[k] = row[k+2];
+        for (int k = 0; k < 4; ++k) {
+            candidate.box[k] = row[k+2];
+            candidate.model_box[k] = model_box[k];
+        }
         const char* label = layout_label(candidate.class_id);
         candidate.label = label ? label : "unknown";
         if (candidate.score < 0.5f) candidate.reason = "below_score_threshold";
@@ -1081,7 +1095,8 @@ std::string serialize(const Image& image, const std::string& state,
                       const std::vector<OwnershipEvidence>& ownership = {},
                       bool structured_tables = false,
                       const ReadingOrderEvidence* order_evidence = nullptr,
-                      const std::vector<SemanticRelation>& semantic = {}) {
+                      const std::vector<SemanticRelation>& semantic = {},
+                      const LayoutPageTransform* layout_transform = nullptr) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
@@ -1252,7 +1267,20 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"fetch_name_0\":" << json_quote(page_asset("fetch_name_0.f32"))
             << ",\"fetch_name_1\":" << json_quote(page_asset("fetch_name_1.i32"))
             << ",\"fetch_name_2\":" << json_quote(page_asset("fetch_name_2.rle"))
-            << "},\"candidates\":[";
+            << '}';
+        if (layout_transform && layout_transform->applied) {
+            out << std::setprecision(17)
+                << ",\"input_transform\":{\"mode\":\"smartresize_800\",\"source_size\":["
+                << image.width << ',' << image.height << "],\"canvas_size\":[800,800],\"content_size\":["
+                << layout_transform->content_width << ',' << layout_transform->content_height
+                << "],\"pad_offset\":[" << layout_transform->pad_x << ',' << layout_transform->pad_y
+                << "],\"canvas_to_page_affine\":[" << 1/layout_transform->scale_x << ",0,"
+                << -layout_transform->pad_x/layout_transform->scale_x << ",0,"
+                << 1/layout_transform->scale_y << ','
+                << -layout_transform->pad_y/layout_transform->scale_y << "]}";
+            out << std::setprecision(9);
+        }
+        out << ",\"candidates\":[";
         for (size_t i = 0; i < raw->size(); ++i) {
             const auto& c = (*raw)[i];
             if (i) out << ',';
@@ -1316,46 +1344,78 @@ Tensor geometry_tensor(const std::string& name, float first, float second) {
 }
 
 std::vector<uint8_t> layout_page_mask(const Image& image, const RawLayoutCandidate& c,
-                                      const uint8_t* masks);
+                                      const uint8_t* masks,
+                                      const LayoutPageTransform* transform);
 
 std::vector<uint8_t> layout_overlay(const Image& image,
                                     const std::vector<RawLayoutCandidate>& records,
-                                    const uint8_t* masks) {
-    Image overlay = image;
+                                    const uint8_t* masks,
+                                    const LayoutPageTransform* transform,
+                                    const Image* preview) {
+    const bool smart = transform && transform->applied && preview;
+    Image overlay = smart ? *preview : image;
     for (const auto& c : records) {
         if (!c.selected) continue;
-        auto page_mask = layout_page_mask(image, c, masks);
-        for (int y = c.crop.y0; y < c.crop.y1; ++y) for (int x = c.crop.x0; x < c.crop.x1; ++x) {
-            if (page_mask[size_t(y)*image.width+x]) {
-                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
+        Box draw = smart ? Box{
+            std::clamp(int(std::floor(c.model_box[0])), 0, overlay.width),
+            std::clamp(int(std::floor(c.model_box[1])), 0, overlay.height),
+            std::clamp(int(std::ceil(c.model_box[2])), 0, overlay.width),
+            std::clamp(int(std::ceil(c.model_box[3])), 0, overlay.height)} : c.crop;
+        if (draw.x0 >= draw.x1 || draw.y0 >= draw.y1) continue;
+        std::vector<uint8_t> page_mask;
+        if (!smart) page_mask = layout_page_mask(image, c, masks, transform);
+        const uint8_t* mask = masks + size_t(c.id)*200*200*sizeof(int32_t);
+        for (int y = draw.y0; y < draw.y1; ++y) for (int x = draw.x0; x < draw.x1; ++x) {
+            int32_t bit = 0;
+            if (smart) std::memcpy(&bit, mask +
+                (size_t(std::clamp(y/4, 0, 199))*200 + std::clamp(x/4, 0, 199))*sizeof(bit),
+                sizeof(bit));
+            if ((smart && bit) || (!smart && page_mask[size_t(y)*image.width+x])) {
+                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*overlay.width+x)*3;
                 pixel[0] = uint8_t(pixel[0]/2);
                 pixel[1] = uint8_t(pixel[1]/2 + 127);
                 pixel[2] = uint8_t(pixel[2]/2);
             }
         }
-        for (int x = c.crop.x0; x < c.crop.x1; ++x) {
-            for (int y : {c.crop.y0, c.crop.y1-1}) {
-                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
+        for (int x = draw.x0; x < draw.x1; ++x) {
+            for (int y : {draw.y0, draw.y1-1}) {
+                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*overlay.width+x)*3;
                 pixel[0] = 255; pixel[1] = 0; pixel[2] = 0;
             }
         }
-        for (int y = c.crop.y0; y < c.crop.y1; ++y) {
-            for (int x : {c.crop.x0, c.crop.x1-1}) {
-                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
+        for (int y = draw.y0; y < draw.y1; ++y) {
+            for (int x : {draw.x0, draw.x1-1}) {
+                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*overlay.width+x)*3;
                 pixel[0] = 255; pixel[1] = 0; pixel[2] = 0;
             }
         }
     }
     std::vector<uint8_t> png;
-    if (!stbi_write_png_to_func(png_write, &png, image.width, image.height, 3,
-                                overlay.rgb.data(), image.width*3))
+    if (!stbi_write_png_to_func(png_write, &png, overlay.width, overlay.height, 3,
+                                overlay.rgb.data(), overlay.width*3))
         throw std::runtime_error("layout overlay PNG encoding failed");
     return png;
 }
 
 std::vector<uint8_t> layout_page_mask(const Image& image, const RawLayoutCandidate& c,
-                                      const uint8_t* masks) {
+                                      const uint8_t* masks,
+                                      const LayoutPageTransform* transform) {
     std::vector<uint8_t> pixels(size_t(image.width)*image.height);
+    if (transform && transform->applied) {
+        const uint8_t* mask = masks + size_t(c.id)*200*200*sizeof(int32_t);
+        for (int y = c.crop.y0; y < c.crop.y1; ++y) {
+            int my = std::clamp(int(((y + 0.5) * transform->scale_y +
+                                      transform->pad_y) / 4), 0, 199);
+            for (int x = c.crop.x0; x < c.crop.x1; ++x) {
+                int mx = std::clamp(int(((x + 0.5) * transform->scale_x +
+                                          transform->pad_x) / 4), 0, 199);
+                int32_t bit;
+                std::memcpy(&bit, mask + (size_t(my)*200+mx)*sizeof(bit), sizeof(bit));
+                pixels[size_t(y)*image.width+x] = bit ? 255 : 0;
+            }
+        }
+        return pixels;
+    }
     int x0 = int(c.box[0]), y0 = int(c.box[1]);
     int x1 = int(c.box[2]), y1 = int(c.box[3]);
     if (x1 <= x0 || y1 <= y0) return pixels;
@@ -1389,9 +1449,13 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
     auto start = Clock::now();
     TensorRequest request;
-    request.inputs.push_back(layout_image_tensor(image));
+    LayoutPageInput layout_input = prepare_layout_page(image,
+        uint64_t(image.width) * image.height > max_pixels);
+    request.inputs.push_back(std::move(layout_input.tensor));
     request.inputs.push_back(geometry_tensor("im_shape", 800, 800));
-    request.inputs.push_back(geometry_tensor("scale_factor", 800.0f/image.height, 800.0f/image.width));
+    request.inputs.push_back(layout_input.transform.applied ?
+        geometry_tensor("scale_factor", 1, 1) :
+        geometry_tensor("scale_factor", 800.0f/image.height, 800.0f/image.width));
     request.requested_outputs = {"fetch_name_0", "fetch_name_1", "fetch_name_2"};
     audit.layout_attempted = true;
     audit.output.assets.push_back({page_asset("image.f32"), request.inputs[0].data});
@@ -1415,7 +1479,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     auto* output = std::get_if<TensorOutput>(&response.payload);
     std::vector<RawLayoutCandidate> records;
     const uint8_t* masks = nullptr;
-    if (!output || !decode_real_layout(*output, image, records, masks)) {
+    if (!output || !decode_real_layout(*output, image, records, masks, &layout_input.transform)) {
         audit.code = RunCode::Failed;
         audit.error_code = "layout_output_contract_mismatch";
         audit.error_message = "PP-DocLayoutV3 候选/数量/mask 张量契约不符";
@@ -1467,7 +1531,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         auto& mutable_candidate = records[size_t(candidate->id)];
         mutable_candidate.mask_asset = page_asset("mask-c") +
             std::to_string(candidate->id) + ".png";
-        std::vector<uint8_t> mask_pixels = layout_page_mask(image, *candidate, masks);
+        std::vector<uint8_t> mask_pixels = layout_page_mask(image, *candidate, masks,
+                                                             &layout_input.transform);
         std::vector<uint8_t> mask_png;
         if (!stbi_write_png_to_func(png_write, &mask_png, image.width, image.height, 1,
                                     mask_pixels.data(), image.width))
@@ -1673,7 +1738,9 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.width, image.height);
     if (cancelled) { stop_after_cancel(); return audit; }
     const std::string overlay_name = page_asset("layout-overlay.png");
-    result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
+    result.assets.push_back({overlay_name, layout_overlay(image, records, masks,
+                                                           &layout_input.transform,
+                                                           &layout_input.preview)});
     bool incomplete = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.status != "ok"; });
     const std::string state = records.empty() ? "blank" :
         (blocks.empty() || incomplete) ? "partial" : "ok";
@@ -1685,7 +1752,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     }
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,
-                            overlay_name, ownership, transcribe, &order_evidence, semantic);
+                            overlay_name, ownership, transcribe, &order_evidence, semantic,
+                            &layout_input.transform);
     audit.did_export = true;
     if (progress) progress("export_completed", source_page ? source_page : 1, "", region_done, region_total);
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
@@ -1714,19 +1782,24 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     RunResult audit{RunCode::Failed, {}};
     auto start = Clock::now();
     Image image;
-    if (!decode(input, image)) return {RunCode::InputError, {}};
+    const bool layout_job = plan && (plan->layout_only ||
+        plan->backend == "mnn:pp-doclayout-v3+ovisocr2" ||
+        plan->backend.rfind("fixture:printed_page", 0) == 0);
+    const bool allow_large_page = layout_job && plan->max_page_pixels >= max_pixels;
+    if (!decode(input, image, allow_large_page ? max_layout_source_pixels : max_pixels))
+        return {RunCode::InputError, {}};
     audit.did_decode = true;
     if (progress) progress("decode_completed", source_page ? source_page : 1, "", 0, 0);
     audit.page_pixels = uint64_t(image.width) * image.height;
     audit.decode_ms = elapsed(start);
-    if (plan && audit.page_pixels > plan->max_page_pixels) {
+    if (plan && audit.page_pixels > plan->max_page_pixels && !
+        (allow_large_page && audit.page_pixels <= max_layout_source_pixels)) {
         audit.code = RunCode::BudgetExceeded;
         audit.budget_stage = "input_pixels";
         return audit;
     }
     if (!backend) return {RunCode::Unsupported, {}};
-    if (plan && (plan->layout_only || plan->backend == "mnn:pp-doclayout-v3+ovisocr2" ||
-                 plan->backend.rfind("fixture:printed_page", 0) == 0))
+    if (layout_job)
         return run_layout_only(backend, image, cancelled, plan, audit, source_page, progress);
     if (!backend->capabilities().tensor || !backend->capabilities().generation ||
         backend->capabilities().max_concurrent_requests < 1) return {RunCode::Unsupported, {}};

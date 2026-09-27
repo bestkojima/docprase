@@ -886,6 +886,29 @@
           "minimum": 0,
           "maximum": 300
         },
+        "input_transform": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "source_size", "canvas_size", "content_size", "pad_offset", "canvas_to_page_affine"],
+          "properties": {
+            "mode": {"const": "smartresize_800"},
+            "source_size": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+            "canvas_size": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+            "content_size": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+            "pad_offset": {
+              "type": "array",
+              "items": {"type": "integer"},
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "canvas_to_page_affine": {
+              "type": "array",
+              "items": {"type": "number"},
+              "minItems": 6,
+              "maxItems": 6
+            }
+          }
+        },
         "overlay_asset": {
           "type": "string"
         },

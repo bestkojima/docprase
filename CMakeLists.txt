@@ -140,6 +140,9 @@ if(DOCOCR_BUILD_TESTS)
   add_test(NAME issue20_geometry COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue20_geometry.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME issue20_large_page COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue20_large_page.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME printed_page_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME printed_formula_integration COMMAND ${Python3_EXECUTABLE}

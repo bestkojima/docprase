@@ -243,6 +243,7 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
                         plan->backend == "fixture:layout_dedup" ||
                         plan->backend == "fixture:layout_dedup_edges" ||
                         plan->backend == "fixture:layout_geometry" ||
+                        plan->backend == "fixture:layout_smartresize" ||
                         plan->backend == "fixture:layout_contract" ||
                         plan->backend == "fixture:layout_table" ||
                         plan->backend == "fixture:layout_inline_formula" ||

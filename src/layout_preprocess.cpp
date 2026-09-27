@@ -76,4 +76,40 @@ Tensor layout_image_tensor(const Image& image) {
     }
     return result;
 }
+
+LayoutPageInput prepare_layout_page(const Image& image, bool smartresize) {
+    if (!smartresize) return {layout_image_tensor(image), {}, {}};
+    const double scale = std::min(800.0 / image.width, 800.0 / image.height);
+    LayoutPageTransform transform;
+    transform.applied = true;
+    transform.content_width = std::clamp(int(std::round(image.width * scale)), 1, 800);
+    transform.content_height = std::clamp(int(std::round(image.height * scale)), 1, 800);
+    transform.pad_x = (800 - transform.content_width) / 2;
+    transform.pad_y = (800 - transform.content_height) / 2;
+    transform.scale_x = double(transform.content_width) / image.width;
+    transform.scale_y = double(transform.content_height) / image.height;
+    Image canvas{800, 800, std::vector<uint8_t>(800 * 800 * 3, 255)};
+    for (int y = 0; y < transform.content_height; ++y) {
+        double sy = std::clamp((y + 0.5) / transform.scale_y - 0.5,
+                               0.0, double(image.height - 1));
+        int y0 = int(sy), y1 = std::min(y0 + 1, image.height - 1);
+        double fy = sy - y0;
+        for (int x = 0; x < transform.content_width; ++x) {
+            double sx = std::clamp((x + 0.5) / transform.scale_x - 0.5,
+                                   0.0, double(image.width - 1));
+            int x0 = int(sx), x1 = std::min(x0 + 1, image.width - 1);
+            double fx = sx - x0;
+            for (int c = 0; c < 3; ++c) {
+                auto at = [&](int xx, int yy) {
+                    return image.rgb[(size_t(yy) * image.width + xx) * 3 + c];
+                };
+                double top = at(x0, y0) * (1 - fx) + at(x1, y0) * fx;
+                double bottom = at(x0, y1) * (1 - fx) + at(x1, y1) * fx;
+                canvas.rgb[(size_t(y + transform.pad_y) * 800 + x + transform.pad_x) * 3 + c] =
+                    uint8_t(std::round(top * (1 - fy) + bottom * fy));
+            }
+        }
+    }
+    return {layout_image_tensor(canvas), transform, std::move(canvas)};
+}
 } // namespace dococr

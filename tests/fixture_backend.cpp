@@ -12,7 +12,7 @@ namespace dococr {
 namespace {
 bool layout_only_fixture(const std::string& scenario) {
     return scenario == "layout_dedup" || scenario == "layout_dedup_edges" ||
-           scenario == "layout_geometry" ||
+           scenario == "layout_geometry" || scenario == "layout_smartresize" ||
            scenario == "layout_contract" || scenario == "layout_table" ||
            scenario == "layout_inline_formula" || scenario == "layout_empty" ||
            scenario == "layout_infer_failure";
@@ -95,9 +95,11 @@ public:
                 if (geometry[0] != 800 || geometry[1] != 800)
                     throw std::runtime_error("layout im_shape mismatch");
                 std::memcpy(geometry, layout->inputs[2].data.data(), sizeof(geometry));
-                if (geometry[0] != (scenario_.rfind("printed_page_reading", 0) == 0 ||
+                if (geometry[0] != (scenario_ == "layout_smartresize" ? 1 :
+                                    scenario_.rfind("printed_page_reading", 0) == 0 ||
                                     scenario_ == "layout_geometry" ? 8 : 400) ||
-                    geometry[1] != (scenario_.rfind("printed_page_reading", 0) == 0 ||
+                    geometry[1] != (scenario_ == "layout_smartresize" ? 1 :
+                                    scenario_.rfind("printed_page_reading", 0) == 0 ||
                                     scenario_ == "layout_geometry" ? 8 : 400))
                     throw std::runtime_error("layout scale_factor mismatch");
                 std::vector<float> rows(300*7);
@@ -235,6 +237,9 @@ public:
                         {22,.9f,-3,88,28,103,12}, {23,.8f,55,50,85,60,13},
                         {22,.8f,56,70,90,80,14}};
                     std::memcpy(rows.data(), cases, sizeof(cases));
+                } else if (scenario_ == "layout_smartresize") {
+                    const float full_page[][7] = {{22,.9f,9,0,790,800,0}};
+                    std::memcpy(rows.data(), full_page, sizeof(full_page));
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
                 int32_t count = scenario_ == "printed_page_reading_single" ? 4 :
@@ -247,6 +252,7 @@ public:
                     scenario_ == "layout_contract" || scenario_ == "layout_dedup" ? 7 :
                     scenario_ == "layout_dedup_edges" ? 6 :
                     scenario_ == "layout_geometry" ? 11 :
+                    scenario_ == "layout_smartresize" ? 1 :
                     scenario_ == "layout_table" ? 2 :
                     scenario_ == "layout_inline_formula" ? 2 : 0;
                 if (scenario_ == "printed_page_reading_pdf_mixed") {
@@ -585,7 +591,7 @@ bool config_supported(const std::string& config) {
            config == "fixture:generation_gate_wrong" ||
            config == "fixture:generation_gate_reset_failed" ||
            config == "fixture:layout_dedup" || config == "fixture:layout_dedup_edges" || config == "fixture:layout_contract" || config == "fixture:layout_table" ||
-           config == "fixture:layout_geometry" ||
+           config == "fixture:layout_geometry" || config == "fixture:layout_smartresize" ||
            config == "fixture:layout_inline_formula" ||
            config == "fixture:layout_empty" ||
            config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||
