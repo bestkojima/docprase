@@ -91,7 +91,9 @@ def main():
         assert model_order['pages'][0]['reading_order_evidence'] == {
             'source': 'model', 'reason': 'unique_rank'}
         _, ambiguous, _ = run(sys.argv[1], 'printed_page_reading_ambiguous', root, image)
-        assert not any(r['type'] == 'caption_of' for r in ambiguous['pages'][0]['relations'])
+        assert any(r['type'] == 'caption_of' for r in ambiguous['pages'][0]['relations'])
+        assert [c['filter_reason'] for c in ambiguous['layout_diagnostics']['candidates']
+                if c['filter_reason'] == 'nms_same_class'] == ['nms_same_class'] * 2
         _, prose, _ = run(sys.argv[1], 'printed_page_reading_table_prose', root, image)
         assert len([r for r in prose['pages'][0]['relations'] if r['type'] == 'caption_of']) == 1
         for scenario in ('printed_page_reading_footnote_double',

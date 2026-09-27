@@ -9,13 +9,18 @@
 #include <stdexcept>
 #include <thread>
 namespace dococr {
+namespace {
+bool layout_only_fixture(const std::string& scenario) {
+    return scenario == "layout_dedup" || scenario == "layout_dedup_edges" ||
+           scenario == "layout_contract" || scenario == "layout_table" ||
+           scenario == "layout_inline_formula" || scenario == "layout_empty" ||
+           scenario == "layout_infer_failure";
+}
+}
 class FixtureBackend final : public IInferenceEngine {
 public:
     explicit FixtureBackend(std::string scenario) : scenario_(std::move(scenario)) {
-        if (scenario_ == "layout_contract" || scenario_ == "layout_table" ||
-            scenario_ == "layout_inline_formula" ||
-            scenario_ == "layout_empty" ||
-            scenario_ == "layout_infer_failure")
+        if (layout_only_fixture(scenario_))
             capabilities_.generation = false;
     }
     bool load(const BackendLoadSpec& spec) override {
@@ -35,10 +40,7 @@ public:
             loaded_.push_back(artifact);
         }
         if (!spec.config_hash.empty() && loaded_.size() !=
-            ((scenario_ == "layout_contract" || scenario_ == "layout_table" ||
-              scenario_ == "layout_inline_formula" ||
-              scenario_ == "layout_empty" ||
-              scenario_ == "layout_infer_failure") ? 1u : 2u)) return false;
+            (layout_only_fixture(scenario_) ? 1u : 2u)) return false;
         return true;
     }
     std::vector<ArtifactInfo> loaded_artifacts() const override { return loaded_; }
@@ -77,11 +79,7 @@ public:
                     std::this_thread::sleep_for(std::chrono::milliseconds(2));
                 if (context.cancelled) throw std::runtime_error("controlled_interrupt_failure");
             }
-            if (scenario_.rfind("printed_page", 0) == 0 ||
-                scenario_ == "layout_contract" || scenario_ == "layout_table" ||
-                scenario_ == "layout_inline_formula" ||
-                scenario_ == "layout_empty" ||
-                scenario_ == "layout_infer_failure") {
+            if (scenario_.rfind("printed_page", 0) == 0 || layout_only_fixture(scenario_)) {
                 if (scenario_ == "layout_infer_failure")
                     throw std::runtime_error("layout_inference_failed:controlled");
                 if (layout->inputs.size() != 3 || layout->requested_outputs !=
@@ -109,7 +107,7 @@ public:
                     const float page_samples[][7] = {
                         {22,.9f,0,0,2,1,0}, {22,.9f,0,1,1,2,1},
                         {5,.9f,1,1,2,2,2}, {21,.9f,1,0,2,1,3},
-                        {99,.9f,1,1,2,2,4}, {14,.9f,0,0,1,1,5}};
+                        {99,.9f,1.05f,1,2,2,4}, {14,.9f,0,0,1,1,5}};
                     std::memcpy(rows.data(), page_samples, sizeof(page_samples));
                     if (scenario_.rfind("printed_page_reading", 0) == 0) {
                         const float reading_samples[][7] = {
@@ -211,6 +209,20 @@ public:
                     const float inline_samples[][7] = {
                         {22,.9f,0,0,2,2,0}, {5,.9f,0,0,1,1,1}};
                     std::memcpy(rows.data(), inline_samples, sizeof(inline_samples));
+                } else if (scenario_ == "layout_dedup") {
+                    const float cases[][7] = {
+                        {22,.9f,0,0,1,1,0}, {22,.8f,0,0,1,1,1},
+                        {5,.7f,0,0,1,1,2}, {14,.95f,0,0,2,2,3},
+                        {22,.5f,1,1,2,2,4}, {22,.49f,1,0,2,1,5},
+                        {999,.6f,1,0,2,1,6}};
+                    std::memcpy(rows.data(), cases, sizeof(cases));
+                } else if (scenario_ == "layout_dedup_edges") {
+                    const float cases[][7] = {
+                        {22,.9f,0,0,1,1,0}, {22,.8f,.5f,0,1.5f,1,1},
+                        {22,.7f,.51f,0,1.51f,1,2},
+                        {5,.9f,0,1,1,2,3}, {22,.8f,.02f,1,1.02f,2,4},
+                        {22,.7f,.021f,1,1.021f,2,5}};
+                    std::memcpy(rows.data(), cases, sizeof(cases));
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
                 int32_t count = scenario_ == "printed_page_reading_single" ? 4 :
@@ -220,7 +232,8 @@ public:
                     scenario_.rfind("printed_page_formula", 0) == 0 ? 4 :
                     scenario_.rfind("printed_page_table", 0) == 0 ? 4 :
                     scenario_.rfind("printed_page", 0) == 0 ? 6 :
-                    scenario_ == "layout_contract" ? 7 :
+                    scenario_ == "layout_contract" || scenario_ == "layout_dedup" ? 7 :
+                    scenario_ == "layout_dedup_edges" ? 6 :
                     scenario_ == "layout_table" ? 2 :
                     scenario_ == "layout_inline_formula" ? 2 : 0;
                 if (scenario_ == "printed_page_reading_pdf_mixed") {
@@ -557,7 +570,7 @@ bool config_supported(const std::string& config) {
            config == "fixture:generation_gate_timeout" ||
            config == "fixture:generation_gate_wrong" ||
            config == "fixture:generation_gate_reset_failed" ||
-           config == "fixture:layout_contract" || config == "fixture:layout_table" ||
+           config == "fixture:layout_dedup" || config == "fixture:layout_dedup_edges" || config == "fixture:layout_contract" || config == "fixture:layout_table" ||
            config == "fixture:layout_inline_formula" ||
            config == "fixture:layout_empty" ||
            config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||

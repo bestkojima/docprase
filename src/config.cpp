@@ -240,6 +240,8 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     plan->backend = str(config.at("backend"));
     const bool real_pair = plan->backend == "mnn:pp-doclayout-v3+ovisocr2";
     plan->layout_only = plan->backend == "mnn:pp-doclayout-v3" ||
+                        plan->backend == "fixture:layout_dedup" ||
+                        plan->backend == "fixture:layout_dedup_edges" ||
                         plan->backend == "fixture:layout_contract" ||
                         plan->backend == "fixture:layout_table" ||
                         plan->backend == "fixture:layout_inline_formula" ||

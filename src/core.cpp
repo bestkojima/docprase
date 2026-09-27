@@ -582,6 +582,62 @@ bool decode_real_layout(const TensorOutput& output, const Image& image,
     return true;
 }
 
+// PaddleX release/3.7 object_detection.processors.nms, applied to the raw model boxes.
+void deduplicate_layout(std::vector<RawLayoutCandidate>& records, const Image& image) {
+    std::vector<size_t> order;
+    for (size_t i = 0; i < records.size(); ++i)
+        if (records[i].selected) order.push_back(i);
+    std::sort(order.begin(), order.end(), [&](size_t a, size_t b) {
+        if (records[a].score != records[b].score) return records[a].score > records[b].score;
+        return a > b; // numpy argsort(scores)[::-1] on equal scores
+    });
+    std::vector<size_t> kept;
+    for (size_t index : order) {
+        auto& candidate = records[index];
+        for (size_t previous : kept) {
+            const auto& winner = records[previous];
+            const double left = std::max(candidate.box[0], winner.box[0]);
+            const double top = std::max(candidate.box[1], winner.box[1]);
+            const double right = std::min(candidate.box[2], winner.box[2]);
+            const double bottom = std::min(candidate.box[3], winner.box[3]);
+            // The frozen PaddleX iou() uses inclusive coordinates, even for float boxes.
+            const double intersection = std::max(0.0, right-left+1) * std::max(0.0, bottom-top+1);
+            const double candidate_area = double(candidate.box[2]-candidate.box[0]+1) *
+                                          (candidate.box[3]-candidate.box[1]+1);
+            const double winner_area = double(winner.box[2]-winner.box[0]+1) *
+                                       (winner.box[3]-winner.box[1]+1);
+            const double iou = intersection / (candidate_area + winner_area - intersection);
+            const bool same_class = candidate.class_id == winner.class_id;
+            if (iou >= (same_class ? 0.6 : 0.98)) {
+                candidate.selected = false;
+                candidate.reason = same_class ? "nms_same_class" : "nms_cross_class";
+                break;
+            }
+        }
+        if (candidate.selected) kept.push_back(index);
+    }
+    if (kept.size() <= 1) return;
+    const double limit = image.width > image.height ? 0.82 : 0.93;
+    std::vector<size_t> large_images;
+    for (size_t index : kept) {
+        auto& candidate = records[index];
+        if (candidate.class_id != 14) continue; // official label "image"
+        const double x0 = std::max(0.0, double(candidate.box[0]));
+        const double y0 = std::max(0.0, double(candidate.box[1]));
+        const double x1 = std::min(double(image.width), double(candidate.box[2]));
+        const double y1 = std::min(double(image.height), double(candidate.box[3]));
+        if ((x1-x0)*(y1-y0) > limit * image.width * image.height) {
+            large_images.push_back(index);
+        }
+    }
+    // PaddleX restores the input when the area filter would remove every box.
+    if (large_images.size() == kept.size()) return;
+    for (size_t index : large_images) {
+        records[index].selected = false;
+        records[index].reason = "large_page_image";
+    }
+}
+
 struct LayoutCandidate {
     std::string label;
     Box box;
@@ -1263,6 +1319,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         audit.error_message = "PP-DocLayoutV3 候选/数量/mask 张量契约不符";
         return audit;
     }
+    deduplicate_layout(records, image);
     audit.did_layout = true;
     if (progress) progress("layout_completed", source_page ? source_page : 1, "", 0, 0);
     for (const auto& tensor : output->outputs) {
