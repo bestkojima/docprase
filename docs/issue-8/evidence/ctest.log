@@ -1,0 +1,21 @@
+Test project /tmp/dococr-issue8
+    Start 1: contract
+1/8 Test #1: contract .........................   Passed    0.02 sec
+    Start 2: cli_integration
+2/8 Test #2: cli_integration ..................   Passed    0.09 sec
+    Start 3: config_integration
+3/8 Test #3: config_integration ...............   Passed    0.16 sec
+    Start 4: config_abi
+4/8 Test #4: config_abi .......................   Passed    0.61 sec
+    Start 5: layout_integration
+5/8 Test #5: layout_integration ...............   Passed    0.88 sec
+    Start 6: printed_page_integration
+6/8 Test #6: printed_page_integration .........   Passed    1.26 sec
+    Start 7: printed_formula_integration
+7/8 Test #7: printed_formula_integration ......   Passed    4.10 sec
+    Start 8: printed_page_cancel
+8/8 Test #8: printed_page_cancel ..............   Passed    0.94 sec
+
+100% tests passed out of 8
+
+Total Test time (real) =   8.07 sec

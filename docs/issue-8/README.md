@@ -23,3 +23,13 @@
     /home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests
 
 真实回归脚本核对固定图片哈希、DocumentIR 1.1 Schema、父子引用与几何、每条归属父裁剪的原图像素、所有选中 Layout mask、第一条独立公式与人工 LaTeX 真值（仅忽略空白）、Markdown 不重复、题号不变成标签、混合公式 partial/raw/原图，以及 JSON 往返语义。本页结构与归属验收通过，公式内容质量部分失败：第二条独立公式的 LaTeX 格式通过，但模型把原图及标注中的 alpha 识别为 a。status=ok 仅表示结构解析通过，不表示数学内容识别正确。
+
+## Linux CPU 实测记录
+
+代码提交 `689608a526d5b884101319647ec7275d8c71042f` 上，以下命令均以退出码 0 结束：
+
+- `ctest --test-dir /tmp/dococr-issue8 --output-on-failure`：8/8，通过记录见 [ctest.log](evidence/ctest.log)。
+- `/home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests -v`：12/12，通过记录见 [python-unittest.log](evidence/python-unittest.log)。
+- `python3 tests/printed_formula_real.py /tmp/dococr-issue8/dococr_cli output/issue-8/real-689608a`：真实双模型公共作业与检查脚本退出码均为 0，见 [real-final.log](evidence/real-final.log) 和 [real-summary.json](evidence/real-summary.json)。生成的完整作业目录为 `output/issue-8/real-689608a/job`。
+
+真实页产生 39 个选中 Layout 候选、22 个内容块、17 条归属关系及 3 个独立公式块。首条独立公式与人工标注逐内容一致；第二条仍有模型内容错误，故该页的结构与归属验收为通过，公式内容质量为部分失败。两个只读审查轴（Standards、Spec）对最终代码均未报告确定的阻塞问题；其结论不代替真实模型质量测量。
