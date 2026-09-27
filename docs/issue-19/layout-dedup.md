@@ -6,7 +6,7 @@
 
 ## 模型及契约
 
-- 本地制品为 ModelScope `dr3334/PP-DocLayoutV3-mnn` revision `c67c1a858d5f6c855172d4cfdf931798dafa2edd`，SHA-256 `5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67`。仓库内模型卡没有提供转换脚本、上游权重 revision 或转换参数，故**无法证实具体转换来源**。
+- 本地制品为 ModelScope `dr3334/PP-DocLayoutV3-mnn` revision `c67c1a858d5f6c855172d4cfdf931798dafa2edd`，SHA-256 `5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67`。转换者（项目维护者）确认：DocLayout MNN 由官方仓库提供的 ONNX 模型转换而来；本票按该一手说明记录转换来源，不再要求模型卡公开转换脚本。维护者同时确认 Ovis 由 ModelScope 官方 Ovis 仓库模型转换，转换参数保存在其模型目录；Ovis 转换不属于本票去重规则的验收范围。
 - MNN 图输入为 `image` `[1,3,800,800]`、`im_shape` `[1,2]`、`scale_factor` `[1,2]`；输出为 `fetch_name_0` `[300,7]`、`fetch_name_1` `[1]`、`fetch_name_2` `[300,200,200]`。本地运行时验证名称、类型及形状；公开作业还记录原始张量。候选行按类别、分数、原框四坐标、阅读 rank 解码，mask 行与候选索引一致。
 - 类别映射与固定 Transformers 模型配置的 25 类 `id2label` 对应；官方 `image` 类别为 ID 14，本地也按 ID 14 执行大片图片规则。未知 ID 保留为 `unknown` 供诊断。
 - 原 Transformers 对照是处理器分数阈值 0.5，并不包含本票 PaddleX 应用层 NMS 与大图片筛除；两者不是同一层的输出契约。本地真实 MNN 候选与原模型输出的数值同一性仍未证实。
