@@ -24,6 +24,7 @@ cmake -S . -B /tmp/dococr-issue9 -DDOCOCR_BUILD_TESTS=ON -DDOCOCR_MNN_ROOT=/home
 cmake --build /tmp/dococr-issue9 -j2
 ctest --test-dir /tmp/dococr-issue9 --output-on-failure
 /home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests -v
+mkdir -p output/issue-9
 python3 -c "from PIL import Image; Image.open('tests/fixtures/ovis/source_page.jpg').convert('RGB').save('output/issue-9/source-page-rgb.png')"
 /tmp/dococr-issue9/dococr_cli --config configs/printed-page.example.json --input output/issue-9/source-page-rgb.png --out output/issue-9/real-ordinary-rgb
 /tmp/dococr-issue9/dococr_cli --config configs/printed-page.example.json --input tests/fixtures/ovis/merged_table_book_page.png --out output/issue-9/real-merged
