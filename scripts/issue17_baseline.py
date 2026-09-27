@@ -17,7 +17,7 @@ MANIFEST = ROOT / 'docs/omnidocbench-20/manifest.json'
 DATA = ROOT / 'output/omnidocbench/selected-20'
 TEXT_CATEGORIES = {'text_block', 'title', 'header', 'footer', 'page_number',
                    'figure_caption', 'table_caption', 'table_footnote'}
-KIND = {'table': 'table', 'equation_isolated': 'independent_formula', 'figure': 'figure'}
+NON_TEXT_CATEGORIES = {'table', 'equation_isolated', 'figure'}
 
 
 def sha(path):
@@ -111,9 +111,11 @@ def match(reference, predictions, threshold):
 
 def score_page(annotation, document):
     refs = [a for a in annotation['layout_dets'] if not a.get('ignore') and
-            (a['category_type'] in TEXT_CATEGORIES or a['category_type'] in KIND)]
+            (a['category_type'] in TEXT_CATEGORIES or a['category_type'] in NON_TEXT_CATEGORIES)]
     page = document['pages'][0] if document.get('pages') else None
     blocks = page['blocks'] if page else []
+    def usable(block):
+        return block is not None and block['status'] == 'ok' and document.get('status') != 'failed'
     categories = {'text': [a for a in refs if a['category_type'] in TEXT_CATEGORIES],
                   'independent_formula': [a for a in refs if a['category_type'] == 'equation_isolated'],
                   'table': [a for a in refs if a['category_type'] == 'table'],
@@ -131,19 +133,20 @@ def score_page(annotation, document):
             row = {'annotation_id': ref['anno_id'], 'category': ref['category_type'],
                    'order': ref.get('order'), 'block_id': pred['id'] if pred else None,
                    'coverage': round(pair[1], 4) if pair else 0,
-                   'status': pred['status'] if pred else 'missing'}
-            actual = pred['content'].get('text', '') if pred and pred['status'] == 'ok' else ''
+                   'status': ('failed_document' if pred and document.get('status') == 'failed'
+                              else pred['status'] if pred else 'missing')}
+            actual = pred['content'].get('text', '') if usable(pred) else ''
             if kind == 'text':
                 want = normalize(ref.get('text', ''))
                 got = normalize(actual)
                 row.update({'reference_chars': len(want), 'edit_distance': edit_distance(got, want),
-                            'exact': bool(pred and pred['status'] == 'ok' and got == want)})
+                            'exact': bool(usable(pred) and got == want)})
             elif kind == 'independent_formula':
-                row['exact'] = bool(pred and pred['status'] == 'ok' and
+                row['exact'] = bool(usable(pred) and
                                     formula(actual) == formula(ref['latex']))
             elif kind == 'table':
                 reference_table = table_grid(ref['html'])
-                actual_table = pred['content'].get('table') if pred and pred['status'] == 'ok' else None
+                actual_table = pred['content'].get('table') if usable(pred) else None
                 row['structure_exact'] = False
                 row['cell_exact'] = 0
                 row['cell_denominator'] = len(reference_table['cells']) if reference_table else 0
@@ -157,7 +160,7 @@ def score_page(annotation, document):
                                             for a, b in zip(actual_table['cells'], reference_table['cells']))
                 row['exact'] = row['structure_exact'] and row['cell_exact'] == row['cell_denominator']
             else:
-                row['exact'] = bool(pred and pred['status'] == 'ok')
+                row['exact'] = bool(usable(pred))
             rows.append(row)
             if pred:
                 paired[(kind, ri)] = pred
@@ -168,11 +171,12 @@ def score_page(annotation, document):
         parent = paired.get(('text', ri))
         for span in inline_formulas(ref):
             want = formula(span['latex'])
-            raw = parent['content'].get('text', '') if parent and parent['status'] == 'ok' else ''
+            raw = parent['content'].get('text', '') if usable(parent) else ''
             inline_rows.append({'parent_annotation_id': ref['anno_id'],
                                 'block_id': parent['id'] if parent else None,
-                                'status': parent['status'] if parent else 'missing',
-                                'exact': bool(parent and parent['status'] == 'ok' and want in formula(raw))})
+                                'status': ('failed_document' if parent and document.get('status') == 'failed'
+                                           else parent['status'] if parent else 'missing'),
+                                'exact': bool(usable(parent) and want in formula(raw))})
     result['inline_formula'] = summarize(inline_rows, [])
     ordered = [(row['order'], paired.get(('text', ri))) for ri, row in enumerate(result['text']['rows'])
                if isinstance(row['order'], int)]
@@ -242,6 +246,12 @@ def corrected_annotation(spec, annotation, errata):
     return corrected
 
 
+def aggregate_quality_claim_blocked(pages, expected_pages=20):
+    return (len(pages) != expected_pages or any(
+        page['returncode'] != 0 or 'failure' in page or page['scores']['quality_claim_blocked']
+        for page in pages.values()))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--cli', type=Path, default=ROOT / 'build/linux-current/dococr_cli')
@@ -290,10 +300,6 @@ def main():
                 'image_sha256': spec['image_sha256'], 'returncode': code}
         if (job / 'document.json').is_file():
             document = json.loads((job / 'document.json').read_text())
-            item['scores'] = score_page(annotation, document)
-            if spec['id'] == 'odb-15':
-                revised = score_page(corrected_annotation(spec, annotation, errata), document)
-                item['errata_text'] = revised['text']
             item['document_sha256'] = sha(job / 'document.json')
             if (job / 'run-manifest.json').exists():
                 run = json.loads((job / 'run-manifest.json').read_text())
@@ -302,6 +308,7 @@ def main():
                                                             'effective_parameters', 'config_hash')}
                 item['stop_reasons'] = dict(Counter(r.get('stop_reason') for r in run.get('regions', [])))
         else:
+            document = {'status': 'failed', 'pages': []}
             item['failure'] = 'missing_document_output'
             stderr_path = folder / 'stderr.log'
             if stderr_path.exists():
@@ -312,11 +319,10 @@ def main():
                         continue
                     if isinstance(failure, dict) and failure.get('error'):
                         item['failure_detail'] = failure['error']
-            item['scores'] = score_page(annotation, {'status': 'failed', 'pages': []})
-            if spec['id'] == 'odb-15':
-                revised = score_page(corrected_annotation(spec, annotation, errata),
-                                     {'status': 'failed', 'pages': []})
-                item['errata_text'] = revised['text']
+        item['scores'] = score_page(annotation, document)
+        if spec['id'] == 'odb-15':
+            revised = score_page(corrected_annotation(spec, annotation, errata), document)
+            item['errata_text'] = revised['text']
         report['pages'][spec['id']] = item
         (output / 'progress.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
         print(spec['id'], code, item['scores']['document_status'], flush=True)
@@ -326,9 +332,7 @@ def main():
                                               for p in report['pages'].values()) + 20 - len(report['pages'])
     report['aggregate']['pages_non_ok'] = sum(p['scores']['document_status'] != 'ok'
                                              for p in report['pages'].values()) + 20 - len(report['pages'])
-    report['aggregate']['quality_claim_blocked'] = (
-        len(report['pages']) != 20 or any(p['scores']['quality_claim_blocked']
-                                         for p in report['pages'].values()))
+    report['aggregate']['quality_claim_blocked'] = aggregate_quality_claim_blocked(report['pages'])
     report['aggregate']['raw_repetition_suspicions'] = sum(
         len(p['scores']['raw_repetition_suspicions']) for p in report['pages'].values())
     for kind in ('text', 'inline_formula', 'independent_formula', 'table', 'figure'):

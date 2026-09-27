@@ -41,7 +41,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-02",
@@ -75,7 +79,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-03",
@@ -108,7 +116,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-04",
@@ -141,7 +153,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-05",
@@ -175,7 +191,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-06",
@@ -209,7 +229,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-07",
@@ -239,9 +263,13 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false,
+      "recognition_run": true,
       "conservative_source_group": "pep-junior-math",
-      "source_group_note": "出版社与学段一致，完整册次未完全确认，保守同组"
+      "source_group_note": "出版社与学段一致，完整册次未完全确认，保守同组",
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-08",
@@ -273,9 +301,13 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false,
+      "recognition_run": true,
       "conservative_source_group": "pep-junior-math",
-      "source_group_note": "出版社与学段一致，完整册次未完全确认，保守同组"
+      "source_group_note": "出版社与学段一致，完整册次未完全确认，保守同组",
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-09",
@@ -306,7 +338,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-10",
@@ -336,7 +372,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-11",
@@ -373,7 +413,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 3,
+        "document_status": "failed"
+      }
     },
     {
       "id": "odb-12",
@@ -406,7 +450,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-13",
@@ -441,9 +489,13 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false,
+      "recognition_run": true,
       "conservative_source_group": "junior-physics-exercise-unknown",
-      "source_group_note": "版式接近，保守同组"
+      "source_group_note": "版式接近，保守同组",
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-14",
@@ -478,9 +530,13 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false,
+      "recognition_run": true,
       "conservative_source_group": "junior-physics-exercise-unknown",
-      "source_group_note": "版式接近，保守同组"
+      "source_group_note": "版式接近，保守同组",
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-15",
@@ -513,7 +569,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-16",
@@ -546,7 +606,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-17",
@@ -583,7 +647,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 3,
+        "document_status": "failed"
+      }
     },
     {
       "id": "odb-18",
@@ -616,7 +684,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-19",
@@ -649,7 +721,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "partial"
+      }
     },
     {
       "id": "odb-20",
@@ -682,7 +758,11 @@
       "holdout_eligible": false,
       "role": "development_evaluation",
       "visual_review": "passed",
-      "recognition_run": false
+      "recognition_run": true,
+      "baseline_result": {
+        "returncode": 0,
+        "document_status": "ok"
+      }
     }
   ],
   "validation": {

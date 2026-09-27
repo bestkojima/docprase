@@ -13,6 +13,24 @@
       "source_document_identity": "partial_or_unknown",
       "image_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
       "returncode": 0,
+      "document_sha256": "bf25ebda9b05692ecb7f18c00276ae3dfcd8405436b5c4808f0a051be5e53da8",
+      "run_manifest_sha256": "7f508f68029d5ffc41e23f812444b7bc1256b0f71608ce7203682648ca556306",
+      "runtime": {
+        "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+        "actual_device": "cpu",
+        "effective_parameters": {
+          "threads": 1,
+          "max_new_tokens": 512,
+          "max_page_pixels": 16000000,
+          "max_output_bytes": 67108864
+        },
+        "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
+      },
+      "stop_reasons": {
+        "normal": 39,
+        "token_limit": 1,
+        "recognition_not_executed": 1
+      },
       "scores": {
         "text": {
           "denominator": 21,
@@ -672,9 +690,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "bf25ebda9b05692ecb7f18c00276ae3dfcd8405436b5c4808f0a051be5e53da8",
-      "run_manifest_sha256": "7f508f68029d5ffc41e23f812444b7bc1256b0f71608ce7203682648ca556306",
+      }
+    },
+    "odb-02": {
+      "subject": "数学",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+      "returncode": 0,
+      "document_sha256": "dd7c53f96b236b1b5489a2101e1aa7c81adcab8cf9bf4657fe476cf8ee8646d8",
+      "run_manifest_sha256": "43413d7c8235e66f6beca30e9f956b581e080059375449c0806b872cd93157aa",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -687,17 +712,8 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 39,
-        "token_limit": 1,
-        "recognition_not_executed": 1
-      }
-    },
-    "odb-02": {
-      "subject": "数学",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
-      "returncode": 0,
+        "normal": 47
+      },
       "scores": {
         "text": {
           "denominator": 23,
@@ -1489,9 +1505,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "dd7c53f96b236b1b5489a2101e1aa7c81adcab8cf9bf4657fe476cf8ee8646d8",
-      "run_manifest_sha256": "43413d7c8235e66f6beca30e9f956b581e080059375449c0806b872cd93157aa",
+      }
+    },
+    "odb-03": {
+      "subject": "数学",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "returncode": 0,
+      "document_sha256": "c49f7c2717ff7dee08905b9cfc2b46f974a9f1416f3ce5631db45c01c0844418",
+      "run_manifest_sha256": "34dd5418e0473e1a932e37dfe1413603f55fa36f6f4812380de9611e1ed9025a",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -1504,15 +1527,10 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 47
-      }
-    },
-    "odb-03": {
-      "subject": "数学",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
-      "returncode": 0,
+        "normal": 15,
+        "recognition_not_executed": 8,
+        "token_limit": 1
+      },
       "scores": {
         "text": {
           "denominator": 18,
@@ -1942,9 +1960,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "c49f7c2717ff7dee08905b9cfc2b46f974a9f1416f3ce5631db45c01c0844418",
-      "run_manifest_sha256": "34dd5418e0473e1a932e37dfe1413603f55fa36f6f4812380de9611e1ed9025a",
+      }
+    },
+    "odb-04": {
+      "subject": "数学",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
+      "returncode": 0,
+      "document_sha256": "522be1bc72805dc0e9c1ba4a0eef1f1ab3dbf74927b3c1ee0be324514e5f101c",
+      "run_manifest_sha256": "210fb3e235ceffc5c12317bcd381cd266e3dee45e0cc53635303d2374fddc8dc",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -1957,17 +1982,10 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 15,
-        "recognition_not_executed": 8,
-        "token_limit": 1
-      }
-    },
-    "odb-04": {
-      "subject": "数学",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
-      "returncode": 0,
+        "normal": 35,
+        "recognition_not_executed": 7,
+        "token_limit": 5
+      },
       "scores": {
         "text": {
           "denominator": 31,
@@ -2862,9 +2880,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "522be1bc72805dc0e9c1ba4a0eef1f1ab3dbf74927b3c1ee0be324514e5f101c",
-      "run_manifest_sha256": "210fb3e235ceffc5c12317bcd381cd266e3dee45e0cc53635303d2374fddc8dc",
+      }
+    },
+    "odb-05": {
+      "subject": "数学",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+      "returncode": 0,
+      "document_sha256": "6bbceed7e16a7203b66cb5932b2efca0258d6ce7bf5e10280a746a9f6c8ea0e8",
+      "run_manifest_sha256": "f7f145bfa7d1e65b59d1bd2b4573f85876acb3f6c6f2d21836019328393e9f79",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -2877,17 +2902,8 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 35,
-        "recognition_not_executed": 7,
-        "token_limit": 5
-      }
-    },
-    "odb-05": {
-      "subject": "数学",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
-      "returncode": 0,
+        "normal": 17
+      },
       "scores": {
         "text": {
           "denominator": 12,
@@ -3137,9 +3153,16 @@
           "independent_formula:unmatched_outputs"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "6bbceed7e16a7203b66cb5932b2efca0258d6ce7bf5e10280a746a9f6c8ea0e8",
-      "run_manifest_sha256": "f7f145bfa7d1e65b59d1bd2b4573f85876acb3f6c6f2d21836019328393e9f79",
+      }
+    },
+    "odb-06": {
+      "subject": "数学",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
+      "returncode": 0,
+      "document_sha256": "4c60c526b8553624a423dd57f9153b11dd49fc883e032a2084b7b5e58bedddab",
+      "run_manifest_sha256": "2a3eb85d48cad824de990e121b4baa1abb9b7ad263be3d2c3df6728c50c6edab",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -3152,15 +3175,10 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 17
-      }
-    },
-    "odb-06": {
-      "subject": "数学",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
-      "returncode": 0,
+        "normal": 20,
+        "token_limit": 14,
+        "recognition_not_executed": 2
+      },
       "scores": {
         "text": {
           "denominator": 18,
@@ -3928,9 +3946,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "4c60c526b8553624a423dd57f9153b11dd49fc883e032a2084b7b5e58bedddab",
-      "run_manifest_sha256": "2a3eb85d48cad824de990e121b4baa1abb9b7ad263be3d2c3df6728c50c6edab",
+      }
+    },
+    "odb-07": {
+      "subject": "数学",
+      "source_type": "colorful_textbook",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "returncode": 0,
+      "document_sha256": "5d65011a040f986e9c7dffc25b306c959948d8e82fe6b9607906901a366d7a6e",
+      "run_manifest_sha256": "2cada1d01f2dd1cc41f4fea7c024fbc7cc04750ada03df96af792aa64a2df242",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -3943,17 +3968,9 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 20,
-        "token_limit": 14,
+        "normal": 9,
         "recognition_not_executed": 2
-      }
-    },
-    "odb-07": {
-      "subject": "数学",
-      "source_type": "colorful_textbook",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
-      "returncode": 0,
+      },
       "scores": {
         "text": {
           "denominator": 14,
@@ -4222,9 +4239,16 @@
           "reading_order_incomplete_or_wrong"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "5d65011a040f986e9c7dffc25b306c959948d8e82fe6b9607906901a366d7a6e",
-      "run_manifest_sha256": "2cada1d01f2dd1cc41f4fea7c024fbc7cc04750ada03df96af792aa64a2df242",
+      }
+    },
+    "odb-08": {
+      "subject": "数学",
+      "source_type": "colorful_textbook",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "returncode": 0,
+      "document_sha256": "d54cf2dafdf8f8d2330096aac08e996180ee5f9aa337f623601c000e012e1a37",
+      "run_manifest_sha256": "ff32eed1e100bb72de2e7dac1614e4f12c76fa7498900cbb66f8f49981064566",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -4237,16 +4261,10 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 9,
-        "recognition_not_executed": 2
-      }
-    },
-    "odb-08": {
-      "subject": "数学",
-      "source_type": "colorful_textbook",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
-      "returncode": 0,
+        "normal": 21,
+        "recognition_not_executed": 16,
+        "token_limit": 6
+      },
       "scores": {
         "text": {
           "denominator": 28,
@@ -4841,9 +4859,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "d54cf2dafdf8f8d2330096aac08e996180ee5f9aa337f623601c000e012e1a37",
-      "run_manifest_sha256": "ff32eed1e100bb72de2e7dac1614e4f12c76fa7498900cbb66f8f49981064566",
+      }
+    },
+    "odb-09": {
+      "subject": "数学",
+      "source_type": "colorful_textbook",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+      "returncode": 0,
+      "document_sha256": "f043d0263fb2e7fa2d3d2c4ee32f3d4e7a29482d8121243db30a184e19f11bf4",
+      "run_manifest_sha256": "66f6df7338c32892cc4e32c8dea73a61d43b73d02e7a483d86ef1a1adf32b2cf",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -4856,17 +4881,9 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 21,
-        "recognition_not_executed": 16,
-        "token_limit": 6
-      }
-    },
-    "odb-09": {
-      "subject": "数学",
-      "source_type": "colorful_textbook",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
-      "returncode": 0,
+        "normal": 9,
+        "recognition_not_executed": 1
+      },
       "scores": {
         "text": {
           "denominator": 5,
@@ -5057,9 +5074,16 @@
           "reading_order_incomplete_or_wrong"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "f043d0263fb2e7fa2d3d2c4ee32f3d4e7a29482d8121243db30a184e19f11bf4",
-      "run_manifest_sha256": "66f6df7338c32892cc4e32c8dea73a61d43b73d02e7a483d86ef1a1adf32b2cf",
+      }
+    },
+    "odb-10": {
+      "subject": "数学",
+      "source_type": "colorful_textbook",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+      "returncode": 0,
+      "document_sha256": "27422732eccf41a233eded567a1e5a5928900957fcd6dab26c67775f7adf46c0",
+      "run_manifest_sha256": "a7c3033d3f82684306478af6702cec9af182524b75b51e2affee2d281ad6407c",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -5072,16 +5096,9 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 9,
-        "recognition_not_executed": 1
-      }
-    },
-    "odb-10": {
-      "subject": "数学",
-      "source_type": "colorful_textbook",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
-      "returncode": 0,
+        "normal": 13,
+        "token_limit": 1
+      },
       "scores": {
         "text": {
           "denominator": 17,
@@ -5384,23 +5401,6 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "27422732eccf41a233eded567a1e5a5928900957fcd6dab26c67775f7adf46c0",
-      "run_manifest_sha256": "a7c3033d3f82684306478af6702cec9af182524b75b51e2affee2d281ad6407c",
-      "runtime": {
-        "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
-        "actual_device": "cpu",
-        "effective_parameters": {
-          "threads": 1,
-          "max_new_tokens": 512,
-          "max_page_pixels": 16000000,
-          "max_output_bytes": 67108864
-        },
-        "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
-      },
-      "stop_reasons": {
-        "normal": 13,
-        "token_limit": 1
       }
     },
     "odb-11": {
@@ -5589,6 +5589,23 @@
       "source_document_identity": "partial_or_unknown",
       "image_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
       "returncode": 0,
+      "document_sha256": "7f3cf446e154d4d417989f99948fba32708a39d3a8f70f526f5bd3592a5ec143",
+      "run_manifest_sha256": "7e141b65989799272e87460fad420178337c23e41e601e99178a5d316af9a6c0",
+      "runtime": {
+        "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+        "actual_device": "cpu",
+        "effective_parameters": {
+          "threads": 1,
+          "max_new_tokens": 512,
+          "max_page_pixels": 16000000,
+          "max_output_bytes": 67108864
+        },
+        "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
+      },
+      "stop_reasons": {
+        "normal": 13,
+        "recognition_not_executed": 3
+      },
       "scores": {
         "text": {
           "denominator": 13,
@@ -5847,9 +5864,16 @@
           "reading_order_incomplete_or_wrong"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "7f3cf446e154d4d417989f99948fba32708a39d3a8f70f526f5bd3592a5ec143",
-      "run_manifest_sha256": "7e141b65989799272e87460fad420178337c23e41e601e99178a5d316af9a6c0",
+      }
+    },
+    "odb-13": {
+      "subject": "物理",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "returncode": 0,
+      "document_sha256": "d4df745fa6cf17e31dd54dc482ec87444685d48e44233391c606ac3deb24ba86",
+      "run_manifest_sha256": "162d80994c38282e1eeffd277048b6a0a303656bb66b1bd561689127200c015f",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -5862,16 +5886,10 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 13,
-        "recognition_not_executed": 3
-      }
-    },
-    "odb-13": {
-      "subject": "物理",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
-      "returncode": 0,
+        "normal": 11,
+        "recognition_not_executed": 4,
+        "token_limit": 1
+      },
       "scores": {
         "text": {
           "denominator": 12,
@@ -6144,9 +6162,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "d4df745fa6cf17e31dd54dc482ec87444685d48e44233391c606ac3deb24ba86",
-      "run_manifest_sha256": "162d80994c38282e1eeffd277048b6a0a303656bb66b1bd561689127200c015f",
+      }
+    },
+    "odb-14": {
+      "subject": "物理",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+      "returncode": 0,
+      "document_sha256": "07d6fbc1836c3ab64f5d52084ba9d02a855dcd29622d1b25bbb7e1ea83814097",
+      "run_manifest_sha256": "ed0fb88090e90d89b1a36543fbfc609cc11462900d7b1aeb14b5ee6c5db2a132",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -6159,17 +6184,9 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 11,
-        "recognition_not_executed": 4,
+        "normal": 8,
         "token_limit": 1
-      }
-    },
-    "odb-14": {
-      "subject": "物理",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
-      "returncode": 0,
+      },
       "scores": {
         "text": {
           "denominator": 8,
@@ -6391,9 +6408,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "07d6fbc1836c3ab64f5d52084ba9d02a855dcd29622d1b25bbb7e1ea83814097",
-      "run_manifest_sha256": "ed0fb88090e90d89b1a36543fbfc609cc11462900d7b1aeb14b5ee6c5db2a132",
+      }
+    },
+    "odb-15": {
+      "subject": "物理",
+      "source_type": "colorful_textbook",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "returncode": 0,
+      "document_sha256": "a855fa81d376fc97f4991b81e5fa5934e85b2bdfaaf7fc249d6284340057eb44",
+      "run_manifest_sha256": "7cad3dc18c72c1c281d8f9160a5f250f2a5f0a0f4d83189c3f3f2bda2d829994",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -6406,16 +6430,9 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 8,
-        "token_limit": 1
-      }
-    },
-    "odb-15": {
-      "subject": "物理",
-      "source_type": "colorful_textbook",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
-      "returncode": 0,
+        "normal": 15,
+        "recognition_not_executed": 1
+      },
       "scores": {
         "text": {
           "denominator": 12,
@@ -6832,9 +6849,16 @@
             "status": "ok"
           }
         ]
-      },
-      "document_sha256": "a855fa81d376fc97f4991b81e5fa5934e85b2bdfaaf7fc249d6284340057eb44",
-      "run_manifest_sha256": "7cad3dc18c72c1c281d8f9160a5f250f2a5f0a0f4d83189c3f3f2bda2d829994",
+      }
+    },
+    "odb-16": {
+      "subject": "化学",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
+      "returncode": 0,
+      "document_sha256": "1d26e9c3416bf01302c1b42a5a5d04f2b0effef51b8f6a98da53a196611f9c45",
+      "run_manifest_sha256": "99a375a70515aff8f1b9e561611b7e420714db761f248171738298cd872effbf",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -6847,16 +6871,10 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 15,
-        "recognition_not_executed": 1
-      }
-    },
-    "odb-16": {
-      "subject": "化学",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
-      "returncode": 0,
+        "normal": 13,
+        "recognition_not_executed": 1,
+        "token_limit": 1
+      },
       "scores": {
         "text": {
           "denominator": 12,
@@ -7111,24 +7129,6 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "1d26e9c3416bf01302c1b42a5a5d04f2b0effef51b8f6a98da53a196611f9c45",
-      "run_manifest_sha256": "99a375a70515aff8f1b9e561611b7e420714db761f248171738298cd872effbf",
-      "runtime": {
-        "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
-        "actual_device": "cpu",
-        "effective_parameters": {
-          "threads": 1,
-          "max_new_tokens": 512,
-          "max_page_pixels": 16000000,
-          "max_output_bytes": 67108864
-        },
-        "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
-      },
-      "stop_reasons": {
-        "normal": 13,
-        "recognition_not_executed": 1,
-        "token_limit": 1
       }
     },
     "odb-17": {
@@ -7471,6 +7471,24 @@
       "source_document_identity": "partial_or_unknown",
       "image_sha256": "46e8933d18a8ee8135f43fd29da3df9f2f68449e96667c44dfc103c385d86402",
       "returncode": 0,
+      "document_sha256": "5fe44a8d8f52ceded933ba47f884188bf2a990197f749be855b8a7a463f22452",
+      "run_manifest_sha256": "d47dea5f7d859b231b6010d1a3a8efc477853d0b53a3037f68e74829983de236",
+      "runtime": {
+        "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+        "actual_device": "cpu",
+        "effective_parameters": {
+          "threads": 1,
+          "max_new_tokens": 512,
+          "max_page_pixels": 16000000,
+          "max_output_bytes": 67108864
+        },
+        "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
+      },
+      "stop_reasons": {
+        "normal": 19,
+        "recognition_not_executed": 3,
+        "token_limit": 1
+      },
       "scores": {
         "text": {
           "denominator": 19,
@@ -7802,9 +7820,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "5fe44a8d8f52ceded933ba47f884188bf2a990197f749be855b8a7a463f22452",
-      "run_manifest_sha256": "d47dea5f7d859b231b6010d1a3a8efc477853d0b53a3037f68e74829983de236",
+      }
+    },
+    "odb-19": {
+      "subject": "语文",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
+      "returncode": 0,
+      "document_sha256": "3a92f2c837a14e9180fcc63b3f9b40efaad5348e1302acde6f371a52fbf9e5da",
+      "run_manifest_sha256": "d267357d9d096fedd70eddf087e766f2d5be9d1666358243bc40215424589f4a",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -7817,17 +7842,9 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 19,
-        "recognition_not_executed": 3,
-        "token_limit": 1
-      }
-    },
-    "odb-19": {
-      "subject": "语文",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
-      "returncode": 0,
+        "normal": 62,
+        "token_limit": 11
+      },
       "scores": {
         "text": {
           "denominator": 52,
@@ -8728,9 +8745,16 @@
           "raw_repetition_suspicions"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "3a92f2c837a14e9180fcc63b3f9b40efaad5348e1302acde6f371a52fbf9e5da",
-      "run_manifest_sha256": "d267357d9d096fedd70eddf087e766f2d5be9d1666358243bc40215424589f4a",
+      }
+    },
+    "odb-20": {
+      "subject": "英语",
+      "source_type": "exam_paper",
+      "source_document_identity": "partial_or_unknown",
+      "image_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+      "returncode": 0,
+      "document_sha256": "534fd18313880e8b9623aab3e351e32857ef07841b278613c94aad9ecf6a6f30",
+      "run_manifest_sha256": "707d7eb1d0cc0541afcf225d6502f379ce331a15fb0235ea1998db21c18a1e50",
       "runtime": {
         "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
         "actual_device": "cpu",
@@ -8743,16 +8767,8 @@
         "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
       },
       "stop_reasons": {
-        "normal": 62,
-        "token_limit": 11
-      }
-    },
-    "odb-20": {
-      "subject": "英语",
-      "source_type": "exam_paper",
-      "source_document_identity": "partial_or_unknown",
-      "image_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
-      "returncode": 0,
+        "normal": 15
+      },
       "scores": {
         "text": {
           "denominator": 29,
@@ -9146,22 +9162,6 @@
           "reading_order_incomplete_or_wrong"
         ],
         "quality_claim_blocked": true
-      },
-      "document_sha256": "534fd18313880e8b9623aab3e351e32857ef07841b278613c94aad9ecf6a6f30",
-      "run_manifest_sha256": "707d7eb1d0cc0541afcf225d6502f379ce331a15fb0235ea1998db21c18a1e50",
-      "runtime": {
-        "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
-        "actual_device": "cpu",
-        "effective_parameters": {
-          "threads": 1,
-          "max_new_tokens": 512,
-          "max_page_pixels": 16000000,
-          "max_output_bytes": 67108864
-        },
-        "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed"
-      },
-      "stop_reasons": {
-        "normal": 15
       }
     }
   },
