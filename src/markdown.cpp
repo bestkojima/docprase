@@ -67,7 +67,7 @@ std::string render_markdown_block(const MarkdownBlock& b) {
     if (b.status != "ok") {
         std::string marker = "[" + std::string(b.status == "skipped" ? "未处理：" :
             b.status == "partial" ? "待核验：" : "识别失败：") + b.id + "](" + b.resource + ")";
-        return b.text.empty() ? marker : safe_text(b.text) + "\n\n" + marker;
+        return b.resource.empty() ? marker : "![原图](" + b.resource + ")\n\n" + marker;
     }
     if (b.type == "formula") {
         const std::string formula = safe_text(b.text);

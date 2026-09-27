@@ -30,7 +30,9 @@ def run(binary, scenario, root, image):
     document = json.loads((output / 'document.json').read_text())
     manifest = json.loads((output / 'run-manifest.json').read_text())
     import jsonschema
-    schema_path = ('docs/issue-10/document-ir-1.3.schema.json'
+    schema_path = ('docs/issue-18/document-ir-1.5-image.schema.json'
+                   if document['schema_version'] == '1.5'
+                   else 'docs/issue-10/document-ir-1.3.schema.json'
                    if document['schema_version'] == '1.3'
                    else 'docs/issue-9/document-ir-1.2.schema.json'
                    if document['schema_version'] == '1.2'
@@ -74,6 +76,21 @@ def main():
         markdown = (output / 'document.md').read_text()
         assert '![插图]' in markdown
         assert markdown.count('<table>') == 1 and '[待核验：b0005]' in markdown
+
+        visual_out, visual_doc, visual_manifest = run(sys.argv[1], 'printed_page_visual_empty', root, image)
+        visual_block = visual_doc['pages'][0]['blocks'][0]
+        assert visual_doc['schema_version'] == '1.5'
+        assert visual_block['status'] == 'failed'
+        assert visual_block['provenance']['raw_output'] == '1. 2. spurious text'
+        assert visual_block['provenance']['visual']['evidence'] == 'no_visual_tokens'
+        assert visual_block['provenance']['visual']['token_count'] == 0
+        assert visual_block['provenance']['visual']['source_bbox'] == visual_block['bbox']
+        assert visual_block['provenance']['visual']['source_crop'] == visual_block['content']['resource']
+        assert visual_manifest['regions'][0]['stop_reason'] == 'vision_missing'
+        assert visual_doc['pages'][0]['blocks'][3]['status'] == 'ok'
+        visual_markdown = (visual_out / 'document.md').read_text()
+        assert '![原图](' in visual_markdown and '[识别失败：b0001]' in visual_markdown
+        assert 'spurious text' not in visual_markdown
 
         for scenario, expected_status, expected_reason in [
             ('printed_page_failure', 'failed', 'error'),

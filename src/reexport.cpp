@@ -185,9 +185,9 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     catch (const std::exception& error) { throw std::invalid_argument(std::string("JSON 解析失败：") + error.what()); }
     const auto version = string_field(document, "schema_version", "document");
     require(version == "1.0" || version == "1.1" || version == "1.2" ||
-            version == "1.3" || version == "1.4", "不支持 schema_version " + version);
+            version == "1.3" || version == "1.4" || version == "1.5", "不支持 schema_version " + version);
     validate_document_schema(document, version);
-    const bool pdf = version == "1.4";
+    const bool pdf = document.at("source").at("type") == "pdf";
     id(string_field(document, "document_id", "document"), "doc-[0-9a-f]{16}", "document_id");
     status(string_field(document, "status", "document"), false, "document");
     require(string_field(field(document, "source", "document"), "type", "source") ==
@@ -312,7 +312,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                         where + " 公式格式无效");
             if (type == "table" && content.contains("table") && content.at("table").is_object())
                 require(format == "html", where + " 表格 format 无效");
-            if (type == "table" && (version == "1.2" || version == "1.3" || pdf)) {
+            if (type == "table" && (version == "1.2" || version == "1.3" || version == "1.5" || pdf)) {
                 if (block.at("status") == "ok") structured_table(content, where);
                 else require(field(content, "table", where).is_null() &&
                              content.at("text") == "" && format == "markdown",
@@ -337,6 +337,39 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             for (auto name : {"raw_output_base64", "text_base64"}) {
                 const auto& value = field(provenance, name, where);
                 require(value.is_null() || value.is_string(), where + " provenance base64 字段无效");
+            }
+            if (provenance.contains("visual")) {
+                const auto& visual = provenance.at("visual");
+                const auto evidence = string_field(visual, "evidence", where);
+                const auto tokens = field(visual, "token_count", where);
+                require(tokens.is_number_unsigned() || (tokens.is_number_integer() && tokens.get<int64_t>() >= 0),
+                        where + " 视觉 token 数无效");
+                require(string_field(visual, "source_crop", where) == content.at("resource"),
+                        where + " 原裁图资源不一致");
+                require(field(visual, "source_bbox", where) == block.at("bbox"),
+                        where + " 原裁图定位不一致");
+                const auto& canvas = field(visual, "canvas_size", where);
+                const auto& size = field(visual, "content_size", where);
+                const auto& offset = field(visual, "pad_offset", where);
+                require(canvas.is_array() && size.is_array() && offset.is_array() &&
+                        canvas.size() == 2 && size.size() == 2 && offset.size() == 2,
+                        where + " 视觉画布结构无效");
+                for (int axis = 0; axis < 2; ++axis) {
+                    require(canvas[axis].is_number_integer() && size[axis].is_number_integer() &&
+                            offset[axis].is_number_integer() && canvas[axis].get<int>() >= 0 &&
+                            size[axis].get<int>() >= 0 && offset[axis].get<int>() >= 0 &&
+                            size[axis].get<int>() + offset[axis].get<int>() <= canvas[axis].get<int>(),
+                            where + " 视觉变换超出画布");
+                }
+                if (evidence == "image_pad_tokens")
+                    require(tokens.get<uint64_t>() > 0 && canvas[0].get<int>() >= 32 &&
+                            canvas[1].get<int>() >= 32 && canvas[0].get<int>() % 32 == 0 &&
+                            canvas[1].get<int>() % 32 == 0 &&
+                            int64_t(canvas[0].get<int>()) * canvas[1].get<int>() >= 65536 &&
+                            int64_t(canvas[0].get<int>()) * canvas[1].get<int>() <= 16777216,
+                            where + " 有效视觉证据或画布无效");
+                else require(block.at("status") != "ok" && tokens.get<uint64_t>() == 0,
+                             where + " 无视觉输入不可标记成功");
             }
             const auto& error = field(block, "error", where);
             const auto& error_base64 = field(block, "error_base64", where);
@@ -366,7 +399,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 require(part_of_owner, where + " 内容归属不属于 owner 的源区域");
             } else {
                 require((type == "caption_of" || type == "footnote_of" || type == "heading_precedes") &&
-                        (version == "1.3" || pdf) &&
+                        (version == "1.3" || version == "1.5" || pdf) &&
                         blocks.count(string_field(relation, "source_block_id", where)) &&
                         blocks.count(string_field(relation, "target_block_id", where)), where + " 语义关系引用不存在");
             }

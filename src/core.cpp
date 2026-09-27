@@ -191,6 +191,7 @@ struct Block {
     bool display_formula = true;
     std::vector<std::string> owned_layout_ids;
     ParsedTable table;
+    GenerationOutput visual;
 };
 
 struct ReadingOrderEvidence {
@@ -928,7 +929,10 @@ std::string serialize(const Image& image, const std::string& state,
     out << std::setprecision(9);
     bool has_table = structured_tables &&
         std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.type == "table"; });
-    out << "{\"schema_version\":" << json_quote(order_evidence ? "1.3" :
+    const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
+        return !b.visual.visual_evidence.empty();
+    });
+    out << "{\"schema_version\":" << json_quote(has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
@@ -1028,7 +1032,18 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"request_id\":" << json_quote("req" + b.region_id)
             << ",\"raw_output\":" << (b.raw_base64.empty() ? json_quote(b.raw) : "null")
             << ",\"raw_output_base64\":" << (b.raw_base64.empty() ? "null" : json_quote(b.raw_base64))
-            << ",\"text_base64\":" << (b.text_base64.empty() ? "null" : json_quote(b.text_base64))
+            << ",\"text_base64\":" << (b.text_base64.empty() ? "null" : json_quote(b.text_base64));
+        if (!b.visual.visual_evidence.empty()) {
+            out << ",\"visual\":{\"evidence\":" << json_quote(b.visual.visual_evidence)
+                << ",\"token_count\":" << b.visual.visual_tokens
+                << ",\"source_crop\":" << json_quote(b.resource)
+                << ",\"source_bbox\":" << box_json(b.box)
+                << ",\"canvas_size\":[" << b.visual.canvas_width << ',' << b.visual.canvas_height << ']'
+                << ",\"content_size\":[" << b.visual.content_width << ',' << b.visual.content_height << ']'
+                << ",\"pad_offset\":[" << b.visual.pad_x << ',' << b.visual.pad_y << ']'
+                << ",\"stop_reason\":" << json_quote(b.visual.stop_reason) << '}';
+        }
+        out
             << "},\"error\":" << (b.error.empty() ? "null" : json_quote(b.error))
             << ",\"error_base64\":" << (b.error_base64.empty() ? "null" : json_quote(b.error_base64)) << "}";
     }
@@ -1360,6 +1375,9 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                             block.status = "failed"; block.error = "generation_response_type_mismatch";
                             region.stop_reason = "error";
                         } else {
+                            block.visual = *generation;
+                            block.visual.text.clear();
+                            block.visual.raw_output.clear();
                             region.stop_reason = generation->stop_reason;
                             region.elapsed_ms = generation->elapsed_ms;
                             if (valid_utf8(generation->raw_output)) block.raw = generation->raw_output;

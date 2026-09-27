@@ -87,6 +87,7 @@ def main():
                                   ('printed_page_formula', '1.3'),
                                   ('printed_page_table', '1.3'),
                                   ('printed_page_reading', '1.3'),
+                                  ('printed_page_visual_empty', '1.5'),
                                   ('printed_page_failure', '1.3')]:
             if scenario == 'formula_table':
                 saved = root / scenario
@@ -101,6 +102,10 @@ def main():
             assert all(b['confidence'] is None for b in data['pages'][0]['blocks'])
 
         table_saved, table = generated['printed_page_table']
+        visual_saved, visual = generated['printed_page_visual_empty']
+        invalid_visual = copy.deepcopy(visual)
+        invalid_visual['pages'][0]['blocks'][0]['status'] = 'ok'
+        assert '视觉' in reexport(visual_saved, invalid_visual, code=3).stderr
         formula_saved, formula = generated['printed_page_formula']
         old_formula = copy.deepcopy(formula)
         old_formula['schema_version'] = '1.1'
@@ -206,6 +211,16 @@ def main():
         assert pdf_data['schema_version'] == '1.4'
         assert [p['status'] for p in pdf_data['pages']] == ['partial', 'failed', 'blank']
         reexport(pdf_saved)
+        visual_pdf = copy.deepcopy(pdf_data)
+        visual_pdf['schema_version'] = '1.5'
+        block = next(b for b in visual_pdf['pages'][0]['blocks'] if b['status'] != 'ok')
+        block['provenance']['visual'] = {
+            'evidence': 'no_visual_tokens', 'token_count': 0,
+            'source_crop': block['content']['resource'], 'source_bbox': block['bbox'],
+            'canvas_size': [256, 256], 'content_size': [256, 256],
+            'pad_offset': [0, 0], 'stop_reason': 'vision_missing'}
+        jsonschema.validate(visual_pdf, json.loads((ROOT / 'docs/issue-18/document-ir-1.5-pdf.schema.json').read_text()))
+        reexport(pdf_saved, visual_pdf)
         broken_pdf = copy.deepcopy(pdf_data)
         broken_pdf['pages'][0]['regions'][0]['page_id'] = 'p0003'
         assert 'region ID/page_id' in reexport(pdf_saved, broken_pdf, code=3).stderr

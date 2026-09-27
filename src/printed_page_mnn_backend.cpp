@@ -1,5 +1,6 @@
 #include "backend_factory.hpp"
 #include "config.hpp"
+#include "visual_adaptation.hpp"
 #include "llm/llm.hpp"
 #include <MNN/Interpreter.hpp>
 #define STB_IMAGE_WRITE_STATIC
@@ -33,6 +34,7 @@ namespace {
 using MNN::Transformer::Llm;
 using MNN::Transformer::LlmStatus;
 const char* prompt = "\nExtract all readable content from the image in natural human reading order and output the result as a single Markdown document. For charts or images, represent them using an HTML image tag: <img src=\"images/bbox_{left}_{top}_{right}_{bottom}.jpg\" />, where left, top, right, bottom are bounding box coordinates scaled to [0, 1000). Format formulas as LaTeX. Format tables as HTML: <table>...</table>. Transcribe all other text as standard Markdown. Preserve the original text without translation or paraphrasing.";
+constexpr int image_pad_token = 248056; // pinned models/ovis/llm_config.json
 const std::vector<std::pair<std::string, std::string>> ovis_hashes = {
     {"config.json", "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4"},
     {"llm_config.json", "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770"},
@@ -199,17 +201,44 @@ public:
             output.finish_reason = "failed"; output.stop_reason = "cancelled";
             output.error = "cancelled"; return {output};
         }
-        TempFile image("dococr-ovis-region-", ".png");
-        image.write(png(generation->image));
-        std::ostringstream raw;
         if (generation->max_new_tokens == 0 || generation->max_new_tokens > 4096)
             throw std::runtime_error("ovis_token_budget_unsupported");
-        llm_->response("<img>" + image.path() + "</img>" + prompt, &raw, nullptr,
-                       int(generation->max_new_tokens));
+        AdaptedVisual adapted;
+        try {
+            adapted = adapt_visual(generation->image);
+        } catch (const std::exception& error) {
+            output.finish_reason = "failed"; output.stop_reason = "visual_adaptation_failed";
+            output.error = error.what(); output.visual_evidence = "adaptation_failed";
+            return {output};
+        }
+        output.canvas_width = adapted.canvas.width;
+        output.canvas_height = adapted.canvas.height;
+        output.content_width = adapted.content_width;
+        output.content_height = adapted.content_height;
+        output.pad_x = adapted.pad_x;
+        output.pad_y = adapted.pad_y;
+        TempFile image("dococr-ovis-region-", ".png");
+        image.write(png(adapted.canvas));
+        // Omni::tokenizer_encode runs visual forward and returns image-pad IDs.
+        // Reject an empty visual result before the language model can generate.
+        const std::string user_content = "<img>" + image.path() + "</img>" + prompt;
+        std::string model_prompt = llm_->apply_chat_template(user_content);
+        if (model_prompt.empty()) model_prompt = user_content;
+        const auto tokens = llm_->tokenizer_encode(model_prompt);
+        output.visual_tokens = uint32_t(std::count(tokens.begin(), tokens.end(), image_pad_token));
+        if (output.visual_tokens == 0) {
+            output.finish_reason = "failed"; output.stop_reason = "vision_missing";
+            output.error = "ovis_visual_tokens_missing";
+            output.visual_evidence = "no_visual_tokens";
+            return {output};
+        }
+        output.visual_evidence = "image_pad_tokens";
+        std::ostringstream raw;
+        llm_->response(tokens, &raw, nullptr, int(generation->max_new_tokens));
         output.raw_output = raw.str();
         output.elapsed_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-begin).count());
         const auto* state = llm_->getContext();
-        if (!state || state->vision_us <= 0 || state->pixels_mp <= 0) {
+        if (!state) {
             output.finish_reason = "failed"; output.stop_reason = "vision_missing";
             output.error = "ovis_visual_processing_missing";
         } else if (state->status == LlmStatus::NORMAL_FINISHED && !output.raw_output.empty()) {

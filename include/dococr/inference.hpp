@@ -44,6 +44,12 @@ struct GenerationOutput {
     std::string error;
     std::string stop_reason;
     uint64_t elapsed_ms = 0;
+    // Present only when a real vision adapter attempted the image.
+    std::string visual_evidence;
+    uint32_t visual_tokens = 0;
+    int canvas_width = 0, canvas_height = 0;
+    int content_width = 0, content_height = 0;
+    int pad_x = 0, pad_y = 0;
 };
 struct InferenceResponse { std::variant<TensorOutput, GenerationOutput> payload; };
 struct ExecutionContext { std::atomic_bool& cancelled; };

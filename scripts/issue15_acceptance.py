@@ -53,7 +53,11 @@ def local_assets(document):
 
 def check_document(job, sample):
     document = json.loads((job / 'document.json').read_text())
-    schema = ROOT / ('docs/issue-11/document-ir-1.4.schema.json' if
+    schema = ROOT / ('docs/issue-18/document-ir-1.5-pdf.schema.json' if
+                     document['schema_version'] == '1.5' and document['source']['type'] == 'pdf' else
+                     'docs/issue-18/document-ir-1.5-image.schema.json' if
+                     document['schema_version'] == '1.5' else
+                     'docs/issue-11/document-ir-1.4.schema.json' if
                      document['schema_version'] == '1.4' else
                      'docs/issue-10/document-ir-1.3.schema.json')
     jsonschema.validate(document, json.loads(schema.read_text()))

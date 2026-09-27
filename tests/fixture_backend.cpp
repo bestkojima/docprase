@@ -322,6 +322,19 @@ public:
                 throw std::runtime_error(std::string("\xff", 1));
             GenerationOutput result;
             result.elapsed_ms = 2;
+            if (scenario_ == "printed_page_visual_empty" && generation.source_box.y0 == 0) {
+                // Models the runtime bug: measured visual work but no image-pad IDs.
+                result.raw_output = "1. 2. spurious text";
+                result.finish_reason = "failed";
+                result.stop_reason = "vision_missing";
+                result.error = "ovis_visual_tokens_missing";
+                result.visual_evidence = "no_visual_tokens";
+                result.canvas_width = result.canvas_height = 256;
+                result.content_width = 256;
+                result.content_height = 128;
+                result.pad_y = 64;
+                return {result};
+            }
             if (scenario_.rfind("printed_page_reading", 0) == 0) {
                 result.text = result.raw_output =
                     scenario_ == "printed_page_reading_pdf_literals" &&
@@ -542,6 +555,7 @@ bool config_supported(const std::string& config) {
            config == "fixture:printed_page_rebuild_failure" ||
            config == "fixture:printed_page_finalization_oom" ||
            config == "fixture:printed_page_failure" || config == "fixture:printed_page_empty" ||
+           config == "fixture:printed_page_visual_empty" ||
            config == "fixture:printed_page_truncated" ||
            config == "fixture:printed_page_invalid_utf8" ||
            config == "fixture:printed_page_model_resource" ||
