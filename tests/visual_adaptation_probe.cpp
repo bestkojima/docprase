@@ -12,13 +12,18 @@ using dococr::Image;
 using dococr::adapt_visual;
 
 int main(int argc, char** argv) {
-    if (argc == 3) {
+    if (argc == 3 || argc == 5) {
         int width = 0, height = 0, channels = 0;
         unsigned char* pixels = stbi_load(argv[1], &width, &height, &channels, 3);
         if (!pixels) return 2;
         Image source{width, height, std::vector<uint8_t>(pixels, pixels + size_t(width) * height * 3)};
         stbi_image_free(pixels);
-        const auto adapted = adapt_visual(source);
+        dococr::VisualBudget budget;
+        if (argc == 5) {
+            budget.min_pixels = std::stoll(argv[3]);
+            budget.max_pixels = std::stoll(argv[4]);
+        }
+        const auto adapted = adapt_visual(source, budget);
         if (!stbi_write_png(argv[2], adapted.canvas.width, adapted.canvas.height, 3,
                             adapted.canvas.rgb.data(), adapted.canvas.width * 3)) return 3;
         std::cout << width << 'x' << height << " -> " << adapted.canvas.width << 'x'
@@ -34,7 +39,7 @@ int main(int argc, char** argv) {
         const auto& transform = result.transform;
         assert(canvas.width % 32 == 0 && canvas.height % 32 == 0);
         assert(int64_t(canvas.width) * canvas.height >= 65536);
-        assert(int64_t(canvas.width) * canvas.height <= 16777216);
+        assert(int64_t(canvas.width) * canvas.height <= 560 * 560);
         assert(transform.pad_x >= 0 && transform.pad_y >= 0);
         assert(transform.pad_x + transform.content_width <= canvas.width);
         assert(transform.pad_y + transform.content_height <= canvas.height);
@@ -46,7 +51,21 @@ int main(int argc, char** argv) {
         if (width == 323) assert(canvas.width == 832 && canvas.height == 96);
         if (width == 82) assert(canvas.width == 416 && canvas.height == 160);
         if (width == 640) assert(canvas.width == 640 && canvas.height == 480);
+        if (width == 4000) assert(canvas.width == 544 && canvas.height == 544);
     }
+    {
+        Image large{819, 566, std::vector<uint8_t>(size_t(819) * 566 * 3, 127)};
+        const auto limited = adapt_visual(large, {65536, 160000});
+        const auto chosen = adapt_visual(large);
+        assert(int64_t(limited.canvas.width) * limited.canvas.height <= 160000);
+        assert(int64_t(chosen.canvas.width) * chosen.canvas.height <= 560 * 560);
+        assert(chosen.transform.content_width > limited.transform.content_width);
+        assert(chosen.transform.content_height > limited.transform.content_height);
+    }
+    try {
+        adapt_visual(Image{32, 32, std::vector<uint8_t>(32 * 32 * 3)}, {32000, 560 * 560});
+        return 5;
+    } catch (const std::runtime_error&) {}
     try {
         Image too_wide{6400, 31, std::vector<uint8_t>(size_t(6400) * 31 * 3)};
         adapt_visual(too_wide);

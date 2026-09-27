@@ -5,11 +5,15 @@
 #include <stdexcept>
 
 namespace dococr {
-AdaptedVisual adapt_visual(const Image& source) {
+AdaptedVisual adapt_visual(const Image& source, VisualBudget budget) {
     constexpr int factor = 32;
-    constexpr int64_t minimum = 65536, maximum = 16777216;
+    constexpr int64_t runtime_minimum = 65536, runtime_maximum = 16777216;
+    if (budget.min_pixels < runtime_minimum || budget.max_pixels > runtime_maximum ||
+        budget.max_pixels < budget.min_pixels)
+        throw std::runtime_error("visual_budget_invalid");
+    const int64_t minimum = budget.min_pixels, maximum = budget.max_pixels;
     if (source.width <= 0 || source.height <= 0 ||
-        int64_t(source.width) * source.height > maximum * 16 ||
+        int64_t(source.width) * source.height > runtime_maximum * 16 ||
         source.rgb.size() != size_t(source.width) * source.height * 3)
         throw std::runtime_error("visual_image_invalid");
     if (double(std::max(source.width, source.height)) / std::min(source.width, source.height) > 200)
