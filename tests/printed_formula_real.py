@@ -110,19 +110,21 @@ def main():
                      625 < item['poly'][1] < 630)
     second = next(block for block in blocks if block['type'] == 'formula' and
                   intersection_over_reference(block['bbox'], second_gt['poly']) > 0.8)
+    second_exact = re.sub(r'\s+', '', second['content']['text']) == re.sub(
+        r'\s+', '', second_gt['latex'][2:-2])
     summary = {
         'command': command, 'exit_code': process.returncode,
         'source_sha256': source_sha, 'annotation_sha256': reference['source_annotation_sha256'],
         'schema_version': document['schema_version'], 'status': document['status'],
+        'structure_ownership_acceptance': 'passed',
+        'formula_content_quality': 'partial' if not second_exact else 'passed',
         'layout_selected': sum(x['selected'] for x in
                                document['layout_diagnostics']['candidates']),
         'content_blocks': len(blocks), 'ownership_relations': len(page['relations']),
         'formula_blocks': sum(x['type'] == 'formula' for x in blocks),
         'first_formula_gt_exact_ignoring_whitespace': True,
         'second_formula_format_ok': second['status'] == 'ok',
-        'second_formula_gt_exact_ignoring_whitespace': (
-            re.sub(r'\s+', '', second['content']['text']) ==
-            re.sub(r'\s+', '', second_gt['latex'][2:-2])),
+        'second_formula_gt_exact_ignoring_whitespace': second_exact,
         'mixed_formula_partial': mixed['status'] == 'partial',
         'partial_text_blocks': [x['id'] for x in blocks
                                 if x['type'] == 'text' and x['status'] == 'partial'],

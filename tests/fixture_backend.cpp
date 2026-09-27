@@ -165,7 +165,14 @@ public:
                         scenario_ == "printed_page_formula_missing_arg" ? "$$\\frac{a}$$" :
                         scenario_ == "printed_page_formula_empty_arg" ? "$$\\frac{}{b}=c$$" :
                         scenario_ == "printed_page_formula_sqrt_empty" ? "$$\\sqrt{}$$" :
+                        scenario_ == "printed_page_formula_spaced_empty" ?
+                            "$$\\frac {}{b}=c$$" :
                         scenario_ == "printed_page_formula_misnested" ? "$$([)]$$" :
+                        scenario_ == "printed_page_formula_misnested_brace" ? "$$({)}$$" :
+                        scenario_ == "printed_page_formula_scalable_dot" ?
+                            "$$\\left. x\\right)$$" :
+                        scenario_ == "printed_page_formula_scalable_angle" ?
+                            "$$\\left\\langle x\\right\\rangle$$" :
                         scenario_ == "printed_page_formula_env_mismatch" ?
                             "$$\\begin{aligned}x\\end{matrix}$$" :
                         scenario_ == "printed_page_formula_left_missing" ?
@@ -291,7 +298,11 @@ bool config_supported(const std::string& config) {
            config == "fixture:printed_page_formula_missing_arg" ||
            config == "fixture:printed_page_formula_empty_arg" ||
            config == "fixture:printed_page_formula_sqrt_empty" ||
+           config == "fixture:printed_page_formula_spaced_empty" ||
            config == "fixture:printed_page_formula_misnested" ||
+           config == "fixture:printed_page_formula_misnested_brace" ||
+           config == "fixture:printed_page_formula_scalable_dot" ||
+           config == "fixture:printed_page_formula_scalable_angle" ||
            config == "fixture:printed_page_formula_env_mismatch" ||
            config == "fixture:printed_page_formula_left_missing" ||
            config == "fixture:printed_page_formula_percent" ||

@@ -22,4 +22,4 @@
     python3 tests/printed_formula_real.py /tmp/dococr-issue8/dococr_cli output/issue-8/real-regression
     /home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests
 
-真实回归脚本核对固定图片哈希、DocumentIR 1.1 Schema、父子引用与几何、每条归属父裁剪的原图像素、所有选中 Layout mask、第一条独立公式与人工 LaTeX 真值（仅忽略空白）、Markdown 不重复、题号不变成标签、混合公式 partial/raw/原图，以及 JSON 往返语义。第二条独立公式的真值差异单独记录：其 LaTeX 格式通过，但模型把原图及标注中的 alpha 识别为 a。status=ok 仅表示结构解析通过，不表示数学内容识别正确。
+真实回归脚本核对固定图片哈希、DocumentIR 1.1 Schema、父子引用与几何、每条归属父裁剪的原图像素、所有选中 Layout mask、第一条独立公式与人工 LaTeX 真值（仅忽略空白）、Markdown 不重复、题号不变成标签、混合公式 partial/raw/原图，以及 JSON 往返语义。本页结构与归属验收通过，公式内容质量部分失败：第二条独立公式的 LaTeX 格式通过，但模型把原图及标注中的 alpha 识别为 a。status=ok 仅表示结构解析通过，不表示数学内容识别正确。

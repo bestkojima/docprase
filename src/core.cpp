@@ -13,6 +13,7 @@
 #include <memory>
 #include <sstream>
 #include <stdexcept>
+#include <utility>
 
 #define STBI_ONLY_PNG
 #define STBI_ONLY_JPEG
@@ -363,13 +364,27 @@ size_t formula_argument_end(const std::string& value, size_t pos) {
     return std::string::npos;
 }
 
-char scalable_delimiter(const std::string& value, size_t pos) {
-    if (pos >= value.size()) return 0;
+struct ScalableDelimiter {
+    char symbol = 0;
+    size_t width = 0;
+};
+
+ScalableDelimiter scalable_delimiter(const std::string& value, size_t pos) {
+    if (pos >= value.size()) return {};
     char ch = value[pos];
     if (ch == '\\' && pos + 1 < value.size() &&
         (value[pos+1] == '{' || value[pos+1] == '}' ||
-         value[pos+1] == '|')) return value[pos+1];
-    return std::string("()[]|.<>{}").find(ch) == std::string::npos ? 0 : ch;
+         value[pos+1] == '|')) return {value[pos+1], 2};
+    for (const auto& named : {
+             std::pair<const char*, char>{"\\langle", '<'}, {"\\rangle", '>'},
+             {"\\lvert", '|'}, {"\\rvert", '|'},
+             {"\\lbrace", '{'}, {"\\rbrace", '}'}}) {
+        size_t width = std::strlen(named.first);
+        if (value.compare(pos, width, named.first) == 0)
+            return {named.second, width};
+    }
+    return std::string("()[]|.<>{}").find(ch) == std::string::npos ?
+        ScalableDelimiter{} : ScalableDelimiter{ch, 1};
 }
 
 ParsedFormula parse_formula(const std::string& raw) {
@@ -411,6 +426,7 @@ ParsedFormula parse_formula(const std::string& raw) {
         unsigned char ch = static_cast<unsigned char>(value[i]);
         if (ch == '\\') {
             size_t start = ++i;
+            size_t skip_delimiter = 0;
             while (i < value.size() && ((value[i] >= 'A' && value[i] <= 'Z') ||
                    (value[i] >= 'a' && value[i] <= 'z'))) ++i;
             if (i == start) {
@@ -456,19 +472,21 @@ ParsedFormula parse_formula(const std::string& raw) {
                         return result;
                 }
                 if (command == "left" || command == "right") {
-                    char delimiter = scalable_delimiter(value, i);
-                    if (!delimiter) return result;
+                    ScalableDelimiter delimiter = scalable_delimiter(value, i);
+                    if (!delimiter.symbol) return result;
+                    skip_delimiter = delimiter.width;
                     if (command == "left") {
-                        if (std::string("([{<|.").find(delimiter) == std::string::npos)
+                        if (std::string("([{<|.").find(delimiter.symbol) == std::string::npos)
                             return result;
-                        scalable.push_back(delimiter);
+                        scalable.push_back(delimiter.symbol);
                     } else {
                         if (scalable.empty()) return result;
                         char opening = scalable.back();
                         scalable.pop_back();
                         char expected = opening == '(' ? ')' : opening == '[' ? ']' :
                                         opening == '{' ? '}' : opening == '<' ? '>' : opening;
-                        if (delimiter != '.' && opening != '.' && delimiter != expected)
+                        if (delimiter.symbol != '.' && opening != '.' &&
+                            delimiter.symbol != expected)
                             return result;
                     }
                 }
@@ -490,15 +508,19 @@ ParsedFormula parse_formula(const std::string& raw) {
                 next_text_brace = command == "text" || command == "mathrm" ||
                                   command == "operatorname";
                 math_evidence = true;
-                --i;
+                if (skip_delimiter) i += skip_delimiter - 1;
+                else --i;
             }
             continue;
         }
         if (ch == '{') {
+            delimiters.push_back('{');
             ++depth;
             if (next_text_brace) text_depth = depth;
             next_text_brace = false;
         } else if (ch == '}') {
+            if (delimiters.empty() || delimiters.back() != '{') return result;
+            delimiters.pop_back();
             if (--depth < 0) return result;
             if (text_depth > depth) text_depth = -1;
         } else if (ch == '[' || ch == '(') delimiters.push_back(ch);

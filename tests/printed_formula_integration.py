@@ -48,7 +48,10 @@ def main():
             ('printed_page_formula_missing_arg', r'$$\frac{a}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_empty_arg', r'$$\frac{}{b}=c$$', 'invalid_formula_syntax'),
             ('printed_page_formula_sqrt_empty', r'$$\sqrt{}$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_spaced_empty', r'$$\frac {}{b}=c$$',
+             'invalid_formula_syntax'),
             ('printed_page_formula_misnested', '$$([)]$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_misnested_brace', '$$({)}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_env_mismatch',
              r'$$\begin{aligned}x\end{matrix}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_left_missing', r'$$\left\right$$', 'invalid_formula_syntax'),
@@ -59,7 +62,8 @@ def main():
         ]:
             failed_out, failed_doc, _ = run(sys.argv[1], scenario, root, image)
             formula = failed_doc['pages'][0]['blocks'][1]
-            assert formula['status'] == 'partial' and formula['error'] == error
+            assert formula['status'] == 'partial' and formula['error'] == error, (
+                scenario, formula['status'], formula['error'])
             assert formula['provenance']['raw_output'] == raw
             assert formula['content']['resource']
             assert (failed_out / formula['content']['resource']).exists()
@@ -78,6 +82,14 @@ def main():
         chinese = chinese_doc['pages'][0]['blocks'][1]
         assert chinese['status'] == 'ok'
         assert chinese['content']['text'] == r'\frac{\text{甲}}{b}=c'
+        for scenario, expected in [
+            ('printed_page_formula_scalable_dot', r'\left. x\right)'),
+            ('printed_page_formula_scalable_angle', r'\left\langle x\right\rangle'),
+        ]:
+            _, display_doc, _ = run(sys.argv[1], scenario, root, image)
+            display = display_doc['pages'][0]['blocks'][1]
+            assert display['status'] == 'ok'
+            assert display['content']['text'] == expected
         for scenario, parent_raw in [
             ('printed_page_formula_parent_unclosed', '设$x^2+1。'),
             ('printed_page_formula_parent_missing_arg', '设$\\frac{a}$，请计算。'),
