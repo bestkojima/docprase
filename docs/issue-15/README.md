@@ -2,7 +2,9 @@
 
 ## 结论和边界
 
-Linux CPU 上已用生产 PP-DocLayoutV3 + OvisOCR2 对 6 份输入、7 个真实页执行公共作业；旧样本曾用于对齐或开发，`en_two_column` 是本轮新写、未用于调参的项目自制页。这是小规模固定回归集，不是约 30 页的独立公开 benchmark。每份作业的原始 JSON、Markdown、清单和关键日志在 [`evidence/`](evidence/)；归档含 124 份轻量文件的 SHA 校验及首轮 275 项、修复重跑 31 项资产的 SHA 索引。完整导出资源在本机 `output/issue-15/`，可按下文重建。样本 SHA、来源和角色见 [`samples.json`](samples.json)，比较与容差在首轮运行前冻结于 [`rules.md`](rules.md) 和 [`measurement-addendum.md`](measurement-addendum.md)。
+参考模型与业务质量采用不同的比较范围；#2/#3 的原框架版本、容差、实际差异和未验证状态见 [`model-reference.md`](model-reference.md)。本归档只存轻量原始 JSON/Markdown/日志与资产 SHA，不是可直接打开图片的完整导出包；Markdown 中的资源链接须先按复现步骤重建 `output/issue-15/` 才能查看。运行前 `samples.json` 角色保留历史，修复后新双栏页已是开发回归结果。
+
+Linux CPU 上已用生产 PP-DocLayoutV3 + OvisOCR2 对 6 份输入、7 个真实页执行公共作业；旧样本曾用于对齐或开发，`en_two_column` 是本轮新写、**首轮运行前未见**的项目自制页。排序缺陷由该页首轮结果发现并修复，所以修复后的同页结果是回归验证，已不属于独立留出评测；模型、真值与评分规则未改。这是小规模固定回归集，不是约 30 页的独立公开 benchmark。每份作业的原始 JSON、Markdown、清单和关键日志在 [`evidence/`](evidence/)；归档含 126 份轻量文件的 SHA 校验及首轮 275 项、修复重跑 31 项资产的 SHA 索引。完整导出资源在本机 `output/issue-15/`，可按下文重建。样本 SHA、来源和首轮角色见 [`samples.json`](samples.json)，比较与容差在首轮运行前冻结于 [`rules.md`](rules.md) 和 [`measurement-addendum.md`](measurement-addendum.md)。
 
 **显著质量失败：** HiLEx JEE 640×640 英文试卷页的 7/7 文字块均 `partial/token_limit`，raw 反复生成 `## 1`、`## 2` 等编号；人工可见的四个锚点 `JEE (Advanced) 2023`、`Q.12`、`Q.13`、`Time (h)` 全部缺失。两处图像块保留，但这页英文 OCR 不通过。现有配置没有对该质量失败自动回退或修复，不因 CLI 返回 0、资源存在而声称其文字正确。完整 raw、状态与框见 [`en_jee/document.json`](evidence/en_jee/document.json)、[`en_jee/run-manifest.json`](evidence/en_jee/run-manifest.json)。
 
@@ -36,6 +38,8 @@ Linux CPU 上已用生产 PP-DocLayoutV3 + OvisOCR2 对 6 份输入、7 个真�
 
 原图裁剪对 PNG 做逐像素精确比较；对 JPEG 按运行前补充规则允许 Pillow 与生产 stb 解码的通道差 `<=1`。本轮 `zh_text_table` 与 `en_jee` 逐块实际最大绝对差均为 1；其他 PNG 无差。逐作业 `jpeg_crop_max_abs` 和所有硬性失败清单在 `evidence/summary.json`。
 
+重复归属复核以 `source_layout_block_id → source_region_ids → content block` 的来源链为准：同一版面来源只能对应一个内容块；每条 `content_owned_by` 必须指向该唯一 owner，重复关系也报错。它可发现 bbox 或类型变化的重复块，具体反例见 `tests/test_issue15_lineage.py`。再次对六份原作业执行 `--verify-only` 后的逐项结果保存在 `evidence/summary.json`。
+
 ## 性能与版本
 
 以下为首轮六次新 CLI 进程，均未清理 OS 页缓存。外层时间含进程启动、模型加载、作业和导出；不是独立模型加载时间。最大 RSS 是 GNU `/usr/bin/time -v` 的 `wait4` 值，单位 KiB；对 PDF 命令可包含被等待的 Poppler 子进程中的最大值，**不是**并发进程树 RSS 求和。清单中的内存字段仍是 `unavailable`，PDF 页前/后的 `VmRSS` 只是父进程快照。
@@ -59,7 +63,7 @@ PDF 第 1、2 页清单内 `render/pipeline/total` 分别为 `132/12429/12573 ms
 
 生产入口负例 9/9 按预期拒绝，均退出 3：未知处理器、重复 normalize、必需 decode 被关闭、normalize 责任错误、工件哈希错误、`pending_probe` 状态、超限 `max_new_tokens`、加密 PDF、坏图。逐项原始 stderr 与判定在 [`evidence/negative/`](evidence/negative/)；该部分不需要用 fixture 冒充真实后端。固定公共测试另覆盖超时、OOM、后端失败、Poppler 中断、并发 Busy 和安全恢复，见完整 CTest 日志。
 
-最终 `cmake --build build/linux-current -j4` 退出 0，[`final-build.log`](evidence/final-build.log)；`ctest --test-dir build/linux-current --output-on-failure` 退出 0、15/15，[`final-ctest.log`](evidence/final-ctest.log)；`litert-env` 的 `unittest discover -s tests -v` 退出 0、14/14，[`final-unittest.log`](evidence/final-unittest.log)。评分器新增的两个边界用例包含在这 14 项中。首次完整 unittest 曾因旧运行环境没有 `jsonschema`、评分器顶层导入 #11 脚本而失败；已消除该依赖，失败摘录、复现和修复记录见 [`unittest-initial-failure.md`](unittest-initial-failure.md)。
+最终 `cmake --build build/linux-current -j4` 退出 0，[`final-build.log`](evidence/final-build.log)；`ctest --test-dir build/linux-current --output-on-failure` 退出 0、15/15，[`final-ctest.log`](evidence/final-ctest.log)；`litert-env` 的 `unittest discover -s tests -v` 退出 0、17/17，[`final-unittest.log`](evidence/final-unittest.log)。评分器两个边界用例及来源链三个边界用例均计入 17 项。首次完整 unittest 曾因旧运行环境没有 `jsonschema`、评分器顶层导入 #11 脚本而失败；已消除该依赖，失败摘录、复现和修复记录见 [`unittest-initial-failure.md`](unittest-initial-failure.md)。
 
 ## 复现
 

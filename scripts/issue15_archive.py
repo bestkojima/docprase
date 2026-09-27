@@ -65,6 +65,7 @@ def main():
                      'reading-fix-stdout.log', 'reading-fix-stderr.log',
                      'reading-fix-reexport.stdout.log', 'reading-fix-reexport.stderr.log',
                      'order-audit.json', 'quality-final.log',
+                     'verify-lineage.log', 'verify-reading-fix-lineage.log',
                      'unittest-dependency-reproduction.log',
                      'negative-final.stdout.log', 'negative-final.stderr.log',
                      'red-test.log', 'green-test.log', 'local-title-test.log',

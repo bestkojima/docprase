@@ -19,7 +19,7 @@ def frozen_pdf_reference():
                 isinstance(target, ast.Name) and target.id == 'GROUND_TRUTH'
                 for target in node.targets):
             return ast.literal_eval(node.value)
-    raise ValueError('tests/pdf_real.py lacks literal GROUND_TRUTH')
+    raise ValueError('tests/pdf_real.py 缺少字面量 GROUND_TRUTH')
 
 
 GROUND_TRUTH = frozen_pdf_reference()

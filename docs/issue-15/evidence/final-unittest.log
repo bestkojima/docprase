@@ -1,3 +1,6 @@
+test_duplicate_relation_and_wrong_owner_are_rejected (test_issue15_lineage.Issue15LineageTest.test_duplicate_relation_and_wrong_owner_are_rejected) ... ok
+test_duplicate_source_is_rejected_despite_different_geometry (test_issue15_lineage.Issue15LineageTest.test_duplicate_source_is_rejected_despite_different_geometry) ... ok
+test_merged_content_has_one_owner_per_layout_source (test_issue15_lineage.Issue15LineageTest.test_merged_content_has_one_owner_per_layout_source) ... ok
 test_anchor_positions_follow_reading_order_and_repeats_are_ambiguous (test_issue15_quality.Issue15QualityTest.test_anchor_positions_follow_reading_order_and_repeats_are_ambiguous) ... ok
 test_missing_pdf_page_counts_every_reference_line_as_deleted (test_issue15_quality.Issue15QualityTest.test_missing_pdf_page_counts_every_reference_line_as_deleted) ... ok
 test_exam_page_has_reproducible_candidates_and_masks (test_model_probe_layout.LayoutProbeTests.test_exam_page_has_reproducible_candidates_and_masks) ... ok
@@ -14,6 +17,6 @@ test_timeout_kills_term_ignoring_child_after_leader_exits (test_model_probe_ovis
 test_zero_exit_at_token_cap_is_incomplete (test_model_probe_ovis.OvisProbeTests.test_zero_exit_at_token_cap_is_incomplete) ... ok
 
 ----------------------------------------------------------------------
-Ran 14 tests in 34.842s
+Ran 17 tests in 34.270s
 
 OK

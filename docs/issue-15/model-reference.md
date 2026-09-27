@@ -1,0 +1,10 @@
+# 模型参考对齐基线与本轮质量比较的边界
+
+#15 的七页业务回归沿用 #2/#3 的已记录模型和人工参考，但没有重新证明模型转换逐元素等价。以下是原先完成的参考对照；本轮 `quality.json` 则按运行前冻结的 [`rules.md`](rules.md) 对公共作业的 DocumentIR 原文计分。两个问题的分母、容差与结论不同。
+
+| 组件 | 锁定参考、输入与容差 | 实际已核对结果 | 未验证的契约 |
+| --- | --- | --- | --- |
+| Layout 前处理与输出 | #2 用 Transformers `PPDocLayoutV3ImageProcessor` 源码提交 `27166ea03f12c940f23176a904ab1d2ff1a3dcbb`、源码 SHA `5b064fa7383dda12b3550448eae77d4f627a102c25e8b4db25d99e85fba4abc6`；PaddlePaddle 配置修订 `97d101e6db2642e162a1d05392d1b0231c91033e`。同一 640×640 HiLEx JEE 像素输入，RGB float32 `[1,3,800,800]`，前处理最大绝对误差容差 `1e-7`，实测为 0。#6 又核对同一输入张量、MNN CPU 单线程原始输出字节相等、选中 mask 为零差；与 #2 四线程运行的 16 个选中 ID/类别/rank 一致，框最大坐标差 `0.000244140625`，选中 mask 零差。 | 输入、同运行参数下的 MNN 输出契约和选中几何有证据。详细数值见 [#2 原始报告](../research-evidence/runtime/layout/issue-2/report.json)、[#6 报告](../issue-6/evidence/real-report.json)、[#6 说明](../issue-6/README.md)。 | 同权重 Paddle/ONNX 原框架完整输出、MNN 转换链没有对照；低分 mask 行在四线程与单线程之间有差，HiLEx 人工父框不能按细粒度类别直接算检测准确率。#2 `reference_model_output` 与 `business_quality` 明列 `not_verified`。 |
+| Ovis 原框架转写 | #3 锁定原包 `ATH-MaaS/OvisOCR2` 修订 `1fc9221b7823a371d6e97f92d527cc847e24e107`、`model.safetensors` SHA `9270560288656ece5cb3a6989001afcf5af8d223bceed4a423c33a008861d009`；Transformers 5.16.1 / Torch 2.13.0+cu130 CPU float32，原包处理器。三个 OmniDocBench 固定裁剪图与 MNN 使用同一提示词 SHA `de9617f877f6110d22adf1a6ba2a96221189dc246fb1fef161e408d37bff5267`、greedy、512-token 上限；只允许去掉文件末尾换行比较正文。 | 中文正文和完整表格的原框架与 MNN 内容在上述有限规则下相同；原始字节因尾换行不同。公式不相同：原框架 15 token，MNN 13 token，两者均生成 Markdown 标题而非人工 LaTeX，`=` 和 `×` 周围空格有别。逐项哈希、停止状态见 [#3 比较报告](../research-evidence/runtime/ovis/issue-3/comparison/report.json) 与 [#3 说明](../research-evidence/runtime/ovis/issue-3/README.md)。 | 两运行时的动态视觉张量未逐值比较；原作者 vLLM 服务的像素参数也不同，故不是 bit-exact 转换证明或作者部署数值对齐。三个裁剪区曾用于开发与对齐，不能当独立留出评测。 |
+
+本轮真实配置是 MNN 3.6.1 CPU 单线程，运行清单记录各自九工件哈希；与 #3 原始四线程区域探针属于不同计时和执行环境。正文、公式、表格、阅读顺序的本轮质量分母只取 [`rules.md`](rules.md) 冻结的人工片段和锚点，完整 raw 与 token 截断记录在 [`evidence/`](evidence/)；不能将上述三块模型参考对齐结果扩写为七页业务质量通过。新双栏页首次运行前未用于调参；用它发现并修复排序后，同页重跑转为开发回归结果。

@@ -2,34 +2,34 @@ Test project /home/dr/project/docprase/build/linux-current
       Start  1: contract
  1/15 Test  #1: contract .........................   Passed    0.02 sec
       Start  2: cli_integration
- 2/15 Test  #2: cli_integration ..................   Passed    0.17 sec
+ 2/15 Test  #2: cli_integration ..................   Passed    0.21 sec
       Start  3: reexport_integration
- 3/15 Test  #3: reexport_integration .............   Passed    1.28 sec
+ 3/15 Test  #3: reexport_integration .............   Passed    1.19 sec
       Start  4: config_integration
- 4/15 Test  #4: config_integration ...............   Passed    0.27 sec
+ 4/15 Test  #4: config_integration ...............   Passed    0.23 sec
       Start  5: config_abi
- 5/15 Test  #5: config_abi .......................   Passed    0.62 sec
+ 5/15 Test  #5: config_abi .......................   Passed    0.61 sec
       Start  6: layout_integration
- 6/15 Test  #6: layout_integration ...............   Passed    0.41 sec
+ 6/15 Test  #6: layout_integration ...............   Passed    0.42 sec
       Start  7: printed_page_integration
- 7/15 Test  #7: printed_page_integration .........   Passed    1.03 sec
+ 7/15 Test  #7: printed_page_integration .........   Passed    0.94 sec
       Start  8: printed_formula_integration
- 8/15 Test  #8: printed_formula_integration ......   Passed    3.61 sec
+ 8/15 Test  #8: printed_formula_integration ......   Passed    3.31 sec
       Start  9: printed_table_integration
- 9/15 Test  #9: printed_table_integration ........   Passed    1.34 sec
+ 9/15 Test  #9: printed_table_integration ........   Passed    1.31 sec
       Start 10: reading_order_integration
-10/15 Test #10: reading_order_integration ........   Passed    2.36 sec
+10/15 Test #10: reading_order_integration ........   Passed    2.19 sec
       Start 11: pdf_integration
-11/15 Test #11: pdf_integration ..................   Passed    2.24 sec
+11/15 Test #11: pdf_integration ..................   Passed    2.07 sec
       Start 12: pdf_abi
 12/15 Test #12: pdf_abi ..........................   Passed    0.17 sec
       Start 13: printed_page_cancel
-13/15 Test #13: printed_page_cancel ..............   Passed    0.91 sec
+13/15 Test #13: printed_page_cancel ..............   Passed    1.01 sec
       Start 14: job_control
-14/15 Test #14: job_control ......................   Passed    2.55 sec
+14/15 Test #14: job_control ......................   Passed    2.51 sec
       Start 15: cli_job_control
-15/15 Test #15: cli_job_control ..................   Passed    0.66 sec
+15/15 Test #15: cli_job_control ..................   Passed    0.69 sec
 
 100% tests passed out of 15
 
-Total Test time (real) =  17.63 sec
+Total Test time (real) =  16.87 sec

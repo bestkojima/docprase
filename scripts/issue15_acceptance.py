@@ -9,6 +9,7 @@ import sys
 
 import jsonschema
 from PIL import Image
+from issue15_lineage import lineage_failures
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -82,6 +83,7 @@ def check_document(job, sample):
         width, height = page['raster_size']
         if len(layout) != len(page['layout_blocks']) or len(regions) != len(page['regions']):
             failures.append(f"{page['page_id']}:duplicate_layout_or_region_id")
+        failures.extend(f"{page['page_id']}:{failure}" for failure in lineage_failures(page))
         for region in page['regions']:
             if any(layout_id not in layout for layout_id in region['source_layout_block_ids']):
                 failures.append(f"{region['id']}:missing_layout_block")
@@ -124,9 +126,6 @@ def check_document(job, sample):
                 owner = block_by_id.get(rel['owner_block_id'])
                 if not child or not owner:
                     failures.append('broken_ownership_reference')
-                elif any(b['bbox'] == child['bbox'] and b['type'] == child['label']
-                         for b in blocks):
-                    failures.append(f"{child['id']}:duplicate_owned_content")
                 elif not (owner['bbox'][0] <= child['bbox'][0] <= child['bbox'][2] <= owner['bbox'][2]
                           and owner['bbox'][1] <= child['bbox'][1] <= child['bbox'][3] <= owner['bbox'][3]):
                     failures.append(f"{child['id']}:owner_box_does_not_contain_child")
@@ -164,13 +163,13 @@ def main():
     parser.add_argument('--cli', type=Path, required=True)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--verify-only', action='store_true',
-                        help='Recheck existing jobs and exports without running inference')
+                        help='只复核已有作业与再导出文件，不重新运行推理')
     args = parser.parse_args()
     cli = args.cli.resolve()
     output = args.out.resolve()
     if args.verify_only:
         if not output.is_dir():
-            raise ValueError('existing output directory required')
+            raise ValueError('复核需要已有输出目录')
     else:
         output.mkdir(parents=True, exist_ok=False)
     report = {'baseline_commit': SAMPLES['baseline_commit'], 'samples': {},
@@ -178,7 +177,7 @@ def main():
     for sample in SAMPLES['samples']:
         source = ROOT / sample['path']
         if sha(source) != sample['sha256']:
-            raise ValueError(f"sample hash mismatch: {sample['id']}")
+            raise ValueError(f"样本哈希不匹配：{sample['id']}")
         folder = output / sample['id']
         job = folder / 'job'
         command = [str(cli), '--config', 'configs/printed-page.example.json',
