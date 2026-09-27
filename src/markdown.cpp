@@ -28,11 +28,9 @@ LinkEscapes link_openers(const std::string& source) {
         while (next < source.size() && (source[next] == ' ' || source[next] == '\t')) ++next;
         const bool linked = next < source.size() &&
             (source[next] == '(' || source[next] == '[');
-        const size_t line = source.rfind('\n', open);
-        const size_t start = line == std::string::npos ? 0 : line + 1;
-        bool definition = next < source.size() && source[next] == ':' && open - start <= 3;
-        for (size_t j = start; definition && j < open; ++j)
-            if (source[j] != ' ' && source[j] != '\t') definition = false;
+        // A definition may sit inside a list or quote container. Escaping any [label]:
+        // prevents a shortcut reference in another block from becoming an active link.
+        const bool definition = next < source.size() && source[next] == ':';
         const bool safe_image = open > 0 && source[open - 1] == '!' && !escaped_at(source, open - 1);
         if ((linked || definition) && !safe_image) escape.open[open] = true;
         if (linked && safe_image) escape.separator[next] = true;

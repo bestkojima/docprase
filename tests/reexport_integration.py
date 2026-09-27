@@ -144,6 +144,9 @@ def main():
             '<img src=x onerror=alert(1)> ![外图](https://x)\n'
             '[点我](javascript:alert(1)) [遗失](missing.png) [引用][恶意] ![引用图][恶意]\n\n'
             '[恶意]: javascript:alert(1)\n\n'
+            '[列表]\n\n- [列表]: https://example.com\n\n'
+            '[编号]\n\n1. [编号]: https://example.com\n\n'
+            '[引用块]\n\n> [引用块]: https://example.com\n\n'
             r'\[已转义](javascript:alert(1)) \\[双反斜杠](javascript:alert(1))')
         input_json = root / 'untrusted.json'
         input_json.write_text(json.dumps(untrusted, ensure_ascii=False))
@@ -157,6 +160,9 @@ def main():
         assert r'\[遗失](missing.png)' in safe_markdown
         assert r'\[引用][恶意]' in safe_markdown
         assert r'\[恶意]: javascript:alert(1)' in safe_markdown
+        assert r'- \[列表]: https://example.com' in safe_markdown
+        assert r'1. \[编号]: https://example.com' in safe_markdown
+        assert r'&gt; \[引用块]: https://example.com' in safe_markdown
         assert r'\[已转义](javascript:alert(1))' in safe_markdown
         assert r'\\\[双反斜杠](javascript:alert(1))' in safe_markdown
         rendered = MarkdownIt().render(safe_markdown)
