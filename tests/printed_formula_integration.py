@@ -46,6 +46,14 @@ def main():
             ('printed_page_formula_prose', 'Please solve x+y', 'invalid_formula_syntax'),
             ('printed_page_formula_unknown_command', r'$$\foo{a}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_missing_arg', r'$$\frac{a}$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_empty_arg', r'$$\frac{}{b}=c$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_sqrt_empty', r'$$\sqrt{}$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_misnested', '$$([)]$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_env_mismatch',
+             r'$$\begin{aligned}x\end{matrix}$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_left_missing', r'$$\left\right$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_percent', '$$x%hidden$$', 'invalid_formula_syntax'),
+            ('printed_page_formula_ampersand', '$$a&b$$', 'invalid_formula_syntax'),
             ('printed_page_formula_tagged', r'$$x=1\tag{1}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_truncated', '$$\n\\frac{a}{b}=c\n$$', 'ovis_token_limit'),
         ]:
@@ -86,6 +94,22 @@ def main():
         assert single_doc['pages'][0]['blocks'][0]['status'] == 'ok'
         assert single_doc['pages'][0]['blocks'][0]['content']['text'] == (
             '设$r$，可得$x^2+1$。')
+        _, currency_doc, _ = run(sys.argv[1], 'printed_page_formula_parent_currency', root, image)
+        currency = currency_doc['pages'][0]['blocks'][0]
+        assert currency['status'] == 'ok'
+        assert currency['content']['text'] == '价格 $5，设$x^2+1$。'
+        _, numeric_doc, _ = run(sys.argv[1], 'printed_page_formula_parent_numeric', root, image)
+        numeric = numeric_doc['pages'][0]['blocks'][0]
+        assert numeric['status'] == 'ok'
+        assert numeric['content']['text'] == '已知 $2 = a$，求$x^2+1$。'
+        for scenario, expected in [
+            ('printed_page_formula_parent_numeric_product', '已知 $2 x$，求$x^2+1$。'),
+            ('printed_page_formula_parent_numeric_macro', '已知 $2 \\alpha$，求$x^2+1$。'),
+        ]:
+            _, numeric_doc, _ = run(sys.argv[1], scenario, root, image)
+            numeric = numeric_doc['pages'][0]['blocks'][0]
+            assert numeric['status'] == 'ok'
+            assert numeric['content']['text'] == expected
 
 
 if __name__ == '__main__':

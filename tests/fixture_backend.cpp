@@ -163,6 +163,15 @@ public:
                         scenario_ == "printed_page_formula_prose" ? "Please solve x+y" :
                         scenario_ == "printed_page_formula_unknown_command" ? "$$\\foo{a}$$" :
                         scenario_ == "printed_page_formula_missing_arg" ? "$$\\frac{a}$$" :
+                        scenario_ == "printed_page_formula_empty_arg" ? "$$\\frac{}{b}=c$$" :
+                        scenario_ == "printed_page_formula_sqrt_empty" ? "$$\\sqrt{}$$" :
+                        scenario_ == "printed_page_formula_misnested" ? "$$([)]$$" :
+                        scenario_ == "printed_page_formula_env_mismatch" ?
+                            "$$\\begin{aligned}x\\end{matrix}$$" :
+                        scenario_ == "printed_page_formula_left_missing" ?
+                            "$$\\left\\right$$" :
+                        scenario_ == "printed_page_formula_percent" ? "$$x%hidden$$" :
+                        scenario_ == "printed_page_formula_ampersand" ? "$$a&b$$" :
                         scenario_ == "printed_page_formula_comparison" ? "$$x>0$$" :
                         scenario_ == "printed_page_formula_chinese_text" ?
                             "$$\\frac{\\text{甲}}{b}=c$$" :
@@ -176,6 +185,14 @@ public:
                             "设$\\frac{a}$，请计算。" :
                         scenario_ == "printed_page_formula_parent_single_symbol" ?
                             "设$r$，可得$x^2+1$。" :
+                        scenario_ == "printed_page_formula_parent_currency" ?
+                            "价格 $5，设$x^2+1$。" :
+                        scenario_ == "printed_page_formula_parent_numeric" ?
+                            "已知 $2 = a$，求$x^2+1$。" :
+                        scenario_ == "printed_page_formula_parent_numeric_product" ?
+                            "已知 $2 x$，求$x^2+1$。" :
+                        scenario_ == "printed_page_formula_parent_numeric_macro" ?
+                            "已知 $2 \\alpha$，求$x^2+1$。" :
                         "设$x^2+1$。" : "1. 请计算";
                 result.finish_reason = scenario_ == "printed_page_formula_truncated" &&
                     generation.task == "formula" ? "truncated" : "complete";
@@ -272,11 +289,22 @@ bool config_supported(const std::string& config) {
            config == "fixture:printed_page_formula_prose" ||
            config == "fixture:printed_page_formula_unknown_command" ||
            config == "fixture:printed_page_formula_missing_arg" ||
+           config == "fixture:printed_page_formula_empty_arg" ||
+           config == "fixture:printed_page_formula_sqrt_empty" ||
+           config == "fixture:printed_page_formula_misnested" ||
+           config == "fixture:printed_page_formula_env_mismatch" ||
+           config == "fixture:printed_page_formula_left_missing" ||
+           config == "fixture:printed_page_formula_percent" ||
+           config == "fixture:printed_page_formula_ampersand" ||
            config == "fixture:printed_page_formula_comparison" ||
            config == "fixture:printed_page_formula_chinese_text" ||
            config == "fixture:printed_page_formula_parent_unclosed" ||
            config == "fixture:printed_page_formula_parent_missing_arg" ||
            config == "fixture:printed_page_formula_parent_single_symbol" ||
+           config == "fixture:printed_page_formula_parent_currency" ||
+           config == "fixture:printed_page_formula_parent_numeric" ||
+           config == "fixture:printed_page_formula_parent_numeric_product" ||
+           config == "fixture:printed_page_formula_parent_numeric_macro" ||
            config == "fixture:printed_page_formula_inline_wrapper" ||
            config == "fixture:printed_page_formula_tagged" ||
            config == "fixture:printed_page_formula_truncated";

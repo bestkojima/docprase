@@ -356,9 +356,20 @@ size_t formula_argument_end(const std::string& value, size_t pos) {
         if (value[i] == '\\' && i + 1 < value.size() &&
             (value[i+1] == '{' || value[i+1] == '}')) { ++i; continue; }
         if (value[i] == '{') ++depth;
-        else if (value[i] == '}' && --depth == 0) return i + 1;
+        else if (value[i] == '}' && --depth == 0)
+            return trim_formula(value.substr(pos + 1, i - pos - 1)).empty() ?
+                std::string::npos : i + 1;
     }
     return std::string::npos;
+}
+
+char scalable_delimiter(const std::string& value, size_t pos) {
+    if (pos >= value.size()) return 0;
+    char ch = value[pos];
+    if (ch == '\\' && pos + 1 < value.size() &&
+        (value[pos+1] == '{' || value[pos+1] == '}' ||
+         value[pos+1] == '|')) return value[pos+1];
+    return std::string("()[]|.<>{}").find(ch) == std::string::npos ? 0 : ch;
 }
 
 ParsedFormula parse_formula(const std::string& raw) {
@@ -392,8 +403,9 @@ ParsedFormula parse_formula(const std::string& raw) {
         value.find("![") != std::string::npos || value.find("\x60\x60\x60") != std::string::npos ||
         value.find("\\tag") != std::string::npos || value.find("\\label") != std::string::npos)
         return result;
-    int depth = 0, text_depth = -1, brackets = 0, parentheses = 0;
-    int left_count = 0, right_count = 0, begin_count = 0, end_count = 0;
+    int depth = 0, text_depth = -1;
+    std::vector<char> delimiters, scalable;
+    std::vector<std::string> environments;
     bool next_text_brace = false, math_evidence = has_wrapper;
     for (size_t i = 0; i < value.size(); ++i) {
         unsigned char ch = static_cast<unsigned char>(value[i]);
@@ -443,10 +455,38 @@ ParsedFormula parse_formula(const std::string& raw) {
                     if (formula_argument_end(value, i) == std::string::npos)
                         return result;
                 }
-                if (command == "left") ++left_count;
-                if (command == "right") ++right_count;
-                if (command == "begin") ++begin_count;
-                if (command == "end") ++end_count;
+                if (command == "left" || command == "right") {
+                    char delimiter = scalable_delimiter(value, i);
+                    if (!delimiter) return result;
+                    if (command == "left") {
+                        if (std::string("([{<|.").find(delimiter) == std::string::npos)
+                            return result;
+                        scalable.push_back(delimiter);
+                    } else {
+                        if (scalable.empty()) return result;
+                        char opening = scalable.back();
+                        scalable.pop_back();
+                        char expected = opening == '(' ? ')' : opening == '[' ? ']' :
+                                        opening == '{' ? '}' : opening == '<' ? '>' : opening;
+                        if (delimiter != '.' && opening != '.' && delimiter != expected)
+                            return result;
+                    }
+                }
+                if (command == "begin" || command == "end") {
+                    size_t end = formula_argument_end(value, i);
+                    size_t start = value.find('{', i);
+                    std::string environment = value.substr(start + 1, end - start - 2);
+                    if (environment != "aligned" && environment != "array" &&
+                        environment != "matrix" && environment != "pmatrix" &&
+                        environment != "bmatrix" && environment != "cases")
+                        return result;
+                    if (command == "begin") environments.push_back(environment);
+                    else {
+                        if (environments.empty() || environments.back() != environment)
+                            return result;
+                        environments.pop_back();
+                    }
+                }
                 next_text_brace = command == "text" || command == "mathrm" ||
                                   command == "operatorname";
                 math_evidence = true;
@@ -461,12 +501,15 @@ ParsedFormula parse_formula(const std::string& raw) {
         } else if (ch == '}') {
             if (--depth < 0) return result;
             if (text_depth > depth) text_depth = -1;
-        } else if (ch == '[') ++brackets;
-        else if (ch == ']') { if (--brackets < 0) return result; }
-        else if (ch == '(') ++parentheses;
-        else if (ch == ')') { if (--parentheses < 0) return result; }
+        } else if (ch == '[' || ch == '(') delimiters.push_back(ch);
+        else if (ch == ']' || ch == ')') {
+            if (delimiters.empty() ||
+                delimiters.back() != (ch == ']' ? '[' : '(')) return result;
+            delimiters.pop_back();
+        }
         else if (ch >= 0x80 && text_depth < 0) return result;
-        else if (ch == '$' || ch == '#' || ch == '\x60') return result;
+        else if (ch == '$' || ch == '#' || ch == '%' || ch == '\x60' ||
+                 (ch == '&' && environments.empty())) return result;
         else if (ch >= 'A' && ch <= 'Z' && text_depth < 0) {
             size_t end = i + 1;
             while (end < value.size() && ((value[end] >= 'A' && value[end] <= 'Z') ||
@@ -485,8 +528,8 @@ ParsedFormula parse_formula(const std::string& raw) {
                  ch == '*' || ch == '/' || ch == '{' || ch == '}') math_evidence = true;
         else if (ch < 0x20 && ch != '\n' && ch != '\r' && ch != '\t') return result;
     }
-    if (depth != 0 || brackets != 0 || parentheses != 0 ||
-        left_count != right_count || begin_count != end_count ||
+    if (depth != 0 || !delimiters.empty() || !scalable.empty() ||
+        !environments.empty() ||
         value.back() == '\\' || value.back() == '^' || value.back() == '_' ||
         value.back() == '+' || value.back() == '-' || value.back() == '=' ||
         !math_evidence) return result;
@@ -499,6 +542,39 @@ bool valid_text_math(const std::string& text) {
     for (size_t i = 0; i < text.size();) {
         if (text[i] == '\\' && i + 1 < text.size() &&
             (text[i+1] == '$' || text[i+1] == '\\')) { i += 2; continue; }
+        // A currency amount such as "$5，" is not an opening math delimiter.
+        if (text[i] == '$' && i + 1 < text.size() &&
+            text[i+1] >= '0' && text[i+1] <= '9') {
+            size_t closing_math = text.find('$', i + 1);
+            while (closing_math != std::string::npos) {
+                size_t slashes = 0;
+                for (size_t k = closing_math; k > 0 && text[k-1] == '\\'; --k)
+                    ++slashes;
+                if (slashes % 2 == 0) break;
+                closing_math = text.find('$', closing_math + 1);
+            }
+            bool complete_math = closing_math != std::string::npos &&
+                parse_formula(text.substr(i, closing_math - i + 1)).valid;
+            size_t amount_end = i + 1;
+            while (amount_end < text.size() &&
+                   ((text[amount_end] >= '0' && text[amount_end] <= '9') ||
+                    text[amount_end] == ',' || text[amount_end] == '.'))
+                ++amount_end;
+            size_t after_space = amount_end;
+            while (after_space < text.size() &&
+                   (text[after_space] == ' ' || text[after_space] == '\t'))
+                ++after_space;
+            bool math_continues = after_space < text.size() &&
+                std::string("$=+-*/_^<>").find(text[after_space]) != std::string::npos;
+            if (!complete_math && !math_continues &&
+                (amount_end == text.size() ||
+                 static_cast<unsigned char>(text[amount_end]) >= 0x80 ||
+                 text[amount_end] == ' ' || text[amount_end] == '\t' ||
+                 text[amount_end] == ';' || text[amount_end] == ':')) {
+                i = amount_end;
+                continue;
+            }
+        }
         std::string close;
         size_t open_length = 0;
         if (text[i] == '$') {
