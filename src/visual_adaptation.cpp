@@ -30,9 +30,30 @@ AdaptedVisual adapt_visual(const Image& source, VisualBudget budget) {
     int width = round_even(double(seed_w) / factor) * factor;
     int64_t pixels = int64_t(height) * width;
     if (pixels > maximum) {
-        const double beta = std::sqrt(double(seed_h) * seed_w / maximum);
-        height = std::max(factor, int(std::floor(seed_h / beta / factor)) * factor);
-        width = std::max(factor, int(std::floor(seed_w / beta / factor)) * factor);
+        // Rounding both axes down can collapse a narrow side to 32 and waste
+        // the remaining area. Search the small set of 32-aligned heights for
+        // the canvas that preserves the largest isotropic content scale.
+        double best_scale = -1;
+        int best_width = 0, best_height = 0;
+        for (int candidate_h = factor; candidate_h <= maximum / factor; candidate_h += factor) {
+            int candidate_w = int(maximum / candidate_h / factor) * factor;
+            candidate_w = std::min(candidate_w, candidate_h * 200);
+            if (candidate_w < factor || double(candidate_h) / candidate_w > 200) continue;
+            const double candidate_scale = std::min(double(candidate_w) / source.width,
+                                                    double(candidate_h) / source.height);
+            if (candidate_scale > best_scale) {
+                best_scale = candidate_scale;
+                best_width = candidate_w;
+                best_height = candidate_h;
+            }
+        }
+        if (best_scale < 0) throw std::runtime_error("visual_canvas_unsupported");
+        width = int(std::ceil(std::round(source.width * best_scale) / factor)) * factor;
+        height = int(std::ceil(std::round(source.height * best_scale) / factor)) * factor;
+        if (int64_t(width) * height < minimum) {
+            width = best_width;
+            height = best_height;
+        }
     } else if (pixels < minimum) {
         const double beta = std::sqrt(double(minimum) / (double(seed_h) * seed_w));
         height = int(std::ceil(seed_h * beta / factor)) * factor;

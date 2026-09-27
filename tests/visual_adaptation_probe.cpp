@@ -62,6 +62,13 @@ int main(int argc, char** argv) {
         assert(chosen.transform.content_width > limited.transform.content_width);
         assert(chosen.transform.content_height > limited.transform.content_height);
     }
+    {
+        Image strip{10000, 100, std::vector<uint8_t>(size_t(10000) * 100 * 3, 127)};
+        const auto result = adapt_visual(strip);
+        assert(result.canvas.width == 4896 && result.canvas.height == 64);
+        assert(result.transform.content_width == 4896 && result.transform.content_height == 49);
+        assert(result.transform.pad_y == 7);
+    }
     try {
         adapt_visual(Image{32, 32, std::vector<uint8_t>(32 * 32 * 3)}, {32000, 560 * 560});
         return 5;
