@@ -1,0 +1,729 @@
+{
+  "dataset": "opendatalab/OmniDocBench",
+  "revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "download_endpoint": "https://hf-mirror.com",
+  "upstream_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench",
+  "upstream_annotation_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496",
+  "subset_annotation_sha256": "b8abbc6706157b31281040207668e1bb035878c6b836f45bd63225d661a8500f",
+  "selection_basis": "原图/标注内容与学科覆盖；未按本项目模型表现选样",
+  "approval": "用户同意教材含教辅，严格留出资格另核验",
+  "ground_truth_policy": "原样保存上游记录；可疑错误单独勘误，尚未全文人工复核",
+  "pages": [
+    {
+      "id": "odb-01",
+      "upstream_index_0based": 661,
+      "image_path": "images/jiaocaineedrop_55196913.pdf_0.jpg",
+      "image_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+      "width": 3308,
+      "height": 2339,
+      "subject": "数学",
+      "title": "成都2023高三诊断数学（含印刷答案）",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1536,
+        "height": 2339,
+        "width": 3308,
+        "image_path": "jiaocaineedrop_55196913.pdf_0.jpg",
+        "sample_id": 365
+      },
+      "annotation_sha256": "5fa21b9e4d9019df77d7426f67404504a90928b161b6303095042a6878ab6245",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-02",
+      "upstream_index_0based": 665,
+      "image_path": "images/jiaocaineedrop_96657786.pdf_0.jpg",
+      "image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+      "width": 3308,
+      "height": 2339,
+      "subject": "数学",
+      "title": "黄冈2022高三调研数学（含印刷答案）",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1546,
+        "height": 2339,
+        "width": 3308,
+        "image_path": "jiaocaineedrop_96657786.pdf_0.jpg",
+        "sample_id": 369
+      },
+      "annotation_sha256": "d6522865c48f6b68238ad57e5088b1d2078c7e6a0a3e49b5b067486fb322df75",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-03",
+      "upstream_index_0based": 675,
+      "image_path": "images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+      "image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "width": 1434,
+      "height": 2025,
+      "subject": "数学",
+      "title": "精华在线初中函数试题",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "watermark"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1612,
+        "height": 2025,
+        "width": 1434,
+        "image_path": "jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+        "sample_id": 379
+      },
+      "annotation_sha256": "173bda79c1ed7f8aa7f5708147e65cb4c2b0a0b2c0f08e8454b3a7491291aebc",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-04",
+      "upstream_index_0based": 728,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1564.jpg",
+      "image_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
+      "width": 2633,
+      "height": 1809,
+      "subject": "数学",
+      "title": "2021秋高三期终数学文科",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [
+            "None"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2057,
+        "height": 1809,
+        "width": 2633,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_1564.jpg",
+        "sample_id": 432
+      },
+      "annotation_sha256": "a7d0ea7d80de87a777dac265961c9d22fd9d40d4c7c0fc3ea2eeeced7331c900",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-05",
+      "upstream_index_0based": 800,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+      "image_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+      "width": 1654,
+      "height": 2339,
+      "subject": "数学",
+      "title": "高中数学填空与解答题",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2367,
+        "height": 2339,
+        "width": 1654,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+        "sample_id": 504
+      },
+      "annotation_sha256": "3a67a7f4172bc2840c4fd7d040c55c377a9ea14e5052fd3a1e60743699d4bf08",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-06",
+      "upstream_index_0based": 826,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_4065.jpg",
+      "image_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
+      "width": 2339,
+      "height": 1653,
+      "subject": "数学",
+      "title": "江西八所重点中学2022高三联考数学",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2541,
+        "height": 1653,
+        "width": 2339,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_4065.jpg",
+        "sample_id": 530
+      },
+      "annotation_sha256": "3c3b537e8c3fba1bd8bf80c40bfc96493a531b9fed1bd9a246f5c3c75a2054be",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-07",
+      "upstream_index_0based": 176,
+      "image_path": "images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+      "image_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "width": 1449,
+      "height": 2048,
+      "subject": "数学",
+      "title": "人教初中有理数数学阅读页",
+      "upstream_page_info": {
+        "page_no": 0,
+        "height": 2048,
+        "width": 1449,
+        "image_path": "page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [],
+          "subset": "layout_hard"
+        }
+      },
+      "annotation_sha256": "fb9dea079d60364a44d9e187ccb8f94c0a9c319359d8be68ecbaca8415a0783b",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false,
+      "conservative_source_group": "pep-junior-math",
+      "source_group_note": "出版社与学段一致，完整册次未完全确认，保守同组"
+    },
+    {
+      "id": "odb-08",
+      "upstream_index_0based": 177,
+      "image_path": "images/page-a70b2ec9-379a-4e83-9f64-852c343ec8cd.png",
+      "image_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "width": 1449,
+      "height": 2048,
+      "subject": "数学",
+      "title": "人教初中几何展开图阅读页",
+      "upstream_page_info": {
+        "page_no": 0,
+        "height": 2048,
+        "width": 1449,
+        "image_path": "page-a70b2ec9-379a-4e83-9f64-852c343ec8cd.png",
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [
+            "text_L-shaped_wrap"
+          ],
+          "subset": "layout_hard"
+        }
+      },
+      "annotation_sha256": "cf8c08527f317607de112c43d362c09eba5caa691d11596bde9c57fca1bcea0d",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false,
+      "conservative_source_group": "pep-junior-math",
+      "source_group_note": "出版社与学段一致，完整册次未完全确认，保守同组"
+    },
+    {
+      "id": "odb-09",
+      "upstream_index_0based": 691,
+      "image_path": "images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+      "image_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+      "width": 1653,
+      "height": 2339,
+      "subject": "数学",
+      "title": "高中三角恒等变换教辅",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [],
+          "subset": "v1.5"
+        },
+        "page_no": 1754,
+        "height": 2339,
+        "width": 1653,
+        "image_path": "jiaocaineedrop_j70ke43p.pdf_69.jpg",
+        "sample_id": 395
+      },
+      "annotation_sha256": "2958188115766f33079950bc14b287a2969241709d7f6031edb0f2ade3378404",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-10",
+      "upstream_index_0based": 23,
+      "image_path": "images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+      "image_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+      "width": 1654,
+      "height": 2339,
+      "subject": "数学",
+      "title": "高中添项配凑教辅",
+      "upstream_page_info": {
+        "page_no": 0,
+        "height": 2339,
+        "width": 1654,
+        "image_path": "page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [],
+          "subset": "equation_hard"
+        }
+      },
+      "annotation_sha256": "3df72c1e6bb70527d2189d9fe44c3ad62ff4309fab9ee2f22ff9739d923148ce",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-11",
+      "upstream_index_0based": 766,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+      "image_sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68",
+      "width": 5556,
+      "height": 8175,
+      "subject": "数学",
+      "title": "初中一元一次方程归纳",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal",
+            "table_span",
+            "table_with_formula",
+            "colorful_backgroud"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2218,
+        "height": 8175,
+        "width": 5556,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+        "sample_id": 470
+      },
+      "annotation_sha256": "a5e328f921a0ddc0a982701b06eda9f2e7f423bf5d616c180ba5ef483976df03",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-12",
+      "upstream_index_0based": 820,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+      "image_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
+      "width": 1654,
+      "height": 2339,
+      "subject": "数学",
+      "title": "学而思中考二次函数讲义",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "None"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2497,
+        "height": 2339,
+        "width": 1654,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+        "sample_id": 524
+      },
+      "annotation_sha256": "12508b691a76e5f4e1e8848e745ae49716b57671ef19e000424b9532cea3ec7a",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-13",
+      "upstream_index_0based": 785,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+      "image_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "width": 2339,
+      "height": 1654,
+      "subject": "物理",
+      "title": "初中物理沸腾与凝固练习",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal",
+            "table_with_formula"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2290,
+        "height": 1654,
+        "width": 2339,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+        "sample_id": 489
+      },
+      "annotation_sha256": "77a79246b62a7ec8462032572b56f7cb62e3557e52803c0a030ede0a71cd910b",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false,
+      "conservative_source_group": "junior-physics-exercise-unknown",
+      "source_group_note": "版式接近，保守同组"
+    },
+    {
+      "id": "odb-14",
+      "upstream_index_0based": 793,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+      "image_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+      "width": 2339,
+      "height": 1654,
+      "subject": "物理",
+      "title": "初中物理内能练习",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "table_horizontal",
+            "table_full_line",
+            "table_with_formula"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2331,
+        "height": 1654,
+        "width": 2339,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+        "sample_id": 497
+      },
+      "annotation_sha256": "0e108399b8a09ab3664214da07fef93b3a83ec139950240498e9b6b85f84c7ad",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false,
+      "conservative_source_group": "junior-physics-exercise-unknown",
+      "source_group_note": "版式接近，保守同组"
+    },
+    {
+      "id": "odb-15",
+      "upstream_index_0based": 783,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "width": 1528,
+      "height": 2213,
+      "subject": "物理",
+      "title": "高中机械波教材页",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "colorful_backgroud"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2282,
+        "height": 2213,
+        "width": 1528,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+        "sample_id": 487
+      },
+      "annotation_sha256": "580af020e481f516f309d1714d5f96ca5edf2b14feb4c8d9e5d703b118d63f8a",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-16",
+      "upstream_index_0based": 753,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2100.jpg",
+      "image_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
+      "width": 1504,
+      "height": 2095,
+      "subject": "化学",
+      "title": "初中化学酸碱盐练习页",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "None"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2161,
+        "height": 2095,
+        "width": 1504,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_2100.jpg",
+        "sample_id": 457
+      },
+      "annotation_sha256": "2a6eb2cbffdf0e5a6483d5bf61eae5b7b7bad2e98efcc2e87f28f458f7ecd192",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-17",
+      "upstream_index_0based": 861,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_952.jpg",
+      "image_sha256": "3563a859d407026c160f6917d5a625407a7565d83429f13ff85220b2ed356136",
+      "width": 5556,
+      "height": 8125,
+      "subject": "化学",
+      "title": "高中铁与金属材料教辅",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [
+            "table_horizontal",
+            "table_span",
+            "table_full_line",
+            "table_with_formula",
+            "colorful_backgroud"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1939,
+        "height": 8125,
+        "width": 5556,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_952.jpg",
+        "sample_id": 565
+      },
+      "annotation_sha256": "7c8aef31449b4ca6bcbb4d3d3ed2cccc484945eb254cef893ede9df59b865a2a",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-18",
+      "upstream_index_0based": 805,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_3313.jpg",
+      "image_sha256": "46e8933d18a8ee8135f43fd29da3df9f2f68449e96667c44dfc103c385d86402",
+      "width": 1717,
+      "height": 2400,
+      "subject": "生物",
+      "title": "高中植物激素复习练习",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "fuzzy_scan"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2398,
+        "height": 2400,
+        "width": 1717,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_3313.jpg",
+        "sample_id": 509
+      },
+      "annotation_sha256": "593b5db1b171a457cf943abc01c72b04f432269f8494d8e40d5095ef429ec38a",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-19",
+      "upstream_index_0based": 819,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_377.jpg",
+      "image_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
+      "width": 3355,
+      "height": 2385,
+      "subject": "语文",
+      "title": "高考语文仿真冲刺卷四",
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [
+            "None"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1825,
+        "height": 2385,
+        "width": 3355,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_377.jpg",
+        "sample_id": 523
+      },
+      "annotation_sha256": "ada633806606152098a903b2ef3b70b2afd9a6fcc33f04e95917ec40f996e3d3",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    },
+    {
+      "id": "odb-20",
+      "upstream_index_0based": 1575,
+      "image_path": "images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+      "image_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+      "width": 1654,
+      "height": 2339,
+      "subject": "英语",
+      "title": "2018广西北部湾中考英语",
+      "upstream_page_info": {
+        "image_path": "exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+        "page_no": 1,
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "en_ch_mixed",
+          "layout": "single_column",
+          "special_issue": [
+            "None"
+          ],
+          "subset": "v1.5"
+        },
+        "width": 1654,
+        "height": 2339,
+        "sample_id": 1279
+      },
+      "annotation_sha256": "26874dc2b08df6c0ad86cb4106ce276ca7b9fca438689c51714d062749734d61",
+      "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+      "source_document_identity": "partial_or_unknown",
+      "holdout_eligible": false,
+      "role": "development_evaluation",
+      "visual_review": "passed",
+      "recognition_run": false
+    }
+  ],
+  "validation": {
+    "page_count": 20,
+    "image_decode": "passed",
+    "image_dimensions_match_gt": true,
+    "unique_image_hashes": 20,
+    "known_old_fixture_overlap": false,
+    "subject_counts": {
+      "数学": 12,
+      "物理": 3,
+      "化学": 2,
+      "生物": 1,
+      "语文": 1,
+      "英语": 1
+    },
+    "upstream_type_counts": {
+      "exam_paper": 12,
+      "colorful_textbook": 8
+    },
+    "block_category_counts": {
+      "title": 62,
+      "text_block": 222,
+      "table": 12,
+      "figure": 49,
+      "header": 14,
+      "footer": 17,
+      "page_number": 17,
+      "figure_caption": 29,
+      "abandon": 9,
+      "equation_isolated": 8,
+      "table_caption": 3,
+      "table_footnote": 2
+    },
+    "annotation_field_counts": {
+      "text": 386,
+      "order": 444,
+      "poly": 444,
+      "html": 12,
+      "latex": 8
+    },
+    "strict_source_isolation_verified": false
+  }
+}
