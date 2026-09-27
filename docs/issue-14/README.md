@@ -1,44 +1,75 @@
-# Issue #14：Windows 单页离线解析
+# Issue #14：Linux 单页离线解析
 
-## 当前验收状态
+本项交付清晰印刷教材图片的 Linux CPU 单页入口。正式 CLI 与 `libdococr_c.so` 都通过 PP-DocLayoutV3、OvisOCR2 的同一组 MNN 模型运行；整页质量以 JSON 中的块状态和原始输出为准。多页与全场景回归由 #15 验收。
 
-Windows 实测以 [专用工作流](../../.github/workflows/issue14-windows.yml) 的 `windows-2022` 运行记录为准。提交代码或 Linux 结果本身不构成 Windows 验收；在附上成功的 Actions run、日志和原始输出前，Issue 保持未验证。
+## 程序与外部依赖
 
-本项仅检查清晰印刷教材图片的单页 CPU 路径。多页 PDF 和整套试卷教材回归由 #15 验收。
+- 本仓库源码：C++17、CMake 3.20 及以上版本；CLI 构建目标为 `dococr_cli`，公共共享库为 `libdococr_c.so`。公共头文件 [`dococr.h`](../../include/dococr/dococr.h) 只暴露 C 兼容整数、指针和显式长度结构；调用方无需 MNN 头文件或 C++ STL。
+- MNN 运行时：固定上游提交 `baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6`（3.6.1），需构建 CPU 图像 LLM 功能，提供 `libMNN.so`、`libllm.so`、`libMNNOpenCV.so`、`libMNNAudio.so` 与 `libMNN_Express.so`。本仓库 CMake 从 `DOCOCR_MNN_ROOT` 查找公开头文件和已构建库；不把 MNN 源码或 `.so` 捆进本仓库。
+- 外部模型：`dr3334/PP-DocLayoutV3-mnn` 修订 `c67c1a858d5f6c855172d4cfdf931798dafa2edd`，`dr3334/ovrics-ocrv2_mnn` 修订 `20f12e49d846941e67829a7a7c3645693e485942`。工件放在仓库的 `models/doclayout`、`models/ovis`；[`printed-page.example.json`](../../configs/printed-page.example.json) 固定九个必需文件的 SHA-256、CPU、单线程和生成预算。模型权重不入 Git。
+- 本项图片运行不需要 Poppler。若将来使用 PDF，需另外准备 `pdfinfo` 与 `pdftoppm`；PDF 的全面验收见 #15。
 
-## 依赖与工件
+模型由使用者另行提供。可在仓库根目录使用 ModelScope 下载上述固定修订，验收脚本随后按配置逐一核对九个 SHA-256；`modelscope` 是下载工具，CLI 运行时不需要它：
 
-- 程序源码：本仓库；C++17、CMake ≥ 3.20、Visual Studio 2022 x64、Python 3.12（仅下载和验收脚本需要）。
-- 程序运行时：固定提交 `baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6` 的 [MNN](https://github.com/alibaba/MNN)，启用 `MNN_BUILD_LLM=ON` 和 `MNN_BUILD_LLM_OMNI=ON`。Windows 版本的 LLM 对象合入 `MNN.dll`，`dococr_c.dll` 和 `dococr_cli.exe` 应与 `MNN.dll` 同目录。`/MD` 构建还需要 Microsoft Visual C++ 2022 x64 Redistributable，包含 `vcruntime140.dll`、`vcruntime140_1.dll`、`msvcp140.dll` 和 Windows UCRT；干净机器上须先安装。CI 记录其实际路径和版本。
-- 外部模型：`dr3334/PP-DocLayoutV3-mnn` 修订 `c67c1a858d5f6c855172d4cfdf931798dafa2edd`、`dr3334/ovrics-ocrv2_mnn` 修订 `20f12e49d846941e67829a7a7c3645693e485942`。模型不包含在程序源码或构建输出中；[`configs/printed-page.example.json`](../../configs/printed-page.example.json) 固定九个必需文件的 SHA-256。下载脚本逐一复核哈希。
-- 固定输入：[`source_page.jpg`](../../tests/fixtures/ovis/source_page.jpg)，SHA-256 `c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6`。模型识别质量会是 `partial`；不得把成功导出解释为全页文字正确。
-
-## Windows PowerShell 复现
-
-从仓库根目录运行以下命令。模型可由脚本下载，或自行放在 `models/doclayout`、`models/ovis` 后执行 `verify`；配置中的相对路径以仓库根目录为工作目录解析。
-
-```powershell
-git clone https://github.com/alibaba/MNN.git mnn
-git -C mnn checkout baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6
-cmake -S mnn -B mnn/build -G "Visual Studio 17 2022" -A x64 -DMNN_BUILD_SHARED_LIBS=ON -DMNN_WIN_RUNTIME_MT=OFF -DMNN_BUILD_LLM=ON -DMNN_BUILD_LLM_OMNI=ON -DMNN_BUILD_TEST=OFF -DMNN_BUILD_DEMO=OFF -DMNN_BUILD_CONVERTER=OFF
-cmake --build mnn/build --config Release --parallel 4
-cmake -S . -B build-win -G "Visual Studio 17 2022" -A x64 -DDOCOCR_MNN_ROOT="$PWD/mnn" -DDOCOCR_REQUIRE_MNN=ON -DDOCOCR_REQUIRE_LLM=ON -DDOCOCR_BUILD_TESTS=ON
-cmake --build build-win --config Release --parallel 4
-Copy-Item mnn/build/Release/MNN.dll build-win/Release/
-python -m pip install jsonschema markdown-it-py "modelscope>=1.20,<2"
-ctest --test-dir build-win -C Release --output-on-failure -R '^(contract|cli_integration|config_integration|config_abi|layout_integration|printed_page_integration)$'
-python scripts/issue14_windows.py download --models models
-python scripts/issue14_windows.py verify --cli build-win/Release/dococr_cli.exe --dll build-win/Release/dococr_c.dll --models models --out issue14-evidence
+```sh
+python3 -m pip install modelscope
+python3 - <<'PY'
+from modelscope import snapshot_download
+snapshot_download('dr3334/PP-DocLayoutV3-mnn',
+                  revision='c67c1a858d5f6c855172d4cfdf931798dafa2edd',
+                  local_dir='models/doclayout')
+snapshot_download('dr3334/ovrics-ocrv2_mnn',
+                  revision='20f12e49d846941e67829a7a7c3645693e485942',
+                  local_dir='models/ovis')
+PY
 ```
 
-常规运行需要 CLI、两个本项目/MNN DLL、上述 VC++ x64 运行时、外部模型和配置文件。以下命令读取一个中文文件名，向中文目录写出 `document.md`、`document.json`、`run-manifest.json`、`execution-plan.json`、`job-events.jsonl` 和 `assets/`。在仓库根目录执行，或将配置中的模型 `root` 调整为实际路径。
+## 从源码构建与运行
 
-```powershell
-& .\build-win\Release\dococr_cli.exe --config configs\printed-page.example.json --input "教材样例.jpg" --out "中文解析结果"
+先在自己的目录克隆并构建固定版 MNN；以下示例沿用仓库同级目录，用户可改 `MNN_ROOT`。随后回到本仓库根目录构建与运行。配置中的相对模型路径按启动 CLI 时的工作目录解析。
+
+```sh
+MNN_ROOT="$(pwd)/../MNN"
+git clone https://github.com/alibaba/MNN.git "$MNN_ROOT"
+git -C "$MNN_ROOT" checkout baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6
+cmake -S "$MNN_ROOT" -B "$MNN_ROOT/build" -DCMAKE_BUILD_TYPE=Release \
+  -DMNN_BUILD_SHARED_LIBS=ON -DMNN_BUILD_LLM=ON -DMNN_BUILD_LLM_OMNI=ON \
+  -DMNN_BUILD_CONVERTER=OFF -DMNN_BUILD_DEMO=OFF
+cmake --build "$MNN_ROOT/build" -j4
+
+cmake -S . -B build/linux-current -DCMAKE_BUILD_TYPE=Release \
+  -DDOCOCR_BUILD_TESTS=ON -DDOCOCR_REQUIRE_MNN=ON \
+  -DDOCOCR_REQUIRE_LLM=ON -DDOCOCR_MNN_ROOT="$MNN_ROOT"
+cmake --build build/linux-current -j4
+ctest --test-dir build/linux-current --output-on-failure
+
+build/linux-current/dococr_cli --config configs/printed-page.example.json \
+  --input '教材原图.jpg' --out '中文教材页'
 ```
 
-`issue14_windows.py verify` 复制固定输入为 `教材样例.jpg`，检查 UTF-8 JSON/Markdown、Schema、资源相对引用和真实 CPU 运行清单；随后从独立 Python 进程仅通过 C ABI 装载 `dococr_c.dll`，验证 ABI 版本、无效句柄、旧结果结构大小拒绝、旧输入结构兼容、错误 JSON、字节成对释放及句柄销毁。脚本把 CLI stdout/stderr、全部导出文件、原始块输出、模型哈希和有效计划留在指定输出目录。Windows CTest 选择本项相关的六项无模型公共路径；含 Poppler 或 POSIX 进程/符号链接假设的跨场景测试不作为本项 Windows 单页门禁。
+输出目录包含 `document.md`、`document.json`、`assets/`、`execution-plan.json`、`run-manifest.json`、`job-status.json` 和 `job-events.jsonl`。`document.json` 保留块的原始模型输出、状态与资源引用；`partial` 表示仍有需要检查的区域。CLI 退出码 0 只说明作业和导出完成。
 
-## CI 证据规则
+构建产物的 `RUNPATH` 会指向构建时找到的共享库目录。用 `ldd build/linux-current/dococr_cli` 和 `ldd build/linux-current/libdococr_c.so` 确认所有依赖均有路径且无 `not found`；复制二进制到另一机器后，需提供匹配的 MNN 运行时并重新配置运行时搜索路径，或在目标机器重新构建。本次本机的绝对路径及解析结果记录于 `output/issue-14-linux/cli-dynamic.txt`、`abi-dynamic.txt`、`cli-ldd.txt` 和 `abi-ldd.txt`，不作为其他机器的固定路径。
 
-工作流只在独立 `codex/issue-14-windows` 分支的 push 或人工 dispatch 运行。成功运行的 Actions URL、runner/Visual Studio/CMake/Python 版本、MNN 提交与 DLL SHA、CTest 日志、真实解析目录和 `abi-result.json` 应写入本目录的验收记录。上传包不含模型权重。若 Windows 运行未完成或失败，保留具体失败阶段与日志，Issue 不可关闭。
+## 实际验收命令
+
+[`issue14_linux_verify.py`](../../scripts/issue14_linux_verify.py) 将固定教材页复制为 `教材原图.jpg`，调用生产 CLI 导出到 `中文教材页/job`，检查严格 UTF-8、DocumentIR Schema、已声明资源文件与 Markdown 相对引用，并比对固定正文真值。随后它在 Python 进程中直接加载生产 `libdococr_c.so`，再以真实模型运行同页，从 C ABI 取回 JSON、Markdown、运行清单和资产字节。ABI 检查还覆盖版本、无效及忙句柄、旧结果结构拒绝、旧输入结构兼容、错误 JSON、返回字节的成对释放和重复释放拒绝。
+
+```sh
+python3 scripts/issue14_linux_verify.py \
+  --cli build/linux-current/dococr_cli \
+  --lib build/linux-current/libdococr_c.so \
+  --out output/issue-14-linux/real
+```
+
+脚本要求一个不存在的输出目录，以免旧工件混入。运行前需有 Python 3.9 及以上版本和 `jsonschema`，但 CLI 和 `.so` 本身不依赖 Python。固定输入是 [`source_page.jpg`](../../tests/fixtures/ovis/source_page.jpg)，SHA-256 为 `c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6`。验收摘要、原始块输出、CLI stdout/stderr、生产 ABI 返回结果及完整导出目录位于 `output/issue-14-linux/real/`。`output/` 被 Git 忽略，新检出需运行上述命令生成自己的证据。
+
+## 本机结果
+
+本机为 Ubuntu Linux，`g++` 13.3.0、CMake 4.4.3、MNN 3.6.1（上述固定提交）。[`configure.log`](../../output/issue-14-linux/configure.log)、[`build.log`](../../output/issue-14-linux/build.log) 记录核心、MNN 后端、C ABI 与 CLI 构建退出 0；[`cli-ldd.txt`](../../output/issue-14-linux/cli-ldd.txt) 和 [`abi-ldd.txt`](../../output/issue-14-linux/abi-ldd.txt) 均解析出 MNN 与 LLM 等共享库，没有 `not found`。
+
+[`summary.json`](../../output/issue-14-linux/real/summary.json) 与 [`abi-result.json`](../../output/issue-14-linux/real/abi-result.json) 记录真实 CPU 单页命令、9 个模型工件 SHA、有效配置及 ABI 状态。CLI 退出 0；中文输入 `教材原图.jpg` 到中文输出目录 `中文教材页/job`，DocumentIR 1.3 为 `partial`，19 个块中正文 `b0003` 与固定参考完全匹配，导出 45 个资产文件；Markdown 的 5 处本地引用均在声明资源中。生产 `.so` 再次运行同页返回 0、45 个资产，ABI 返回的 JSON 和 Markdown 与 CLI 导出的字节 SHA 相同。原始正文模型输出保存在 [`raw-reference-block.txt`](../../output/issue-14-linux/real/raw-reference-block.txt)，其他块输出与逐区域停止原因保存在完整 [`document.json`](../../output/issue-14-linux/real/中文教材页/job/document.json) 和 [`run-manifest.json`](../../output/issue-14-linux/real/中文教材页/job/run-manifest.json)。
+
+## 边界
+
+固定教材页此前已观察到部分细小文字块达到 512 token 上限，公式和表格仍需对应的专门解析；不能从单个正文块的真值匹配推断整页识别正确。历史 Windows 两轮 CI 结果仍保留在提交历史与 [Issue 评论](https://github.com/bestkojima/docprase/issues/14#issuecomment-5854117287)，未完成 Windows 实际模型运行；本轮 Linux 验收不使用这些记录。
