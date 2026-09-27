@@ -1,0 +1,9 @@
+unknown_processor 3 True
+duplicate_processing 3 True
+required_processing_disabled 3 True
+processing_owner_mismatch 3 True
+wrong_artifact_hash 3 True
+unverified_contract 3 True
+token_budget_too_large 3 True
+encrypted_pdf 3 True
+invalid_image 3 True

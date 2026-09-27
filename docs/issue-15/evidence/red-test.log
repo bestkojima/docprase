@@ -1,0 +1,19 @@
+Test project /home/dr/project/docprase/build/linux-current
+    Start 10: reading_order_integration
+1/1 Test #10: reading_order_integration ........***Failed    1.23 sec
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/reading_order_integration.py", line 125, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/reading_order_integration.py", line 75, in main
+    assert [by_layout[b['source_region_ids'][0].replace('r', 'l')] for b in page['blocks']] == [
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   1.23 sec
+
+The following tests FAILED:
+	 10 - reading_order_integration (Failed)
+Errors while running CTest

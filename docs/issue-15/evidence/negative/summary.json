@@ -1,0 +1,155 @@
+[
+  {
+    "case": "unknown_processor",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-15/negative-final/unknown_processor.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/unknown_processor-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "unknown_processor",
+    "marker_found": true,
+    "stderr": "{\"code\":\"unknown_processor\",\"detail\":\"imaginary\"}\n",
+    "pass": true
+  },
+  {
+    "case": "duplicate_processing",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-15/negative-final/duplicate_processing.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/duplicate_processing-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "duplicate_processing",
+    "marker_found": true,
+    "stderr": "{\"code\":\"duplicate_processing\",\"detail\":\"normalize\"}\n",
+    "pass": true
+  },
+  {
+    "case": "required_processing_disabled",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-15/negative-final/required_processing_disabled.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/required_processing_disabled-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "required_processing_disabled",
+    "marker_found": true,
+    "stderr": "{\"code\":\"required_processing_disabled\",\"detail\":\"decode\"}\n",
+    "pass": true
+  },
+  {
+    "case": "processing_owner_mismatch",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-15/negative-final/processing_owner_mismatch.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/processing_owner_mismatch-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "processing_owner_mismatch",
+    "marker_found": true,
+    "stderr": "{\"code\":\"processing_owner_mismatch\",\"detail\":\"normalize\"}\n",
+    "pass": true
+  },
+  {
+    "case": "wrong_artifact_hash",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-15/negative-final/wrong_artifact_hash.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/wrong_artifact_hash-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "artifact_hash_mismatch",
+    "marker_found": true,
+    "stderr": "{\"code\":\"artifact_hash_mismatch\",\"detail\":\"PP-DocLayoutV3.mnn\"}\n",
+    "pass": true
+  },
+  {
+    "case": "unverified_contract",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-15/negative-final/unverified_contract.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/unverified_contract-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "contract_unverified",
+    "marker_found": true,
+    "stderr": "{\"code\":\"contract_unverified\",\"detail\":\"layout\"}\n",
+    "pass": true
+  },
+  {
+    "case": "token_budget_too_large",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-15/negative-final/token_budget_too_large.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/token_budget_too_large-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "unsupported_parameter",
+    "marker_found": true,
+    "stderr": "{\"code\":\"unsupported_parameter\",\"detail\":\"max_new_tokens exceeds Ovis runtime limit\"}\n",
+    "pass": true
+  },
+  {
+    "case": "encrypted_pdf",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/configs/printed-page.example.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/encrypted.pdf",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/encrypted_pdf-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "encrypted",
+    "marker_found": true,
+    "stderr": "{\"state\":\"failed\",\"error\":{\"request_id\":\"document\",\"stage\":\"pdf\",\"code\":\"pdf_encrypted\",\"message\":\"加密 PDF 不受支持\"}}\n",
+    "pass": true
+  },
+  {
+    "case": "invalid_image",
+    "command": [
+      "/home/dr/project/docprase/build/linux-current/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/configs/printed-page.example.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/invalid.png",
+      "--out",
+      "/home/dr/project/docprase/output/issue-15/negative-final/invalid_image-job"
+    ],
+    "returncode": 3,
+    "expected_marker": "input_error",
+    "marker_found": true,
+    "stderr": "{\"state\":\"failed\",\"error\":{\"request_id\":\"p0001\",\"stage\":\"decode\",\"code\":\"input_error\",\"message\":\"invalid input\"}}\n",
+    "pass": true
+  }
+]

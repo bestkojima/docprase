@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/dr/project/docprase/build/linux-current/dococr_cli",
+    "--config",
+    "configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/ovis/formula_book_page.png",
+    "--out",
+    "/home/dr/project/docprase/output/issue-15/real-20260927/zh_formula/job"
+  ],
+  "returncode": 0
+}

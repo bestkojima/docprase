@@ -1,0 +1,10 @@
+{"source_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6", "public_engine_create_seconds": 5.779, "same_public_engine": true, "requests": [{"index": 0, "run_status": 0, "document_status": "partial", "job_state": "partial", "regions": 19, "elapsed_seconds": 94.185, "matched_block": "b0003", "matched_raw_sha256": "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546", "document_sha256": "c947ab4108bf48aba23818aa46434ff90cc59a42ad4292477a88f1dfcc17e628", "engine_ready": true}, {"index": 1, "run_status": 0, "document_status": "partial", "job_state": "partial", "regions": 19, "elapsed_seconds": 87.28, "matched_block": "b0003", "matched_raw_sha256": "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546", "document_sha256": "c947ab4108bf48aba23818aa46434ff90cc59a42ad4292477a88f1dfcc17e628", "engine_ready": true}], "matched_raw_equal": true, "raw_matches_reference_after_strip": [true, true], "raw_lengths": [64, 64], "reference_length": 63}
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Qwen-VL smart resize requires height and width >= factor, got 31x103 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 31x360 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 31x170 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 28x51 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 31x103 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 31x360 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 31x170 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 28x51 with factor 32

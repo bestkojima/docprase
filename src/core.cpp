@@ -205,17 +205,42 @@ struct SemanticRelation {
 bool spans_columns(const Block& block, int page_width) {
     const bool heading = block.model_label == "doc_title" ||
         block.model_label == "paragraph_title";
+    const bool page_header = block.model_label == "header";
     return block.box.x0 < page_width * 0.45 && block.box.x1 > page_width * 0.55 &&
-           (heading || block.box.x1 - block.box.x0 >= page_width * 0.65);
+           (heading || page_header || block.box.x1 - block.box.x0 >= page_width * 0.65);
 }
 
 // Assign order to already identified blocks. Detection and recognition IDs never depend on this pass.
 ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_width) {
     if (blocks.empty()) return {"geometry", "empty_page"};
     const size_t size = blocks.size();
+    int left_edge = page_width;
+    std::vector<size_t> right_body;
+    for (size_t i = 0; i < size; ++i) {
+        const Block& block = blocks[i];
+        if (block.box.x0 < page_width * 0.45)
+            left_edge = std::min(left_edge, block.box.x0);
+        if (block.box.x0 >= page_width * 0.52 && block.model_label != "header" &&
+            block.model_label != "footer" && block.model_label != "footnote" &&
+            block.model_label != "vision_footnote") right_body.push_back(i);
+    }
+    auto section_title = [&](const Block& title) {
+        if (right_body.empty() ||
+            (title.model_label != "paragraph_title" && title.model_label != "doc_title") ||
+            title.box.x0 > left_edge + std::max(8, int(page_width * 0.03))) return false;
+        const int height = title.box.y1 - title.box.y0;
+        // A left-aligned section heading can be shorter than the column gap.
+        // Treat it as a page-wide break only when the right column is clear
+        // for at least its own height above and below the heading.
+        for (size_t i : right_body)
+            if (blocks[i].box.y1 >= title.box.y0 - height &&
+                blocks[i].box.y0 <= title.box.y1 + height) return false;
+        return true;
+    };
     std::vector<size_t> spans;
     for (size_t i = 0; i < size; ++i)
-        if (page_width >= 64 && spans_columns(blocks[i], page_width)) spans.push_back(i);
+        if (page_width >= 64 &&
+            (spans_columns(blocks[i], page_width) || section_title(blocks[i]))) spans.push_back(i);
     std::stable_sort(spans.begin(), spans.end(), [&](size_t a, size_t b) {
         return blocks[a].box.y0 < blocks[b].box.y0;
     });

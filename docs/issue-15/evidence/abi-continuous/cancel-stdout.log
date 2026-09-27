@@ -1,0 +1,6 @@
+{"cancel_status": 7, "cancel_state": "cancelled", "cancel_terminal": true, "recovery_completed": true, "same_public_engine": true, "next_job_status": "partial", "next_elapsed_seconds": 86.67, "matched_raw_sha256": "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546", "baseline_matched_raw_sha256": "e1cf9ab07816f67591c568dacd5addd6789fa23e2770c8f4bc67544056c00546", "cancel_events": ["started", "page_started", "decode_completed", "layout_started", "cancel_requested", "recovery_started", "recovery_completed", "terminal"]}
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Qwen-VL smart resize requires height and width >= factor, got 31x103 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 31x360 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 31x170 with factor 32
+Qwen-VL smart resize requires height and width >= factor, got 28x51 with factor 32

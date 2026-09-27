@@ -1,0 +1,72 @@
+{
+  "baseline_commit": "dba124ea2203a06c9afe822aab06948f9c97600a",
+  "samples": {
+    "zh_text_table": {
+      "exit_code": 0,
+      "document_status": "partial",
+      "pages": 1,
+      "blocks": 19,
+      "assets": 45,
+      "jpeg_crop_max_abs": 1,
+      "failures": [],
+      "document_sha256": "c947ab4108bf48aba23818aa46434ff90cc59a42ad4292477a88f1dfcc17e628",
+      "manifest_sha256": "45199e3f5f7100a9ea8a03538a6cde1d2fa0a7e2a1d624b7fdc416097cdde205"
+    },
+    "zh_formula": {
+      "exit_code": 0,
+      "document_status": "partial",
+      "pages": 1,
+      "blocks": 22,
+      "assets": 68,
+      "jpeg_crop_max_abs": null,
+      "failures": [],
+      "document_sha256": "f98672f13f3a3ecac29db9b3bb5db92f25a6b1254ac50feb9ac83597b8ab79e1",
+      "manifest_sha256": "a81dbf1e28e928b4408adf7784bee018803a0b883b2854209be5847fff1d445d"
+    },
+    "zh_merged_table": {
+      "exit_code": 0,
+      "document_status": "partial",
+      "pages": 1,
+      "blocks": 12,
+      "assets": 64,
+      "jpeg_crop_max_abs": null,
+      "failures": [],
+      "document_sha256": "abcff45cf89fe57cc4dbc765a6dcffb073406fb1e39f3a2fa6edd5ba30a8a693",
+      "manifest_sha256": "256f2b4b6c440bbd5ee5df651dc4e0b0c87f56d25ad8a976a1fa0dc4070c0e1c"
+    },
+    "en_jee": {
+      "exit_code": 0,
+      "document_status": "partial",
+      "pages": 1,
+      "blocks": 9,
+      "assets": 33,
+      "jpeg_crop_max_abs": 1,
+      "failures": [],
+      "document_sha256": "273001a8b4111ad4d1105ad82a8dc23b2b52a94ea25a436f2f26db061fb11798",
+      "manifest_sha256": "699dbf2286ba489b1f0202866346ff28d2218e4f6e24281769f374e31d98f92f"
+    },
+    "zh_pdf": {
+      "exit_code": 0,
+      "document_status": "ok",
+      "pages": 2,
+      "blocks": 10,
+      "assets": 34,
+      "jpeg_crop_max_abs": null,
+      "failures": [],
+      "document_sha256": "a4345cda6a0c55fecea057868e68a6df9c76104aad860ba19fa11abe9114415f",
+      "manifest_sha256": "4dead8312aa6b7041c1a2ae600946f3a85963bf5116db95db30c3fb684ff63fd"
+    },
+    "en_two_column": {
+      "exit_code": 0,
+      "document_status": "partial",
+      "pages": 1,
+      "blocks": 12,
+      "assets": 31,
+      "jpeg_crop_max_abs": null,
+      "failures": [],
+      "document_sha256": "d49819f3bf520eb21da67fd35171ef105f4c07b63c12a1ce4e8895dbecc40f6e",
+      "manifest_sha256": "b928cadeada1b3d3401125f724d446ccf7e3d6db52fa89949e42145c9b05ecc6"
+    }
+  },
+  "hard_failures": []
+}

@@ -1,0 +1,119 @@
+{
+  "other_samples": {
+    "zh_text_table": [
+      {
+        "page_id": "p0001",
+        "new_boundary_candidates": []
+      }
+    ],
+    "zh_formula": [
+      {
+        "page_id": "p0001",
+        "new_boundary_candidates": []
+      }
+    ],
+    "zh_merged_table": [
+      {
+        "page_id": "p0001",
+        "new_boundary_candidates": []
+      }
+    ],
+    "en_jee": [
+      {
+        "page_id": "p0001",
+        "new_boundary_candidates": []
+      }
+    ],
+    "zh_pdf": [
+      {
+        "page_id": "p0001",
+        "new_boundary_candidates": []
+      },
+      {
+        "page_id": "p0002",
+        "new_boundary_candidates": []
+      }
+    ]
+  },
+  "two_column": {
+    "new_boundary_candidates": [
+      {
+        "block_id": "b0010",
+        "model_label": "paragraph_title",
+        "bbox": [
+          72,
+          952,
+          571,
+          994
+        ]
+      },
+      {
+        "block_id": "b0001",
+        "model_label": "header",
+        "bbox": [
+          73,
+          60,
+          763,
+          103
+        ]
+      },
+      {
+        "block_id": "b0002",
+        "model_label": "paragraph_title",
+        "bbox": [
+          72,
+          172,
+          579,
+          213
+        ]
+      }
+    ],
+    "blocks_equal_by_id": true,
+    "first_order": [
+      "b0003",
+      "b0006",
+      "b0007",
+      "b0010",
+      "b0012",
+      "b0004",
+      "b0005",
+      "b0008",
+      "b0009",
+      "b0001",
+      "b0002",
+      "b0011"
+    ],
+    "fixed_order": [
+      "b0001",
+      "b0002",
+      "b0003",
+      "b0006",
+      "b0007",
+      "b0004",
+      "b0005",
+      "b0008",
+      "b0009",
+      "b0010",
+      "b0011",
+      "b0012"
+    ],
+    "first_anchor_score": {
+      "pair_correct": 72,
+      "pair_decidable": 105,
+      "missing": [
+        "Figure 1. Recorded readings."
+      ]
+    },
+    "fixed_anchor_score": {
+      "pair_correct": 105,
+      "pair_decidable": 105,
+      "missing": [
+        "Figure 1. Recorded readings."
+      ]
+    },
+    "assets_compared": 31,
+    "asset_mismatches": [],
+    "fixed_json_reexport_equal": true,
+    "fixed_markdown_reexport_equal": true
+  }
+}

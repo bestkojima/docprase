@@ -1,0 +1,36 @@
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+{"kind":"started","state":"running","page":0,"request_id":null,"page_completed":0,"page_total":0,"region_completed":0,"region_total":0}
+{"kind":"page_started","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"decode_completed","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"layout_started","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+Qwen-VL smart resize requires height and width >= factor, got 31x323 with factor 32
+{"kind":"layout_completed","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":0,"region_total":0}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0001","page_completed":0,"page_total":1,"region_completed":0,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0001","page_completed":0,"page_total":1,"region_completed":1,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0002","page_completed":0,"page_total":1,"region_completed":1,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0002","page_completed":0,"page_total":1,"region_completed":2,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0003","page_completed":0,"page_total":1,"region_completed":2,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0003","page_completed":0,"page_total":1,"region_completed":3,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0004","page_completed":0,"page_total":1,"region_completed":3,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0004","page_completed":0,"page_total":1,"region_completed":4,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0006","page_completed":0,"page_total":1,"region_completed":4,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0006","page_completed":0,"page_total":1,"region_completed":5,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0007","page_completed":0,"page_total":1,"region_completed":5,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0007","page_completed":0,"page_total":1,"region_completed":6,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0008","page_completed":0,"page_total":1,"region_completed":6,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0008","page_completed":0,"page_total":1,"region_completed":7,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0009","page_completed":0,"page_total":1,"region_completed":7,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0009","page_completed":0,"page_total":1,"region_completed":8,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0010","page_completed":0,"page_total":1,"region_completed":8,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0010","page_completed":0,"page_total":1,"region_completed":9,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0011","page_completed":0,"page_total":1,"region_completed":9,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0011","page_completed":0,"page_total":1,"region_completed":10,"region_total":11}
+{"kind":"region_started","state":"running","page":1,"request_id":"reqr0012","page_completed":0,"page_total":1,"region_completed":10,"region_total":11}
+{"kind":"region_completed","state":"running","page":1,"request_id":"reqr0012","page_completed":0,"page_total":1,"region_completed":11,"region_total":11}
+{"kind":"export_started","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":11,"region_total":11}
+{"kind":"export_completed","state":"running","page":1,"request_id":null,"page_completed":0,"page_total":1,"region_completed":11,"region_total":11}
+{"kind":"page_completed","state":"running","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":11,"region_total":11}
+{"kind":"recovery_started","state":"recovering","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":11,"region_total":11}
+{"kind":"recovery_completed","state":"recovering","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":11,"region_total":11}
+{"kind":"terminal","state":"partial","page":1,"request_id":null,"page_completed":1,"page_total":1,"region_completed":11,"region_total":11}
+已导出：output/issue-15/reading-fix-20260927

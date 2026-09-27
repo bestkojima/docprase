@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/dr/project/docprase/build/linux-current/dococr_cli",
+    "--config",
+    "configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+    "--out",
+    "/home/dr/project/docprase/output/issue-15/real-20260927/zh_text_table/job"
+  ],
+  "returncode": 0
+}

@@ -1,0 +1,2 @@
+d82685b00c59bba2b00672de98bf2b66298ee4bed7c9ed0cd0c107b59e4f89ca  build/linux-current/dococr_cli
+91cd612e5aaa20885b64ae7cfe9728075688f020bc46341903baa7feb5230b5d  build/linux-current/libdococr_c.so

@@ -1,0 +1,11 @@
+[  5%] Built target dococr_layout_jpeg_decode_probe
+[ 11%] Built target dococr_ovis_same_instance_probe
+[ 37%] Built target dococr_core
+[ 42%] Built target dococr_layout_mnn_probe
+[ 48%] Built target dococr_layout_preprocess_probe
+[ 57%] Built target dococr_c_test
+[ 71%] Built target dococr_c
+[ 82%] Built target dococr_cli_fixture
+[ 85%] Linking CXX executable dococr_contract_test
+[ 97%] Built target dococr_cli
+[100%] Built target dococr_contract_test

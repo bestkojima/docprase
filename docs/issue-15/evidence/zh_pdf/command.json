@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/home/dr/project/docprase/build/linux-current/dococr_cli",
+    "--config",
+    "configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/pdf/printed_textbook_2p.pdf",
+    "--out",
+    "/home/dr/project/docprase/output/issue-15/real-20260927/zh_pdf/job",
+    "--pages",
+    "1-2",
+    "--dpi",
+    "200"
+  ],
+  "returncode": 0
+}

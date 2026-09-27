@@ -1,0 +1,870 @@
+{
+  "measurement": "GNU /usr/bin/time -v wait4 max RSS; fresh CLI processes; OS page cache not cleared",
+  "samples": {
+    "zh_text_table": {
+      "elapsed_wall_seconds": 98.65,
+      "max_rss_kib": 2418812,
+      "user_cpu_seconds": 39.55,
+      "system_cpu_seconds": 59.08,
+      "manifest_timings_ms": {
+        "decode": 12,
+        "layout": 1322,
+        "recognition": 84243,
+        "export": 6
+      },
+      "manifest_timing_status": {
+        "decode": "measured",
+        "layout": "measured",
+        "recognition": "measured",
+        "export": "measured"
+      },
+      "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "actual_device": "cpu",
+      "runtime_version": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "artifacts": [
+        {
+          "model": "layout",
+          "path": "/home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn",
+          "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/config.json",
+          "sha256": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm_config.json",
+          "sha256": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn",
+          "sha256": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn.weight",
+          "sha256": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn",
+          "sha256": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn.weight",
+          "sha256": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/tokenizer.mtok",
+          "sha256": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/export_args.json",
+          "sha256": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
+          "contract_status": "contract_verified"
+        }
+      ],
+      "processing": [
+        {
+          "id": "decode",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "image_decoded"
+        },
+        {
+          "id": "rgb_identity",
+          "owner": "none",
+          "status": "identity_validated",
+          "reason": "owned_rgb8_source"
+        },
+        {
+          "id": "normalize",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+        },
+        {
+          "id": "crop",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "region_crop"
+        },
+        {
+          "id": "session_reset",
+          "owner": "runtime",
+          "status": "delegated_runtime",
+          "reason": "ovis_same_instance_reset"
+        },
+        {
+          "id": "deskew",
+          "owner": "none",
+          "status": "skipped_disabled",
+          "reason": "optional_disabled"
+        }
+      ],
+      "manifest_peak_memory": {
+        "status": "unavailable",
+        "reason": "portable sampler not implemented"
+      }
+    },
+    "zh_formula": {
+      "elapsed_wall_seconds": 84.01,
+      "max_rss_kib": 2389788,
+      "user_cpu_seconds": 82.6,
+      "system_cpu_seconds": 1.63,
+      "manifest_timings_ms": {
+        "decode": 31,
+        "layout": 1092,
+        "recognition": 72386,
+        "export": 8
+      },
+      "manifest_timing_status": {
+        "decode": "measured",
+        "layout": "measured",
+        "recognition": "measured",
+        "export": "measured"
+      },
+      "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "actual_device": "cpu",
+      "runtime_version": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "artifacts": [
+        {
+          "model": "layout",
+          "path": "/home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn",
+          "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/config.json",
+          "sha256": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm_config.json",
+          "sha256": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn",
+          "sha256": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn.weight",
+          "sha256": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn",
+          "sha256": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn.weight",
+          "sha256": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/tokenizer.mtok",
+          "sha256": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/export_args.json",
+          "sha256": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
+          "contract_status": "contract_verified"
+        }
+      ],
+      "processing": [
+        {
+          "id": "decode",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "image_decoded"
+        },
+        {
+          "id": "rgb_identity",
+          "owner": "none",
+          "status": "identity_validated",
+          "reason": "owned_rgb8_source"
+        },
+        {
+          "id": "normalize",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+        },
+        {
+          "id": "crop",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "region_crop"
+        },
+        {
+          "id": "session_reset",
+          "owner": "runtime",
+          "status": "delegated_runtime",
+          "reason": "ovis_same_instance_reset"
+        },
+        {
+          "id": "deskew",
+          "owner": "none",
+          "status": "skipped_disabled",
+          "reason": "optional_disabled"
+        }
+      ],
+      "manifest_peak_memory": {
+        "status": "unavailable",
+        "reason": "portable sampler not implemented"
+      }
+    },
+    "zh_merged_table": {
+      "elapsed_wall_seconds": 77.33,
+      "max_rss_kib": 2463028,
+      "user_cpu_seconds": 64.4,
+      "system_cpu_seconds": 12.9,
+      "manifest_timings_ms": {
+        "decode": 7,
+        "layout": 1087,
+        "recognition": 65765,
+        "export": 4
+      },
+      "manifest_timing_status": {
+        "decode": "measured",
+        "layout": "measured",
+        "recognition": "measured",
+        "export": "measured"
+      },
+      "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "actual_device": "cpu",
+      "runtime_version": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "artifacts": [
+        {
+          "model": "layout",
+          "path": "/home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn",
+          "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/config.json",
+          "sha256": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm_config.json",
+          "sha256": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn",
+          "sha256": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn.weight",
+          "sha256": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn",
+          "sha256": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn.weight",
+          "sha256": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/tokenizer.mtok",
+          "sha256": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/export_args.json",
+          "sha256": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
+          "contract_status": "contract_verified"
+        }
+      ],
+      "processing": [
+        {
+          "id": "decode",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "image_decoded"
+        },
+        {
+          "id": "rgb_identity",
+          "owner": "none",
+          "status": "identity_validated",
+          "reason": "owned_rgb8_source"
+        },
+        {
+          "id": "normalize",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+        },
+        {
+          "id": "crop",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "region_crop"
+        },
+        {
+          "id": "session_reset",
+          "owner": "runtime",
+          "status": "delegated_runtime",
+          "reason": "ovis_same_instance_reset"
+        },
+        {
+          "id": "deskew",
+          "owner": "none",
+          "status": "skipped_disabled",
+          "reason": "optional_disabled"
+        }
+      ],
+      "manifest_peak_memory": {
+        "status": "unavailable",
+        "reason": "portable sampler not implemented"
+      }
+    },
+    "en_jee": {
+      "elapsed_wall_seconds": 73.17,
+      "max_rss_kib": 2339380,
+      "user_cpu_seconds": 40.32,
+      "system_cpu_seconds": 32.82,
+      "manifest_timings_ms": {
+        "decode": 1,
+        "layout": 1183,
+        "recognition": 62350,
+        "export": 1
+      },
+      "manifest_timing_status": {
+        "decode": "measured",
+        "layout": "measured",
+        "recognition": "measured",
+        "export": "measured"
+      },
+      "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "actual_device": "cpu",
+      "runtime_version": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "artifacts": [
+        {
+          "model": "layout",
+          "path": "/home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn",
+          "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/config.json",
+          "sha256": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm_config.json",
+          "sha256": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn",
+          "sha256": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn.weight",
+          "sha256": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn",
+          "sha256": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn.weight",
+          "sha256": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/tokenizer.mtok",
+          "sha256": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/export_args.json",
+          "sha256": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
+          "contract_status": "contract_verified"
+        }
+      ],
+      "processing": [
+        {
+          "id": "decode",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "image_decoded"
+        },
+        {
+          "id": "rgb_identity",
+          "owner": "none",
+          "status": "identity_validated",
+          "reason": "owned_rgb8_source"
+        },
+        {
+          "id": "normalize",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+        },
+        {
+          "id": "crop",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "region_crop"
+        },
+        {
+          "id": "session_reset",
+          "owner": "runtime",
+          "status": "delegated_runtime",
+          "reason": "ovis_same_instance_reset"
+        },
+        {
+          "id": "deskew",
+          "owner": "none",
+          "status": "skipped_disabled",
+          "reason": "optional_disabled"
+        }
+      ],
+      "manifest_peak_memory": {
+        "status": "unavailable",
+        "reason": "portable sampler not implemented"
+      }
+    },
+    "zh_pdf": {
+      "elapsed_wall_seconds": 28.98,
+      "max_rss_kib": 2390620,
+      "user_cpu_seconds": 26.47,
+      "system_cpu_seconds": 2.52,
+      "manifest_timings_ms": {
+        "decode": 13,
+        "layout": 2160,
+        "recognition": 20424,
+        "export": 16
+      },
+      "manifest_timing_status": {
+        "decode": "measured",
+        "layout": "measured",
+        "recognition": "measured",
+        "export": "measured"
+      },
+      "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "actual_device": "cpu",
+      "runtime_version": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "artifacts": [
+        {
+          "model": "layout",
+          "path": "/home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn",
+          "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/config.json",
+          "sha256": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm_config.json",
+          "sha256": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn",
+          "sha256": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn.weight",
+          "sha256": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn",
+          "sha256": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn.weight",
+          "sha256": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/tokenizer.mtok",
+          "sha256": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/export_args.json",
+          "sha256": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
+          "contract_status": "contract_verified"
+        }
+      ],
+      "processing": [
+        {
+          "id": "decode",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "image_decoded"
+        },
+        {
+          "id": "rgb_identity",
+          "owner": "none",
+          "status": "identity_validated",
+          "reason": "owned_rgb8_source"
+        },
+        {
+          "id": "normalize",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+        },
+        {
+          "id": "crop",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "region_crop"
+        },
+        {
+          "id": "session_reset",
+          "owner": "runtime",
+          "status": "delegated_runtime",
+          "reason": "ovis_same_instance_reset"
+        },
+        {
+          "id": "deskew",
+          "owner": "none",
+          "status": "skipped_disabled",
+          "reason": "optional_disabled"
+        }
+      ],
+      "manifest_peak_memory": {
+        "status": "unavailable",
+        "reason": "portable sampler not implemented"
+      },
+      "pdf": {
+        "dpi": 200,
+        "effective_max_page_pixels": 16000000,
+        "memory": {
+          "method": "linux_proc_self_status_VmRSS_snapshots",
+          "note": "页面前后 RSS 快照不是进程峰值；Poppler 子进程内存未计入",
+          "renderer_child_peak_bytes": null,
+          "sampled_process": "dococr_parent_only"
+        },
+        "page_count": 2,
+        "pages": [
+          {
+            "decode_ms": 10,
+            "estimated_raster_pixels": 3870360,
+            "export_ms": 8,
+            "geometry_ms": 10,
+            "layout_ms": 1202,
+            "page_id": "p0001",
+            "pdf_page_number": 1,
+            "pipeline_audit": {
+              "did_crop": true,
+              "did_decode": true,
+              "did_export": true,
+              "did_layout": true,
+              "did_normalize": true,
+              "did_recognition": true,
+              "did_reset": true,
+              "layout_attempted": true,
+              "reset_failed": false
+            },
+            "pipeline_ms": 12429,
+            "pipeline_status": "ok",
+            "raster_pixels": 3866367,
+            "raster_size": [
+              1653,
+              2339
+            ],
+            "recognition_ms": 10941,
+            "regions": [
+              {
+                "elapsed_ms": 2471,
+                "request_id": "reqp0001-r0001",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 2212,
+                "request_id": "reqp0001-r0002",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 2153,
+                "request_id": "reqp0001-r0003",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 2064,
+                "request_id": "reqp0001-r0004",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 2041,
+                "request_id": "reqp0001-r0005",
+                "status": "ok",
+                "stop_reason": "normal"
+              }
+            ],
+            "render_ms": 132,
+            "rss_after_bytes": 2351796224,
+            "rss_before_bytes": 1538514944,
+            "status": "ok",
+            "total_ms": 12573
+          },
+          {
+            "decode_ms": 3,
+            "estimated_raster_pixels": 3870360,
+            "export_ms": 8,
+            "geometry_ms": 10,
+            "layout_ms": 958,
+            "page_id": "p0002",
+            "pdf_page_number": 2,
+            "pipeline_audit": {
+              "did_crop": true,
+              "did_decode": true,
+              "did_export": true,
+              "did_layout": true,
+              "did_normalize": true,
+              "did_recognition": true,
+              "did_reset": true,
+              "layout_attempted": true,
+              "reset_failed": false
+            },
+            "pipeline_ms": 10706,
+            "pipeline_status": "ok",
+            "raster_pixels": 3866367,
+            "raster_size": [
+              1653,
+              2339
+            ],
+            "recognition_ms": 9483,
+            "regions": [
+              {
+                "elapsed_ms": 1791,
+                "request_id": "reqp0002-r0001",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 2128,
+                "request_id": "reqp0002-r0002",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 2089,
+                "request_id": "reqp0002-r0003",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 1936,
+                "request_id": "reqp0002-r0004",
+                "status": "ok",
+                "stop_reason": "normal"
+              },
+              {
+                "elapsed_ms": 1539,
+                "request_id": "reqp0002-r0005",
+                "status": "ok",
+                "stop_reason": "normal"
+              }
+            ],
+            "render_ms": 132,
+            "rss_after_bytes": 2371866624,
+            "rss_before_bytes": 2351796224,
+            "status": "ok",
+            "total_ms": 10850
+          }
+        ],
+        "renderer": "poppler",
+        "renderer_version": "24.02.0",
+        "selected_pages": [
+          1,
+          2
+        ],
+        "source_sha256": "13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7",
+        "total_wall_ms": 23456
+      }
+    },
+    "en_two_column": {
+      "elapsed_wall_seconds": 38.37,
+      "max_rss_kib": 2353140,
+      "user_cpu_seconds": 12.34,
+      "system_cpu_seconds": 25.93,
+      "manifest_timings_ms": {
+        "decode": 2,
+        "layout": 1031,
+        "recognition": 28085,
+        "export": 4
+      },
+      "manifest_timing_status": {
+        "decode": "measured",
+        "layout": "measured",
+        "recognition": "measured",
+        "export": "measured"
+      },
+      "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "actual_device": "cpu",
+      "runtime_version": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+      "artifacts": [
+        {
+          "model": "layout",
+          "path": "/home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn",
+          "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/config.json",
+          "sha256": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm_config.json",
+          "sha256": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn",
+          "sha256": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/llm.mnn.weight",
+          "sha256": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn",
+          "sha256": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/visual.mnn.weight",
+          "sha256": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/tokenizer.mtok",
+          "sha256": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+          "contract_status": "contract_verified"
+        },
+        {
+          "model": "recognition",
+          "path": "/home/dr/project/docprase/models/ovis/export_args.json",
+          "sha256": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
+          "contract_status": "contract_verified"
+        }
+      ],
+      "processing": [
+        {
+          "id": "decode",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "image_decoded"
+        },
+        {
+          "id": "rgb_identity",
+          "owner": "none",
+          "status": "identity_validated",
+          "reason": "owned_rgb8_source"
+        },
+        {
+          "id": "normalize",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+        },
+        {
+          "id": "crop",
+          "owner": "adapter",
+          "status": "executed",
+          "reason": "region_crop"
+        },
+        {
+          "id": "session_reset",
+          "owner": "runtime",
+          "status": "delegated_runtime",
+          "reason": "ovis_same_instance_reset"
+        },
+        {
+          "id": "deskew",
+          "owner": "none",
+          "status": "skipped_disabled",
+          "reason": "optional_disabled"
+        }
+      ],
+      "manifest_peak_memory": {
+        "status": "unavailable",
+        "reason": "portable sampler not implemented"
+      }
+    }
+  }
+}

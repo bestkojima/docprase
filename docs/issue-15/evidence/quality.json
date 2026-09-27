@@ -1,0 +1,1079 @@
+{
+  "samples": {
+    "zh_text_table": {
+      "document_status": "partial",
+      "block_statuses": {
+        "ok": 14,
+        "partial": 5,
+        "failed": 0,
+        "skipped": 0
+      },
+      "layout_candidate_count": 300,
+      "layout_filtered_count": 281,
+      "unknown_blocks": [],
+      "non_ok_blocks": [
+        {
+          "block_id": "b0010",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0012",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0011",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0018",
+          "type": "formula",
+          "status": "partial",
+          "error": "invalid_formula_syntax",
+          "stop_reason": "normal",
+          "raw_sha256": "ce8978383e964f3f80ff0c15eece1164c75a10c15aaf33010cf16af319b49e01",
+          "raw_length": 27,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0019",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        }
+      ],
+      "stop_reasons": {
+        "normal": 15,
+        "token_limit": 4
+      },
+      "text_excerpt": {
+        "exact": true,
+        "edit_distance": 0,
+        "reference_chars": 63,
+        "cer": 0.0,
+        "actual": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+        "reference": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+        "block_id": "b0003"
+      },
+      "tables": [
+        {
+          "annotation_id": 10,
+          "matched": true,
+          "block_id": "b0013",
+          "status": "ok",
+          "rows": 5,
+          "columns": 3,
+          "reference_rows": 5,
+          "reference_columns": 3,
+          "structure_exact": true,
+          "cell_exact": 14,
+          "cell_count": 15,
+          "cell_differences": [
+            {
+              "index": 0,
+              "exact": false,
+              "actual": "序号",
+              "reference": "序 号"
+            }
+          ]
+        }
+      ]
+    },
+    "zh_formula": {
+      "document_status": "partial",
+      "block_statuses": {
+        "ok": 18,
+        "partial": 4,
+        "failed": 0,
+        "skipped": 0
+      },
+      "layout_candidate_count": 300,
+      "layout_filtered_count": 261,
+      "unknown_blocks": [],
+      "non_ok_blocks": [
+        {
+          "block_id": "b0002",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0001",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0017",
+          "type": "text",
+          "status": "partial",
+          "error": "invalid_inline_formula_syntax",
+          "stop_reason": "normal",
+          "raw_sha256": "1e634f9d0965a4e744ab7ed5e30508754c22bc511c39ec5e1d6183f0eb23e61b",
+          "raw_length": 127,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0022",
+          "type": "formula",
+          "status": "partial",
+          "error": "invalid_formula_syntax",
+          "stop_reason": "normal",
+          "raw_sha256": "c161d4f5f7879a48539bb5207a0e7d04ae5c570cec9666c341458c108c37591b",
+          "raw_length": 171,
+          "raw_in": "job/document.json"
+        }
+      ],
+      "stop_reasons": {
+        "normal": 20,
+        "token_limit": 2
+      },
+      "formulas": {
+        "independent": [
+          {
+            "reference_y": 2015.9841000000001,
+            "matched": true,
+            "overlap_over_reference": 0.9563122057990046,
+            "block_id": "b0022",
+            "status": "partial",
+            "format": "markdown",
+            "exact_ignoring_whitespace": false,
+            "actual": "$I_1 = \\int_0^{\\frac{\\pi}{4}} \\ln(1 + 2\\sin x) \\cot x \\, dx, I_2 = \\int_0^{\\frac{\\pi}{4}} 2\\cos x \\cot x \\, dx, I_3 = \\int_0^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx$，则\n",
+            "reference": "I_1 = \\int_{0}^{\\frac{\\pi}{4}} \\ln (1 + 2 \\sin x) \\cot x \\, dx,\nI_2 = \\int_{0}^{\\frac{\\pi}{4}} 2 \\cos x \\cot x \\, dx,\nI_3 = \\int_{0}^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx,\\text{则}",
+            "raw": "$I_1 = \\int_0^{\\frac{\\pi}{4}} \\ln(1 + 2\\sin x) \\cot x \\, dx, I_2 = \\int_0^{\\frac{\\pi}{4}} 2\\cos x \\cot x \\, dx, I_3 = \\int_0^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx$，则\n"
+          },
+          {
+            "reference_y": 381.3225751738316,
+            "matched": true,
+            "overlap_over_reference": 0.9904484432761953,
+            "block_id": "b0005",
+            "status": "ok",
+            "format": "latex",
+            "exact_ignoring_whitespace": true,
+            "actual": "e^{\\alpha}x\\left[\\left(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1}\\right)\\cos\\beta x+\\left(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1}\\right)\\sin\\beta x\\right]",
+            "reference": "e ^ { \\alpha } x \\left[ \\left( A _ { 1 } + A _ { 2 } x + \\cdots + A _ { k } x ^ { k - 1 } \\right) \\cos \\beta x + \\left( B _ { 1 } + B _ { 2 } x + \\cdots + B _ { k } x ^ { k - 1 } \\right) \\sin \\beta x \\right]",
+            "raw": "$$ e^{\\alpha}x\\left[\\left(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1}\\right)\\cos\\beta x+\\left(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1}\\right)\\sin\\beta x\\right] $$\n"
+          },
+          {
+            "reference_y": 627.0360717759277,
+            "matched": true,
+            "overlap_over_reference": 0.9917675653614552,
+            "block_id": "b0008",
+            "status": "ok",
+            "format": "latex",
+            "exact_ignoring_whitespace": false,
+            "actual": "e^{a}x[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x]",
+            "reference": "e ^ { \\alpha } x [ ( A _{ 1 } + A  _{ 2 } x ~ + \\cdot \\cdot \\cdot + A  _{ k } x ^ { k - 1 } ) \\mathrm { c o s } ~ \\beta x + ( B  _{ 1 } + B  _{ 2 } x + \\cdot \\cdot \\cdot + B _ { k } x ^ { k - 1 } ) \\sin \\beta x ]",
+            "raw": "$$ e^{a}x[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x] $$\n"
+          }
+        ],
+        "ownership_count": 17
+      }
+    },
+    "zh_merged_table": {
+      "document_status": "partial",
+      "block_statuses": {
+        "ok": 7,
+        "partial": 5,
+        "failed": 0,
+        "skipped": 0
+      },
+      "layout_candidate_count": 300,
+      "layout_filtered_count": 255,
+      "unknown_blocks": [],
+      "non_ok_blocks": [
+        {
+          "block_id": "b0002",
+          "type": "text",
+          "status": "partial",
+          "error": "invalid_inline_formula_syntax",
+          "stop_reason": "normal",
+          "raw_sha256": "d4d4dc852d45d3a42cabb2c9211e6e1dc50846d0f0673cf6732cd4cf0a879d78",
+          "raw_length": 41,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0006",
+          "type": "text",
+          "status": "partial",
+          "error": "invalid_inline_formula_syntax",
+          "stop_reason": "normal",
+          "raw_sha256": "56e57898b41fa21374e2f2b1a70678cbeea71c109014f63ae2f66ea91c116f90",
+          "raw_length": 29,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0008",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0011",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0012",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        }
+      ],
+      "stop_reasons": {
+        "normal": 9,
+        "token_limit": 3
+      },
+      "tables": [
+        {
+          "annotation_id": "box_id_2",
+          "matched": true,
+          "block_id": "b0007",
+          "status": "ok",
+          "rows": 10,
+          "columns": 4,
+          "reference_rows": 10,
+          "reference_columns": 4,
+          "structure_exact": true,
+          "cell_exact": 8,
+          "cell_count": 26,
+          "cell_differences": [
+            {
+              "index": 1,
+              "exact": false,
+              "actual": "单桥静力触探比贯入阻力($p_s$)",
+              "reference": "单桥静力触探比贯入阻力($(p_{s})$"
+            },
+            {
+              "index": 2,
+              "exact": false,
+              "actual": "桩间极限侧阻力(kPa)",
+              "reference": "桩间极限侧阻力($kPa$)"
+            },
+            {
+              "index": 3,
+              "exact": false,
+              "actual": "地表以下6m范围内的浅层土",
+              "reference": "地表以下6m 范围内的浅层土"
+            },
+            {
+              "index": 7,
+              "exact": false,
+              "actual": "位于粉土及砂性土以上",
+              "reference": "位于粉土及\n砂性土以上"
+            },
+            {
+              "index": 8,
+              "exact": false,
+              "actual": "$p_s \\leqslant 1000\\text{kPa}$",
+              "reference": "$p_{s}\\leqslant 1000kPa$"
+            },
+            {
+              "index": 9,
+              "exact": false,
+              "actual": "$q_{sik} = \\frac{p_s}{20}$",
+              "reference": "$q_{si\\rm{k}}=\\frac {p_{s}}{20}$"
+            },
+            {
+              "index": 10,
+              "exact": false,
+              "actual": "$1000\\text{kPa} < p_s \\leqslant 4000\\text{kPa}$",
+              "reference": "$1000kPa<p_s\\leqslant4000kPa$"
+            },
+            {
+              "index": 11,
+              "exact": false,
+              "actual": "$q_{sik} = 0.025p_s + 25$",
+              "reference": "$q_{si\\rm{k}}=0.025p_{s}+25$"
+            },
+            {
+              "index": 12,
+              "exact": false,
+              "actual": "$p_s > 4000\\text{kPa}$",
+              "reference": "$p_{s}>4000kPa$"
+            },
+            {
+              "index": 15,
+              "exact": false,
+              "actual": "$p_s \\leqslant 600\\text{kPa}$",
+              "reference": "$p_{s}\\leqslant 600kPa$"
+            },
+            {
+              "index": 16,
+              "exact": false,
+              "actual": "$q_{sik} = \\frac{p_s}{20}$",
+              "reference": "$q_{sik}=\\frac {p_{s}}{20}$"
+            },
+            {
+              "index": 17,
+              "exact": false,
+              "actual": "$600\\text{kPa} < p_s \\leqslant 5000\\text{kPa}$",
+              "reference": "$600kPa<p_s\\leqslant5000kPa$"
+            },
+            {
+              "index": 18,
+              "exact": false,
+              "actual": "$q_{sik} = 0.016p_s + 20.45$",
+              "reference": "$q_{si\\rm{k}}=0.016p_{s}+20.45$"
+            },
+            {
+              "index": 19,
+              "exact": false,
+              "actual": "$p_s \\geqslant 5000\\text{kPa}$",
+              "reference": "$p_{s}\\geqslant 5000kPa$"
+            },
+            {
+              "index": 22,
+              "exact": false,
+              "actual": "$p_s \\leqslant 5000\\text{kPa}$",
+              "reference": "$p_{s}\\leqslant 5000kPa$"
+            },
+            {
+              "index": 23,
+              "exact": false,
+              "actual": "$q_{sik} = \\frac{p_s}{50}$",
+              "reference": "$q_{si\\rm{k}}=\\frac {p_{s}}{50}$"
+            },
+            {
+              "index": 24,
+              "exact": false,
+              "actual": "$p_s > 5000\\text{kPa}$",
+              "reference": "$p_{s}>5000kPa$"
+            },
+            {
+              "index": 25,
+              "exact": false,
+              "actual": "$q_{sik} = 100$",
+              "reference": "$q_{si\\rm{k}}=100$"
+            }
+          ]
+        },
+        {
+          "annotation_id": "box_id_4",
+          "matched": true,
+          "block_id": "b0009",
+          "status": "ok",
+          "rows": 2,
+          "columns": 4,
+          "reference_rows": 2,
+          "reference_columns": 4,
+          "structure_exact": true,
+          "cell_exact": 6,
+          "cell_count": 8,
+          "cell_differences": [
+            {
+              "index": 0,
+              "exact": false,
+              "actual": "$p_s/p_{s1}$",
+              "reference": "$p_{\\mathrm {s}}/p_{\\mathrm {s}1}$"
+            },
+            {
+              "index": 4,
+              "exact": false,
+              "actual": "$\\varphi_s$",
+              "reference": "$\\varphi _{s}$"
+            }
+          ]
+        }
+      ]
+    },
+    "en_jee": {
+      "document_status": "partial",
+      "block_statuses": {
+        "ok": 0,
+        "partial": 7,
+        "failed": 0,
+        "skipped": 2
+      },
+      "layout_candidate_count": 300,
+      "layout_filtered_count": 283,
+      "unknown_blocks": [],
+      "non_ok_blocks": [
+        {
+          "block_id": "b0001",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0002",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0003",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0004",
+          "type": "image",
+          "status": "skipped",
+          "error": "recognition_not_executed",
+          "stop_reason": "recognition_not_executed",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "raw_length": 0,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0005",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0006",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0007",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0008",
+          "type": "image",
+          "status": "skipped",
+          "error": "recognition_not_executed",
+          "stop_reason": "recognition_not_executed",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "raw_length": 0,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0009",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        }
+      ],
+      "stop_reasons": {
+        "recognition_not_executed": 2,
+        "token_limit": 7
+      },
+      "anchors": {
+        "anchors": [
+          {
+            "anchor": "JEE (Advanced) 2023",
+            "locations": [],
+            "found": false,
+            "unique": false
+          },
+          {
+            "anchor": "Q.12",
+            "locations": [],
+            "found": false,
+            "unique": false
+          },
+          {
+            "anchor": "Q.13",
+            "locations": [],
+            "found": false,
+            "unique": false
+          },
+          {
+            "anchor": "Time (h)",
+            "locations": [],
+            "found": false,
+            "unique": false
+          }
+        ],
+        "pair_correct": 0,
+        "pair_decidable": 0,
+        "wrong_pairs": [],
+        "missing": [
+          "JEE (Advanced) 2023",
+          "Q.12",
+          "Q.13",
+          "Time (h)"
+        ]
+      }
+    },
+    "zh_pdf": {
+      "document_status": "ok",
+      "block_statuses": {
+        "ok": 10,
+        "partial": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "layout_candidate_count": 0,
+      "layout_filtered_count": 0,
+      "unknown_blocks": [],
+      "non_ok_blocks": [],
+      "stop_reasons": {
+        "normal": 10
+      },
+      "text": {
+        "lines": [
+          {
+            "exact": false,
+            "edit_distance": 3,
+            "reference_chars": 9,
+            "cer": 0.3333333333333333,
+            "actual": "## 第一章 分数的意义\n",
+            "reference": "第一章 分数的意义",
+            "page": "p0001",
+            "line": 1
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 27,
+            "cer": 0.0,
+            "actual": "分数表示把一个整体平均分成若干份后取其中的一份或几份。\n",
+            "reference": "分数表示把一个整体平均分成若干份后取其中的一份或几份。",
+            "page": "p0001",
+            "line": 2
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 27,
+            "cer": 0.0,
+            "actual": "例如，把一张纸平均分成四份，取其中的一份就是四分之一。\n",
+            "reference": "例如，把一张纸平均分成四份，取其中的一份就是四分之一。",
+            "page": "p0001",
+            "line": 3
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 22,
+            "cer": 0.0,
+            "actual": "分母说明平均分成的份数，分子说明所取的份数。\n",
+            "reference": "分母说明平均分成的份数，分子说明所取的份数。",
+            "page": "p0001",
+            "line": 4
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 24,
+            "cer": 0.0,
+            "actual": "观察一张图，先找出整体，再数一数阴影部分占几份。\n",
+            "reference": "观察一张图，先找出整体，再数一数阴影部分占几份。",
+            "page": "p0001",
+            "line": 5
+          },
+          {
+            "exact": false,
+            "edit_distance": 3,
+            "reference_chars": 9,
+            "cer": 0.3333333333333333,
+            "actual": "## 第二章 小数与长度\n",
+            "reference": "第二章 小数与长度",
+            "page": "p0002",
+            "line": 1
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 32,
+            "cer": 0.0,
+            "actual": "测量一支铅笔的长度时，可以先读出整厘米，再读出不足一厘米的部分。\n",
+            "reference": "测量一支铅笔的长度时，可以先读出整厘米，再读出不足一厘米的部分。",
+            "page": "p0002",
+            "line": 2
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 28,
+            "cer": 0.0,
+            "actual": "十个一毫米合成一厘米，因此一点五厘米也可以写成十五毫米。\n",
+            "reference": "十个一毫米合成一厘米，因此一点五厘米也可以写成十五毫米。",
+            "page": "p0002",
+            "line": 3
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 23,
+            "cer": 0.0,
+            "actual": "比较两个长度时，应先统一单位，再比较数值大小。\n",
+            "reference": "比较两个长度时，应先统一单位，再比较数值大小。",
+            "page": "p0002",
+            "line": 4
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 24,
+            "cer": 0.0,
+            "actual": "请写出三件教室物品的长度，并说明选择了什么单位。\n",
+            "reference": "请写出三件教室物品的长度，并说明选择了什么单位。",
+            "page": "p0002",
+            "line": 5
+          }
+        ],
+        "exact_lines": 8,
+        "reference_lines": 10,
+        "total_edit_distance": 6,
+        "total_reference_chars": 225
+      }
+    },
+    "en_two_column": {
+      "document_status": "partial",
+      "block_statuses": {
+        "ok": 10,
+        "partial": 1,
+        "failed": 0,
+        "skipped": 1
+      },
+      "layout_candidate_count": 300,
+      "layout_filtered_count": 288,
+      "unknown_blocks": [],
+      "non_ok_blocks": [
+        {
+          "block_id": "b0005",
+          "type": "image",
+          "status": "skipped",
+          "error": "recognition_not_executed",
+          "stop_reason": "recognition_not_executed",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "raw_length": 0,
+          "raw_in": "job/document.json"
+        },
+        {
+          "block_id": "b0008",
+          "type": "text",
+          "status": "partial",
+          "error": "ovis_token_limit",
+          "stop_reason": "token_limit",
+          "raw_sha256": "3b5169765724f998f070b7410a881d7fd6eac27c7972f1a473eaaa07d3aabdf8",
+          "raw_length": 719,
+          "raw_in": "job/document.json"
+        }
+      ],
+      "stop_reasons": {
+        "normal": 10,
+        "recognition_not_executed": 1,
+        "token_limit": 1
+      },
+      "anchors": {
+        "anchors": [
+          {
+            "anchor": "Printed Science Practice - Form A",
+            "locations": [
+              [
+                0,
+                9,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Section 1: Measurement",
+            "locations": [
+              [
+                0,
+                10,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "1. Measure the length of a pencil.",
+            "locations": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Record the answer in centimeters.",
+            "locations": [
+              [
+                0,
+                0,
+                36
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "2. A meter has one hundred",
+            "locations": [
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "centimeters. Convert 2 m to cm.",
+            "locations": [
+              [
+                0,
+                1,
+                27
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "3. Explain why repeated readings",
+            "locations": [
+              [
+                0,
+                2,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "can reduce random error.",
+            "locations": [
+              [
+                0,
+                2,
+                33
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "4. The chart shows two readings.",
+            "locations": [
+              [
+                0,
+                5,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Which reading is larger?",
+            "locations": [
+              [
+                0,
+                5,
+                34
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Figure 1. Recorded readings.",
+            "locations": [],
+            "found": false,
+            "unique": false
+          },
+          {
+            "anchor": "5. Write the result as a sentence.",
+            "locations": [
+              [
+                0,
+                8,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Include the unit in your answer.",
+            "locations": [
+              [
+                0,
+                8,
+                36
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Section 2: Short answer",
+            "locations": [
+              [
+                0,
+                3,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "6. State one reason to check a measurement twice.",
+            "locations": [
+              [
+                0,
+                11,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "End of practice page.",
+            "locations": [
+              [
+                0,
+                4,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          }
+        ],
+        "pair_correct": 72,
+        "pair_decidable": 105,
+        "wrong_pairs": [
+          [
+            "Printed Science Practice - Form A",
+            "1. Measure the length of a pencil."
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "Record the answer in centimeters."
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "2. A meter has one hundred"
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "centimeters. Convert 2 m to cm."
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "3. Explain why repeated readings"
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "can reduce random error."
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "4. The chart shows two readings."
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "Which reading is larger?"
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "5. Write the result as a sentence."
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "Include the unit in your answer."
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "Section 2: Short answer"
+          ],
+          [
+            "Printed Science Practice - Form A",
+            "End of practice page."
+          ],
+          [
+            "Section 1: Measurement",
+            "1. Measure the length of a pencil."
+          ],
+          [
+            "Section 1: Measurement",
+            "Record the answer in centimeters."
+          ],
+          [
+            "Section 1: Measurement",
+            "2. A meter has one hundred"
+          ],
+          [
+            "Section 1: Measurement",
+            "centimeters. Convert 2 m to cm."
+          ],
+          [
+            "Section 1: Measurement",
+            "3. Explain why repeated readings"
+          ],
+          [
+            "Section 1: Measurement",
+            "can reduce random error."
+          ],
+          [
+            "Section 1: Measurement",
+            "4. The chart shows two readings."
+          ],
+          [
+            "Section 1: Measurement",
+            "Which reading is larger?"
+          ],
+          [
+            "Section 1: Measurement",
+            "5. Write the result as a sentence."
+          ],
+          [
+            "Section 1: Measurement",
+            "Include the unit in your answer."
+          ],
+          [
+            "Section 1: Measurement",
+            "Section 2: Short answer"
+          ],
+          [
+            "Section 1: Measurement",
+            "End of practice page."
+          ],
+          [
+            "4. The chart shows two readings.",
+            "Section 2: Short answer"
+          ],
+          [
+            "4. The chart shows two readings.",
+            "End of practice page."
+          ],
+          [
+            "Which reading is larger?",
+            "Section 2: Short answer"
+          ],
+          [
+            "Which reading is larger?",
+            "End of practice page."
+          ],
+          [
+            "5. Write the result as a sentence.",
+            "Section 2: Short answer"
+          ],
+          [
+            "5. Write the result as a sentence.",
+            "End of practice page."
+          ],
+          [
+            "Include the unit in your answer.",
+            "Section 2: Short answer"
+          ],
+          [
+            "Include the unit in your answer.",
+            "End of practice page."
+          ],
+          [
+            "6. State one reason to check a measurement twice.",
+            "End of practice page."
+          ]
+        ],
+        "missing": [
+          "Figure 1. Recorded readings."
+        ]
+      },
+      "whole_text_diagnostic": {
+        "exact": false,
+        "edit_distance": 791,
+        "reference_chars": 493,
+        "cer": 1.6044624746450304,
+        "actual": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n\n2. A meter has one hundred centimeters. Convert 2 m to cm.\n\n3. Explain why repeated readings can reduce random error.\n\n## Section 2: Short answer\n\n## End of practice page.\n\n4. The chart shows two readings.\n\nWhich reading is larger?\n\n## 1\n\n## 2\n\n## 3\n\n## 4\n\n## 5\n\n## 6\n\n## 7\n\n## 8\n\n## 9\n\n## 10\n\n## 11\n\n## 12\n\n## 13\n\n## 14\n\n## 15\n\n## 16\n\n## 17\n\n## 18\n\n## 19\n\n## 20\n\n## 21\n\n## 22\n\n## 23\n\n## 24\n\n## 25\n\n## 26\n\n## 27\n\n## 28\n\n## 29\n\n## 30\n\n## 31\n\n## 32\n\n## 33\n\n## 34\n\n## 35\n\n## 36\n\n## 37\n\n## 38\n\n## 39\n\n## 40\n\n## 41\n\n## 42\n\n## 43\n\n## 44\n\n## 45\n\n## 46\n\n## 47\n\n## 48\n\n## 49\n\n## 50\n\n## 51\n\n## 52\n\n## 53\n\n## 54\n\n## 55\n\n## 56\n\n## 57\n\n## 58\n\n## 59\n\n## 60\n\n## 61\n\n## 62\n\n## 63\n\n## 64\n\n## 65\n\n## 66\n\n## 67\n\n## 68\n\n## 69\n\n## 70\n\n## 71\n\n## 72\n\n## 73\n\n## 74\n\n## 75\n\n## 76\n\n## 77\n\n## 78\n\n## 79\n\n## 80\n\n## 81\n\n## 82\n\n## 83\n\n## 84\n\n## 85\n\n## 86\n\n## 87\n\n## 88\n\n## 89\n\n## 90\n\n## 91\n\n## 92\n\n## 93\n\n## 94\n\n## 95\n\n## 96\n\n## 97\n\n## 98\n\n## 99\n\n## 100\n\n## 101\n\n## 102\n\n## 103\n\n## \n5. Write the result as a sentence.\n\nInclude the unit in your answer.\n\n## Printed Science Practice - Form A\n\n## Section 1: Measurement\n\n6. State one reason to check a measurement twice.\n",
+        "reference": "Printed Science Practice - Form A\nSection 1: Measurement\n1. Measure the length of a pencil.\nRecord the answer in centimeters.\n2. A meter has one hundred\ncentimeters. Convert 2 m to cm.\n3. Explain why repeated readings\ncan reduce random error.\n4. The chart shows two readings.\nWhich reading is larger?\nFigure 1. Recorded readings.\n5. Write the result as a sentence.\nInclude the unit in your answer.\nSection 2: Short answer\n6. State one reason to check a measurement twice.\nEnd of practice page."
+      },
+      "image_blocks": [
+        "b0005"
+      ],
+      "caption_relations": [
+        {
+          "type": "caption_of",
+          "source_block_id": "b0008",
+          "target_block_id": "b0005",
+          "evidence": "model_figure_title_and_geometry"
+        }
+      ]
+    }
+  }
+}

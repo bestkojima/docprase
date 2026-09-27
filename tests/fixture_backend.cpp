@@ -157,6 +157,23 @@ public:
                                 {22,.9f,5,30,40,40,30}};
                             std::memcpy(rows.data(), single, sizeof(single));
                         }
+                        if (scenario_ == "printed_page_reading_sectioned" ||
+                            scenario_ == "printed_page_reading_local_title") {
+                            const float sectioned[][7] = {
+                                {12,.9f,6,4,64,7,10}, {17,.9f,6,11,48,14,10},
+                                {22,.9f,6,18,43,24,10}, {22,.9f,53,18,90,24,10},
+                                {22,.9f,6,31,42,37,10}, {14,.9f,61,28,87,43,10},
+                                {22,.9f,6,42,42,48,10}, {7,.9f,60,44,88,47,10},
+                                {22,.9f,53,50,90,56,10}, {17,.9f,6,63,30,67,10},
+                                {22,.9f,6,70,70,74,10}, {22,.9f,6,77,30,81,10}};
+                            std::memcpy(rows.data(), sectioned, sizeof(sectioned));
+                            if (scenario_ == "printed_page_reading_local_title") {
+                                const float right_text[] = {22,.9f,53,40,90,48,10};
+                                const float local_title[] = {17,.9f,6,42,30,48,10};
+                                std::memcpy(rows.data()+5*7, right_text, sizeof(right_text));
+                                std::memcpy(rows.data()+6*7, local_title, sizeof(local_title));
+                            }
+                        }
                     }
                     if (scenario_.rfind("printed_page_formula", 0) == 0) {
                         const float formula_samples[][7] = {

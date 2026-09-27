@@ -68,6 +68,20 @@ def main():
         by_layout = {b['id']: b['candidate_id'] for b in page['layout_blocks'] if 'candidate_id' in b}
         assert [by_layout[b['source_region_ids'][0].replace('r', 'l')] for b in page['blocks']] == [
             0, 2, 3, 5, 6, 9, 1, 4, 7, 8, 10]
+        _, sectioned, _ = run(sys.argv[1], 'printed_page_reading_sectioned', root, image)
+        page = sectioned['pages'][0]
+        by_layout = {b['id']: b['candidate_id'] for b in page['layout_blocks']
+                     if 'candidate_id' in b}
+        assert [by_layout[b['source_region_ids'][0].replace('r', 'l')] for b in page['blocks']] == [
+            0, 1, 2, 4, 6, 3, 5, 7, 8, 9, 10, 11]
+        assert page['reading_order'] == [b['id'] for b in page['blocks']]
+        assert page['reading_order_evidence'] == {'source': 'geometry', 'reason': 'duplicate_rank'}
+        _, local_title, _ = run(sys.argv[1], 'printed_page_reading_local_title', root, image)
+        page = local_title['pages'][0]
+        by_layout = {b['id']: b['candidate_id'] for b in page['layout_blocks']
+                     if 'candidate_id' in b}
+        assert [by_layout[b['source_region_ids'][0].replace('r', 'l')] for b in page['blocks']] == [
+            0, 1, 2, 4, 6, 3, 5, 7, 8, 9, 10, 11]
         _, single, _ = run(sys.argv[1], 'printed_page_reading_single', root, image)
         assert [b['id'] for b in single['pages'][0]['blocks']] == [
             'b0001', 'b0002', 'b0003', 'b0004']

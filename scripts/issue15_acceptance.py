@@ -45,6 +45,8 @@ def local_assets(document):
             for child in value:
                 find(child)
     find(document.get('layout_diagnostics', {}))
+    for page in document['pages']:
+        find(page.get('layout_diagnostics', {}))
     return sorted(set(paths))
 
 
@@ -55,12 +57,14 @@ def check_document(job, sample):
                      'docs/issue-10/document-ir-1.3.schema.json')
     jsonschema.validate(document, json.loads(schema.read_text()))
     failures = []
+    jpeg_crop_max_abs = None
     paths = local_assets(document)
     for path in paths:
         asset = (job / path).resolve()
         if not asset.is_relative_to(job.resolve()) or not asset.is_file():
             failures.append(f'missing_or_outside_asset:{path}')
     resource_paths = [r['path'] for r in document['resources']]
+    resource_by_path = {r['path']: r for r in document['resources']}
     if len(resource_paths) != len(set(resource_paths)):
         failures.append('duplicate_resource_path')
     source = ROOT / sample['path']
@@ -76,6 +80,16 @@ def check_document(job, sample):
         regions = {r['id']: r for r in page['regions']}
         block_by_id = {b['id']: b for b in blocks}
         width, height = page['raster_size']
+        if len(layout) != len(page['layout_blocks']) or len(regions) != len(page['regions']):
+            failures.append(f"{page['page_id']}:duplicate_layout_or_region_id")
+        for region in page['regions']:
+            if any(layout_id not in layout for layout_id in region['source_layout_block_ids']):
+                failures.append(f"{region['id']}:missing_layout_block")
+        if source.suffix == '.pdf':
+            affine = page.get('pdf_points_to_raster_affine')
+            if not isinstance(affine, list) or len(affine) != 6 or not all(
+                    isinstance(x, (int, float)) for x in affine):
+                failures.append(f"{page['page_id']}:invalid_pdf_affine")
         for b in blocks:
             x0, y0, x1, y1 = b['bbox']
             if not (0 <= x0 < x1 <= width and 0 <= y0 < y1 <= height):
@@ -84,6 +98,10 @@ def check_document(job, sample):
                 failures.append(f"{b['id']}:missing_region")
             if b.get('confidence') is not None:
                 failures.append(f"{b['id']}:invented_recognition_confidence")
+            resource = b['content'].get('resource')
+            if resource and (resource not in resource_by_path or
+                             resource_by_path[resource].get('source_block_id') != b['id']):
+                failures.append(f"{b['id']}:resource_owner_mismatch")
             if original is not None and b['content'].get('resource'):
                 with Image.open(job / b['content']['resource']) as crop:
                     observed = crop.convert('RGB')
@@ -95,6 +113,7 @@ def check_document(job, sample):
                         # one channel value on the existing #6 reference page.
                         maximum = max(abs(a - b) for a, b in zip(
                             observed.tobytes(), reference.tobytes()))
+                        jpeg_crop_max_abs = max(jpeg_crop_max_abs or 0, maximum)
                         if maximum > 1:
                             failures.append(f"{b['id']}:jpeg_crop_max_abs:{maximum}")
                     elif observed.tobytes() != reference.tobytes():
@@ -108,6 +127,9 @@ def check_document(job, sample):
                 elif any(b['bbox'] == child['bbox'] and b['type'] == child['label']
                          for b in blocks):
                     failures.append(f"{child['id']}:duplicate_owned_content")
+                elif not (owner['bbox'][0] <= child['bbox'][0] <= child['bbox'][2] <= owner['bbox'][2]
+                          and owner['bbox'][1] <= child['bbox'][1] <= child['bbox'][3] <= owner['bbox'][3]):
+                    failures.append(f"{child['id']}:owner_box_does_not_contain_child")
             elif rel.get('source_block_id') not in block_by_id or rel.get('target_block_id') not in block_by_id:
                 failures.append('broken_relation_reference')
     markdown = (job / 'document.md').read_text()
@@ -116,7 +138,7 @@ def check_document(job, sample):
             failures.append(f'missing_markdown_asset:{ref}')
     if original is not None:
         original.close()
-    return document, paths, failures
+    return document, paths, failures, jpeg_crop_max_abs
 
 
 def check_reexport(cli, job, copied, paths):
@@ -126,6 +148,11 @@ def check_reexport(cli, job, copied, paths):
     if code:
         failures.append(f'reexport_exit:{code}')
         return failures
+    return verify_reexport_files(job, copied, paths)
+
+
+def verify_reexport_files(job, copied, paths):
+    failures = []
     for name in ['document.json', 'document.md', *paths]:
         if not (copied / name).is_file() or sha(job / name) != sha(copied / name):
             failures.append(f'reexport_mismatch:{name}')
@@ -136,10 +163,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--cli', type=Path, required=True)
     parser.add_argument('--out', type=Path, required=True)
+    parser.add_argument('--verify-only', action='store_true',
+                        help='Recheck existing jobs and exports without running inference')
     args = parser.parse_args()
     cli = args.cli.resolve()
     output = args.out.resolve()
-    output.mkdir(parents=True, exist_ok=False)
+    if args.verify_only:
+        if not output.is_dir():
+            raise ValueError('existing output directory required')
+    else:
+        output.mkdir(parents=True, exist_ok=False)
     report = {'baseline_commit': SAMPLES['baseline_commit'], 'samples': {},
               'hard_failures': []}
     for sample in SAMPLES['samples']:
@@ -152,17 +185,22 @@ def main():
                    '--input', str(source), '--out', str(job)]
         if source.suffix == '.pdf':
             command += ['--pages', '1-2', '--dpi', '200']
-        code = run(command, folder)
+        code = (json.loads((folder / 'command.json').read_text())['returncode']
+                if args.verify_only else run(command, folder))
         if code:
             report['samples'][sample['id']] = {'exit_code': code, 'failures': [f'cli_exit:{code}']}
             report['hard_failures'].append(f"{sample['id']}:cli_exit:{code}")
         else:
-            document, paths, failures = check_document(job, sample)
-            failures += check_reexport(cli, job, folder / 'reexport', paths)
+            document, paths, failures, jpeg_crop_max_abs = check_document(job, sample)
+            if args.verify_only:
+                failures += verify_reexport_files(job, folder / 'reexport', paths)
+            else:
+                failures += check_reexport(cli, job, folder / 'reexport', paths)
             report['samples'][sample['id']] = {'exit_code': code,
                 'document_status': document['status'], 'pages': len(document['pages']),
                 'blocks': sum(len(p['blocks']) for p in document['pages']),
-                'assets': len(paths), 'failures': failures,
+                'assets': len(paths), 'jpeg_crop_max_abs': jpeg_crop_max_abs,
+                'failures': failures,
                 'document_sha256': sha(job / 'document.json'),
                 'manifest_sha256': sha(job / 'run-manifest.json')}
             report['hard_failures'] += [f"{sample['id']}:{f}" for f in failures]
