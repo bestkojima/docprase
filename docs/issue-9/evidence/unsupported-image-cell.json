@@ -1,0 +1,24 @@
+{
+  "source_dataset": "opendatalab/OmniDocBench",
+  "source_revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "source_page": "images/page-d5f79be0-5d57-4849-9897-6106dd32117a.png",
+  "source_sha256": "dc35626bf3405e7829e35c36265b06be82c95d5d03318a6eab17662afc4f6601",
+  "document_status": "partial",
+  "table_block_id": "b0003",
+  "table_bbox": [
+    330,
+    255,
+    1327,
+    1038
+  ],
+  "table_status": "partial",
+  "table_error": "invalid_table_structure",
+  "content_text": "",
+  "structured_table": null,
+  "raw_output": "<table border=1><tr><td>轻绳</td><td>沿绳收缩方向</td><td><img src=\"images/bbox_461_3_617_245.jpg\" /></td><td rowspan=\"2\">轻绳、轻弹簧的弹力一定沿绳或弹簧方向，但注意弹簧可拉伸可压缩，绳只能拉伸，不能被压缩</td></tr><tr><td>轻质弹簧</td><td>沿弹簧形变的反方向</td><td><img src=\"images/bbox_431_267_649_498.jpg\" /></td></tr><tr><td rowspan=\"2\">轻杆</td><td>可沿杆</td><td><img src=\"images/bbox_416_549_518_781.jpg\" /> <img src=\"images/bbox_557_547_655_778.jpg\" /></td><td rowspan=\"2\">轻杆弹力不一定沿杆方向，要依具体情形确定</td></tr><tr><td>可不沿杆</td><td><img src=\"images/bbox_427_807_651_981.jpg\" /></td></tr></table>\n",
+  "raw_sha256": "69697b4e3c303dacd8d71a8dbd824398473fcf4328bbd690af8279bf6692059d",
+  "crop_resource": "assets/p0001-b0003.png",
+  "crop_sha256": "d6abf854c033b63f58b6edb3f16acddc29bb034671d542ab1fa7ffe09657b86f",
+  "fake_image_path_in_markdown": false,
+  "resource_readable": true
+}

@@ -1,0 +1,45 @@
+{
+  "source_dataset": "opendatalab/OmniDocBench",
+  "source_revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "source_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench",
+  "source_annotation_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496",
+  "source_page": "images/page-0b20ed47-7c6c-4578-bbdf-057a89a083ec.png",
+  "image_sha256": "c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc",
+  "page_attributes": {
+    "data_source": "book",
+    "language": "simplified_chinese",
+    "layout": "single_column",
+    "special_issue": [],
+    "subset": "layout_hard"
+  },
+  "tables": [
+    {
+      "annotation_id": "box_id_2",
+      "polygon": [
+        179.952,
+        576.9735999999999,
+        999.0096000000001,
+        576.9735999999999,
+        999.0096000000001,
+        1141.024,
+        179.952,
+        1141.024
+      ],
+      "html": "<table><tr><td colspan=\"2\">土的类别</td><td>单桥静力触探比贯入阻力($(p_{s})$</td><td>桩间极限侧阻力($kPa$)</td></tr><tr><td colspan=\"2\">地表以下6m 范围内的浅层土</td><td>--</td><td>15</td></tr><tr><td rowspan=\"6\">黏性土</td><td rowspan=\"3\">位于粉土及<br/>砂性土以上</td><td>$p_{s}\\leqslant 1000kPa$</td><td>$q_{si\\rm{k}}=\\frac {p_{s}}{20}$</td></tr><tr><td>$1000kPa<p_s\\leqslant4000kPa$</td><td>$q_{si\\rm{k}}=0.025p_{s}+25$</td></tr><tr><td>$p_{s}>4000kPa$</td><td>125</td></tr><tr><td rowspan=\"3\">位于粉土及砂性土以下</td><td>$p_{s}\\leqslant 600kPa$</td><td>$q_{sik}=\\frac {p_{s}}{20}$</td></tr><tr><td>$600kPa<p_s\\leqslant5000kPa$</td><td>$q_{si\\rm{k}}=0.016p_{s}+20.45$</td></tr><tr><td>$p_{s}\\geqslant 5000kPa$</td><td>100</td></tr><tr><td colspan=\"2\" rowspan=\"2\">粉土及砂性土</td><td>$p_{s}\\leqslant 5000kPa$</td><td>$q_{si\\rm{k}}=\\frac {p_{s}}{50}$</td></tr><tr><td>$p_{s}>5000kPa$</td><td>$q_{si\\rm{k}}=100$</td></tr></table>"
+    },
+    {
+      "annotation_id": "box_id_4",
+      "polygon": [
+        182.0496,
+        1205.9551999999999,
+        999.0096000000001,
+        1205.9551999999999,
+        999.0096000000001,
+        1323.0520000000001,
+        182.0496,
+        1323.0520000000001
+      ],
+      "html": "<table><tr><td>$p_{\\mathrm {s}}/p_{\\mathrm {s}1}$</td><td>$\\leqslant 5$</td><td>7.5</td><td>$\\geqslant 10$</td></tr><tr><td>$\\varphi _{s}$</td><td>1.00</td><td>0.50</td><td>0.33</td></tr></table>"
+    }
+  ]
+}

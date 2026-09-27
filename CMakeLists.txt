@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 option(DOCOCR_BUILD_TESTS "构建无模型验收测试" ON)
-add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp)
+add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/table_parser.cpp)
 set_target_properties(dococr_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb)
 target_compile_features(dococr_core PUBLIC cxx_std_17)
@@ -74,6 +74,8 @@ if(DOCOCR_BUILD_TESTS)
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME printed_formula_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_formula_integration.py $<TARGET_FILE:dococr_cli_fixture>)
+  add_test(NAME printed_table_integration COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_table_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME printed_page_cancel COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_cancel.py $<TARGET_FILE:dococr_c_test>)
 endif()

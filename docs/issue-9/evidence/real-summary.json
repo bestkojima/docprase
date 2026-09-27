@@ -1,0 +1,206 @@
+{
+  "ordinary": {
+    "document_status": "partial",
+    "layout_selected": 19,
+    "content_blocks": 19,
+    "table_ownership_relations": 0,
+    "tables": [
+      {
+        "annotation_id": 10,
+        "block_id": "b0013",
+        "bbox": [
+          94,
+          882,
+          1238,
+          1111
+        ],
+        "rows": 5,
+        "columns": 3,
+        "cells": 15,
+        "structure_exact": true,
+        "reference_math_less_than_escaped": false,
+        "content_exact_cells": 14,
+        "content_nonempty_cells": 15,
+        "cell_differences": [
+          {
+            "cell_index": 0,
+            "actual": "序号",
+            "reference": "序 号",
+            "equal_ignoring_whitespace": true
+          }
+        ]
+      }
+    ]
+  },
+  "merged": {
+    "document_status": "partial",
+    "layout_selected": 45,
+    "content_blocks": 12,
+    "table_ownership_relations": 19,
+    "tables": [
+      {
+        "annotation_id": "box_id_2",
+        "block_id": "b0007",
+        "bbox": [
+          178,
+          575,
+          997,
+          1141
+        ],
+        "rows": 10,
+        "columns": 4,
+        "cells": 26,
+        "structure_exact": true,
+        "reference_math_less_than_escaped": true,
+        "content_exact_cells": 8,
+        "content_nonempty_cells": 26,
+        "cell_differences": [
+          {
+            "cell_index": 1,
+            "actual": "单桥静力触探比贯入阻力($p_s$)",
+            "reference": "单桥静力触探比贯入阻力($(p_{s})$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 2,
+            "actual": "桩间极限侧阻力(kPa)",
+            "reference": "桩间极限侧阻力($kPa$)",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 3,
+            "actual": "地表以下6m范围内的浅层土",
+            "reference": "地表以下6m 范围内的浅层土",
+            "equal_ignoring_whitespace": true
+          },
+          {
+            "cell_index": 7,
+            "actual": "位于粉土及砂性土以上",
+            "reference": "位于粉土及\n砂性土以上",
+            "equal_ignoring_whitespace": true
+          },
+          {
+            "cell_index": 8,
+            "actual": "$p_s \\leqslant 1000\\text{kPa}$",
+            "reference": "$p_{s}\\leqslant 1000kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 9,
+            "actual": "$q_{sik} = \\frac{p_s}{20}$",
+            "reference": "$q_{si\\rm{k}}=\\frac {p_{s}}{20}$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 10,
+            "actual": "$1000\\text{kPa} < p_s \\leqslant 4000\\text{kPa}$",
+            "reference": "$1000kPa<p_s\\leqslant4000kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 11,
+            "actual": "$q_{sik} = 0.025p_s + 25$",
+            "reference": "$q_{si\\rm{k}}=0.025p_{s}+25$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 12,
+            "actual": "$p_s > 4000\\text{kPa}$",
+            "reference": "$p_{s}>4000kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 15,
+            "actual": "$p_s \\leqslant 600\\text{kPa}$",
+            "reference": "$p_{s}\\leqslant 600kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 16,
+            "actual": "$q_{sik} = \\frac{p_s}{20}$",
+            "reference": "$q_{sik}=\\frac {p_{s}}{20}$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 17,
+            "actual": "$600\\text{kPa} < p_s \\leqslant 5000\\text{kPa}$",
+            "reference": "$600kPa<p_s\\leqslant5000kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 18,
+            "actual": "$q_{sik} = 0.016p_s + 20.45$",
+            "reference": "$q_{si\\rm{k}}=0.016p_{s}+20.45$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 19,
+            "actual": "$p_s \\geqslant 5000\\text{kPa}$",
+            "reference": "$p_{s}\\geqslant 5000kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 22,
+            "actual": "$p_s \\leqslant 5000\\text{kPa}$",
+            "reference": "$p_{s}\\leqslant 5000kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 23,
+            "actual": "$q_{sik} = \\frac{p_s}{50}$",
+            "reference": "$q_{si\\rm{k}}=\\frac {p_{s}}{50}$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 24,
+            "actual": "$p_s > 5000\\text{kPa}$",
+            "reference": "$p_{s}>5000kPa$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 25,
+            "actual": "$q_{sik} = 100$",
+            "reference": "$q_{si\\rm{k}}=100$",
+            "equal_ignoring_whitespace": false
+          }
+        ]
+      },
+      {
+        "annotation_id": "box_id_4",
+        "block_id": "b0009",
+        "bbox": [
+          180,
+          1207,
+          998,
+          1321
+        ],
+        "rows": 2,
+        "columns": 4,
+        "cells": 8,
+        "structure_exact": true,
+        "reference_math_less_than_escaped": false,
+        "content_exact_cells": 6,
+        "content_nonempty_cells": 8,
+        "cell_differences": [
+          {
+            "cell_index": 0,
+            "actual": "$p_s/p_{s1}$",
+            "reference": "$p_{\\mathrm {s}}/p_{\\mathrm {s}1}$",
+            "equal_ignoring_whitespace": false
+          },
+          {
+            "cell_index": 4,
+            "actual": "$\\varphi_s$",
+            "reference": "$\\varphi _{s}$",
+            "equal_ignoring_whitespace": false
+          }
+        ]
+      }
+    ]
+  },
+  "source_sha256": {
+    "ordinary": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+    "merged": "c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc"
+  },
+  "annotation_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496"
+}

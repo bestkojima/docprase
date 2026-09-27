@@ -8,7 +8,8 @@ namespace dococr {
 class FixtureBackend final : public IInferenceEngine {
 public:
     explicit FixtureBackend(std::string scenario) : scenario_(std::move(scenario)) {
-        if (scenario_ == "layout_contract" || scenario_ == "layout_inline_formula" ||
+        if (scenario_ == "layout_contract" || scenario_ == "layout_table" ||
+            scenario_ == "layout_inline_formula" ||
             scenario_ == "layout_empty" ||
             scenario_ == "layout_infer_failure")
             capabilities_.generation = false;
@@ -22,7 +23,8 @@ public:
             loaded_.push_back(artifact);
         }
         if (!spec.config_hash.empty() && loaded_.size() !=
-            ((scenario_ == "layout_contract" || scenario_ == "layout_inline_formula" ||
+            ((scenario_ == "layout_contract" || scenario_ == "layout_table" ||
+              scenario_ == "layout_inline_formula" ||
               scenario_ == "layout_empty" ||
               scenario_ == "layout_infer_failure") ? 1u : 2u)) return false;
         return true;
@@ -39,7 +41,8 @@ public:
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
             if (scenario_.rfind("printed_page", 0) == 0 ||
-                scenario_ == "layout_contract" || scenario_ == "layout_inline_formula" ||
+                scenario_ == "layout_contract" || scenario_ == "layout_table" ||
+                scenario_ == "layout_inline_formula" ||
                 scenario_ == "layout_empty" ||
                 scenario_ == "layout_infer_failure") {
                 if (scenario_ == "layout_infer_failure")
@@ -76,7 +79,17 @@ public:
                             {5,.9f,0,1,1,2,2}, {16,.9f,1,1,2,2,3}};
                         std::memcpy(rows.data(), formula_samples, sizeof(formula_samples));
                     }
+                    if (scenario_.rfind("printed_page_table", 0) == 0) {
+                        const float table_samples[][7] = {
+                            {22,.9f,0,0,2,1,0}, {21,.9f,0,1,2,2,1},
+                            {22,.9f,0,1,1,2,2}, {5,.9f,1,1,2,2,3}};
+                        std::memcpy(rows.data(), table_samples, sizeof(table_samples));
+                    }
                     if (scenario_ == "printed_page_filtered") rows[1] = .2f;
+                } else if (scenario_ == "layout_table") {
+                    const float table_samples[][7] = {
+                        {21,.9f,0,0,2,2,0}, {22,.9f,0,0,1,1,1}};
+                    std::memcpy(rows.data(), table_samples, sizeof(table_samples));
                 } else if (scenario_ == "layout_inline_formula") {
                     const float inline_samples[][7] = {
                         {22,.9f,0,0,2,2,0}, {5,.9f,0,0,1,1,1}};
@@ -85,8 +98,10 @@ public:
                     std::memcpy(rows.data(), samples, sizeof(samples));
                 int32_t count = scenario_ == "printed_page_filtered" || scenario_ == "printed_page_slow" ? 1 :
                     scenario_.rfind("printed_page_formula", 0) == 0 ? 4 :
+                    scenario_.rfind("printed_page_table", 0) == 0 ? 4 :
                     scenario_.rfind("printed_page", 0) == 0 ? 6 :
                     scenario_ == "layout_contract" ? 7 :
+                    scenario_ == "layout_table" ? 2 :
                     scenario_ == "layout_inline_formula" ? 2 : 0;
                 std::vector<int32_t> masks(300*200*200);
                 if (scenario_ == "layout_contract") {
@@ -206,6 +221,33 @@ public:
                 result.stop_reason = result.finish_reason == "truncated" ? "token_limit" : "normal";
                 return {result};
             }
+            if (scenario_.rfind("printed_page_table", 0) == 0) {
+                result.text = result.raw_output = generation.task == "table" ?
+                    scenario_ == "printed_page_table_unclosed" ?
+                        "<table><tr><td>甲</td></tr>" :
+                    scenario_ == "printed_page_table_prefix" ?
+                        "<table><tr><td>甲" :
+                    scenario_ == "printed_page_table_unsafe" ?
+                        "<table><tr><td><img src=images/fake.png></td></tr></table>" :
+                    scenario_ == "printed_page_table_bad_span" ?
+                        "<table><tr><td rowspan=3>甲</td><td>1</td></tr>"
+                        "<tr><td>2</td></tr></table>" :
+                    scenario_ == "printed_page_table_duplicate_span" ?
+                        "<table><tr><td rowspan=1 rowspan=2>甲</td></tr>"
+                        "<tr><td>2</td></tr></table>" :
+                    scenario_ == "printed_page_table_bad_section" ?
+                        "<table><tbody><tr><td>甲</td></tr></tbody/></table>" :
+                    scenario_ == "printed_page_table_rowspan" ?
+                        "<table><tr><td rowspan=2>甲</td><td>1</td></tr>"
+                        "<tr><td>2</td></tr></table>" :
+                    "<table border=1><tr><th colspan=2>项目</th></tr>"
+                    "<tr><td>甲</td><td>$x+1$</td></tr></table>" :
+                    "外部表题";
+                result.finish_reason = scenario_ == "printed_page_table_truncated" &&
+                    generation.task == "table" ? "truncated" : "complete";
+                result.stop_reason = result.finish_reason == "truncated" ? "token_limit" : "normal";
+                return {result};
+            }
             if (generation.task == "formula") {
                 result.text = result.raw_output = "## 公式=原始片段";
                 result.finish_reason = "complete"; result.stop_reason = "normal";
@@ -280,7 +322,8 @@ bool config_supported(const std::string& config) {
            config == "fixture:slow" || config == "fixture:invalid_utf8" ||
            config == "fixture:unknown" || config == "fixture:reset_failure" ||
            config == "fixture:generation_exception" || config == "fixture:wrong_response" ||
-           config == "fixture:layout_contract" || config == "fixture:layout_inline_formula" ||
+           config == "fixture:layout_contract" || config == "fixture:layout_table" ||
+           config == "fixture:layout_inline_formula" ||
            config == "fixture:layout_empty" ||
            config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||
            config == "fixture:printed_page_failure" || config == "fixture:printed_page_empty" ||
@@ -318,7 +361,16 @@ bool config_supported(const std::string& config) {
            config == "fixture:printed_page_formula_parent_numeric_macro" ||
            config == "fixture:printed_page_formula_inline_wrapper" ||
            config == "fixture:printed_page_formula_tagged" ||
-           config == "fixture:printed_page_formula_truncated";
+           config == "fixture:printed_page_formula_truncated" ||
+           config == "fixture:printed_page_table" ||
+           config == "fixture:printed_page_table_unclosed" ||
+           config == "fixture:printed_page_table_prefix" ||
+           config == "fixture:printed_page_table_truncated" ||
+           config == "fixture:printed_page_table_unsafe" ||
+           config == "fixture:printed_page_table_rowspan" ||
+           config == "fixture:printed_page_table_bad_span" ||
+           config == "fixture:printed_page_table_duplicate_span" ||
+           config == "fixture:printed_page_table_bad_section";
 }
 std::unique_ptr<IInferenceEngine> make_backend(const std::string& config) {
     return std::make_unique<FixtureBackend>(config.substr(8));

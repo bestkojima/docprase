@@ -2,6 +2,7 @@
 #include "dococr/dococr.h"
 #include "config.hpp"
 #include "layout_preprocess.hpp"
+#include "table_parser.hpp"
 #include <algorithm>
 #include <chrono>
 #include <cmath>
@@ -167,6 +168,7 @@ struct Block {
     bool untrusted_output = false;
     bool display_formula = true;
     std::vector<std::string> owned_layout_ids;
+    ParsedTable table;
 };
 
 struct RawLayoutCandidate {
@@ -178,7 +180,7 @@ struct RawLayoutCandidate {
     Box crop;
 };
 
-struct InlineFormulaEvidence {
+struct OwnershipEvidence {
     const RawLayoutCandidate* candidate;
     int owner_candidate_id;
     std::string layout_id;
@@ -194,12 +196,31 @@ bool contains(Box outer, Box inner) {
            outer.x1 >= inner.x1 && outer.y1 >= inner.y1;
 }
 
+int table_owner(const RawLayoutCandidate& child,
+                const std::vector<const RawLayoutCandidate*>& selected) {
+    const std::string label = canonical_label(child.class_id);
+    if (label != "text" && label != "formula") return -1;
+    int owner = -1, smallest_area = std::numeric_limits<int>::max(), ties = 0;
+    for (const auto* candidate : selected) {
+        if (canonical_label(candidate->class_id) != "table" ||
+            !contains(candidate->crop, child.crop)) continue;
+        int area = box_area(candidate->crop);
+        if (area <= box_area(child.crop)) continue;
+        if (area < smallest_area) {
+            smallest_area = area; owner = candidate->id; ties = 1;
+        } else if (area == smallest_area) ++ties;
+    }
+    return ties == 1 ? owner : -1;
+}
+
 int inline_formula_owner(const RawLayoutCandidate& formula,
-                         const std::vector<const RawLayoutCandidate*>& selected) {
+                         const std::vector<const RawLayoutCandidate*>& selected,
+                         const std::vector<int>& table_owners) {
     if (canonical_label(formula.class_id) != "formula") return -1;
     int owner = -1, smallest_area = std::numeric_limits<int>::max(), ties = 0;
     for (const auto* candidate : selected) {
         if (canonical_label(candidate->class_id) != "text" ||
+            table_owners[size_t(candidate->id)] >= 0 ||
             candidate->class_id == 11 || candidate->class_id == 16 ||
             !contains(candidate->crop, formula.crop)) continue;
         int area = box_area(candidate->crop);
@@ -658,6 +679,7 @@ std::string render(const Block& b) {
         const std::string formula = b.untrusted_output ? safe_text(b.text) : b.text;
         return b.display_formula ? "$$\n" + formula + "\n$$" : "$" + formula + "$";
     }
+    if (b.type == "table" && b.table.valid) return b.table.html;
     return b.untrusted_output ? safe_text(b.text) : b.text;
 }
 
@@ -665,11 +687,14 @@ std::string serialize(const Image& image, const std::string& state,
                       const std::vector<Block>& blocks, const std::string& profile,
                       const std::vector<RawLayoutCandidate>* raw = nullptr,
                       const std::string& overlay = {},
-                      const std::vector<InlineFormulaEvidence>& inline_formulas = {}) {
+                      const std::vector<OwnershipEvidence>& ownership = {},
+                      bool structured_tables = false) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
-    out << "{\"schema_version\":" << json_quote(inline_formulas.empty() ? "1.0" : "1.1")
+    bool has_table = structured_tables &&
+        std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.type == "table"; });
+    out << "{\"schema_version\":" << json_quote(has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
         << ",\"source\":{\"type\":\"image\"},\"pages\":[{\"page_id\":\"p0001\",\"page_index\":0,"
@@ -698,11 +723,12 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"provenance\":{\"model_profile\":" << json_quote(profile)
             << ",\"request_id\":\"layout-p0001\"}}";
     }
-    for (const auto& evidence : inline_formulas) {
+    for (const auto& evidence : ownership) {
         const auto& c = *evidence.candidate;
-        if (!blocks.empty() || &evidence != &inline_formulas.front()) out << ',';
+        if (!blocks.empty() || &evidence != &ownership.front()) out << ',';
         out << "{\"id\":" << json_quote(evidence.layout_id)
-            << ",\"page_id\":\"p0001\",\"label\":\"formula\",\"bbox\":" << box_json(c.crop)
+            << ",\"page_id\":\"p0001\",\"label\":" << json_quote(canonical_label(c.class_id))
+            << ",\"bbox\":" << box_json(c.crop)
             << ",\"coordinate_space\":\"raster_page\",\"detection_score\":" << c.score
             << ",\"candidate_rank\":" << c.rank << ",\"original_class_id\":" << c.class_id
             << ",\"candidate_id\":" << c.id << ",\"mask_row\":" << c.id
@@ -739,6 +765,23 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"text\":" << json_quote(b.text) << ",\"resource\":"
             << (b.resource.empty() ? "null" : json_quote(b.resource));
         if (b.type == "formula") out << ",\"display\":" << (b.display_formula ? "true" : "false");
+        if (has_table && b.type == "table") {
+            out << ",\"table\":";
+            if (!b.table.valid) out << "null";
+            else {
+                out << "{\"rows\":" << b.table.rows << ",\"columns\":" << b.table.columns
+                    << ",\"cells\":[";
+                for (size_t j = 0; j < b.table.cells.size(); ++j) {
+                    if (j) out << ',';
+                    const auto& cell = b.table.cells[j];
+                    out << "{\"row\":" << cell.row << ",\"column\":" << cell.column
+                        << ",\"rowspan\":" << cell.rowspan << ",\"colspan\":" << cell.colspan
+                        << ",\"header\":" << (cell.header ? "true" : "false")
+                        << ",\"text\":" << json_quote(cell.text) << ",\"bbox\":null}";
+                }
+                out << "]}";
+            }
+        }
         out
             << "},\"provenance\":{\"model_profile\":" << json_quote(profile)
             << ",\"request_id\":" << json_quote("req" + id('r', i+1))
@@ -749,9 +792,9 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"error_base64\":" << (b.error_base64.empty() ? "null" : json_quote(b.error_base64)) << "}";
     }
     out << "],\"relations\":[";
-    for (size_t i = 0; i < inline_formulas.size(); ++i) {
+    for (size_t i = 0; i < ownership.size(); ++i) {
         if (i) out << ',';
-        const auto& evidence = inline_formulas[i];
+        const auto& evidence = ownership[i];
         out << "{\"type\":\"content_owned_by\",\"source_layout_block_id\":"
             << json_quote(evidence.layout_id) << ",\"owner_block_id\":"
             << json_quote(evidence.owner_block_id) << "}";
@@ -955,13 +998,23 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         if (a->crop.y0 != b->crop.y0) return a->crop.y0 < b->crop.y0;
         return a->crop.x0 < b->crop.x0;
     });
-    std::vector<InlineFormulaEvidence> inline_formulas;
+    std::vector<OwnershipEvidence> ownership;
+    std::vector<int> table_owners(records.size(), -1);
     if (transcribe) for (const auto* candidate : selected) {
-        int owner = inline_formula_owner(*candidate, selected);
+        int owner = table_owner(*candidate, selected);
+        if (owner < 0) continue;
+        table_owners[size_t(candidate->id)] = owner;
+        records[size_t(candidate->id)].handling_reason = "table_content_owned_by_table";
+        ownership.push_back({candidate, owner,
+            id('l', selected.size() + size_t(candidate->id) + 1), {}});
+    }
+    if (transcribe) for (const auto* candidate : selected) {
+        if (table_owners[size_t(candidate->id)] >= 0) continue;
+        int owner = inline_formula_owner(*candidate, selected, table_owners);
         if (owner < 0) continue;
         auto& owned = records[size_t(candidate->id)];
         owned.handling_reason = "inline_formula_owned_by_text";
-        inline_formulas.push_back({candidate, owner,
+        ownership.push_back({candidate, owner,
             id('l', selected.size() + size_t(candidate->id) + 1), {}});
     }
     std::vector<Block> blocks;
@@ -981,7 +1034,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     bool recognition_unavailable = false;
     for (const auto* candidate : selected) {
         if (cancelled) return {RunCode::Cancelled, {}};
-        if (records[size_t(candidate->id)].handling_reason == "inline_formula_owned_by_text")
+        if (!records[size_t(candidate->id)].handling_reason.empty())
             continue;
         Block block;
         size_t n = blocks.size()+1;
@@ -997,7 +1050,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         block.clamped = candidate->clamped;
         std::copy(std::begin(candidate->box), std::end(candidate->box), block.raw_box);
         block.status = "skipped";
-        for (const auto& evidence : inline_formulas)
+        for (const auto& evidence : ownership)
             if (evidence.owner_candidate_id == candidate->id)
                 block.owned_layout_ids.push_back(evidence.layout_id);
         block.error = block.type == "unknown" ? "unknown_layout_class" : "recognition_not_executed";
@@ -1063,8 +1116,14 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                                         block.format_override = "markdown";
                                     }
                                 } else {
-                                    block.status = "partial"; block.error = "specialized_parser_pending";
-                                    block.format_override = "markdown";
+                                    block.table = parse_table(block.text);
+                                    if (block.table.valid) {
+                                        block.status = "ok"; block.error.clear();
+                                        block.text = block.table.html;
+                                    } else {
+                                        block.status = "partial"; block.error = "invalid_table_structure";
+                                        block.format_override = "markdown";
+                                    }
                                 }
                             } else if (generation->finish_reason == "truncated") {
                                 block.status = "partial"; block.error = "ovis_token_limit";
@@ -1080,6 +1139,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                                 block.status = "failed"; block.error = "invalid_backend_utf8";
                                 block.text.clear();
                             }
+                            if (block.type == "table" && block.status != "ok")
+                                block.text.clear();
                         }
                     }
                 } catch (const std::bad_alloc&) { throw; }
@@ -1102,11 +1163,11 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         }
         blocks.push_back(std::move(block));
     }
-    for (auto& evidence : inline_formulas) {
+    for (auto& evidence : ownership) {
         auto owner = std::find_if(blocks.begin(), blocks.end(), [&](const Block& block) {
             return block.candidate_id == evidence.owner_candidate_id;
         });
-        if (owner == blocks.end()) throw std::runtime_error("inline_formula_owner_missing");
+        if (owner == blocks.end()) throw std::runtime_error("content_owner_missing");
         evidence.owner_block_id = owner->id;
     }
     if (cancelled) return {RunCode::Cancelled, {}};
@@ -1122,7 +1183,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     }
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,
-                            overlay_name, inline_formulas);
+                            overlay_name, ownership, transcribe);
     audit.did_export = true;
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
     uint64_t bytes = result.json.size() + result.markdown.size();

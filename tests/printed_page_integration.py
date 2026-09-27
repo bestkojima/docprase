@@ -30,7 +30,9 @@ def run(binary, scenario, root, image):
     document = json.loads((output / 'document.json').read_text())
     manifest = json.loads((output / 'run-manifest.json').read_text())
     import jsonschema
-    schema_path = ('docs/issue-8/document-ir-1.1.schema.json'
+    schema_path = ('docs/issue-9/document-ir-1.2.schema.json'
+                   if document['schema_version'] == '1.2'
+                   else 'docs/issue-8/document-ir-1.1.schema.json'
                    if document['schema_version'] == '1.1'
                    else 'docs/issue-4/document-ir-1.0.schema.json')
     schema = json.loads((ROOT / schema_path).read_text())
@@ -47,7 +49,7 @@ def main():
         page = document['pages'][0]
         blocks = page['blocks']
         assert [block['status'] for block in blocks] == [
-            'ok', 'skipped', 'partial', 'ok', 'partial', 'skipped']
+            'ok', 'skipped', 'ok', 'ok', 'partial', 'skipped']
         assert [block['type'] for block in blocks] == [
             'text', 'image', 'table', 'text', 'formula', 'unknown']
         assert [block['bbox'] for block in blocks] == [[0, 0, 2, 1], [0, 0, 1, 1],
@@ -58,7 +60,7 @@ def main():
         assert blocks[4]['content']['format'] == 'markdown'
         assert blocks[4]['error'] == 'invalid_formula_syntax'
         assert blocks[2]['content']['text'] == '<table><tr><td>甲</td></tr></table>'
-        assert blocks[2]['content']['format'] == 'markdown'
+        assert blocks[2]['content']['format'] == 'html'
         assert blocks[1]['content']['resource'] and blocks[5]['content']['resource']
         assert all(block['confidence'] is None for block in blocks)
         assert all((output / block['content']['resource']).read_bytes().startswith(b'\x89PNG') for block in blocks)
@@ -69,7 +71,7 @@ def main():
         assert manifest['processing'][4]['status'] == 'delegated_runtime'
         markdown = (output / 'document.md').read_text()
         assert '![插图]' in markdown
-        assert '[待核验：b0003]' in markdown and '[待核验：b0005]' in markdown
+        assert markdown.count('<table>') == 1 and '[待核验：b0005]' in markdown
 
         for scenario, expected_status, expected_reason in [
             ('printed_page_failure', 'failed', 'error'),
