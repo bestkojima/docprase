@@ -32,15 +32,17 @@ bool writeRaw(const std::string& path, const MNN::Tensor& tensor) {
 }  // namespace
 
 int main(int argc, char** argv) {
-    if (argc != 7) {
-        std::cerr << "usage: model_probe_layout_runner MODEL IMAGE_F32 OUT_PREFIX H W SCALE_MULTIPLIER\n";
+    if (argc != 7 && argc != 8) {
+        std::cerr << "usage: model_probe_layout_runner MODEL IMAGE_F32 OUT_PREFIX H W SCALE_MULTIPLIER [THREADS]\n";
         return 2;
     }
     std::unique_ptr<MNN::Interpreter> interpreter(MNN::Interpreter::createFromFile(argv[1]));
     if (!interpreter) { std::cerr << "model_load_failed\n"; return 3; }
     MNN::ScheduleConfig config;
     config.type = MNN_FORWARD_CPU;
-    config.numThread = 4;
+    const int threads = argc == 8 ? std::stoi(argv[7]) : 4;
+    if (threads < 1 || threads > 32) { std::cerr << "invalid_threads\n"; return 2; }
+    config.numThread = threads;
     auto session = interpreter->createSession(config);
     if (!session) { std::cerr << "session_create_failed\n"; return 4; }
     auto inputs = interpreter->getSessionInputAll(session);
@@ -89,6 +91,7 @@ int main(int argc, char** argv) {
             std::cerr << "output_write_failed\n"; return 12;
         }
     }
-    std::cout << "MNN_VERSION=" << MNN::getVersion() << " runSession=" << result << "\n";
+    std::cout << "MNN_VERSION=" << MNN::getVersion() << " THREADS=" << threads
+              << " runSession=" << result << "\n";
     return 0;
 }

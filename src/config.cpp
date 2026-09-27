@@ -238,15 +238,22 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     plan->mode = str(config.at("mode"));
     if (plan->mode != "development" && plan->mode != "production") throw ConfigError("invalid_mode", plan->mode);
     plan->backend = str(config.at("backend"));
+    plan->layout_only = plan->backend == "mnn:pp-doclayout-v3" ||
+                        plan->backend == "fixture:layout_contract" ||
+                        plan->backend == "fixture:layout_empty" ||
+                        plan->backend == "fixture:layout_infer_failure";
     if (plan->backend.rfind("fixture:", 0) == 0 && !fixture_build)
         throw ConfigError("unsupported_backend", plan->backend);
-    if (plan->backend != "none" && plan->backend.rfind("fixture:", 0) != 0)
+    if (plan->backend != "none" && plan->backend.rfind("fixture:", 0) != 0 && !plan->layout_only)
         throw ConfigError("unsupported_backend", plan->backend);
     if (plan->backend == "none") throw ConfigError("missing_capability", "backend has no inference capabilities");
     if (plan->mode == "production" && plan->backend.rfind("fixture:", 0) == 0)
         throw ConfigError("contract_unverified", "fixture is never a production backend");
     object(config.at("models"), {"layout", "recognition"});
+    if (plan->layout_only && config.at("models").object.count("recognition"))
+        throw ConfigError("unsupported_model", "recognition is not available in layout-only plan");
     for (const auto& name : {"layout", "recognition"}) {
+        if (plan->layout_only && std::string(name) == "recognition") continue;
         const Json& model = config.at("models").at(name);
         object(model, {"contract_status", "root", "artifacts"});
         std::string status = str(model.at("contract_status"));
@@ -255,6 +262,8 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
         if (plan->mode == "production" && (status != "contract_verified" || plan->backend == "none"))
             throw ConfigError("contract_unverified", name);
         if (plan->backend.rfind("fixture:", 0) == 0 && status != "verified_fixture")
+            throw ConfigError("contract_unverified", name);
+        if (plan->backend == "mnn:pp-doclayout-v3" && status != "contract_verified")
             throw ConfigError("contract_unverified", name);
         if (status == "verified_fixture" && plan->backend.rfind("fixture:", 0) != 0)
             throw ConfigError("contract_unverified", name);
@@ -273,7 +282,8 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     }
     object(config.at("skills"), {"layout.detect", "ocr.transcribe"});
     if (str(config.at("skills").at("layout.detect")) != "layout" ||
-        str(config.at("skills").at("ocr.transcribe")) != "recognition")
+        (!plan->layout_only && str(config.at("skills").at("ocr.transcribe")) != "recognition") ||
+        (plan->layout_only && config.at("skills").object.count("ocr.transcribe")))
         throw ConfigError("missing_capability", "skill binding");
     array(config.at("flow"));
     std::map<std::string, std::string> outputs;
@@ -300,14 +310,16 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
                 throw ConfigError("cycle_or_missing_dependency", id);
             input = outputs.at(dependency);
         }
-        if (input != contract->second.first) throw ConfigError("type_disconnected", id);
+        if (input != contract->second.first &&
+            !(plan->layout_only && type == "document_assembler" && input == "layout_blocks"))
+            throw ConfigError("type_disconnected", id);
         outputs[id] = final_output = contract->second.second;
         if (resolved_flow.size() > 1) resolved_flow += ',';
         resolved_flow += "{\"id\":" + json_quote(id) + ",\"binding\":" + json_quote(type) +
             ",\"input_kind\":" + json_quote(input) + ",\"output_kind\":" +
             json_quote(final_output) + "}";
     }
-    if (config.at("flow").array.size() != flow_types.size() ||
+    if (config.at("flow").array.size() != flow_types.size() - (plan->layout_only ? 1 : 0) ||
         outputs.empty() || final_output != "output")
         throw ConfigError("missing_capability", "required flow");
     resolved_flow += ']';
@@ -321,10 +333,14 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
         if (!steps.insert(id).second) throw ConfigError("duplicate_processing", id);
         bool enabled = boolean(item.at("enabled"));
         std::string expected_owner = registered->second.first;
+        if (id == "session_reset" && plan->layout_only) expected_owner = "none";
         if (id == "normalize" && plan->backend == "fixture:runtime") expected_owner = "runtime";
         if (id == "normalize" && plan->backend == "fixture:graph") expected_owner = "graph";
         if (owner != expected_owner) throw ConfigError("processing_owner_mismatch", id);
-        if (registered->second.second && !enabled) throw ConfigError("required_processing_disabled", id);
+        if (registered->second.second && !enabled && !(id == "session_reset" && plan->layout_only))
+            throw ConfigError("required_processing_disabled", id);
+        if (id == "session_reset" && plan->layout_only && enabled)
+            throw ConfigError("unsupported_processing", id);
         if (!registered->second.second && enabled) throw ConfigError("unsupported_processing", id);
         plan->processing.push_back({id, owner, enabled});
     }

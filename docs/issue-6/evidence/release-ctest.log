@@ -1,0 +1,15 @@
+Test project /tmp/dococr-issue6-release
+    Start 1: contract
+1/5 Test #1: contract .........................   Passed    0.02 sec
+    Start 2: cli_integration
+2/5 Test #2: cli_integration ..................   Passed    0.08 sec
+    Start 3: config_integration
+3/5 Test #3: config_integration ...............   Passed    0.14 sec
+    Start 4: config_abi
+4/5 Test #4: config_abi .......................   Passed    0.60 sec
+    Start 5: layout_integration
+5/5 Test #5: layout_integration ...............   Passed    0.31 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =   1.15 sec

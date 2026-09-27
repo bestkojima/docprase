@@ -1,0 +1,11 @@
+W0927 02:41:53.542000 133040 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W0927 02:41:53.561000 133040 torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[transformers] The channel dimension is ambiguous. Got image shape torch.Size([3, 1, 1]). Assuming channels are the first dimension. Use the [input_data_format](https://huggingface.co/docs/transformers/main/internal/image_processing_utils#transformers.image_transforms.rescale.input_data_format) parameter to assign the channel dimension.
+locked-jpeg-decoded-by-PIL: 640x640 max_abs=0 differing=0
+pattern-2x2: 2x2 max_abs=0 differing=0
+pattern-1x1: 1x1 max_abs=0 differing=0
+pattern-135x73: 135x73 max_abs=0 differing=0
+pattern-800x640: 800x640 max_abs=0 differing=0
+pattern-640x800: 640x800 max_abs=0 differing=0
+pattern-800x800: 800x800 max_abs=0 differing=0
+exit_code: 0

@@ -7,7 +7,11 @@
 namespace dococr {
 class FixtureBackend final : public IInferenceEngine {
 public:
-    explicit FixtureBackend(std::string scenario) : scenario_(std::move(scenario)) {}
+    explicit FixtureBackend(std::string scenario) : scenario_(std::move(scenario)) {
+        if (scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
+            scenario_ == "layout_infer_failure")
+            capabilities_.generation = false;
+    }
     bool load(const BackendLoadSpec& spec) override {
         if (spec.backend_id != "fixture:" + scenario_) return false;
         loaded_.clear();
@@ -16,7 +20,9 @@ public:
                 sha256_file(artifact.path) != artifact.sha256) return false;
             loaded_.push_back(artifact);
         }
-        if (!spec.config_hash.empty() && loaded_.size() != 2) return false;
+        if (!spec.config_hash.empty() && loaded_.size() !=
+            ((scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
+              scenario_ == "layout_infer_failure") ? 1u : 2u)) return false;
         return true;
     }
     std::vector<ArtifactInfo> loaded_artifacts() const override { return loaded_; }
@@ -30,6 +36,50 @@ public:
     }
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
+            if (scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
+                scenario_ == "layout_infer_failure") {
+                if (scenario_ == "layout_infer_failure")
+                    throw std::runtime_error("layout_inference_failed:controlled");
+                if (layout->inputs.size() != 3 || layout->requested_outputs !=
+                    std::vector<std::string>{"fetch_name_0", "fetch_name_1", "fetch_name_2"} ||
+                    layout->inputs[0].name != "image" || layout->inputs[0].dtype != DataType::Float32 ||
+                    layout->inputs[0].layout != TensorLayout::NCHW ||
+                    layout->inputs[0].shape != std::vector<int64_t>{1,3,800,800} ||
+                    layout->inputs[0].data.size() != 3*800*800*sizeof(float))
+                    throw std::runtime_error("layout input mismatch");
+                float geometry[2];
+                std::memcpy(geometry, layout->inputs[1].data.data(), sizeof(geometry));
+                if (geometry[0] != 800 || geometry[1] != 800)
+                    throw std::runtime_error("layout im_shape mismatch");
+                std::memcpy(geometry, layout->inputs[2].data.data(), sizeof(geometry));
+                if (geometry[0] != 400 || geometry[1] != 400)
+                    throw std::runtime_error("layout scale_factor mismatch");
+                std::vector<float> rows(300*7);
+                const float samples[][7] = {
+                    {22,.9f,-1,0,2,2,7}, {22,.8f,0,0,1,1,7},
+                    {99,.85f,1,1,2,2,9}, {21,.2f,0,0,2,2,10},
+                    {14,.9f,3,0,4,1,11}, {5,.9f,1,1,1,2,12},
+                    {22,.9f,-1e30f,0,1,1,13}};
+                if (scenario_ == "layout_contract")
+                    std::memcpy(rows.data(), samples, sizeof(samples));
+                int32_t count = scenario_ == "layout_contract" ? 7 : 0;
+                std::vector<int32_t> masks(300*200*200);
+                if (scenario_ == "layout_contract") {
+                    masks[66] = 1;
+                    masks[200*200] = 1;
+                    masks[2*200*200+100*200+100] = 1;
+                }
+                Tensor a{"fetch_name_0", DataType::Float32, TensorLayout::Matrix, {300,7},
+                         std::vector<uint8_t>(rows.size()*sizeof(float))};
+                Tensor b{"fetch_name_1", DataType::Int32, TensorLayout::Matrix, {1},
+                         std::vector<uint8_t>(sizeof(count))};
+                Tensor c{"fetch_name_2", DataType::Int32, TensorLayout::Matrix, {300,200,200},
+                         std::vector<uint8_t>(masks.size()*sizeof(int32_t))};
+                std::memcpy(a.data.data(), rows.data(), a.data.size());
+                std::memcpy(b.data.data(), &count, sizeof(count));
+                std::memcpy(c.data.data(), masks.data(), c.data.size());
+                return {TensorOutput{{std::move(a), std::move(b), std::move(c)}}};
+            }
             if (scenario_ == "slow") {
                 for (int i = 0; i < 50 && !context.cancelled; ++i)
                     std::this_thread::sleep_for(std::chrono::milliseconds(10));
@@ -112,7 +162,9 @@ bool config_supported(const std::string& config) {
            config == "fixture:failure" || config == "fixture:formula_table" ||
            config == "fixture:slow" || config == "fixture:invalid_utf8" ||
            config == "fixture:unknown" || config == "fixture:reset_failure" ||
-           config == "fixture:generation_exception" || config == "fixture:wrong_response";
+           config == "fixture:generation_exception" || config == "fixture:wrong_response" ||
+           config == "fixture:layout_contract" || config == "fixture:layout_empty" ||
+           config == "fixture:layout_infer_failure";
 }
 std::unique_ptr<IInferenceEngine> make_backend(const std::string& config) {
     return std::make_unique<FixtureBackend>(config.substr(8));

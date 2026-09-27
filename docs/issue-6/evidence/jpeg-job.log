@@ -1,0 +1,6 @@
+exit_code: 0
+stdout:
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+已导出：/tmp/dococr-issue6-evidence/jpeg-job
+
+stderr:

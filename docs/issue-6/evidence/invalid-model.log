@@ -1,0 +1,5 @@
+exit_code: 3
+stdout:
+
+stderr:
+{"code":"layout_artifact_contract_mismatch","stage":"layout_initialization"}

@@ -67,8 +67,9 @@ DocOcrBytes copy_bytes(const void* data, size_t size) {
 std::string event_json(const Job& job) {
     std::string out = "{\"state\":\"" + job.state + "\"";
     if (!job.error_code.empty())
-        out += ",\"error\":{\"request_id\":\"p0001\",\"stage\":\"" + job.error_stage +
-               "\",\"code\":\"" + job.error_code + "\",\"message\":\"" + job.error_message + "\"}";
+        out += ",\"error\":{\"request_id\":\"p0001\",\"stage\":" + dococr::json_quote(job.error_stage) +
+               ",\"code\":" + dococr::json_quote(job.error_code) +
+               ",\"message\":" + dococr::json_quote(job.error_message) + "}";
     return out + "}";
 }
 bool same_artifacts(const std::vector<dococr::ArtifactInfo>& a,
@@ -86,10 +87,13 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         result.code == dococr::RunCode::Blank ? "blank" : "failed";
     std::string out = "{\"schema_version\":\"1.0\",\"config_hash\":" + dococr::json_quote(plan.config_hash) +
         ",\"job_status\":" + dococr::json_quote(job_status) +
+        ",\"failure_code\":" + (result.error_code.empty() ? "null" : dococr::json_quote(result.error_code)) +
+        ",\"failure_detail\":" + (result.error_message.empty() ? "null" : dococr::json_quote(result.error_message)) +
         ",\"budget_stage\":" + (result.budget_stage.empty() ? "null" : dococr::json_quote(result.budget_stage)) +
         ",\"actual_backend\":" + dococr::json_quote(actual_backend) +
         ",\"backend_id\":" + dococr::json_quote(plan.backend) +
-        ",\"actual_device\":\"cpu\",\"runtime_version\":\"fixture-only\","
+        ",\"actual_device\":\"cpu\",\"runtime_version\":" +
+        dococr::json_quote(plan.layout_only && plan.backend == "mnn:pp-doclayout-v3" ? actual_backend : "fixture-only") + ","
         "\"effective_parameters\":{\"threads\":1,\"max_new_tokens\":" + std::to_string(plan.max_new_tokens) +
         ",\"max_page_pixels\":" + std::to_string(plan.max_page_pixels) +
         ",\"max_output_bytes\":" + std::to_string(plan.max_output_bytes) + "},\"artifacts\":[";
@@ -113,7 +117,7 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
             status = step.owner == "adapter" ? (result.did_normalize ? "executed" : "not_run") :
                      step.owner == "runtime" ? (result.did_layout ? "delegated_runtime" : "not_run") :
                      (result.did_layout ? "provided_by_graph" : "not_run");
-            reason = step.owner == "adapter" ? "rgb8_to_float32_0_1" :
+            reason = step.owner == "adapter" ? (plan.layout_only ? "torchvision_uint8_bicubic_800_rgb_nchw" : "rgb8_to_float32_0_1") :
                      step.owner == "runtime" ? "fixture_runtime_normalized" : "fixture_graph_normalized";
         }
         else if (step.id == "crop") {
@@ -139,7 +143,7 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         ",\"recognition\":" + std::to_string(result.recognition_ms) +
         ",\"export\":" + std::to_string(result.export_ms) +
         "},\"timing_status\":{\"decode\":" + dococr::json_quote(result.did_decode ? "measured" : "not_run") +
-        ",\"layout\":" + dococr::json_quote(result.did_layout ? "measured" : "not_run") +
+        ",\"layout\":" + dococr::json_quote(result.did_layout || result.layout_attempted ? "measured" : "not_run") +
         ",\"recognition\":" + dococr::json_quote(result.did_recognition ? "measured" : "not_run") +
         ",\"export\":" + dococr::json_quote(result.did_export ? "measured" : "not_run") +
         "},\"metrics\":{\"peak_memory_bytes\":{\"status\":\"unavailable\",\"reason\":\"portable sampler not implemented\"}}}";
@@ -157,6 +161,10 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
         last_error.clear();
         std::string value(config.data ? config.data : "", config.size);
         std::shared_ptr<const dococr::ExecutionPlan> plan;
+        if (value == "mnn:pp-doclayout-v3") {
+            last_error = "{\"code\":\"configuration_required\",\"detail\":\"use --config with a verified layout artifact\"}";
+            return DOCOCR_CONFIG_ERROR;
+        }
         if (!dococr::config_supported(value)) {
             plan = checked_plan(value);
             if (!plan) return DOCOCR_CONFIG_ERROR;
@@ -172,15 +180,28 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
         engine->plan = std::move(plan);
         engine->backend = dococr::make_backend(backend_name);
         if (engine->plan && (!engine->backend || !engine->backend->capabilities().tensor ||
-            !engine->backend->capabilities().generation ||
+            (!engine->plan->layout_only && !engine->backend->capabilities().generation) ||
             engine->backend->capabilities().max_concurrent_requests != 1)) {
-            last_error = "{\"code\":\"missing_capability\",\"detail\":\"tensor/generation/serial required\"}";
+            last_error = "{\"code\":\"missing_capability\",\"detail\":\"required inference backend or capability unavailable\"}";
             return DOCOCR_CONFIG_ERROR;
         }
         dococr::BackendLoadSpec load_spec{backend_name, engine->plan ? engine->plan->config_hash : "",
             engine->plan ? engine->plan->device : "cpu", engine->plan ? engine->plan->artifacts :
             std::vector<dococr::ArtifactInfo>{}};
-        if (engine->backend && !engine->backend->load(load_spec)) return DOCOCR_FAILED;
+        if (engine->backend) {
+            bool loaded = false;
+            try { loaded = engine->backend->load(load_spec); }
+            catch (const std::exception& error) {
+                last_error = "{\"code\":\"layout_model_load_exception\",\"detail\":" +
+                    dococr::json_quote(error.what()) + ",\"stage\":\"layout_initialization\"}";
+                return DOCOCR_FAILED;
+            }
+            if (!loaded) {
+                last_error = "{\"code\":" + dococr::json_quote(engine->backend->last_error()) +
+                    ",\"stage\":\"layout_initialization\"}";
+                return DOCOCR_FAILED;
+            }
+        }
         if (engine->plan && !same_artifacts(engine->plan->artifacts, engine->backend->loaded_artifacts())) {
             last_error = "{\"code\":\"artifact_binding_mismatch\"}";
             return DOCOCR_CONFIG_ERROR;
@@ -306,7 +327,7 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             job->error_code = "input_error"; job->error_message = "invalid image";
             return DOCOCR_INPUT_ERROR;
         case dococr::RunCode::Unsupported:
-            job->state = "failed"; job->error_stage = "inference";
+            job->state = "failed"; job->error_stage = job->plan && job->plan->layout_only ? "layout" : "inference";
             job->error_code = "unsupported_backend"; job->error_message = "no production model backend configured";
             return DOCOCR_UNSUPPORTED;
         case dococr::RunCode::Cancelled:
@@ -314,8 +335,9 @@ DocOcrStatus dococr_job_run(DocOcrJob handle, const DocOcrInput* input) {
             job->error_code = "cancelled"; job->error_message = "job cancelled";
             return DOCOCR_CANCELLED;
         case dococr::RunCode::Failed:
-            job->state = "failed"; job->error_stage = "inference";
-            job->error_code = "inference_error"; job->error_message = "inference contract failed";
+            job->state = "failed"; job->error_stage = job->plan && job->plan->layout_only ? "layout" : "inference";
+            job->error_code = result.error_code.empty() ? "inference_error" : result.error_code;
+            job->error_message = result.error_message.empty() ? "inference contract failed" : result.error_message;
             return DOCOCR_FAILED;
         case dococr::RunCode::BudgetExceeded:
             job->state = "failed"; job->error_stage = "budget";

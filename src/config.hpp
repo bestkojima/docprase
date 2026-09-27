@@ -15,6 +15,7 @@ struct ProcessingStep {
 };
 struct ExecutionPlan {
     std::string config_hash, backend, mode, device, json;
+    bool layout_only = false;
     int threads = 1;
     uint64_t max_page_pixels = 16000000;
     uint64_t max_output_bytes = 1048576;

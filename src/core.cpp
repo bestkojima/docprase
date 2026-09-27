@@ -1,6 +1,7 @@
 #include "dococr/inference.hpp"
 #include "dococr/dococr.h"
 #include "config.hpp"
+#include "layout_preprocess.hpp"
 #include <algorithm>
 #include <chrono>
 #include <cmath>
@@ -158,7 +159,110 @@ struct Block {
     float detection_score = 0;
     int candidate_rank = 0;
     int original_class_id = 0;
+    int candidate_id = -1, mask_row = -1, mask_nonzero = 0;
+    std::string model_label;
+    float raw_box[4]{};
+    bool clamped = false;
 };
+
+struct RawLayoutCandidate {
+    int id = 0, class_id = 0, rank = 0, mask_nonzero = 0;
+    float score = 0, box[4]{};
+    std::string label, reason;
+    std::string mask_asset;
+    bool selected = false, clamped = false;
+    Box crop;
+};
+
+const char* layout_label(int id) {
+    static const char* labels[] = {
+        "abstract", "algorithm", "aside_text", "chart", "content", "formula", "doc_title",
+        "figure_title", "footer", "footer", "footnote", "formula_number", "header", "header",
+        "image", "formula", "number", "paragraph_title", "reference", "reference_content",
+        "seal", "table", "text", "text", "vision_footnote"};
+    return id >= 0 && id < 25 ? labels[id] : nullptr;
+}
+
+std::string canonical_label(int id) {
+    if (id == 5 || id == 15) return "formula";
+    if (id == 21) return "table";
+    if (id == 3 || id == 14 || id == 20) return "image";
+    return layout_label(id) ? "text" : "unknown";
+}
+
+bool decode_real_layout(const TensorOutput& output, const Image& image,
+                        std::vector<RawLayoutCandidate>& records,
+                        const uint8_t*& masks) {
+    if (output.outputs.size() != 3) return false;
+    const Tensor *rows = nullptr, *count = nullptr, *mask = nullptr;
+    for (const Tensor& tensor : output.outputs) {
+        if (tensor.name == "fetch_name_0") rows = &tensor;
+        else if (tensor.name == "fetch_name_1") count = &tensor;
+        else if (tensor.name == "fetch_name_2") mask = &tensor;
+        else return false;
+    }
+    if (!rows || !count || !mask || rows->dtype != DataType::Float32 ||
+        rows->layout != TensorLayout::Matrix || rows->shape != std::vector<int64_t>{300,7} ||
+        rows->data.size() != 300*7*sizeof(float) || count->dtype != DataType::Int32 ||
+        count->layout != TensorLayout::Matrix ||
+        count->shape != std::vector<int64_t>{1} || count->data.size() != sizeof(int32_t) ||
+        mask->dtype != DataType::Int32 || mask->layout != TensorLayout::Matrix ||
+        mask->shape != std::vector<int64_t>{300,200,200} ||
+        mask->data.size() != 300*200*200*sizeof(int32_t)) return false;
+    int32_t n;
+    std::memcpy(&n, count->data.data(), sizeof(n));
+    if (n < 0 || n > 300) return false;
+    masks = mask->data.data();
+    for (int i = 0; i < n; ++i) {
+        float row[7];
+        std::memcpy(row, rows->data.data() + size_t(i)*7*sizeof(float), sizeof(row));
+        for (float value : row) if (!std::isfinite(value)) return false;
+        if (row[1] < 0 || row[1] > 1 || row[0] < 0 || row[0] > 1000000 ||
+            std::trunc(row[0]) != row[0] || row[6] < 0 || row[6] > 1000000 ||
+            std::trunc(row[6]) != row[6]) return false;
+        RawLayoutCandidate candidate;
+        candidate.id = i;
+        candidate.class_id = int(row[0]);
+        candidate.score = row[1];
+        candidate.rank = int(row[6]);
+        for (int k = 0; k < 4; ++k) candidate.box[k] = row[k+2];
+        const char* label = layout_label(candidate.class_id);
+        candidate.label = label ? label : "unknown";
+        if (candidate.score < 0.5f) candidate.reason = "below_score_threshold";
+        else if (row[4] <= row[2] || row[5] <= row[3]) candidate.reason = "degenerate_box";
+        else if (row[4] <= 0 || row[5] <= 0 || row[2] >= image.width || row[3] >= image.height)
+            candidate.reason = "outside_page";
+        else if (std::abs(double(row[2])) > 10000000 || std::abs(double(row[3])) > 10000000 ||
+                 std::abs(double(row[4])) > 10000000 || std::abs(double(row[5])) > 10000000)
+            candidate.reason = "box_out_of_supported_range";
+        else {
+            candidate.crop = {int(std::floor(std::clamp(double(row[2]), 0.0, double(image.width)))),
+                              int(std::floor(std::clamp(double(row[3]), 0.0, double(image.height)))),
+                              int(std::ceil(std::clamp(double(row[4]), 0.0, double(image.width)))),
+                              int(std::ceil(std::clamp(double(row[5]), 0.0, double(image.height))))};
+            if (candidate.crop.x0 >= candidate.crop.x1 || candidate.crop.y0 >= candidate.crop.y1)
+                candidate.reason = "empty_clamped_box";
+            else {
+                candidate.selected = true;
+                candidate.clamped = row[2] < 0 || row[3] < 0 || row[4] > image.width || row[5] > image.height;
+            }
+        }
+        const uint8_t* mask_row = masks + size_t(i)*200*200*sizeof(int32_t);
+        for (int j = 0; j < 200*200; ++j) {
+            int32_t value;
+            std::memcpy(&value, mask_row + size_t(j)*sizeof(value), sizeof(value));
+            if (value != 0 && value != 1) return false;
+            candidate.mask_nonzero += value;
+        }
+        records.push_back(std::move(candidate));
+    }
+    for (int i = n; i < 300; ++i) for (int j = 0; j < 200*200; ++j) {
+        int32_t value;
+        std::memcpy(&value, masks + (size_t(i)*200*200+j)*sizeof(value), sizeof(value));
+        if (value != 0 && value != 1) return false;
+    }
+    return true;
+}
 
 struct LayoutCandidate {
     std::string label;
@@ -202,9 +306,12 @@ std::string render(const Block& b) {
 }
 
 std::string serialize(const Image& image, const std::string& state,
-                      const std::vector<Block>& blocks, const std::string& profile) {
+                      const std::vector<Block>& blocks, const std::string& profile,
+                      const std::vector<RawLayoutCandidate>* raw = nullptr,
+                      const std::string& overlay = {}) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
+    out << std::setprecision(9);
     out << "{\"schema_version\":\"1.0\",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
         << ",\"source\":{\"type\":\"image\"},\"pages\":[{\"page_id\":\"p0001\",\"page_index\":0,"
@@ -222,6 +329,14 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"bbox\":" << box_json(b.box) << ",\"coordinate_space\":\"raster_page\","
             << "\"detection_score\":" << b.detection_score << ",\"candidate_rank\":" << b.candidate_rank
             << ",\"original_class_id\":" << b.original_class_id
+            << (b.candidate_id < 0 ? "" : ",\"candidate_id\":" + std::to_string(b.candidate_id) +
+                ",\"mask_row\":" + std::to_string(b.mask_row) +
+                ",\"mask_nonzero\":" + std::to_string(b.mask_nonzero) +
+                ",\"model_label\":" + json_quote(b.model_label) +
+                ",\"original_bbox\":[" + std::to_string(b.raw_box[0]) + "," +
+                std::to_string(b.raw_box[1]) + "," + std::to_string(b.raw_box[2]) + "," +
+                std::to_string(b.raw_box[3]) + "]" +
+                ",\"clamped\":" + (b.clamped ? "true" : "false"))
             << ",\"provenance\":{\"model_profile\":" << json_quote(profile)
             << ",\"request_id\":\"layout-p0001\"}}";
     }
@@ -240,7 +355,7 @@ std::string serialize(const Image& image, const std::string& state,
         out << "{\"id\":" << json_quote(b.id) << ",\"page_id\":\"p0001\",\"type\":" << json_quote(b.type)
             << ",\"source_region_ids\":[" << json_quote(b.region_id) << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
-            << "\"reading_order_source\":\"geometry\","
+            << "\"reading_order_source\":" << json_quote(b.candidate_id < 0 ? "geometry" : "layout_rank") << ','
             << "\"status\":" << json_quote(b.status) << ",\"confidence\":null,\"content\":{\"format\":"
             << json_quote(b.type == "image" || b.type == "unknown" ? "resource" :
                      b.type == "formula" ? "latex" : b.type == "table" ? "html" : "markdown")
@@ -266,8 +381,254 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"width\":" << b.box.x1-b.box.x0 << ",\"height\":" << b.box.y1-b.box.y0
             << ",\"bbox\":" << box_json(b.box) << ",\"coordinate_space\":\"raster_page\"}";
     }
-    out << "]}";
+    out << ']';
+    if (raw) {
+        out << ",\"layout_diagnostics\":{\"score_threshold\":0.5,\"candidate_count\":" << raw->size()
+            << ",\"overlay_asset\":" << json_quote(overlay)
+            << ",\"raw_tensor_assets\":{\"image\":\"assets/p0001-image.f32\","
+               "\"im_shape\":\"assets/p0001-im_shape.f32\","
+               "\"scale_factor\":\"assets/p0001-scale_factor.f32\","
+               "\"fetch_name_0\":\"assets/p0001-fetch_name_0.f32\","
+               "\"fetch_name_1\":\"assets/p0001-fetch_name_1.i32\","
+               "\"fetch_name_2\":\"assets/p0001-fetch_name_2.rle\"},\"candidates\":[";
+        for (size_t i = 0; i < raw->size(); ++i) {
+            const auto& c = (*raw)[i];
+            if (i) out << ',';
+            out << "{\"candidate_id\":" << c.id << ",\"mask_row\":" << c.id
+                << ",\"class_id\":" << c.class_id << ",\"model_label\":" << json_quote(c.label)
+                << ",\"score\":" << c.score << ",\"original_bbox\":["
+                << c.box[0] << ',' << c.box[1] << ',' << c.box[2] << ',' << c.box[3]
+                << "],\"rank\":" << c.rank << ",\"mask_nonzero\":" << c.mask_nonzero
+                << ",\"selected\":" << (c.selected ? "true" : "false")
+                << ",\"filter_reason\":" << (c.reason.empty() ? "null" : json_quote(c.reason))
+                << ",\"handling_reason\":" << (c.selected && c.label == "unknown" ? "\"unknown_class\"" : "null")
+                << ",\"mask_asset\":" << (c.mask_asset.empty() ? "null" : json_quote(c.mask_asset))
+                << ",\"clamped\":" << (c.clamped ? "true" : "false")
+                << ",\"crop_bbox\":" << (c.selected ? box_json(c.crop) : "null") << '}';
+        }
+        out << "]}";
+    }
+    out << '}';
     return out.str();
+}
+} // namespace
+
+namespace {
+void append_le32(std::vector<uint8_t>& data, uint32_t value) {
+    for (int i = 0; i < 4; ++i) data.push_back(uint8_t(value >> (8*i)));
+}
+
+std::vector<uint8_t> encode_masks_rle(const uint8_t* masks) {
+    const std::string magic = "DOCOCR_MASK_RLE_V1\n";
+    std::vector<uint8_t> encoded(magic.begin(), magic.end());
+    for (uint32_t dimension : {300u, 200u, 200u}) append_le32(encoded, dimension);
+    for (int row = 0; row < 300; ++row) {
+        const uint8_t* raw = masks + size_t(row)*200*200*sizeof(int32_t);
+        uint32_t current = 0, length = 0;
+        std::memcpy(&current, raw, sizeof(current));
+        std::vector<uint32_t> runs;
+        for (int pixel = 0; pixel < 200*200; ++pixel) {
+            uint32_t bit;
+            std::memcpy(&bit, raw + size_t(pixel)*sizeof(bit), sizeof(bit));
+            if (bit == current) ++length;
+            else { runs.push_back(length); current = bit; length = 1; }
+        }
+        runs.push_back(length);
+        uint32_t first;
+        std::memcpy(&first, raw, sizeof(first));
+        append_le32(encoded, first);
+        append_le32(encoded, uint32_t(runs.size()));
+        for (uint32_t run : runs) append_le32(encoded, run);
+    }
+    return encoded;
+}
+
+Tensor geometry_tensor(const std::string& name, float first, float second) {
+    Tensor tensor{name, DataType::Float32, TensorLayout::Matrix, {1,2},
+                  std::vector<uint8_t>(2*sizeof(float))};
+    float values[] = {first, second};
+    std::memcpy(tensor.data.data(), values, sizeof(values));
+    return tensor;
+}
+
+std::vector<uint8_t> layout_overlay(const Image& image,
+                                    const std::vector<RawLayoutCandidate>& records,
+                                    const uint8_t* masks) {
+    Image overlay = image;
+    for (const auto& c : records) {
+        if (!c.selected) continue;
+        int x0 = int(c.box[0]), y0 = int(c.box[1]);
+        int x1 = int(c.box[2]), y1 = int(c.box[3]);
+        int mx0 = std::clamp(int(std::nearbyint(double(x0)*200/image.width)), 0, 200);
+        int my0 = std::clamp(int(std::nearbyint(double(y0)*200/image.height)), 0, 200);
+        int mx1 = std::clamp(int(std::nearbyint(double(x1)*200/image.width)), 0, 200);
+        int my1 = std::clamp(int(std::nearbyint(double(y1)*200/image.height)), 0, 200);
+        if (mx1 > mx0 && my1 > my0 && x1 > x0 && y1 > y0) {
+            const uint8_t* mask = masks + size_t(c.id)*200*200*sizeof(int32_t);
+            for (int y = std::max(0,y0); y < std::min(image.height,y1); ++y)
+                for (int x = std::max(0,x0); x < std::min(image.width,x1); ++x) {
+                int mx = mx0 + int((int64_t(x-x0)*(mx1-mx0))/(x1-x0));
+                int my = my0 + int((int64_t(y-y0)*(my1-my0))/(y1-y0));
+                mx = std::clamp(mx, mx0, mx1-1); my = std::clamp(my, my0, my1-1);
+                int32_t bit;
+                std::memcpy(&bit, mask + (size_t(my)*200+mx)*sizeof(bit), sizeof(bit));
+                if (bit) {
+                    uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
+                    pixel[0] = uint8_t(pixel[0]/2);
+                    pixel[1] = uint8_t(pixel[1]/2 + 127);
+                    pixel[2] = uint8_t(pixel[2]/2);
+                }
+            }
+        }
+        for (int x = c.crop.x0; x < c.crop.x1; ++x) {
+            for (int y : {c.crop.y0, c.crop.y1-1}) {
+                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
+                pixel[0] = 255; pixel[1] = 0; pixel[2] = 0;
+            }
+        }
+        for (int y = c.crop.y0; y < c.crop.y1; ++y) {
+            for (int x : {c.crop.x0, c.crop.x1-1}) {
+                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
+                pixel[0] = 255; pixel[1] = 0; pixel[2] = 0;
+            }
+        }
+    }
+    std::vector<uint8_t> png;
+    if (!stbi_write_png_to_func(png_write, &png, image.width, image.height, 3,
+                                overlay.rgb.data(), image.width*3))
+        throw std::runtime_error("layout overlay PNG encoding failed");
+    return png;
+}
+
+std::vector<uint8_t> layout_page_mask(const Image& image, const RawLayoutCandidate& c,
+                                      const uint8_t* masks) {
+    std::vector<uint8_t> pixels(size_t(image.width)*image.height);
+    int x0 = int(c.box[0]), y0 = int(c.box[1]);
+    int x1 = int(c.box[2]), y1 = int(c.box[3]);
+    if (x1 <= x0 || y1 <= y0) return pixels;
+    int mx0 = std::clamp(int(std::nearbyint(double(x0)*200/image.width)), 0, 200);
+    int my0 = std::clamp(int(std::nearbyint(double(y0)*200/image.height)), 0, 200);
+    int mx1 = std::clamp(int(std::nearbyint(double(x1)*200/image.width)), 0, 200);
+    int my1 = std::clamp(int(std::nearbyint(double(y1)*200/image.height)), 0, 200);
+    if (mx1 <= mx0 || my1 <= my0) return pixels;
+    const uint8_t* mask = masks + size_t(c.id)*200*200*sizeof(int32_t);
+    for (int y = std::max(0,y0); y < std::min(image.height,y1); ++y)
+        for (int x = std::max(0,x0); x < std::min(image.width,x1); ++x) {
+        int mx = std::clamp(mx0 + int((int64_t(x-x0)*(mx1-mx0))/(x1-x0)), mx0, mx1-1);
+        int my = std::clamp(my0 + int((int64_t(y-y0)*(my1-my0))/(y1-y0)), my0, my1-1);
+        int32_t bit;
+        std::memcpy(&bit, mask + (size_t(my)*200+mx)*sizeof(bit), sizeof(bit));
+        pixels[size_t(y)*image.width+x] = bit ? 255 : 0;
+    }
+    return pixels;
+}
+
+RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::atomic_bool& cancelled,
+                          const ExecutionPlan* plan, RunResult audit) {
+    using Clock = std::chrono::steady_clock;
+    if (!backend->capabilities().tensor || backend->capabilities().max_concurrent_requests != 1)
+        return {RunCode::Unsupported, {}};
+    if (cancelled) return {RunCode::Cancelled, {}};
+    auto start = Clock::now();
+    TensorRequest request;
+    request.inputs.push_back(layout_image_tensor(image));
+    request.inputs.push_back(geometry_tensor("im_shape", 800, 800));
+    request.inputs.push_back(geometry_tensor("scale_factor", 800.0f/image.height, 800.0f/image.width));
+    request.requested_outputs = {"fetch_name_0", "fetch_name_1", "fetch_name_2"};
+    audit.layout_attempted = true;
+    audit.output.assets.push_back({"assets/p0001-image.f32", request.inputs[0].data});
+    audit.output.assets.push_back({"assets/p0001-im_shape.f32", request.inputs[1].data});
+    audit.output.assets.push_back({"assets/p0001-scale_factor.f32", request.inputs[2].data});
+    audit.did_normalize = true;
+    ExecutionContext context{cancelled};
+    InferenceResponse response;
+    try { response = backend->execute({"layout-p0001", std::move(request)}, context); }
+    catch (const std::exception& e) {
+        audit.code = RunCode::Failed;
+        audit.error_code = "layout_inference_failed";
+        audit.error_message = e.what();
+        audit.layout_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
+        return audit;
+    }
+    audit.layout_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
+    if (cancelled) return {RunCode::Cancelled, {}};
+    auto* output = std::get_if<TensorOutput>(&response.payload);
+    std::vector<RawLayoutCandidate> records;
+    const uint8_t* masks = nullptr;
+    if (!output || !decode_real_layout(*output, image, records, masks)) {
+        audit.code = RunCode::Failed;
+        audit.error_code = "layout_output_contract_mismatch";
+        audit.error_message = "PP-DocLayoutV3 candidate/count/mask contract failed";
+        return audit;
+    }
+    audit.did_layout = true;
+    for (const auto& tensor : output->outputs) {
+        if (tensor.name == "fetch_name_0")
+            audit.output.assets.push_back({"assets/p0001-fetch_name_0.f32", tensor.data});
+        else if (tensor.name == "fetch_name_1")
+            audit.output.assets.push_back({"assets/p0001-fetch_name_1.i32", tensor.data});
+    }
+    audit.output.assets.push_back({"assets/p0001-fetch_name_2.rle", encode_masks_rle(masks)});
+    std::vector<const RawLayoutCandidate*> selected;
+    for (const auto& candidate : records) if (candidate.selected) selected.push_back(&candidate);
+    std::stable_sort(selected.begin(), selected.end(), [](const auto* a, const auto* b) {
+        return a->rank < b->rank;
+    });
+    std::vector<Block> blocks;
+    JobOutput result;
+    result.assets = std::move(audit.output.assets);
+    for (const auto* candidate : selected) {
+        if (cancelled) return {RunCode::Cancelled, {}};
+        Block block;
+        size_t n = blocks.size()+1;
+        block.id = id('b', n); block.layout_id = id('l', n); block.region_id = id('r', n);
+        block.type = canonical_label(candidate->class_id);
+        block.model_label = candidate->label;
+        block.box = candidate->crop;
+        block.candidate_id = block.mask_row = candidate->id;
+        block.mask_nonzero = candidate->mask_nonzero;
+        block.detection_score = candidate->score;
+        block.candidate_rank = candidate->rank;
+        block.original_class_id = candidate->class_id;
+        block.clamped = candidate->clamped;
+        std::copy(std::begin(candidate->box), std::end(candidate->box), block.raw_box);
+        block.status = "skipped";
+        block.error = block.type == "unknown" ? "unknown_layout_class" : "recognition_not_executed";
+        block.resource = "assets/p0001-" + block.id + ".png";
+        result.assets.push_back({block.resource, crop_png(image, block.box)});
+        auto& mutable_candidate = records[size_t(candidate->id)];
+        mutable_candidate.mask_asset = "assets/p0001-mask-c" + std::to_string(candidate->id) + ".png";
+        std::vector<uint8_t> mask_pixels = layout_page_mask(image, *candidate, masks);
+        std::vector<uint8_t> mask_png;
+        if (!stbi_write_png_to_func(png_write, &mask_png, image.width, image.height, 1,
+                                    mask_pixels.data(), image.width))
+            throw std::runtime_error("layout mask PNG encoding failed");
+        result.assets.push_back({mutable_candidate.mask_asset, std::move(mask_png)});
+        audit.did_crop = true;
+        blocks.push_back(std::move(block));
+    }
+    const std::string overlay_name = "assets/p0001-layout-overlay.png";
+    result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
+    const std::string state = records.empty() ? "blank" : "partial";
+    start = Clock::now();
+    for (const auto& block : blocks) {
+        if (!result.markdown.empty()) result.markdown += "\n\n";
+        result.markdown += render(block);
+    }
+    if (!result.markdown.empty()) result.markdown += '\n';
+    result.json = serialize(image, state, blocks, backend->profile(), &records, overlay_name);
+    audit.did_export = true;
+    audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
+    uint64_t bytes = result.json.size() + result.markdown.size();
+    for (const auto& asset : result.assets) bytes += asset.png.size();
+    if (plan && bytes > plan->max_output_bytes) {
+        audit.code = RunCode::BudgetExceeded;
+        audit.budget_stage = "output_bytes";
+        return audit;
+    }
+    audit.code = records.empty() ? RunCode::Blank : RunCode::Partial;
+    audit.output = std::move(result);
+    return audit;
 }
 } // namespace
 
@@ -290,6 +651,7 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
         return audit;
     }
     if (!backend) return {RunCode::Unsupported, {}};
+    if (plan && plan->layout_only) return run_layout_only(backend, image, cancelled, plan, audit);
     if (!backend->capabilities().tensor || !backend->capabilities().generation ||
         backend->capabilities().max_concurrent_requests < 1) return {RunCode::Unsupported, {}};
     if (cancelled) return {RunCode::Cancelled, {}};

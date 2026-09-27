@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "mode": "production",
+  "backend": "mnn:pp-doclayout-v3",
+  "models": {
+    "layout": {
+      "contract_status": "contract_verified",
+      "root": "models/doclayout",
+      "artifacts": [{"path": "PP-DocLayoutV3.mnn", "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67"}]
+    }
+  },
+  "skills": {"layout.detect": "layout"},
+  "flow": [
+    {"id": "load", "processor": "page_loader", "depends_on": []},
+    {"id": "layout", "skill": "layout.detect", "depends_on": ["load"]},
+    {"id": "assemble", "processor": "document_assembler", "depends_on": ["layout"]},
+    {"id": "export", "processor": "document_exporter", "depends_on": ["assemble"]}
+  ],
+  "processing": [
+    {"id": "decode", "owner": "adapter", "enabled": true},
+    {"id": "rgb_identity", "owner": "none", "enabled": true},
+    {"id": "normalize", "owner": "adapter", "enabled": true},
+    {"id": "crop", "owner": "adapter", "enabled": true},
+    {"id": "session_reset", "owner": "none", "enabled": false},
+    {"id": "deskew", "owner": "none", "enabled": false}
+  ],
+  "platform": {"device": "cpu", "threads": 1},
+  "execution": {"max_page_pixels": 16000000, "max_output_bytes": 67108864, "max_new_tokens": 4096}
+}

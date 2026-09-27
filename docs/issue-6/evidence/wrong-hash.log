@@ -1,0 +1,5 @@
+exit_code: 3
+stdout:
+
+stderr:
+{"code":"artifact_hash_mismatch","detail":"PP-DocLayoutV3.mnn"}

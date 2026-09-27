@@ -14,8 +14,8 @@ struct Image {
     std::vector<uint8_t> rgb;
 };
 struct Box { int x0 = 0, y0 = 0, x1 = 0, y1 = 0; };
-enum class DataType { UInt8, Float32 };
-enum class TensorLayout { HWC, Matrix };
+enum class DataType { UInt8, Float32, Int32 };
+enum class TensorLayout { HWC, Matrix, NCHW };
 struct Tensor {
     std::string name;
     DataType dtype;
@@ -62,6 +62,7 @@ public:
     virtual std::vector<ArtifactInfo> loaded_artifacts() const = 0;
     virtual const EngineCapabilities& capabilities() const = 0;
     virtual std::string profile() const = 0;
+    virtual std::string last_error() const { return {}; }
     virtual InferenceResponse execute(const InferenceRequest&, ExecutionContext&) = 0;
     virtual bool reset() = 0;
     virtual void unload() = 0;
@@ -80,7 +81,9 @@ struct RunResult {
     uint64_t page_pixels = 0;
     bool did_decode = false, did_layout = false, did_normalize = false, did_crop = false,
          did_reset = false, reset_failed = false, did_recognition = false, did_export = false;
+    bool layout_attempted = false;
     std::string budget_stage;
+    std::string error_code, error_message;
     uint64_t decode_ms = 0, layout_ms = 0, recognition_ms = 0, export_ms = 0;
 };
 struct InputView {

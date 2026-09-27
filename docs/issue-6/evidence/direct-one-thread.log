@@ -1,0 +1,6 @@
+exit_code: 0
+stdout:
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+MNN_VERSION=3.6.1 THREADS=1 runSession=0
+
+stderr:

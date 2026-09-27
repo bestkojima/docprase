@@ -1,0 +1,91 @@
+{
+  "source_jpeg_sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade",
+  "lossless_png_sha256": "3f092c959987cc81e83a68d554361d07fce95b08a003cb23ed0ae323e9cd4817",
+  "model_sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+  "direct_one_thread": {
+    "exit_code": 0,
+    "candidate_bytes_equal": true,
+    "count_bytes_equal": true,
+    "mask_different_pixels": 0
+  },
+  "png_job": {
+    "exit_code": 0,
+    "status": "partial",
+    "raw_candidate_count": 300,
+    "selected_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "raw_mask_different_rows_vs_issue2": [
+      135,
+      136,
+      275,
+      276,
+      277,
+      287,
+      288
+    ],
+    "raw_mask_differing_pixels_vs_issue2": 1676,
+    "selected_box_max_abs_vs_issue2": 0.000244140625,
+    "selected_page_mask_differences": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0
+    },
+    "asset_count": 39,
+    "input_tensor_max_abs_vs_issue2": 0.0,
+    "runtime": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+    "manifest": "png-job/run-manifest.json"
+  },
+  "jpeg_decode": {
+    "max_abs": 1,
+    "differing_components": 1491,
+    "differing_pixels": 497
+  },
+  "jpeg_job": {
+    "exit_code": 0,
+    "selected_count": 17,
+    "status": "partial"
+  },
+  "failures": {
+    "missing-model": {
+      "exit_code": 3,
+      "error": "artifact_missing"
+    },
+    "wrong-hash": {
+      "exit_code": 3,
+      "error": "artifact_hash_mismatch"
+    },
+    "invalid-model": {
+      "exit_code": 3,
+      "error": "layout_artifact_contract_mismatch"
+    }
+  }
+}

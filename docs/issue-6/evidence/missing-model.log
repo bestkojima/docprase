@@ -1,0 +1,5 @@
+exit_code: 3
+stdout:
+
+stderr:
+{"code":"artifact_missing","detail":"/tmp/dococr-issue6-evidence/missing"}
