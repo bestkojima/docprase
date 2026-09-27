@@ -39,7 +39,9 @@ def main():
     owned = (c.c_uint8 * len(image)).from_buffer_copy(image)
     setting = (ROOT / 'configs/printed-page.example.json').read_bytes()
     engine = c.c_uint64()
+    create_started = time.monotonic()
     assert lib.dococr_create(View(setting, len(setting)), c.byref(engine)) == 0
+    create_seconds = round(time.monotonic() - create_started, 3)
     reference = (ROOT / 'tests/fixtures/ovis/chinese_text.reference.txt').read_text().strip()
     reports = []
     raw_values = []
@@ -84,6 +86,7 @@ def main():
                         'engine_ready': status['engine_ready']})
         assert lib.dococr_job_destroy(job) == 0
     report = {'source_sha256': hashlib.sha256(image).hexdigest(),
+              'public_engine_create_seconds': create_seconds,
               'same_public_engine': True, 'requests': reports,
               'matched_raw_equal': raw_values[0] == raw_values[1],
               'raw_matches_reference_after_strip': [value.strip() == reference for value in raw_values],
