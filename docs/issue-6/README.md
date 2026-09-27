@@ -27,7 +27,7 @@ ctest --test-dir /tmp/dococr-issue6 --output-on-failure
 
 `document.json` 维持 DocumentIR 1.0，并可选加入 `layout_diagnostics`。候选列表按原始行号保存 `candidate_id`、`mask_row`、类别 ID/名称、分数、**原始浮点框**、rank、mask 非零数、筛选原因、裁剪框及是否钳制。25 个类别 ID 按固定参考表映射；重复名称保留原始 ID。可输出内容类型映射为 `text/formula/table/image/unknown`，未知类区域保留并标 `unknown_layout_class`。默认分数阈值 0.5，不叠加 NMS。坐标已经在图内恢复，外层不再除以 `scale_factor`。区域裁剪用原图 RGB，浮点框向外取整后钳制到页面；mask 页图按参考处理器的整型框、200×200 网格裁剪及最近邻映射。原始框不改写。极端大框在整数转换前过滤为 `box_out_of_supported_range`。
 
-块 ID 与候选行号分离；重复 rank 保持唯一 ID。当前排序遵照 Layout rank 且相同 rank 保持原始行序，`reading_order_source=layout_rank` 仅记录依据，并非复杂版面阅读顺序质量证明。所有选中区域均导出 `assets/p0001-bNNNN.png`；独立的页 mask 图 `assets/p0001-mask-cN.png` 和红框/绿 mask 叠加图 `assets/p0001-layout-overlay.png` 由诊断字段引用。原图不因 mask 着色而修改。正常区域的 `error=recognition_not_executed`，`status=skipped`，`confidence=null`。
+块 ID 与候选行号分离；重复 rank 保持唯一 ID。当前 DocumentIR 1.0 的阅读顺序沿用稳定几何排序，`reading_order_source=geometry`；rank 仅保存为模型元数据，并非复杂版面阅读顺序质量证明。所有选中区域均导出 `assets/p0001-bNNNN.png`；独立的页 mask 图 `assets/p0001-mask-cN.png` 和红框/绿 mask 叠加图 `assets/p0001-layout-overlay.png` 由诊断字段引用。原图不因 mask 着色而修改。正常区域的 `error=recognition_not_executed`，`status=skipped`，`confidence=null`。
 
 公共 `dococr_job_asset` 与 CLI 同时导出六个原始张量工件：`image.f32`、`im_shape.f32`、`scale_factor.f32`、`fetch_name_0.f32`、`fetch_name_1.i32`、`fetch_name_2.rle`；实际名称前带 `p0001-`。前五项为小端原始字节。mask RLE 是**无损**编码，格式为 ASCII `DOCOCR_MASK_RLE_V1\n`，随后三个小端 uint32（300、200、200），每行依次为初始 bit、run 数及各 run 长度的小端 uint32。每行长度和必须为 40000，bit 在 0/1 间交替；按行反解可恢复完整的 300×200×200 int32 原始 mask，包括低分和被过滤行。`layout_diagnostics.raw_tensor_assets` 给出全部路径，不靠 mask 非零计数充当原始证据。
 

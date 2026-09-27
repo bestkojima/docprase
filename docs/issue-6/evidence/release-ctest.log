@@ -6,10 +6,12 @@ Test project /tmp/dococr-issue6-release
     Start 3: config_integration
 3/5 Test #3: config_integration ...............   Passed    0.14 sec
     Start 4: config_abi
-4/5 Test #4: config_abi .......................   Passed    0.60 sec
+4/5 Test #4: config_abi .......................   Passed    0.64 sec
     Start 5: layout_integration
-5/5 Test #5: layout_integration ...............   Passed    0.31 sec
+5/5 Test #5: layout_integration ...............   Passed    0.30 sec
 
 100% tests passed out of 5
 
-Total Test time (real) =   1.15 sec
+Total Test time (real) =   1.19 sec
+
+exit_code: 0

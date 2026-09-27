@@ -162,7 +162,7 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
         std::string value(config.data ? config.data : "", config.size);
         std::shared_ptr<const dococr::ExecutionPlan> plan;
         if (value == "mnn:pp-doclayout-v3") {
-            last_error = "{\"code\":\"configuration_required\",\"detail\":\"use --config with a verified layout artifact\"}";
+            last_error = "{\"code\":\"configuration_required\",\"detail\":\"请通过 --config 指定已校验的版面模型工件\"}";
             return DOCOCR_CONFIG_ERROR;
         }
         if (!dococr::config_supported(value)) {
@@ -182,7 +182,7 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
         if (engine->plan && (!engine->backend || !engine->backend->capabilities().tensor ||
             (!engine->plan->layout_only && !engine->backend->capabilities().generation) ||
             engine->backend->capabilities().max_concurrent_requests != 1)) {
-            last_error = "{\"code\":\"missing_capability\",\"detail\":\"required inference backend or capability unavailable\"}";
+            last_error = "{\"code\":\"missing_capability\",\"detail\":\"所需推理后端或能力不可用\"}";
             return DOCOCR_CONFIG_ERROR;
         }
         dococr::BackendLoadSpec load_spec{backend_name, engine->plan ? engine->plan->config_hash : "",
@@ -193,7 +193,8 @@ DocOcrStatus dococr_create(DocOcrStringView config, DocOcrHandle* out) {
             try { loaded = engine->backend->load(load_spec); }
             catch (const std::exception& error) {
                 last_error = "{\"code\":\"layout_model_load_exception\",\"detail\":" +
-                    dococr::json_quote(error.what()) + ",\"stage\":\"layout_initialization\"}";
+                    dococr::json_quote("版面模型加载异常：" + std::string(error.what())) +
+                    ",\"stage\":\"layout_initialization\"}";
                 return DOCOCR_FAILED;
             }
             if (!loaded) {

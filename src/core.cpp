@@ -355,7 +355,7 @@ std::string serialize(const Image& image, const std::string& state,
         out << "{\"id\":" << json_quote(b.id) << ",\"page_id\":\"p0001\",\"type\":" << json_quote(b.type)
             << ",\"source_region_ids\":[" << json_quote(b.region_id) << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
-            << "\"reading_order_source\":" << json_quote(b.candidate_id < 0 ? "geometry" : "layout_rank") << ','
+            << "\"reading_order_source\":\"geometry\","
             << "\"status\":" << json_quote(b.status) << ",\"confidence\":null,\"content\":{\"format\":"
             << json_quote(b.type == "image" || b.type == "unknown" ? "resource" :
                      b.type == "formula" ? "latex" : b.type == "table" ? "html" : "markdown")
@@ -535,7 +535,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     catch (const std::exception& e) {
         audit.code = RunCode::Failed;
         audit.error_code = "layout_inference_failed";
-        audit.error_message = e.what();
+        audit.error_message = "版面推理异常：" + std::string(e.what());
         audit.layout_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
         return audit;
     }
@@ -547,7 +547,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     if (!output || !decode_real_layout(*output, image, records, masks)) {
         audit.code = RunCode::Failed;
         audit.error_code = "layout_output_contract_mismatch";
-        audit.error_message = "PP-DocLayoutV3 candidate/count/mask contract failed";
+        audit.error_message = "PP-DocLayoutV3 候选/数量/mask 张量契约不符";
         return audit;
     }
     audit.did_layout = true;
@@ -561,7 +561,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     std::vector<const RawLayoutCandidate*> selected;
     for (const auto& candidate : records) if (candidate.selected) selected.push_back(&candidate);
     std::stable_sort(selected.begin(), selected.end(), [](const auto* a, const auto* b) {
-        return a->rank < b->rank;
+        if (a->crop.y0 != b->crop.y0) return a->crop.y0 < b->crop.y0;
+        return a->crop.x0 < b->crop.x0;
     });
     std::vector<Block> blocks;
     JobOutput result;

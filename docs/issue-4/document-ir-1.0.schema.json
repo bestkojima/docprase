@@ -337,10 +337,7 @@
           "const": "region"
         },
         "reading_order_source": {
-          "enum": [
-            "geometry",
-            "layout_rank"
-          ]
+          "const": "geometry"
         },
         "status": {
           "enum": [
