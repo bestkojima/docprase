@@ -188,7 +188,6 @@ struct Block {
     std::string model_label;
     float raw_box[4]{};
     bool clamped = false;
-    bool untrusted_output = false;
     bool display_formula = true;
     std::vector<std::string> owned_layout_ids;
     ParsedTable table;
@@ -882,8 +881,13 @@ bool valid_text_math(const std::string& text) {
 }
 
 std::string render(const Block& b) {
+    bool safe_table = b.table.valid;
+    if (b.type == "table" && b.status == "ok" && !safe_table) {
+        auto table = parse_table(b.text);
+        safe_table = table.valid && table.html == b.text;
+    }
     return render_markdown_block({b.id, b.type, b.status, b.text, b.resource,
-                                  b.display_formula, b.table.valid, b.untrusted_output});
+                                  b.display_formula, safe_table});
 }
 
 std::string serialize(const Image& image, const std::string& state,
@@ -1299,7 +1303,6 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             if (block.type == "text" || block.type == "formula" || block.type == "table") {
                 if (progress) progress("region_started", source_page ? source_page : 1,
                                        request_id, region_done, region_total);
-                block.untrusted_output = true;
                 auto region_start = Clock::now();
                 if (recognition_unavailable) {
                     block.status = "skipped";

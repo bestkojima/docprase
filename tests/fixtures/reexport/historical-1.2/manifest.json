@@ -1,0 +1,10 @@
+{
+  "source_path": "output/issue-9/real-ordinary-rgb",
+  "source_document_sha256": "9ab396abb2ea22fd27bfc11985127ef5077f23c2f549b5d339d7b457d81d2547",
+  "schema_version": "1.2",
+  "selected_block_ids": [
+    "b0009",
+    "b0013"
+  ],
+  "note": "从历史真实模型作业提取最小页面片段；正文、来源、几何、结构与PNG字节保持原样，删去未选块及可选诊断。"
+}

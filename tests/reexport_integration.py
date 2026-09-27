@@ -63,6 +63,24 @@ def main():
             run(fixture, '--config', str(setting), '--input', str(input_image), '--out', str(saved))
             return saved, json.loads((saved / 'document.json').read_text())
 
+        for name, schema_file in [('historical-1.1', 'docs/issue-8/document-ir-1.1.schema.json'),
+                                  ('historical-1.2', 'docs/issue-9/document-ir-1.2.schema.json')]:
+            saved = ROOT / 'tests' / 'fixtures' / 'reexport' / name
+            data = json.loads((saved / 'document.json').read_text())
+            jsonschema.validate(data, json.loads((ROOT / schema_file).read_text()))
+            reexport(saved)
+            if name.endswith('1.1'):
+                assert [b['type'] for b in data['pages'][0]['blocks']] == ['formula', 'text']
+                assert data['pages'][0]['relations'] == [{
+                    'type': 'content_owned_by', 'source_layout_block_id': 'l0067',
+                    'owner_block_id': 'b0006'}]
+                assert data['pages'][0]['blocks'][0]['content']['text'].startswith(r'e^{\alpha}')
+            else:
+                table = next(b for b in data['pages'][0]['blocks'] if b['type'] == 'table')
+                assert table['content']['table']['rows'] == 5
+                assert table['content']['table']['columns'] == 3
+                assert len(table['content']['table']['cells']) == 15
+
         generated = {}
         for scenario, version in [('formula_table', '1.0'),
                                   ('printed_page_formula', '1.3'),
@@ -108,6 +126,33 @@ def main():
         current = copy.deepcopy(table)
         current['schema_version'] = '9.9'
         assert 'schema_version' in reexport(table_saved, current, code=3).stderr
+        bad_schema = copy.deepcopy(document)
+        bad_schema['unspecified_field'] = 1
+        assert 'unspecified_field' in reexport(source, bad_schema, code=3).stderr
+        bad_schema = copy.deepcopy(document)
+        bad_schema['layout_diagnostics'] = None
+        assert 'layout_diagnostics' in reexport(source, bad_schema, code=3).stderr
+        bad_schema = copy.deepcopy(document)
+        bad_schema['pages'][0]['blocks'][0]['reading_order_source'] = 'invented'
+        assert 'reading_order_source' in reexport(source, bad_schema, code=3).stderr
+        bad_schema = copy.deepcopy(table)
+        bad_schema['pages'][0].pop('reading_order_evidence')
+        assert 'reading_order_evidence' in reexport(table_saved, bad_schema, code=3).stderr
+        untrusted = copy.deepcopy(document)
+        untrusted['pages'][0]['blocks'][0]['content']['text'] = '<img src=x onerror=alert(1)> ![外图](https://x)'
+        input_json = root / 'untrusted.json'
+        input_json.write_text(json.dumps(untrusted, ensure_ascii=False))
+        safe_out = root / 'safe-out'
+        run(production, '--reexport', str(input_json), '--asset-root', str(source),
+            '--out', str(safe_out), cwd=root)
+        safe_markdown = (safe_out / 'document.md').read_text()
+        assert '&lt;img src=x onerror=alert(1)&gt;' in safe_markdown
+        assert r'\![外图]' in safe_markdown
+        assert json.loads((safe_out / 'document.json').read_text()) == untrusted
+        old_table, _ = generated['formula_table']
+        unsafe_table = json.loads((old_table / 'document.json').read_text())
+        next(b for b in unsafe_table['pages'][0]['blocks'] if b['type'] == 'table')['content']['text'] = '<table><tr><td><script>x</script></td></tr></table>'
+        assert '表格' in reexport(old_table, unsafe_table, code=3).stderr
         current = copy.deepcopy(table)
         current['pages'][0]['reading_order'][0] = 'b9999'
         assert 'reading_order' in reexport(table_saved, current, code=3).stderr
@@ -125,7 +170,7 @@ def main():
         assert '资源缺失' in reexport(table_saved, current, code=3).stderr
         current = copy.deepcopy(table)
         current['resources'][0]['path'] = '../outside.png'
-        assert '资源路径' in reexport(table_saved, current, code=3).stderr
+        assert '.path' in reexport(table_saved, current, code=3).stderr
 
         pdf = root / 'mixed.pdf'
         pdf_images = [Image.new('RGB', (100, 100), color) for color in
@@ -175,7 +220,7 @@ def main():
         assert 'bbox' in reexport(table_saved, bad, code=3).stderr
         bad = copy.deepcopy(table)
         bad['resources'][0]['path'] = 'assets/evil\x00name.png'
-        assert '路径' in reexport(table_saved, bad, code=3).stderr
+        assert '.path' in reexport(table_saved, bad, code=3).stderr
         bad = copy.deepcopy(table)
         next(b for b in bad['pages'][0]['blocks'] if b['type'] == 'table')['content']['table']['cells'][0]['text'] = '伪造'
         assert '表格单元格' in reexport(table_saved, bad, code=3).stderr

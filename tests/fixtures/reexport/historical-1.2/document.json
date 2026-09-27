@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.2",
+  "document_id": "doc-a84e4223e687bd34",
+  "status": "partial",
+  "source": {
+    "type": "image"
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1339,
+        1889
+      ],
+      "coordinate_space": "raster_page",
+      "status": "partial",
+      "reading_order": [
+        "b0009",
+        "b0013"
+      ],
+      "layout_blocks": [
+        {
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            147,
+            787,
+            898,
+            822
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.873432755,
+          "candidate_rank": 139,
+          "original_class_id": 22,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 448,
+          "model_label": "text",
+          "original_bbox": [
+            147.734848,
+            787.074524,
+            897.895935,
+            821.170532
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            94,
+            882,
+            1238,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.965556383,
+          "candidate_rank": 177,
+          "original_class_id": 21,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 4135,
+          "model_label": "table",
+          "original_bbox": [
+            94.55555,
+            882.510071,
+            1237.965698,
+            1110.450806
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            147,
+            787,
+            898,
+            822
+          ],
+          "coordinate_space": "raster_page"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            94,
+            882,
+            1238,
+            1111
+          ],
+          "coordinate_space": "raster_page"
+        }
+      ],
+      "blocks": [
+        {
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            147,
+            787,
+            898,
+            822
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+            "request_id": "reqr0009",
+            "raw_output": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+            "raw_output_base64": null,
+            "text_base64": null
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            94,
+            882,
+            1238,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "html",
+            "text": "<table><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>",
+            "resource": "assets/p0001-b0013.png",
+            "table": {
+              "rows": 5,
+              "columns": 3,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "序号",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "定额人等级",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "一般地区",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "1",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "高级熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "10.26",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "2",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "7.61",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "3",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "半熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "5.95",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "4",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "普工",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "4.90",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+            "request_id": "reqr0013",
+            "raw_output": "<table border=1><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 751,
+      "height": 35,
+      "bbox": [
+        147,
+        787,
+        898,
+        822
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 1144,
+      "height": 229,
+      "bbox": [
+        94,
+        882,
+        1238,
+        1111
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ]
+}

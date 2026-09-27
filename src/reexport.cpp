@@ -2,6 +2,7 @@
 #include "markdown.hpp"
 #include "pdf_page_id.hpp"
 #include "table_parser.hpp"
+#include "schema_validator.hpp"
 #include "json.hpp"
 #include <algorithm>
 #include <climits>
@@ -151,20 +152,17 @@ void pdf_geometry(const Json& page, const Json& source, const std::string& where
                 where + " estimated_raster_pixels 无效");
 }
 std::string render_page_markdown(const Json& page,
-                                 const std::unordered_map<std::string, const Json*>& by_id,
-                                 bool layout_output, const std::string& where) {
+                                 const std::unordered_map<std::string, const Json*>& by_id) {
     std::string markdown;
     for (const auto& value : page.at("reading_order")) {
         const auto& block = *by_id.at(value.get<std::string>());
         const auto& content = block.at("content");
         const auto& resource = content.at("resource");
-        const std::string profile = string_field(block.at("provenance"), "model_profile", where);
         const std::string type = block.at("type").get<std::string>();
         MarkdownBlock render{value.get<std::string>(), type,
             block.at("status").get<std::string>(), content.at("text").get<std::string>(),
             resource.is_null() ? "" : resource.get<std::string>(), content.value("display", true),
-            content.contains("table") && content.at("table").is_object(),
-            (layout_output || profile.rfind("MNN/", 0) == 0) && type != "image" && type != "unknown"};
+            type == "table" && block.at("status") == "ok"};
         if (!markdown.empty()) markdown += "\n\n";
         markdown += render_markdown_block(render);
     }
@@ -188,6 +186,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     const auto version = string_field(document, "schema_version", "document");
     require(version == "1.0" || version == "1.1" || version == "1.2" ||
             version == "1.3" || version == "1.4", "不支持 schema_version " + version);
+    validate_document_schema(document, version);
     const bool pdf = version == "1.4";
     id(string_field(document, "document_id", "document"), "doc-[0-9a-f]{16}", "document_id");
     status(string_field(document, "status", "document"), false, "document");
@@ -319,6 +318,12 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                              content.at("text") == "" && format == "markdown",
                              where + " 非完整表格须保留空占位");
             }
+            if (type == "table" && (version == "1.0" || version == "1.1") &&
+                block.at("status") == "ok") {
+                const auto table = parse_table(content.at("text").get<std::string>());
+                require(format == "html" && table.valid && table.html == content.at("text"),
+                        where + " 旧版表格 HTML 不安全或无效");
+            }
             require(field(content, "resource", where).is_null() || field(content, "resource", where).is_string(),
                     where + " content.resource 无效");
             if (type == "image" || block.at("status") != "ok")
@@ -367,7 +372,6 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             }
         }
         if (page.contains("layout_diagnostics")) diagnostics(page.at("layout_diagnostics"), all_paths, where);
-        const bool layout_output = page.contains("layout_diagnostics") || document.contains("layout_diagnostics");
         if (pdf) {
             if (failed) {
                 const auto& error = field(page, "error", where);
@@ -376,8 +380,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 continue;
             }
             result.markdown += "## 第 " + std::to_string(page.at("pdf_page_number").get<uint64_t>()) + " 页\n\n" +
-                               render_page_markdown(page, by_id, layout_output, where) + "\n";
-        } else result.markdown = render_page_markdown(page, by_id, layout_output, where);
+                               render_page_markdown(page, by_id) + "\n";
+        } else result.markdown = render_page_markdown(page, by_id);
     }
     if (document.contains("layout_diagnostics")) diagnostics(document.at("layout_diagnostics"), all_paths, "document");
     for (const auto& resource : resources) {

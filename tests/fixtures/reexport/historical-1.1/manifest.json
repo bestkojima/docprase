@@ -1,0 +1,10 @@
+{
+  "source_path": "output/issue-8/real-689608a/job",
+  "source_document_sha256": "8a2233f7242a974ad875be1c685e56f6aa7398c458ddb8fee4fd8d33cb10d086",
+  "schema_version": "1.1",
+  "selected_block_ids": [
+    "b0005",
+    "b0006"
+  ],
+  "note": "从历史真实模型作业提取最小页面片段；正文、来源、几何、结构与PNG字节保持原样，删去未选块及可选诊断。"
+}

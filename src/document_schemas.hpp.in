@@ -1,0 +1,8 @@
+#pragma once
+namespace dococr {
+inline constexpr const char* document_schema_1_0 = R"SCHEMA(@DOCUMENT_SCHEMA_1_0@)SCHEMA";
+inline constexpr const char* document_schema_1_1 = R"SCHEMA(@DOCUMENT_SCHEMA_1_1@)SCHEMA";
+inline constexpr const char* document_schema_1_2 = R"SCHEMA(@DOCUMENT_SCHEMA_1_2@)SCHEMA";
+inline constexpr const char* document_schema_1_3 = R"SCHEMA(@DOCUMENT_SCHEMA_1_3@)SCHEMA";
+inline constexpr const char* document_schema_1_4 = R"SCHEMA(@DOCUMENT_SCHEMA_1_4@)SCHEMA";
+}
