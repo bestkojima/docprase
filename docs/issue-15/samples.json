@@ -1,0 +1,22 @@
+{
+  "version": "frozen-1",
+  "baseline_commit": "dba124ea2203a06c9afe822aab06948f9c97600a",
+  "pages_total": 7,
+  "notes": "六份固定输入，共七页；PDF 两页独立计数。旧样本曾用于模型对齐或功能开发，只有新自制双栏页未用于调参。异常输入单列案例，不计页数。",
+  "samples": [
+    {"id":"zh_text_table", "path":"tests/fixtures/ovis/source_page.jpg", "sha256":"c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6", "pages":1, "role":"development", "source":"OmniDocBench aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec; tests/fixtures/ovis/manifest.json", "covers":["中文","单栏","正文","普通表格","插图"], "reference":"tests/fixtures/ovis/manifest.json; tests/fixtures/ovis/chinese_text.reference.txt; tests/fixtures/ovis/complete_table.reference.txt"},
+    {"id":"zh_formula", "path":"tests/fixtures/ovis/formula_book_page.png", "sha256":"861030411176ef8eb8cbf9607461d252b8db557808ab91e87a4e9bed4c69bb84", "pages":1, "role":"development", "source":"OmniDocBench aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec; tests/fixtures/ovis/formula_book_page.manifest.json", "covers":["中文","行内公式","独立公式","单栏"], "reference":"tests/fixtures/ovis/formula_book_page.manifest.json"},
+    {"id":"zh_merged_table", "path":"tests/fixtures/ovis/merged_table_book_page.png", "sha256":"c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc", "pages":1, "role":"development", "source":"OmniDocBench aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec; tests/fixtures/ovis/merged_table_book_page.manifest.json", "covers":["中文","复杂表格","单栏"], "reference":"tests/fixtures/ovis/merged_table_book_page.manifest.json"},
+    {"id":"en_jee", "path":"tests/fixtures/layout/exam-jee-346.jpg", "sha256":"e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade", "pages":1, "role":"alignment", "source":"HiLEx JEE source revision 3bb962636c14b2630d308a77df2b3f5b768bb434; tests/fixtures/layout/exam-jee-346-reference.json; source metadata license code 1 (do not infer text license from code)", "covers":["英文","试卷","单栏","行内数学","图表"], "reference":"tests/fixtures/layout/exam-jee-346-reference.json; manual visible anchors in rules.md"},
+    {"id":"zh_pdf", "path":"tests/fixtures/pdf/printed_textbook_2p.pdf", "sha256":"13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7", "pages":2, "role":"development", "source":"项目自制印刷 PDF；tests/fixtures/pdf/make_textbook.py；字形授权见 tests/fixtures/pdf/DROID_FONT_NOTICE.md", "covers":["中文","教材","多页","PDF","单栏"], "reference":"tests/pdf_real.py GROUND_TRUTH"},
+    {"id":"en_two_column", "path":"tests/fixtures/issue15/printed_science_2col.png", "sha256":"b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9", "pages":1, "role":"evaluation_unseen", "source":"项目自制印刷页；tests/fixtures/issue15/make_exam.py；DejaVuSans 字形；未据本页结果修改模型、阈值或比较规则", "covers":["英文","试卷","双栏","跨栏标题","插图","图注","阅读顺序"], "reference":"docs/issue-15/rules.md"}
+  ],
+  "abnormal_cases": [
+    {"id":"encrypted_pdf", "path":"tests/fixtures/encrypted.pdf", "sha256":"83e3c6c5686fcd0c68bbe3c10937a69646d8cc4f572eb0f57f9c0e396050778d", "expected":"明确拒绝加密输入"},
+    {"id":"invalid_image", "path":"tests/fixtures/ovis/invalid.png", "expected":"明确拒绝无法解码图片"},
+    {"id":"wrong_artifact_hash", "expected":"模型工件 SHA 配置与实际不符时拒绝"},
+    {"id":"invalid_execution_plan", "expected":"未知处理器、重复处理或缺必需处理时拒绝"},
+    {"id":"token_limit", "expected":"原始输出保留，区域标 partial，stop_reason=token_limit"},
+    {"id":"cancel_or_backend_failure", "expected":"安全边界后取消/故障恢复，后续作业可用"}
+  ]
+}
