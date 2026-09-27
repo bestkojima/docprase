@@ -1,4 +1,4 @@
-name: Issue 14 Windows single page
+name: Issue 14 Windows 单页解析
 
 on:
   workflow_dispatch:
@@ -13,20 +13,20 @@ jobs:
     runs-on: windows-2022
     timeout-minutes: 360
     steps:
-      - name: Checkout dococr
+      - name: 检出 dococr
         uses: actions/checkout@v4
-      - name: Checkout pinned MNN
+      - name: 检出固定版本 MNN
         uses: actions/checkout@v4
         with:
           repository: alibaba/MNN
           ref: baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6
           path: mnn
           persist-credentials: false
-      - name: Setup Python
+      - name: 配置 Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Record toolchain
+      - name: 记录工具链
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force evidence | Out-Null
@@ -36,7 +36,7 @@ jobs:
           python --version 2>&1 | Out-File evidence/python-version.txt
           (Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,OSArchitecture | Format-List | Out-String) | Out-File evidence/windows-version.txt
           & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -property installationVersion | Out-File evidence/vs-version.txt
-      - name: Build MNN with image LLM runtime
+      - name: 构建 MNN 图像 LLM 运行时
         shell: pwsh
         run: |
           cmake -S mnn -B mnn/build -G "Visual Studio 17 2022" -A x64 -DMNN_BUILD_SHARED_LIBS=ON -DMNN_WIN_RUNTIME_MT=OFF -DMNN_BUILD_LLM=ON -DMNN_BUILD_LLM_OMNI=ON -DMNN_BUILD_TEST=OFF -DMNN_BUILD_DEMO=OFF -DMNN_BUILD_CONVERTER=OFF 2>&1 | Tee-Object evidence/mnn-configure.log
@@ -44,7 +44,7 @@ jobs:
           cmake --build mnn/build --config Release --parallel 4 2>&1 | Tee-Object evidence/mnn-build.log
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Get-FileHash mnn/build/Release/MNN.dll -Algorithm SHA256 | Format-List | Out-File evidence/mnn-dll-sha256.txt
-      - name: Build dococr core, C ABI and CLI
+      - name: 构建 dococr 核心、C ABI 和 CLI
         shell: pwsh
         run: |
           cmake -S . -B build-win -G "Visual Studio 17 2022" -A x64 -DDOCOCR_MNN_ROOT="$PWD/mnn" -DDOCOCR_REQUIRE_MNN=ON -DDOCOCR_REQUIRE_LLM=ON -DDOCOCR_BUILD_TESTS=ON 2>&1 | Tee-Object evidence/dococr-configure.log
@@ -53,24 +53,29 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Copy-Item mnn/build/Release/MNN.dll build-win/Release/
           Get-ChildItem build-win/Release/*.dll,build-win/Release/*.exe | Get-FileHash -Algorithm SHA256 | Format-Table -AutoSize | Out-File evidence/binary-sha256.txt
-      - name: Run CTest
+          @('vcruntime140.dll','vcruntime140_1.dll','msvcp140.dll','ucrtbase.dll') | ForEach-Object {
+            $file = Join-Path $env:WINDIR "System32/$_"
+            if (Test-Path $file) { Get-Item $file | Select-Object FullName,@{Name='Version';Expression={$_.VersionInfo.FileVersion}} }
+            else { [pscustomobject]@{FullName=$file;Version='missing'} }
+          } | Format-Table -AutoSize | Out-File evidence/msvc-runtime.txt
+      - name: 运行 CTest
         shell: pwsh
         run: |
           python -m pip install jsonschema markdown-it-py
           ctest --test-dir build-win -C Release --output-on-failure --parallel 2 -R '^(contract|cli_integration|config_integration|config_abi|layout_integration|printed_page_integration)$' 2>&1 | Tee-Object evidence/ctest.log
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Download pinned external models
+      - name: 下载固定版本外部模型
         shell: pwsh
         run: |
           python -m pip install "modelscope>=1.20,<2"
           python scripts/issue14_windows.py download --models models 2>&1 | Tee-Object evidence/model-download.log
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Parse Chinese filename and verify ABI
+      - name: 解析中文文件名并核对 ABI
         shell: pwsh
         run: |
           python scripts/issue14_windows.py verify --cli build-win/Release/dococr_cli.exe --dll build-win/Release/dococr_c.dll --models models --out evidence/real-page 2>&1 | Tee-Object evidence/verify.log
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Upload logs, outputs and binaries
+      - name: 上传日志、结果和程序
         if: always()
         uses: actions/upload-artifact@v4
         with:

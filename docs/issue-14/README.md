@@ -9,7 +9,7 @@ Windows 实测以 [专用工作流](../../.github/workflows/issue14-windows.yml)
 ## 依赖与工件
 
 - 程序源码：本仓库；C++17、CMake ≥ 3.20、Visual Studio 2022 x64、Python 3.12（仅下载和验收脚本需要）。
-- 程序运行时：固定提交 `baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6` 的 [MNN](https://github.com/alibaba/MNN)，启用 `MNN_BUILD_LLM=ON` 和 `MNN_BUILD_LLM_OMNI=ON`。Windows 版本的 LLM 对象合入 `MNN.dll`，`dococr_c.dll` 和 `dococr_cli.exe` 应与 `MNN.dll` 同目录；使用 Visual Studio 的 `/MD` 运行时。
+- 程序运行时：固定提交 `baaa5a62e9cc6d5b3660e37f8a2608a2d585adc6` 的 [MNN](https://github.com/alibaba/MNN)，启用 `MNN_BUILD_LLM=ON` 和 `MNN_BUILD_LLM_OMNI=ON`。Windows 版本的 LLM 对象合入 `MNN.dll`，`dococr_c.dll` 和 `dococr_cli.exe` 应与 `MNN.dll` 同目录。`/MD` 构建还需要 Microsoft Visual C++ 2022 x64 Redistributable，包含 `vcruntime140.dll`、`vcruntime140_1.dll`、`msvcp140.dll` 和 Windows UCRT；干净机器上须先安装。CI 记录其实际路径和版本。
 - 外部模型：`dr3334/PP-DocLayoutV3-mnn` 修订 `c67c1a858d5f6c855172d4cfdf931798dafa2edd`、`dr3334/ovrics-ocrv2_mnn` 修订 `20f12e49d846941e67829a7a7c3645693e485942`。模型不包含在程序源码或构建输出中；[`configs/printed-page.example.json`](../../configs/printed-page.example.json) 固定九个必需文件的 SHA-256。下载脚本逐一复核哈希。
 - 固定输入：[`source_page.jpg`](../../tests/fixtures/ovis/source_page.jpg)，SHA-256 `c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6`。模型识别质量会是 `partial`；不得把成功导出解释为全页文字正确。
 
@@ -31,7 +31,7 @@ python scripts/issue14_windows.py download --models models
 python scripts/issue14_windows.py verify --cli build-win/Release/dococr_cli.exe --dll build-win/Release/dococr_c.dll --models models --out issue14-evidence
 ```
 
-常规运行只需要 CLI、两个 DLL、外部模型和配置文件。以下命令读取一个中文文件名，向中文目录写出 `document.md`、`document.json`、`run-manifest.json`、`execution-plan.json`、`job-events.jsonl` 和 `assets/`。在仓库根目录执行，或将配置中的模型 `root` 调整为实际路径。
+常规运行需要 CLI、两个本项目/MNN DLL、上述 VC++ x64 运行时、外部模型和配置文件。以下命令读取一个中文文件名，向中文目录写出 `document.md`、`document.json`、`run-manifest.json`、`execution-plan.json`、`job-events.jsonl` 和 `assets/`。在仓库根目录执行，或将配置中的模型 `root` 调整为实际路径。
 
 ```powershell
 & .\build-win\Release\dococr_cli.exe --config configs\printed-page.example.json --input "教材样例.jpg" --out "中文解析结果"

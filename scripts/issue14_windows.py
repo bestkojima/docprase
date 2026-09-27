@@ -16,17 +16,12 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MODEL_HASHES = {
-    "doclayout/PP-DocLayoutV3.mnn": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
-    "ovis/config.json": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
-    "ovis/llm_config.json": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
-    "ovis/llm.mnn": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
-    "ovis/llm.mnn.weight": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
-    "ovis/visual.mnn": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
-    "ovis/visual.mnn.weight": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
-    "ovis/tokenizer.mtok": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
-    "ovis/export_args.json": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
-}
+
+
+def expected_model_hashes() -> dict[str, str]:
+    config = json.loads((ROOT / "configs/printed-page.example.json").read_text(encoding="utf-8"))
+    return {f"{Path(model['root']).name}/{item['path']}": item["sha256"]
+            for model in config["models"].values() for item in model["artifacts"]}
 
 
 def sha256(path: Path) -> str:
@@ -39,7 +34,7 @@ def sha256(path: Path) -> str:
 
 def model_manifest(model_root: Path) -> dict[str, str]:
     result = {}
-    for name, expected in MODEL_HASHES.items():
+    for name, expected in expected_model_hashes().items():
         actual = sha256(model_root / name)
         assert actual == expected, f"模型哈希错误：{name}: {actual}"
         result[name] = actual
@@ -176,6 +171,7 @@ def verify(cli: Path, dll: Path, model_root: Path, output: Path) -> None:
     reference_matches = [block["id"] for block in blocks if
                          block["type"] == "text" and
                          block["content"].get("text", "").strip() == reference]
+    assert reference_matches, "固定教材正文未与参考文本匹配"
     abi = check_abi(dll, (ROOT / "configs/printed-page.example.json").read_bytes())
     (output / "abi-result.json").write_text(json.dumps(abi, ensure_ascii=False, indent=2), encoding="utf-8")
     summary = {
