@@ -487,6 +487,50 @@
                   },
                   "table": {
                     "$ref": "#/$defs/table"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "table"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "table"
+              },
+              "status": {
+                "enum": [
+                  "partial",
+                  "failed",
+                  "skipped"
+                ]
+              }
+            },
+            "required": [
+              "type",
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "properties": {
+                  "format": {
+                    "const": "markdown"
+                  },
+                  "text": {
+                    "const": ""
+                  },
+                  "table": {
+                    "type": "null"
                   }
                 },
                 "required": [

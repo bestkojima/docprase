@@ -30,4 +30,4 @@ python3 -c "from PIL import Image; Image.open('tests/fixtures/ovis/source_page.j
 python3 tests/printed_table_real.py output/issue-9/real-ordinary-rgb output/issue-9/real-merged output/issue-9/source-page-rgb.png output/issue-9/real-summary.json
 ```
 
-真实比较器核对两页 SHA、DocumentIR 1.2 Schema、表格结构与单元格内容、唯一表格输出、19 条实际归属、外部表题、所有 selected mask、逐块资源以及表格裁剪与原图逐像素一致。汇总及原始命令结果见 [证据目录](evidence/)。模型/工件哈希、CPU、有效参数和每区域停止原因在作业的 `run-manifest.json` 中；这些证据限定于固定模型与页面，不代表所有教材表格的准确率。
+真实比较器核对两页 SHA、DocumentIR 1.2 Schema、表格结构与单元格内容、唯一表格输出、19 条实际归属、外部表题、所有 selected mask、逐块资源以及表格裁剪与原图逐像素一致。完整 OmniDocBench 注释文件若位于 `output/ovis-source/OmniDocBench.json`，还会核对其 SHA；干净检出仅用已提交的人工标注摘录，汇总中的 `full_annotation_sha_verified` 明示区别。汇总及原始命令结果见 [证据目录](evidence/)。模型/工件哈希、CPU、有效参数和每区域停止原因在作业的 `run-manifest.json` 中；这些证据限定于固定模型与页面，不代表所有教材表格的准确率。

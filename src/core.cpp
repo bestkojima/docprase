@@ -1139,8 +1139,6 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                                 block.status = "failed"; block.error = "invalid_backend_utf8";
                                 block.text.clear();
                             }
-                            if (block.type == "table" && block.status != "ok")
-                                block.text.clear();
                         }
                     }
                 } catch (const std::bad_alloc&) { throw; }
@@ -1160,6 +1158,10 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                 audit.recognition_ms += region.elapsed_ms;
             }
             audit.regions.push_back(std::move(region));
+        }
+        if (transcribe && block.type == "table" && block.status != "ok") {
+            block.text.clear();
+            block.format_override = "markdown";
         }
         blocks.push_back(std::move(block));
     }

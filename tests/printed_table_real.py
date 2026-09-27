@@ -163,8 +163,11 @@ def main():
     with Image.open(ORDINARY) as source, Image.open(ordinary_rgb) as normalized:
         assert list(source.convert('RGB').getdata()) == list(normalized.convert('RGB').getdata())
     assert hashlib.sha256(MERGED.read_bytes()).hexdigest() == merged_manifest['image_sha256']
-    assert hashlib.sha256((ROOT / 'output/ovis-source/OmniDocBench.json').read_bytes()).hexdigest() == (
-        merged_manifest['source_annotation_sha256'])
+    annotation_file = ROOT / 'output/ovis-source/OmniDocBench.json'
+    full_annotation_sha_verified = annotation_file.exists()
+    if full_annotation_sha_verified:
+        assert hashlib.sha256(annotation_file.read_bytes()).hexdigest() == (
+            merged_manifest['source_annotation_sha256'])
     ordinary_reference = (ROOT / 'tests/fixtures/ovis/complete_table.reference.txt').read_text()
     ordinary_sample = next(s for s in ordinary_manifest['samples'] if s['name'] == 'complete_table')
     summary = {
@@ -176,6 +179,7 @@ def main():
         'source_sha256': {'ordinary': hashlib.sha256(ORDINARY.read_bytes()).hexdigest(),
                           'merged': merged_manifest['image_sha256']},
         'annotation_sha256': merged_manifest['source_annotation_sha256'],
+        'full_annotation_sha_verified': full_annotation_sha_verified,
     }
     assert summary['merged']['table_ownership_relations'] >= 1
     merged_document = json.loads((merged_job / 'document.json').read_text())

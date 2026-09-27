@@ -202,5 +202,6 @@
     "ordinary": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
     "merged": "c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc"
   },
-  "annotation_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496"
+  "annotation_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496",
+  "full_annotation_sha_verified": true
 }

@@ -1,10 +1,12 @@
 """从公共作业结果检查整表归属、语义、资源和不完整输出。"""
+import copy
 import json
 from pathlib import Path
 import sys
 import tempfile
 
 from cli_integration import png_2x2
+import jsonschema
 from layout_integration import config as layout_config, run as layout_run
 from printed_page_integration import run
 
@@ -41,6 +43,19 @@ def main():
         assert markdown.count('$x+1$') == 1
         assert '外部表题' in markdown
         assert len(manifest['regions']) == 2
+        schema = json.loads((Path(__file__).resolve().parents[1] /
+                             'docs/issue-9/document-ir-1.2.schema.json').read_text())
+        for status in ('partial', 'failed', 'skipped'):
+            invalid = copy.deepcopy(doc)
+            invalid_table = invalid['pages'][0]['blocks'][1]
+            invalid_table['status'] = status
+            invalid_table['content']['format'] = 'markdown'
+            invalid_table['content']['text'] = ''
+            try:
+                jsonschema.validate(invalid, schema)
+                assert False, (status, 'non-null table accepted')
+            except jsonschema.ValidationError:
+                pass
         _, merged, _ = run(sys.argv[1], 'printed_page_table_rowspan', root, image)
         merged_table = next(b for b in merged['pages'][0]['blocks'] if b['type'] == 'table')
         assert merged_table['status'] == 'ok'
@@ -74,6 +89,19 @@ def main():
             assert block['provenance']['raw_output']
             assert (failed_out / block['content']['resource']).exists()
             assert '<table' not in (failed_out / 'document.md').read_text()
+        failed_out, failed_doc, _ = run(sys.argv[1], 'printed_page_table_failed', root, image)
+        failed_table = next(b for b in failed_doc['pages'][0]['blocks'] if b['type'] == 'table')
+        assert failed_table['status'] == 'failed'
+        assert failed_table['content']['format'] == 'markdown'
+        assert failed_table['content']['text'] == ''
+        assert failed_table['content']['table'] is None
+        assert failed_table['provenance']['raw_output'].startswith('<table')
+        assert (failed_out / failed_table['content']['resource']).exists()
+        _, skipped_doc, _ = run(sys.argv[1], 'printed_page_reset_failure', root, image)
+        skipped_table = next(b for b in skipped_doc['pages'][0]['blocks'] if b['type'] == 'table')
+        assert skipped_table['status'] == 'skipped'
+        assert skipped_table['content']['format'] == 'markdown'
+        assert skipped_table['content']['table'] is None
 
 
 if __name__ == '__main__':

@@ -243,9 +243,13 @@ public:
                     "<table border=1><tr><th colspan=2>项目</th></tr>"
                     "<tr><td>甲</td><td>$x+1$</td></tr></table>" :
                     "外部表题";
-                result.finish_reason = scenario_ == "printed_page_table_truncated" &&
-                    generation.task == "table" ? "truncated" : "complete";
-                result.stop_reason = result.finish_reason == "truncated" ? "token_limit" : "normal";
+                result.finish_reason = generation.task == "table" &&
+                    scenario_ == "printed_page_table_failed" ? "failed" :
+                    generation.task == "table" && scenario_ == "printed_page_table_truncated" ?
+                    "truncated" : "complete";
+                result.stop_reason = result.finish_reason == "truncated" ? "token_limit" :
+                    result.finish_reason == "failed" ? "error" : "normal";
+                if (result.finish_reason == "failed") result.error = "controlled_failure";
                 return {result};
             }
             if (generation.task == "formula") {
@@ -370,7 +374,8 @@ bool config_supported(const std::string& config) {
            config == "fixture:printed_page_table_rowspan" ||
            config == "fixture:printed_page_table_bad_span" ||
            config == "fixture:printed_page_table_duplicate_span" ||
-           config == "fixture:printed_page_table_bad_section";
+           config == "fixture:printed_page_table_bad_section" ||
+           config == "fixture:printed_page_table_failed";
 }
 std::unique_ptr<IInferenceEngine> make_backend(const std::string& config) {
     return std::make_unique<FixtureBackend>(config.substr(8));
