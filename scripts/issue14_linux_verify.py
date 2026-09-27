@@ -66,6 +66,11 @@ class Result(c.Structure):
     _fields_ = [("struct_size", c.c_uint32), ("json", Bytes), ("markdown", Bytes)]
 
 
+def matching_reference_blocks(document: dict, reference: str) -> list[str]:
+    return [block["id"] for block in document["pages"][0]["blocks"] if
+            block["type"] == "text" and block["content"].get("text", "").strip() == reference]
+
+
 def abi_verify(library: Path, output: Path, source: bytes, reference: str) -> dict:
     lib = c.CDLL(str(library))
     lib.dococr_abi_version.restype = c.c_uint32
@@ -119,8 +124,7 @@ def abi_verify(library: Path, output: Path, source: bytes, reference: str) -> di
     raw_markdown = read_and_free(result.markdown)
     document = json.loads(raw_json.decode("utf-8", "strict"))
     raw_markdown.decode("utf-8", "strict")
-    matching = [block["id"] for block in document["pages"][0]["blocks"] if
-                block["type"] == "text" and block["content"].get("text", "").strip() == reference]
+    matching = matching_reference_blocks(document, reference)
     assert matching
     manifest_bytes = Bytes()
     assert lib.dococr_job_manifest(job, c.byref(manifest_bytes)) == 0
@@ -196,8 +200,7 @@ def main() -> None:
     assert manifest["backend_id"] == "mnn:pp-doclayout-v3+ovisocr2"
     blocks = document["pages"][0]["blocks"]
     reference = (ROOT / "tests/fixtures/ovis/chinese_text.reference.txt").read_text(encoding="utf-8").strip()
-    matches = [block["id"] for block in blocks if block["type"] == "text" and
-               block["content"].get("text", "").strip() == reference]
+    matches = matching_reference_blocks(document, reference)
     assert matches, "固定教材正文未与参考文本匹配"
     resources = {asset["path"] for asset in document["resources"]}
     assert resources

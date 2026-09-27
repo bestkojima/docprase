@@ -1,0 +1,114 @@
+{
+  "command": [
+    "/home/dr/project/docprase/build/linux-current/dococr_cli",
+    "--config",
+    "configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/output/issue-14-linux/real/教材原图.jpg",
+    "--out",
+    "/home/dr/project/docprase/output/issue-14-linux/real/中文教材页/job"
+  ],
+  "cli_exit_code": 0,
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "source_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+  "chinese_input": "教材原图.jpg",
+  "chinese_output": "中文教材页",
+  "document_status": "partial",
+  "block_count": 19,
+  "reference_matches": [
+    "b0003"
+  ],
+  "resources": 19,
+  "markdown_references": 5,
+  "document_sha256": "c947ab4108bf48aba23818aa46434ff90cc59a42ad4292477a88f1dfcc17e628",
+  "markdown_sha256": "9021bcdea45a2e18877e3ccc6cabe024b65dcbc8c94d35b8e9501523a02c8f66",
+  "model_sha256": {
+    "models/doclayout/PP-DocLayoutV3.mnn": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+    "models/ovis/config.json": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+    "models/ovis/llm_config.json": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+    "models/ovis/llm.mnn": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+    "models/ovis/llm.mnn.weight": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+    "models/ovis/visual.mnn": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+    "models/ovis/visual.mnn.weight": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+    "models/ovis/tokenizer.mtok": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+    "models/ovis/export_args.json": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334"
+  },
+  "config_hash": "2bc13465fb7b49792a6984cffe22ba4548f8ee1a86b1cc30508f974efc2814ed",
+  "runtime_configuration": {
+    "layout_threads": 1,
+    "ovis_threads": 1,
+    "device": "cpu",
+    "sampler": "greedy",
+    "seed": null,
+    "seed_status": "not_configured",
+    "temperature": 0.8,
+    "top_k": 40,
+    "top_p": 0.9,
+    "min_p": 0.05,
+    "tfs_z": 1.0,
+    "typical": 0.95,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "penalty_window": 0,
+    "n_gram": 8,
+    "ngram_factor": 1.0,
+    "llm_precision": "low",
+    "llm_memory": "low",
+    "vision_precision": "normal",
+    "vision_memory": "low",
+    "reuse_kv": false,
+    "prompt_cache": false,
+    "use_mmap": false,
+    "kvcache_mmap": false,
+    "async": false,
+    "timeout_ms": 120000,
+    "session_strategy": "shared_model_reset_before_each_region",
+    "prompt_sha256": "de9617f877f6110d22adf1a6ba2a96221189dc246fb1fef161e408d37bff5267"
+  },
+  "effective_parameters": {
+    "threads": 1,
+    "max_new_tokens": 512,
+    "max_page_pixels": 16000000,
+    "max_output_bytes": 67108864
+  },
+  "processing": [
+    {
+      "id": "decode",
+      "owner": "adapter",
+      "status": "executed",
+      "reason": "image_decoded"
+    },
+    {
+      "id": "rgb_identity",
+      "owner": "none",
+      "status": "identity_validated",
+      "reason": "owned_rgb8_source"
+    },
+    {
+      "id": "normalize",
+      "owner": "adapter",
+      "status": "executed",
+      "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+    },
+    {
+      "id": "crop",
+      "owner": "adapter",
+      "status": "executed",
+      "reason": "region_crop"
+    },
+    {
+      "id": "session_reset",
+      "owner": "runtime",
+      "status": "delegated_runtime",
+      "reason": "ovis_same_instance_reset"
+    },
+    {
+      "id": "deskew",
+      "owner": "none",
+      "status": "skipped_disabled",
+      "reason": "optional_disabled"
+    }
+  ],
+  "abi_result": "abi-result.json"
+}

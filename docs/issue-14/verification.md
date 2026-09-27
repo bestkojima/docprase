@@ -1,6 +1,6 @@
 # Issue #14：Linux 实测验收记录
 
-执行日期：2026-09-27。输入为固定中文教材页，使用生产 `dococr_cli` 和生产 `libdococr_c.so`；所有模型工件均与 `configs/printed-page.example.json` 的 SHA-256 相符。完整大体积工件在本机 `output/issue-14-linux/`（Git 忽略）；新检出按 [运行说明](README.md)重建。
+执行日期：2026-09-27。输入为固定中文教材页，使用生产 `dococr_cli` 和生产 `libdococr_c.so`；所有模型工件均与 `configs/printed-page.example.json` 的 SHA-256 相符。关键原始结果、有效计划、ABI 结果及日志已保存到随提交交付的 [`evidence/`](evidence/) 并列出 [SHA-256](evidence/SHA256SUMS)；包含 45 个资产的完整工件在本机 `output/issue-14-linux/`（Git 忽略）。新检出可按 [运行说明](README.md)重建全部工件。
 
 | 验收条件 | 实际证据与结论 |
 | --- | --- |

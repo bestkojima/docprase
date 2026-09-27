@@ -43,13 +43,16 @@ cmake -S . -B build/linux-current -DCMAKE_BUILD_TYPE=Release \
 cmake --build build/linux-current -j4
 ctest --test-dir build/linux-current --output-on-failure
 
+mkdir -p output/issue-14-linux/example
+cp tests/fixtures/ovis/source_page.jpg 'output/issue-14-linux/example/教材原图.jpg'
 build/linux-current/dococr_cli --config configs/printed-page.example.json \
-  --input '教材原图.jpg' --out '中文教材页'
+  --input 'output/issue-14-linux/example/教材原图.jpg' \
+  --out 'output/issue-14-linux/example/中文教材页'
 ```
 
 输出目录包含 `document.md`、`document.json`、`assets/`、`execution-plan.json`、`run-manifest.json`、`job-status.json` 和 `job-events.jsonl`。`document.json` 保留块的原始模型输出、状态与资源引用；`partial` 表示仍有需要检查的区域。CLI 退出码 0 只说明作业和导出完成。
 
-构建产物的 `RUNPATH` 会指向构建时找到的共享库目录。用 `ldd build/linux-current/dococr_cli` 和 `ldd build/linux-current/libdococr_c.so` 确认所有依赖均有路径且无 `not found`；复制二进制到另一机器后，需提供匹配的 MNN 运行时并重新配置运行时搜索路径，或在目标机器重新构建。本次本机的绝对路径及解析结果记录于 `output/issue-14-linux/cli-dynamic.txt`、`abi-dynamic.txt`、`cli-ldd.txt` 和 `abi-ldd.txt`，不作为其他机器的固定路径。
+构建产物的 `RUNPATH` 会指向构建时找到的共享库目录。用 `ldd build/linux-current/dococr_cli` 和 `ldd build/linux-current/libdococr_c.so` 确认所有依赖均有路径且无 `not found`；复制二进制到另一机器后，需提供匹配的 MNN 运行时并重新配置运行时搜索路径，或在目标机器重新构建。本次本机的绝对路径及解析结果记录于 [`cli-dynamic.txt`](evidence/cli-dynamic.txt)、[`abi-dynamic.txt`](evidence/abi-dynamic.txt)、[`cli-ldd.txt`](evidence/cli-ldd.txt) 和 [`abi-ldd.txt`](evidence/abi-ldd.txt)，不作为其他机器的固定路径。
 
 ## 实际验收命令
 
@@ -62,13 +65,13 @@ python3 scripts/issue14_linux_verify.py \
   --out output/issue-14-linux/real
 ```
 
-脚本要求一个不存在的输出目录，以免旧工件混入。运行前需有 Python 3.9 及以上版本和 `jsonschema`，但 CLI 和 `.so` 本身不依赖 Python。固定输入是 [`source_page.jpg`](../../tests/fixtures/ovis/source_page.jpg)，SHA-256 为 `c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6`。验收摘要、原始块输出、CLI stdout/stderr、生产 ABI 返回结果及完整导出目录位于 `output/issue-14-linux/real/`。`output/` 被 Git 忽略，新检出需运行上述命令生成自己的证据。
+脚本要求一个不存在的输出目录，以免旧工件混入。运行前需有 Python 3.9 及以上版本和 `jsonschema`，但 CLI 和 `.so` 本身不依赖 Python。固定输入是 [`source_page.jpg`](../../tests/fixtures/ovis/source_page.jpg)，SHA-256 为 `c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6`。完整导出目录与 45 个资产位于本机 `output/issue-14-linux/real/`；该目录被 Git 忽略。关键原始 JSON/Markdown、运行清单、ABI 结果、构建与依赖日志已按原字节保存到已跟踪的 [`evidence/`](evidence/)，每份文件的 SHA-256 列在 [`SHA256SUMS`](evidence/SHA256SUMS)。新检出可检查这些记录，也可运行上述命令生成自己的完整工件。
 
 ## 本机结果
 
-本机为 Ubuntu Linux，`g++` 13.3.0、CMake 4.4.3、MNN 3.6.1（上述固定提交）。[`configure.log`](../../output/issue-14-linux/configure.log)、[`build.log`](../../output/issue-14-linux/build.log) 记录核心、MNN 后端、C ABI 与 CLI 构建退出 0；[`cli-ldd.txt`](../../output/issue-14-linux/cli-ldd.txt) 和 [`abi-ldd.txt`](../../output/issue-14-linux/abi-ldd.txt) 均解析出 MNN 与 LLM 等共享库，没有 `not found`。
+本机为 Ubuntu Linux，`g++` 13.3.0、CMake 4.4.3、MNN 3.6.1（上述固定提交）。[`configure.log`](evidence/configure.log)、[`build.log`](evidence/build.log) 记录核心、MNN 后端、C ABI 与 CLI 构建退出 0；[`cli-ldd.txt`](evidence/cli-ldd.txt) 和 [`abi-ldd.txt`](evidence/abi-ldd.txt) 均解析出 MNN 与 LLM 等共享库，没有 `not found`。
 
-[`summary.json`](../../output/issue-14-linux/real/summary.json) 与 [`abi-result.json`](../../output/issue-14-linux/real/abi-result.json) 记录真实 CPU 单页命令、9 个模型工件 SHA、有效配置及 ABI 状态。CLI 退出 0；中文输入 `教材原图.jpg` 到中文输出目录 `中文教材页/job`，DocumentIR 1.3 为 `partial`，19 个块中正文 `b0003` 经首尾空白规范化后与固定参考匹配，导出 45 个资产文件；Markdown 的 5 处本地引用均在声明资源中。生产 `.so` 再次运行同页返回 0，报告 45 个资产并取回首项；ABI 返回的 JSON 和 Markdown 与 CLI 导出的字节 SHA 相同。原始正文模型输出保存在 [`raw-reference-block.txt`](../../output/issue-14-linux/real/raw-reference-block.txt)，其他块输出与逐区域停止原因保存在完整 [`document.json`](../../output/issue-14-linux/real/中文教材页/job/document.json) 和 [`run-manifest.json`](../../output/issue-14-linux/real/中文教材页/job/run-manifest.json)。
+[`summary.json`](evidence/summary.json) 与 [`abi-result.json`](evidence/abi-result.json) 记录真实 CPU 单页命令、9 个模型工件 SHA、有效配置及 ABI 状态。CLI 退出 0；中文输入 `教材原图.jpg` 到中文输出目录 `中文教材页/job`，DocumentIR 1.3 为 `partial`，19 个块中正文 `b0003` 经首尾空白规范化后与固定参考匹配，导出 45 个资产文件；Markdown 的 5 处本地引用均在声明资源中。生产 `.so` 再次运行同页返回 0，报告 45 个资产并取回首项；ABI 返回的 JSON 和 Markdown 与 CLI 导出的字节 SHA 相同。原始正文模型输出保存在 [`raw-reference-block.txt`](evidence/raw-reference-block.txt)，其他块输出与逐区域停止原因保存在完整 [`document.json`](evidence/document.json) 和 [`run-manifest.json`](evidence/run-manifest.json)。
 
 ## 边界
 
