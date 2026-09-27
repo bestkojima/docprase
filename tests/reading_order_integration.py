@@ -51,14 +51,18 @@ def main():
         check(sys.argv[1], root, image, 'printed_page_reading_rank', 'model', 'unique_rank')
         check(sys.argv[1], root, image, 'printed_page_reading_duplicate', 'geometry', 'duplicate_rank')
         check(sys.argv[1], root, image, 'printed_page_reading_missing', 'geometry', 'missing_rank')
-        _, short_title, _ = run(sys.argv[1], 'printed_page_reading_short_title', root, image)
-        short_page = short_title['pages'][0]
-        short_map = {b['id']: b['candidate_id'] for b in short_page['layout_blocks']
-                     if 'candidate_id' in b}
-        assert [short_map[b['source_region_ids'][0].replace('r', 'l')]
-                for b in short_page['blocks']] == [0, 1, 2, 3, 5, 6, 9, 4, 7, 8, 10]
-        assert {(r['source_block_id'], r['target_block_id']) for r in short_page['relations']
-                if r['type'] == 'heading_precedes'} == {('b0003', 'b0004'), ('b0003', 'b0005')}
+        for scenario in ('printed_page_reading_short_title', 'printed_page_reading_tiny_title'):
+            _, short_title, _ = run(sys.argv[1], scenario, root, image)
+            short_page = short_title['pages'][0]
+            short_map = {b['id']: b['candidate_id'] for b in short_page['layout_blocks']
+                         if 'candidate_id' in b}
+            assert [short_map[b['source_region_ids'][0].replace('r', 'l')]
+                    for b in short_page['blocks']] == [0, 1, 2, 3, 5, 6, 9, 4, 7, 8, 10]
+            if scenario.endswith('short_title'):
+                assert {(r['source_block_id'], r['target_block_id']) for r in short_page['relations']
+                        if r['type'] == 'heading_precedes'} == {('b0003', 'b0004'), ('b0003', 'b0005')}
+            else:
+                assert not any(r['type'] == 'heading_precedes' for r in short_page['relations'])
         _, columns, _ = run(sys.argv[1], 'printed_page_reading_columns', root, image)
         page = columns['pages'][0]
         by_layout = {b['id']: b['candidate_id'] for b in page['layout_blocks'] if 'candidate_id' in b}

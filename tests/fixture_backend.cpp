@@ -119,6 +119,10 @@ public:
                             const float short_title[] = {17,.9f,30,30,70,40,30};
                             std::memcpy(rows.data()+2*7, short_title, sizeof(short_title));
                         }
+                        if (scenario_ == "printed_page_reading_tiny_title") {
+                            const float short_title[] = {17,.9f,44,30,56,40,30};
+                            std::memcpy(rows.data()+2*7, short_title, sizeof(short_title));
+                        }
                         if (scenario_ == "printed_page_reading_single") {
                             const float single[][7] = {
                                 {22,.9f,5,10,40,20,10}, {17,.9f,5,30,40,40,30},

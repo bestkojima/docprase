@@ -183,9 +183,10 @@ struct SemanticRelation {
 };
 
 bool spans_columns(const Block& block, int page_width) {
+    const bool heading = block.model_label == "doc_title" ||
+        block.model_label == "paragraph_title";
     return block.box.x0 < page_width * 0.45 && block.box.x1 > page_width * 0.55 &&
-           block.box.x1 - block.box.x0 >= page_width *
-               ((block.model_label == "doc_title" || block.model_label == "paragraph_title") ? 0.25 : 0.65);
+           (heading || block.box.x1 - block.box.x0 >= page_width * 0.65);
 }
 
 // Assign order to already identified blocks. Detection and recognition IDs never depend on this pass.
