@@ -229,10 +229,11 @@ public:
                 } else if (scenario_ == "layout_geometry") {
                     const float cases[][7] = {
                         {3,.95f,52,5,90,40,4}, {22,.8f,55,10,65,20,5},
-                        {22,.9f,2,2,42,30,1}, {5,.85f,10,10,20,20,2},
-                        {21,.9f,2,42,45,85,8}, {22,.8f,5,48,15,58,9},
+                        {22,.9f,2,2,42,30,1}, {5,.85f,10,1,20,11,2},
+                        {21,.9f,2,42,45,85,8}, {22,.8f,1,48,11,58,9},
                         {22,.9f,52,48,90,65,10}, {7,.9f,55,70,90,80,11},
-                        {22,.9f,-3,88,28,103,12}, {23,.8f,55,50,85,60,13}};
+                        {22,.9f,-3,88,28,103,12}, {23,.8f,55,50,85,60,13},
+                        {22,.8f,56,70,90,80,14}};
                     std::memcpy(rows.data(), cases, sizeof(cases));
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
@@ -245,7 +246,7 @@ public:
                     scenario_.rfind("printed_page", 0) == 0 ? 6 :
                     scenario_ == "layout_contract" || scenario_ == "layout_dedup" ? 7 :
                     scenario_ == "layout_dedup_edges" ? 6 :
-                    scenario_ == "layout_geometry" ? 10 :
+                    scenario_ == "layout_geometry" ? 11 :
                     scenario_ == "layout_table" ? 2 :
                     scenario_ == "layout_inline_formula" ? 2 : 0;
                 if (scenario_ == "printed_page_reading_pdf_mixed") {

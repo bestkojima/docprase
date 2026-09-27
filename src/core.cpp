@@ -710,9 +710,9 @@ void filter_layout_overlap(std::vector<RawLayoutCandidate>& records, const Image
             const std::string first_label = first.label, second_label = second.label;
             const bool table_child =
                 (first.class_id == 21 && (second_label == "text" || second_label == "formula") &&
-                 contains(first.crop, second.crop)) ||
+                 covered_fraction(first.crop, second.crop) >= 0.9) ||
                 (second.class_id == 21 && (first_label == "text" || first_label == "formula") &&
-                 contains(second.crop, first.crop));
+                 covered_fraction(second.crop, first.crop) >= 0.9);
             const bool inline_formula =
                 (first_label == "formula" && second_label == "text" &&
                  covered_fraction(second.crop, first.crop) >= 0.9) ||
@@ -722,7 +722,9 @@ void filter_layout_overlap(std::vector<RawLayoutCandidate>& records, const Image
                 second_label == "figure_title" || first_label == "footnote" ||
                 second_label == "footnote" || first_label == "vision_footnote" ||
                 second_label == "vision_footnote";
-            if (table_child || inline_formula || annotation) continue;
+            const double size_ratio = double(std::min(box_area(first.crop), box_area(second.crop))) /
+                                      std::max(box_area(first.crop), box_area(second.crop));
+            if (table_child || inline_formula || (annotation && size_ratio < 0.8)) continue;
             const bool special_first = first_label == "image" || first_label == "table" ||
                                        first_label == "chart" || first_label == "seal";
             const bool special_second = second_label == "image" || second_label == "table" ||

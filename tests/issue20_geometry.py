@@ -30,14 +30,15 @@ def main():
         doc = json.loads((out / 'document.json').read_text())
         candidates = doc['layout_diagnostics']['candidates']
         assert candidates[1]['filter_reason'] == 'contained_by_large_class'
-        assert candidates[3]['selected'] is True  # 行内公式不能被包含筛选误删
-        assert candidates[5]['selected'] is True  # 表格内文字来源仍可追溯
+        assert candidates[3]['selected'] is True  # 90% 落在父正文内的公式
+        assert candidates[5]['selected'] is True  # 90% 落在父表内的文字
         assert candidates[9]['filter_reason'] == 'outer_overlap'
+        assert candidates[10]['filter_reason'] == 'outer_overlap'  # 相近尺寸的图注重复框
         assert candidates[3]['mask_row'] == 3 and candidates[3]['mask_nonzero'] == 1
         assert candidates[8]['original_bbox'] == [-3, 88, 28, 103]
         assert candidates[8]['crop_bbox'] == [0, 88, 28, 100]
         actual_ids = [b['candidate_id'] for b in doc['pages'][0]['layout_blocks']]
-        assert actual_ids == [2, 3, 4, 5, 8, 0, 6, 7], actual_ids
+        assert actual_ids == [3, 2, 4, 5, 8, 0, 6, 7], actual_ids
         assert len(doc['pages'][0]['reading_order']) == len(doc['pages'][0]['blocks'])
         assert all((out / b['content']['resource']).is_file()
                    for b in doc['pages'][0]['blocks'])
