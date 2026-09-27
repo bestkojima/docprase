@@ -1291,8 +1291,14 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             (canonical_label(candidate->class_id) == "text" ||
              canonical_label(candidate->class_id) == "formula" ||
              canonical_label(candidate->class_id) == "table")) ++region_total;
+    std::string first_region_error_code, first_region_error_message;
+    auto stop_after_cancel = [&] {
+        audit.code = first_region_error_code.empty() ? RunCode::Cancelled : RunCode::Failed;
+        audit.error_code = first_region_error_code;
+        audit.error_message = first_region_error_message;
+    };
     for (const auto* candidate : selected) {
-        if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
+        if (cancelled) { stop_after_cancel(); return audit; }
         if (!records[size_t(candidate->id)].handling_reason.empty())
             continue;
         Block block;
@@ -1341,14 +1347,15 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                         auto response = backend->execute({request_id, GenerationRequest{
                             std::move(crop), block.box, block.type, request_id,
                             plan->max_new_tokens}}, context);
-                        if (cancelled) {
+                        auto* generation = std::get_if<GenerationOutput>(&response.payload);
+                        if (cancelled && generation && generation->finish_reason == "failed" &&
+                            generation->stop_reason == "cancelled") {
                             region.status = "cancelled";
-                            region.stop_reason = "cancelled_after_backend_call";
+                            region.stop_reason = generation->stop_reason;
                             audit.regions.push_back(std::move(region));
-                            audit.code = RunCode::Cancelled;
+                            stop_after_cancel();
                             return audit;
                         }
-                        auto* generation = std::get_if<GenerationOutput>(&response.payload);
                         if (!generation) {
                             recognition_unavailable = true;
                             block.status = "failed"; block.error = "generation_response_type_mismatch";
@@ -1423,6 +1430,23 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                 region.elapsed_ms = std::max(region.elapsed_ms, uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-region_start).count()));
                 region.status = block.status;
                 audit.recognition_ms += region.elapsed_ms;
+                if (block.status == "failed" && first_region_error_code.empty()) {
+                    first_region_error_code = block.error == "region_reset_failed" ? "region_reset_failed" :
+                        block.error == "generation_response_type_mismatch" ? "generation_response_type_mismatch" :
+                        region.stop_reason == "timeout" ? "region_backend_timeout" :
+                        block.error.rfind("region_inference_exception:", 0) == 0 ?
+                            "region_inference_exception" : "region_inference_failed";
+                    first_region_error_message = block.error;
+                }
+                if (cancelled) {
+                    if (block.status != "failed") {
+                        region.status = "cancelled";
+                        region.stop_reason = "cancelled_after_backend_call";
+                    }
+                    audit.regions.push_back(std::move(region));
+                    stop_after_cancel();
+                    return audit;
+                }
             }
             audit.regions.push_back(std::move(region));
             if (block.type == "text" || block.type == "formula" || block.type == "table") {
@@ -1446,7 +1470,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     }
     const ReadingOrderEvidence order_evidence = arrange_reading_order(blocks, image.width);
     const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.width, image.height);
-    if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
+    if (cancelled) { stop_after_cancel(); return audit; }
     const std::string overlay_name = page_asset("layout-overlay.png");
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
     bool incomplete = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.status != "ok"; });
@@ -1552,8 +1576,14 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     uint32_t region_total = 0, region_done = 0;
     for (const auto& candidate : candidates)
         if (candidate.label == "text" || candidate.label == "formula" || candidate.label == "table") ++region_total;
+    std::string first_region_error_code, first_region_error_message;
+    auto stop_after_cancel = [&] {
+        audit.code = first_region_error_code.empty() ? RunCode::Cancelled : RunCode::Failed;
+        audit.error_code = first_region_error_code;
+        audit.error_message = first_region_error_message;
+    };
     for (const auto& candidate : candidates) {
-        if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
+        if (cancelled) { stop_after_cancel(); return audit; }
         size_t n = blocks.size() + 1;
         Block block;
         block.id = id('b', n); block.layout_id = id('l', n); block.region_id = id('r', n);
@@ -1603,13 +1633,31 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
                   recognition_unavailable = true;
               }
             if (cancelled) {
-                if (!local_error.empty()) {
-                    audit.code = RunCode::Failed;
-                    audit.error_code = audit.reset_failed ? "region_reset_failed" :
-                                       "region_inference_exception";
-                    audit.error_message = local_error;
-                    audit.regions.push_back({request_id, "failed", "backend_error", 0});
-                } else audit.code = RunCode::Cancelled;
+                bool malformed = !valid_utf8(generation.text) || !valid_utf8(generation.raw_output) ||
+                                 !valid_utf8(generation.error);
+                bool failed_response = generation.finish_reason != "complete" &&
+                                       generation.finish_reason != "truncated" &&
+                                       !(generation.finish_reason == "failed" &&
+                                         generation.stop_reason == "cancelled");
+                if (!local_error.empty() || malformed || failed_response) {
+                    if (first_region_error_code.empty()) {
+                        first_region_error_code = audit.reset_failed ? "region_reset_failed" :
+                            local_error == "generation response type mismatch" ?
+                                "generation_response_type_mismatch" :
+                            !local_error.empty() ? "region_inference_exception" :
+                            malformed ? "region_invalid_backend_utf8" :
+                            generation.stop_reason == "timeout" ? "region_backend_timeout" :
+                                "region_inference_failed";
+                        first_region_error_message = !local_error.empty() ? local_error :
+                            malformed ? "invalid backend UTF-8" :
+                            generation.error.empty() ? "recognition incomplete" : generation.error;
+                    }
+                    audit.regions.push_back({request_id, "failed",
+                        generation.stop_reason.empty() ? "backend_error" : generation.stop_reason, 0});
+                } else audit.regions.push_back({request_id, "cancelled",
+                    generation.stop_reason == "cancelled" ? "cancelled" :
+                    "cancelled_after_backend_call", 0});
+                stop_after_cancel();
                 return audit;
             }
             bool text_valid = valid_utf8(generation.text);
@@ -1632,6 +1680,15 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
                 output.assets.push_back({block.resource, crop_png(image, block.box)});
                 partial = true;
             } else block.text = generation.text;
+            if (block.status == "failed" && first_region_error_code.empty()) {
+                first_region_error_code = audit.reset_failed ? "region_reset_failed" :
+                    local_error == "generation response type mismatch" ?
+                        "generation_response_type_mismatch" :
+                    !local_error.empty() ? "region_inference_exception" :
+                    generation.stop_reason == "timeout" ? "region_backend_timeout" :
+                        "region_inference_failed";
+                first_region_error_message = block.error;
+            }
             ++region_done;
             if (progress) progress("region_completed", source_page ? source_page : 1,
                                    request_id, region_done, region_total);
@@ -1644,7 +1701,9 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
             partial = true;
         }
         blocks.push_back(std::move(block));
+        if (cancelled) { stop_after_cancel(); return audit; }
     }
+    if (cancelled) { stop_after_cancel(); return audit; }
     audit.recognition_ms = elapsed(start);
     start = Clock::now();
     if (progress) progress("export_started", source_page ? source_page : 1, "", region_done, region_total);

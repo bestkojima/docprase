@@ -162,6 +162,74 @@ def main():
     assert lib.dococr_job_destroy(job) == 0
     assert lib.dococr_destroy(engine) == 0
 
+    # 失败响应、后端超时、错误类型及 reset 失败与取消并发时都保留真实错误。
+    failure_scenarios = {
+        'generation_gate_failed': 'region_inference_failed',
+        'printed_page_gate_failed': 'region_inference_failed',
+        'generation_gate_timeout': 'region_backend_timeout',
+        'printed_page_gate_timeout': 'region_backend_timeout',
+        'generation_gate_wrong': 'generation_response_type_mismatch',
+        'printed_page_gate_wrong': 'generation_response_type_mismatch',
+        'generation_gate_reset_failed': 'region_reset_failed',
+        'printed_page_gate_reset_failed': 'region_reset_failed',
+    }
+    for scenario, error_code in failure_scenarios.items():
+        gate.touch()
+        entered.unlink()
+        engine = make_engine(scenario)
+        job = new_job(engine)
+        req = request()
+        result = []
+        worker = threading.Thread(target=lambda: result.append(lib.dococr_job_run(job, c.byref(req))))
+        worker.start()
+        deadline = time.monotonic() + 5
+        while time.monotonic() < deadline and not entered.exists():
+            time.sleep(0.005)
+        assert entered.exists(), scenario
+        assert lib.dococr_job_cancel(job) == 0
+        gate.unlink()
+        worker.join(timeout=5)
+        assert result == [6], (scenario, result)
+        _, snapshot = read_json(lib.dococr_job_status, job)
+        assert snapshot['state'] == 'failed' and snapshot['cancel_requested'], (scenario, snapshot)
+        assert snapshot['error']['code'] == error_code, (scenario, snapshot)
+        if scenario.endswith('_timeout'):
+            assert not snapshot['timeout_requested'], (scenario, snapshot)
+        if scenario.startswith('printed_page'):
+            _, manifest = read_json(lib.dococr_job_manifest, job)
+            assert manifest['failure_code'] == error_code, manifest
+            assert manifest['regions'][0]['status'] == 'failed', manifest
+            assert manifest['regions'][0]['stop_reason'] in ('error', 'timeout', 'reset_failed'), manifest
+        assert lib.dococr_job_destroy(job) == 0
+        assert lib.dococr_destroy(engine) == 0
+
+    # 同样的取消闸门若后端明确返回 stop_reason=cancelled，应保持取消终态。
+    for scenario in ('generation_gate_cancelled', 'printed_page_gate_cancelled'):
+        gate.touch()
+        entered.unlink()
+        engine = make_engine(scenario)
+        job = new_job(engine)
+        req = request()
+        result = []
+        worker = threading.Thread(target=lambda: result.append(lib.dococr_job_run(job, c.byref(req))))
+        worker.start()
+        deadline = time.monotonic() + 5
+        while time.monotonic() < deadline and not entered.exists():
+            time.sleep(0.005)
+        assert entered.exists(), scenario
+        assert lib.dococr_job_cancel(job) == 0
+        gate.unlink()
+        worker.join(timeout=5)
+        assert result == [7], (scenario, result)
+        _, snapshot = read_json(lib.dococr_job_status, job)
+        assert snapshot['state'] == 'cancelled' and snapshot['cancel_requested'], (scenario, snapshot)
+        if scenario.startswith('printed_page'):
+            _, manifest = read_json(lib.dococr_job_manifest, job)
+            assert manifest['regions'][0]['status'] == 'cancelled', manifest
+            assert manifest['regions'][0]['stop_reason'] == 'cancelled', manifest
+        assert lib.dococr_job_destroy(job) == 0
+        assert lib.dococr_destroy(engine) == 0
+
     # 后端在版面调用内收到取消后以异常返回，仍不可把页面计为完成。
     gate.touch()
     entered.unlink()

@@ -2,7 +2,7 @@
 
 ## 固定故障与公共边界
 
-`tests/job_control.py` 仅通过公共 C ABI 观察运行、事件、状态、清单、结果和句柄；fixture 的文件闸门固定后端推理停留位置。它覆盖单区域运行中取消、PDF 第二页排队取消、协作超时与 Busy、OOM、后端局部失败、后端重建失败、持续失败时最多一次显式重试、64 条事件队列溢出、终态事件留存以及多次作业的结果和内存释放。另有测试专用 Poppler wrapper 控制子进程停留在渲染期间，确认取消后仍等待子进程结束才释放作业，清单保留中断页及渲染时间；在取消后让子进程或区域后端返回实际错误时，测试还要求终态为失败、错误代码和取消请求均可查询。生产代码仍用 argv 启动真实 Poppler。`tests/cli_job_control.py` 从外部进程向 CLI 发送 SIGINT，并以固定闸门检查 `--timeout-ms` 的实时事件、状态文件及退出码。断言针对公共行为、已知原文和稳定状态，不依赖推理内部调用次数或运行快慢。
+`tests/job_control.py` 仅通过公共 C ABI 观察运行、事件、状态、清单、结果和句柄；fixture 的文件闸门固定后端推理停留位置。它覆盖单区域运行中取消、PDF 第二页排队取消、协作超时与 Busy、OOM、后端局部失败、后端重建失败、持续失败时最多一次显式重试、64 条事件队列溢出、终态事件留存以及多次作业的结果和内存释放。受控返回矩阵区分真实后端失败、后端超时、错误响应类型、reset 失败以及后端明确确认取消，并检查公开终态与错误代码。另有测试专用 Poppler wrapper 控制子进程停留在渲染期间，确认取消后仍等待子进程结束才释放作业，清单保留中断页及渲染时间；在取消后让子进程或区域后端返回实际错误时，测试还要求终态为失败、错误代码和取消请求均可查询。生产代码仍用 argv 启动真实 Poppler。`tests/cli_job_control.py` 从外部进程向 CLI 发送 SIGINT，并以固定闸门检查 `--timeout-ms` 的实时事件、状态文件及退出码。断言针对公共行为、已知原文和稳定状态，不依赖推理内部调用次数或运行快慢。
 
 真实双模型脚本 `tests/job_control_real.py` 在一个公共引擎上连续处理两次固定教材 JPG，要求两次匹配同一已知正文与原始模型输出，并检查每次终态、区域清单和后端可用状态。摘要保存在 `output/issue-12/real-continuous/summary.json`。原始模型输出两次须完全一致；与既有参考文本比较时只按原 #7 的首尾空白处理规则 `strip()`。`tests/job_control_real_cancel.py` 在公共 `layout_started` 事件后取消真实作业，核对重建完成，再于同一公共引擎处理固定页并与连续请求的 raw SHA-256 对比。这些输出目录不纳入提交。
 
@@ -17,6 +17,8 @@
 | `ctest --test-dir /tmp/dococr-issue12 --output-on-failure` | 0，14/14 通过，15.27 秒 | `/tmp/dococr-issue12-ctest.log`；包含公共接口、CLI、PDF 和既有功能回归 |
 | `cmake --build /tmp/dococr-issue12 --parallel 4 > /tmp/dococr-issue12-review-build.log 2>&1` | 0 | 双轴审查修复后的完整构建日志 |
 | `ctest --test-dir /tmp/dococr-issue12 --output-on-failure --parallel 4 > /tmp/dococr-issue12-review-ctest.log 2>&1` | 0，14/14 通过，4.79 秒 | 双轴审查修复后的完整测试日志 |
+| `cmake --build /tmp/dococr-issue12 --parallel 4 > /tmp/dococr-issue12-final-build.log 2>&1` | 0 | 受控返回矩阵修复后的完整构建日志 |
+| `ctest --test-dir /tmp/dococr-issue12 --output-on-failure --parallel 4 > /tmp/dococr-issue12-final-ctest.log 2>&1` | 0，14/14 通过，4.74 秒 | 受控返回矩阵修复后的完整测试日志 |
 | `python3 tests/job_control_real.py /tmp/dococr-issue12/libdococr_c.so output/issue-12/real-continuous` | 0 | `/tmp/dococr-issue12-real.stdout.log`、`/tmp/dococr-issue12-real.stderr.log`、`output/issue-12/real-continuous/summary.json` 与逐次原始文件 |
 | `python3 tests/job_control_real_cancel.py /tmp/dococr-issue12/libdococr_c.so output/issue-12/real-continuous output/issue-12/real-continuous/summary.json` | 0（取消进度修复前运行） | `/tmp/dococr-issue12-real-cancel.stdout.log`、`/tmp/dococr-issue12-real-cancel.stderr.log`、`output/issue-12/real-continuous/cancel-and-next.json` |
 

@@ -256,6 +256,25 @@ public:
             return {TensorOutput{{std::move(result)}}};
         }
         const auto& generation = std::get<GenerationRequest>(request.payload);
+        if (scenario_ == "generation_gate_failed" || scenario_ == "printed_page_gate_failed" ||
+            scenario_ == "generation_gate_cancelled" || scenario_ == "printed_page_gate_cancelled" ||
+            scenario_ == "generation_gate_timeout" || scenario_ == "printed_page_gate_timeout" ||
+            scenario_ == "generation_gate_wrong" || scenario_ == "printed_page_gate_wrong") {
+            const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
+            const char* entered = std::getenv("DOCOCR_TEST_ENTERED_PATH");
+            if (entered) std::ofstream(entered).put('1');
+            if (gate) while (std::filesystem::exists(gate))
+                std::this_thread::sleep_for(std::chrono::milliseconds(2));
+            if (scenario_ == "generation_gate_cancelled" || scenario_ == "printed_page_gate_cancelled")
+                return {GenerationOutput{"", "", "failed", "cancelled", "cancelled"}};
+            if (scenario_ == "generation_gate_timeout" || scenario_ == "printed_page_gate_timeout")
+                return {GenerationOutput{"", "controlled timeout raw", "failed",
+                                         "controlled_backend_timeout", "timeout"}};
+            if (scenario_ == "generation_gate_wrong" || scenario_ == "printed_page_gate_wrong")
+                return {TensorOutput{}};
+            return {GenerationOutput{"", "controlled failed raw", "failed",
+                                     "controlled_response_failure", "error"}};
+        }
         if (scenario_.rfind("printed_page", 0) == 0) {
             if (scenario_ == "printed_page_gate") {
                 const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
@@ -455,6 +474,15 @@ public:
     }
     bool reset() override {
         ++reset_count_;
+        if (scenario_ == "generation_gate_reset_failed" ||
+            scenario_ == "printed_page_gate_reset_failed") {
+            const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
+            const char* entered = std::getenv("DOCOCR_TEST_ENTERED_PATH");
+            if (entered) std::ofstream(entered).put('1');
+            if (gate) while (std::filesystem::exists(gate))
+                std::this_thread::sleep_for(std::chrono::milliseconds(2));
+            return false;
+        }
         return scenario_ != "reset_failure" &&
             !(scenario_ == "printed_page_reset_failure" && reset_count_ == 1);
     }
@@ -476,11 +504,21 @@ bool config_supported(const std::string& config) {
            config == "fixture:unknown" || config == "fixture:reset_failure" ||
            config == "fixture:generation_exception" || config == "fixture:wrong_response" ||
            config == "fixture:generation_gate_error" ||
+           config == "fixture:generation_gate_failed" ||
+           config == "fixture:generation_gate_cancelled" ||
+           config == "fixture:generation_gate_timeout" ||
+           config == "fixture:generation_gate_wrong" ||
+           config == "fixture:generation_gate_reset_failed" ||
            config == "fixture:layout_contract" || config == "fixture:layout_table" ||
            config == "fixture:layout_inline_formula" ||
            config == "fixture:layout_empty" ||
            config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||
            config == "fixture:printed_page_gate" ||
+           config == "fixture:printed_page_gate_failed" ||
+           config == "fixture:printed_page_gate_cancelled" ||
+           config == "fixture:printed_page_gate_timeout" ||
+           config == "fixture:printed_page_gate_wrong" ||
+           config == "fixture:printed_page_gate_reset_failed" ||
            config == "fixture:printed_page_layout_gate_error" ||
            config == "fixture:printed_page_oom_once" ||
            config == "fixture:printed_page_fail_once" ||
