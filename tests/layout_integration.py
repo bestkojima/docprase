@@ -94,6 +94,20 @@ def main():
         assert manifest['timing_status']['recognition'] == 'not_run'
         assert manifest['processing'][4]['status'] == 'skipped_disabled'
 
+        inline_out = root / 'inline-layout-only'
+        completed = run(binary, config('fixture:layout_inline_formula'), image, inline_out)
+        assert completed.returncode == 0, completed.stderr
+        inline_doc = json.loads((inline_out / 'document.json').read_text())
+        jsonschema.validate(inline_doc, SCHEMA)
+        assert inline_doc['schema_version'] == '1.0'
+        assert [block['type'] for block in inline_doc['pages'][0]['blocks']] == [
+            'text', 'formula']
+        assert inline_doc['pages'][0]['relations'] == []
+        assert [candidate['candidate_id'] for candidate in
+                inline_doc['layout_diagnostics']['candidates'] if candidate['selected']] == [0, 1]
+        assert all((inline_out / candidate['mask_asset']).exists() for candidate in
+                   inline_doc['layout_diagnostics']['candidates'] if candidate['selected'])
+
         empty = root / 'empty'
         completed = run(binary, config('fixture:layout_empty'), image, empty)
         assert completed.returncode == 0, completed.stderr

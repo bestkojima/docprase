@@ -8,7 +8,8 @@ namespace dococr {
 class FixtureBackend final : public IInferenceEngine {
 public:
     explicit FixtureBackend(std::string scenario) : scenario_(std::move(scenario)) {
-        if (scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
+        if (scenario_ == "layout_contract" || scenario_ == "layout_inline_formula" ||
+            scenario_ == "layout_empty" ||
             scenario_ == "layout_infer_failure")
             capabilities_.generation = false;
     }
@@ -21,7 +22,8 @@ public:
             loaded_.push_back(artifact);
         }
         if (!spec.config_hash.empty() && loaded_.size() !=
-            ((scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
+            ((scenario_ == "layout_contract" || scenario_ == "layout_inline_formula" ||
+              scenario_ == "layout_empty" ||
               scenario_ == "layout_infer_failure") ? 1u : 2u)) return false;
         return true;
     }
@@ -37,7 +39,8 @@ public:
     InferenceResponse execute(const InferenceRequest& request, ExecutionContext& context) override {
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
             if (scenario_.rfind("printed_page", 0) == 0 ||
-                scenario_ == "layout_contract" || scenario_ == "layout_empty" ||
+                scenario_ == "layout_contract" || scenario_ == "layout_inline_formula" ||
+                scenario_ == "layout_empty" ||
                 scenario_ == "layout_infer_failure") {
                 if (scenario_ == "layout_infer_failure")
                     throw std::runtime_error("layout_inference_failed:controlled");
@@ -63,16 +66,28 @@ public:
                     {22,.9f,-1e30f,0,1,1,13}};
                 if (scenario_.rfind("printed_page", 0) == 0) {
                     const float page_samples[][7] = {
-                        {22,.9f,0,0,2,1,0}, {22,.9f,0,1,2,2,1},
-                        {5,.9f,0,1,1,2,2}, {21,.9f,1,0,2,1,3},
+                        {22,.9f,0,0,2,1,0}, {22,.9f,0,1,1,2,1},
+                        {5,.9f,1,1,2,2,2}, {21,.9f,1,0,2,1,3},
                         {99,.9f,1,1,2,2,4}, {14,.9f,0,0,1,1,5}};
                     std::memcpy(rows.data(), page_samples, sizeof(page_samples));
+                    if (scenario_.rfind("printed_page_formula", 0) == 0) {
+                        const float formula_samples[][7] = {
+                            {22,.9f,0,0,2,1,0}, {5,.9f,1,0,2,1,1},
+                            {5,.9f,0,1,1,2,2}, {16,.9f,1,1,2,2,3}};
+                        std::memcpy(rows.data(), formula_samples, sizeof(formula_samples));
+                    }
                     if (scenario_ == "printed_page_filtered") rows[1] = .2f;
+                } else if (scenario_ == "layout_inline_formula") {
+                    const float inline_samples[][7] = {
+                        {22,.9f,0,0,2,2,0}, {5,.9f,0,0,1,1,1}};
+                    std::memcpy(rows.data(), inline_samples, sizeof(inline_samples));
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
                 int32_t count = scenario_ == "printed_page_filtered" || scenario_ == "printed_page_slow" ? 1 :
+                    scenario_.rfind("printed_page_formula", 0) == 0 ? 4 :
                     scenario_.rfind("printed_page", 0) == 0 ? 6 :
-                    scenario_ == "layout_contract" ? 7 : 0;
+                    scenario_ == "layout_contract" ? 7 :
+                    scenario_ == "layout_inline_formula" ? 2 : 0;
                 std::vector<int32_t> masks(300*200*200);
                 if (scenario_ == "layout_contract") {
                     masks[66] = 1;
@@ -139,6 +154,34 @@ public:
                 throw std::runtime_error(std::string("\xff", 1));
             GenerationOutput result;
             result.elapsed_ms = 2;
+            if (scenario_.rfind("printed_page_formula", 0) == 0) {
+                if (generation.task == "formula") {
+                    result.text = result.raw_output =
+                        scenario_ == "printed_page_formula_unclosed" ? "$$\\frac{a}{b}=c" :
+                        scenario_ == "printed_page_formula_fragment" ? "$a+(b$" :
+                        scenario_ == "printed_page_formula_mixed" ? "$a+b$，则" :
+                        scenario_ == "printed_page_formula_prose" ? "Please solve x+y" :
+                        scenario_ == "printed_page_formula_unknown_command" ? "$$\\foo{a}$$" :
+                        scenario_ == "printed_page_formula_missing_arg" ? "$$\\frac{a}$$" :
+                        scenario_ == "printed_page_formula_comparison" ? "$$x>0$$" :
+                        scenario_ == "printed_page_formula_chinese_text" ?
+                            "$$\\frac{\\text{甲}}{b}=c$$" :
+                        scenario_ == "printed_page_formula_inline_wrapper" ? "$x^2+1$" :
+                        scenario_ == "printed_page_formula_tagged" ? "$$x=1\\tag{1}$$" :
+                        "$$\n\\frac{a}{b}=c\n$$";
+                } else result.text = result.raw_output =
+                    generation.source_box.y0 == 0 ?
+                        scenario_ == "printed_page_formula_parent_unclosed" ? "设$x^2+1。" :
+                        scenario_ == "printed_page_formula_parent_missing_arg" ?
+                            "设$\\frac{a}$，请计算。" :
+                        scenario_ == "printed_page_formula_parent_single_symbol" ?
+                            "设$r$，可得$x^2+1$。" :
+                        "设$x^2+1$。" : "1. 请计算";
+                result.finish_reason = scenario_ == "printed_page_formula_truncated" &&
+                    generation.task == "formula" ? "truncated" : "complete";
+                result.stop_reason = result.finish_reason == "truncated" ? "token_limit" : "normal";
+                return {result};
+            }
             if (generation.task == "formula") {
                 result.text = result.raw_output = "## 公式=原始片段";
                 result.finish_reason = "complete"; result.stop_reason = "normal";
@@ -213,14 +256,30 @@ bool config_supported(const std::string& config) {
            config == "fixture:slow" || config == "fixture:invalid_utf8" ||
            config == "fixture:unknown" || config == "fixture:reset_failure" ||
            config == "fixture:generation_exception" || config == "fixture:wrong_response" ||
-           config == "fixture:layout_contract" || config == "fixture:layout_empty" ||
+           config == "fixture:layout_contract" || config == "fixture:layout_inline_formula" ||
+           config == "fixture:layout_empty" ||
            config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||
            config == "fixture:printed_page_failure" || config == "fixture:printed_page_empty" ||
            config == "fixture:printed_page_truncated" ||
            config == "fixture:printed_page_invalid_utf8" ||
            config == "fixture:printed_page_model_resource" ||
            config == "fixture:printed_page_reset_failure" ||
-           config == "fixture:printed_page_filtered" || config == "fixture:printed_page_slow";
+           config == "fixture:printed_page_filtered" || config == "fixture:printed_page_slow" ||
+           config == "fixture:printed_page_formula" ||
+           config == "fixture:printed_page_formula_unclosed" ||
+           config == "fixture:printed_page_formula_fragment" ||
+           config == "fixture:printed_page_formula_mixed" ||
+           config == "fixture:printed_page_formula_prose" ||
+           config == "fixture:printed_page_formula_unknown_command" ||
+           config == "fixture:printed_page_formula_missing_arg" ||
+           config == "fixture:printed_page_formula_comparison" ||
+           config == "fixture:printed_page_formula_chinese_text" ||
+           config == "fixture:printed_page_formula_parent_unclosed" ||
+           config == "fixture:printed_page_formula_parent_missing_arg" ||
+           config == "fixture:printed_page_formula_parent_single_symbol" ||
+           config == "fixture:printed_page_formula_inline_wrapper" ||
+           config == "fixture:printed_page_formula_tagged" ||
+           config == "fixture:printed_page_formula_truncated";
 }
 std::unique_ptr<IInferenceEngine> make_backend(const std::string& config) {
     return std::make_unique<FixtureBackend>(config.substr(8));

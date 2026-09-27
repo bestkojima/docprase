@@ -241,6 +241,7 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     const bool real_pair = plan->backend == "mnn:pp-doclayout-v3+ovisocr2";
     plan->layout_only = plan->backend == "mnn:pp-doclayout-v3" ||
                         plan->backend == "fixture:layout_contract" ||
+                        plan->backend == "fixture:layout_inline_formula" ||
                         plan->backend == "fixture:layout_empty" ||
                         plan->backend == "fixture:layout_infer_failure";
     if (plan->backend.rfind("fixture:", 0) == 0 && !fixture_build)

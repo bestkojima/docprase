@@ -30,7 +30,10 @@ def run(binary, scenario, root, image):
     document = json.loads((output / 'document.json').read_text())
     manifest = json.loads((output / 'run-manifest.json').read_text())
     import jsonschema
-    schema = json.loads((ROOT / 'docs/issue-4/document-ir-1.0.schema.json').read_text())
+    schema_path = ('docs/issue-8/document-ir-1.1.schema.json'
+                   if document['schema_version'] == '1.1'
+                   else 'docs/issue-4/document-ir-1.0.schema.json')
+    schema = json.loads((ROOT / schema_path).read_text())
     jsonschema.validate(document, schema)
     return output, document, manifest
 
@@ -48,12 +51,12 @@ def main():
         assert [block['type'] for block in blocks] == [
             'text', 'image', 'table', 'text', 'formula', 'unknown']
         assert [block['bbox'] for block in blocks] == [[0, 0, 2, 1], [0, 0, 1, 1],
-            [1, 0, 2, 1], [0, 1, 2, 2], [0, 1, 1, 2], [1, 1, 2, 2]]
+            [1, 0, 2, 1], [0, 1, 1, 2], [1, 1, 2, 2], [1, 1, 2, 2]]
         assert blocks[0]['content']['text'] == '中文，English!\n第二行。'
         assert blocks[0]['provenance']['raw_output'] == blocks[0]['content']['text']
         assert blocks[4]['content']['text'] == '## 公式=原始片段'
         assert blocks[4]['content']['format'] == 'markdown'
-        assert blocks[4]['error'] == 'specialized_parser_pending'
+        assert blocks[4]['error'] == 'invalid_formula_syntax'
         assert blocks[2]['content']['text'] == '<table><tr><td>甲</td></tr></table>'
         assert blocks[2]['content']['format'] == 'markdown'
         assert blocks[1]['content']['resource'] and blocks[5]['content']['resource']

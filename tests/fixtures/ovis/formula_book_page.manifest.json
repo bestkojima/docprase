@@ -1,0 +1,89 @@
+{
+  "source_dataset": "opendatalab/OmniDocBench",
+  "source_revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "source_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench",
+  "source_annotation_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496",
+  "source_page_index": 122,
+  "source_page": "page-89180317-baf8-4c13-9b21-722e7d634eeb.png",
+  "source_attributes": {
+    "data_source": "book",
+    "language": "simplified_chinese",
+    "layout": "single_column",
+    "special_issue": [],
+    "subset": "layout_hard"
+  },
+  "image": "formula_book_page.png",
+  "image_sha256": "861030411176ef8eb8cbf9607461d252b8db557808ab91e87a4e9bed4c69bb84",
+  "annotations": [
+    {
+      "category_type": "text_block",
+      "poly": [
+        282.0157257829244,
+        871.9792,
+        1357.934,
+        871.9792,
+        1357.934,
+        915.0168,
+        282.0157257829244,
+        915.0168
+      ],
+      "text": "1 写出特征方程$r ^ { n } + a _ { 1 } r ^ { n - 1 } + \\cdots + a _ { n - 1 } r + a _ { n } = 0$ 求出其特征根 $r _ { i } ( i = 1 , 2 , . . . , n )$"
+    },
+    {
+      "category_type": "equation_isolated",
+      "poly": [
+        274.06780000000003,
+        2015.9841000000001,
+        1211.650654545079,
+        2015.9841000000001,
+        1211.650654545079,
+        2107.9068000000007,
+        274.06780000000003,
+        2107.9068000000007
+      ],
+      "latex": "$$I_1 = \\int_{0}^{\\frac{\\pi}{4}} \\ln (1 + 2 \\sin x) \\cot x \\, dx,\nI_2 = \\int_{0}^{\\frac{\\pi}{4}} 2 \\cos x \\cot x \\, dx,\nI_3 = \\int_{0}^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx,\\text{则}$$"
+    },
+    {
+      "category_type": "equation_isolated",
+      "poly": [
+        277.87921107094354,
+        381.3225751738316,
+        1296.2344914368641,
+        381.3225751738316,
+        1296.2344914368641,
+        418.35370493647446,
+        277.87921107094354,
+        418.35370493647446
+      ],
+      "latex": "$$e ^ { \\alpha } x \\left[ \\left( A _ { 1 } + A _ { 2 } x + \\cdots + A _ { k } x ^ { k - 1 } \\right) \\cos \\beta x + \\left( B _ { 1 } + B _ { 2 } x + \\cdots + B _ { k } x ^ { k - 1 } \\right) \\sin \\beta x \\right]$$"
+    },
+    {
+      "category_type": "text_block",
+      "poly": [
+        277.8792110709436,
+        504.54860532420093,
+        927.3477463043233,
+        504.54860532420093,
+        927.3477463043233,
+        539.8916879263877,
+        277.8792110709436,
+        539.8916879263877
+      ],
+      "text": "$r ^ { n } + a _{ 1 } r ^ { n - 1 } + \\cdots + a _{ n - 1 } r + a _{ n } = 0$的 k 重复数根，"
+    },
+    {
+      "category_type": "equation_isolated",
+      "poly": [
+        282.15202876671657,
+        627.0360717759277,
+        1287.688830205752,
+        627.0360717759277,
+        1287.688830205752,
+        668.3400321541266,
+        282.15202876671657,
+        668.3400321541266
+      ],
+      "latex": "$$e ^ { \\alpha } x [ ( A _{ 1 } + A  _{ 2 } x ~ + \\cdot \\cdot \\cdot + A  _{ k } x ^ { k - 1 } ) \\mathrm { c o s } ~ \\beta x + ( B  _{ 1 } + B  _{ 2 } x + \\cdot \\cdot \\cdot + B _ { k } x ^ { k - 1 } ) \\sin \\beta x ]$$"
+    }
+  ]
+}

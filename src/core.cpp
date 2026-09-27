@@ -164,16 +164,53 @@ struct Block {
     float raw_box[4]{};
     bool clamped = false;
     bool untrusted_output = false;
+    bool display_formula = true;
+    std::vector<std::string> owned_layout_ids;
 };
 
 struct RawLayoutCandidate {
     int id = 0, class_id = 0, rank = 0, mask_nonzero = 0;
     float score = 0, box[4]{};
-    std::string label, reason;
+    std::string label, reason, handling_reason;
     std::string mask_asset;
     bool selected = false, clamped = false;
     Box crop;
 };
+
+struct InlineFormulaEvidence {
+    const RawLayoutCandidate* candidate;
+    int owner_candidate_id;
+    std::string layout_id;
+    std::string owner_block_id;
+};
+
+std::string canonical_label(int id);
+
+int box_area(Box box) { return (box.x1 - box.x0) * (box.y1 - box.y0); }
+
+bool contains(Box outer, Box inner) {
+    return outer.x0 <= inner.x0 && outer.y0 <= inner.y0 &&
+           outer.x1 >= inner.x1 && outer.y1 >= inner.y1;
+}
+
+int inline_formula_owner(const RawLayoutCandidate& formula,
+                         const std::vector<const RawLayoutCandidate*>& selected) {
+    if (canonical_label(formula.class_id) != "formula") return -1;
+    int owner = -1, smallest_area = std::numeric_limits<int>::max(), ties = 0;
+    for (const auto* candidate : selected) {
+        if (canonical_label(candidate->class_id) != "text" ||
+            candidate->class_id == 11 || candidate->class_id == 16 ||
+            !contains(candidate->crop, formula.crop)) continue;
+        int area = box_area(candidate->crop);
+        if (area <= box_area(formula.crop)) continue;
+        if (area < smallest_area) {
+            smallest_area = area;
+            owner = candidate->id;
+            ties = 1;
+        } else if (area == smallest_area) ++ties;
+    }
+    return ties == 1 ? owner : -1;
+}
 
 const char* layout_label(int id) {
     static const char* labels[] = {
@@ -297,6 +334,201 @@ bool decode_layout(const TensorOutput& result, std::vector<LayoutCandidate>& can
     return true;
 }
 
+struct ParsedFormula {
+    bool valid = false;
+    bool display = true;
+    std::string latex;
+};
+
+std::string trim_formula(const std::string& value) {
+    const auto start = value.find_first_not_of(" \t\r\n");
+    if (start == std::string::npos) return {};
+    const auto end = value.find_last_not_of(" \t\r\n");
+    return value.substr(start, end - start + 1);
+}
+
+size_t formula_argument_end(const std::string& value, size_t pos) {
+    while (pos < value.size() && (value[pos] == ' ' || value[pos] == '\t' ||
+                                  value[pos] == '\n')) ++pos;
+    if (pos == value.size() || value[pos] != '{') return std::string::npos;
+    int depth = 0;
+    for (size_t i = pos; i < value.size(); ++i) {
+        if (value[i] == '\\' && i + 1 < value.size() &&
+            (value[i+1] == '{' || value[i+1] == '}')) { ++i; continue; }
+        if (value[i] == '{') ++depth;
+        else if (value[i] == '}' && --depth == 0) return i + 1;
+    }
+    return std::string::npos;
+}
+
+ParsedFormula parse_formula(const std::string& raw) {
+    ParsedFormula result;
+    std::string value = trim_formula(raw);
+    if (value.empty()) return result;
+    const auto wrapped = [&](const std::string& open, const std::string& close,
+                             bool display) {
+        if (value.compare(0, open.size(), open) != 0) return false;
+        if (value.size() < open.size() + close.size() ||
+            value.compare(value.size() - close.size(), close.size(), close) != 0)
+            return false;
+        value = trim_formula(value.substr(open.size(), value.size() - open.size() - close.size()));
+        result.display = display;
+        return true;
+    };
+    bool has_wrapper = false;
+    if (value.rfind("$$", 0) == 0) has_wrapper = wrapped("$$", "$$", true);
+    else if (value.rfind("\\[", 0) == 0) has_wrapper = wrapped("\\[", "\\]", true);
+    else if (value.rfind("\\(", 0) == 0) has_wrapper = wrapped("\\(", "\\)", false);
+    else if (value[0] == '$') has_wrapper = wrapped("$", "$", false);
+    else if (value.find("$$") != std::string::npos || value.find("\\]") != std::string::npos ||
+             value.find("\\)") != std::string::npos) return result;
+    if (!has_wrapper && (raw.find("$$") != std::string::npos ||
+                         raw.find("\\[") != std::string::npos ||
+                         raw.find("\\(") != std::string::npos || raw[0] == '$'))
+        return result;
+    if (value.empty() || value.find("$$") != std::string::npos ||
+        value.find("\\[") != std::string::npos || value.find("\\]") != std::string::npos ||
+        value.find("\\(") != std::string::npos || value.find("\\)") != std::string::npos ||
+        value.find("![") != std::string::npos || value.find("\x60\x60\x60") != std::string::npos ||
+        value.find("\\tag") != std::string::npos || value.find("\\label") != std::string::npos)
+        return result;
+    int depth = 0, text_depth = -1, brackets = 0, parentheses = 0;
+    int left_count = 0, right_count = 0, begin_count = 0, end_count = 0;
+    bool next_text_brace = false, math_evidence = has_wrapper;
+    for (size_t i = 0; i < value.size(); ++i) {
+        unsigned char ch = static_cast<unsigned char>(value[i]);
+        if (ch == '\\') {
+            size_t start = ++i;
+            while (i < value.size() && ((value[i] >= 'A' && value[i] <= 'Z') ||
+                   (value[i] >= 'a' && value[i] <= 'z'))) ++i;
+            if (i == start) {
+                if (i >= value.size() || value[i] == '\n' || value[i] == '\r') return result;
+            } else {
+                std::string command = value.substr(start, i - start);
+                static const std::vector<std::string> known = {
+                    "frac", "dfrac", "tfrac", "sqrt", "left", "right", "text",
+                    "mathrm", "mathbf", "mathbb", "operatorname", "alpha", "beta",
+                    "gamma", "delta", "Delta", "theta", "lambda", "mu", "pi",
+                    "sum", "int", "lim", "infty", "cdots", "ldots", "dots",
+                    "sin", "cos", "tan", "cot", "ln", "log", "exp", "prime",
+                    "times", "cdot", "pm", "mp", "le", "leq", "ge", "geq",
+                    "ne", "neq", "approx", "in", "notin", "gt", "lt",
+                    "to", "rightarrow",
+                    "Rightarrow", "partial", "overline", "hat", "vec", "bar",
+                    "begin", "end", "quad", "qquad", "big", "Big", "bigl",
+                    "bigr", "Bigl", "Bigr", "langle", "rangle", "lvert",
+                    "rvert", "lbrace", "rbrace"
+                };
+                if (std::find(known.begin(), known.end(), command) == known.end())
+                    return result;
+                if (command == "frac" || command == "dfrac" || command == "tfrac") {
+                    size_t first = formula_argument_end(value, i);
+                    if (first == std::string::npos ||
+                        formula_argument_end(value, first) == std::string::npos)
+                        return result;
+                } else if (command == "sqrt") {
+                    size_t argument = i;
+                    if (argument < value.size() && value[argument] == '[') {
+                        argument = value.find(']', argument);
+                        if (argument == std::string::npos) return result;
+                        ++argument;
+                    }
+                    if (formula_argument_end(value, argument) == std::string::npos)
+                        return result;
+                } else if (command == "text" || command == "mathrm" ||
+                           command == "mathbf" || command == "mathbb" ||
+                           command == "operatorname" || command == "overline" ||
+                           command == "hat" || command == "vec" || command == "bar" ||
+                           command == "begin" || command == "end") {
+                    if (formula_argument_end(value, i) == std::string::npos)
+                        return result;
+                }
+                if (command == "left") ++left_count;
+                if (command == "right") ++right_count;
+                if (command == "begin") ++begin_count;
+                if (command == "end") ++end_count;
+                next_text_brace = command == "text" || command == "mathrm" ||
+                                  command == "operatorname";
+                math_evidence = true;
+                --i;
+            }
+            continue;
+        }
+        if (ch == '{') {
+            ++depth;
+            if (next_text_brace) text_depth = depth;
+            next_text_brace = false;
+        } else if (ch == '}') {
+            if (--depth < 0) return result;
+            if (text_depth > depth) text_depth = -1;
+        } else if (ch == '[') ++brackets;
+        else if (ch == ']') { if (--brackets < 0) return result; }
+        else if (ch == '(') ++parentheses;
+        else if (ch == ')') { if (--parentheses < 0) return result; }
+        else if (ch >= 0x80 && text_depth < 0) return result;
+        else if (ch == '$' || ch == '#' || ch == '\x60') return result;
+        else if (ch >= 'A' && ch <= 'Z' && text_depth < 0) {
+            size_t end = i + 1;
+            while (end < value.size() && ((value[end] >= 'A' && value[end] <= 'Z') ||
+                   (value[end] >= 'a' && value[end] <= 'z'))) ++end;
+            if (end - i > 2) return result;
+            i = end - 1;
+        } else if (ch >= 'a' && ch <= 'z' && text_depth < 0) {
+            size_t end = i + 1;
+            while (end < value.size() && ((value[end] >= 'A' && value[end] <= 'Z') ||
+                   (value[end] >= 'a' && value[end] <= 'z'))) ++end;
+            if (end - i > 2) return result;
+            i = end - 1;
+        }
+        else if (ch == '^' || ch == '_' || ch == '=' || ch == '<' || ch == '>' ||
+                 ch == '+' || ch == '-' ||
+                 ch == '*' || ch == '/' || ch == '{' || ch == '}') math_evidence = true;
+        else if (ch < 0x20 && ch != '\n' && ch != '\r' && ch != '\t') return result;
+    }
+    if (depth != 0 || brackets != 0 || parentheses != 0 ||
+        left_count != right_count || begin_count != end_count ||
+        value.back() == '\\' || value.back() == '^' || value.back() == '_' ||
+        value.back() == '+' || value.back() == '-' || value.back() == '=' ||
+        !math_evidence) return result;
+    result.valid = true;
+    result.latex = std::move(value);
+    return result;
+}
+
+bool valid_text_math(const std::string& text) {
+    for (size_t i = 0; i < text.size();) {
+        if (text[i] == '\\' && i + 1 < text.size() &&
+            (text[i+1] == '$' || text[i+1] == '\\')) { i += 2; continue; }
+        std::string close;
+        size_t open_length = 0;
+        if (text[i] == '$') {
+            open_length = i + 1 < text.size() && text[i+1] == '$' ? 2 : 1;
+            close = std::string(open_length, '$');
+        } else if (text[i] == '\\' && i + 1 < text.size() &&
+                   (text[i+1] == '(' || text[i+1] == '[')) {
+            open_length = 2;
+            close = text[i+1] == '(' ? "\\)" : "\\]";
+        } else if (text[i] == '\\' && i + 1 < text.size() &&
+                   (text[i+1] == ')' || text[i+1] == ']')) {
+            return false;
+        } else { ++i; continue; }
+        size_t end = i + open_length;
+        bool found = false;
+        for (; end + close.size() <= text.size(); ++end) {
+            if (text.compare(end, close.size(), close) != 0) continue;
+            size_t slashes = 0;
+            for (size_t k = end; k > 0 && text[k-1] == '\\'; --k) ++slashes;
+            if (slashes % 2 == 0 || close == "\\)" || close == "\\]") {
+                found = true; break;
+            }
+        }
+        if (!found || !parse_formula(text.substr(i, end + close.size() - i)).valid)
+            return false;
+        i = end + close.size();
+    }
+    return true;
+}
+
 std::string render(const Block& b) {
     auto safe_text = [](const std::string& source) {
         std::string result;
@@ -324,18 +556,23 @@ std::string render(const Block& b) {
         return b.text.empty() ? marker :
             (b.untrusted_output ? safe_text(b.text) : b.text) + "\n\n" + marker;
     }
-    if (b.type == "formula") return "$$\n" + b.text + "\n$$";
+    if (b.type == "formula") {
+        const std::string formula = b.untrusted_output ? safe_text(b.text) : b.text;
+        return b.display_formula ? "$$\n" + formula + "\n$$" : "$" + formula + "$";
+    }
     return b.untrusted_output ? safe_text(b.text) : b.text;
 }
 
 std::string serialize(const Image& image, const std::string& state,
                       const std::vector<Block>& blocks, const std::string& profile,
                       const std::vector<RawLayoutCandidate>* raw = nullptr,
-                      const std::string& overlay = {}) {
+                      const std::string& overlay = {},
+                      const std::vector<InlineFormulaEvidence>& inline_formulas = {}) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
-    out << "{\"schema_version\":\"1.0\",\"document_id\":" << json_quote(document_id(image))
+    out << "{\"schema_version\":" << json_quote(inline_formulas.empty() ? "1.0" : "1.1")
+        << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
         << ",\"source\":{\"type\":\"image\"},\"pages\":[{\"page_id\":\"p0001\",\"page_index\":0,"
         << "\"raster_size\":[" << image.width << ',' << image.height << "],\"coordinate_space\":\"raster_page\","
@@ -363,12 +600,30 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"provenance\":{\"model_profile\":" << json_quote(profile)
             << ",\"request_id\":\"layout-p0001\"}}";
     }
+    for (const auto& evidence : inline_formulas) {
+        const auto& c = *evidence.candidate;
+        if (!blocks.empty() || &evidence != &inline_formulas.front()) out << ',';
+        out << "{\"id\":" << json_quote(evidence.layout_id)
+            << ",\"page_id\":\"p0001\",\"label\":\"formula\",\"bbox\":" << box_json(c.crop)
+            << ",\"coordinate_space\":\"raster_page\",\"detection_score\":" << c.score
+            << ",\"candidate_rank\":" << c.rank << ",\"original_class_id\":" << c.class_id
+            << ",\"candidate_id\":" << c.id << ",\"mask_row\":" << c.id
+            << ",\"mask_nonzero\":" << c.mask_nonzero
+            << ",\"model_label\":" << json_quote(c.label)
+            << ",\"original_bbox\":[" << c.box[0] << ',' << c.box[1] << ','
+            << c.box[2] << ',' << c.box[3] << "],\"clamped\":"
+            << (c.clamped ? "true" : "false")
+            << ",\"provenance\":{\"model_profile\":" << json_quote(profile)
+            << ",\"request_id\":\"layout-p0001\"}}";
+    }
     out << "],\"regions\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
         out << "{\"id\":" << json_quote(b.region_id) << ",\"page_id\":\"p0001\",\"source_layout_block_ids\":["
-            << json_quote(b.layout_id) << "],\"bbox\":" << box_json(b.box)
+            << json_quote(b.layout_id);
+        for (const auto& owned : b.owned_layout_ids) out << ',' << json_quote(owned);
+        out << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\"}";
     }
     out << "],\"blocks\":[";
@@ -385,7 +640,7 @@ std::string serialize(const Image& image, const std::string& state,
                      b.type == "formula" ? "latex" : b.type == "table" ? "html" : "markdown")
             << ",\"text\":" << json_quote(b.text) << ",\"resource\":"
             << (b.resource.empty() ? "null" : json_quote(b.resource));
-        if (b.type == "formula") out << ",\"display\":true";
+        if (b.type == "formula") out << ",\"display\":" << (b.display_formula ? "true" : "false");
         out
             << "},\"provenance\":{\"model_profile\":" << json_quote(profile)
             << ",\"request_id\":" << json_quote("req" + id('r', i+1))
@@ -395,7 +650,15 @@ std::string serialize(const Image& image, const std::string& state,
             << "},\"error\":" << (b.error.empty() ? "null" : json_quote(b.error))
             << ",\"error_base64\":" << (b.error_base64.empty() ? "null" : json_quote(b.error_base64)) << "}";
     }
-    out << "],\"relations\":[]}],\"resources\":[";
+    out << "],\"relations\":[";
+    for (size_t i = 0; i < inline_formulas.size(); ++i) {
+        if (i) out << ',';
+        const auto& evidence = inline_formulas[i];
+        out << "{\"type\":\"content_owned_by\",\"source_layout_block_id\":"
+            << json_quote(evidence.layout_id) << ",\"owner_block_id\":"
+            << json_quote(evidence.owner_block_id) << "}";
+    }
+    out << "]}],\"resources\":[";
     bool first = true;
     for (const Block& b : blocks) if (!b.resource.empty()) {
         if (!first) out << ',';
@@ -425,7 +688,9 @@ std::string serialize(const Image& image, const std::string& state,
                 << "],\"rank\":" << c.rank << ",\"mask_nonzero\":" << c.mask_nonzero
                 << ",\"selected\":" << (c.selected ? "true" : "false")
                 << ",\"filter_reason\":" << (c.reason.empty() ? "null" : json_quote(c.reason))
-                << ",\"handling_reason\":" << (c.selected && c.label == "unknown" ? "\"unknown_class\"" : "null")
+                << ",\"handling_reason\":" << (c.handling_reason.empty() ?
+                    (c.selected && c.label == "unknown" ? "\"unknown_class\"" : "null") :
+                    json_quote(c.handling_reason))
                 << ",\"mask_asset\":" << (c.mask_asset.empty() ? "null" : json_quote(c.mask_asset))
                 << ",\"clamped\":" << (c.clamped ? "true" : "false")
                 << ",\"crop_bbox\":" << (c.selected ? box_json(c.crop) : "null") << '}';
@@ -592,12 +857,34 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         if (a->crop.y0 != b->crop.y0) return a->crop.y0 < b->crop.y0;
         return a->crop.x0 < b->crop.x0;
     });
+    std::vector<InlineFormulaEvidence> inline_formulas;
+    if (transcribe) for (const auto* candidate : selected) {
+        int owner = inline_formula_owner(*candidate, selected);
+        if (owner < 0) continue;
+        auto& owned = records[size_t(candidate->id)];
+        owned.handling_reason = "inline_formula_owned_by_text";
+        inline_formulas.push_back({candidate, owner,
+            id('l', selected.size() + size_t(candidate->id) + 1), {}});
+    }
     std::vector<Block> blocks;
     JobOutput result;
     result.assets = std::move(audit.output.assets);
+    for (const auto* candidate : selected) {
+        auto& mutable_candidate = records[size_t(candidate->id)];
+        mutable_candidate.mask_asset = "assets/p0001-mask-c" +
+            std::to_string(candidate->id) + ".png";
+        std::vector<uint8_t> mask_pixels = layout_page_mask(image, *candidate, masks);
+        std::vector<uint8_t> mask_png;
+        if (!stbi_write_png_to_func(png_write, &mask_png, image.width, image.height, 1,
+                                    mask_pixels.data(), image.width))
+            throw std::runtime_error("layout mask PNG encoding failed");
+        result.assets.push_back({mutable_candidate.mask_asset, std::move(mask_png)});
+    }
     bool recognition_unavailable = false;
     for (const auto* candidate : selected) {
         if (cancelled) return {RunCode::Cancelled, {}};
+        if (records[size_t(candidate->id)].handling_reason == "inline_formula_owned_by_text")
+            continue;
         Block block;
         size_t n = blocks.size()+1;
         block.id = id('b', n); block.layout_id = id('l', n); block.region_id = id('r', n);
@@ -612,17 +899,12 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         block.clamped = candidate->clamped;
         std::copy(std::begin(candidate->box), std::end(candidate->box), block.raw_box);
         block.status = "skipped";
+        for (const auto& evidence : inline_formulas)
+            if (evidence.owner_candidate_id == candidate->id)
+                block.owned_layout_ids.push_back(evidence.layout_id);
         block.error = block.type == "unknown" ? "unknown_layout_class" : "recognition_not_executed";
         block.resource = "assets/p0001-" + block.id + ".png";
         result.assets.push_back({block.resource, crop_png(image, block.box)});
-        auto& mutable_candidate = records[size_t(candidate->id)];
-        mutable_candidate.mask_asset = "assets/p0001-mask-c" + std::to_string(candidate->id) + ".png";
-        std::vector<uint8_t> mask_pixels = layout_page_mask(image, *candidate, masks);
-        std::vector<uint8_t> mask_png;
-        if (!stbi_write_png_to_func(png_write, &mask_png, image.width, image.height, 1,
-                                    mask_pixels.data(), image.width))
-            throw std::runtime_error("layout mask PNG encoding failed");
-        result.assets.push_back({mutable_candidate.mask_asset, std::move(mask_png)});
         audit.did_crop = true;
         if (transcribe) {
             const std::string request_id = "req" + block.region_id;
@@ -665,7 +947,23 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                                 !generation->raw_output.empty() && !generation->text.empty() &&
                                 valid_utf8(generation->raw_output) && valid_utf8(generation->text)) {
                                 if (block.type == "text") {
-                                    block.status = "ok"; block.error.clear();
+                                    if (valid_text_math(block.text)) {
+                                        block.status = "ok"; block.error.clear();
+                                    } else {
+                                        block.status = "partial";
+                                        block.error = "invalid_inline_formula_syntax";
+                                    }
+                                } else if (block.type == "formula") {
+                                    ParsedFormula formula = parse_formula(block.text);
+                                    if (formula.valid) {
+                                        block.status = "ok"; block.error.clear();
+                                        block.text = std::move(formula.latex);
+                                        block.display_formula = formula.display;
+                                    } else {
+                                        block.status = "partial";
+                                        block.error = "invalid_formula_syntax";
+                                        block.format_override = "markdown";
+                                    }
                                 } else {
                                     block.status = "partial"; block.error = "specialized_parser_pending";
                                     block.format_override = "markdown";
@@ -706,6 +1004,13 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         }
         blocks.push_back(std::move(block));
     }
+    for (auto& evidence : inline_formulas) {
+        auto owner = std::find_if(blocks.begin(), blocks.end(), [&](const Block& block) {
+            return block.candidate_id == evidence.owner_candidate_id;
+        });
+        if (owner == blocks.end()) throw std::runtime_error("inline_formula_owner_missing");
+        evidence.owner_block_id = owner->id;
+    }
     if (cancelled) return {RunCode::Cancelled, {}};
     const std::string overlay_name = "assets/p0001-layout-overlay.png";
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks)});
@@ -718,7 +1023,8 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         result.markdown += render(block);
     }
     if (!result.markdown.empty()) result.markdown += '\n';
-    result.json = serialize(image, state, blocks, backend->profile(), &records, overlay_name);
+    result.json = serialize(image, state, blocks, backend->profile(), &records,
+                            overlay_name, inline_formulas);
     audit.did_export = true;
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());
     uint64_t bytes = result.json.size() + result.markdown.size();
