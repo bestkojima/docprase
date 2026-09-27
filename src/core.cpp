@@ -451,33 +451,22 @@ Tensor geometry_tensor(const std::string& name, float first, float second) {
     return tensor;
 }
 
+std::vector<uint8_t> layout_page_mask(const Image& image, const RawLayoutCandidate& c,
+                                      const uint8_t* masks);
+
 std::vector<uint8_t> layout_overlay(const Image& image,
                                     const std::vector<RawLayoutCandidate>& records,
                                     const uint8_t* masks) {
     Image overlay = image;
     for (const auto& c : records) {
         if (!c.selected) continue;
-        int x0 = int(c.box[0]), y0 = int(c.box[1]);
-        int x1 = int(c.box[2]), y1 = int(c.box[3]);
-        int mx0 = std::clamp(int(std::nearbyint(double(x0)*200/image.width)), 0, 200);
-        int my0 = std::clamp(int(std::nearbyint(double(y0)*200/image.height)), 0, 200);
-        int mx1 = std::clamp(int(std::nearbyint(double(x1)*200/image.width)), 0, 200);
-        int my1 = std::clamp(int(std::nearbyint(double(y1)*200/image.height)), 0, 200);
-        if (mx1 > mx0 && my1 > my0 && x1 > x0 && y1 > y0) {
-            const uint8_t* mask = masks + size_t(c.id)*200*200*sizeof(int32_t);
-            for (int y = std::max(0,y0); y < std::min(image.height,y1); ++y)
-                for (int x = std::max(0,x0); x < std::min(image.width,x1); ++x) {
-                int mx = mx0 + int((int64_t(x-x0)*(mx1-mx0))/(x1-x0));
-                int my = my0 + int((int64_t(y-y0)*(my1-my0))/(y1-y0));
-                mx = std::clamp(mx, mx0, mx1-1); my = std::clamp(my, my0, my1-1);
-                int32_t bit;
-                std::memcpy(&bit, mask + (size_t(my)*200+mx)*sizeof(bit), sizeof(bit));
-                if (bit) {
-                    uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
-                    pixel[0] = uint8_t(pixel[0]/2);
-                    pixel[1] = uint8_t(pixel[1]/2 + 127);
-                    pixel[2] = uint8_t(pixel[2]/2);
-                }
+        auto page_mask = layout_page_mask(image, c, masks);
+        for (int y = c.crop.y0; y < c.crop.y1; ++y) for (int x = c.crop.x0; x < c.crop.x1; ++x) {
+            if (page_mask[size_t(y)*image.width+x]) {
+                uint8_t* pixel = overlay.rgb.data() + (size_t(y)*image.width+x)*3;
+                pixel[0] = uint8_t(pixel[0]/2);
+                pixel[1] = uint8_t(pixel[1]/2 + 127);
+                pixel[2] = uint8_t(pixel[2]/2);
             }
         }
         for (int x = c.crop.x0; x < c.crop.x1; ++x) {
