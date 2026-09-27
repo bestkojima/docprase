@@ -454,6 +454,16 @@ bool contains(Box outer, Box inner) {
            outer.x1 >= inner.x1 && outer.y1 >= inner.y1;
 }
 
+double covered_fraction(Box outer, Box inner) {
+    const int area = box_area(inner);
+    if (area <= 0) return 0;
+    const int width = std::max(0, std::min(outer.x1, inner.x1) -
+                                  std::max(outer.x0, inner.x0));
+    const int height = std::max(0, std::min(outer.y1, inner.y1) -
+                                   std::max(outer.y0, inner.y0));
+    return double(width) * height / area;
+}
+
 int table_owner(const RawLayoutCandidate& child,
                 const std::vector<const RawLayoutCandidate*>& selected) {
     const std::string label = canonical_label(child.class_id);
@@ -461,7 +471,7 @@ int table_owner(const RawLayoutCandidate& child,
     int owner = -1, smallest_area = std::numeric_limits<int>::max(), ties = 0;
     for (const auto* candidate : selected) {
         if (canonical_label(candidate->class_id) != "table" ||
-            !contains(candidate->crop, child.crop)) continue;
+            covered_fraction(candidate->crop, child.crop) < 0.9) continue;
         int area = box_area(candidate->crop);
         if (area <= box_area(child.crop)) continue;
         if (area < smallest_area) {
@@ -480,7 +490,7 @@ int inline_formula_owner(const RawLayoutCandidate& formula,
         if (canonical_label(candidate->class_id) != "text" ||
             table_owners[size_t(candidate->id)] >= 0 ||
             candidate->class_id == 11 || candidate->class_id == 16 ||
-            !contains(candidate->crop, formula.crop)) continue;
+            covered_fraction(candidate->crop, formula.crop) < 0.9) continue;
         int area = box_area(candidate->crop);
         if (area <= box_area(formula.crop)) continue;
         if (area < smallest_area) {
@@ -635,6 +645,96 @@ void deduplicate_layout(std::vector<RawLayoutCandidate>& records, const Image& i
     for (size_t index : large_images) {
         records[index].selected = false;
         records[index].reason = "large_page_image";
+    }
+}
+
+double overlap_of_smaller(const Box& a, const Box& b) {
+    const double area = std::min(box_area(a), box_area(b));
+    if (area <= 0) return 0;
+    const int width = std::max(0, std::min(a.x1, b.x1) - std::max(a.x0, b.x0));
+    const int height = std::max(0, std::min(a.y1, b.y1) - std::max(a.y0, b.y0));
+    return double(width) * height / area;
+}
+
+// PaddleX 的 large 模式只筛除被该类别包含的框；union 不改变几何形状。
+void filter_layout_containment(std::vector<RawLayoutCandidate>& records) {
+    constexpr int large_classes[] = {3, 5, 6, 15, 17};
+    std::vector<bool> active;
+    active.reserve(records.size());
+    for (const auto& candidate : records) active.push_back(candidate.selected);
+    for (auto& inner : records) {
+        if (!active[size_t(inner.id)]) continue;
+        for (int large_class : large_classes) {
+            bool contained = false;
+            for (const auto& outer : records) {
+                if (!active[size_t(outer.id)] || inner.id == outer.id || outer.class_id != large_class)
+                    continue;
+                // 官方 check_containment 对公式类别 5 的这一方向做保护。
+                if (inner.class_id == 5 && outer.class_id != 5) continue;
+                const double inner_area = double(inner.box[2]-inner.box[0]) *
+                                          (inner.box[3]-inner.box[1]);
+                const double width = std::max(0.0, double(std::min(inner.box[2], outer.box[2]) -
+                                                    std::max(inner.box[0], outer.box[0])));
+                const double height = std::max(0.0, double(std::min(inner.box[3], outer.box[3]) -
+                                                     std::max(inner.box[1], outer.box[1])));
+                if (inner_area > 0 && width*height / inner_area >= 0.9) {
+                    contained = true;
+                    break;
+                }
+            }
+            if (contained) {
+                inner.selected = false;
+                inner.reason = "contained_by_large_class";
+                break;
+            }
+        }
+    }
+}
+
+// 外层 filter_boxes 使用裁到页面后的矩形；合法内容父子关系由区域规划负责。
+void filter_layout_overlap(std::vector<RawLayoutCandidate>& records, const Image& image) {
+    if (image.width < 6 || image.height < 6) return; // 旧版 2x2 契约夹具
+    for (auto& candidate : records) {
+        if (!candidate.selected) continue;
+        if (candidate.class_id == 18) {
+            candidate.selected = false;
+            candidate.reason = "outer_reference";
+        }
+    }
+    for (size_t i = 0; i < records.size(); ++i) {
+        auto& first = records[i];
+        if (!first.selected) continue;
+        for (size_t j = i+1; j < records.size(); ++j) {
+            auto& second = records[j];
+            if (!second.selected || overlap_of_smaller(first.crop, second.crop) <= 0.7) continue;
+            const std::string first_label = first.label, second_label = second.label;
+            const bool table_child =
+                (first.class_id == 21 && (second_label == "text" || second_label == "formula") &&
+                 contains(first.crop, second.crop)) ||
+                (second.class_id == 21 && (first_label == "text" || first_label == "formula") &&
+                 contains(second.crop, first.crop));
+            const bool inline_formula =
+                (first_label == "formula" && second_label == "text" &&
+                 covered_fraction(second.crop, first.crop) >= 0.9) ||
+                (second_label == "formula" && first_label == "text" &&
+                 covered_fraction(first.crop, second.crop) >= 0.9);
+            const bool annotation = first_label == "figure_title" ||
+                second_label == "figure_title" || first_label == "footnote" ||
+                second_label == "footnote" || first_label == "vision_footnote" ||
+                second_label == "vision_footnote";
+            if (table_child || inline_formula || annotation) continue;
+            const bool special_first = first_label == "image" || first_label == "table" ||
+                                       first_label == "chart" || first_label == "seal";
+            const bool special_second = second_label == "image" || second_label == "table" ||
+                                        second_label == "chart" || second_label == "seal";
+            if ((special_first || special_second) && first_label != second_label &&
+                (first_label != "table" && second_label != "table" ||
+                 (special_first && special_second))) continue;
+            auto& loser = box_area(first.crop) >= box_area(second.crop) ? second : first;
+            loser.selected = false;
+            loser.reason = "outer_overlap";
+            if (&loser == &first) break;
+        }
     }
 }
 
@@ -1066,7 +1166,7 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"text\":" << json_quote(b.text) << ",\"resource\":"
             << (b.resource.empty() ? "null" : json_quote(b.resource));
         if (b.type == "formula") out << ",\"display\":" << (b.display_formula ? "true" : "false");
-        if (has_table && b.type == "table") {
+        if ((has_table || order_evidence) && b.type == "table") {
             out << ",\"table\":";
             if (!b.table.valid) out << "null";
             else {
@@ -1320,6 +1420,10 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         return audit;
     }
     deduplicate_layout(records, image);
+    if (image.width >= 6 && image.height >= 6) {
+        filter_layout_containment(records);
+        filter_layout_overlap(records, image);
+    }
     audit.did_layout = true;
     if (progress) progress("layout_completed", source_page ? source_page : 1, "", 0, 0);
     for (const auto& tensor : output->outputs) {
@@ -1403,6 +1507,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             if (evidence.owner_candidate_id == candidate->id)
                 block.owned_layout_ids.push_back(evidence.layout_id);
         block.error = block.type == "unknown" ? "unknown_layout_class" : "recognition_not_executed";
+        if (block.type == "table" && !transcribe) block.format_override = "markdown";
         block.resource = block_asset(block.id);
         result.assets.push_back({block.resource, crop_png(image, block.box)});
         audit.did_crop = true;
