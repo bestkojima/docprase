@@ -30,7 +30,7 @@ def main():
         doc = json.loads((out / 'document.json').read_text())
         candidates = doc['layout_diagnostics']['candidates']
         assert candidates[1]['filter_reason'] == 'contained_by_large_class'
-        assert candidates[3]['selected'] is True  # 90% 落在父正文内的公式
+        assert candidates[3]['selected'] is True  # 85.7% 落在父正文内的公式
         assert candidates[5]['selected'] is True  # 90% 落在父表内的文字
         assert candidates[9]['filter_reason'] == 'outer_overlap'
         assert candidates[10]['filter_reason'] == 'outer_overlap'  # 相近尺寸的图注重复框

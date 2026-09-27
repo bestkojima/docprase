@@ -490,7 +490,7 @@ int inline_formula_owner(const RawLayoutCandidate& formula,
         if (canonical_label(candidate->class_id) != "text" ||
             table_owners[size_t(candidate->id)] >= 0 ||
             candidate->class_id == 11 || candidate->class_id == 16 ||
-            covered_fraction(candidate->crop, formula.crop) < 0.9) continue;
+            covered_fraction(candidate->crop, formula.crop) < 0.85) continue;
         int area = box_area(candidate->crop);
         if (area <= box_area(formula.crop)) continue;
         if (area < smallest_area) {
@@ -715,9 +715,9 @@ void filter_layout_overlap(std::vector<RawLayoutCandidate>& records, const Image
                  covered_fraction(second.crop, first.crop) >= 0.9);
             const bool inline_formula =
                 (first_label == "formula" && second_label == "text" &&
-                 covered_fraction(second.crop, first.crop) >= 0.9) ||
+                 covered_fraction(second.crop, first.crop) >= 0.85) ||
                 (second_label == "formula" && first_label == "text" &&
-                 covered_fraction(first.crop, second.crop) >= 0.9);
+                 covered_fraction(first.crop, second.crop) >= 0.85);
             const bool annotation = first_label == "figure_title" ||
                 second_label == "figure_title" || first_label == "footnote" ||
                 second_label == "footnote" || first_label == "vision_footnote" ||
