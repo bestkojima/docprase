@@ -68,7 +68,7 @@ python3 scripts/issue14_linux_verify.py \
 
 本机为 Ubuntu Linux，`g++` 13.3.0、CMake 4.4.3、MNN 3.6.1（上述固定提交）。[`configure.log`](../../output/issue-14-linux/configure.log)、[`build.log`](../../output/issue-14-linux/build.log) 记录核心、MNN 后端、C ABI 与 CLI 构建退出 0；[`cli-ldd.txt`](../../output/issue-14-linux/cli-ldd.txt) 和 [`abi-ldd.txt`](../../output/issue-14-linux/abi-ldd.txt) 均解析出 MNN 与 LLM 等共享库，没有 `not found`。
 
-[`summary.json`](../../output/issue-14-linux/real/summary.json) 与 [`abi-result.json`](../../output/issue-14-linux/real/abi-result.json) 记录真实 CPU 单页命令、9 个模型工件 SHA、有效配置及 ABI 状态。CLI 退出 0；中文输入 `教材原图.jpg` 到中文输出目录 `中文教材页/job`，DocumentIR 1.3 为 `partial`，19 个块中正文 `b0003` 与固定参考完全匹配，导出 45 个资产文件；Markdown 的 5 处本地引用均在声明资源中。生产 `.so` 再次运行同页返回 0、45 个资产，ABI 返回的 JSON 和 Markdown 与 CLI 导出的字节 SHA 相同。原始正文模型输出保存在 [`raw-reference-block.txt`](../../output/issue-14-linux/real/raw-reference-block.txt)，其他块输出与逐区域停止原因保存在完整 [`document.json`](../../output/issue-14-linux/real/中文教材页/job/document.json) 和 [`run-manifest.json`](../../output/issue-14-linux/real/中文教材页/job/run-manifest.json)。
+[`summary.json`](../../output/issue-14-linux/real/summary.json) 与 [`abi-result.json`](../../output/issue-14-linux/real/abi-result.json) 记录真实 CPU 单页命令、9 个模型工件 SHA、有效配置及 ABI 状态。CLI 退出 0；中文输入 `教材原图.jpg` 到中文输出目录 `中文教材页/job`，DocumentIR 1.3 为 `partial`，19 个块中正文 `b0003` 经首尾空白规范化后与固定参考匹配，导出 45 个资产文件；Markdown 的 5 处本地引用均在声明资源中。生产 `.so` 再次运行同页返回 0，报告 45 个资产并取回首项；ABI 返回的 JSON 和 Markdown 与 CLI 导出的字节 SHA 相同。原始正文模型输出保存在 [`raw-reference-block.txt`](../../output/issue-14-linux/real/raw-reference-block.txt)，其他块输出与逐区域停止原因保存在完整 [`document.json`](../../output/issue-14-linux/real/中文教材页/job/document.json) 和 [`run-manifest.json`](../../output/issue-14-linux/real/中文教材页/job/run-manifest.json)。
 
 ## 边界
 
