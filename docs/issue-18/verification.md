@@ -30,7 +30,7 @@ build/dococr_issue18_token_probe output/resolution-diagnosis/effective-config.js
 
 ## 作业与保存契约
 
-生产后端先编码图像并预先取得视觉 token；`image_pad` 为 0 时不调用文本生成。DocumentIR 1.5 的图片区分于 PDF 结构，分别使用 `document-ir-1.5-image.schema.json` 与 `document-ir-1.5-pdf.schema.json`。区域 provenance 保存有效 token 数、证据类型、原裁图资源与页面 bbox、画布、内容尺寸、补白偏移和停止原因；资源始终是原裁图。失败和待核验块的 Markdown 展示原图及提示，原始输出只留在 JSON。JSON 重新导出验证视觉证据与画布，并复用相同展示规则。历史 1.1、1.2、1.3、1.4 保存文档仍按原 Schema 重新导出，缺失的视觉证据不会被补造。
+生产后端先编码图像并预先取得视觉 token；`image_pad` 为 0 时不调用文本生成。DocumentIR 1.5 的图片区分于 PDF 结构，分别使用 `document-ir-1.5-image.schema.json` 与 `document-ir-1.5-pdf.schema.json`。区域 provenance 保存有效 token 数、证据类型、原裁图资源与页面 bbox、画布、内容尺寸、补白偏移和停止原因；资源始终是原裁图。显式成功信号也按 1.5 保存证据和变换，不能因为 token 数为 0 就降为旧版本。失败和待核验块的 Markdown 展示原图及提示，原始输出只留在 JSON。JSON 重新导出验证视觉证据与画布，并复用相同展示规则。历史 1.1、1.2、1.3、1.4 保存文档仍按原 Schema 重新导出，缺失的视觉证据不会被补造。
 
 公共作业入口的受控视觉空结果覆盖“处理计数非零、视觉 token 为零”时的局部失败、正常区域继续输出及保存后重新导出；真实原裁图探针复现计数非零而 token 为零。连续作业、取消和其他现有回归由完整 CTest 套件覆盖。
 

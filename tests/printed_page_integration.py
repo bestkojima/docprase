@@ -52,6 +52,10 @@ def main():
         output, document, manifest = run(sys.argv[1], 'printed_page', root, image)
         page = document['pages'][0]
         blocks = page['blocks']
+        assert document['schema_version'] == '1.5'
+        assert blocks[0]['provenance']['visual']['evidence'] == 'explicit_success'
+        assert blocks[0]['provenance']['visual']['token_count'] == 0
+        assert blocks[0]['provenance']['visual']['canvas_size'] == [256, 256]
         assert [block['status'] for block in blocks] == [
             'ok', 'skipped', 'ok', 'ok', 'partial', 'skipped']
         assert [block['type'] for block in blocks] == [

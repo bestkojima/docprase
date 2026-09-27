@@ -84,11 +84,11 @@ def main():
 
         generated = {}
         for scenario, version in [('formula_table', '1.0'),
-                                  ('printed_page_formula', '1.3'),
-                                  ('printed_page_table', '1.3'),
-                                  ('printed_page_reading', '1.3'),
+                                  ('printed_page_formula', '1.5'),
+                                  ('printed_page_table', '1.5'),
+                                  ('printed_page_reading', '1.5'),
                                   ('printed_page_visual_empty', '1.5'),
-                                  ('printed_page_failure', '1.3')]:
+                                  ('printed_page_failure', '1.5')]:
             if scenario == 'formula_table':
                 saved = root / scenario
                 run(fixture, '--backend', 'fixture:formula_table', '--input', image, '--out', str(saved))
@@ -115,6 +115,7 @@ def main():
         old_formula['pages'][0].pop('reading_order_evidence', None)
         for block in old_formula['pages'][0]['blocks']:
             block['reading_order_source'] = 'geometry'
+            block['provenance'].pop('visual', None)
         jsonschema.validate(old_formula, json.loads((ROOT / 'docs/issue-8/document-ir-1.1.schema.json').read_text()))
         reexport(formula_saved, old_formula)
         legacy = copy.deepcopy(table)
@@ -122,6 +123,7 @@ def main():
         legacy['pages'][0].pop('reading_order_evidence', None)
         for block in legacy['pages'][0]['blocks']:
             block['reading_order_source'] = 'geometry'
+            block['provenance'].pop('visual', None)
         # 1.2 的表格语义与 1.3 相同；保存后的旧版文件仍须可读。
         jsonschema.validate(legacy, json.loads((ROOT / 'docs/issue-9/document-ir-1.2.schema.json').read_text()))
         reexport(table_saved, legacy)
@@ -190,7 +192,7 @@ def main():
         assert '归属' in reexport(table_saved, current, code=3).stderr
         current = copy.deepcopy(table)
         current['pages'][0]['blocks'][0]['content']['resource'] = 'assets/absent.png'
-        assert 'resource' in reexport(table_saved, current, code=3).stderr
+        assert '原裁图资源不一致' in reexport(table_saved, current, code=3).stderr
         missing = root / 'missing-assets'
         missing.mkdir()
         assert '资源缺失' in reexport(table_saved, code=3, asset_root=missing).stderr
@@ -211,7 +213,7 @@ def main():
         run(fixture, '--config', str(setting), '--input', str(pdf), '--out', str(pdf_saved),
             '--dpi', '72')
         pdf_data = json.loads((pdf_saved / 'document.json').read_text())
-        assert pdf_data['schema_version'] == '1.4'
+        assert pdf_data['schema_version'] == '1.5'
         assert [p['status'] for p in pdf_data['pages']] == ['partial', 'failed', 'blank']
         reexport(pdf_saved)
         visual_pdf = copy.deepcopy(pdf_data)
@@ -277,7 +279,7 @@ def main():
         assert '表格单元格' in reexport(table_saved, bad, code=3).stderr
         duplicate = root / 'duplicate.json'
         duplicate.write_text((table_saved / 'document.json').read_text().replace(
-            '"schema_version":"1.3"', '"schema_version":"1.3","schema_version":"1.3"', 1))
+            '"schema_version":"1.5"', '"schema_version":"1.5","schema_version":"1.5"', 1))
         target = root / 'duplicate-out'
         assert '重复' in run(production, '--reexport', str(duplicate), '--asset-root',
                             str(table_saved), '--out', str(target), code=3, cwd=root).stderr

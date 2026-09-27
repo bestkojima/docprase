@@ -930,7 +930,7 @@ std::string serialize(const Image& image, const std::string& state,
     bool has_table = structured_tables &&
         std::any_of(blocks.begin(), blocks.end(), [](const Block& b) { return b.type == "table"; });
     const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
-        return !b.visual.visual_evidence.empty() && b.visual.visual_evidence != "explicit_success";
+        return !b.visual.visual_evidence.empty();
     });
     out << "{\"schema_version\":" << json_quote(has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")

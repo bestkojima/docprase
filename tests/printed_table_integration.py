@@ -18,7 +18,7 @@ def main():
         image.write_bytes(png_2x2())
         out, doc, manifest = run(sys.argv[1], 'printed_page_table', root, image)
         page = doc['pages'][0]
-        assert doc['schema_version'] == '1.3'
+        assert doc['schema_version'] == '1.5'
         assert [block['type'] for block in page['blocks']] == ['text', 'table']
         table = page['blocks'][1]
         assert table['status'] == 'ok'
@@ -44,7 +44,7 @@ def main():
         assert '外部表题' in markdown
         assert len(manifest['regions']) == 2
         schema = json.loads((Path(__file__).resolve().parents[1] /
-                             'docs/issue-10/document-ir-1.3.schema.json').read_text())
+                             'docs/issue-18/document-ir-1.5-image.schema.json').read_text())
         for status in ('partial', 'failed', 'skipped'):
             invalid = copy.deepcopy(doc)
             invalid_table = invalid['pages'][0]['blocks'][1]
