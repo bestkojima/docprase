@@ -118,7 +118,7 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
         auto cancel_with_evidence = [&](const Json* in_flight = nullptr) {
             if (in_flight) {
                 Json interrupted = *in_flight;
-                interrupted["status"] = "cancelled";
+                if (!interrupted.contains("status")) interrupted["status"] = "cancelled";
                 page_runs.push_back(std::move(interrupted));
             }
             result.run.code = RunCode::Cancelled;
@@ -129,6 +129,18 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                 {"completed_pages", in_flight ? page_runs.size() - 1 : page_runs.size()},
                 {"total_wall_ms", milliseconds(document_start)}}.dump();
             return result;
+        };
+        auto failure_with_evidence = [&](Json& in_flight, const std::string& code,
+                                         const std::string& message) {
+            in_flight["status"] = "failed";
+            in_flight["error"] = {{"code", code}, {"message", message}};
+            auto failed = cancel_with_evidence(&in_flight);
+            failed.run.code = code.find("budget") != std::string::npos ?
+                              RunCode::BudgetExceeded : RunCode::Failed;
+            failed.run.error_code = code;
+            failed.run.error_message = message;
+            if (failed.run.code == RunCode::BudgetExceeded) failed.run.budget_stage = code;
+            return failed;
         };
         const uint32_t selected_count = last - first + 1;
         for (uint32_t page = first; page <= last; ++page) {
@@ -246,7 +258,7 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
             } catch (const PdfError& error) {
                 if (cancelled) {
                     record["total_ms"] = milliseconds(page_start);
-                    return cancel_with_evidence(&record);
+                    return failure_with_evidence(record, error.code, error.what());
                 }
                 ++failure_count;
                 if (first_failure_code.empty()) {
@@ -265,7 +277,7 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
               catch (const std::exception& error) {
                 if (cancelled) {
                     record["total_ms"] = milliseconds(page_start);
-                    return cancel_with_evidence(&record);
+                    return failure_with_evidence(record, "pdf_page_failed", error.what());
                 }
                 ++failure_count;
                 if (first_failure_code.empty()) {

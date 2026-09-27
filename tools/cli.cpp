@@ -15,6 +15,25 @@ namespace fs = std::filesystem;
 namespace {
 volatile std::sig_atomic_t interrupt_requested = 0;
 void on_interrupt(int) { interrupt_requested = 1; }
+struct OwnedBytes {
+    DocOcrBytes value{};
+    ~OwnedBytes() { if (value.data) dococr_bytes_free(&value); }
+};
+struct OwnedSession {
+    DocOcrHandle engine = 0;
+    DocOcrJob job = 0;
+    ~OwnedSession() {
+        if (job) dococr_job_destroy(job);
+        if (engine) dococr_destroy(engine);
+    }
+};
+struct OwnedResult {
+    DocOcrResult value{sizeof(DocOcrResult), {}, {}};
+    ~OwnedResult() {
+        if (value.json.data) dococr_bytes_free(&value.json);
+        if (value.markdown.data) dococr_bytes_free(&value.markdown);
+    }
+};
 bool write_file(const fs::path& path, const DocOcrBytes& bytes) {
     fs::create_directories(path.parent_path());
     std::ofstream file(path, std::ios::binary);
@@ -22,16 +41,14 @@ bool write_file(const fs::path& path, const DocOcrBytes& bytes) {
     return bool(file);
 }
 bool write_audit(const fs::path& output_path, DocOcrHandle engine, DocOcrJob job) {
-    DocOcrBytes plan{}, manifest{};
-    DocOcrStatus plan_status = dococr_execution_plan(engine, &plan);
-    DocOcrStatus manifest_status = dococr_job_manifest(job, &manifest);
+    OwnedBytes plan, manifest;
+    DocOcrStatus plan_status = dococr_execution_plan(engine, &plan.value);
+    DocOcrStatus manifest_status = dococr_job_manifest(job, &manifest.value);
     bool ok = manifest_status == DOCOCR_OK &&
               (plan_status == DOCOCR_NO_RESULT || plan_status == DOCOCR_OK);
     if (ok && plan_status == DOCOCR_OK)
-        ok = write_file(output_path / "execution-plan.json", plan);
-    if (ok) ok = write_file(output_path / "run-manifest.json", manifest);
-    if (plan.data) dococr_bytes_free(&plan);
-    if (manifest.data) dococr_bytes_free(&manifest);
+        ok = write_file(output_path / "execution-plan.json", plan.value);
+    if (ok) ok = write_file(output_path / "run-manifest.json", manifest.value);
     return ok;
 }
 uint64_t positive_number(const std::string& value) {
@@ -98,19 +115,19 @@ int main(int argc, char** argv) {
         }
         if (format != DOCOCR_DOCUMENT_PDF && (pages_set || dpi_set || pixels_set))
             throw std::invalid_argument("PDF 参数仅适用于 PDF 输入");
-        DocOcrHandle engine = 0;
+        OwnedSession session;
+        DocOcrHandle& engine = session.engine;
+        DocOcrJob& job = session.job;
         DocOcrStatus status = dococr_create({backend.data(), backend.size()}, &engine);
         if (status != DOCOCR_OK) {
-            DocOcrBytes error{};
-            if (dococr_last_error(&error) == DOCOCR_OK && error.size)
-                std::cerr << std::string(reinterpret_cast<const char*>(error.data), error.size) << '\n';
+            OwnedBytes error;
+            if (dococr_last_error(&error.value) == DOCOCR_OK && error.value.size)
+                std::cerr << std::string(reinterpret_cast<const char*>(error.value.data), error.value.size) << '\n';
             else std::cerr << "创建引擎失败，状态码：" << status << '\n';
-            if (error.data) dococr_bytes_free(&error);
             return 3;
         }
-        DocOcrJob job = 0;
         status = dococr_job_create(engine, &job);
-        if (status != DOCOCR_OK) { dococr_destroy(engine); return 3; }
+        if (status != DOCOCR_OK) return 3;
         std::signal(SIGINT, on_interrupt);
         std::atomic_bool finished{false};
         std::thread monitor([&] {
@@ -119,12 +136,12 @@ int main(int argc, char** argv) {
                 fs::create_directories(output_path);
                 std::ofstream stream(output_path / "job-events.jsonl", std::ios::binary);
                 auto drain = [&] {
-                    DocOcrBytes event{};
-                    while (dococr_job_next_event(job, &event) == DOCOCR_OK) {
-                        std::string line(reinterpret_cast<const char*>(event.data), event.size);
+                    while (true) {
+                        OwnedBytes event;
+                        if (dococr_job_next_event(job, &event.value) != DOCOCR_OK) break;
+                        std::string line(reinterpret_cast<const char*>(event.value.data), event.value.size);
                         std::cout << line << '\n' << std::flush;
                         if (stream) stream << line << '\n' << std::flush;
-                        dococr_bytes_free(&event);
                     }
                 };
                 while (!finished) {
@@ -136,49 +153,52 @@ int main(int argc, char** argv) {
                     std::this_thread::sleep_for(std::chrono::milliseconds(10));
                 }
                 drain();
-            } catch (...) { /* 公共状态及原始运行结果仍可在主线程读取。 */ }
+            } catch (...) {
+                /* 事件导出失败后仍继续处理 SIGINT，直到同步运行返回。 */
+                while (!finished) {
+                    if (interrupt_requested && !cancel_sent) {
+                        dococr_job_cancel(job);
+                        cancel_sent = true;
+                    }
+                    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                }
+            }
         });
         status = dococr_job_run(job, &request);
         finished = true;
         monitor.join();
-        DocOcrBytes final_status{};
-        if (dococr_job_status(job, &final_status) == DOCOCR_OK) {
-            write_file(output_path / "job-status.json", final_status);
-            dococr_bytes_free(&final_status);
+        OwnedBytes final_status;
+        if (dococr_job_status(job, &final_status.value) == DOCOCR_OK) {
+            write_file(output_path / "job-status.json", final_status.value);
         }
         if (status != DOCOCR_OK) {
-            DocOcrBytes event{};
-            if (dococr_job_poll_events(job, &event) == DOCOCR_OK && event.size)
-                std::cerr << std::string(reinterpret_cast<const char*>(event.data), event.size) << '\n';
+            OwnedBytes event;
+            if (dococr_job_poll_events(job, &event.value) == DOCOCR_OK && event.value.size)
+                std::cerr << std::string(reinterpret_cast<const char*>(event.value.data), event.value.size) << '\n';
             else std::cerr << "作业运行失败，状态码：" << status << '\n';
-            if (event.data) dococr_bytes_free(&event);
             if ((configured || format == DOCOCR_DOCUMENT_PDF) &&
                 !write_audit(output_path, engine, job))
                 std::cerr << "运行清单导出失败\n";
-            dococr_job_destroy(job); dococr_destroy(engine);
             return status == DOCOCR_UNSUPPORTED ? 4 : status == DOCOCR_BUDGET_EXCEEDED ? 5 :
                    status == DOCOCR_TIMEOUT ? 6 : status == DOCOCR_CANCELLED ? 130 : 3;
         }
-        DocOcrResult result{sizeof(DocOcrResult), {}, {}};
-        status = dococr_job_result(job, &result);
-        if (status != DOCOCR_OK) { dococr_job_destroy(job); dococr_destroy(engine); return 3; }
-        bool ok = write_file(output_path / "document.json", result.json) &&
-                  write_file(output_path / "document.md", result.markdown);
+        OwnedResult result;
+        status = dococr_job_result(job, &result.value);
+        if (status != DOCOCR_OK) return 3;
+        bool ok = write_file(output_path / "document.json", result.value.json) &&
+                  write_file(output_path / "document.md", result.value.markdown);
         if (configured || format == DOCOCR_DOCUMENT_PDF)
             ok = write_audit(output_path, engine, job) && ok;
         size_t count = 0;
         if (dococr_job_asset_count(job, &count) != DOCOCR_OK) ok = false;
         for (size_t i = 0; ok && i < count; ++i) {
-            DocOcrBytes name{}, data{};
-            if (dococr_job_asset(job, i, &name, &data) != DOCOCR_OK) { ok = false; break; }
-            std::string relative(reinterpret_cast<const char*>(name.data), name.size);
+            OwnedBytes name, data;
+            if (dococr_job_asset(job, i, &name.value, &data.value) != DOCOCR_OK) { ok = false; break; }
+            std::string relative(reinterpret_cast<const char*>(name.value.data), name.value.size);
             fs::path asset_path = fs::u8path(relative);
             if (asset_path.is_absolute() || relative.find("..") != std::string::npos) ok = false;
-            else ok = write_file(output_path / asset_path, data);
-            dococr_bytes_free(&name); dococr_bytes_free(&data);
+            else ok = write_file(output_path / asset_path, data.value);
         }
-        dococr_bytes_free(&result.json); dococr_bytes_free(&result.markdown);
-        dococr_job_destroy(job); dococr_destroy(engine);
         if (!ok) { std::cerr << "导出失败\n"; return 3; }
         std::cout << "已导出：" << output_path.u8string() << '\n';
         return 0;

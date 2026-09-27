@@ -434,6 +434,14 @@ public:
             return {GenerationOutput{"", "partial raw output", "failed", "fixture controlled failure"}};
         if (scenario_ == "generation_exception" && generation.source_box.y0 == 0)
             throw std::runtime_error("controlled region exception");
+        if (scenario_ == "generation_gate_error") {
+            const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
+            const char* entered = std::getenv("DOCOCR_TEST_ENTERED_PATH");
+            if (entered) std::ofstream(entered).put('1');
+            if (gate) while (std::filesystem::exists(gate))
+                std::this_thread::sleep_for(std::chrono::milliseconds(2));
+            if (context.cancelled) throw std::runtime_error("controlled_region_failure_after_cancel");
+        }
         if (scenario_ == "wrong_response" && generation.source_box.y0 == 0)
             return {TensorOutput{}};
         if (scenario_ == "invalid_utf8")
@@ -467,6 +475,7 @@ bool config_supported(const std::string& config) {
            config == "fixture:slow" || config == "fixture:invalid_utf8" ||
            config == "fixture:unknown" || config == "fixture:reset_failure" ||
            config == "fixture:generation_exception" || config == "fixture:wrong_response" ||
+           config == "fixture:generation_gate_error" ||
            config == "fixture:layout_contract" || config == "fixture:layout_table" ||
            config == "fixture:layout_inline_formula" ||
            config == "fixture:layout_empty" ||

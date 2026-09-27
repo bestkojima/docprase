@@ -139,6 +139,29 @@ def main():
     assert lib.dococr_job_destroy(job) == 0
     assert lib.dococr_destroy(engine) == 0
 
+    # 取消与区域后端异常同时发生时，公开终态须保留已知后端错误。
+    gate.touch()
+    entered.unlink()
+    engine = make_engine('generation_gate_error')
+    job = new_job(engine)
+    req = request()
+    result = []
+    worker = threading.Thread(target=lambda: result.append(lib.dococr_job_run(job, c.byref(req))))
+    worker.start()
+    deadline = time.monotonic() + 5
+    while time.monotonic() < deadline and not entered.exists():
+        time.sleep(0.005)
+    assert entered.exists()
+    assert lib.dococr_job_cancel(job) == 0
+    gate.unlink()
+    worker.join(timeout=5)
+    assert result == [6], result
+    _, snapshot = read_json(lib.dococr_job_status, job)
+    assert snapshot['state'] == 'failed' and snapshot['cancel_requested'], snapshot
+    assert snapshot['error']['code'] == 'region_inference_exception', snapshot
+    assert lib.dococr_job_destroy(job) == 0
+    assert lib.dococr_destroy(engine) == 0
+
     # 后端在版面调用内收到取消后以异常返回，仍不可把页面计为完成。
     gate.touch()
     entered.unlink()
@@ -332,6 +355,10 @@ def main():
                         'case " $* " in *" -png "*)\n'
                         '  touch "$DOCOCR_TEST_RENDER_ENTERED"\n'
                         '  while [ -e "$DOCOCR_TEST_RENDER_GATE" ]; do sleep 0.01; done\n'
+                        '  if [ "$DOCOCR_TEST_RENDER_FAIL" = "1" ]; then\n'
+                        '    echo controlled_render_failure >&2\n'
+                        '    exit 23\n'
+                        '  fi\n'
                         '  ;;\n'
                         'esac\n'
                         'exec ' + shlex.quote(shutil.which('pdftoppm')) + ' "$@"\n')
@@ -363,6 +390,34 @@ def main():
     assert manifest['pdf']['pages'][0]['render_ms'] > 0
     assert lib.dococr_job_destroy(job) == 0
     assert lib.dococr_destroy(engine) == 0
+    # 子进程在收到取消后实际失败时，失败代码、页面错误和取消请求均可追溯。
+    render_gate.touch()
+    render_entered.unlink()
+    os.environ['DOCOCR_TEST_RENDER_FAIL'] = '1'
+    engine = make_engine('printed_page')
+    job = new_job(engine)
+    result = []
+    worker = threading.Thread(target=lambda: result.append(lib.dococr_job_run(job, c.byref(pdf_request))))
+    worker.start()
+    deadline = time.monotonic() + 8
+    while time.monotonic() < deadline and not render_entered.exists():
+        time.sleep(0.01)
+    assert render_entered.exists(), result
+    assert lib.dococr_job_cancel(job) == 0
+    render_gate.unlink()
+    worker.join(timeout=8)
+    assert result == [6], result
+    _, snapshot = read_json(lib.dococr_job_status, job)
+    assert snapshot['state'] == 'failed' and snapshot['cancel_requested'], snapshot
+    assert snapshot['error']['code'] == 'pdf_tool_failed', snapshot
+    _, manifest = read_json(lib.dococr_job_manifest, job)
+    assert manifest['failure_code'] == 'pdf_tool_failed', manifest
+    assert manifest['pdf']['pages'][0]['status'] == 'failed', manifest
+    assert manifest['pdf']['pages'][0]['error']['code'] == 'pdf_tool_failed', manifest
+    assert manifest['pdf']['completed_pages'] == 0, manifest
+    assert lib.dococr_job_destroy(job) == 0
+    assert lib.dococr_destroy(engine) == 0
+    os.environ.pop('DOCOCR_TEST_RENDER_FAIL')
     os.environ.pop('DOCOCR_POPPLER_BIN')
     os.environ.pop('DOCOCR_TEST_RENDER_GATE')
     os.environ.pop('DOCOCR_TEST_RENDER_ENTERED')

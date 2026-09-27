@@ -1602,7 +1602,16 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
                   if (!reset_completed) audit.reset_failed = true;
                   recognition_unavailable = true;
               }
-            if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
+            if (cancelled) {
+                if (!local_error.empty()) {
+                    audit.code = RunCode::Failed;
+                    audit.error_code = audit.reset_failed ? "region_reset_failed" :
+                                       "region_inference_exception";
+                    audit.error_message = local_error;
+                    audit.regions.push_back({request_id, "failed", "backend_error", 0});
+                } else audit.code = RunCode::Cancelled;
+                return audit;
+            }
             bool text_valid = valid_utf8(generation.text);
             bool raw_valid = valid_utf8(generation.raw_output);
             bool error_valid = valid_utf8(generation.error);
