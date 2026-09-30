@@ -180,7 +180,8 @@ std::string document_id(const Image& image) {
 struct Block {
     std::string id, layout_id, region_id, type, status, text, raw, raw_base64, text_base64,
                 error, error_base64, resource, format_override;
-    Box box;
+    Box box, layout_box;
+    bool crop_expanded = false;
     float detection_score = 0;
     int candidate_rank = 0;
     int original_class_id = 0;
@@ -436,6 +437,8 @@ struct RawLayoutCandidate {
     std::string mask_asset;
     bool selected = false, clamped = false;
     Box crop;
+    Box recognition_crop;
+    bool crop_expanded = false;
 };
 
 struct OwnershipEvidence {
@@ -521,7 +524,7 @@ std::string canonical_label(int id) {
 bool decode_real_layout(const TensorOutput& output, const Image& image,
                         std::vector<RawLayoutCandidate>& records,
                         const uint8_t*& masks,
-                        const LayoutPageTransform* transform = nullptr) {
+                        const LayoutPageTransform* transform = nullptr, double score_threshold = .5) {
     if (output.outputs.size() != 3) return false;
     const Tensor *rows = nullptr, *count = nullptr, *mask = nullptr;
     for (const Tensor& tensor : output.outputs) {
@@ -569,7 +572,7 @@ bool decode_real_layout(const TensorOutput& output, const Image& image,
         }
         const char* label = layout_label(candidate.class_id);
         candidate.label = label ? label : "unknown";
-        if (candidate.score < 0.5f) candidate.reason = "below_score_threshold";
+        if (candidate.score < float(score_threshold)) candidate.reason = "below_score_threshold";
         else if (row[4] <= row[2] || row[5] <= row[3]) candidate.reason = "degenerate_box";
         else if (row[4] <= 0 || row[5] <= 0 || row[2] >= image.width || row[3] >= image.height)
             candidate.reason = "outside_page";
@@ -1095,7 +1098,7 @@ std::string serialize(const Image& image, const std::string& state,
                       bool structured_tables = false,
                       const ReadingOrderEvidence* order_evidence = nullptr,
                       const std::vector<SemanticRelation>& semantic = {},
-                      const LayoutPageTransform* layout_transform = nullptr) {
+                      const LayoutPageTransform* layout_transform = nullptr, double score_threshold = .5) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
@@ -1126,7 +1129,7 @@ std::string serialize(const Image& image, const std::string& state,
         if (i) out << ',';
         const Block& b = blocks[i];
         out << "{\"id\":" << json_quote(b.layout_id) << ",\"page_id\":" << json_quote(page_id()) << ",\"label\":" << json_quote(b.type)
-            << ",\"bbox\":" << box_json(b.box) << ",\"coordinate_space\":\"raster_page\","
+            << ",\"bbox\":" << box_json(b.crop_expanded ? b.layout_box : b.box) << ",\"coordinate_space\":\"raster_page\","
             << "\"detection_score\":" << b.detection_score << ",\"candidate_rank\":" << b.candidate_rank
             << ",\"original_class_id\":" << b.original_class_id
             << (b.candidate_id < 0 ? "" : ",\"candidate_id\":" + std::to_string(b.candidate_id) +
@@ -1258,7 +1261,8 @@ std::string serialize(const Image& image, const std::string& state,
     }
     out << ']';
     if (raw) {
-        out << ",\"layout_diagnostics\":{\"score_threshold\":0.5,\"candidate_count\":" << raw->size()
+        out << ",\"layout_diagnostics\":{\"score_threshold\":" << score_threshold
+            << ",\"candidate_count\":" << raw->size()
             << ",\"overlay_asset\":" << json_quote(overlay)
             << ",\"raw_tensor_assets\":{\"image\":" << json_quote(page_asset("image.f32"))
             << ",\"im_shape\":" << json_quote(page_asset("im_shape.f32"))
@@ -1269,7 +1273,10 @@ std::string serialize(const Image& image, const std::string& state,
             << '}';
         if (layout_transform && layout_transform->applied) {
             out << std::setprecision(17)
-                << ",\"input_transform\":{\"mode\":\"smartresize_800\",\"source_size\":["
+                << ",\"input_transform\":{\"mode\":\"smartresize_800\",\"resample\":"
+                << json_quote(layout_transform->resample == LayoutResample::Area ? "area" :
+                              layout_transform->resample == LayoutResample::Lanczos ? "lanczos" : "bilinear")
+                << ",\"source_size\":["
                 << image.width << ',' << image.height << "],\"canvas_size\":[800,800],\"content_size\":["
                 << layout_transform->content_width << ',' << layout_transform->content_height
                 << "],\"pad_offset\":[" << layout_transform->pad_x << ',' << layout_transform->pad_y
@@ -1295,7 +1302,9 @@ std::string serialize(const Image& image, const std::string& state,
                     json_quote(c.handling_reason))
                 << ",\"mask_asset\":" << (c.mask_asset.empty() ? "null" : json_quote(c.mask_asset))
                 << ",\"clamped\":" << (c.clamped ? "true" : "false")
-                << ",\"crop_bbox\":" << (c.selected ? box_json(c.crop) : "null") << '}';
+                << ",\"crop_bbox\":" << (c.selected ? box_json(c.crop) : "null")
+                << ",\"recognition_crop_bbox\":" << (c.crop_expanded ? box_json(c.recognition_crop) : "null")
+                << ",\"crop_expansion_reason\":" << (c.crop_expanded ? "\"owned_content_union\"" : "null") << '}';
         }
         out << "]}";
     }
@@ -1448,8 +1457,14 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     if (cancelled) { audit.code = RunCode::Cancelled; return audit; }
     auto start = Clock::now();
     TensorRequest request;
-    LayoutPageInput layout_input = prepare_layout_page(image,
-        uint64_t(image.width) * image.height > max_pixels);
+    const std::string preprocessing = plan ? plan->layout_preprocess : "auto";
+    const double score_threshold = plan ? plan->layout_score_threshold : .5;
+    const bool resize_page = preprocessing == "smartresize_area" || preprocessing == "smartresize_bilinear" ||
+        preprocessing == "smartresize_lanczos" ||
+        (preprocessing == "auto" && uint64_t(image.width)*image.height > max_pixels);
+    const LayoutResample resample = preprocessing == "smartresize_area" ? LayoutResample::Area :
+        preprocessing == "smartresize_lanczos" ? LayoutResample::Lanczos : LayoutResample::Bilinear;
+    LayoutPageInput layout_input = prepare_layout_page(image, resize_page, resample);
     request.inputs.push_back(std::move(layout_input.tensor));
     request.inputs.push_back(geometry_tensor("im_shape", 800, 800));
     request.inputs.push_back(layout_input.transform.applied ?
@@ -1478,7 +1493,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     auto* output = std::get_if<TensorOutput>(&response.payload);
     std::vector<RawLayoutCandidate> records;
     const uint8_t* masks = nullptr;
-    if (!output || !decode_real_layout(*output, image, records, masks, &layout_input.transform)) {
+    if (!output || !decode_real_layout(*output, image, records, masks, &layout_input.transform, score_threshold)) {
         audit.code = RunCode::Failed;
         audit.error_code = "layout_output_contract_mismatch";
         audit.error_message = "PP-DocLayoutV3 候选/数量/mask 张量契约不符";
@@ -1561,6 +1576,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         block.type = canonical_label(candidate->class_id);
         block.model_label = candidate->label;
         block.box = candidate->crop;
+        block.layout_box = candidate->crop;
         block.candidate_id = block.mask_row = candidate->id;
         block.mask_nonzero = candidate->mask_nonzero;
         block.detection_score = candidate->score;
@@ -1570,8 +1586,19 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         std::copy(std::begin(candidate->box), std::end(candidate->box), block.raw_box);
         block.status = "skipped";
         for (const auto& evidence : ownership)
-            if (evidence.owner_candidate_id == candidate->id)
+            if (evidence.owner_candidate_id == candidate->id) {
                 block.owned_layout_ids.push_back(evidence.layout_id);
+                const Box child = evidence.candidate->crop;
+                block.box = {std::min(block.box.x0, child.x0), std::min(block.box.y0, child.y0),
+                             std::max(block.box.x1, child.x1), std::max(block.box.y1, child.y1)};
+            }
+        block.crop_expanded = block.box.x0 != block.layout_box.x0 || block.box.y0 != block.layout_box.y0 ||
+                              block.box.x1 != block.layout_box.x1 || block.box.y1 != block.layout_box.y1;
+        if (block.crop_expanded) {
+            auto& record = records[size_t(candidate->id)];
+            record.crop_expanded = true;
+            record.recognition_crop = block.box;
+        }
         block.error = block.type == "unknown" ? "unknown_layout_class" : "recognition_not_executed";
         if (block.type == "table" && !transcribe) block.format_override = "markdown";
         block.resource = block_asset(block.id);
@@ -1752,7 +1779,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,
                             overlay_name, ownership, transcribe, &order_evidence, semantic,
-                            &layout_input.transform);
+                            &layout_input.transform, score_threshold);
     audit.did_export = true;
     if (progress) progress("export_completed", source_page ? source_page : 1, "", region_done, region_total);
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());

@@ -14,8 +14,12 @@ def main():
     cli = Path(sys.argv[1]).resolve()
     baseline = json.loads(REFERENCE.read_text())
     with tempfile.TemporaryDirectory(prefix='dococr-issue19-real-') as tmp:
+        setting = json.loads((ROOT / 'configs/layout-plan.example.json').read_text())
+        setting['execution'].update(layout_preprocess='reference', layout_score_threshold=.5)
+        config_path = Path(tmp) / 'reference-config.json'
+        config_path.write_text(json.dumps(setting))
         out = Path(tmp) / 'job'
-        run = subprocess.run([str(cli), '--config', 'configs/layout-plan.example.json',
+        run = subprocess.run([str(cli), '--config', str(config_path),
                               '--input', str(SOURCE), '--out', str(out)], cwd=ROOT,
                              capture_output=True, text=True)
         assert run.returncode == 0, run.stderr

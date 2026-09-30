@@ -19,6 +19,7 @@ def config(backend):
     template['backend'] = backend
     template['models']['layout'] = copy.deepcopy(json.loads(
         (ROOT / 'configs/fixture-plan.example.json').read_text())['models']['layout'])
+    template['execution'].update(layout_preprocess='auto', layout_score_threshold=.5)
     return template
 
 

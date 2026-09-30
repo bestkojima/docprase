@@ -54,6 +54,59 @@ uint8_t convolve(const uint8_t* input, int stride, const Axis& axis, unsigned pr
         sum += int(input[(axis.first + k)*stride]) * axis.fixed[k];
     return uint8_t(std::clamp(sum >> precision, 0, 255));
 }
+
+// 抗锯齿重采样：核支持随下采样比例扩展，逐轴归一化为22位定点并舍入到uint8。
+struct ResampleAxis {
+    int first = 0;
+    std::vector<int32_t> fixed;
+};
+double resample_kernel(double value, LayoutResample method) {
+    if (method == LayoutResample::Area) return value > -.5 && value <= .5 ? 1.0 : 0.0;
+    if (value == 0) return 1;
+    if (std::abs(value) >= 3) return 0;
+    constexpr double pi = 3.14159265358979323846;
+    const double x = value*pi;
+    return (std::sin(x)/x) * (std::sin(x/3)/(x/3));
+}
+std::vector<ResampleAxis> resample_axes(int input, int output, LayoutResample method) {
+    std::vector<ResampleAxis> result(output);
+    const double scale = double(input)/output, filter_scale = std::max(1.0, scale);
+    const double support = (method == LayoutResample::Area ? .5 : 3)*filter_scale;
+    for (int i = 0; i < output; ++i) {
+        const double center = (i+.5)*scale;
+        const int first = std::clamp(int(center-support+.5), 0, input-1);
+        const int last = std::clamp(int(center+support+.5), first+1, input);
+        std::vector<double> weights(size_t(last-first));
+        double sum = 0;
+        for (int k = first; k < last; ++k)
+            sum += weights[size_t(k-first)] = resample_kernel((k+.5-center)/filter_scale, method);
+        auto& axis = result[i];
+        axis.first = first;
+        for (double weight : weights)
+            axis.fixed.push_back(int32_t(std::round(weight/sum*(1 << 22))));
+    }
+    return result;
+}
+uint8_t antialias_convolve(const uint8_t* input, size_t stride, const ResampleAxis& axis) {
+    int64_t sum = 1 << 21;
+    for (size_t k = 0; k < axis.fixed.size(); ++k)
+        sum += int64_t(input[(size_t(axis.first)+k)*stride])*axis.fixed[k];
+    return uint8_t(std::clamp<int64_t>(sum >> 22, 0, 255));
+}
+Image antialias_resize(const Image& image, int width, int height, LayoutResample method) {
+    auto xs = resample_axes(image.width, width, method), ys = resample_axes(image.height, height, method);
+    std::vector<uint8_t> horizontal(size_t(image.height)*width*3);
+    for (int y = 0; y < image.height; ++y) for (int x = 0; x < width; ++x)
+        for (int c = 0; c < 3; ++c)
+            horizontal[(size_t(y)*width+x)*3+c] =
+                antialias_convolve(image.rgb.data()+size_t(y)*image.width*3+c, 3, xs[x]);
+    Image result{width, height, std::vector<uint8_t>(size_t(width)*height*3)};
+    for (int y = 0; y < height; ++y) for (int x = 0; x < width; ++x)
+        for (int c = 0; c < 3; ++c)
+            result.rgb[(size_t(y)*width+x)*3+c] =
+                antialias_convolve(horizontal.data()+x*3+c, size_t(width)*3, ys[y]);
+    return result;
+}
 }
 Tensor layout_image_tensor(const Image& image) {
     Tensor result{"image", DataType::Float32, TensorLayout::NCHW,
@@ -77,11 +130,12 @@ Tensor layout_image_tensor(const Image& image) {
     return result;
 }
 
-LayoutPageInput prepare_layout_page(const Image& image, bool smartresize) {
+LayoutPageInput prepare_layout_page(const Image& image, bool smartresize, LayoutResample resample) {
     if (!smartresize) return {layout_image_tensor(image), {}, {}};
     const double scale = std::min(800.0 / image.width, 800.0 / image.height);
     LayoutPageTransform transform;
     transform.applied = true;
+    transform.resample = resample;
     transform.content_width = std::clamp(int(std::round(image.width * scale)), 1, 800);
     transform.content_height = std::clamp(int(std::round(image.height * scale)), 1, 800);
     transform.pad_x = (800 - transform.content_width) / 2;
@@ -89,6 +143,13 @@ LayoutPageInput prepare_layout_page(const Image& image, bool smartresize) {
     transform.scale_x = double(transform.content_width) / image.width;
     transform.scale_y = double(transform.content_height) / image.height;
     Image canvas{800, 800, std::vector<uint8_t>(800 * 800 * 3, 255)};
+    if (resample != LayoutResample::Bilinear) {
+        Image resized = antialias_resize(image, transform.content_width, transform.content_height, resample);
+        for (int y = 0; y < resized.height; ++y)
+            std::copy_n(resized.rgb.data()+size_t(y)*resized.width*3, size_t(resized.width)*3,
+                        canvas.rgb.data()+(size_t(y+transform.pad_y)*800+transform.pad_x)*3);
+        return {layout_image_tensor(canvas), transform, std::move(canvas)};
+    }
     for (int y = 0; y < transform.content_height; ++y) {
         double sy = std::clamp((y + 0.5) / transform.scale_y - 0.5,
                                0.0, double(image.height - 1));

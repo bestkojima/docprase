@@ -12,7 +12,7 @@ namespace dococr {
 namespace {
 bool layout_only_fixture(const std::string& scenario) {
     return scenario == "layout_dedup" || scenario == "layout_dedup_edges" ||
-           scenario == "layout_geometry" || scenario == "layout_smartresize" ||
+           scenario == "layout_geometry" || scenario == "layout_smartresize" || scenario == "layout_tuning" ||
            scenario == "layout_contract" || scenario == "layout_table" ||
            scenario == "layout_inline_formula" || scenario == "layout_empty" ||
            scenario == "layout_infer_failure";
@@ -95,10 +95,10 @@ public:
                 if (geometry[0] != 800 || geometry[1] != 800)
                     throw std::runtime_error("layout im_shape mismatch");
                 std::memcpy(geometry, layout->inputs[2].data.data(), sizeof(geometry));
-                if (geometry[0] != (scenario_ == "layout_smartresize" ? 1 :
+                if (geometry[0] != ((scenario_ == "layout_smartresize" || scenario_ == "layout_tuning") ? 1 :
                                     scenario_.rfind("printed_page_reading", 0) == 0 ||
                                     scenario_ == "layout_geometry" ? 8 : 400) ||
-                    geometry[1] != (scenario_ == "layout_smartresize" ? 1 :
+                    geometry[1] != ((scenario_ == "layout_smartresize" || scenario_ == "layout_tuning") ? 1 :
                                     scenario_.rfind("printed_page_reading", 0) == 0 ||
                                     scenario_ == "layout_geometry" ? 8 : 400))
                     throw std::runtime_error("layout scale_factor mismatch");
@@ -123,6 +123,10 @@ public:
                             {17,.9f,60,79,95,86,52}, {10,.9f,5,90,40,98,63},
                             {99,.9f,60,89,95,98,53}, {22,.2f,0,0,100,100,99}};
                         std::memcpy(rows.data(), reading_samples, sizeof(reading_samples));
+                        if (scenario_ == "printed_page_reading_near_owned") {
+                            const float near_owned[][7] = {{22,.9f,10,10,50,50,0}, {5,.9f,43,20,51,25,1}};
+                            std::memcpy(rows.data(), near_owned, sizeof(near_owned));
+                        }
                         if (scenario_ == "printed_page_reading_rank" ||
                             scenario_ == "printed_page_reading_owned_rank") {
                             const float ranks[] = {10,20,30,40,80,50,60,90,100,70,110};
@@ -237,12 +241,16 @@ public:
                         {22,.9f,-3,88,28,103,12}, {23,.8f,55,50,85,60,13},
                         {22,.8f,56,70,90,80,14}};
                     std::memcpy(rows.data(), cases, sizeof(cases));
+                } else if (scenario_ == "layout_tuning") {
+                    const float cases[][7] = {{22,.4f,200,0,600,800,0}, {22,.9f,0,0,100,100,1}};
+                    std::memcpy(rows.data(), cases, sizeof(cases));
                 } else if (scenario_ == "layout_smartresize") {
                     const float full_page[][7] = {{22,.9f,9,0,790,800,0}};
                     std::memcpy(rows.data(), full_page, sizeof(full_page));
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
-                int32_t count = scenario_ == "printed_page_reading_single" ? 4 :
+                int32_t count = scenario_ == "printed_page_reading_near_owned" ? 2 :
+                    scenario_ == "printed_page_reading_single" ? 4 :
                     scenario_ == "printed_page_reading_model_order" ? 3 :
                     scenario_.rfind("printed_page_reading", 0) == 0 ? 12 :
                     scenario_ == "printed_page_filtered" || scenario_ == "printed_page_slow" ? 1 :
@@ -252,6 +260,7 @@ public:
                     scenario_ == "layout_contract" || scenario_ == "layout_dedup" ? 7 :
                     scenario_ == "layout_dedup_edges" ? 6 :
                     scenario_ == "layout_geometry" ? 11 :
+                    scenario_ == "layout_tuning" ? 2 :
                     scenario_ == "layout_smartresize" ? 1 :
                     scenario_ == "layout_table" ? 2 :
                     scenario_ == "layout_inline_formula" ? 2 : 0;
@@ -592,7 +601,7 @@ bool config_supported(const std::string& config) {
            config == "fixture:generation_gate_wrong" ||
            config == "fixture:generation_gate_reset_failed" ||
            config == "fixture:layout_dedup" || config == "fixture:layout_dedup_edges" || config == "fixture:layout_contract" || config == "fixture:layout_table" ||
-           config == "fixture:layout_geometry" || config == "fixture:layout_smartresize" ||
+           config == "fixture:layout_geometry" || config == "fixture:layout_smartresize" || config == "fixture:layout_tuning" ||
            config == "fixture:layout_inline_formula" ||
            config == "fixture:layout_empty" ||
            config == "fixture:layout_infer_failure" || config == "fixture:printed_page" ||

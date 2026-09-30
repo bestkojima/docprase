@@ -15,6 +15,9 @@
 #include <mutex>
 #include <string>
 #include <thread>
+#include <sstream>
+#include <iomanip>
+#include <locale>
 
 namespace {
 struct Engine {
@@ -169,6 +172,9 @@ bool same_artifacts(const std::vector<dococr::ArtifactInfo>& a,
 }
 std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunResult& result,
                           const std::string& actual_backend) {
+    std::ostringstream layout_threshold;
+    layout_threshold.imbue(std::locale::classic());
+    layout_threshold << std::setprecision(17) << plan.layout_score_threshold;
     std::string job_status = result.code == dococr::RunCode::Cancelled ? "cancelled" :
         result.code == dococr::RunCode::BudgetExceeded ? "budget_exceeded" :
         result.code == dococr::RunCode::Ok ? "ok" : result.code == dococr::RunCode::Partial ? "partial" :
@@ -184,7 +190,9 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         dococr::json_quote(plan.backend.rfind("mnn:", 0) == 0 ? actual_backend : "fixture-only") + ","
         "\"effective_parameters\":{\"threads\":1,\"max_new_tokens\":" + std::to_string(plan.max_new_tokens) +
         ",\"max_page_pixels\":" + std::to_string(plan.max_page_pixels) +
-        ",\"max_output_bytes\":" + std::to_string(plan.max_output_bytes) + "},\"artifacts\":[";
+        ",\"max_output_bytes\":" + std::to_string(plan.max_output_bytes) +
+        (plan.uses_doclayout() ? ",\"layout_preprocess\":" + dococr::json_quote(plan.layout_preprocess) +
+         ",\"layout_score_threshold\":" + layout_threshold.str() : "") + "},\"artifacts\":[";
     for (size_t i = 0; i < plan.artifacts.size(); ++i) {
         const auto& a = plan.artifacts[i];
         if (i) out += ',';

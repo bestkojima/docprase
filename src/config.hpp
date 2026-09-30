@@ -17,6 +17,8 @@ struct ProcessingStep {
 struct ExecutionPlan {
     std::string config_hash, backend, mode, device, json;
     bool layout_only = false;
+    std::string layout_preprocess = "auto";
+    double layout_score_threshold = 0.5;
     bool uses_doclayout() const {
         return layout_only || backend == "mnn:pp-doclayout-v3+ovisocr2" ||
                backend.rfind("fixture:printed_page", 0) == 0;

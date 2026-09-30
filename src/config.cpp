@@ -2,11 +2,13 @@
 #include <algorithm>
 #include <array>
 #include <cctype>
+#include <cmath>
 #include <cstdint>
 #include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <limits>
+#include <locale>
 #include <set>
 #include <sstream>
 #include <stdexcept>
@@ -244,6 +246,7 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
                         plan->backend == "fixture:layout_dedup_edges" ||
                         plan->backend == "fixture:layout_geometry" ||
                         plan->backend == "fixture:layout_smartresize" ||
+                        plan->backend == "fixture:layout_tuning" ||
                         plan->backend == "fixture:layout_contract" ||
                         plan->backend == "fixture:layout_table" ||
                         plan->backend == "fixture:layout_inline_formula" ||
@@ -367,7 +370,28 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     uint64_t threads = positive(config.at("platform").at("threads"), "threads");
     if (threads != 1) throw ConfigError("unsupported_parameter", "threads: only 1 is implemented");
     plan->threads = 1;
-    object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens"});
+    object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens",
+                                   "layout_preprocess", "layout_score_threshold"});
+    const auto& execution = config.at("execution").object;
+    if (execution.count("layout_preprocess")) {
+        plan->layout_preprocess = str(execution.at("layout_preprocess"));
+        if (!plan->uses_doclayout() || (plan->layout_preprocess != "auto" &&
+            plan->layout_preprocess != "reference" && plan->layout_preprocess != "smartresize_bilinear" &&
+            plan->layout_preprocess != "smartresize_area" && plan->layout_preprocess != "smartresize_lanczos"))
+            throw ConfigError("invalid_layout_parameter", "layout_preprocess");
+    }
+    if (execution.count("layout_score_threshold")) {
+        const auto& value = execution.at("layout_score_threshold");
+        if (value.kind != Json::Number || !plan->uses_doclayout())
+            throw ConfigError("invalid_layout_parameter", "layout_score_threshold");
+        std::istringstream threshold(value.scalar);
+        threshold.imbue(std::locale::classic());
+        if (!(threshold >> plan->layout_score_threshold) || threshold.peek() != EOF)
+            throw ConfigError("invalid_layout_parameter", "layout_score_threshold");
+        if (!std::isfinite(plan->layout_score_threshold) || plan->layout_score_threshold < 0 ||
+            plan->layout_score_threshold > 1)
+            throw ConfigError("invalid_layout_parameter", "layout_score_threshold");
+    }
     plan->max_page_pixels = positive(config.at("execution").at("max_page_pixels"), "max_page_pixels");
     if (plan->max_page_pixels > (plan->uses_doclayout() ? max_layout_source_pixels : 16000000))
         throw ConfigError("unsupported_parameter", "max_page_pixels exceeds decoder limit");

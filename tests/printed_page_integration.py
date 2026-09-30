@@ -17,6 +17,7 @@ def config(scenario):
     source['mode'] = 'development'
     source['backend'] = 'fixture:' + scenario
     source['models'] = copy.deepcopy(fixture['models'])
+    source['execution'].update(layout_preprocess='auto', layout_score_threshold=.5)
     return source
 
 

@@ -130,6 +130,8 @@
   "execution": {
     "max_page_pixels": 64000000,
     "max_output_bytes": 67108864,
-    "max_new_tokens": 512
+    "max_new_tokens": 512,
+    "layout_preprocess": "smartresize_lanczos",
+    "layout_score_threshold": 0.2
   }
 }

@@ -683,6 +683,7 @@
           "required": ["mode", "source_size", "canvas_size", "content_size", "pad_offset", "canvas_to_page_affine"],
           "properties": {
             "mode": {"const": "smartresize_800"},
+            "resample": {"enum": ["area", "bilinear", "lanczos"]},
             "source_size": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
             "canvas_size": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
             "content_size": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
@@ -818,6 +819,8 @@
               "clamped": {
                 "type": "boolean"
               },
+              "recognition_crop_bbox": {"anyOf": [{"$ref": "#/$defs/box"}, {"type": "null"}]},
+              "crop_expansion_reason": {"enum": ["owned_content_union", null]},
               "crop_bbox": {
                 "anyOf": [
                   {
