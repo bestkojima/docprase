@@ -272,7 +272,12 @@ def infer(mode, spec, out, probe, environment, provenance, refresh_cache=False):
         complete = False
     if not complete:
         image = Image.open(DATA / spec['image_path']).convert('RGB')
+        preprocessing_probe = ROOT/'build/dococr_layout_preprocess_probe'
+        if sha(preprocessing_probe) != provenance['preprocessing_probe_sha256']:
+            raise ValueError('预处理运行前 probe 发生变化')
         transform = make_input(mode, image, folder)
+        if sha(preprocessing_probe) != provenance['preprocessing_probe_sha256']:
+            raise ValueError('预处理运行期间 probe 发生变化')
         h, w = (800, 800) if transform else (spec['height'], spec['width'])
         command = [str(probe), str(ROOT / 'models/doclayout/PP-DocLayoutV3.mnn'),
                    str(folder / 'image.f32'), str(folder / 'raw'), str(h), str(w), '1', '1']
