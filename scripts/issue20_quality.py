@@ -144,10 +144,19 @@ def main():
     # 对照只纳入两侧均有产物的页面；完整运行必须覆盖20页。
     paired = {p: r for p, r in report['pages'].items() if 'before' in r and 'after' in r}
     report['paired_pages'] = list(paired)
+    report['annotation_changes'] = dict(newly_matched=[], newly_unmatched=[])
+    for page_id, row in paired.items():
+        def matched(side):
+            return {(c, str(a)) for c, m in row[side]['layout'].items() if c != 'total' for a, _ in m['matches']}
+        before, after = matched('before'), matched('after')
+        for key, values in [('newly_matched', after-before), ('newly_unmatched', before-after)]:
+            report['annotation_changes'][key].extend(dict(page_id=page_id, category=c, annotation_id=a)
+                                                     for c, a in sorted(values))
     for name in ['before', 'after']:
-        summary = dict(layout=Counter(), ownership=Counter(), recognition={})
+        summary = dict(layout=Counter(), ownership=Counter(), recognition={}, reading_order=Counter())
         for row in paired.values():
             value = row[name]
+            summary['reading_order'].update(value['recognition']['reading_order'])
             summary['layout'].update({k: v for k, v in value['layout']['total'].items() if k != 'matches'})
             summary['ownership'].update(relations=value['ownership']['relations'],
                                         errors=len(value['ownership']['errors']),
@@ -169,6 +178,8 @@ def main():
         m['f1'] = 2*m['matched']/(m['reference']+m['predicted']) if m['reference']+m['predicted'] else None
         text = summary['recognition'].get('text', {})
         text['cer'] = text.get('edit_distance', 0)/text['reference_chars'] if text.get('reference_chars') else None
+        order = summary['reading_order']
+        order['accuracy_on_evaluable_pairs'] = order['correct']/order['evaluable'] if order['evaluable'] else None
         report['aggregate'][name] = summary
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
