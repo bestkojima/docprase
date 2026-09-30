@@ -110,8 +110,15 @@ def main():
         invalid_visual['pages'][0]['blocks'][3]['provenance'].pop('visual')
         assert '视觉' in reexport(visual_saved, invalid_visual, code=3).stderr
         formula_saved, formula = generated['printed_page_formula']
+        def remove_new_crop_diagnostics(value):
+            # 模拟历史1.1/1.2文件时，移除1.3之后引入的可选诊断字段。
+            for candidate in value['layout_diagnostics']['candidates']:
+                assert candidate.get('recognition_crop_bbox') is None
+                candidate.pop('recognition_crop_bbox', None)
+                candidate.pop('crop_expansion_reason', None)
         old_formula = copy.deepcopy(formula)
         old_formula['schema_version'] = '1.1'
+        remove_new_crop_diagnostics(old_formula)
         old_formula['pages'][0].pop('reading_order_evidence', None)
         for block in old_formula['pages'][0]['blocks']:
             block['reading_order_source'] = 'geometry'
@@ -120,6 +127,7 @@ def main():
         reexport(formula_saved, old_formula)
         legacy = copy.deepcopy(table)
         legacy['schema_version'] = '1.2'
+        remove_new_crop_diagnostics(legacy)
         legacy['pages'][0].pop('reading_order_evidence', None)
         for block in legacy['pages'][0]['blocks']:
             block['reading_order_source'] = 'geometry'

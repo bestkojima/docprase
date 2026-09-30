@@ -315,6 +315,9 @@ def compact_report(report, selected):
     result = {k: v for k, v in report.items() if k != 'pages'}
     result['selected'] = selected
     result['pages'] = {}
+    baseline_metrics = {}
+    result['baseline'] = dict(description='同一现行后处理：18页reference/0.5，odb-11与odb-17为letterbox_bilinear/0.5',
+                             metrics=baseline_metrics)
     changes = dict(newly_matched=[], newly_unmatched=[])
     for page_id, variants in report['pages'].items():
         chosen = variants[selected]
@@ -324,6 +327,8 @@ def compact_report(report, selected):
         baseline = ('letterbox_bilinear' if page_id in ('odb-11', 'odb-17') else 'reference') + ':protected:0.5'
         if baseline not in variants:
             continue
+        for category, metric in variants[baseline]['metrics'].items():
+            baseline_metrics.setdefault(category, Counter()).update({k: v for k, v in metric.items() if k != 'matches'})
         def matched(variant):
             return {(category, str(annotation_id)) for category, m in variant['metrics'].items()
                     if category != 'total' for annotation_id, _ in m['matches']}
@@ -331,6 +336,8 @@ def compact_report(report, selected):
         for key, values in [('newly_matched', after-before), ('newly_unmatched', before-after)]:
             changes[key].extend(dict(page_id=page_id, category=c, annotation_id=a) for c, a in sorted(values))
     result['annotation_changes'] = changes
+    for metric in baseline_metrics.values():
+        metric['f1'] = 2*metric['matched']/(metric['reference']+metric['predicted'])
     return result
 
 
