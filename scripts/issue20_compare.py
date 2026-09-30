@@ -25,7 +25,7 @@ from scipy.optimize import linear_sum_assignment
 from shapely.geometry import box as polygon_box
 from shapely.ops import unary_union
 
-from issue17_baseline import DATA, MANIFEST, ROOT, TEXT_CATEGORIES, box, verify_data
+from issue17_baseline import DATA, MANIFEST, ROOT, TEXT_CATEGORIES, box, verify_data, match
 from issue20_runtime import freeze_runtime
 
 LABELS = ['abstract', 'algorithm', 'aside_text', 'chart', 'content', 'formula',
@@ -216,6 +216,44 @@ def recognition_units(predictions, inline_threshold=.85, table_threshold=.9):
     return [p for p in predictions if p['id'] not in owners], owners
 
 
+def duplicate_text_units(annotation, units, owners, predictions):
+    # 按实际父子并集裁图检查重复几何；是否实际重复转写仍由公共作业核验。
+    candidates = {c['id']: c for c in predictions}
+    text_units = []
+    for c in units:
+        if c['type'] != 'text':
+            continue
+        boxes = [c['bbox'], *[candidates[i]['bbox'] for i, owner in owners.items() if owner == c['id']]]
+        bounds = [min(b[0] for b in boxes), min(b[1] for b in boxes),
+                  max(b[2] for b in boxes), max(b[3] for b in boxes)]
+        text_units.append(dict(c, bbox=bounds, status='not_transcribed'))
+    expected = [a for a in annotation['layout_dets'] if not a.get('ignore') and a['category_type'] in TEXT_CATEGORIES]
+    _, extras = match(expected, text_units, .5)
+    return [e['block_id'] for e in extras if e['reason'] == 'duplicate']
+
+
+def selection_audit(report):
+    audit = {}
+    for key, aggregate in report['aggregate'].items():
+        if ':protected:' not in key:
+            continue
+        lost, duplicates, missing_baseline = [], [], []
+        for page_id, variants in report['pages'].items():
+            baseline = ('letterbox_bilinear' if page_id in ('odb-11', 'odb-17') else 'reference') + ':protected:0.5'
+            if baseline not in variants:
+                missing_baseline.append(page_id)
+                continue
+            def matched(variant):
+                return {(c, str(a)) for c, m in variant['metrics'].items() if c != 'total' for a, _ in m['matches']}
+            lost.extend(dict(page_id=page_id, category=c, annotation_id=a) for c, a in
+                        sorted(matched(variants[baseline])-matched(variants[key])))
+            duplicates.extend(dict(page_id=page_id, candidate_id=i) for i in variants[key]['duplicate_text_units'])
+        audit[key] = dict(f1=aggregate['total']['f1'], newly_unmatched=lost,
+                          duplicate_text_geometry=duplicates, missing_baseline_pages=missing_baseline,
+                          eligible=not lost and not duplicates and not missing_baseline)
+    return audit
+
+
 def make_input(mode, image, output):
     w, h = image.size
     transform = None
@@ -351,7 +389,7 @@ def main():
     parser.add_argument('--workers', type=int, default=2)
     parser.add_argument('--polygons', action='store_true', help='追加冻结官方 auto 多边形处理对照')
     parser.add_argument('--summary', type=Path, help='另外保存可提交的紧凑证据')
-    parser.add_argument('--selected', default='letterbox_lanczos:protected:0.2')
+    parser.add_argument('--selected', default='letterbox_lanczos:protected:0.3')
     parser.add_argument('--refresh-cache', action='store_true', help='显式重跑执行来源缺失或不一致的旧缓存')
     args = parser.parse_args()
     manifest = json.loads(MANIFEST.read_text())
@@ -385,6 +423,7 @@ def main():
                 key = f'{mode}:{policy}:{threshold}'
                 units, owners = recognition_units(predictions)
                 variants[key] = dict(metrics=score(annotation, units), predictions=predictions, owners=owners)
+                variants[key]['duplicate_text_units'] = duplicate_text_units(annotation, units, owners, predictions)
         if args.polygons:
             folder = args.out / mode / spec['id']
             path = folder / 'raw.fetch_name_2.bin'
@@ -404,7 +443,7 @@ def main():
                 variants[f'{mode}:official_auto:{threshold}'] = dict(metrics=score(annotation, units),
                                                                    predictions=predictions, owners=owners)
         if mode == 'letterbox_lanczos':
-            predictions = variants[f'{mode}:protected:0.2']['predictions']
+            predictions = variants[f'{mode}:protected:0.3']['predictions']
             for inline in (.7, .85, .9, 1.):
                 for table in (.85, .9, 1.):
                     units, owners = recognition_units(predictions, inline, table)
@@ -424,6 +463,7 @@ def main():
         for metric in summary.values():
             metric['f1'] = 2*metric['matched'] / (metric['reference']+metric['predicted']) if metric['reference']+metric['predicted'] else 1
     args.out.mkdir(parents=True, exist_ok=True)
+    report['selection_audit'] = selection_audit(report)
     (args.out / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
     if args.summary:
         args.summary.parent.mkdir(parents=True, exist_ok=True)

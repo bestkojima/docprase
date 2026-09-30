@@ -5,7 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from issue17_baseline import DATA, MANIFEST, score_page, verify_data, inline_formulas, box
+from issue17_baseline import DATA, MANIFEST, ROOT, TEXT_CATEGORIES, score_page, verify_data, inline_formulas, box
 from issue20_compare import score, area, intersection, local_filter, recognition_units
 import numpy as np
 
@@ -14,6 +14,7 @@ def ownership_audit(document, annotation=None):
     errors, truncated = [], []
     relations_count = 0
     isolated_conflicts, confirmed_inline, unmatched_formula = [], 0, 0
+    parent_confirmed, table_confirmed, parent_conflicts = 0, 0, []
     for page in document.get('pages', []):
         layouts = {l['id']: l for l in page['layout_blocks']}
         blocks = {b['id']: b for b in page['blocks']}
@@ -34,6 +35,7 @@ def ownership_audit(document, annotation=None):
             seen.add(child_id)
             child, owner = layouts[child_id], blocks[owner_id]
             owner_regions = [regions[r] for r in owner['source_region_ids']]
+            parent = layouts[owner_regions[0]['source_layout_block_ids'][0]]
             if sum(child_id in r['source_layout_block_ids'] for r in owner_regions) != 1:
                 errors.append(dict(type='child_missing_from_owner_region', relation=relation))
             a, b = child['bbox'], owner['bbox']
@@ -41,6 +43,7 @@ def ownership_audit(document, annotation=None):
                 truncated.append(dict(child_id=child_id, owner_id=owner_id, child_bbox=a, owner_bbox=b))
             if annotation and child['label'] == 'formula':
                 verified = False
+                matched_parents = set()
                 for ref in annotation['layout_dets']:
                     if ref.get('ignore'):
                         continue
@@ -56,10 +59,35 @@ def ownership_audit(document, annotation=None):
                         if inter / (area(a)+area(truth)-inter) >= .3 and \
                             intersection(b, truth) / area(truth) >= .8:
                             verified = True
+                            matched_parents.add(str(ref['anno_id']))
                 confirmed_inline += verified
                 unmatched_formula += not verified
+                text_parents = []
+                for ref in annotation['layout_dets']:
+                    if ref.get('ignore') or ref['category_type'] not in TEXT_CATEGORIES:
+                        continue
+                    truth = box(ref['poly'])
+                    inter = intersection(parent['bbox'], truth)
+                    if inter/(area(parent['bbox'])+area(truth)-inter) >= .5:
+                        text_parents.append(str(ref['anno_id']))
+                parent_confirmed += len(matched_parents) == len(text_parents) == 1 and set(text_parents) == matched_parents
+                if matched_parents and len(text_parents) == 1 and text_parents[0] not in matched_parents:
+                    parent_conflicts.append(dict(child_id=child_id, owner_id=owner_id,
+                                                 span_parent_annotations=sorted(matched_parents),
+                                                 owner_text_annotation=text_parents[0]))
+            if annotation and parent['label'] == 'table':
+                for ref in annotation['layout_dets']:
+                    if ref.get('ignore') or ref['category_type'] != 'table':
+                        continue
+                    truth = box(ref['poly'])
+                    inter = intersection(parent['bbox'], truth)
+                    if inter/(area(parent['bbox'])+area(truth)-inter) >= .5 and intersection(a, truth)/area(a) >= .8:
+                        table_confirmed += 1
+                        break
     return dict(relations=relations_count, errors=errors, owned_crop_truncations=truncated,
                 isolated_formula_conflicts=isolated_conflicts, annotation_confirmed_inline=confirmed_inline,
+                annotation_confirmed_inline_parent=parent_confirmed,
+                annotation_confirmed_table_children=table_confirmed, annotation_parent_conflicts=parent_conflicts,
                 unverified_formula_ownership=unmatched_formula)
 
 
@@ -74,6 +102,9 @@ def main():
     annotations = json.loads((DATA / 'OmniDocBench.json').read_text())
     verify_data(manifest, annotations)
     report = dict(role='development', dataset_sha256=manifest['subset_annotation_sha256'],
+                  script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                  recognition_scorer_sha256=hashlib.sha256((ROOT/'scripts/issue17_baseline.py').read_bytes()).hexdigest(),
+                  geometry_scorer_sha256=hashlib.sha256((ROOT/'scripts/issue20_compare.py').read_bytes()).hexdigest(),
                   pages={}, aggregate={})
     for spec, annotation in zip(manifest['pages'], annotations):
         row = {}
@@ -102,10 +133,13 @@ def main():
             actual_units = {c['id'] for c in units}
             expected_units = {primary_layout(b)['candidate_id'] for b in page['blocks']}
             row[name] = dict(document_sha256=hashlib.sha256(document_path.read_bytes()).hexdigest(),
+                             run_manifest_sha256=hashlib.sha256(document_path.with_name('run-manifest.json').read_bytes()).hexdigest(),
                              layout=score(annotation, predictions), recognition=score_page(annotation, document),
                              ownership=ownership_audit(document, annotation), effective_parameters=run['effective_parameters'],
                              replay=dict(candidate_difference=sorted(actual ^ expected),
                                          recognition_unit_difference=sorted(actual_units ^ expected_units)))
+            receipt = document_path.parent.parent/'command.json'
+            row[name]['execution_receipt'] = json.loads(receipt.read_text()) if receipt.exists() else None
         report['pages'][spec['id']] = row
     # 对照只纳入两侧均有产物的页面；完整运行必须覆盖20页。
     paired = {p: r for p, r in report['pages'].items() if 'before' in r and 'after' in r}
@@ -120,6 +154,9 @@ def main():
                                         owned_crop_truncations=len(value['ownership']['owned_crop_truncations']),
                                         isolated_formula_conflicts=len(value['ownership']['isolated_formula_conflicts']),
                                         annotation_confirmed_inline=value['ownership']['annotation_confirmed_inline'],
+                                        annotation_confirmed_inline_parent=value['ownership']['annotation_confirmed_inline_parent'],
+                                        annotation_confirmed_table_children=value['ownership']['annotation_confirmed_table_children'],
+                                        annotation_parent_conflicts=len(value['ownership']['annotation_parent_conflicts']),
                                         unverified_formula_ownership=value['ownership']['unverified_formula_ownership'])
             for category in ('text', 'inline_formula', 'independent_formula', 'table', 'figure'):
                 metric = value['recognition'][category]
