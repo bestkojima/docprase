@@ -42,7 +42,7 @@ def main():
         record = folder/'command.json'
         if record.exists():
             saved = json.loads(record.read_text())
-            if saved.get('provenance') != provenance:
+            if saved.get('requested_provenance', saved.get('provenance')) != provenance:
                 raise ValueError(f'已有实验的执行来源不同：{record}')
             if saved.get('returncode') != 0:
                 raise ValueError(f'已有失败需要单独调查，不静默跳过：{record}')
@@ -56,8 +56,12 @@ def main():
             audit = ownership_audit(document)
             if not audit['owned_crop_truncations']:
                 (folder/'job').symlink_to(source, target_is_directory=True)
+                source_record = source.parent/'command.json'
+                receipt = json.loads(source_record.read_text()) if source_record.exists() else {}
                 record.write_text(json.dumps(dict(execution='reused_unaffected', source=str(source),
-                                                  source_sha256=sha(source/'document.json'), provenance=provenance,
+                                                  source_sha256=sha(source/'document.json'),
+                                                  provenance=receipt.get('provenance'), requested_provenance=provenance,
+                                                  reused_command=receipt,
                                                   reused_run_manifest=source_manifest,
                                                   returncode=0), ensure_ascii=False, indent=2)+'\n')
                 print(spec['id'], 'reused_unaffected', flush=True)
