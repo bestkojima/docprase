@@ -33,7 +33,6 @@
 namespace dococr {
 namespace {
 constexpr uint64_t max_pixels = 16000000;
-constexpr uint64_t max_layout_source_pixels = 64000000;
 constexpr size_t max_encoded_bytes = 64 * 1024 * 1024;
 thread_local uint32_t current_pdf_page = 0;
 struct PageScope {
@@ -1782,18 +1781,14 @@ RunResult run_page(IInferenceEngine* backend, InputView input, std::atomic_bool&
     RunResult audit{RunCode::Failed, {}};
     auto start = Clock::now();
     Image image;
-    const bool layout_job = plan && (plan->layout_only ||
-        plan->backend == "mnn:pp-doclayout-v3+ovisocr2" ||
-        plan->backend.rfind("fixture:printed_page", 0) == 0);
-    const bool allow_large_page = layout_job && plan->max_page_pixels >= max_pixels;
-    if (!decode(input, image, allow_large_page ? max_layout_source_pixels : max_pixels))
+    const bool layout_job = plan && plan->uses_doclayout();
+    if (!decode(input, image, layout_job ? max_layout_source_pixels : max_pixels))
         return {RunCode::InputError, {}};
     audit.did_decode = true;
     if (progress) progress("decode_completed", source_page ? source_page : 1, "", 0, 0);
     audit.page_pixels = uint64_t(image.width) * image.height;
     audit.decode_ms = elapsed(start);
-    if (plan && audit.page_pixels > plan->max_page_pixels && !
-        (allow_large_page && audit.page_pixels <= max_layout_source_pixels)) {
+    if (plan && audit.page_pixels > plan->max_page_pixels) {
         audit.code = RunCode::BudgetExceeded;
         audit.budget_stage = "input_pixels";
         return audit;

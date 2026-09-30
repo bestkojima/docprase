@@ -9,6 +9,16 @@ endif()
 option(DOCOCR_BUILD_TESTS "构建无模型验收测试" ON)
 option(DOCOCR_REQUIRE_MNN "缺少 MNN 时配置失败" OFF)
 option(DOCOCR_REQUIRE_LLM "缺少 Ovis 所需 LLM 运行时时配置失败" OFF)
+# schema 更新时重新生成 CLI 内嵌校验契约。
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-4/document-ir-1.0.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-8/document-ir-1.1.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-9/document-ir-1.2.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-10/document-ir-1.3.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-11/document-ir-1.4.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-18/document-ir-1.5-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-18/document-ir-1.5-pdf.schema.json"
+)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-4/document-ir-1.0.schema.json" DOCUMENT_SCHEMA_1_0)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-8/document-ir-1.1.schema.json" DOCUMENT_SCHEMA_1_1)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-9/document-ir-1.2.schema.json" DOCUMENT_SCHEMA_1_2)

@@ -63,7 +63,7 @@ def main():
         assert [p['page_id'] for p in manifest['pdf']['pages']] == ['p0002', 'p0003']
         assert all(isinstance(p['rss_before_bytes'], int) and p['rss_before_bytes'] > 0
                    for p in manifest['pdf']['pages'])
-        assert manifest['pdf']['effective_max_page_pixels'] <= 16_000_000
+        assert manifest['pdf']['effective_max_page_pixels'] == config('printed_page_reading')['execution']['max_page_pixels']
         assert re.fullmatch(r'\d+\.\d+\.\d+', manifest['pdf']['renderer_version'])
         bad_range = run(sys.argv[1], setting, pdf, root / 'bad-range', '--pages', '4-4',
                         expected=3)

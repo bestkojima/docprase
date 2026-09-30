@@ -128,7 +128,7 @@
     "threads": 1
   },
   "execution": {
-    "max_page_pixels": 16000000,
+    "max_page_pixels": 64000000,
     "max_output_bytes": 67108864,
     "max_new_tokens": 512
   }

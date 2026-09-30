@@ -268,6 +268,7 @@ public:
                     masks[2*200*200+100*200+100] = 1;
                 }
                 if (scenario_ == "layout_geometry") masks[3*200*200+33] = 1;
+                if (scenario_ == "layout_smartresize") masks[100*200+100] = 1;
                 Tensor a{"fetch_name_0", DataType::Float32, TensorLayout::Matrix, {300,7},
                          std::vector<uint8_t>(rows.size()*sizeof(float))};
                 Tensor b{"fetch_name_1", DataType::Int32, TensorLayout::Matrix, {1},

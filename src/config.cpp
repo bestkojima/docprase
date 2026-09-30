@@ -369,7 +369,8 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     plan->threads = 1;
     object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens"});
     plan->max_page_pixels = positive(config.at("execution").at("max_page_pixels"), "max_page_pixels");
-    if (plan->max_page_pixels > 16000000) throw ConfigError("unsupported_parameter", "max_page_pixels exceeds decoder limit");
+    if (plan->max_page_pixels > (plan->uses_doclayout() ? max_layout_source_pixels : 16000000))
+        throw ConfigError("unsupported_parameter", "max_page_pixels exceeds decoder limit");
     plan->max_output_bytes = positive(config.at("execution").at("max_output_bytes"), "max_output_bytes");
     if (plan->max_output_bytes > 67108864) throw ConfigError("unsupported_parameter", "max_output_bytes exceeds decoder limit");
     plan->max_new_tokens = positive(config.at("execution").at("max_new_tokens"), "max_new_tokens");

@@ -9,6 +9,7 @@
 #include "dococr/inference.hpp"
 
 namespace dococr {
+inline constexpr uint64_t max_layout_source_pixels = 64000000;
 struct ProcessingStep {
     std::string id, owner;
     bool enabled = true;
@@ -16,6 +17,10 @@ struct ProcessingStep {
 struct ExecutionPlan {
     std::string config_hash, backend, mode, device, json;
     bool layout_only = false;
+    bool uses_doclayout() const {
+        return layout_only || backend == "mnn:pp-doclayout-v3+ovisocr2" ||
+               backend.rfind("fixture:printed_page", 0) == 0;
+    }
     int threads = 1;
     uint64_t max_page_pixels = 16000000;
     uint64_t max_output_bytes = 1048576;

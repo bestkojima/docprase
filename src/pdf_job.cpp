@@ -87,7 +87,7 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
         result.run.error_message = "PDF 页范围、DPI 或输入字段无效";
         return result;
     }
-    uint64_t max_pixels = std::min<uint64_t>(16000000, plan ? plan->max_page_pixels : 16000000);
+    uint64_t max_pixels = plan ? plan->max_page_pixels : 16000000;
     if (request_max_pixels) max_pixels = std::min(max_pixels, request_max_pixels);
     try {
         PdfRenderer renderer(input.data, input.size);
