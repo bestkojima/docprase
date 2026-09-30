@@ -84,8 +84,13 @@ def main():
                     continue
                 raise ValueError(f'作业结果缺失：{document_path}')
             document = json.loads(document_path.read_text())
-            predictions = [dict(id=b['id'], bbox=b['bbox'], type=b['type'])
-                           for b in document['pages'][0]['blocks']]
+            page = document['pages'][0]
+            layouts = {l['id']: l for l in page['layout_blocks']}
+            regions = {r['id']: r for r in page['regions']}
+            def primary_layout(block):
+                return layouts[regions[block['source_region_ids'][0]]['source_layout_block_ids'][0]]
+            # 与模型实验统一按父LayoutBlock评分；实际裁图和转写另行核验。
+            predictions = [dict(id=b['id'], bbox=primary_layout(b)['bbox'], type=b['type']) for b in page['blocks']]
             run = json.loads(document_path.with_name('run-manifest.json').read_text())
             diagnostics = document['layout_diagnostics']
             raw = np.array([[c['class_id'], c['score'], *c['original_bbox'], c['rank']]
@@ -95,10 +100,7 @@ def main():
             actual = {c['id'] for c in replay}
             units, _ = recognition_units(replay)
             actual_units = {c['id'] for c in units}
-            layouts = {l['id']: l for l in document['pages'][0]['layout_blocks']}
-            regions = {r['id']: r for r in document['pages'][0]['regions']}
-            expected_units = {layouts[regions[b['source_region_ids'][0]]['source_layout_block_ids'][0]]['candidate_id']
-                              for b in document['pages'][0]['blocks']}
+            expected_units = {primary_layout(b)['candidate_id'] for b in page['blocks']}
             row[name] = dict(document_sha256=hashlib.sha256(document_path.read_bytes()).hexdigest(),
                              layout=score(annotation, predictions), recognition=score_page(annotation, document),
                              ownership=ownership_audit(document, annotation), effective_parameters=run['effective_parameters'],

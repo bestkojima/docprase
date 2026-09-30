@@ -95,10 +95,12 @@ public:
                 if (geometry[0] != 800 || geometry[1] != 800)
                     throw std::runtime_error("layout im_shape mismatch");
                 std::memcpy(geometry, layout->inputs[2].data.data(), sizeof(geometry));
-                if (geometry[0] != ((scenario_ == "layout_smartresize" || scenario_ == "layout_tuning") ? 1 :
+                if (geometry[0] != (scenario_ == "printed_page_reading_owned_edge" ? .8f :
+                                    (scenario_ == "layout_smartresize" || scenario_ == "layout_tuning") ? 1 :
                                     scenario_.rfind("printed_page_reading", 0) == 0 ||
                                     scenario_ == "layout_geometry" ? 8 : 400) ||
-                    geometry[1] != ((scenario_ == "layout_smartresize" || scenario_ == "layout_tuning") ? 1 :
+                    geometry[1] != (scenario_ == "printed_page_reading_owned_edge" ? .8f :
+                                    (scenario_ == "layout_smartresize" || scenario_ == "layout_tuning") ? 1 :
                                     scenario_.rfind("printed_page_reading", 0) == 0 ||
                                     scenario_ == "layout_geometry" ? 8 : 400))
                     throw std::runtime_error("layout scale_factor mismatch");
@@ -126,6 +128,13 @@ public:
                         if (scenario_ == "printed_page_reading_near_owned") {
                             const float near_owned[][7] = {{22,.9f,10,10,50,50,0}, {5,.9f,43,20,51,25,1}};
                             std::memcpy(rows.data(), near_owned, sizeof(near_owned));
+                        }
+                        if (scenario_ == "printed_page_reading_owned_edge") {
+                            const float owned_edge[][7] = {
+                                {22,.9f,100,100,480,200,0}, {22,.9f,100,300,480,400,1},
+                                {22,.9f,520,50,900,90,2}, {22,.9f,520,200,900,290,3},
+                                {5,.9f,463,110,483,120,4}};
+                            std::memcpy(rows.data(), owned_edge, sizeof(owned_edge));
                         }
                         if (scenario_ == "printed_page_reading_rank" ||
                             scenario_ == "printed_page_reading_owned_rank") {
@@ -249,7 +258,8 @@ public:
                     std::memcpy(rows.data(), full_page, sizeof(full_page));
                 } else if (scenario_ == "layout_contract")
                     std::memcpy(rows.data(), samples, sizeof(samples));
-                int32_t count = scenario_ == "printed_page_reading_near_owned" ? 2 :
+                int32_t count = scenario_ == "printed_page_reading_owned_edge" ? 5 :
+                    scenario_ == "printed_page_reading_near_owned" ? 2 :
                     scenario_ == "printed_page_reading_single" ? 4 :
                     scenario_ == "printed_page_reading_model_order" ? 3 :
                     scenario_.rfind("printed_page_reading", 0) == 0 ? 12 :

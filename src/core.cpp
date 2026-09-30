@@ -204,12 +204,16 @@ struct SemanticRelation {
     std::string type, source_block_id, target_block_id, evidence;
 };
 
+const Box& layout_geometry(const Block& block) {
+    return block.crop_expanded ? block.layout_box : block.box;
+}
+
 bool spans_columns(const Block& block, int page_width) {
     const bool heading = block.model_label == "doc_title" ||
         block.model_label == "paragraph_title";
     const bool page_header = block.model_label == "header";
-    return block.box.x0 < page_width * 0.45 && block.box.x1 > page_width * 0.55 &&
-           (heading || page_header || block.box.x1 - block.box.x0 >= page_width * 0.65);
+    return layout_geometry(block).x0 < page_width * 0.45 && layout_geometry(block).x1 > page_width * 0.55 &&
+           (heading || page_header || layout_geometry(block).x1 - layout_geometry(block).x0 >= page_width * 0.65);
 }
 
 // Assign order to already identified blocks. Detection and recognition IDs never depend on this pass.
@@ -220,23 +224,23 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
     std::vector<size_t> right_body;
     for (size_t i = 0; i < size; ++i) {
         const Block& block = blocks[i];
-        if (block.box.x0 < page_width * 0.45)
-            left_edge = std::min(left_edge, block.box.x0);
-        if (block.box.x0 >= page_width * 0.52 && block.model_label != "header" &&
+        if (layout_geometry(block).x0 < page_width * 0.45)
+            left_edge = std::min(left_edge, layout_geometry(block).x0);
+        if (layout_geometry(block).x0 >= page_width * 0.52 && block.model_label != "header" &&
             block.model_label != "footer" && block.model_label != "footnote" &&
             block.model_label != "vision_footnote") right_body.push_back(i);
     }
     auto section_title = [&](const Block& title) {
         if (right_body.empty() ||
             (title.model_label != "paragraph_title" && title.model_label != "doc_title") ||
-            title.box.x0 > left_edge + std::max(8, int(page_width * 0.03))) return false;
-        const int height = title.box.y1 - title.box.y0;
+            layout_geometry(title).x0 > left_edge + std::max(8, int(page_width * 0.03))) return false;
+        const int height = layout_geometry(title).y1 - layout_geometry(title).y0;
         // A left-aligned section heading can be shorter than the column gap.
         // Treat it as a page-wide break only when the right column is clear
         // for at least its own height above and below the heading.
         for (size_t i : right_body)
-            if (blocks[i].box.y1 >= title.box.y0 - height &&
-                blocks[i].box.y0 <= title.box.y1 + height) return false;
+            if (layout_geometry(blocks[i]).y1 >= layout_geometry(title).y0 - height &&
+                layout_geometry(blocks[i]).y0 <= layout_geometry(title).y1 + height) return false;
         return true;
     };
     std::vector<size_t> spans;
@@ -244,34 +248,34 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
         if (page_width >= 64 &&
             (spans_columns(blocks[i], page_width) || section_title(blocks[i]))) spans.push_back(i);
     std::stable_sort(spans.begin(), spans.end(), [&](size_t a, size_t b) {
-        return blocks[a].box.y0 < blocks[b].box.y0;
+        return layout_geometry(blocks[a]).y0 < layout_geometry(blocks[b]).y0;
     });
     std::vector<int> segment(size), column(size, 0);
     std::vector<bool> is_span(size, false);
     for (size_t i : spans) is_span[i] = true;
     for (size_t i = 0; i < size; ++i) {
         int before = 0;
-        for (size_t span : spans) if (blocks[span].box.y0 < blocks[i].box.y0) ++before;
+        for (size_t span : spans) if (layout_geometry(blocks[span]).y0 < layout_geometry(blocks[i]).y0) ++before;
         segment[i] = 2 * before + (is_span[i] ? 1 : 0);
     }
     for (int band = 0; band <= 2 * int(spans.size()); band += 2) {
         bool left = false, right = false;
         for (size_t i = 0; i < size; ++i) if (segment[i] == band) {
-            if (blocks[i].box.x1 <= page_width * 0.48) left = true;
-            else if (blocks[i].box.x0 >= page_width * 0.52) right = true;
+            if (layout_geometry(blocks[i]).x1 <= page_width * 0.48) left = true;
+            else if (layout_geometry(blocks[i]).x0 >= page_width * 0.52) right = true;
         }
         if (!left || !right) continue;
         for (size_t i = 0; i < size; ++i) if (segment[i] == band)
-            column[i] = blocks[i].box.x1 <= page_width * 0.48 ? 0 :
-                blocks[i].box.x0 >= page_width * 0.52 ? 1 : 2;
+            column[i] = layout_geometry(blocks[i]).x1 <= page_width * 0.48 ? 0 :
+                layout_geometry(blocks[i]).x0 >= page_width * 0.52 ? 1 : 2;
     }
     std::vector<size_t> geometry(size);
     std::iota(geometry.begin(), geometry.end(), 0);
     std::stable_sort(geometry.begin(), geometry.end(), [&](size_t a, size_t b) {
         if (segment[a] != segment[b]) return segment[a] < segment[b];
         if (column[a] != column[b]) return column[a] < column[b];
-        if (blocks[a].box.y0 != blocks[b].box.y0) return blocks[a].box.y0 < blocks[b].box.y0;
-        if (blocks[a].box.x0 != blocks[b].box.x0) return blocks[a].box.x0 < blocks[b].box.x0;
+        if (layout_geometry(blocks[a]).y0 != layout_geometry(blocks[b]).y0) return layout_geometry(blocks[a]).y0 < layout_geometry(blocks[b]).y0;
+        if (layout_geometry(blocks[a]).x0 != layout_geometry(blocks[b]).x0) return layout_geometry(blocks[a]).x0 < layout_geometry(blocks[b]).x0;
         return a < b;
     });
     ReadingOrderEvidence evidence;
@@ -297,8 +301,8 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
             if (segment[previous] == segment[current] && column[previous] > column[current])
                 column_conflict = true;
             if (segment[previous] == segment[current] && column[previous] == column[current] &&
-                blocks[previous].box.y0 > blocks[current].box.y0 &&
-                blocks[previous].box.y0 >= blocks[current].box.y1)
+                layout_geometry(blocks[previous]).y0 > layout_geometry(blocks[current]).y0 &&
+                layout_geometry(blocks[previous]).y0 >= layout_geometry(blocks[current]).y1)
                 conflict = true;
         }
         if (column_conflict) evidence.reason = "model_column_conflict";
@@ -378,15 +382,15 @@ std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& bl
                     count_footnote_references(other.text, marker) == 0)
                     continue;
             }
-            int overlap = std::min(caption.box.x1, other.box.x1) -
-                          std::max(caption.box.x0, other.box.x0);
+            int overlap = std::min(layout_geometry(caption).x1, layout_geometry(other).x1) -
+                          std::max(layout_geometry(caption).x0, layout_geometry(other).x0);
             if (overlap <= 0) continue;
-            int gap = caption.box.y0 >= other.box.y1 ? caption.box.y0 - other.box.y1 :
-                other.box.y0 >= caption.box.y1 ? other.box.y0 - caption.box.y1 : -1;
+            int gap = layout_geometry(caption).y0 >= layout_geometry(other).y1 ? layout_geometry(caption).y0 - layout_geometry(other).y1 :
+                layout_geometry(other).y0 >= layout_geometry(caption).y1 ? layout_geometry(other).y0 - layout_geometry(caption).y1 : -1;
             int max_gap = std::max(8, std::min(page_height * 3 / 100,
-                std::max(caption.box.y1 - caption.box.y0, other.box.y1 - other.box.y0)));
+                std::max(layout_geometry(caption).y1 - layout_geometry(caption).y0, layout_geometry(other).y1 - layout_geometry(other).y0)));
             if (gap < 0 || (!footnote && gap > max_gap) ||
-                (footnote && other.box.y1 > caption.box.y0)) continue;
+                (footnote && layout_geometry(other).y1 > layout_geometry(caption).y0)) continue;
             if (footnote) footnote_matches += count_footnote_references(other.text, marker);
             if (gap < best_distance) { target = &other; best_distance = gap; tie = false; }
             else if (gap == best_distance) tie = true;
@@ -409,16 +413,16 @@ std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& bl
                 other.model_label == "figure_title" || other.model_label == "footnote" ||
                 other.model_label == "vision_footnote" || other.model_label == "footer" ||
                 other.model_label == "doc_title" || other.model_label == "paragraph_title" ||
-                other.box.y0 < heading.box.y1) continue;
-            int overlap = std::min(heading.box.x1, other.box.x1) -
-                          std::max(heading.box.x0, other.box.x0);
+                layout_geometry(other).y0 < layout_geometry(heading).y1) continue;
+            int overlap = std::min(layout_geometry(heading).x1, layout_geometry(other).x1) -
+                          std::max(layout_geometry(heading).x0, layout_geometry(other).x0);
             if (overlap <= 0) continue;
-            int gap = other.box.y0 - heading.box.y1;
+            int gap = layout_geometry(other).y0 - layout_geometry(heading).y1;
             int max_gap = std::max(12, std::min(page_height * 5 / 100,
-                2 * (heading.box.y1 - heading.box.y0)));
+                2 * (layout_geometry(heading).y1 - layout_geometry(heading).y0)));
             if (gap > max_gap) continue;
-            int column = span ? other.box.x1 <= page_width * 0.48 ? 0 :
-                other.box.x0 >= page_width * 0.52 ? 1 : 2 : 0;
+            int column = span ? layout_geometry(other).x1 <= page_width * 0.48 ? 0 :
+                layout_geometry(other).x0 >= page_width * 0.52 ? 1 : 2 : 0;
             if (gap < best_gap[column]) {
                 first[column] = &other; best_gap[column] = gap; ties[column] = false;
             } else if (gap == best_gap[column]) ties[column] = true;

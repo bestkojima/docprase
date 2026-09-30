@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 from copy import deepcopy
 import hashlib
 import gzip
+import inspect
 import json
 from pathlib import Path
 import subprocess
@@ -18,12 +19,14 @@ from urllib.request import urlopen
 
 import cv2
 import numpy as np
+import PIL
 from PIL import Image
 from scipy.optimize import linear_sum_assignment
 from shapely.geometry import box as polygon_box
 from shapely.ops import unary_union
 
 from issue17_baseline import DATA, MANIFEST, ROOT, TEXT_CATEGORIES, box, verify_data
+from issue20_runtime import freeze_runtime
 
 LABELS = ['abstract', 'algorithm', 'aside_text', 'chart', 'content', 'formula',
           'doc_title', 'figure_title', 'footer', 'footer', 'footnote', 'formula_number',
@@ -254,7 +257,7 @@ def make_input(mode, image, output):
     return transform
 
 
-def infer(mode, spec, out):
+def infer(mode, spec, out, probe, environment, provenance, refresh_cache=False):
     folder = out / mode / spec['id']
     folder.mkdir(parents=True, exist_ok=True)
     metadata = folder / 'input.json'
@@ -262,23 +265,36 @@ def infer(mode, spec, out):
     complete = metadata.exists() and (folder / 'raw.fetch_name_0.bin').exists() and \
         (folder / 'raw.fetch_name_1.bin').exists() and \
         (mask_path.exists() or mask_path.with_suffix('.bin.gz').exists())
+    expected = dict(provenance, mode=mode)
+    if complete and json.loads(metadata.read_text()).get('provenance') != expected:
+        if not refresh_cache:
+            raise ValueError(f'缓存执行来源不一致，使用 --refresh-cache 重新推理：{folder}')
+        complete = False
     if not complete:
         image = Image.open(DATA / spec['image_path']).convert('RGB')
         transform = make_input(mode, image, folder)
         h, w = (800, 800) if transform else (spec['height'], spec['width'])
-        command = [str(ROOT / 'build/dococr_layout_mnn_probe'), str(ROOT / 'models/doclayout/PP-DocLayoutV3.mnn'),
+        command = [str(probe), str(ROOT / 'models/doclayout/PP-DocLayoutV3.mnn'),
                    str(folder / 'image.f32'), str(folder / 'raw'), str(h), str(w), '1', '1']
-        result = subprocess.run(command, capture_output=True, text=True)
+        if sha(ROOT/'models/doclayout/PP-DocLayoutV3.mnn') != MODEL_HASH:
+            raise ValueError('推理前模型制品发生变化')
+        result = subprocess.run(command, env=environment, capture_output=True, text=True)
         (folder / 'run.log').write_text(result.stdout + result.stderr)
         if result.returncode:
             raise RuntimeError(result.stderr)
         with mask_path.open('rb') as source, gzip.open(mask_path.with_suffix('.bin.gz'), 'wb', compresslevel=1) as target:
             shutil.copyfileobj(source, target)
         mask_path.unlink()
+        if sha(ROOT/'models/doclayout/PP-DocLayoutV3.mnn') != MODEL_HASH:
+            raise ValueError('推理期间模型制品发生变化')
         metadata.write_text(json.dumps(dict(mode=mode, source_sha256=spec['image_sha256'],
-                                           input_sha256=sha(folder/'image.f32'), transform=transform, command=command)))
+                                           input_sha256=sha(folder/'image.f32'), transform=transform, command=command,
+                                           provenance=expected, outputs={p.name: sha(p) for p in
+                                               [folder/'raw.fetch_name_0.bin', folder/'raw.fetch_name_1.bin',
+                                                mask_path.with_suffix('.bin.gz')]})))
     info = json.loads(metadata.read_text())
     assert info['source_sha256'] == spec['image_sha256'] and info['input_sha256'] == sha(folder/'image.f32')
+    assert all(sha(folder/name) == digest for name, digest in info['outputs'].items()), '缓存输出哈希不符'
     rows = np.fromfile(folder / 'raw.fetch_name_0.bin', '<f4').reshape(300, 7)
     count = int(np.fromfile(folder / 'raw.fetch_name_1.bin', '<i4')[0])
     rows = rows[:count].copy()
@@ -324,6 +340,7 @@ def main():
     parser.add_argument('--polygons', action='store_true', help='追加冻结官方 auto 多边形处理对照')
     parser.add_argument('--summary', type=Path, help='另外保存可提交的紧凑证据')
     parser.add_argument('--selected', default='letterbox_lanczos:protected:0.2')
+    parser.add_argument('--refresh-cache', action='store_true', help='显式重跑执行来源缺失或不一致的旧缓存')
     args = parser.parse_args()
     manifest = json.loads(MANIFEST.read_text())
     annotations = json.loads((DATA / 'OmniDocBench.json').read_text())
@@ -331,6 +348,10 @@ def main():
     if sha(ROOT/'models/doclayout/PP-DocLayoutV3.mnn') != MODEL_HASH:
         raise ValueError('模型制品哈希不符')
     env = load_reference(args.reference)
+    probe, environment, runtime = freeze_runtime(ROOT/'build/dococr_layout_mnn_probe', args.out.resolve()/'.runtime')
+    provenance = dict(model_sha256=MODEL_HASH, runtime=runtime, pillow=PIL.__version__, numpy=np.__version__,
+                      preprocessing_probe_sha256=sha(ROOT/'build/dococr_layout_preprocess_probe'),
+                      make_input_sha256=hashlib.sha256(inspect.getsource(make_input).encode()).hexdigest())
     jobs = [(mode, spec, annotation) for mode in args.modes
             for spec, annotation in zip(manifest['pages'], annotations) if not args.only or spec['id'] in args.only]
     report = dict(role='development', dataset_sha256=sha(DATA/'OmniDocBench.json'),
@@ -338,10 +359,11 @@ def main():
                   reference_hashes=REFERENCE_HASHES, script_sha256=sha(Path(__file__)), pages={}, aggregate={},
                   probe_sha256=sha(ROOT/'build/dococr_layout_mnn_probe'),
                   preprocessing_probe_sha256=sha(ROOT/'build/dococr_layout_preprocess_probe'))
+    report['inference_provenance'] = provenance
 
     def evaluate(job):
         mode, spec, annotation = job
-        rows = infer(mode, spec, args.out)
+        rows = infer(mode, spec, args.out, probe, environment, provenance, args.refresh_cache)
         variants = {}
         for threshold in (.15, .2, .25, .3, .4, .5, .6, .7):
             for policy in ('protected', 'rounded', 'official_rect'):
