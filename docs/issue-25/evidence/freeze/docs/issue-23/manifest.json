@@ -1,0 +1,960 @@
+{
+  "schema_version": 2,
+  "freeze_id": "issue23-annotated-evaluation-2",
+  "frozen_at": "2026-10-01T05:24:58.895984+00:00",
+  "baseline_commit": "dcfd5aff390bc1003295d0bf09a39f83e93722db",
+  "status": "annotated_evaluation_materials_ready",
+  "dataset": "opendatalab/OmniDocBench",
+  "revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "upstream_annotation": {
+    "path": "output/omnidocbench/upstream/OmniDocBench.json",
+    "sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496"
+  },
+  "subset_annotation": {
+    "path": "output/issue-23/annotated-evaluation-v2/OmniDocBench.json",
+    "sha256": "404224f7384b9b94edc5a7b0984053267b02d067d119fd64831bc5c0b134f463"
+  },
+  "annotation_hash_serialization": "json ensure_ascii=False sort_keys=True separators=(comma,colon) UTF-8",
+  "selection_basis": "沿用下载前选定的12页；数学7/12，覆盖代数、几何、函数、概率统计；未按本项目识别成绩选样。来源隔离按用户修订不作为材料准入要求。",
+  "candidate_recognition_executed": false,
+  "pages": [
+    {
+      "id": "candidate-01",
+      "role": "annotated_evaluation",
+      "subject": "数学",
+      "stage": "初中",
+      "actual_content": "相似三角形教辅",
+      "upstream_index_0based": 697,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+      "image_sha256": "d737d2e2ffac3874557a726d43ccc325ed36a3429bc72c71a7d0c2040d5641e2",
+      "dimensions": [
+        1653,
+        2339
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal",
+            "fuzzy_scan"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1974,
+        "height": 2339,
+        "width": 1653,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+        "sample_id": 401
+      },
+      "printed_page": null,
+      "coverage": [
+        "几何",
+        "行内公式",
+        "表格"
+      ],
+      "block_category_counts": {
+        "text_block": 5,
+        "title": 3,
+        "figure": 1,
+        "table": 1,
+        "header": 1
+      },
+      "annotation_sha256": "f67ad6d2e97f63b0d676779ddf3bf981a3827a1794796b0896497fec9e5f794c",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "未知教辅；页上可见“模块2 相似三角形的性质”",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "有书脊阴影和透印，主要文字可辨；保留 fuzzy_scan 标签"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-02",
+      "role": "annotated_evaluation",
+      "subject": "数学",
+      "stage": "高中",
+      "actual_content": "复数几何形式教辅",
+      "upstream_index_0based": 703,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+      "image_sha256": "13ae3c78d760f1fa096a104e531b0de549f04cc2a12b523392573b2f01f7b6b4",
+      "dimensions": [
+        1616,
+        2225
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "colorful_backgroud"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2001,
+        "height": 2225,
+        "width": 1616,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+        "sample_id": 407
+      },
+      "printed_page": "156",
+      "coverage": [
+        "代数",
+        "复数",
+        "几何",
+        "行内公式"
+      ],
+      "block_category_counts": {
+        "title": 7,
+        "text_block": 9,
+        "figure": 3,
+        "equation_isolated": 2,
+        "page_number": 1,
+        "header": 1,
+        "footer": 1
+      },
+      "annotation_sha256": "d3df739ca2dffbdcc7de28444239d22e156173cbf7d010362d3f8d9a08f99ee6",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "2024新高考数学真题全刷：基础2000题",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "印刷正文清晰，保留彩色底纹"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-03",
+      "role": "annotated_evaluation",
+      "subject": "数学",
+      "stage": "高中",
+      "actual_content": "高三理科开学考试卷第2页",
+      "upstream_index_0based": 720,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+      "image_sha256": "76b15f4e30defa8b666196a51ea9e80916ed62a90a77a7258b6e18ec6a8888cd",
+      "dimensions": [
+        2867,
+        2024
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2040,
+        "height": 2024,
+        "width": 2867,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+        "sample_id": 424
+      },
+      "printed_page": "2/2",
+      "coverage": [
+        "函数",
+        "几何",
+        "概率统计",
+        "表格",
+        "行内公式"
+      ],
+      "block_category_counts": {
+        "text_block": 10,
+        "figure": 6,
+        "title": 5,
+        "table": 1,
+        "page_number": 1,
+        "footer": 1
+      },
+      "annotation_sha256": "5166bcd2e64b39e2ddee8433dc648c79f92dcc98f28fec2386c6a1f761b866af",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "高三数学（理科）开学考；学校和年份未知",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "原始完整横向页面，非拆分裁图"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-04",
+      "role": "annotated_evaluation",
+      "subject": "数学",
+      "stage": "初中",
+      "actual_content": "概率初步教材",
+      "upstream_index_0based": 732,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+      "image_sha256": "eccc1cdd31021703a6119cb1844bf90038e9ca6dbac4014358d09ff370873e58",
+      "dimensions": [
+        1500,
+        2100
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [
+            "None",
+            "fuzzy_scan"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2087,
+        "height": 2100,
+        "width": 1500,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+        "sample_id": 436
+      },
+      "printed_page": "128",
+      "coverage": [
+        "概率统计",
+        "正文",
+        "插图"
+      ],
+      "block_category_counts": {
+        "text_block": 8,
+        "title": 1,
+        "figure": 1,
+        "page_number": 1,
+        "footer": 1
+      },
+      "annotation_sha256": "821b2ce43c4a539961ea70da8809e51ac410cdb1215d54ac9f198166eba5ec02",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "第二十五章 概率初步；书名和版次未核实",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "扫描可读；保留 fuzzy_scan 标签"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-05",
+      "role": "annotated_evaluation",
+      "subject": "数学",
+      "stage": "高中",
+      "actual_content": "导数极最值教辅",
+      "upstream_index_0based": 767,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+      "image_sha256": "5582324aab4c19eaa8637954e38cd4a0415c087f057575d2e7ecdfc91ba5cabb",
+      "dimensions": [
+        1654,
+        2339
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "None"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2221,
+        "height": 2339,
+        "width": 1654,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+        "sample_id": 471
+      },
+      "printed_page": "32/75",
+      "coverage": [
+        "函数",
+        "导数",
+        "行内公式"
+      ],
+      "block_category_counts": {
+        "text_block": 7,
+        "title": 3,
+        "page_number": 1
+      },
+      "annotation_sha256": "eda379699d2dd329106de1f596827857e0f6ff464a97d79e7b638d68086698b5",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "核心考点五：极最值问题；完整讲义名称未知",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "清晰印刷题解，红色内容为原文"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-06",
+      "role": "annotated_evaluation",
+      "subject": "数学",
+      "stage": "初中",
+      "actual_content": "数据分析分类集训",
+      "upstream_index_0based": 841,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+      "image_sha256": "d27fcc6aa85b2f9c819e715b1f32bf38f5dc4b541f4a40ce1e1a4ac3712e6fd0",
+      "dimensions": [
+        1334,
+        1872
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "1andmore_column",
+          "special_issue": [
+            "table_full_line",
+            "table_horizontal"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1880,
+        "height": 1872,
+        "width": 1334,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+        "sample_id": 545
+      },
+      "printed_page": "97",
+      "coverage": [
+        "概率统计",
+        "正文",
+        "表格"
+      ],
+      "block_category_counts": {
+        "title": 3,
+        "text_block": 18,
+        "table": 2,
+        "figure": 1,
+        "figure_caption": 1,
+        "header": 2,
+        "abandon": 2,
+        "table_mask": 1,
+        "page_number": 1
+      },
+      "annotation_sha256": "c13c01ab8766597fa96f449e8bf6c60b6063783e12783f6b62411cf2d198cf70",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "第二十章 数据的分析；书名和版次未核实",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "双栏清晰；上游 exam_paper 实为章节练习"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-07",
+      "role": "annotated_evaluation",
+      "subject": "数学",
+      "stage": "高中",
+      "actual_content": "等比数列教材",
+      "upstream_index_0based": 856,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+      "image_sha256": "ea3df293a181a05689c4a25b92626a3a743c8c4ae5122ae8df63c0ee9acc24c8",
+      "dimensions": [
+        1806,
+        2662
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "double_column",
+          "special_issue": [
+            "fuzzy_scan",
+            "colorful_backgroud"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1931,
+        "height": 2662,
+        "width": 1806,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+        "sample_id": 560
+      },
+      "printed_page": "63",
+      "coverage": [
+        "代数",
+        "数列",
+        "独立公式"
+      ],
+      "block_category_counts": {
+        "text_block": 11,
+        "equation_isolated": 6,
+        "header": 2,
+        "page_number": 1
+      },
+      "annotation_sha256": "8e0ade1c37e7fb7958f9c610587a072507241244c533a48f0a5ae4294e034b13",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "第二章 数列；书名和版次未核实",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "轻微扫描模糊，公式和正文可辨，保留 fuzzy_scan 标签"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-08",
+      "role": "annotated_evaluation",
+      "subject": "物理",
+      "stage": "初中",
+      "actual_content": "流体压强专项讲义",
+      "upstream_index_0based": 713,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+      "image_sha256": "910d138724d2eab08e50f69c4ee5fa03f4324a01cccfed5e79551b1fe057e6f7",
+      "dimensions": [
+        1653,
+        2339
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "watermark"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1758,
+        "height": 2339,
+        "width": 1653,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+        "sample_id": 417
+      },
+      "printed_page": null,
+      "coverage": [
+        "正文",
+        "插图",
+        "图注",
+        "选择题"
+      ],
+      "block_category_counts": {
+        "title": 2,
+        "figure_caption": 4,
+        "figure": 10,
+        "text_block": 6,
+        "header": 1,
+        "footer": 1
+      },
+      "annotation_sha256": "fa8b54b89ee5ce81f5e31d2a8d5aea95a88433a6c8788ac941bcbd0d3f50cacf",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "春季初中物理专项班（实验乐享）；机构/年度未完整核实",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "存在浅色“乐学东方”水印穿过填空线；正文可辨，未去水印"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-09",
+      "role": "annotated_evaluation",
+      "subject": "化学",
+      "stage": "初中",
+      "actual_content": "溶解度曲线讲义",
+      "upstream_index_0based": 707,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+      "image_sha256": "853341856d6a39050db422a0aa65a0efae85716484f8c2397b1b22c5dba075d7",
+      "dimensions": [
+        1504,
+        2095
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "watermark"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 2007,
+        "height": 2095,
+        "width": 1504,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+        "sample_id": 411
+      },
+      "printed_page": "20",
+      "coverage": [
+        "正文",
+        "化学式",
+        "曲线图",
+        "图注"
+      ],
+      "block_category_counts": {
+        "title": 2,
+        "figure": 2,
+        "text_block": 2,
+        "header": 3,
+        "abandon": 1,
+        "page_number": 1,
+        "footer": 1
+      },
+      "annotation_sha256": "245b81aa36b5d8d1dee57fc24cd6e48387c0096746f0114f9397dfc18453816e",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "有道精品课 中考化学寒假班讲义；年度未知",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "存在浅色水印；题干可读，未去水印"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-10",
+      "role": "annotated_evaluation",
+      "subject": "生物",
+      "stage": "初中",
+      "actual_content": "被子植物教材",
+      "upstream_index_0based": 839,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+      "image_sha256": "190bc1e05bb282d5df78d0621938af245147b68531119a934743cbfdc1895c1f",
+      "dimensions": [
+        1500,
+        2100
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "simplified_chinese",
+          "layout": "other_layout",
+          "special_issue": [
+            "fuzzy_scan"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1875,
+        "height": 2100,
+        "width": 1500,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+        "sample_id": 543
+      },
+      "printed_page": "86",
+      "coverage": [
+        "正文",
+        "插图",
+        "图注"
+      ],
+      "block_category_counts": {
+        "text_block": 4,
+        "title": 6,
+        "figure": 2,
+        "figure_caption": 2,
+        "abandon": 2,
+        "page_number": 1,
+        "footer": 1
+      },
+      "annotation_sha256": "132d526b731d00a30698c2e4c1ee207059b5fd911422bf3bfa5bb58550677d1e",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "第三单元 生物圈中的绿色植物；版次未核实",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "扫描可读；保留 fuzzy_scan 标签"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-11",
+      "role": "annotated_evaluation",
+      "subject": "语文",
+      "stage": "初中",
+      "actual_content": "醉翁亭记教辅",
+      "upstream_index_0based": 857,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+      "image_sha256": "fb1caf6806c48824ce998c5b9d0bac600e298d2c778ce1d5b92087c883b5117b",
+      "dimensions": [
+        1654,
+        2339
+      ],
+      "upstream_page_info": {
+        "page_attribute": {
+          "data_source": "colorful_textbook",
+          "language": "simplified_chinese",
+          "layout": "single_column",
+          "special_issue": [
+            "colorful_backgroud"
+          ],
+          "subset": "v1.5"
+        },
+        "page_no": 1932,
+        "height": 2339,
+        "width": 1654,
+        "image_path": "jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+        "sample_id": 561
+      },
+      "printed_page": "1",
+      "coverage": [
+        "正文",
+        "插图",
+        "拼音"
+      ],
+      "block_category_counts": {
+        "title": 8,
+        "text_block": 7,
+        "figure": 2,
+        "abandon": 2,
+        "header": 3,
+        "page_number": 1
+      },
+      "annotation_sha256": "ad772b94648abf7685f7a0874027a02b833708ff92417e0dd0543eeb6a51b8ff",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "学而思网校 醉翁亭记；完整讲义册次/年度未知",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "清晰印刷文字；拼音和红字保留"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    },
+    {
+      "id": "candidate-12",
+      "role": "annotated_evaluation",
+      "subject": "英语",
+      "stage": "初中",
+      "actual_content": "中考英语印刷解析",
+      "upstream_index_0based": 1554,
+      "image_path": "images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+      "local_path": "output/issue-23/annotated-evaluation-v2/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+      "image_sha256": "11485df0351fbc277beb14493273db2600a9ecc60fcf446fb078a8411e0b56b2",
+      "dimensions": [
+        1654,
+        2339
+      ],
+      "upstream_page_info": {
+        "image_path": "exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+        "page_no": 3,
+        "page_attribute": {
+          "data_source": "exam_paper",
+          "language": "english",
+          "layout": "single_column",
+          "special_issue": [
+            "None"
+          ],
+          "subset": "v1.5"
+        },
+        "width": 1654,
+        "height": 2339,
+        "sample_id": 1258
+      },
+      "printed_page": null,
+      "coverage": [
+        "英文正文",
+        "中文解析",
+        "选择题"
+      ],
+      "block_category_counts": {
+        "text_block": 20
+      },
+      "annotation_sha256": "39559a2af4635abe33881f40bdd4a9e68a2f172cd42013c5de8388555deb537d",
+      "annotation_status": "original_record_preserved",
+      "reference_review": {
+        "kind": "structural_and_visible_page_spot_check",
+        "missing_required_fields": [],
+        "full_text_review": false
+      },
+      "source_document": {
+        "identity_status": "partial",
+        "document_id": null,
+        "visible_or_upstream_identity": "上游文件名指向2016年安徽省中考英语试题（解析）；解析编者和整册出处未知",
+        "evidence_url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/images/exam_paper_2016%E5%B9%B4%E5%AE%89%E5%BE%BD%E7%9C%81%E4%B8%AD%E8%80%83%E8%8B%B1%E8%AF%AD%E8%AF%95%E9%A2%98%EF%BC%88%E8%A7%A3%E6%9E%90%EF%BC%89_page_003.png",
+        "isolation_status": "not_proven",
+        "informational_note": "原始源卷/源册身份、版次或候选与未知开发源册的对应关系缺少可核验证据",
+        "required_for_eligibility": false
+      },
+      "visual_review": {
+        "reviewed_at": "2026-10-01T12:53:17+08:00",
+        "reviewer": "Codex agent",
+        "readability": "readable_with_recorded_caveats",
+        "printed_no_handwritten_answers_observed": true,
+        "note": "清晰印刷答案解析，未将答案当作模型解题目标"
+      },
+      "recognition_status": "not_run_in_issue23",
+      "used_for_fix_or_tuning": false,
+      "readiness": "ready",
+      "annotated_evaluation_eligible": true
+    }
+  ],
+  "coverage": {
+    "page_count": 12,
+    "subject_counts": {
+      "数学": 7,
+      "物理": 1,
+      "化学": 1,
+      "生物": 1,
+      "语文": 1,
+      "英语": 1
+    },
+    "stage_counts": {
+      "初中": 8,
+      "高中": 4
+    },
+    "mathematics_share": "7/12",
+    "mathematics_topics": [
+      "代数",
+      "几何",
+      "函数",
+      "概率统计"
+    ],
+    "limitations": [
+      "来源隔离按用户要求不再核验；评测结果不提供严格独立留出的泛化证据",
+      "物理、化学、生物、语文、英语各仅1页",
+      "含教材、教辅、印刷解析及扫描模糊、水印，原图与上游标签保留"
+    ],
+    "eligible_page_count": 12
+  },
+  "evaluation_gate": {
+    "status": "closed",
+    "material_hashes_frozen": true,
+    "reference_annotations_ready": true,
+    "candidate_code_models_runtime_config_frozen": false,
+    "numeric_quality_thresholds_frozen": false,
+    "recognition_runs": 0,
+    "requires_before_first_run": [
+      "#24 候选代码、模型、运行时、配置及分项质量门槛冻结"
+    ],
+    "material_change_policy": "原图、参考或清单变更时另建冻结版本，保留本版；标注争议单独记录，不覆盖上游原始参考。"
+  },
+  "upstream_readme": {
+    "revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+    "url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/README.md",
+    "local_path": "output/issue-23/annotated-evaluation-v2/README.upstream.md",
+    "size_bytes": 13441,
+    "sha256": "9ac999a6615ae74009c997c4ddc8a72c52423c2b0384235b4126bdc213576e81",
+    "scope": "固定版本原始说明保存在本地包中；本记录用于核对来源说明的字节。"
+  },
+  "qualified_evaluation_ids": [
+    "candidate-01",
+    "candidate-02",
+    "candidate-03",
+    "candidate-04",
+    "candidate-05",
+    "candidate-06",
+    "candidate-07",
+    "candidate-08",
+    "candidate-09",
+    "candidate-10",
+    "candidate-11",
+    "candidate-12"
+  ],
+  "strict_independent_holdout_claim": false,
+  "requirements_record": "docs/issue-23/evidence/requirements.json",
+  "supersedes": {
+    "freeze_id": "issue23-candidates-1",
+    "reason": "用户取消来源隔离要求，保留对应参考标注要求",
+    "manifest_path": "docs/issue-23/history/issue23-candidates-1/manifest.json"
+  }
+}

@@ -1,0 +1,1 @@
+{"state":"partial","running":false,"terminal":true,"cancel_requested":false,"timeout_requested":false,"cancellation_granularity":"after_backend_call","page_current":1,"page_completed":1,"page_total":1,"region_completed":10,"region_total":10,"events_pending":0,"events_dropped":0,"engine_ready":true}

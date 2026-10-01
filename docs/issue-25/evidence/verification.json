@@ -1,0 +1,85 @@
+{
+  "controlled": {
+    "build": {
+      "command": "cmake --build build/issue24 -j4",
+      "returncode": 0,
+      "log_sha256": "189e52f93100d99b1a2c64c97497b7fcd86113f75484adfa52c5c0d7302ba805"
+    },
+    "ctest": {
+      "command": "TMPDIR=/dev/shm ctest --test-dir build/issue24 --output-on-failure",
+      "returncode": 0,
+      "passed": 23,
+      "total": 23,
+      "log_sha256": "f3f7808ab0e516ebc720a39d601dc3478a385b5494f5c147dc869d2f759cf792"
+    },
+    "python_unittest": {
+      "command": "TMPDIR=/dev/shm /home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests -p 'test_*.py' -v",
+      "returncode": 0,
+      "passed": 28,
+      "total": 28,
+      "log_sha256": "718abcc03b58309808410c3376f18735176271dad7f6035ebd37865d12f0403a"
+    },
+    "syntax": {
+      "command": "python3.12 -m py_compile scripts/issue25_materials.py scripts/issue25_run.py scripts/issue25_report.py tests/issue25_real.py tests/test_issue25_acceptance.py",
+      "returncode": 0
+    },
+    "typechecking": "仓库没有配置 Python 静态类型检查器；完成 Python 语法编译与既有 C++17 全目标编译。"
+  },
+  "real": {
+    "kind": "real_MNN_fresh_serial_public_jobs",
+    "run": {
+      "workers": 1,
+      "expected": 12,
+      "completed": 12,
+      "failed": [],
+      "candidate_and_materials_intact": true,
+      "evaluation_sha256": "0c6c0f6fb5e9c2542dfbcd726e4bf5a7d562dd4cc9524e08112261757bb45a01",
+      "completed_at_utc": "2026-10-01T09:50:30.342705+00:00"
+    },
+    "run_returncode": 0,
+    "export_verification": {
+      "returncode": 0,
+      "pages_checked": 12,
+      "resources_checked": 240,
+      "passed": true,
+      "sha256": "53a36ef8e307fbae18be17e42bd95d7185455a83cb314ae430c563ecfa2217df"
+    },
+    "report": {
+      "returncode": 2,
+      "sha256": "a899020cdac6ba1159d8c998314b4936290bfbe07b9b7659062bc51f9b8f3d31",
+      "quality_passed": false
+    },
+    "pinned_replay": {
+      "command": "TMPDIR=/dev/shm python3.12 /dev/shm/docprase-issue25-replay/scripts/issue25_report.py --run /home/dr/project/docprase/output/issue-25 --out /home/dr/project/docprase/output/issue-25/pinned-replay-report.json",
+      "tool_commit": "8ddebe11e6cafdee1067793ea18268e5a8e918f1",
+      "returncode": 2,
+      "report_sha256": "a899020cdac6ba1159d8c998314b4936290bfbe07b9b7659062bc51f9b8f3d31",
+      "replay_sha256": "a899020cdac6ba1159d8c998314b4936290bfbe07b9b7659062bc51f9b8f3d31",
+      "byte_identical": true
+    },
+    "executed_tool_versions": {
+      "passed": true,
+      "sha256": "815d9b2863d8783451c748f27336d9af7d20ccc6cfbb950d2d5d39ce65454fed"
+    }
+  },
+  "review_fixes": {
+    "public_command_tests": 3,
+    "passed": 3,
+    "log_sha256": "13d3635e207a67af01da5d2ab959735c95b1786bad0b8f93c7d0637ae2b38a40",
+    "original_frozen_tool_commit": "8ddebe11e6cafdee1067793ea18268e5a8e918f1",
+    "changed_version_rejected": {
+      "returncode": 1,
+      "report_created": false,
+      "log_sha256": "1e77d26ae82df88381bec9772be71a19c9e14944fcdb227942f4e52834b217c2"
+    }
+  },
+  "retained_failed_attempt": {
+    "path": "output/issue-25-parallel-attempt",
+    "all_pages_retained": 12,
+    "failed_page": "candidate-11",
+    "returncode": 137,
+    "signal": 9,
+    "oom_confirmed": false,
+    "report_sha256": "7516e0c5728980f51facfa6163c55c9eb73571b0d9c1f7166da4e80327471cdb"
+  }
+}

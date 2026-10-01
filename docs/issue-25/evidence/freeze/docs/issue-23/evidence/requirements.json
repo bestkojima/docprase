@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-01T05:24:58.895984+00:00",
+  "authority": "用户在本任务对话中的明确修订，优先于原 Issue #23",
+  "user_instruction": "1 不用管，2 必须要求有，ominibench下载数据集有对应的答案对不对？",
+  "revised_acceptance": {
+    "source_document_identity_and_isolation_required": false,
+    "previously_unseen_or_unused_for_tuning_required": false,
+    "usable_original_reference_annotations_required": true,
+    "freeze_images_references_manifest_hashes_and_coverage": true,
+    "preserve_existing_business_12_8_split": true,
+    "run_recognition_only_after_issue24_candidate_and_quality_threshold_freeze": true
+  },
+  "evaluation_role": "annotated_evaluation",
+  "strict_independent_holdout_claim": false,
+  "reference_meaning": "页面文字转写、公式 LaTeX、表格结构、版面与阅读顺序；不是试题求解答案",
+  "scope": "取消来源身份、同卷同册隔离及历史修复曝光的资格门槛；继续要求对应原始参考。无标注的原业务8页不纳入本评测清单。"
+}

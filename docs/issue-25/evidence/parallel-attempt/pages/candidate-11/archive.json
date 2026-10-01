@@ -1,0 +1,11 @@
+{
+  "path": "archives/candidate-11.zip",
+  "sha256": "c581b3e9bef433e6ad85c2c69221340bf37b1bbcc6ad7ad13145857945b2240d",
+  "files_sha256": {
+    "command.json": "c274615a8c328bcba55352e95e9f7768d4e1c92007795f0089dc8bc5d5a386d8",
+    "job/job-events.jsonl": "323ab0354ba6510120a273a8d5e3f051ade498b1a2142ec49a97991f63253d98",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "0ff9465bf4a617d8c5a369c42a96974e94b2e60c2cd0bdd76c7c00604e2e0bed",
+    "time.txt": "4dc37fca0ce564d6758d8a7e5dbaf00e7b23553d37a660325035153a5858de9d"
+  }
+}

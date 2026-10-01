@@ -1,0 +1,11 @@
+{
+  "workers": 2,
+  "expected": 12,
+  "completed": 12,
+  "failed": [
+    "candidate-11"
+  ],
+  "candidate_and_materials_intact": true,
+  "evaluation_sha256": "0c6c0f6fb5e9c2542dfbcd726e4bf5a7d562dd4cc9524e08112261757bb45a01",
+  "completed_at_utc": "2026-10-01T09:35:12.123106+00:00"
+}

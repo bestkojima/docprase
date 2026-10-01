@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-10-01",
+  "material_freeze_id": "issue23-annotated-evaluation-2",
+  "role": "annotated_evaluation",
+  "purpose": "仅运行冻结候选并判定质量；未据本次输出修改生产代码、模型或配置",
+  "used_for_fix_or_tuning": false,
+  "unseen_claim": false,
+  "future_policy": {
+    "record_exposure_and_new_candidate": true,
+    "preserve_original_thresholds_and_results": true,
+    "rerun_full_annotated_evaluation_for_new_candidate": true,
+    "add_independent_annotated_materials_before_any_strict_independent_claim": true
+  },
+  "requirements_revision": "docs/issue-23/evidence/requirements.json",
+  "note": "按用户已确认修订，来源身份、同卷同册隔离和历史曝光不再作为当前材料准入门槛。",
+  "material_page_ids": [
+    "candidate-01",
+    "candidate-02",
+    "candidate-03",
+    "candidate-04",
+    "candidate-05",
+    "candidate-06",
+    "candidate-07",
+    "candidate-08",
+    "candidate-09",
+    "candidate-10",
+    "candidate-11",
+    "candidate-12"
+  ],
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823",
+  "runs": [
+    {
+      "role": "retained_failed_parallel_attempt",
+      "path": "output/issue-25-parallel-attempt",
+      "failed": [
+        "candidate-11"
+      ]
+    },
+    {
+      "role": "complete_serial_rerun",
+      "path": "output/issue-25"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "build": {
+    "command": "cmake --build build/issue24 -j4",
+    "returncode": 0,
+    "log_sha256": "189e52f93100d99b1a2c64c97497b7fcd86113f75484adfa52c5c0d7302ba805"
+  },
+  "ctest": {
+    "command": "TMPDIR=/dev/shm ctest --test-dir build/issue24 --output-on-failure",
+    "returncode": 0,
+    "passed": 23,
+    "total": 23,
+    "log_sha256": "f3f7808ab0e516ebc720a39d601dc3478a385b5494f5c147dc869d2f759cf792"
+  },
+  "python_unittest": {
+    "command": "TMPDIR=/dev/shm /home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests -p 'test_*.py' -v",
+    "returncode": 0,
+    "passed": 28,
+    "total": 28,
+    "log_sha256": "718abcc03b58309808410c3376f18735176271dad7f6035ebd37865d12f0403a"
+  },
+  "syntax": {
+    "command": "python3.12 -m py_compile scripts/issue25_materials.py scripts/issue25_run.py scripts/issue25_report.py tests/issue25_real.py tests/test_issue25_acceptance.py",
+    "returncode": 0
+  },
+  "typechecking": "仓库没有配置 Python 静态类型检查器；完成 Python 语法编译与既有 C++17 全目标编译。"
+}

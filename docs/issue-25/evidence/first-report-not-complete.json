@@ -1,0 +1,9 @@
+{
+  "command": "TMPDIR=/dev/shm python3.12 scripts/issue25_report.py --run output/issue-25 --out output/issue-25/interim-report.json",
+  "role": "diagnostic_while_first_attempt_still_running",
+  "completed_pages": 3,
+  "unexecuted_pages": 9,
+  "passed": false,
+  "full_reference_char_denominator": 11685,
+  "reason": "保留运行中完整分母的验证，不作为最终质量验收。"
+}

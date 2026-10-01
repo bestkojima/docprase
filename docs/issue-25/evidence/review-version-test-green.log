@@ -1,0 +1,8 @@
+test_changed_frozen_rules_are_rejected_before_scoring (test_issue25_acceptance.AcceptanceCommandTests.test_changed_frozen_rules_are_rejected_before_scoring) ... ok
+test_report_tool_version_must_match_the_run_freeze (test_issue25_acceptance.AcceptanceCommandTests.test_report_tool_version_must_match_the_run_freeze) ... ok
+test_unexecuted_pages_keep_all_reference_denominators (test_issue25_acceptance.AcceptanceCommandTests.test_unexecuted_pages_keep_all_reference_denominators) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.221s
+
+OK

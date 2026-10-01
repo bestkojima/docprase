@@ -1,0 +1,14 @@
+{
+  "attempt": "output/issue-25-parallel-attempt",
+  "returncode": 1,
+  "completed": 12,
+  "failed": [
+    "candidate-11"
+  ],
+  "signal": 9,
+  "process_returncode": 137,
+  "classification": "external_process_termination_memory_contention_suspected",
+  "kernel_oom_diagnosis": "dmesg_access_denied_not_confirmed",
+  "concurrent_work": "2 real CLI jobs plus full CTest and Python model-probe suite",
+  "action": "retain_all_original_evidence_then_repeat_all_12_pages_serially_after_suites_complete"
+}

@@ -1,0 +1,1 @@
+{"quality_passed": false, "metrics": {"text_cer": 0.9329054343175011, "inline_formula_exact_rate": 0.060240963855421686, "independent_formula_exact_rate": 0.0, "table_exact_rate": 0.0, "table_cell_exact_rate": 0.05555555555555555, "reading_order_correct_rate": 0.1355223880597015, "fallback_rate": 0.020618556701030927, "missing_rate": 0.8195876288659794, "duplicate_outputs": 0}}

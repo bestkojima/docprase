@@ -1,0 +1,52 @@
+{
+  "candidate_code_commit": "88183cd0fb4acd3e72e78a40d7bc5140fefa8d7e",
+  "conditions": [
+    {
+      "id": "issue26_region_plan_and_option_label_association",
+      "status": "not_implemented",
+      "reason": "#26 仍为开放规格，当前候选缺少进入 Ovis 前的区域结构计划及横排选项绑定；不能依据本次回归补称已实现。",
+      "spec": "https://github.com/bestkojima/docprase/issues/26"
+    },
+    {
+      "id": "issue26_complete_official_postprocess_equivalence",
+      "status": "not_verified",
+      "reason": "官方完整矩形/auto处理链仍有本地策略差异与未核验环节。",
+      "spec": "https://github.com/bestkojima/docprase/issues/26"
+    },
+    {
+      "id": "issue26_real_content_and_granularity_audit",
+      "status": "not_verified",
+      "reason": "odb-03/07/08/13 的图文结构反例及多GT/单Region内容核验尚未由 #26 交付；一对一漏匹配只列为诊断，不能冒称均为真实漏内容。",
+      "spec": "https://github.com/bestkojima/docprase/issues/26"
+    },
+    {
+      "id": "full_automated_suite",
+      "status": "passed",
+      "reason": "当前冻结候选的实际执行证据通过；不构成识别质量通过。",
+      "evidence": {
+        "docs/issue-24/evidence/final-ctest.log": "c568e189a6f295f25af269a56817a89682ae2433360e521e375df5c2727589ff",
+        "docs/issue-24/evidence/final-unittest.log": "d2507cbba4a925bb6d0faf5b79bac632113fdfc6fb11acf6deb5c49491a9ac97",
+        "docs/issue-24/evidence/verification.json": "622475f5d3e146d03bb5823a32744752943764d17c0bf49417f06e661a2cb784"
+      }
+    },
+    {
+      "id": "real_cancel_timeout_retry_isolation",
+      "status": "passed",
+      "reason": "当前冻结候选的实际执行证据通过；不构成识别质量通过。",
+      "evidence": {
+        "docs/issue-24/evidence/real-safety-summary.json": "12570d97349703d4b5f2e4dfa069e45af9a4e0776fa33098fa9cff2f52f2f02f",
+        "docs/issue-24/evidence/real-safety.log": "8ec93ce6217529d167ffa22b317665760de8ca38a2c426d7c4a4fa21b09c9a1d"
+      }
+    },
+    {
+      "id": "production_reexport_and_resources",
+      "status": "passed",
+      "reason": "当前冻结候选的实际执行证据通过；不构成识别质量通过。",
+      "evidence": {
+        "docs/issue-24/evidence/real-export-verification.json": "b4acd3cc16ac476718bc045694202cad28b3b04ee7f19df966cfe7fd7f13f337",
+        "docs/issue-24/evidence/real-exports.log": "6b060e691b457542c604f98433e537ad8a947da5d9fc9ff56dee3f096ffb356d"
+      }
+    }
+  ],
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

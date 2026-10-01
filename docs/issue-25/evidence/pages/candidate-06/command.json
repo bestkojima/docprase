@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+    "--out",
+    "/dev/shm/docprase-issue25-final-jobs/candidate-06/job"
+  ],
+  "returncode": 0,
+  "input_sha256": "d27fcc6aa85b2f9c819e715b1f32bf38f5dc4b541f4a40ce1e1a4ac3712e6fd0",
+  "annotation_sha256": "c13c01ab8766597fa96f449e8bf6c60b6063783e12783f6b62411cf2d198cf70",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823",
+  "evaluation_sha256": "0c6c0f6fb5e9c2542dfbcd726e4bf5a7d562dd4cc9524e08112261757bb45a01",
+  "models_intact": true,
+  "execution": "fresh_public_cli_job",
+  "elapsed_seconds": 82.03524292499787
+}

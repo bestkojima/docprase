@@ -1,0 +1,8 @@
+{
+  "command": "TMPDIR=/dev/shm python3.12 /dev/shm/docprase-issue25-replay/scripts/issue25_report.py --run /home/dr/project/docprase/output/issue-25 --out /home/dr/project/docprase/output/issue-25/pinned-replay-report.json",
+  "tool_commit": "8ddebe11e6cafdee1067793ea18268e5a8e918f1",
+  "returncode": 2,
+  "report_sha256": "a899020cdac6ba1159d8c998314b4936290bfbe07b9b7659062bc51f9b8f3d31",
+  "replay_sha256": "a899020cdac6ba1159d8c998314b4936290bfbe07b9b7659062bc51f9b8f3d31",
+  "byte_identical": true
+}

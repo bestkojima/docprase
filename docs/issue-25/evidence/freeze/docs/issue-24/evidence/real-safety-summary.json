@@ -1,0 +1,14 @@
+{
+  "cancelled_safely": true,
+  "recovered_reference": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。",
+  "recovered_status": "ok",
+  "timeout_stop_reasons": [
+    "timeout"
+  ],
+  "timeout_generation_ms": [
+    1778
+  ],
+  "after_timeout_status": "ok",
+  "after_timeout_reference_matched": true,
+  "reexport_identical": true
+}

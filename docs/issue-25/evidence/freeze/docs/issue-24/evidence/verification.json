@@ -1,0 +1,49 @@
+{
+  "controlled": {
+    "kind": "controlled_backends_and_offline_unit_tests",
+    "build": {
+      "command": "cmake --build build/issue24 -j4",
+      "returncode": 0,
+      "log_sha256": "0f6c73dad7169db026b9b8dd8c6b863a02c4e04267752b0db08609a7c004a221"
+    },
+    "ctest": {
+      "command": "ctest --test-dir build/issue24 --output-on-failure",
+      "returncode": 0,
+      "passed": 23,
+      "total": 23,
+      "log_sha256": "c568e189a6f295f25af269a56817a89682ae2433360e521e375df5c2727589ff"
+    },
+    "python_unittest": {
+      "command": "/home/dr/project/google_edge/litert-env/bin/python -m unittest discover -s tests -p 'test_*.py'",
+      "interpreter": "Python 3.11.16",
+      "returncode": 0,
+      "passed": 25,
+      "total": 25,
+      "log_sha256": "d2507cbba4a925bb6d0faf5b79bac632113fdfc6fb11acf6deb5c49491a9ac97"
+    },
+    "python_syntax": {
+      "command": "python3.12 -m py_compile scripts/issue24_run.py scripts/issue24_report.py tests/issue24_real.py",
+      "returncode": 0
+    },
+    "initial_unittest_environment_failure": "system Python 3.12 lacked numpy; failure retained; reran full suite in documented existing Python 3.11 environment"
+  },
+  "real": {
+    "kind": "real_MNN_public_jobs",
+    "fresh_full_page_run": {
+      "candidate_intact": true,
+      "workers": 2,
+      "completed": 26,
+      "failed": []
+    },
+    "export_verification": {
+      "command": "python3.12 tests/issue24_real.py output/issue-24",
+      "returncode": 0,
+      "summary_sha256": "b4acd3cc16ac476718bc045694202cad28b3b04ee7f19df966cfe7fd7f13f337"
+    },
+    "safety": {
+      "command": "LD_LIBRARY_PATH=output/issue-24/candidate/runtime python3.12 tests/issue22_real.py output/issue-24/candidate/runtime/libdococr_c.so output/issue-24/candidate/runtime/dococr_cli output/issue-24/safety",
+      "returncode": 0,
+      "summary_sha256": "12570d97349703d4b5f2e4dfa069e45af9a4e0776fa33098fa9cff2f52f2f02f"
+    }
+  }
+}

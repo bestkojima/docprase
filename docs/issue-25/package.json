@@ -1,0 +1,93 @@
+{
+  "role": "lossless_original_full_job_archives",
+  "zip_files": [
+    {
+      "page_id": "candidate-01",
+      "path": "output/issue-25/archives/candidate-01.zip",
+      "size_bytes": 2662289,
+      "sha256": "7b88eb73cd5a2723a82f032c8970249b88fd4eb323d5b38da8ea391fc2b187fc",
+      "original_file_count": 44
+    },
+    {
+      "page_id": "candidate-02",
+      "path": "output/issue-25/archives/candidate-02.zip",
+      "size_bytes": 1937324,
+      "sha256": "125aaf6d23fc71ed82205b66b19e80a735c2088764e73cc92854f5a9568417a2",
+      "original_file_count": 77
+    },
+    {
+      "page_id": "candidate-03",
+      "path": "output/issue-25/archives/candidate-03.zip",
+      "size_bytes": 2925818,
+      "sha256": "ad6aea63ddf99e96cf04fd4c2a9f97addb661059e7547d95f619e3d1dc21ad37",
+      "original_file_count": 105
+    },
+    {
+      "page_id": "candidate-04",
+      "path": "output/issue-25/archives/candidate-04.zip",
+      "size_bytes": 2691002,
+      "sha256": "b1f3aeca3778ad9db24d6988079e72bf9c2742700cd4e8be8941d0732cb868c9",
+      "original_file_count": 64
+    },
+    {
+      "page_id": "candidate-05",
+      "path": "output/issue-25/archives/candidate-05.zip",
+      "size_bytes": 1756548,
+      "sha256": "30b47ecbf2979caf7667413aab4c7b2f9070e1f103b31103847353b9726ff3f4",
+      "original_file_count": 69
+    },
+    {
+      "page_id": "candidate-06",
+      "path": "output/issue-25/archives/candidate-06.zip",
+      "size_bytes": 2151399,
+      "sha256": "5f78412d65ed9e6f42409883f5c3f65d9b6d166580088051e82f04de3cdab93a",
+      "original_file_count": 74
+    },
+    {
+      "page_id": "candidate-07",
+      "path": "output/issue-25/archives/candidate-07.zip",
+      "size_bytes": 1520353,
+      "sha256": "9fc2e40c3c30d16def8356e682d4d05ac42fc73390ea9559fa0e333f72d2f0ab",
+      "original_file_count": 67
+    },
+    {
+      "page_id": "candidate-08",
+      "path": "output/issue-25/archives/candidate-08.zip",
+      "size_bytes": 1978897,
+      "sha256": "a7201146beb680bb44108676b51a83f83ba357e8527a53a48000e45a81b2ace7",
+      "original_file_count": 71
+    },
+    {
+      "page_id": "candidate-09",
+      "path": "output/issue-25/archives/candidate-09.zip",
+      "size_bytes": 1214231,
+      "sha256": "f2d1553fbb2eebc5629f47768d892cbc967d75621d6e84b48a075a1864028100",
+      "original_file_count": 43
+    },
+    {
+      "page_id": "candidate-10",
+      "path": "output/issue-25/archives/candidate-10.zip",
+      "size_bytes": 2318880,
+      "sha256": "cbf1f6d19014ee6fcc3485421d5d140c115b221a3031812a6bc0702c1d3f6d6d",
+      "original_file_count": 53
+    },
+    {
+      "page_id": "candidate-11",
+      "path": "output/issue-25/archives/candidate-11.zip",
+      "size_bytes": 2210588,
+      "sha256": "f5b73f42d5135c36ba00d08e49df9a3cc3da1d1ac036ee280fb5db84f70a88b5",
+      "original_file_count": 59
+    },
+    {
+      "page_id": "candidate-12",
+      "path": "output/issue-25/archives/candidate-12.zip",
+      "size_bytes": 765299,
+      "sha256": "1ddb00d925751665360e5c8ad27730191112c1f3b310c27dff357a0335499901",
+      "original_file_count": 43
+    }
+  ],
+  "total_size_bytes": 24132628,
+  "material_package": "docs/issue-23/package.json",
+  "snapshot_files": "docs/issue-25/evidence/freeze",
+  "note": "ZIP 无损保留全部原始文件，Git 保留文本及逐文件 SHA 索引；使用固定8ddebe1工具恢复校验。"
+}

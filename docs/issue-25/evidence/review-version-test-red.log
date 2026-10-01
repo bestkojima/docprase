@@ -1,0 +1,16 @@
+test_changed_frozen_rules_are_rejected_before_scoring (test_issue25_acceptance.AcceptanceCommandTests.test_changed_frozen_rules_are_rejected_before_scoring) ... ok
+test_report_tool_version_must_match_the_run_freeze (test_issue25_acceptance.AcceptanceCommandTests.test_report_tool_version_must_match_the_run_freeze) ... FAIL
+test_unexecuted_pages_keep_all_reference_denominators (test_issue25_acceptance.AcceptanceCommandTests.test_unexecuted_pages_keep_all_reference_denominators) ... ok
+
+======================================================================
+FAIL: test_report_tool_version_must_match_the_run_freeze (test_issue25_acceptance.AcceptanceCommandTests.test_report_tool_version_must_match_the_run_freeze)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/test_issue25_acceptance.py", line 35, in test_report_tool_version_must_match_the_run_freeze
+    self.assertIn('当前评分工具', result.stderr)
+AssertionError: '当前评分工具' not found in "评测输入或冻结证据非法：[Errno 2] No such file or directory: '/tmp/issue25-test-1e0m3b7m/freeze/docs/issue-23/manifest.json'\n"
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.194s
+
+FAILED (failures=1)
