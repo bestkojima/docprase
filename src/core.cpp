@@ -1113,6 +1113,9 @@ ParsedFormula parse_formula(const std::string& raw) {
                             return result;
                         environments.pop_back();
                     }
+                    // The checked environment name is metadata, not a math/prose
+                    // token. Its braces were already validated by argument_end.
+                    skip_delimiter = end - i;
                 }
                 next_text_brace = command == "text" || command == "mathrm" ||
                                   command == "operatorname";

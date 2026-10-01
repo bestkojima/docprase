@@ -1,0 +1,811 @@
+{
+  "execution": "historical_diagnostic_only",
+  "alignment_version": "issue27-content-alignment-1",
+  "old_report_sha256": "a899020cdac6ba1159d8c998314b4936290bfbe07b9b7659062bc51f9b8f3d31",
+  "original_scoring_unchanged": true,
+  "aggregate": {
+    "original": {
+      "text": {
+        "denominator": 182,
+        "matched": 159,
+        "missing": 23,
+        "fallback": 14,
+        "exact": 8,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 40,
+        "reference_chars": 11685,
+        "edit_distance": 7320,
+        "raw_edit_distance": 5099,
+        "raw_transcription_cer_diagnostic": 0.4363714163457424
+      },
+      "inline_formula": {
+        "denominator": 83,
+        "matched": 65,
+        "missing": 18,
+        "fallback": 53,
+        "exact": 6,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 0
+      },
+      "independent_formula": {
+        "denominator": 8,
+        "matched": 7,
+        "missing": 1,
+        "fallback": 2,
+        "exact": 1,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 0
+      },
+      "table": {
+        "denominator": 4,
+        "matched": 4,
+        "missing": 0,
+        "fallback": 0,
+        "exact": 1,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 0,
+        "cells": 36,
+        "cells_exact": 28
+      },
+      "figure": {
+        "denominator": 28,
+        "matched": 28,
+        "missing": 0,
+        "fallback": 28,
+        "exact": 0,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 2
+      },
+      "reading_order": {
+        "denominator": 1675,
+        "evaluable": 1339,
+        "correct": 1287,
+        "missing_pairs": 336
+      },
+      "block_statuses": {
+        "ok": 184,
+        "skipped": 30,
+        "partial": 26
+      },
+      "raw_repetition_suspicions": 1,
+      "pages_scored": 12,
+      "pages_failed": 0
+    },
+    "supplementary": {
+      "text": {
+        "denominator": 182,
+        "matched": 172,
+        "missing": 10,
+        "fallback": 14,
+        "exact": 10,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 40,
+        "reference_chars": 11685,
+        "edit_distance": 7287,
+        "raw_edit_distance": 4158,
+        "raw_transcription_cer_diagnostic": 0.3558408215661104
+      },
+      "inline_formula": {
+        "denominator": 83,
+        "matched": 66,
+        "missing": 17,
+        "fallback": 53,
+        "exact": 0,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 0
+      },
+      "independent_formula": {
+        "denominator": 8,
+        "matched": 7,
+        "missing": 1,
+        "fallback": 2,
+        "exact": 1,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 0
+      },
+      "table": {
+        "denominator": 4,
+        "matched": 4,
+        "missing": 0,
+        "fallback": 0,
+        "exact": 1,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 0,
+        "cells": 36,
+        "cells_exact": 28
+      },
+      "figure": {
+        "denominator": 28,
+        "matched": 28,
+        "missing": 0,
+        "fallback": 28,
+        "exact": 0,
+        "duplicate_outputs": 0,
+        "unmatched_outputs": 2
+      },
+      "reading_order": {
+        "denominator": 1675,
+        "evaluable": 1509,
+        "correct": 1457,
+        "missing_pairs": 166
+      },
+      "block_statuses": {
+        "ok": 184,
+        "skipped": 30,
+        "partial": 26
+      },
+      "raw_repetition_suspicions": 1,
+      "pages_scored": 12,
+      "pages_failed": 0
+    }
+  },
+  "pages": {
+    "candidate-01": {
+      "original": {
+        "text_cer": 0.6518324607329843,
+        "distance": 249,
+        "reference_chars": 382,
+        "missing": 2,
+        "fallback": 0
+      },
+      "supplementary": {
+        "text_cer": 0.4109947643979058,
+        "distance": 157,
+        "reference_chars": 382,
+        "missing": 1,
+        "fallback": 0
+      },
+      "multiple_GT_regions": [
+        {
+          "block_id": "b0005",
+          "annotation_ids": [
+            11,
+            1
+          ]
+        }
+      ],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "inline_formula:inexact_or_missing",
+          "table:inexact_or_missing",
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          15,
+          16,
+          1,
+          10,
+          0,
+          3,
+          7,
+          2
+        ],
+        "extra_text_block_ids": [
+          "b0002",
+          "b0004"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "0e08d02fc309439c5d4791880e5eda771922942ebda072e643bb2d449ba1933c"
+    },
+    "candidate-02": {
+      "original": {
+        "text_cer": 0.6673346693386774,
+        "distance": 666,
+        "reference_chars": 998,
+        "missing": 1,
+        "fallback": 3
+      },
+      "supplementary": {
+        "text_cer": 0.5350701402805611,
+        "distance": 534,
+        "reference_chars": 998,
+        "missing": 0,
+        "fallback": 3
+      },
+      "multiple_GT_regions": [
+        {
+          "block_id": "b0019",
+          "annotation_ids": [
+            14,
+            35
+          ]
+        }
+      ],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "inline_formula:inexact_or_missing",
+          "independent_formula:inexact_or_missing",
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          25,
+          24,
+          8,
+          4,
+          0,
+          3,
+          15,
+          32,
+          13,
+          31,
+          21,
+          29,
+          14,
+          35,
+          2,
+          6,
+          12,
+          9,
+          17
+        ],
+        "extra_text_block_ids": [
+          "b0016"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "0ed02a8a473d7c31a23b5b1c1e83d31e0305c7b655cdba89db74fb82c836cc33"
+    },
+    "candidate-03": {
+      "original": {
+        "text_cer": 0.7801877630301068,
+        "distance": 2410,
+        "reference_chars": 3089,
+        "missing": 5,
+        "fallback": 3
+      },
+      "supplementary": {
+        "text_cer": 0.8802201359663322,
+        "distance": 2719,
+        "reference_chars": 3089,
+        "missing": 3,
+        "fallback": 3
+      },
+      "multiple_GT_regions": [
+        {
+          "block_id": "b0023",
+          "annotation_ids": [
+            25,
+            44
+          ]
+        },
+        {
+          "block_id": "b0032",
+          "annotation_ids": [
+            4,
+            2
+          ]
+        }
+      ],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "inline_formula:inexact_or_missing",
+          "table:inexact_or_missing",
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          9,
+          5,
+          24,
+          8,
+          26,
+          41,
+          43,
+          25,
+          44,
+          36,
+          0,
+          42,
+          4,
+          2,
+          38,
+          37,
+          39
+        ],
+        "extra_text_block_ids": [
+          "b0012",
+          "b0015",
+          "b0016",
+          "b0020",
+          "b0022",
+          "b0003",
+          "b0007",
+          "b0014",
+          "b0017",
+          "b0018",
+          "b0021",
+          "b0027",
+          "b0028"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "89370cf32ef4a33731ffff62a95f8eb022eba2bd4705f3676bf9d3ffe3f0c427"
+    },
+    "candidate-04": {
+      "original": {
+        "text_cer": 0.5659863945578232,
+        "distance": 416,
+        "reference_chars": 735,
+        "missing": 3,
+        "fallback": 0
+      },
+      "supplementary": {
+        "text_cer": 1.021768707482993,
+        "distance": 751,
+        "reference_chars": 735,
+        "missing": 3,
+        "fallback": 0
+      },
+      "multiple_GT_regions": [],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "inline_formula:inexact_or_missing",
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          2,
+          4,
+          3,
+          9,
+          5,
+          10,
+          11,
+          23,
+          22,
+          24
+        ],
+        "extra_text_block_ids": [
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0011",
+          "b0013",
+          "b0014",
+          "b0015",
+          "b0016",
+          "b0019",
+          "b0012",
+          "b0018",
+          "b0020"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "65e37dc5204c59cf134a744bc94bc6b646c272a6a8c324c1db39cfdd1ec1e176"
+    },
+    "candidate-05": {
+      "original": {
+        "text_cer": 0.8594091903719913,
+        "distance": 1571,
+        "reference_chars": 1828,
+        "missing": 0,
+        "fallback": 3
+      },
+      "supplementary": {
+        "text_cer": 0.8703501094091903,
+        "distance": 1591,
+        "reference_chars": 1828,
+        "missing": 0,
+        "fallback": 3
+      },
+      "multiple_GT_regions": [],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "inline_formula:inexact_or_missing"
+        ],
+        "unresolved_annotation_ids": [
+          16,
+          5,
+          0,
+          4,
+          6,
+          8,
+          18,
+          17,
+          20,
+          24,
+          1
+        ],
+        "extra_text_block_ids": [
+          "b0010",
+          "b0011"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "0e40a8f7fd33f9d948f397ede466ac8e0fb41473f37c9bf960b92a9ed6797f7c"
+    },
+    "candidate-06": {
+      "original": {
+        "text_cer": 0.3688760806916426,
+        "distance": 512,
+        "reference_chars": 1388,
+        "missing": 1,
+        "fallback": 3
+      },
+      "supplementary": {
+        "text_cer": 0.30979827089337175,
+        "distance": 430,
+        "reference_chars": 1388,
+        "missing": 0,
+        "fallback": 3
+      },
+      "multiple_GT_regions": [
+        {
+          "block_id": "b0014",
+          "annotation_ids": [
+            32,
+            42
+          ]
+        }
+      ],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "inline_formula:inexact_or_missing",
+          "table:inexact_or_missing",
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          25,
+          14,
+          39,
+          40,
+          32,
+          42,
+          11,
+          43,
+          17,
+          6,
+          20,
+          12,
+          0,
+          21,
+          30,
+          5,
+          31,
+          34,
+          15,
+          41,
+          38,
+          4,
+          24,
+          1,
+          33
+        ],
+        "extra_text_block_ids": [
+          "b0001"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "75653207d3e33f73a8329b1f4c7e156726e9be21cce548b89165526a20a753b4"
+    },
+    "candidate-07": {
+      "original": {
+        "text_cer": 0.3857442348008386,
+        "distance": 184,
+        "reference_chars": 477,
+        "missing": 0,
+        "fallback": 0
+      },
+      "supplementary": {
+        "text_cer": 0.3857442348008386,
+        "distance": 184,
+        "reference_chars": 477,
+        "missing": 0,
+        "fallback": 0
+      },
+      "multiple_GT_regions": [],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "independent_formula:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          18,
+          7,
+          9,
+          8,
+          15,
+          2,
+          16,
+          3,
+          12,
+          11,
+          1,
+          5,
+          19,
+          13
+        ],
+        "extra_text_block_ids": [],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "b89310e7e48426980458c0c250764b4c67145a64795aba4a2d3dc992f3233ea3"
+    },
+    "candidate-08": {
+      "original": {
+        "text_cer": 0.4144736842105263,
+        "distance": 126,
+        "reference_chars": 304,
+        "missing": 1,
+        "fallback": 0
+      },
+      "supplementary": {
+        "text_cer": 0.6118421052631579,
+        "distance": 186,
+        "reference_chars": 304,
+        "missing": 1,
+        "fallback": 0
+      },
+      "multiple_GT_regions": [],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          11,
+          4,
+          9,
+          17,
+          13,
+          6,
+          27,
+          21,
+          23,
+          5,
+          20
+        ],
+        "extra_text_block_ids": [
+          "b0009",
+          "b0010",
+          "b0012"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "93a5a5194d10cb2c2fc6add9bcb919e747d674b242f1c1e6a16cc583c3b520e6"
+    },
+    "candidate-09": {
+      "original": {
+        "text_cer": 0.6714876033057852,
+        "distance": 325,
+        "reference_chars": 484,
+        "missing": 0,
+        "fallback": 2
+      },
+      "supplementary": {
+        "text_cer": 0.6714876033057852,
+        "distance": 325,
+        "reference_chars": 484,
+        "missing": 0,
+        "fallback": 2
+      },
+      "multiple_GT_regions": [],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "inline_formula:inexact_or_missing",
+          "figure:inexact_or_missing"
+        ],
+        "unresolved_annotation_ids": [
+          8,
+          17,
+          1,
+          19,
+          2,
+          10,
+          0,
+          6,
+          4
+        ],
+        "extra_text_block_ids": [],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "f2d60bddd42f8e52528f7e460eec803a5d0341158a98d5d56c8e6b929280e895"
+    },
+    "candidate-10": {
+      "original": {
+        "text_cer": 0.3051643192488263,
+        "distance": 130,
+        "reference_chars": 426,
+        "missing": 1,
+        "fallback": 0
+      },
+      "supplementary": {
+        "text_cer": 0.4788732394366197,
+        "distance": 204,
+        "reference_chars": 426,
+        "missing": 1,
+        "fallback": 0
+      },
+      "multiple_GT_regions": [],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          16,
+          0,
+          9,
+          17,
+          1,
+          18,
+          7,
+          22,
+          4,
+          14,
+          20
+        ],
+        "extra_text_block_ids": [
+          "b0011",
+          "b0012",
+          "b0013"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "2ade0cca4b1ecd31fcf495a8cc51d6f9cb5881f2e344fd2948b012567b60b17b"
+    },
+    "candidate-11": {
+      "original": {
+        "text_cer": 0.18855656697009102,
+        "distance": 145,
+        "reference_chars": 769,
+        "missing": 2,
+        "fallback": 0
+      },
+      "supplementary": {
+        "text_cer": 0.20416124837451236,
+        "distance": 157,
+        "reference_chars": 769,
+        "missing": 1,
+        "fallback": 0
+      },
+      "multiple_GT_regions": [
+        {
+          "block_id": "b0002",
+          "annotation_ids": [
+            22,
+            12
+          ]
+        }
+      ],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "figure:inexact_or_missing",
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          5,
+          9,
+          6,
+          15,
+          17,
+          16,
+          11,
+          13,
+          3,
+          7,
+          19,
+          1,
+          8,
+          21,
+          22,
+          12,
+          0,
+          23
+        ],
+        "extra_text_block_ids": [
+          "b0006",
+          "b0005"
+        ],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "c94ae404219b3b2a3abc86dba96247d45740ccf703992844460e46363f090918"
+    },
+    "candidate-12": {
+      "original": {
+        "text_cer": 0.7279503105590062,
+        "distance": 586,
+        "reference_chars": 805,
+        "missing": 7,
+        "fallback": 0
+      },
+      "supplementary": {
+        "text_cer": 0.06086956521739131,
+        "distance": 49,
+        "reference_chars": 805,
+        "missing": 0,
+        "fallback": 0
+      },
+      "multiple_GT_regions": [
+        {
+          "block_id": "b0002",
+          "annotation_ids": [
+            16,
+            3
+          ]
+        },
+        {
+          "block_id": "b0007",
+          "annotation_ids": [
+            18,
+            19,
+            9
+          ]
+        },
+        {
+          "block_id": "b0010",
+          "annotation_ids": [
+            21,
+            22
+          ]
+        },
+        {
+          "block_id": "b0011",
+          "annotation_ids": [
+            12,
+            13
+          ]
+        },
+        {
+          "block_id": "b0012",
+          "annotation_ids": [
+            14,
+            23
+          ]
+        },
+        {
+          "block_id": "b0013",
+          "annotation_ids": [
+            24,
+            25
+          ]
+        }
+      ],
+      "content_audit": {
+        "verified": false,
+        "blockers": [
+          "reading_order:wrong_or_unverified"
+        ],
+        "unresolved_annotation_ids": [
+          1,
+          16,
+          3,
+          4,
+          5,
+          17,
+          7,
+          18,
+          19,
+          9,
+          20,
+          11,
+          21,
+          22,
+          12,
+          13,
+          14,
+          24,
+          25
+        ],
+        "extra_text_block_ids": [],
+        "conclusion": "仍需核验"
+      },
+      "document_sha256": "953f1347ce10162c01289800c8b98acb0935590bfc6c05184c4dfcf5eed7a0e6"
+    }
+  }
+}
