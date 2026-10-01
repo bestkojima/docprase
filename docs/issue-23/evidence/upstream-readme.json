@@ -1,0 +1,8 @@
+{
+  "revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "url": "https://huggingface.co/datasets/opendatalab/OmniDocBench/blob/aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec/README.md",
+  "local_path": "output/issue-23/sealed/README.upstream.md",
+  "size_bytes": 13441,
+  "sha256": "9ac999a6615ae74009c997c4ddc8a72c52423c2b0384235b4126bdc213576e81",
+  "scope": "固定版本原始说明保存在本地包中；本记录用于核对来源说明的字节。"
+}

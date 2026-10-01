@@ -1,0 +1,34 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "huggingface_hub",
+    "hf",
+    "download",
+    "opendatalab/OmniDocBench",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+    "images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+    "README.md",
+    "--repo-type",
+    "dataset",
+    "--revision",
+    "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+    "--local-dir",
+    "output/issue-23/upstream",
+    "--max-workers",
+    "4"
+  ],
+  "env": {
+    "HF_ENDPOINT": "https://hf-mirror.com"
+  }
+}

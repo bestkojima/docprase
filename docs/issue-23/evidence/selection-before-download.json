@@ -1,0 +1,32 @@
+{
+  "revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "indices": [
+    697,
+    703,
+    720,
+    732,
+    767,
+    841,
+    856,
+    713,
+    707,
+    839,
+    857,
+    1554
+  ],
+  "basis": "标注与原图学段/学科覆盖；数学7/12，覆盖代数、几何、函数、概率统计；不运行识别，不按模型表现选择；未知源卷/册身份不能提升留出资格。",
+  "images": [
+    "images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+    "images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+    "images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png"
+  ]
+}

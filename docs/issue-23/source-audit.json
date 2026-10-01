@@ -1,0 +1,1204 @@
+{
+  "audited_at": "2026-10-01T12:53:17+08:00",
+  "status": "not_ready",
+  "inventory_pages": [
+    {
+      "id": "odb-01",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_55196913.pdf_0.jpg",
+      "image_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+      "upstream_index_0based": 661,
+      "source_document_identity": "成都2023高三诊断数学（含印刷答案）",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "此 卷 只 装 订 不 密 封姓名____准考证号考场号座位号",
+        "数学试题第 2 页（共 6 页）",
+        "数学试题第 1 页（共 6 页）"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-01/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-02",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_96657786.pdf_0.jpg",
+      "image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+      "upstream_index_0based": 665,
+      "source_document_identity": "黄冈2022高三调研数学（含印刷答案）",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "此 卷 只 装 订 不 密 封姓名 ____准考证号考场号座位号",
+        "数学试题第 2 页（共 6 页）",
+        "数学试题第 1 页（共 6 页）"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-02/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-03",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+      "image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "upstream_index_0based": 675,
+      "source_document_identity": "精华在线初中函数试题",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "精华在线 www.Jinghua.com",
+        "www.Jinghua.com “在线名师”→答疑室  随时随地提问互动",
+        "第2页",
+        "在线学习网址：www.Jinghua.com客服热线：400-650-7766（9:00—21：00 everyday）",
+        "版权所有北京天地精华教育科技有限公司"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-03/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-04",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1564.jpg",
+      "image_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
+      "upstream_index_0based": 728,
+      "source_document_identity": "2021秋高三期终数学文科",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "第2页 (共4页)",
+        "高三数学(文)",
+        "第1页(共4页)",
+        "高三数学(文)"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-04/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-05",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+      "image_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+      "upstream_index_0based": 800,
+      "source_document_identity": "高中数学填空与解答题",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-05/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-06",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_4065.jpg",
+      "image_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
+      "upstream_index_0based": 826,
+      "source_document_identity": "江西八所重点中学2022高三联考数学",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "第4页共4页",
+        "江西省八所重点中学2022届高三联考文科数学试卷",
+        "江西省八所重点中学2022届高三联考文科数学试卷",
+        "第3页共4页"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-06/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-07",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+      "image_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "upstream_index_0based": 176,
+      "source_document_identity": "人教初中有理数数学阅读页",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "人民教育出版社",
+        "第一章有理数",
+        "人民教育出版社",
+        "19"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-07/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-08",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/page-a70b2ec9-379a-4e83-9f64-852c343ec8cd.png",
+      "image_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "upstream_index_0based": 177,
+      "source_document_identity": "人教初中几何展开图阅读页",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "人民教育出版社",
+        "第六章几何图形初步",
+        "人民教育出版社",
+        "159"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-08/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-09",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+      "image_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+      "upstream_index_0based": 691,
+      "source_document_identity": "高中三角恒等变换教辅",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-09/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-10",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+      "image_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+      "upstream_index_0based": 23,
+      "source_document_identity": "高中添项配凑教辅",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "17"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-10/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-11",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+      "image_sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68",
+      "upstream_index_0based": 766,
+      "source_document_identity": "初中一元一次方程归纳",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "附",
+        "全书大归纳",
+        "284",
+        "关注微信公众号“初高教辅站”获取更多初高中教辅资料"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-11/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-12",
+      "collection": "omnidocbench_development_20",
+      "subject": "数学",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+      "image_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
+      "upstream_index_0based": 820,
+      "source_document_identity": "学而思中考二次函数讲义",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "二轮复习",
+        "学而思网校",
+        "xueersi"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-12/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-13",
+      "collection": "omnidocbench_development_20",
+      "subject": "物理",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+      "image_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "upstream_index_0based": 785,
+      "source_document_identity": "初中物理沸腾与凝固练习",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "6"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-13/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-14",
+      "collection": "omnidocbench_development_20",
+      "subject": "物理",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+      "image_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+      "upstream_index_0based": 793,
+      "source_document_identity": "初中物理内能练习",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "4"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-14/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-15",
+      "collection": "omnidocbench_development_20",
+      "subject": "物理",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "upstream_index_0based": 783,
+      "source_document_identity": "高中机械波教材页",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "73"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-15/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-16",
+      "collection": "omnidocbench_development_20",
+      "subject": "化学",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_2100.jpg",
+      "image_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
+      "upstream_index_0based": 753,
+      "source_document_identity": "初中化学酸碱盐练习页",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "70",
+        "第11章 酸与碱"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-16/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-17",
+      "collection": "omnidocbench_development_20",
+      "subject": "化学",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_952.jpg",
+      "image_sha256": "3563a859d407026c160f6917d5a625407a7565d83429f13ff85220b2ed356136",
+      "upstream_index_0based": 861,
+      "source_document_identity": "高中铁与金属材料教辅",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "第三章  铁  金属材料",
+        "37",
+        "关注微信公众号 “ 初高教辅站 ” 获取更多初高中教辅资料"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-17/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-18",
+      "collection": "omnidocbench_development_20",
+      "subject": "生物",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_3313.jpg",
+      "image_sha256": "46e8933d18a8ee8135f43fd29da3df9f2f68449e96667c44dfc103c385d86402",
+      "upstream_index_0based": 805,
+      "source_document_identity": "高中植物激素复习练习",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "复习与提高",
+        "111"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-18/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-19",
+      "collection": "omnidocbench_development_20",
+      "subject": "语文",
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_377.jpg",
+      "image_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
+      "upstream_index_0based": 819,
+      "source_document_identity": "高考语文仿真冲刺卷四",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [
+        "学校____班级____姓名____考号____弥封线内请不要答题",
+        "14",
+        "13"
+      ],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-19/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "odb-20",
+      "collection": "omnidocbench_development_20",
+      "subject": "英语",
+      "image_path": "images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+      "image_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+      "upstream_index_0based": 1575,
+      "source_document_identity": "2018广西北部湾中考英语",
+      "identity_status": "partial_or_unknown",
+      "visible_identity_cues": [],
+      "effective_role": "development_evaluation",
+      "holdout_eligible": false,
+      "exposure": "20页均已提交整页识别/开发评测，包含解码失败页；不得重新命名为留出",
+      "evidence": [
+        "docs/issue-17/evidence/odb-20/command.json",
+        "docs/issue-17/results.md",
+        "docs/issue-17/report.json"
+      ]
+    },
+    {
+      "id": "page-01",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/development/page-01.jpg",
+      "image_sha256": "3cb3bf6e4a6750ce26b77339d4c9214c7192902dcadd80101d3c16bdae680e97",
+      "historical_split": "development",
+      "source_document_identity": "2024年高考综合改革适应性测试数学",
+      "historical_document_id": "math-neea-2024",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-02",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/development/page-02.jpg",
+      "image_sha256": "7a9f19dbfee950131dbed8c6ad5e5583dbf0b4e8ede9f0b84de092a44171c414",
+      "historical_split": "development",
+      "source_document_identity": "2024年高考综合改革适应性测试数学",
+      "historical_document_id": "math-neea-2024",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-03",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/development/page-03.jpg",
+      "image_sha256": "5b25891d9a452d69f0ef79dacd28fedebedfdbe6e065552b02492f8907714b1b",
+      "historical_split": "development",
+      "source_document_identity": "2024年高考综合改革适应性测试数学",
+      "historical_document_id": "math-neea-2024",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-04",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/development/page-04.jpg",
+      "image_sha256": "45354936fd225b919511f0b464926aba2e692988163f02eb6de4394432ec69c4",
+      "historical_split": "development",
+      "source_document_identity": "2024年高考综合改革适应性测试数学",
+      "historical_document_id": "math-neea-2024",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-05",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/holdout/page-05.png",
+      "image_sha256": "6a3a235f2aa2b045722c07f9d53e72b8bd4a171e00c2634ba5f3bf209a10f701",
+      "historical_split": "holdout",
+      "source_document_identity": "2024届初中学业考试模拟（一）九年级数学",
+      "historical_document_id": "math-junior-exam",
+      "identity_status": "partial",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-06",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/holdout/page-06.png",
+      "image_sha256": "b1b08f6386351c14e6c57b81a96832950b62a37f1a6697df0708930056ec6879",
+      "historical_split": "holdout",
+      "source_document_identity": "2024届初中学业考试模拟（一）九年级数学",
+      "historical_document_id": "math-junior-exam",
+      "identity_status": "partial",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-07",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/holdout/page-07.png",
+      "image_sha256": "6aebd74f8992199d220514846f54b8af47d4d0adfde690fd513b3f28c1550409",
+      "historical_split": "holdout",
+      "source_document_identity": "2024届初中学业考试模拟（一）九年级数学",
+      "historical_document_id": "math-junior-exam",
+      "identity_status": "partial",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-08",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/development/page-08.png",
+      "image_sha256": "f4deb57e7e097a6da487d0699bd79431af8c11125e6273e8cab6a11ffa90886b",
+      "historical_split": "development",
+      "source_document_identity": "人教B版数学必修第一册",
+      "historical_document_id": "math-high",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-09",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/development/page-09.png",
+      "image_sha256": "d254a443ad796cfc96ac2f97eb9cde7c32b4efbb28d93434bebf9a87a52c2ddc",
+      "historical_split": "development",
+      "source_document_identity": "人教B版数学必修第一册",
+      "historical_document_id": "math-high",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-10",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/development/page-10.png",
+      "image_sha256": "934f245711ad53bfc3a09ec1a87e2858cff9349573c465c923773525607b170b",
+      "historical_split": "development",
+      "source_document_identity": "人教B版数学必修第一册",
+      "historical_document_id": "math-high",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-11",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/holdout/page-11.png",
+      "image_sha256": "7dd83d62e675fa92df125a9925088c4f2d5552f95c796d5e19d3321698628b7e",
+      "historical_split": "holdout",
+      "source_document_identity": "人教版数学八年级下册",
+      "historical_document_id": "math-junior",
+      "identity_status": "documented_source",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-12",
+      "collection": "business_original_20",
+      "subject": "数学",
+      "image_path": "output/quality-corpus-20/holdout/page-12.png",
+      "image_sha256": "7b46ad0526a8872c2d5ec70f92143da1f0572d6a4e4831b76ec66b4c597bc9fd",
+      "historical_split": "holdout",
+      "source_document_identity": "人教版数学八年级下册",
+      "historical_document_id": "math-junior",
+      "identity_status": "documented_source",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-13",
+      "collection": "business_original_20",
+      "subject": "物理",
+      "image_path": "output/quality-corpus-20/development/page-13.png",
+      "image_sha256": "0411329efc85bbff23ec727664b91de4570a717dddc3cb12676f1cc3d2c2a115",
+      "historical_split": "development",
+      "source_document_identity": "安师大附中2021年高中自主招生物理",
+      "historical_document_id": "physics-exam",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-14",
+      "collection": "business_original_20",
+      "subject": "物理",
+      "image_path": "output/quality-corpus-20/development/page-14.png",
+      "image_sha256": "aba61e6b31704802601a3d978652a721ec3b0e5e73e3d505fd0c808497fc2ce9",
+      "historical_split": "development",
+      "source_document_identity": "安师大附中2021年高中自主招生物理",
+      "historical_document_id": "physics-exam",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-15",
+      "collection": "business_original_20",
+      "subject": "物理",
+      "image_path": "output/quality-corpus-20/holdout/page-15.png",
+      "image_sha256": "6ea902eae3207d153db4adeb092fc0a16a6525d01a20f34d06185097c5635e9a",
+      "historical_split": "holdout",
+      "source_document_identity": "人教版物理八年级上册",
+      "historical_document_id": "physics-student",
+      "identity_status": "documented_source",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-16",
+      "collection": "business_original_20",
+      "subject": "化学",
+      "image_path": "output/quality-corpus-20/development/page-16.png",
+      "image_sha256": "94524d5c2c1e7be9cdbbdd2323e20128ab4a57fe81b407539ae65402ab9d929c",
+      "historical_split": "development",
+      "source_document_identity": "安师大附中2021年高中自主招生化学",
+      "historical_document_id": "chemistry-exam",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-17",
+      "collection": "business_original_20",
+      "subject": "化学",
+      "image_path": "output/quality-corpus-20/holdout/page-17.png",
+      "image_sha256": "4f2ec0671b61db98167cb53f1a1e590df1126d5c5a1cc2afd70591c621acb109",
+      "historical_split": "holdout",
+      "source_document_identity": "人教版化学九年级下册",
+      "historical_document_id": "chemistry-student",
+      "identity_status": "documented_source",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-18",
+      "collection": "business_original_20",
+      "subject": "生物",
+      "image_path": "output/quality-corpus-20/holdout/page-18.png",
+      "image_sha256": "872e1e2bb95e3d74f670b5aab9445abd47c3f0db86d294f2323af4e87624638a",
+      "historical_split": "holdout",
+      "source_document_identity": "沪科教版生物学必修1分子与细胞（公开节选）",
+      "historical_document_id": "biology",
+      "identity_status": "documented_source",
+      "effective_role": "historical_unannotated_holdout",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-19",
+      "collection": "business_original_20",
+      "subject": "语文",
+      "image_path": "output/quality-corpus-20/development/page-19.jpg",
+      "image_sha256": "ded866622252861644235229be617a444c4bb7aa1e6d5e51970e57b564e4e9a2",
+      "historical_split": "development",
+      "source_document_identity": "2024年高考综合改革适应性测试语文",
+      "historical_document_id": "chinese-exam",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "page-20",
+      "collection": "business_original_20",
+      "subject": "英语",
+      "image_path": "output/quality-corpus-20/development/page-20.jpg",
+      "image_sha256": "3624833cf9a65649824a0300dae829053230f5d0bc592b4ed459e696180c15f7",
+      "historical_split": "development",
+      "source_document_identity": "2024年高考综合改革适应性测试英语",
+      "historical_document_id": "english-exam",
+      "identity_status": "documented_source",
+      "effective_role": "business_development",
+      "holdout_eligible": false,
+      "reference_status": "no_full_text_reference",
+      "exposure": "原清单记为未运行识别；此次另核查本地曝光记录，阴性结果不等同绝对未见证明",
+      "blockers": [
+        "missing_usable_full_page_reference",
+        "isolation_from_unknown_development_sources_not_proven"
+      ],
+      "evidence": [
+        "docs/issue-23/evidence/business-manifest.json"
+      ]
+    },
+    {
+      "id": "zh_text_table",
+      "collection": "legacy_regression_7",
+      "image_path": "tests/fixtures/ovis/source_page.jpg",
+      "image_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+      "source_document_identity": "OmniDocBench aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec; tests/fixtures/ovis/manifest.json",
+      "identity_status": "partial_or_unknown",
+      "historical_role": "development",
+      "effective_role": "development_regression",
+      "holdout_eligible": false,
+      "exposure": "已用于模型对齐/开发/回归；en_two_column 首轮发现排序缺陷并用于修复，未见资格已取消",
+      "evidence": [
+        "docs/issue-15/samples.json",
+        "docs/issue-15/README.md",
+        "docs/issue-15/order-fix.md"
+      ]
+    },
+    {
+      "id": "zh_formula",
+      "collection": "legacy_regression_7",
+      "image_path": "tests/fixtures/ovis/formula_book_page.png",
+      "image_sha256": "861030411176ef8eb8cbf9607461d252b8db557808ab91e87a4e9bed4c69bb84",
+      "source_document_identity": "OmniDocBench aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec; tests/fixtures/ovis/formula_book_page.manifest.json",
+      "identity_status": "partial_or_unknown",
+      "historical_role": "development",
+      "effective_role": "development_regression",
+      "holdout_eligible": false,
+      "exposure": "已用于模型对齐/开发/回归；en_two_column 首轮发现排序缺陷并用于修复，未见资格已取消",
+      "evidence": [
+        "docs/issue-15/samples.json",
+        "docs/issue-15/README.md",
+        "docs/issue-15/order-fix.md"
+      ]
+    },
+    {
+      "id": "zh_merged_table",
+      "collection": "legacy_regression_7",
+      "image_path": "tests/fixtures/ovis/merged_table_book_page.png",
+      "image_sha256": "c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc",
+      "source_document_identity": "OmniDocBench aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec; tests/fixtures/ovis/merged_table_book_page.manifest.json",
+      "identity_status": "partial_or_unknown",
+      "historical_role": "development",
+      "effective_role": "development_regression",
+      "holdout_eligible": false,
+      "exposure": "已用于模型对齐/开发/回归；en_two_column 首轮发现排序缺陷并用于修复，未见资格已取消",
+      "evidence": [
+        "docs/issue-15/samples.json",
+        "docs/issue-15/README.md",
+        "docs/issue-15/order-fix.md"
+      ]
+    },
+    {
+      "id": "en_jee",
+      "collection": "legacy_regression_7",
+      "image_path": "tests/fixtures/layout/exam-jee-346.jpg",
+      "image_sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade",
+      "source_document_identity": "HiLEx JEE source revision 3bb962636c14b2630d308a77df2b3f5b768bb434; tests/fixtures/layout/exam-jee-346-reference.json; source metadata license code 1 (do not infer text license from code)",
+      "identity_status": "partial_or_unknown",
+      "historical_role": "alignment",
+      "effective_role": "development_regression",
+      "holdout_eligible": false,
+      "exposure": "已用于模型对齐/开发/回归；en_two_column 首轮发现排序缺陷并用于修复，未见资格已取消",
+      "evidence": [
+        "docs/issue-15/samples.json",
+        "docs/issue-15/README.md",
+        "docs/issue-15/order-fix.md"
+      ]
+    },
+    {
+      "id": "zh_pdf-p1",
+      "collection": "legacy_regression_7",
+      "image_path": "tests/fixtures/pdf/printed_textbook_2p.pdf",
+      "image_sha256": "13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7",
+      "source_document_identity": "项目自制印刷 PDF；tests/fixtures/pdf/make_textbook.py；字形授权见 tests/fixtures/pdf/DROID_FONT_NOTICE.md",
+      "identity_status": "documented_project_source",
+      "historical_role": "development",
+      "effective_role": "development_regression",
+      "holdout_eligible": false,
+      "exposure": "已用于模型对齐/开发/回归；en_two_column 首轮发现排序缺陷并用于修复，未见资格已取消",
+      "evidence": [
+        "docs/issue-15/samples.json",
+        "docs/issue-15/README.md",
+        "docs/issue-15/order-fix.md"
+      ]
+    },
+    {
+      "id": "zh_pdf-p2",
+      "collection": "legacy_regression_7",
+      "image_path": "tests/fixtures/pdf/printed_textbook_2p.pdf",
+      "image_sha256": "13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7",
+      "source_document_identity": "项目自制印刷 PDF；tests/fixtures/pdf/make_textbook.py；字形授权见 tests/fixtures/pdf/DROID_FONT_NOTICE.md",
+      "identity_status": "documented_project_source",
+      "historical_role": "development",
+      "effective_role": "development_regression",
+      "holdout_eligible": false,
+      "exposure": "已用于模型对齐/开发/回归；en_two_column 首轮发现排序缺陷并用于修复，未见资格已取消",
+      "evidence": [
+        "docs/issue-15/samples.json",
+        "docs/issue-15/README.md",
+        "docs/issue-15/order-fix.md"
+      ]
+    },
+    {
+      "id": "en_two_column",
+      "collection": "legacy_regression_7",
+      "image_path": "tests/fixtures/issue15/printed_science_2col.png",
+      "image_sha256": "b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9",
+      "source_document_identity": "项目自制印刷页；tests/fixtures/issue15/make_exam.py；DejaVuSans 字形；未据本页结果修改模型、阈值或比较规则",
+      "identity_status": "documented_project_source",
+      "historical_role": "evaluation_unseen",
+      "effective_role": "development_regression",
+      "holdout_eligible": false,
+      "exposure": "已用于模型对齐/开发/回归；en_two_column 首轮发现排序缺陷并用于修复，未见资格已取消",
+      "evidence": [
+        "docs/issue-15/samples.json",
+        "docs/issue-15/README.md",
+        "docs/issue-15/order-fix.md"
+      ]
+    }
+  ],
+  "additional_exposures": [
+    {
+      "upstream_index_0based": 715,
+      "image_path": "images/jiaocaineedrop_jiaocai_needrop_en_1417.jpg",
+      "effective_role": "selection_exposed_candidate",
+      "holdout_eligible": false,
+      "reason": "既有选样已查看并排除，不把被排除页当作未见的新材料",
+      "evidence": [
+        "docs/omnidocbench-20/README.md",
+        "output/omnidocbench/candidate-indices.json"
+      ]
+    }
+  ],
+  "business_split_counts": {
+    "development": 12,
+    "holdout": 8
+  },
+  "business_source_split_overlap": false,
+  "business_source_split_check_scope": "仅原业务清单内部，不能排除与未知源册的 OmniDocBench 开发页交叉",
+  "sources": {
+    "math-neea-420": {
+      "title": "2024年高考综合改革适应性测试数学",
+      "subject": "数学",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/math-exam-420.jpg",
+      "url": "https://www.neea.edu.cn/res/Home/2401/24010420.jpg",
+      "landing_url": "https://www.neea.edu.cn/html1/report/2401/426-1.htm",
+      "sha256": "3cb3bf6e4a6750ce26b77339d4c9214c7192902dcadd80101d3c16bdae680e97",
+      "document_id": "math-neea-2024"
+    },
+    "math-neea-422": {
+      "title": "2024年高考综合改革适应性测试数学",
+      "subject": "数学",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/math-exam-422.jpg",
+      "url": "https://www.neea.edu.cn/res/Home/2401/24010422.jpg",
+      "landing_url": "https://www.neea.edu.cn/html1/report/2401/426-1.htm",
+      "sha256": "7a9f19dbfee950131dbed8c6ad5e5583dbf0b4e8ede9f0b84de092a44171c414",
+      "document_id": "math-neea-2024"
+    },
+    "math-neea-421": {
+      "title": "2024年高考综合改革适应性测试数学",
+      "subject": "数学",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/math-exam-421.jpg",
+      "url": "https://www.neea.edu.cn/res/Home/2401/24010421.jpg",
+      "landing_url": "https://www.neea.edu.cn/html1/report/2401/426-1.htm",
+      "sha256": "5b25891d9a452d69f0ef79dacd28fedebedfdbe6e065552b02492f8907714b1b",
+      "document_id": "math-neea-2024"
+    },
+    "math-neea-423": {
+      "title": "2024年高考综合改革适应性测试数学",
+      "subject": "数学",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/math-exam-423.jpg",
+      "url": "https://www.neea.edu.cn/res/Home/2401/24010423.jpg",
+      "landing_url": "https://www.neea.edu.cn/html1/report/2401/426-1.htm",
+      "sha256": "45354936fd225b919511f0b464926aba2e692988163f02eb6de4394432ec69c4",
+      "document_id": "math-neea-2024"
+    },
+    "math-junior-exam": {
+      "title": "2024届初中学业考试模拟（一）九年级数学",
+      "subject": "数学",
+      "kind": "试卷",
+      "split": "holdout",
+      "stage": "初中",
+      "path": "output/quality-corpus-20/sources/math-junior-exam.pdf",
+      "url": "https://huoke-public-1254282420.cos.ap-chengdu.myqcloud.com/upload/file/20240110/1704877231109896.pdf",
+      "landing_url": null,
+      "sha256": "11fc301baccb58fd44bf57abd884b2e8bb19e9c525c73df4a4267f1235313ef5",
+      "document_id": "math-junior-exam"
+    },
+    "math-high": {
+      "title": "人教B版数学必修第一册",
+      "subject": "数学",
+      "kind": "教材",
+      "split": "development",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/math-high.pdf",
+      "url": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/5a80345f2043ba6f8db8d7be9cf3db82725ff1f7/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88%EF%BC%88B%E7%89%88%EF%BC%89%EF%BC%88%E4%B8%BB%E7%BC%96%EF%BC%9A%E9%AB%98%E5%AD%98%E6%98%8E%EF%BC%89-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE/%E6%99%AE%E9%80%9A%E9%AB%98%E4%B8%AD%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%EF%BC%88B%E7%89%88%EF%BC%89%E5%BF%85%E4%BF%AE%20%E7%AC%AC%E4%B8%80%E5%86%8C.pdf",
+      "landing_url": "https://github.com/TapXWorld/ChinaTextbook",
+      "sha256": "8a121e7cb36cd4a9e8582b369574ec7f5e539771f87ab210d7850a574407ba39",
+      "document_id": "math-high"
+    },
+    "math-junior": {
+      "title": "人教版数学八年级下册",
+      "subject": "数学",
+      "kind": "教材",
+      "split": "holdout",
+      "stage": "初中",
+      "path": "output/quality-corpus-20/sources/math-junior.pdf",
+      "url": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/5a80345f2043ba6f8db8d7be9cf3db82725ff1f7/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE/%E5%85%AB%E5%B9%B4%E7%BA%A7/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E5%85%AB%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf",
+      "landing_url": "https://github.com/TapXWorld/ChinaTextbook",
+      "sha256": "0c9ce86ae90f59091f5c9a2204d3a56cb11fc31da46865c28fa65a18e3ecaedc",
+      "document_id": "math-junior"
+    },
+    "physics-exam": {
+      "title": "安师大附中2021年高中自主招生物理",
+      "subject": "物理",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "初中升高中",
+      "path": "output/quality-corpus-20/sources/physics-exam.pdf",
+      "url": "https://fz.ahnu.edu.cn/__local/A/B5/75/213AE1A21F7DD6A8B9FE1075737_BD5152CE_A4E19.pdf?e=.pdf",
+      "landing_url": "https://fz.ahnu.edu.cn/info/1054/18802.htm",
+      "sha256": "1d353e2fd639005b2caaa3b358c052410749a6dd841f5c09d79215adc955de92",
+      "document_id": "physics-exam"
+    },
+    "chemistry-exam": {
+      "title": "安师大附中2021年高中自主招生化学",
+      "subject": "化学",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "初中升高中",
+      "path": "output/quality-corpus-20/sources/chemistry-exam-2021.pdf",
+      "url": "https://fz.ahnu.edu.cn/__local/F/35/CC/2064DE2D54C0B88FF869C1D752E_37B37E9D_1AE3A1.pdf?e=.pdf",
+      "landing_url": "https://fz.ahnu.edu.cn/info/1054/18805.htm",
+      "sha256": "1853e3d492272844e84443f9358c5c40427a747d3c457a3a2d506b908de43756",
+      "document_id": "chemistry-exam"
+    },
+    "physics-student": {
+      "title": "人教版物理八年级上册",
+      "subject": "物理",
+      "kind": "教材",
+      "split": "holdout",
+      "stage": "初中",
+      "path": "output/quality-corpus-20/sources/physics-student.pdf",
+      "url": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/5a80345f2043ba6f8db8d7be9cf3db82725ff1f7/%E5%88%9D%E4%B8%AD/%E7%89%A9%E7%90%86/%E4%BA%BA%E6%95%99%E7%89%88-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE/%E5%85%AB%E5%B9%B4%E7%BA%A7/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E7%89%A9%E7%90%86%E5%85%AB%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+      "landing_url": "https://github.com/TapXWorld/ChinaTextbook",
+      "sha256": "0279bc50d53ee1f41f93ebfdcf82dbcc10a96bb5775c0ce54342652520cb15b7",
+      "document_id": "physics-student"
+    },
+    "chemistry-student": {
+      "title": "人教版化学九年级下册",
+      "subject": "化学",
+      "kind": "教材",
+      "split": "holdout",
+      "stage": "初中",
+      "path": "output/quality-corpus-20/sources/chemistry-student.pdf",
+      "url": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/5a80345f2043ba6f8db8d7be9cf3db82725ff1f7/%E5%88%9D%E4%B8%AD/%E5%8C%96%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE/%E4%B9%9D%E5%B9%B4%E7%BA%A7/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E5%8C%96%E5%AD%A6%E4%B9%9D%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf",
+      "landing_url": "https://github.com/TapXWorld/ChinaTextbook",
+      "sha256": "62e5616df6507ffe48e47794321c59e281eccadc10f6c4afd92bf26a32a7a70e",
+      "document_id": "chemistry-student"
+    },
+    "biology": {
+      "title": "沪科教版生物学必修1分子与细胞（公开节选）",
+      "subject": "生物",
+      "kind": "教材",
+      "split": "holdout",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/biology.pdf",
+      "url": "https://www.sste.com/kj/book2/resources/hkjbxkbgzsw1jx.pdf",
+      "landing_url": "https://www.sste.com/kj/book2/resources/hkjbxkbgzsw1jx.pdf",
+      "sha256": "580b4b975ca045cef6287aec101e37cc95b5b138d33e5f986dbbd757e171a030",
+      "document_id": "biology"
+    },
+    "chinese-exam": {
+      "title": "2024年高考综合改革适应性测试语文",
+      "subject": "语文",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/chinese-exam.jpg",
+      "url": "https://www.neea.edu.cn/res/Home/2401/24010402.jpg",
+      "landing_url": "https://www.neea.edu.cn/html1/report/2401/376-1.htm",
+      "sha256": "ded866622252861644235229be617a444c4bb7aa1e6d5e51970e57b564e4e9a2",
+      "document_id": "chinese-exam"
+    },
+    "english-exam": {
+      "title": "2024年高考综合改革适应性测试英语",
+      "subject": "英语",
+      "kind": "试卷",
+      "split": "development",
+      "stage": "高中",
+      "path": "output/quality-corpus-20/sources/english-exam.jpg",
+      "url": "https://www.neea.edu.cn/res/Home/2401/24010502.jpg",
+      "landing_url": "https://www.neea.edu.cn/html1/report/2401/499-1.htm",
+      "sha256": "3624833cf9a65649824a0300dae829053230f5d0bc592b4ed459e696180c15f7",
+      "document_id": "english-exam"
+    }
+  },
+  "blockers": [
+    "原业务8页留出没有可用全文参考",
+    "20页开发和新候选源卷/源册对应证据不足",
+    "本地阴性曝光记录不能单独证明严格隔离"
+  ]
+}

@@ -1,0 +1,3 @@
+Installed 15 packages in 70ms
+Hint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.
+path=/home/dr/project/docprase/output/issue-23/upstream
