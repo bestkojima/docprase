@@ -60,3 +60,5 @@ python3.12 scripts/issue24_report.py --run output/issue-24-new \
 报告工具工程不满足时仍写完整报告，退出码为2；输入、冻结哈希或证据非法则报错。`engineering-conditions.json` 保存当前候选尚未交付的结构验收条件和自动化/真实安全/再导出证据。它不能因CLI返回0而自行变为通过。
 
 完整本地产物位于 `output/issue-24/`；Git保留逐页DocumentIR、Markdown、运行清单、命令、计时、失败日志、评分及资源哈希。为节省磁盘，已完成作业中与历史资产逐字节相同的文件可改为硬链接；这是文件存储去重，不复用识别结果。链接前逐文件核对SHA，记录见 `evidence/storage-deduplication.json`。模型、构建产物和图片资源不提交Git。
+
+完整两轴审查见 [code-review.md](code-review.md)。以 `sha256sum -c docs/issue-24/seal.sha256` 复核本次提交的文档、门槛、报告和原始证据。原图资源仍由逐页资源SHA记录及本地产物复核，不包含在Git文档封存中。

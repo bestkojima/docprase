@@ -11,7 +11,7 @@ from issue17_baseline import (DATA, MANIFEST, ROOT, corrected_annotation, edit_d
 from issue15_lineage import lineage_failures
 from issue15_quality import (ANCHORS, anchors_quality, formula_quality, pdf_quality,
                              table_quality, text_reference)
-from issue24_run import save, sha
+from issue24_run import candidate_intact, save, sha
 
 KINDS = ('text', 'inline_formula', 'independent_formula', 'table', 'figure')
 TOP_KINDS = ('text', 'independent_formula', 'table', 'figure')
@@ -98,6 +98,19 @@ def compare(before, after):
             newly_inexact=[key for key in old if old[key]['exact'] and not new[key]['exact']],
             recovered=[key for key in old if not old[key]['block_id'] and new[key]['block_id']],
             duplicate_delta=after[kind]['duplicate_outputs'] - before[kind]['duplicate_outputs'])
+    old_inline, new_inline = before['inline_formula']['rows'], after['inline_formula']['rows']
+    if len(old_inline) != len(new_inline) or any(
+            a['parent_annotation_id'] != b['parent_annotation_id'] for a, b in zip(old_inline, new_inline)):
+        raise ValueError('前后行内公式标注分母或顺序不同，禁止比较')
+    # 源标注SHA固定，row_index是该冻结列表内稳定的公式身份。
+    changes['inline_formula'] = dict(
+        newly_missing=[dict(parent_annotation_id=a['parent_annotation_id'], row_index=i)
+                       for i, (a, b) in enumerate(zip(old_inline, new_inline)) if a['block_id'] and not b['block_id']],
+        newly_inexact=[dict(parent_annotation_id=a['parent_annotation_id'], row_index=i)
+                       for i, (a, b) in enumerate(zip(old_inline, new_inline)) if a['exact'] and not b['exact']],
+        recovered=[dict(parent_annotation_id=a['parent_annotation_id'], row_index=i)
+                   for i, (a, b) in enumerate(zip(old_inline, new_inline)) if not a['block_id'] and b['block_id']],
+        duplicate_delta=0)
     def indexed(value):
         return {(kind, str(r['annotation_id'])): r for kind in TOP_KINDS for r in value[kind]['rows']
                 if isinstance(r.get('order'), int) and r['reading_order_position'] is not None}
@@ -313,11 +326,8 @@ def main():
     frozen = json.loads((run / 'candidate.json').read_text())
     if sha(MANIFEST) != frozen['dataset_manifest_sha256'] or sha(ROOT / 'docs/issue-15/samples.json') != frozen['old_manifest_sha256']:
         raise ValueError('运行后样本清单变化，禁止重新定义分母')
-    if sha(run / 'candidate/config.json') != frozen['effective_config_sha256']:
-        raise ValueError('运行后配置快照变化')
-    if any(sha(run / name) != digest for name, digest in frozen['model_files'].items()) or any(
-            sha(run / 'candidate/runtime' / name) != item['sha256'] for name, item in frozen['runtime'].items()):
-        raise ValueError('模型或运行时不再符合冻结哈希')
+    if not candidate_intact(run, frozen):
+        raise ValueError('模型、运行时、配置或门槛不再符合冻结哈希')
     thresholds_path = run / 'candidate/thresholds.json'
     if sha(thresholds_path) != frozen['thresholds_sha256']:
         raise ValueError('冻结门槛哈希不符')
@@ -348,7 +358,7 @@ def main():
         delta = compare(before['scores'], after['scores'])
         report['pages'][spec['id']] = dict(subject=spec['subject'], image_sha256=spec['image_sha256'],
                                           before=before, after=after, comparison=delta)
-        for kind in TOP_KINDS:
+        for kind in KINDS:
             if delta[kind]['newly_missing'] or delta[kind]['newly_inexact'] or delta[kind]['duplicate_delta'] > 0:
                 report['regression_blockers'].append(f"{spec['id']}:{kind}:lost_match_or_quality_or_duplicate")
         if delta['common_order']['counts']['newly_wrong'] or (delta['text_cer_delta'] or 0) > 0:

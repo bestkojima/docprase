@@ -101,7 +101,7 @@
   },
   "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823",
   "thresholds_sha256": "34a8250470f26e66bf0c8df64dcf1ab21544f9ee9132745cf0b91b292eb08b16",
-  "scorer_sha256": "cc2dd900c12dd0b1e99fdae8a0972a38ad665c4e67aecafb084932099d55615c",
+  "scorer_sha256": "75818a4c476adfb1fd2776258f3cae73d0134ab5b632505db87ed0c2f06411a9",
   "legacy_scorer_sha256": "c02474984d51f177b1dc2a004a912431bf05a3f824ddc123968d94aafdd56852",
   "dataset_revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
   "dataset_sha256": "b8abbc6706157b31281040207668e1bb035878c6b836f45bd63225d661a8500f",
@@ -1738,6 +1738,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -3763,6 +3769,12 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 190,
@@ -4839,6 +4851,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -6992,6 +7010,41 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [
+            {
+              "parent_annotation_id": 48,
+              "row_index": 5
+            },
+            {
+              "parent_annotation_id": 48,
+              "row_index": 6
+            },
+            {
+              "parent_annotation_id": 48,
+              "row_index": 7
+            },
+            {
+              "parent_annotation_id": 48,
+              "row_index": 8
+            },
+            {
+              "parent_annotation_id": 48,
+              "row_index": 9
+            },
+            {
+              "parent_annotation_id": 48,
+              "row_index": 10
+            },
+            {
+              "parent_annotation_id": 48,
+              "row_index": 11
+            }
+          ],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 171,
@@ -7830,6 +7883,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -9571,6 +9630,37 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [
+            {
+              "parent_annotation_id": 40,
+              "row_index": 19
+            },
+            {
+              "parent_annotation_id": 40,
+              "row_index": 20
+            },
+            {
+              "parent_annotation_id": 40,
+              "row_index": 21
+            },
+            {
+              "parent_annotation_id": 40,
+              "row_index": 22
+            },
+            {
+              "parent_annotation_id": 40,
+              "row_index": 23
+            },
+            {
+              "parent_annotation_id": 40,
+              "row_index": 24
+            }
+          ],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 55,
@@ -10258,6 +10348,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -11670,6 +11766,12 @@
           ],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 861,
@@ -12261,6 +12363,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -13050,6 +13158,12 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 45,
@@ -13529,6 +13643,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -14220,6 +14340,12 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 78,
@@ -14906,6 +15032,12 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 105,
@@ -15544,6 +15676,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -16267,6 +16405,12 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 91,
@@ -16923,6 +17067,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -17831,6 +17981,12 @@
           ],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 0,
@@ -18667,6 +18823,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],
@@ -20741,6 +20903,12 @@
           "recovered": [],
           "duplicate_delta": 0
         },
+        "inline_formula": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
         "common_order": {
           "counts": {
             "evaluable": 741,
@@ -21836,6 +22004,12 @@
           "duplicate_delta": 0
         },
         "figure": {
+          "newly_missing": [],
+          "newly_inexact": [],
+          "recovered": [],
+          "duplicate_delta": 0
+        },
+        "inline_formula": {
           "newly_missing": [],
           "newly_inexact": [],
           "recovered": [],

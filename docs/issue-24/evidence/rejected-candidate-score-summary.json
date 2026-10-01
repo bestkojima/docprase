@@ -1,0 +1,18 @@
+{
+  "role": "actual_rejected_candidate_failure_not_primary_quality_score",
+  "failed_pages": 20,
+  "metrics": {
+    "text_cer": 1.0,
+    "inline_formula_exact_rate": 0.0,
+    "independent_formula_exact_rate": 0.0,
+    "table_exact_rate": 0.0,
+    "table_cell_exact_rate": 0.0,
+    "reading_order_correct_rate": 0.0,
+    "fallback_rate": 0.0,
+    "missing_rate": 1.0,
+    "duplicate_outputs": 0
+  },
+  "development_targets_met": false,
+  "engineering_passed": false,
+  "quality_passed": false
+}

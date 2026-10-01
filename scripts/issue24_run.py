@@ -24,6 +24,14 @@ def save(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
+def candidate_intact(output, record):
+    files = dict(record['model_files'])
+    files['candidate/config.json'] = record['effective_config_sha256']
+    files['candidate/thresholds.json'] = record['thresholds_sha256']
+    files.update({f'candidate/runtime/{name}': item['sha256'] for name, item in record['runtime'].items()})
+    return all(sha(output / name) == digest for name, digest in files.items())
+
+
 def freeze(cli, config_path, output, thresholds):
     runtime = output / 'candidate'
     binary, environment, libraries = freeze_runtime(cli.resolve(), runtime / 'runtime')
@@ -70,10 +78,8 @@ def run_sample(binary, config, environment, output, group, spec):
     if sha(source) != expected:
         raise ValueError(f'输入哈希不符：{source}')
     frozen = json.loads((output / 'candidate.json').read_text())
-    def models_intact():
-        return all(sha(output / name) == digest for name, digest in frozen['model_files'].items())
-    if not models_intact():
-        raise ValueError('运行前模型哈希变化，拒绝执行')
+    if not candidate_intact(output, frozen):
+        raise ValueError('运行前候选哈希变化，拒绝执行')
     command = [str(binary), '--config', str(config), '--input', str(source), '--out', str(folder / 'job')]
     if source.suffix == '.pdf':
         command += ['--pages', '1-2', '--dpi', '200']
@@ -88,7 +94,7 @@ def run_sample(binary, config, environment, output, group, spec):
             process.wait()
             code = 'timeout_3600s'
     record = dict(command=command, input_sha256=expected, returncode=code,
-        models_intact=models_intact(), elapsed_seconds=time.monotonic() - started,
+        models_intact=candidate_intact(output, frozen), elapsed_seconds=time.monotonic() - started,
         execution='fresh_public_cli_job', candidate_sha256=sha(output / 'candidate.json'))
     save(folder / 'command.json', record)
     print(group, spec['id'], code, round(record['elapsed_seconds']), flush=True)
@@ -120,11 +126,7 @@ def main():
             records[key] = record
             save(output / 'progress.json', records)
     frozen = json.loads((output / 'candidate.json').read_text())
-    intact = all(sha(output / name) == digest for name, digest in frozen['model_files'].items())
-    intact &= sha(config) == frozen['effective_config_sha256']
-    intact &= sha(output / 'candidate/thresholds.json') == frozen['thresholds_sha256']
-    intact &= all(sha(output / 'candidate/runtime' / name) == item['sha256']
-                  for name, item in frozen['runtime'].items())
+    intact = candidate_intact(output, frozen)
     save(output / 'run-summary.json', dict(candidate_intact=intact, workers=args.workers,
         completed=len(records), failed=[k for k, r in records.items() if r['returncode'] != 0]))
     return int(not intact or any(r['returncode'] != 0 for r in records.values()))
