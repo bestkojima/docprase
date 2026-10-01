@@ -186,7 +186,8 @@ def align_page(annotation, document):
         rows.append(dict(annotation_id=ref['anno_id'], category=ref['category_type'], order=ref.get('order'),
             block_id=None, status=status, reading_order_position=None, reference_chars=len(want), edit_distance=len(want),
             raw_edit_distance=len(want), exact=False, actual_range=None, candidate_block_ids=candidates))
-    extras = [dict(block_id=b['id'], reason='unmatched', status=b['status'],
+    extras = [dict(block_id=b['id'],
+                   reason='duplicate' if any(overlap(r, b) >= .5 for r in references) else 'unmatched', status=b['status'],
                    insertion_chars=len(normalize(b['content'].get('text', '')))
                    if b['status'] == 'ok' and document.get('status') != 'failed' else 0)
               for b in blocks if b['id'] not in groups]

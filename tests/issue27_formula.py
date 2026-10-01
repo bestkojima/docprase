@@ -26,6 +26,7 @@ def main():
             (r'$$\begin{aligned}\begin{matrix}x&y\end{matrix}\end{aligned}$$', True),
             (r'$$\begin{array}{ccc}x&y&z\end{array}$$', True),
             (r'$$\begin{aligned}{x=1\end{aligned}}$$', False),
+            (r'$${\begin{aligned}}{x=1\end{aligned}}$$', False),
             (r'$$\begin{aligned}\end{aligned}$$', False),
             (r'$$\begin{array}{unknown}x&y\end{array}$$', False),
             (r'$$\begin{aligned}x\end{matrix}$$', False),

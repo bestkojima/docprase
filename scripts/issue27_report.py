@@ -38,6 +38,18 @@ def historical_pages(jobs, baseline):
     return pages
 
 
+def development_baseline(jobs):
+    pages = {}
+    for job in jobs:
+        if not job['key'].startswith('development/'):
+            continue
+        path = ROOT / 'docs/issue-24/evidence' / job['key'] / 'job/document.json'
+        value = align_page(job['annotation'], read(path))
+        value.update(returncode=0, document_sha256=sha(path), evidence=str(path), input_sha256=job['input_sha256'])
+        pages[job['spec']['id']] = value
+    return pages
+
+
 def evaluate_job(run, job, record):
     folder = run / job['key']
     path = folder / 'job/document.json'
@@ -86,6 +98,7 @@ def main():
         thresholds = read(ROOT / THRESHOLDS_PATH)
         blockers.append('evaluation_not_frozen_or_not_executed')
     baseline = historical_pages(jobs, args.baseline.resolve())
+    development_before = development_baseline(jobs)
     groups = {}
     if not args.baseline_only:
         for group in ('development', 'evaluation'):
@@ -133,9 +146,17 @@ def main():
     if old is None or old['blockers']:
         blockers.append('old_seven_regression_not_verified_or_failed')
     differences = {}
-    if 'evaluation' in groups:
-        for key, page in groups['evaluation']['pages'].items():
-            differences[key] = {v: compare(baseline[key][v], page[v]) for v in ('original', 'supplementary')}
+    for group, before in (('evaluation', baseline), ('development', development_before)):
+        if group not in groups:
+            continue
+        differences[group] = {}
+        for key, page in groups[group]['pages'].items():
+            differences[group][key] = {v: compare(before[key][v], page[v]) for v in ('original', 'supplementary')}
+            for variant, delta in differences[group][key].items():
+                if delta['common_order']['counts']['newly_wrong'] or any(
+                        delta[k]['newly_missing'] or delta[k]['newly_inexact'] or delta[k]['duplicate_delta'] > 0
+                        for k in ('text', 'inline_formula', 'independent_formula', 'table', 'figure')):
+                    blockers.append(f'{group}:{key}:{variant}:possible_content_or_order_regression')
     # 不用历史豁免或补充口径覆盖原质量关。
     report = dict(version='issue27-report-1', alignment_version=VERSION,
         role='exposed_development_and_annotated_evaluation_not_independent_holdout',
@@ -144,6 +165,8 @@ def main():
         scorer_sha256=sha(Path(__file__)), evaluation=record,
         baseline=dict(pages=baseline, aggregate={v: totals(baseline, v) for v in ('original', 'supplementary')},
                       original_report_sha256=sha(ROOT / 'docs/issue-25/report.json')),
+        development_baseline=dict(pages=development_before,
+            aggregate={v: totals(development_before, v) for v in ('original', 'supplementary')}),
         groups=groups, changes=differences, old_seven=old,
         engineering_evidence=dict(run=summary, export=export, automated=automated, safety=safety),
         quality_gate=dict(passed=not blockers, blockers=blockers,

@@ -1095,6 +1095,8 @@ ParsedFormula parse_formula(const std::string& raw) {
                         scalable.push_back(delimiter.symbol);
                     } else {
                         if (scalable.empty()) return result;
+                        if (!environments.empty() && scalable.size() <= environments.back().scalable.size())
+                            return result;
                         char opening = scalable.back();
                         scalable.pop_back();
                         char expected = opening == '(' ? ')' : opening == '[' ? ']' :
@@ -1152,6 +1154,8 @@ ParsedFormula parse_formula(const std::string& raw) {
             next_text_brace = false;
         } else if (ch == '}') {
             if (delimiters.empty() || delimiters.back() != '{') return result;
+            if (!environments.empty() && delimiters.size() <= environments.back().delimiters.size())
+                return result;
             delimiters.pop_back();
             if (--depth < 0) return result;
             if (text_depth > depth) text_depth = -1;
@@ -1159,6 +1163,8 @@ ParsedFormula parse_formula(const std::string& raw) {
         else if (ch == ']' || ch == ')') {
             if (delimiters.empty() ||
                 delimiters.back() != (ch == ']' ? '[' : '(')) return result;
+            if (!environments.empty() && delimiters.size() <= environments.back().delimiters.size())
+                return result;
             delimiters.pop_back();
         }
         else if (ch >= 0x80 && text_depth < 0) return result;

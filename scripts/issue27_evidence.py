@@ -47,8 +47,10 @@ def suite_specs():
 def system_runtime(binary, environment):
     """同时记录项目库和系统动态库；PDF 的实际工具及其动态库亦固定。"""
     files = {}
-    pdf_tools = [shutil.which(name) for name in ('pdftoppm', 'pdfinfo')]
-    if not all(pdf_tools):
+    directory = environment.get('DOCOCR_POPPLER_BIN')
+    pdf_tools = [str(Path(directory) / name) if directory else shutil.which(name, path=environment.get('PATH'))
+                 for name in ('pdftoppm', 'pdfinfo')]
+    if not all(path and Path(path).is_file() and os.access(path, os.X_OK) for path in pdf_tools):
         raise ValueError('真实 PDF 运行时工具缺失')
     for executable in (binary, *(Path(path) for path in pdf_tools)):
         files[str(executable.resolve())] = sha(executable)
@@ -67,7 +69,8 @@ def system_runtime(binary, environment):
 def freeze_evaluation(output, jobs, manifest, binary, environment):
     files = material_files(manifest)
     for path in (MANIFEST, DATA / 'OmniDocBench.json', ROOT / 'docs/issue-15/samples.json',
-                 ROOT / THRESHOLDS_PATH, ROOT / 'configs/printed-page.example.json'):
+                 ROOT / THRESHOLDS_PATH, ROOT / 'configs/printed-page.example.json',
+                 ROOT / 'docs/issue-24/report.json', ROOT / 'docs/issue-25/report.json'):
         files[str(path.relative_to(ROOT))] = sha(path)
     for job in jobs:
         source = Path(job['source'])
@@ -79,6 +82,8 @@ def freeze_evaluation(output, jobs, manifest, binary, environment):
         for path in (ROOT / directory).rglob('*'):
             if path.is_file() and (path.suffix in ('.json', '.txt', '.py') or 'schema' in path.name):
                 files[str(path.relative_to(ROOT))] = sha(path)
+    for path in (ROOT / 'docs/issue-24/evidence/development').glob('*/job/document.json'):
+        files[str(path.relative_to(ROOT))] = sha(path)
     files.update({name: sha(ROOT / name) for name in TOOLS})
     snapshots = {}
     for name, digest in files.items():
