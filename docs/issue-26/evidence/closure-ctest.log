@@ -1,0 +1,391 @@
+Start testing: Oct 01 15:54 UTC
+----------------------------------------------------------
+1/25 Testing: contract
+1/25 Test: contract
+Command: "/tmp/docprase-issue26-reverify-0fbc/dococr_contract_test"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"contract" start time: Oct 01 15:54 UTC
+Output:
+----------------------------------------------------------
+stale-buffer address reuse observed: yes
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"contract" end time: Oct 01 15:54 UTC
+"contract" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/25 Testing: visual_adaptation_probe
+2/25 Test: visual_adaptation_probe
+Command: "/tmp/docprase-issue26-reverify-0fbc/dococr_visual_adaptation_probe"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"visual_adaptation_probe" start time: Oct 01 15:54 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"visual_adaptation_probe" end time: Oct 01 15:54 UTC
+"visual_adaptation_probe" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/25 Testing: cli_integration
+3/25 Test: cli_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/cli_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"cli_integration" start time: Oct 01 15:54 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  22.17 sec
+----------------------------------------------------------
+Test Passed.
+"cli_integration" end time: Oct 01 15:55 UTC
+"cli_integration" time elapsed: 00:00:22
+----------------------------------------------------------
+
+4/25 Testing: reexport_integration
+4/25 Test: reexport_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/reexport_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli" "/home/dr/.codex/worktrees/0fbc/docprase/tests/fixtures/rgb2x2.png"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"reexport_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  18.07 sec
+----------------------------------------------------------
+Test Passed.
+"reexport_integration" end time: Oct 01 15:55 UTC
+"reexport_integration" time elapsed: 00:00:18
+----------------------------------------------------------
+
+5/25 Testing: config_integration
+5/25 Test: config_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/config_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/home/dr/.codex/worktrees/0fbc/docprase/tests/fixtures/rgb2x2.jpg"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"config_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.29 sec
+----------------------------------------------------------
+Test Passed.
+"config_integration" end time: Oct 01 15:55 UTC
+"config_integration" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/25 Testing: config_abi
+6/25 Test: config_abi
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/config_abi.py" "/tmp/docprase-issue26-reverify-0fbc/libdococr_c_test.so"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"config_abi" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.58 sec
+----------------------------------------------------------
+Test Passed.
+"config_abi" end time: Oct 01 15:55 UTC
+"config_abi" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/25 Testing: layout_integration
+7/25 Test: layout_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/layout_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"layout_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.46 sec
+----------------------------------------------------------
+Test Passed.
+"layout_integration" end time: Oct 01 15:55 UTC
+"layout_integration" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/25 Testing: issue19_dedup
+8/25 Test: issue19_dedup
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue19_dedup.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue19_dedup" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"issue19_dedup" end time: Oct 01 15:55 UTC
+"issue19_dedup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/25 Testing: issue20_geometry
+9/25 Test: issue20_geometry
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue20_geometry.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue20_geometry" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"issue20_geometry" end time: Oct 01 15:55 UTC
+"issue20_geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/25 Testing: issue20_owned_crop
+10/25 Test: issue20_owned_crop
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue20_owned_crop.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue20_owned_crop" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.55 sec
+----------------------------------------------------------
+Test Passed.
+"issue20_owned_crop" end time: Oct 01 15:55 UTC
+"issue20_owned_crop" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/25 Testing: issue20_tuning
+11/25 Test: issue20_tuning
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue20_tuning.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue20_tuning" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.73 sec
+----------------------------------------------------------
+Test Passed.
+"issue20_tuning" end time: Oct 01 15:55 UTC
+"issue20_tuning" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/25 Testing: issue20_large_page
+12/25 Test: issue20_large_page
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue20_large_page.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue20_large_page" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.00 sec
+----------------------------------------------------------
+Test Passed.
+"issue20_large_page" end time: Oct 01 15:55 UTC
+"issue20_large_page" time elapsed: 00:00:02
+----------------------------------------------------------
+
+13/25 Testing: printed_page_integration
+13/25 Test: printed_page_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/printed_page_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"printed_page_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.31 sec
+----------------------------------------------------------
+Test Passed.
+"printed_page_integration" end time: Oct 01 15:55 UTC
+"printed_page_integration" time elapsed: 00:00:01
+----------------------------------------------------------
+
+14/25 Testing: issue21_quality
+14/25 Test: issue21_quality
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue21_quality.py" "/tmp/docprase-issue26-reverify-0fbc/libdococr_c_test.so" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue21_quality" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.88 sec
+----------------------------------------------------------
+Test Passed.
+"issue21_quality" end time: Oct 01 15:55 UTC
+"issue21_quality" time elapsed: 00:00:01
+----------------------------------------------------------
+
+15/25 Testing: issue22_retry
+15/25 Test: issue22_retry
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue22_retry.py" "/tmp/docprase-issue26-reverify-0fbc/libdococr_c_test.so" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue22_retry" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.00 sec
+----------------------------------------------------------
+Test Passed.
+"issue22_retry" end time: Oct 01 15:55 UTC
+"issue22_retry" time elapsed: 00:00:02
+----------------------------------------------------------
+
+16/25 Testing: printed_formula_integration
+16/25 Test: printed_formula_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/printed_formula_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"printed_formula_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.82 sec
+----------------------------------------------------------
+Test Passed.
+"printed_formula_integration" end time: Oct 01 15:55 UTC
+"printed_formula_integration" time elapsed: 00:00:03
+----------------------------------------------------------
+
+17/25 Testing: printed_table_integration
+17/25 Test: printed_table_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/printed_table_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"printed_table_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.63 sec
+----------------------------------------------------------
+Test Passed.
+"printed_table_integration" end time: Oct 01 15:55 UTC
+"printed_table_integration" time elapsed: 00:00:01
+----------------------------------------------------------
+
+18/25 Testing: reading_order_integration
+18/25 Test: reading_order_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/reading_order_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"reading_order_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.76 sec
+----------------------------------------------------------
+Test Passed.
+"reading_order_integration" end time: Oct 01 15:55 UTC
+"reading_order_integration" time elapsed: 00:00:02
+----------------------------------------------------------
+
+19/25 Testing: issue26_structure
+19/25 Test: issue26_structure
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue26_structure.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue26_structure" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+two-option-rows: PASS ordering, binding, scheduling, assets and reexport
+one-pixel-jitter: PASS ordering, binding, scheduling, assets and reexport
+failed-label-keeps-binding: PASS ordering, binding, scheduling, assets and reexport
+side-label-and-offset-options: PASS ordering, binding, scheduling, assets and reexport
+caption-edge-overlap: PASS ordering, binding, scheduling, assets and reexport
+competing-labels-stay-unresolved: PASS ordering, binding, scheduling, assets and reexport
+<end of output>
+Test time =   2.67 sec
+----------------------------------------------------------
+Test Passed.
+"issue26_structure" end time: Oct 01 15:55 UTC
+"issue26_structure" time elapsed: 00:00:02
+----------------------------------------------------------
+
+20/25 Testing: issue26_region_mapping
+20/25 Test: issue26_region_mapping
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/issue26_region_mapping.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"issue26_region_mapping" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+odb07-vision-footnote: PASS
+odb08-single-text: PASS
+real-footnote: PASS
+heading: PASS
+offset-body: PASS
+image-only: PASS
+<end of output>
+Test time =   2.32 sec
+----------------------------------------------------------
+Test Passed.
+"issue26_region_mapping" end time: Oct 01 15:55 UTC
+"issue26_region_mapping" time elapsed: 00:00:02
+----------------------------------------------------------
+
+21/25 Testing: pdf_integration
+21/25 Test: pdf_integration
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/pdf_integration.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"pdf_integration" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.41 sec
+----------------------------------------------------------
+Test Passed.
+"pdf_integration" end time: Oct 01 15:55 UTC
+"pdf_integration" time elapsed: 00:00:02
+----------------------------------------------------------
+
+22/25 Testing: pdf_abi
+22/25 Test: pdf_abi
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/pdf_abi.py" "/tmp/docprase-issue26-reverify-0fbc/libdococr_c_test.so"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"pdf_abi" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"pdf_abi" end time: Oct 01 15:55 UTC
+"pdf_abi" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/25 Testing: printed_page_cancel
+23/25 Test: printed_page_cancel
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/printed_page_cancel.py" "/tmp/docprase-issue26-reverify-0fbc/libdococr_c_test.so"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"printed_page_cancel" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.92 sec
+----------------------------------------------------------
+Test Passed.
+"printed_page_cancel" end time: Oct 01 15:55 UTC
+"printed_page_cancel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/25 Testing: job_control
+24/25 Test: job_control
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/job_control.py" "/tmp/docprase-issue26-reverify-0fbc/libdococr_c_test.so"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"job_control" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.62 sec
+----------------------------------------------------------
+Test Passed.
+"job_control" end time: Oct 01 15:55 UTC
+"job_control" time elapsed: 00:00:02
+----------------------------------------------------------
+
+25/25 Testing: cli_job_control
+25/25 Test: cli_job_control
+Command: "/usr/bin/python3" "/home/dr/.codex/worktrees/0fbc/docprase/tests/cli_job_control.py" "/tmp/docprase-issue26-reverify-0fbc/dococr_cli_fixture"
+Directory: /tmp/docprase-issue26-reverify-0fbc
+"cli_job_control" start time: Oct 01 15:55 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.80 sec
+----------------------------------------------------------
+Test Passed.
+"cli_job_control" end time: Oct 01 15:55 UTC
+"cli_job_control" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 01 15:55 UTC

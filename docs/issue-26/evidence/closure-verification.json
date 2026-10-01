@@ -1,0 +1,90 @@
+{
+  "checked_at_local": "2026-10-01T23:58:09.384018+08:00",
+  "user_close_condition": "先验证当时的错误图片，如果通过则关闭Issue",
+  "issue_number": 26,
+  "implementation_commit": "4b1cf084de80e188a67eaf254d7c77413e11b556",
+  "verified_head": "95804817b2be5f02f74c472726138c965b6e848d",
+  "source_changes": false,
+  "fresh_inference_pages": 4,
+  "fresh_inference_execution": "fresh_public_MNN_OvisOCR_inference",
+  "retained_20_page_hash_audit_passed": true,
+  "retained_hashed_artifacts": 1532,
+  "fresh_20_page_inference_this_turn": false,
+  "ctest_passed": 25,
+  "ctest_total": 25,
+  "python_compile_modules": 6,
+  "visual_inspection": [
+    "odb-03 Q17",
+    "odb-03 Q18",
+    "odb-07",
+    "odb-08"
+  ],
+  "standards_hard_findings": 0,
+  "standards_nonblocking_P3_findings": 1,
+  "spec_confirmed_findings": 0,
+  "close_condition_passed": true,
+  "pr_url": "https://github.com/bestkojima/docprase/pull/30",
+  "pr_merged": false,
+  "pages": [
+    {
+      "page_id": "odb-03",
+      "regions": 30,
+      "groups": 2,
+      "captions": 8,
+      "common_GT_denominator": 190,
+      "fixed": 12,
+      "newly_wrong": 0,
+      "first_export_equals_reexport": true,
+      "same_reading_order_as_final_1_9": true,
+      "changed_OCR_block_ids": [],
+      "document_status": "partial"
+    },
+    {
+      "page_id": "odb-07",
+      "regions": 11,
+      "groups": 0,
+      "captions": 1,
+      "common_GT_denominator": 45,
+      "fixed": 0,
+      "newly_wrong": 0,
+      "first_export_equals_reexport": true,
+      "same_reading_order_as_final_1_9": true,
+      "changed_OCR_block_ids": [],
+      "document_status": "ok"
+    },
+    {
+      "page_id": "odb-08",
+      "regions": 44,
+      "groups": 3,
+      "captions": 13,
+      "common_GT_denominator": 946,
+      "fixed": 123,
+      "newly_wrong": 0,
+      "first_export_equals_reexport": true,
+      "same_reading_order_as_final_1_9": true,
+      "changed_OCR_block_ids": [],
+      "document_status": "ok"
+    },
+    {
+      "page_id": "odb-13",
+      "regions": 16,
+      "groups": 2,
+      "captions": 4,
+      "common_GT_denominator": 105,
+      "fixed": 2,
+      "newly_wrong": 0,
+      "first_export_equals_reexport": true,
+      "same_reading_order_as_final_1_9": true,
+      "changed_OCR_block_ids": [],
+      "document_status": "ok"
+    }
+  ],
+  "evidence_sha256": {
+    "closure-focused-run-summary.json": "0077b4cfdc770e48c6481a50b6d3938378ffc3c783649f703341ef57d4d13462",
+    "closure-focused-freeze.json": "1d38bf908e2b39eed6f27d0d90ea3d93622417131d8f122e49e4a065c214c05a",
+    "closure-focused-acceptance.json": "61b52abcbba7e138a26ba2292e666131e4d64ea0294d883d6c9edeb54bdea5c3",
+    "closure-retained-audit.json": "befbcc3ab5d36677dae9c01a547bfde43b744eaee5eecdc7c8c618a89ddcef38",
+    "closure-ctest.log": "890133fcd09417acbe19ddc2f05ceff2ab7f940f11fa4d5b2087c799db025c46",
+    "closure-audit.py": "f67d101ad33121232de611f6fcfac3d74208ed1ddea6b47d91e537ee0c5e71ce"
+  }
+}
