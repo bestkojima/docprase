@@ -1,0 +1,20 @@
+Test project /home/dr/project/docprase/build/issue21
+    Start 14: issue21_quality
+1/1 Test #14: issue21_quality ..................***Failed    0.86 sec
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 152, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 105, in main
+    check('missing-finish', dict(text='MISSING_FINISH_SENTINEL', finish_reason='', stop_reason='normal'),
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 58, in check
+    assert block['provenance']['assessment']['state'] == state, block
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'b0001', 'page_id': 'p0001', 'type': 'text', 'source_region_ids': ['r0001'], 'bbox': [0, 0, 2, 1], 'coordinate_space': 'raster_page', 'geometry_granularity': 'region', 'reading_order_source': 'geometry', 'status': 'partial', 'confidence': None, 'content': {'format': 'markdown', 'text': 'MISSING_FINISH_SENTINEL', 'resource': 'assets/p0001-b0001.png'}, 'provenance': {'model_profile': 'test_fixture/layout=1bd8b829eee3160443ad3bada64f6ec0a0c76965c9b356421ba093db82947be8/recognition=1bd8b829eee3160443ad3bada64f6ec0a0c76965c9b356421ba093db82947be8', 'request_id': 'reqr0001', 'raw_output': 'MISSING_FINISH_SENTINEL', 'raw_output_base64': None, 'text_base64': None, 'visual': {'evidence': 'explicit_success', 'token_count': 0, 'source_crop': 'assets/p0001-b0001.png', 'source_bbox': [0, 0, 2, 1], 'canvas_size': [256, 256], 'content_size': [256, 128], 'pad_offset': [0, 64], 'scale': 128, 'rounding_error': [0, 0], 'canvas_to_page_affine': [0.0078125, 0, 0, 0, 0.0078125, -0.5], 'stop_reason': 'normal'}, 'assessment': {'policy': 'region-output-v1', 'state': 'partial', 'reason': 'unconfirmed_completion', 'finish_reason': '', 'stop_reason': 'normal', 'evidence_source': 'raw_output', 'backend_error': None, 'nonempty_lines': 1, 'empty_number_lines': 0, 'repeat_offset': 0, 'repeat_unit_bytes': 0, 'repeat_count': 0, 'repeat_coverage': 0}}, 'error': 'unconfirmed_completion', 'error_base64': None}
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   0.86 sec
+
+The following tests FAILED:
+	 14 - issue21_quality (Failed)

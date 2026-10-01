@@ -67,7 +67,8 @@ def main():
             assert formula['provenance']['raw_output'] == raw
             assert formula['content']['resource']
             assert (failed_out / formula['content']['resource']).exists()
-            assert '[待核验：b0002]' in (failed_out / 'document.md').read_text()
+            marker = '识别不完整' if scenario == 'printed_page_formula_truncated' else '待核验'
+            assert f'[{marker}：b0002]' in (failed_out / 'document.md').read_text()
         inline_out, inline_doc, _ = run(sys.argv[1], 'printed_page_formula_inline_wrapper', root, image)
         inline = inline_doc['pages'][0]['blocks'][1]
         assert inline['content']['display'] is False

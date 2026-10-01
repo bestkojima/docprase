@@ -1,6 +1,7 @@
 #include "backend_factory.hpp"
 #include "config.hpp"
 #include "visual_adaptation.hpp"
+#include "json.hpp"
 #include <chrono>
 #include <atomic>
 #include <cstring>
@@ -61,7 +62,7 @@ public:
         if (std::holds_alternative<GenerationRequest>(request.payload)) {
             auto* output = std::get_if<GenerationOutput>(&response.payload);
             const auto& generation = std::get<GenerationRequest>(request.payload);
-            if (output && output->finish_reason == "complete" && output->visual_evidence.empty() &&
+            if (output && (output->finish_reason == "complete" || output->finish_reason == "truncated") && output->visual_evidence.empty() &&
                 !(scenario_ == "printed_page_visual_missing_complete" && generation.source_box.y0 == 0))
             {
                 output->visual_evidence = "explicit_success";
@@ -349,6 +350,26 @@ public:
             return {TensorOutput{{std::move(result)}}};
         }
         const auto& generation = std::get<GenerationRequest>(request.payload);
+        if (scenario_ == "printed_page_quality" && generation.source_box.y0 == 0) {
+            const char* path = std::getenv("DOCOCR_TEST_OUTPUT_PATH");
+            if (!path) throw std::runtime_error("quality_fixture_output_missing");
+            std::ifstream file(path);
+            nlohmann::json fixture;
+            file >> fixture;
+            if (generation.task == fixture.value("task", "text")) {
+                GenerationOutput output;
+                output.text = fixture.at("text").get<std::string>();
+                output.raw_output = fixture.value("raw_output", output.text);
+                output.finish_reason = fixture.at("finish_reason").get<std::string>();
+                output.stop_reason = fixture.at("stop_reason").get<std::string>();
+                output.error = fixture.value("error", "");
+                if (fixture.value("visual", true)) {
+                    output.visual_evidence = "explicit_success";
+                    output.visual_transform = adapt_visual(generation.image).transform;
+                } else output.visual_evidence = "no_visual_tokens";
+                return {output};
+            }
+        }
         if (scenario_ == "generation_gate_failed" || scenario_ == "printed_page_gate_failed" ||
             scenario_ == "generation_gate_cancelled" || scenario_ == "printed_page_gate_cancelled" ||
             scenario_ == "generation_gate_timeout" || scenario_ == "printed_page_gate_timeout" ||
@@ -605,7 +626,8 @@ private:
     bool rebuilt_for_oom_ = false;
 };
 bool config_supported(const std::string& config) {
-    return config.rfind("fixture:printed_page_reading", 0) == 0 ||
+    return config == "fixture:printed_page_quality" ||
+           config.rfind("fixture:printed_page_reading", 0) == 0 ||
            config == "fixture:normalized" || config == "fixture:runtime" ||
            config == "fixture:graph" || config == "fixture:sample" || config == "fixture:blank" ||
            config == "fixture:failure" || config == "fixture:formula_table" ||

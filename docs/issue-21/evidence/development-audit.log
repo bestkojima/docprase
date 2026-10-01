@@ -1,0 +1,19 @@
+odb-01: 38 text outputs audited
+odb-02: 77 text outputs audited
+odb-03: 92 text outputs audited
+odb-04: 124 text outputs audited
+odb-05: 136 text outputs audited
+odb-06: 166 text outputs audited
+odb-07: 175 text outputs audited
+odb-08: 201 text outputs audited
+odb-09: 205 text outputs audited
+odb-10: 215 text outputs audited
+odb-12: 227 text outputs audited
+odb-13: 238 text outputs audited
+odb-14: 246 text outputs audited
+odb-15: 258 text outputs audited
+odb-16: 271 text outputs audited
+odb-18: 291 text outputs audited
+odb-19: 364 text outputs audited
+odb-20: 379 text outputs audited
+{"policy": "region-output-v1", "evidence_kind": "public_job_fixture_replay_of_real_raw_outputs", "corpus": "output/issue-17", "available_pages": 18, "missing_pages": ["odb-11", "odb-17"], "counts": {"ok": 300, "unverified": 38, "anomalous": 41}, "previously_ok_counts": {"ok": 300}}

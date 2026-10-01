@@ -24,7 +24,7 @@ def main():
     document = json.loads((job / 'document.json').read_text())
     manifest = json.loads((job / 'run-manifest.json').read_text())
     import jsonschema
-    schema = json.loads((ROOT / 'docs/issue-18/document-ir-1.5-image.schema.json').read_text())
+    schema = json.loads((ROOT / 'docs/issue-21/document-ir-1.6-image.schema.json').read_text())
     jsonschema.validate(document, schema)
     page = document['pages'][0]
     blocks = page['blocks']

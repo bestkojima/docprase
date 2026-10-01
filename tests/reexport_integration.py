@@ -84,11 +84,11 @@ def main():
 
         generated = {}
         for scenario, version in [('formula_table', '1.0'),
-                                  ('printed_page_formula', '1.5'),
-                                  ('printed_page_table', '1.5'),
-                                  ('printed_page_reading', '1.5'),
-                                  ('printed_page_visual_empty', '1.5'),
-                                  ('printed_page_failure', '1.5')]:
+                                  ('printed_page_formula', '1.6'),
+                                  ('printed_page_table', '1.6'),
+                                  ('printed_page_reading', '1.6'),
+                                  ('printed_page_visual_empty', '1.6'),
+                                  ('printed_page_failure', '1.6')]:
             if scenario == 'formula_table':
                 saved = root / scenario
                 run(fixture, '--backend', 'fixture:formula_table', '--input', image, '--out', str(saved))
@@ -123,6 +123,7 @@ def main():
         for block in old_formula['pages'][0]['blocks']:
             block['reading_order_source'] = 'geometry'
             block['provenance'].pop('visual', None)
+            block['provenance'].pop('assessment', None)
         jsonschema.validate(old_formula, json.loads((ROOT / 'docs/issue-8/document-ir-1.1.schema.json').read_text()))
         reexport(formula_saved, old_formula)
         legacy = copy.deepcopy(table)
@@ -132,9 +133,20 @@ def main():
         for block in legacy['pages'][0]['blocks']:
             block['reading_order_source'] = 'geometry'
             block['provenance'].pop('visual', None)
+            block['provenance'].pop('assessment', None)
         # 1.2 的表格语义与 1.3 相同；保存后的旧版文件仍须可读。
         jsonschema.validate(legacy, json.loads((ROOT / 'docs/issue-9/document-ir-1.2.schema.json').read_text()))
         reexport(table_saved, legacy)
+        for version, schema_path in [('1.3', 'docs/issue-10/document-ir-1.3.schema.json'),
+                                     ('1.5', 'docs/issue-18/document-ir-1.5-image.schema.json')]:
+            historical = copy.deepcopy(table)
+            historical['schema_version'] = version
+            for block in historical['pages'][0]['blocks']:
+                block['provenance'].pop('assessment')
+                if version == '1.3':
+                    block['provenance'].pop('visual', None)
+            jsonschema.validate(historical, json.loads((ROOT / schema_path).read_text()))
+            reexport(table_saved, historical)
 
         without_optional_diagnostics = copy.deepcopy(table)
         without_optional_diagnostics.pop('layout_diagnostics')
@@ -221,11 +233,21 @@ def main():
         run(fixture, '--config', str(setting), '--input', str(pdf), '--out', str(pdf_saved),
             '--dpi', '72')
         pdf_data = json.loads((pdf_saved / 'document.json').read_text())
-        assert pdf_data['schema_version'] == '1.5'
+        assert pdf_data['schema_version'] == '1.6'
         assert [p['status'] for p in pdf_data['pages']] == ['partial', 'failed', 'blank']
         reexport(pdf_saved)
+        historical_pdf = copy.deepcopy(pdf_data)
+        historical_pdf['schema_version'] = '1.4'
+        for page in historical_pdf['pages']:
+            for block in page['blocks']:
+                block['provenance'].pop('assessment')
+                block['provenance'].pop('visual', None)
+        jsonschema.validate(historical_pdf, json.loads((ROOT / 'docs/issue-11/document-ir-1.4.schema.json').read_text()))
+        reexport(pdf_saved, historical_pdf)
         visual_pdf = copy.deepcopy(pdf_data)
         visual_pdf['schema_version'] = '1.5'
+        for candidate in visual_pdf['pages'][0]['blocks']:
+            candidate['provenance'].pop('assessment', None)
         block = next(b for b in visual_pdf['pages'][0]['blocks'] if b['status'] != 'ok')
         for candidate in visual_pdf['pages'][0]['blocks']:
             if candidate['status'] != 'ok' and candidate is not block:
@@ -287,7 +309,7 @@ def main():
         assert '表格单元格' in reexport(table_saved, bad, code=3).stderr
         duplicate = root / 'duplicate.json'
         duplicate.write_text((table_saved / 'document.json').read_text().replace(
-            '"schema_version":"1.5"', '"schema_version":"1.5","schema_version":"1.5"', 1))
+            '"schema_version":"1.6"', '"schema_version":"1.6","schema_version":"1.6"', 1))
         target = root / 'duplicate-out'
         assert '重复' in run(production, '--reexport', str(duplicate), '--asset-root',
                             str(table_saved), '--out', str(target), code=3, cwd=root).stderr

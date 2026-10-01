@@ -36,9 +36,9 @@ def main():
     assert process.returncode == 0, (process.returncode, process.stderr)
     job = output / 'job'
     document = json.loads((job / 'document.json').read_text())
-    schema = json.loads((ROOT / 'docs/issue-18/document-ir-1.5-image.schema.json').read_text())
+    schema = json.loads((ROOT / 'docs/issue-21/document-ir-1.6-image.schema.json').read_text())
     jsonschema.validate(document, schema)
-    assert document['schema_version'] == '1.5'
+    assert document['schema_version'] == '1.6'
     assert json.loads(json.dumps(document, ensure_ascii=False)) == document
     page = document['pages'][0]
     blocks = page['blocks']

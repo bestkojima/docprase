@@ -1,0 +1,13 @@
+Test project /home/dr/project/docprase/build/issue21
+    Start  4: reexport_integration
+1/4 Test  #4: reexport_integration .............   Passed    1.47 sec
+    Start 14: issue21_quality
+2/4 Test #14: issue21_quality ..................   Passed    1.55 sec
+    Start 15: printed_formula_integration
+3/4 Test #15: printed_formula_integration ......   Passed    3.68 sec
+    Start 16: printed_table_integration
+4/4 Test #16: printed_table_integration ........   Passed    1.51 sec
+
+100% tests passed out of 4
+
+Total Test time (real) =   8.22 sec

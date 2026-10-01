@@ -1,0 +1,18 @@
+Test project /home/dr/project/docprase/build/issue21
+    Start 14: issue21_quality
+1/1 Test #14: issue21_quality ..................***Failed    2.02 sec
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 159, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 154, in main
+    assert process.returncode == 3 and not target.exists(), process.stderr
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   2.02 sec
+
+The following tests FAILED:
+	 14 - issue21_quality (Failed)

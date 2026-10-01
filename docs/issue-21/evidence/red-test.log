@@ -1,0 +1,20 @@
+Test project /home/dr/project/docprase/build/issue21
+    Start 14: issue21_quality
+1/1 Test #14: issue21_quality ..................***Failed    0.18 sec
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 94, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 88, in main
+    check('numbering', dict(text=raw, finish_reason='truncated', stop_reason='token_limit'),
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 57, in check
+    assert block['provenance']['assessment']['state'] == state, block
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'assessment'
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   0.19 sec
+
+The following tests FAILED:
+	 14 - issue21_quality (Failed)

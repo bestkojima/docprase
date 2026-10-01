@@ -1,0 +1,285 @@
+[
+  {
+    "name": "caption",
+    "source": "tests/fixtures/issue15/printed_science_2col.png",
+    "source_sha256": "b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9",
+    "document_sha256": "c6281cb4e4499b43be2dfefa13c466f78c78b8a7ead80aae2f3e6b8ddd4cb562",
+    "status": "partial",
+    "counts": {
+      "ok": 11,
+      "skipped": 1
+    },
+    "resources": 12,
+    "known_block": {
+      "id": "b0008",
+      "page_id": "p0001",
+      "type": "text",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "bbox": [
+        714,
+        658,
+        1038,
+        691
+      ],
+      "coordinate_space": "raster_page",
+      "geometry_granularity": "region",
+      "reading_order_source": "geometry",
+      "status": "ok",
+      "confidence": null,
+      "content": {
+        "format": "markdown",
+        "text": "Figure 1. Recorded readings.\n",
+        "resource": "assets/p0001-b0008.png"
+      },
+      "provenance": {
+        "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+        "request_id": "reqr0008",
+        "raw_output": "Figure 1. Recorded readings.\n",
+        "raw_output_base64": null,
+        "text_base64": null,
+        "visual": {
+          "evidence": "image_pad_tokens",
+          "token_count": 78,
+          "source_crop": "assets/p0001-b0008.png",
+          "source_bbox": [
+            714,
+            658,
+            1038,
+            691
+          ],
+          "canvas_size": [
+            832,
+            96
+          ],
+          "content_size": [
+            832,
+            85
+          ],
+          "pad_offset": [
+            0,
+            5
+          ],
+          "scale": 2.567901234567901,
+          "rounding_error": [
+            0,
+            0.25925925925926663
+          ],
+          "canvas_to_page_affine": [
+            0.3894230769230769,
+            0,
+            714,
+            0,
+            0.38823529411764707,
+            656.0588235294117
+          ],
+          "stop_reason": "normal"
+        },
+        "assessment": {
+          "policy": "region-output-v1",
+          "state": "ok",
+          "reason": "normal_completion",
+          "finish_reason": "complete",
+          "stop_reason": "normal",
+          "evidence_source": "raw_output",
+          "backend_error": null,
+          "generation_text": "Figure 1. Recorded readings.\n",
+          "nonempty_lines": 1,
+          "empty_number_lines": 0,
+          "repeat_offset": 0,
+          "repeat_unit_bytes": 0,
+          "repeat_count": 0,
+          "repeat_coverage": 0
+        }
+      },
+      "error": null,
+      "error_base64": null
+    },
+    "unreliable": [],
+    "reexport_identical": true,
+    "command": [
+      "/home/dr/project/docprase/build/issue21/dococr_cli",
+      "--config",
+      "configs/printed-page.example.json",
+      "--input",
+      "tests/fixtures/issue15/printed_science_2col.png",
+      "--out",
+      "/home/dr/project/docprase/output/issue-21/final-known-pages/caption"
+    ]
+  },
+  {
+    "name": "header",
+    "source": "tests/fixtures/layout/exam-jee-346.jpg",
+    "source_sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade",
+    "document_sha256": "2cc707a4c42beec5c13c77a2b07194640b4440abe75bf2daf1eddee0fdb5cb78",
+    "status": "partial",
+    "counts": {
+      "ok": 6,
+      "unverified": 3,
+      "skipped": 2
+    },
+    "resources": 11,
+    "known_block": {
+      "id": "b0001",
+      "page_id": "p0001",
+      "type": "text",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "bbox": [
+        55,
+        26,
+        137,
+        35
+      ],
+      "coordinate_space": "raster_page",
+      "geometry_granularity": "region",
+      "reading_order_source": "geometry",
+      "status": "ok",
+      "confidence": null,
+      "content": {
+        "format": "markdown",
+        "text": "JEE (Advanced) 2023\n",
+        "resource": "assets/p0001-b0001.png"
+      },
+      "provenance": {
+        "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+        "request_id": "reqr0001",
+        "raw_output": "JEE (Advanced) 2023\n",
+        "raw_output_base64": null,
+        "text_base64": null,
+        "visual": {
+          "evidence": "image_pad_tokens",
+          "token_count": 65,
+          "source_crop": "assets/p0001-b0001.png",
+          "source_bbox": [
+            55,
+            26,
+            137,
+            35
+          ],
+          "canvas_size": [
+            416,
+            160
+          ],
+          "content_size": [
+            416,
+            46
+          ],
+          "pad_offset": [
+            0,
+            57
+          ],
+          "scale": 5.073170731707317,
+          "rounding_error": [
+            0,
+            0.3414634146341484
+          ],
+          "canvas_to_page_affine": [
+            0.1971153846153846,
+            0,
+            55,
+            0,
+            0.1956521739130435,
+            14.847826086956522
+          ],
+          "stop_reason": "normal"
+        },
+        "assessment": {
+          "policy": "region-output-v1",
+          "state": "ok",
+          "reason": "normal_completion",
+          "finish_reason": "complete",
+          "stop_reason": "normal",
+          "evidence_source": "raw_output",
+          "backend_error": null,
+          "generation_text": "JEE (Advanced) 2023\n",
+          "nonempty_lines": 1,
+          "empty_number_lines": 0,
+          "repeat_offset": 0,
+          "repeat_unit_bytes": 0,
+          "repeat_count": 0,
+          "repeat_coverage": 0
+        }
+      },
+      "error": null,
+      "error_base64": null
+    },
+    "unreliable": [
+      {
+        "id": "b0003",
+        "raw_output": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+        "assessment": {
+          "policy": "region-output-v1",
+          "state": "unverified",
+          "reason": "invalid_inline_formula_syntax",
+          "finish_reason": "complete",
+          "stop_reason": "normal",
+          "evidence_source": "raw_output",
+          "backend_error": null,
+          "generation_text": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+          "nonempty_lines": 1,
+          "empty_number_lines": 0,
+          "repeat_offset": 0,
+          "repeat_unit_bytes": 0,
+          "repeat_count": 0,
+          "repeat_coverage": 0
+        },
+        "resource": "assets/p0001-b0003.png"
+      },
+      {
+        "id": "b0005",
+        "raw_output": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+        "assessment": {
+          "policy": "region-output-v1",
+          "state": "unverified",
+          "reason": "invalid_inline_formula_syntax",
+          "finish_reason": "complete",
+          "stop_reason": "normal",
+          "evidence_source": "raw_output",
+          "backend_error": null,
+          "generation_text": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+          "nonempty_lines": 1,
+          "empty_number_lines": 0,
+          "repeat_offset": 0,
+          "repeat_unit_bytes": 0,
+          "repeat_count": 0,
+          "repeat_coverage": 0
+        },
+        "resource": "assets/p0001-b0005.png"
+      },
+      {
+        "id": "b0006",
+        "raw_output": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+        "assessment": {
+          "policy": "region-output-v1",
+          "state": "unverified",
+          "reason": "invalid_inline_formula_syntax",
+          "finish_reason": "complete",
+          "stop_reason": "normal",
+          "evidence_source": "raw_output",
+          "backend_error": null,
+          "generation_text": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+          "nonempty_lines": 1,
+          "empty_number_lines": 0,
+          "repeat_offset": 0,
+          "repeat_unit_bytes": 0,
+          "repeat_count": 0,
+          "repeat_coverage": 0
+        },
+        "resource": "assets/p0001-b0006.png"
+      }
+    ],
+    "reexport_identical": true,
+    "command": [
+      "/home/dr/project/docprase/build/issue21/dococr_cli",
+      "--config",
+      "configs/printed-page.example.json",
+      "--input",
+      "tests/fixtures/layout/exam-jee-346.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-21/final-known-pages/header"
+    ]
+  }
+]

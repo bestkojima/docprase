@@ -5,6 +5,8 @@
 #include "pdf_page_id.hpp"
 #include "table_parser.hpp"
 #include "markdown.hpp"
+#include "output_assessment.hpp"
+#include "content_validation.hpp"
 #include <algorithm>
 #include <chrono>
 #include <cmath>
@@ -193,6 +195,7 @@ struct Block {
     std::vector<std::string> owned_layout_ids;
     ParsedTable table;
     GenerationOutput visual;
+    OutputAssessment assessment;
 };
 
 struct ReadingOrderEvidence {
@@ -1114,7 +1117,8 @@ std::string render(const Block& b) {
         safe_table = table.valid && table.html == b.text;
     }
     return render_markdown_block({b.id, b.type, b.status, b.text, b.resource,
-                                  b.display_formula, safe_table});
+                                  b.display_formula, safe_table, b.assessment.state,
+                                  b.assessment.state == "skipped" ? "" : b.assessment.reason});
 }
 
 std::string serialize(const Image& image, const std::string& state,
@@ -1134,7 +1138,7 @@ std::string serialize(const Image& image, const std::string& state,
     const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
         return !b.visual.visual_evidence.empty();
     });
-    out << "{\"schema_version\":" << json_quote(has_visual ? "1.5" : order_evidence ? "1.3" :
+    out << "{\"schema_version\":" << json_quote(structured_tables ? "1.6" : has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
@@ -1257,6 +1261,24 @@ std::string serialize(const Image& image, const std::string& state,
                 << ",\"stop_reason\":" << json_quote(b.visual.stop_reason) << '}';
             out << std::setprecision(9);
         }
+        if (structured_tables) {
+            const auto& a = b.assessment;
+            out << ",\"assessment\":{\"policy\":" << json_quote(assessment_policy)
+                << ",\"state\":" << json_quote(a.state) << ",\"reason\":" << json_quote(a.reason)
+                << ",\"finish_reason\":" << json_quote(a.finish_reason)
+                << ",\"stop_reason\":" << json_quote(a.stop_reason)
+                << ",\"evidence_source\":" << json_quote(a.evidence_source)
+                << ",\"backend_error\":" << (b.visual.error.empty() || !valid_utf8(b.visual.error) ?
+                    "null" : json_quote(b.visual.error))
+                << ",\"generation_text\":" << (valid_utf8(b.visual.text) ? json_quote(b.visual.text) : "null")
+                << ",\"nonempty_lines\":" << a.nonempty_lines
+                << ",\"empty_number_lines\":" << a.empty_number_lines
+                << ",\"repeat_offset\":" << a.repeat_offset
+                << ",\"repeat_unit_bytes\":" << a.repeat_unit_bytes
+                << ",\"repeat_count\":" << a.repeat_count
+                << ",\"repeat_coverage\":" << std::setprecision(17) << a.repeat_coverage << '}';
+            out << std::setprecision(9);
+        }
         out
             << "},\"error\":" << (b.error.empty() ? "null" : json_quote(b.error))
             << ",\"error_base64\":" << (b.error_base64.empty() ? "null" : json_quote(b.error_base64)) << "}";
@@ -1339,6 +1361,11 @@ std::string serialize(const Image& image, const std::string& state,
     return out.str();
 }
 } // namespace
+
+bool matches_formula_content(const std::string& generated, const std::string& content, bool display) {
+    const auto formula = parse_formula(generated);
+    return formula.valid && formula.latex == content && formula.display == display;
+}
 
 namespace {
 void append_le32(std::vector<uint8_t>& data, uint32_t value) {
@@ -1670,7 +1697,6 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                             region.stop_reason = "error";
                         } else {
                             block.visual = *generation;
-                            block.visual.text.clear();
                             block.visual.raw_output.clear();
                             region.stop_reason = generation->stop_reason;
                             region.elapsed_ms = generation->elapsed_ms;
@@ -1679,14 +1705,12 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                             if (valid_utf8(generation->text)) block.text = generation->text;
                             else block.text_base64 = base64(generation->text);
                             if (!valid_utf8(generation->error)) block.error_base64 = base64(generation->error);
-                            const bool valid_visual =
-                                (generation->visual_evidence == "image_pad_tokens" &&
-                                 generation->visual_tokens > 0) ||
-                                generation->visual_evidence == "explicit_success";
-                            if (generation->finish_reason == "complete" && !valid_visual) {
-                                block.status = "failed";
-                                block.error = "visual_evidence_missing";
-                                block.text.clear();
+                            block.assessment = assess_output(*generation, block.type);
+                            if (block.assessment.state != "ok") {
+                                block.status = assessment_block_status(block.assessment.state);
+                                block.error = block.assessment.reason;
+                                block.format_override = "markdown";
+                                if (block.error == "visual_evidence_missing") block.text.clear();
                             } else if (generation->finish_reason == "complete" &&
                                 !generation->raw_output.empty() && !generation->text.empty() &&
                                 valid_utf8(generation->raw_output) && valid_utf8(generation->text)) {
@@ -1732,6 +1756,13 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                                 block.status = "failed"; block.error = "invalid_backend_utf8";
                                 block.text.clear();
                             }
+                            if (!valid_utf8(generation->error)) {
+                                block.status = "failed"; block.error = "invalid_backend_error_utf8";
+                            }
+                            if (block.status == "failed" ||
+                                (block.status != "ok" && block.assessment.state == "ok"))
+                                block.assessment.state = block.status == "failed" ? "failed" : "unverified";
+                            if (!block.error.empty()) block.assessment.reason = block.error;
                         }
                     }
                 } catch (const std::bad_alloc&) { throw; }
@@ -1747,6 +1778,11 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                     region.stop_reason = "error";
                 }
                 region.elapsed_ms = std::max(region.elapsed_ms, uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-region_start).count()));
+                if (block.assessment.state == "skipped") {
+                    block.assessment.state = block.status;
+                    block.assessment.reason = block.error;
+                    block.assessment.stop_reason = region.stop_reason;
+                }
                 region.status = block.status;
                 audit.recognition_ms += region.elapsed_ms;
                 if (block.status == "failed" && first_region_error_code.empty()) {
@@ -1778,6 +1814,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             block.text.clear();
             block.format_override = "markdown";
         }
+        if (block.assessment.state == "skipped") block.assessment.reason = block.error;
         blocks.push_back(std::move(block));
     }
     for (auto& evidence : ownership) {

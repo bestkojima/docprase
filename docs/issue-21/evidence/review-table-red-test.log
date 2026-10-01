@@ -1,0 +1,21 @@
+Test project /home/dr/project/docprase/build/issue21
+    Start 14: issue21_quality
+1/1 Test #14: issue21_quality ..................***Failed    1.53 sec
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 155, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 118, in main
+    check('table-empty-text', dict(text='', raw_output='<table><tr><td>RAW_TABLE_SENTINEL</td></tr></table>',
+  File "/home/dr/project/docprase/tests/issue21_quality.py", line 86, in check
+    assert process.returncode == 0, process.stderr
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: DocumentIR 无效：pages[0] 判定与输出或停止原因不一致
+
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   1.53 sec
+
+The following tests FAILED:
+	 14 - issue21_quality (Failed)

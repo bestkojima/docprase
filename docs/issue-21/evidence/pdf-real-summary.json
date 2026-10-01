@@ -1,0 +1,51 @@
+{
+  "command": [
+    "build/issue21/dococr_cli",
+    "--config",
+    "configs/printed-page.example.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/pdf/printed_textbook_2p.pdf",
+    "--out",
+    "output/issue-21/final-pdf-real/job",
+    "--pages",
+    "1-2",
+    "--dpi",
+    "200"
+  ],
+  "exit_code": 0,
+  "source_sha256": "13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7",
+  "source_kind": "project_authored_selectable_text_pdf",
+  "dpi": 200,
+  "selected_pages": [
+    1,
+    2
+  ],
+  "wall_seconds_python": 39.95,
+  "status": "ok",
+  "pages": [
+    {
+      "page": 1,
+      "blocks": 5,
+      "matched_ground_truth": 5,
+      "raster_size": [
+        1653,
+        2339
+      ],
+      "pipeline_ms": 15998
+    },
+    {
+      "page": 2,
+      "blocks": 5,
+      "matched_ground_truth": 5,
+      "raster_size": [
+        1653,
+        2339
+      ],
+      "pipeline_ms": 12155
+    }
+  ],
+  "resources": 10,
+  "manifest_total_wall_ms": 28514,
+  "renderer_version": "24.02.0",
+  "reexport_identical": true
+}

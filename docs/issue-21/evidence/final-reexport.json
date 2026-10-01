@@ -1,0 +1,17 @@
+[
+  {
+    "source": "output/issue-21/final-known-pages/caption",
+    "reexport": "output/issue-21/final-known-pages/caption-content-checked-reexport",
+    "json_markdown_assets_identical": true
+  },
+  {
+    "source": "output/issue-21/final-known-pages/header",
+    "reexport": "output/issue-21/final-known-pages/header-content-checked-reexport",
+    "json_markdown_assets_identical": true
+  },
+  {
+    "source": "output/issue-21/final-pdf-real/job",
+    "reexport": "output/issue-21/final-pdf-real/job-content-checked-reexport",
+    "json_markdown_assets_identical": true
+  }
+]

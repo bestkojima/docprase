@@ -1,5 +1,7 @@
 #include "reexport.hpp"
 #include "markdown.hpp"
+#include "output_assessment.hpp"
+#include "content_validation.hpp"
 #include "pdf_page_id.hpp"
 #include "table_parser.hpp"
 #include "schema_validator.hpp"
@@ -151,6 +153,33 @@ void pdf_geometry(const Json& page, const Json& source, const std::string& where
                 page.at("estimated_raster_pixels").get<int64_t>() > 0,
                 where + " estimated_raster_pixels 无效");
 }
+GenerationOutput saved_output(const Json& block) {
+    const auto& provenance = block.at("provenance");
+    GenerationOutput output;
+    output.text = block.at("content").at("text").get<std::string>();
+    if (provenance.at("raw_output").is_string())
+        output.raw_output = provenance.at("raw_output").get<std::string>();
+    if (provenance.contains("assessment")) {
+        const auto& assessment = provenance.at("assessment");
+        output.text = assessment.at("generation_text").is_string() ?
+            assessment.at("generation_text").get<std::string>() : "";
+        output.finish_reason = assessment.at("finish_reason").get<std::string>();
+        output.stop_reason = assessment.at("stop_reason").get<std::string>();
+        if (assessment.at("backend_error").is_string())
+            output.error = assessment.at("backend_error").get<std::string>();
+    } else {
+        if (block.at("type") == "table" && block.at("status") != "ok") output.text = output.raw_output;
+        output.finish_reason = block.at("status") == "failed" ? "failed" : "complete";
+        output.stop_reason = provenance.contains("visual") ?
+            provenance.at("visual").at("stop_reason").get<std::string>() : "normal";
+        if (block.at("error") == "ovis_token_limit") output.stop_reason = "token_limit";
+    }
+    if (provenance.contains("visual")) {
+        output.visual_evidence = provenance.at("visual").at("evidence").get<std::string>();
+        output.visual_tokens = provenance.at("visual").at("token_count").get<uint32_t>();
+    }
+    return output;
+}
 std::string render_page_markdown(const Json& page,
                                  const std::unordered_map<std::string, const Json*>& by_id) {
     std::string markdown;
@@ -163,6 +192,18 @@ std::string render_page_markdown(const Json& page,
             block.at("status").get<std::string>(), content.at("text").get<std::string>(),
             resource.is_null() ? "" : resource.get<std::string>(), content.value("display", true),
             type == "table" && block.at("status") == "ok"};
+        if (block.at("provenance").contains("assessment")) {
+            render.assessment_state = block.at("provenance").at("assessment").at("state").get<std::string>();
+            render.assessment_reason = block.at("provenance").at("assessment").at("reason").get<std::string>();
+        } else if (type == "text" || type == "formula" || type == "table") {
+            const auto assessment = assess_legacy_output(saved_output(block), type);
+            if (assessment.state == "anomalous" || assessment.state == "incomplete" ||
+                (assessment.state == "unverified" && block.at("status") == "ok")) {
+                render.status = "partial";
+                render.assessment_state = assessment.state;
+                render.assessment_reason = assessment.reason;
+            }
+        }
         if (!markdown.empty()) markdown += "\n\n";
         markdown += render_markdown_block(render);
     }
@@ -185,7 +226,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     catch (const std::exception& error) { throw std::invalid_argument(std::string("JSON 解析失败：") + error.what()); }
     const auto version = string_field(document, "schema_version", "document");
     require(version == "1.0" || version == "1.1" || version == "1.2" ||
-            version == "1.3" || version == "1.4" || version == "1.5", "不支持 schema_version " + version);
+            version == "1.3" || version == "1.4" || version == "1.5" || version == "1.6", "不支持 schema_version " + version);
     validate_document_schema(document, version);
     const bool pdf = document.at("source").at("type") == "pdf";
     id(string_field(document, "document_id", "document"), "doc-[0-9a-f]{16}", "document_id");
@@ -312,7 +353,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                         where + " 公式格式无效");
             if (type == "table" && content.contains("table") && content.at("table").is_object())
                 require(format == "html", where + " 表格 format 无效");
-            if (type == "table" && (version == "1.2" || version == "1.3" || version == "1.5" || pdf)) {
+            if (type == "table" && (version == "1.2" || version == "1.3" || version == "1.5" || version == "1.6" || pdf)) {
                 if (block.at("status") == "ok") structured_table(content, where);
                 else require(field(content, "table", where).is_null() &&
                              content.at("text") == "" && format == "markdown",
@@ -329,7 +370,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             if (type == "image" || block.at("status") != "ok")
                 require(content.at("resource").is_string(), where + " 图片/占位块缺少 resource");
             const auto& provenance = field(block, "provenance", where);
-            if (version == "1.5" && block.at("status") == "ok" &&
+            if ((version == "1.5" || version == "1.6") && block.at("status") == "ok" &&
                 (type == "text" || type == "formula" || type == "table"))
                 require(provenance.contains("visual"), where + " 正常识别缺少视觉证据");
             const auto& raw = field(provenance, "raw_output", where);
@@ -408,6 +449,52 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             require((error.is_null() || error.is_string()) &&
                     (error_base64.is_null() || error_base64.is_string()),
                     where + " error 字段无效");
+            if (version == "1.6") {
+                const auto& assessment = provenance.at("assessment");
+                const auto state = assessment.at("state").get<std::string>();
+                require(assessment_block_status(state) == block.at("status"), where + " 判定状态与块状态不一致");
+                const auto output = saved_output(block);
+                if (provenance.contains("visual"))
+                    require(output.stop_reason == provenance.at("visual").at("stop_reason"),
+                            where + " 停止原因与视觉记录不一致");
+                const bool encoded = !provenance.at("raw_output_base64").is_null() ||
+                    !provenance.at("text_base64").is_null() || !error_base64.is_null();
+                const auto derived = assess_output(output, type);
+                if (!output.finish_reason.empty() && !encoded) {
+                    require(assessment.at("nonempty_lines") == derived.nonempty_lines &&
+                        assessment.at("empty_number_lines") == derived.empty_number_lines &&
+                        assessment.at("repeat_offset") == derived.repeat_offset &&
+                        assessment.at("repeat_unit_bytes") == derived.repeat_unit_bytes &&
+                        assessment.at("repeat_count") == derived.repeat_count &&
+                        assessment.at("evidence_source") == derived.evidence_source &&
+                        std::abs(assessment.at("repeat_coverage").get<double>() - derived.repeat_coverage) < 1e-9,
+                        where + " 判定依据与原始输出不一致");
+                    const auto reason = assessment.at("reason").get<std::string>();
+                    const bool structural = state == "unverified" && derived.state == "ok" &&
+                        (reason == "invalid_formula_syntax" || reason == "invalid_inline_formula_syntax" ||
+                         reason == "invalid_table_structure");
+                    require(structural || (state == derived.state && reason == derived.reason),
+                            where + " 判定与输出或停止原因不一致");
+                }
+                if (state != "ok" && state != "skipped")
+                    require(error == assessment.at("reason"), where + " 判定原因与错误记录不一致");
+                if (state == "ok") {
+                    require(derived.state == "ok" && error.is_null() &&
+                            provenance.at("raw_output_base64").is_null() && provenance.at("text_base64").is_null(),
+                            where + " 不可靠结果不可标记正常");
+                    const auto text = content.at("text").get<std::string>();
+                    if (type == "text")
+                        require(text == output.text, where + " 正文与保存的识别文字不一致");
+                    else if (type == "formula")
+                        require(matches_formula_content(output.text, text, content.at("display").get<bool>()),
+                                where + " 公式与保存的识别文字不一致");
+                    else if (type == "table") {
+                        const auto normalized = parse_table(output.text);
+                        require(normalized.valid && normalized.html == text,
+                                where + " 表格与保存的识别文字不一致");
+                    }
+                }
+            }
         }
         std::set<std::string> order;
         for (const auto& value : array_field(page, "reading_order", where)) {
@@ -431,7 +518,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 require(part_of_owner, where + " 内容归属不属于 owner 的源区域");
             } else {
                 require((type == "caption_of" || type == "footnote_of" || type == "heading_precedes") &&
-                        (version == "1.3" || version == "1.5" || pdf) &&
+                        (version == "1.3" || version == "1.5" || version == "1.6" || pdf) &&
                         blocks.count(string_field(relation, "source_block_id", where)) &&
                         blocks.count(string_field(relation, "target_block_id", where)), where + " 语义关系引用不存在");
             }

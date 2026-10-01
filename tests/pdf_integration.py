@@ -14,7 +14,7 @@ from printed_page_integration import config, ROOT
 from layout_integration import config as layout_config
 
 PDF_SCHEMA = json.loads((ROOT / 'docs/issue-11/document-ir-1.4.schema.json').read_text())
-VISUAL_PDF_SCHEMA = json.loads((ROOT / 'docs/issue-18/document-ir-1.5-pdf.schema.json').read_text())
+VISUAL_PDF_SCHEMA = json.loads((ROOT / 'docs/issue-21/document-ir-1.6-pdf.schema.json').read_text())
 
 
 def run(binary, setting, pdf, out, *options, expected=0, env=None):
@@ -24,7 +24,7 @@ def run(binary, setting, pdf, out, *options, expected=0, env=None):
     assert process.returncode == expected, (process.returncode, process.stdout, process.stderr)
     if expected == 0:
         document = json.loads((out / 'document.json').read_text(encoding='utf-8'))
-        jsonschema.validate(document, VISUAL_PDF_SCHEMA if document['schema_version'] == '1.5' else PDF_SCHEMA)
+        jsonschema.validate(document, VISUAL_PDF_SCHEMA if document['schema_version'] == '1.6' else PDF_SCHEMA)
         return document
     return process
 
@@ -47,7 +47,7 @@ def main():
             tool_env = dict(os.environ, DOCOCR_POPPLER_BIN=str(tool_dir))
         selected = run(sys.argv[1], setting, pdf, root / 'selected', '--pages', '2-3',
                        '--dpi', '72', env=tool_env)
-        assert selected['schema_version'] == '1.5'
+        assert selected['schema_version'] == '1.6'
         assert [p['page_id'] for p in selected['pages']] == ['p0002', 'p0003']
         assert [p['pdf_page_number'] for p in selected['pages']] == [2, 3]
         ids = [block['id'] for page in selected['pages'] for block in page['blocks']]

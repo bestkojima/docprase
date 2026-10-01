@@ -66,7 +66,21 @@ std::string render_markdown_block(const MarkdownBlock& b) {
     if (b.type == "image" && !b.resource.empty()) return "![插图](" + b.resource + ")";
     if (b.status != "ok") {
         std::string marker = "[" + std::string(b.status == "skipped" ? "未处理：" :
+            b.assessment_state == "incomplete" ? "识别不完整：" :
+            b.assessment_state == "anomalous" ? "确认异常：" :
             b.status == "partial" ? "待核验：" : "识别失败：") + b.id + "](" + b.resource + ")";
+        if (!b.assessment_reason.empty() && b.status != "skipped") {
+            const auto& reason = b.assessment_reason;
+            const std::string detail = reason == "empty_numbering_structure" ?
+                "输出主要由无正文的编号组成，请核对原图。" : reason == "repeated_fragment" ?
+                "输出包含大量重复片段，请核对原图。" : b.assessment_state == "incomplete" ?
+                "输出达到生成上限，内容不完整。" : reason == "visual_evidence_missing" ||
+                reason == "ovis_visual_tokens_missing" ? "未取得有效视觉输入。" :
+                reason == "ovis_runtime_timeout" ? "识别运行超时。" :
+                b.status == "failed" ? "识别未能完成，请查看原图。" :
+                "输出的完整性或结构尚未确认，请核对原图。";
+            marker += "\n\n> " + detail;
+        }
         return b.resource.empty() ? marker : "![原图](" + b.resource + ")\n\n" + marker;
     }
     if (b.type == "formula") {

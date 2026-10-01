@@ -31,8 +31,8 @@ def run(binary, scenario, root, image):
     document = json.loads((output / 'document.json').read_text())
     manifest = json.loads((output / 'run-manifest.json').read_text())
     import jsonschema
-    schema_path = ('docs/issue-18/document-ir-1.5-image.schema.json'
-                   if document['schema_version'] == '1.5'
+    schema_path = ('docs/issue-21/document-ir-1.6-image.schema.json'
+                   if document['schema_version'] == '1.6'
                    else 'docs/issue-10/document-ir-1.3.schema.json'
                    if document['schema_version'] == '1.3'
                    else 'docs/issue-9/document-ir-1.2.schema.json'
@@ -53,7 +53,7 @@ def main():
         output, document, manifest = run(sys.argv[1], 'printed_page', root, image)
         page = document['pages'][0]
         blocks = page['blocks']
-        assert document['schema_version'] == '1.5'
+        assert document['schema_version'] == '1.6'
         assert blocks[0]['provenance']['visual']['evidence'] == 'explicit_success'
         assert blocks[0]['provenance']['visual']['token_count'] == 0
         assert blocks[0]['provenance']['visual']['canvas_size'] == [256, 256]
@@ -84,7 +84,7 @@ def main():
 
         visual_out, visual_doc, visual_manifest = run(sys.argv[1], 'printed_page_visual_empty', root, image)
         visual_block = visual_doc['pages'][0]['blocks'][0]
-        assert visual_doc['schema_version'] == '1.5'
+        assert visual_doc['schema_version'] == '1.6'
         assert visual_block['status'] == 'failed'
         assert visual_block['provenance']['raw_output'] == '1. 2. spurious text'
         assert visual_block['provenance']['visual']['evidence'] == 'no_visual_tokens'
