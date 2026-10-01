@@ -1,0 +1,99 @@
+{
+  "frozen_at_utc": "2026-10-01T05:41:23.817342+00:00",
+  "code_commit": "88183cd0fb4acd3e72e78a40d7bc5140fefa8d7e",
+  "source_sha256": {
+    "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+    "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+    "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+    "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+    "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+    "src/core.cpp": "6e146ff0b7cc145d4ba3b7267ad35bdc5a4a8ab4a464b8a20df1a1ea090d7f8b",
+    "src/document_schemas.hpp.in": "637f6d73b50b29eb3636aa2d239f0369d7995b53a8005469544040fb487d3c77",
+    "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+    "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+    "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+    "src/markdown.cpp": "11686f644091f4008c76c0eb6fd982b8e1458ac0262f19a1a993e7ae56fbfa8a",
+    "src/markdown.hpp": "d5bbde38665ee2e44270f9b4f6109e300ff62f0b7d5450b7eede64ab78fc1678",
+    "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+    "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+    "src/pdf_job.cpp": "7f93329c3c24d3a3f2c79cd265a8f023bf2fb03b8411b7dfba2dc3ad922a38d4",
+    "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+    "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+    "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+    "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+    "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+    "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+    "src/reexport.cpp": "92b936e3d7080a569e602c92e4b2ed18945a8da0f890e483da3f4bcd9582cc40",
+    "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+    "src/region_recognition.cpp": "65f195cb6a477037d565816dac83c06af9484f7c4bc4f2653f6e14b6e5015037",
+    "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+    "src/schema_validator.cpp": "560cf88d94001499e4ca3488615aad59bc79c16f0ddbecd3bf532a1d37fa8640",
+    "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+    "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+    "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+    "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+    "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+    "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+    "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+    "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+    "CMakeLists.txt": "bb3c9226b3419906480b824e01ba23c42312971e4b3e962ad08ff9d1b69c71ed"
+  },
+  "source_config_sha256": "b581fcc4dae597aa63e1b2f1d4b0915f1d40c19c4b77190c86f580688c524204",
+  "effective_config_sha256": "f5f5b43b48accd5155bb0745e2858f724e55d17d1308693f2ffa96e875cbe2f5",
+  "runtime": {
+    "dococr_cli": {
+      "source": "/home/dr/project/docprase/build/issue24/dococr_cli",
+      "sha256": "74e5c53f3e84d73e883818ef5dd0beb9aa387e54309b2e2b17d37cfc65f0e592"
+    },
+    "libdococr_c.so": {
+      "source": "/home/dr/project/docprase/build/issue24/libdococr_c.so",
+      "sha256": "af803811ed66d66f5db9276e0635069e0678555775292df8af77c62cfa881400"
+    },
+    "libMNN.so": {
+      "source": "/home/dr/project/MNN/build/libMNN.so",
+      "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+    },
+    "libllm.so": {
+      "source": "/home/dr/project/MNN/build/libllm.so",
+      "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+    },
+    "libMNNOpenCV.so": {
+      "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+      "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+    },
+    "libMNNAudio.so": {
+      "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+      "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+    },
+    "libMNN_Express.so": {
+      "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+      "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+    }
+  },
+  "model_files": {
+    "candidate/models/layout/PP-DocLayoutV3.mnn": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+    "candidate/models/recognition/config.json": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+    "candidate/models/recognition/llm_config.json": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+    "candidate/models/recognition/llm.mnn": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+    "candidate/models/recognition/llm.mnn.weight": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+    "candidate/models/recognition/visual.mnn": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+    "candidate/models/recognition/visual.mnn.weight": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+    "candidate/models/recognition/tokenizer.mtok": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+    "candidate/models/recognition/export_args.json": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334"
+  },
+  "model_storage": "sha_locked_hardlink_references",
+  "thresholds_sha256": "34a8250470f26e66bf0c8df64dcf1ab21544f9ee9132745cf0b91b292eb08b16",
+  "runner_sha256": "a1eeed847a3540293872d26a62365da56014c2f3965b3955ad6465bdea5b9d48",
+  "dataset_manifest_sha256": "d5910801ade14c86bc94805bf822c9412fe367d8b391a06d8e5fb678d8df0c78",
+  "old_manifest_sha256": "01edcc9f0786666e444f4bbb98e97b9134bc9a2d81812d70c21ed033798575af",
+  "execution": "fresh_public_cli_jobs",
+  "system": {
+    "uname": [
+      "Linux",
+      "localhost.localdomain",
+      "7.0.0-34-generic",
+      "#34~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 15:38:29 UTC 2",
+      "x86_64"
+    ]
+  }
+}

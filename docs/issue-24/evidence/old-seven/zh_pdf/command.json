@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/pdf/printed_textbook_2p.pdf",
+    "--out",
+    "/home/dr/project/docprase/output/issue-24/old-seven/zh_pdf/job",
+    "--pages",
+    "1-2",
+    "--dpi",
+    "200"
+  ],
+  "input_sha256": "13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7",
+  "returncode": 0,
+  "models_intact": true,
+  "elapsed_seconds": 29.99017709399959,
+  "execution": "fresh_public_cli_job",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

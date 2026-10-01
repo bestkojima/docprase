@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+    "--out",
+    "/home/dr/project/docprase/output/issue-24/old-seven/zh_text_table/job"
+  ],
+  "input_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+  "returncode": 0,
+  "models_intact": true,
+  "elapsed_seconds": 68.85559178299991,
+  "execution": "fresh_public_cli_job",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

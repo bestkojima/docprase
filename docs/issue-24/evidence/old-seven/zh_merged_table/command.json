@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/ovis/merged_table_book_page.png",
+    "--out",
+    "/home/dr/project/docprase/output/issue-24/old-seven/zh_merged_table/job"
+  ],
+  "input_sha256": "c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc",
+  "returncode": 0,
+  "models_intact": true,
+  "elapsed_seconds": 62.13756438100063,
+  "execution": "fresh_public_cli_job",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

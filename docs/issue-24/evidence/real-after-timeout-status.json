@@ -1,0 +1,16 @@
+{
+  "state": "completed",
+  "running": false,
+  "terminal": true,
+  "cancel_requested": false,
+  "timeout_requested": false,
+  "cancellation_granularity": "after_backend_call",
+  "page_current": 1,
+  "page_completed": 1,
+  "page_total": 1,
+  "region_completed": 1,
+  "region_total": 1,
+  "events_pending": 11,
+  "events_dropped": 0,
+  "engine_ready": true
+}

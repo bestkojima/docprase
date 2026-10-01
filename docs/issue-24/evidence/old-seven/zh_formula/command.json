@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/ovis/formula_book_page.png",
+    "--out",
+    "/home/dr/project/docprase/output/issue-24/old-seven/zh_formula/job"
+  ],
+  "input_sha256": "861030411176ef8eb8cbf9607461d252b8db557808ab91e87a4e9bed4c69bb84",
+  "returncode": 0,
+  "models_intact": true,
+  "elapsed_seconds": 81.40183456600062,
+  "execution": "fresh_public_cli_job",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

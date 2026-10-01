@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+    "--out",
+    "/home/dr/project/docprase/output/issue-24/development/odb-05/job"
+  ],
+  "input_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+  "returncode": 0,
+  "models_intact": true,
+  "elapsed_seconds": 61.588343274999716,
+  "execution": "fresh_public_cli_job",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

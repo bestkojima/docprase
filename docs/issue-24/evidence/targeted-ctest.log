@@ -1,0 +1,23 @@
+Test project /home/dr/project/docprase/build/issue24
+    Start  4: reexport_integration
+1/9 Test  #4: reexport_integration .............   Passed    1.79 sec
+    Start  8: issue19_dedup
+2/9 Test  #8: issue19_dedup ....................   Passed    0.22 sec
+    Start  9: issue20_geometry
+3/9 Test  #9: issue20_geometry .................   Passed    0.13 sec
+    Start 10: issue20_owned_crop
+4/9 Test #10: issue20_owned_crop ...............   Passed    0.53 sec
+    Start 11: issue20_tuning
+5/9 Test #11: issue20_tuning ...................   Passed    0.70 sec
+    Start 12: issue20_large_page
+6/9 Test #12: issue20_large_page ...............   Passed    2.91 sec
+    Start 14: issue21_quality
+7/9 Test #14: issue21_quality ..................   Passed    2.15 sec
+    Start 15: issue22_retry
+8/9 Test #15: issue22_retry ....................   Passed    2.85 sec
+    Start 18: reading_order_integration
+9/9 Test #18: reading_order_integration ........   Passed    3.49 sec
+
+100% tests passed out of 9
+
+Total Test time (real) =  14.77 sec

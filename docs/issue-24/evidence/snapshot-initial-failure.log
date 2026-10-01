@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/scripts/issue24_run.py", line 132, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/dr/project/docprase/scripts/issue24_run.py", line 110, in main
+    binary, config, environment = freeze(args.cli, args.config, output, args.thresholds)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dr/project/docprase/scripts/issue24_run.py", line 42, in freeze
+    shutil.copy2(original, target)
+  File "/usr/lib/python3.12/shutil.py", line 475, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.12/shutil.py", line 273, in copyfile
+    _fastcopy_sendfile(fsrc, fdst)
+  File "/usr/lib/python3.12/shutil.py", line 164, in _fastcopy_sendfile
+    raise err from None
+  File "/usr/lib/python3.12/shutil.py", line 150, in _fastcopy_sendfile
+    sent = os.sendfile(outfd, infd, offset, blocksize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/home/dr/project/docprase/models/ovis/llm.mnn.weight' -> '/home/dr/project/docprase/output/issue-24/candidate/models/recognition/llm.mnn.weight'

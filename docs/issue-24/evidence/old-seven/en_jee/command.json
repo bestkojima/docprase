@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346.jpg",
+    "--out",
+    "/home/dr/project/docprase/output/issue-24/old-seven/en_jee/job"
+  ],
+  "input_sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade",
+  "returncode": 0,
+  "models_intact": true,
+  "elapsed_seconds": 33.89100474599945,
+  "execution": "fresh_public_cli_job",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

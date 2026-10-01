@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-24/candidate/runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-24/candidate/config.json",
+    "--input",
+    "/home/dr/project/docprase/tests/fixtures/issue15/printed_science_2col.png",
+    "--out",
+    "/home/dr/project/docprase/output/issue-24/old-seven/en_two_column/job"
+  ],
+  "input_sha256": "b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9",
+  "returncode": 0,
+  "models_intact": true,
+  "elapsed_seconds": 34.03970832199957,
+  "execution": "fresh_public_cli_job",
+  "candidate_sha256": "776b9f2b68fc6648568e04e744a651efe0080fd07be648046065ddf5cc999823"
+}

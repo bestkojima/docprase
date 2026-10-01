@@ -1,0 +1,33 @@
+{
+  "candidate_intact": true,
+  "workers": 2,
+  "completed": 26,
+  "failed": [
+    "development/odb-02",
+    "development/odb-01",
+    "development/odb-03",
+    "development/odb-04",
+    "development/odb-05",
+    "development/odb-06",
+    "development/odb-07",
+    "development/odb-08",
+    "development/odb-10",
+    "development/odb-09",
+    "development/odb-11",
+    "development/odb-12",
+    "development/odb-13",
+    "development/odb-14",
+    "development/odb-15",
+    "development/odb-16",
+    "development/odb-17",
+    "development/odb-18",
+    "development/odb-19",
+    "development/odb-20",
+    "old-seven/zh_formula",
+    "old-seven/zh_text_table",
+    "old-seven/zh_merged_table",
+    "old-seven/en_jee",
+    "old-seven/zh_pdf",
+    "old-seven/en_two_column"
+  ]
+}
