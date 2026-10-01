@@ -1,6 +1,6 @@
 # Issue #26：识别前结构、标签映射与图片资源
 
-对应 [Issue #26](https://github.com/bestkojima/docprase/issues/26)。最新实现为 DocumentIR 1.9，已通过 [完整20页生产结构验收](acceptance-20-v1.9.md) 与25项 CTest。实现与证据已提交到 `codex/issue26-region-mapping`，#26进度已更新；分支合并前保留 OPEN。
+对应 [Issue #26](https://github.com/bestkojima/docprase/issues/26)。最新实现为 DocumentIR 1.9，已通过 [完整20页生产结构验收](acceptance-20-v1.9.md) 与25项 CTest。2026-10-01 按用户“复验原错误图片，通过则关闭”的指令，重新生产识别 odb-03/07/08/13，核对原第17/18题八个图片标签绑定，并复核旧20页产物及重新导出，全部通过；见 [关闭前复验](closure-verification.md)。本轮关闭条件已满足，PR #30 的合并状态单独跟踪，不再将合并作为 Issue 关闭前置。
 
 ## 当前实现与标签规则
 

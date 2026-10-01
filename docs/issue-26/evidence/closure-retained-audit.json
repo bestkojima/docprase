@@ -1,0 +1,319 @@
+{
+  "checked_at_utc": "2026-10-01T15:54:28.432607+00:00",
+  "implementation_commit": "4b1cf084de80e188a67eaf254d7c77413e11b556",
+  "reviewed_head": "95804817b2be5f02f74c472726138c965b6e848d",
+  "scope": "retained_twenty_page_hash_audit_and_new_production_reexports_not_new_twenty_page_inference",
+  "old_production_run": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9",
+  "source_files_matched": 43,
+  "source_commit_binding_verified": true,
+  "model_runtime_data_hashes_verified": true,
+  "hashed_artifacts": 1532,
+  "submitted_pngs_verified": 8,
+  "png_source_documents_verified": 20,
+  "rebuilt_cli_sha256": "8ff0f07d7ae4f370d8d49f6559e4205073e8a5ddca98ee1fccbc5f188a6a68c6",
+  "rebuilt_library_sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384",
+  "q17_q18_order_and_eight_real_labels_passed": true,
+  "pages": [
+    {
+      "page_id": "odb-01",
+      "hashed_artifacts": 125,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-01/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-01/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-01"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-02",
+      "hashed_artifacts": 162,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-02/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-02/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-02"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-03",
+      "hashed_artifacts": 80,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-03/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-03/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-03"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-04",
+      "hashed_artifacts": 147,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-04/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-04/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-04"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-05",
+      "hashed_artifacts": 71,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-05/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-05/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-05"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-06",
+      "hashed_artifacts": 118,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-06/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-06/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-06"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-07",
+      "hashed_artifacts": 35,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-07/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-07/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-07"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-08",
+      "hashed_artifacts": 101,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-08/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-08/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-08"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-09",
+      "hashed_artifacts": 33,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-09/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-09/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-09"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-10",
+      "hashed_artifacts": 47,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-10/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-10/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-10"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-11",
+      "hashed_artifacts": 33,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-11/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-11/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-11"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-12",
+      "hashed_artifacts": 48,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-12/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-12/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-12"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-13",
+      "hashed_artifacts": 45,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-13/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-13/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-13"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-14",
+      "hashed_artifacts": 35,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-14/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-14/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-14"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-15",
+      "hashed_artifacts": 49,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-15/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-15/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-15"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-16",
+      "hashed_artifacts": 46,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-16/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-16/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-16"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-17",
+      "hashed_artifacts": 90,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-17/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-17/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-17"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-18",
+      "hashed_artifacts": 61,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-18/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-18/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-18"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-19",
+      "hashed_artifacts": 161,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-19/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-19/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-19"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    },
+    {
+      "page_id": "odb-20",
+      "hashed_artifacts": 45,
+      "reexport_command": [
+        "/tmp/docprase-issue26-reverify-0fbc/dococr_cli",
+        "--reexport",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-20/job/document.json",
+        "--asset-root",
+        "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-20/job",
+        "--out",
+        "/home/dr/project/docprase/output/issue-26/closure-evidence-0fbc-pass/odb-20"
+      ],
+      "reexport_returncode": 0,
+      "markdown_json_resources_equal": true
+    }
+  ],
+  "passed": true
+}

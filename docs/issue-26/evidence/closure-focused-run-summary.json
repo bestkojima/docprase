@@ -1,0 +1,38 @@
+{
+  "execution": "fresh_public_MNN_OvisOCR_inference",
+  "completed": 4,
+  "scope": "focused_pages",
+  "requested_pages": [
+    "odb-03",
+    "odb-07",
+    "odb-08",
+    "odb-13"
+  ],
+  "all_jobs_completed": true,
+  "pages": [
+    {
+      "page_id": "odb-03",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 73.20033098800195
+    },
+    {
+      "page_id": "odb-07",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 35.11011165999662
+    },
+    {
+      "page_id": "odb-08",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 65.32871453599364
+    },
+    {
+      "page_id": "odb-13",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 49.601139975995466
+    }
+  ]
+}
