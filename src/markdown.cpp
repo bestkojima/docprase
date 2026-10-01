@@ -39,7 +39,14 @@ LinkEscapes link_openers(const std::string& source) {
 }
 }
 
-std::string render_markdown_block(const MarkdownBlock& b) {
+std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption) {
+    auto with_relation_note = [&](std::string rendered) {
+        if (uncertain_caption) {
+            rendered += "\n\n> 图注与图片的对应关系尚未确认，请核对原图。";
+            if (b.status == "ok" && !b.resource.empty()) rendered += "\n\n![原图](" + b.resource + ")";
+        }
+        return rendered;
+    };
     auto safe_text = [](const std::string& source) {
         std::string result;
         result.reserve(source.size());
@@ -81,13 +88,13 @@ std::string render_markdown_block(const MarkdownBlock& b) {
                 "输出的完整性或结构尚未确认，请核对原图。";
             marker += "\n\n> " + detail;
         }
-        return b.resource.empty() ? marker : "![原图](" + b.resource + ")\n\n" + marker;
+        return with_relation_note(b.resource.empty() ? marker : "![原图](" + b.resource + ")\n\n" + marker);
     }
     if (b.type == "formula") {
         const std::string formula = safe_text(b.text);
         return b.display_formula ? "$$\n" + formula + "\n$$" : "$" + formula + "$";
     }
     if (b.type == "table" && b.structured_table) return b.text;
-    return safe_text(b.text);
+    return with_relation_note(safe_text(b.text));
 }
 }

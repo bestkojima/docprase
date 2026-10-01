@@ -72,6 +72,85 @@ public:
         return response;
     }
     InferenceResponse execute_impl(const InferenceRequest& request, ExecutionContext& context) {
+        if (scenario_ == "printed_page_structure") {
+            const char* path = std::getenv("DOCOCR_TEST_STRUCTURE_PATH");
+            if (!path) throw std::runtime_error("structure_fixture_missing");
+            nlohmann::json fixture;
+            std::ifstream(path) >> fixture;
+            if (std::holds_alternative<TensorRequest>(request.payload)) {
+                std::vector<float> rows(300 * 7);
+                int32_t count = 0;
+                if (fixture.contains("candidate_tensor_path")) {
+                    std::ifstream input(fixture.at("candidate_tensor_path").get<std::string>(), std::ios::binary);
+                    input.read(reinterpret_cast<char*>(rows.data()), rows.size() * sizeof(float));
+                    if (!input || input.peek() != std::char_traits<char>::eof())
+                        throw std::runtime_error("invalid_captured_candidate_tensor");
+                    count = fixture.at("candidate_count").get<int32_t>();
+                } else {
+                    const auto& input = fixture.at("candidates");
+                    if (input.size() > 300) throw std::runtime_error("too_many_fixture_candidates");
+                    count = static_cast<int32_t>(input.size());
+                    for (size_t i = 0; i < input.size(); ++i)
+                        for (size_t j = 0; j < 7; ++j) rows[i * 7 + j] = input.at(i).at(j).get<float>();
+                }
+                if (count < 0 || count > 300) throw std::runtime_error("invalid_captured_candidate_count");
+                Tensor a{"fetch_name_0", DataType::Float32, TensorLayout::Matrix, {300,7},
+                         std::vector<uint8_t>(rows.size() * sizeof(float))};
+                Tensor b{"fetch_name_1", DataType::Int32, TensorLayout::Matrix, {1},
+                         std::vector<uint8_t>(sizeof(count))};
+                Tensor c{"fetch_name_2", DataType::Int32, TensorLayout::Matrix, {300,200,200},
+                         std::vector<uint8_t>(300 * 200 * 200 * sizeof(int32_t))};
+                if (fixture.contains("mask_rle_path")) {
+                    std::ifstream input(fixture.at("mask_rle_path").get<std::string>(), std::ios::binary);
+                    std::string magic;
+                    std::getline(input, magic);
+                    if (magic != "DOCOCR_MASK_RLE_V1") throw std::runtime_error("invalid_captured_mask_magic");
+                    auto read32 = [&] {
+                        uint8_t bytes[4]{};
+                        input.read(reinterpret_cast<char*>(bytes), 4);
+                        if (!input) throw std::runtime_error("truncated_captured_masks");
+                        return uint32_t(bytes[0]) | uint32_t(bytes[1]) << 8 |
+                               uint32_t(bytes[2]) << 16 | uint32_t(bytes[3]) << 24;
+                    };
+                    if (read32() != 300 || read32() != 200 || read32() != 200)
+                        throw std::runtime_error("invalid_captured_mask_shape");
+                    size_t offset = 0;
+                    for (int row = 0; row < 300; ++row) {
+                        const uint32_t first = read32(), runs = read32();
+                        if (first > 1 || runs > 40000) throw std::runtime_error("invalid_captured_mask_runs");
+                        size_t pixels = 0;
+                        for (uint32_t run = 0; run < runs; ++run) {
+                            const uint32_t length = read32();
+                            const int32_t bit = (first + run) % 2;
+                            if (!length || pixels + length > 40000) throw std::runtime_error("invalid_captured_mask_length");
+                            for (uint32_t i = 0; i < length; ++i) {
+                                std::memcpy(c.data.data() + offset, &bit, sizeof(bit));
+                                offset += sizeof(bit);
+                            }
+                            pixels += length;
+                        }
+                        if (pixels != 40000) throw std::runtime_error("invalid_captured_mask_size");
+                    }
+                    if (input.peek() != std::char_traits<char>::eof()) throw std::runtime_error("captured_mask_trailing_data");
+                }
+                std::memcpy(a.data.data(), rows.data(), a.data.size());
+                std::memcpy(b.data.data(), &count, sizeof(count));
+                return {TensorOutput{{std::move(a), std::move(b), std::move(c)}}};
+            }
+            const auto& generation = std::get<GenerationRequest>(request.payload);
+            const nlohmann::json bbox = {generation.source_box.x0, generation.source_box.y0,
+                                        generation.source_box.x1, generation.source_box.y1};
+            for (const auto& saved : fixture.at("outputs")) if (saved.at("bbox") == bbox) {
+                GenerationOutput output;
+                output.text = saved.at("text").get<std::string>();
+                output.raw_output = saved.value("raw_output", output.text);
+                output.finish_reason = saved.value("finish_reason", "complete");
+                output.stop_reason = saved.value("stop_reason", "normal");
+                output.error = saved.value("error", "");
+                return {output};
+            }
+            throw std::runtime_error("unplanned_structure_fixture_crop");
+        }
         if (auto* layout = std::get_if<TensorRequest>(&request.payload)) {
             if (scenario_ == "printed_page_layout_gate_error") {
                 const char* gate = std::getenv("DOCOCR_TEST_GATE_PATH");
@@ -638,7 +717,7 @@ private:
     bool rebuilt_for_oom_ = false;
 };
 bool config_supported(const std::string& config) {
-    return config == "fixture:printed_page_quality" ||
+    return config == "fixture:printed_page_structure" || config == "fixture:printed_page_quality" ||
            config.rfind("fixture:printed_page_reading", 0) == 0 ||
            config == "fixture:normalized" || config == "fixture:runtime" ||
            config == "fixture:graph" || config == "fixture:sample" || config == "fixture:blank" ||

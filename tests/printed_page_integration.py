@@ -31,8 +31,8 @@ def run(binary, scenario, root, image):
     document = json.loads((output / 'document.json').read_text())
     manifest = json.loads((output / 'run-manifest.json').read_text())
     import jsonschema
-    schema_path = ('docs/issue-22/document-ir-1.7-image.schema.json'
-                   if document['schema_version'] == '1.7'
+    schema_path = ('docs/issue-26/document-ir-1.9-image.schema.json'
+                   if document['schema_version'] == '1.9'
                    else 'docs/issue-10/document-ir-1.3.schema.json'
                    if document['schema_version'] == '1.3'
                    else 'docs/issue-9/document-ir-1.2.schema.json'
@@ -53,12 +53,12 @@ def main():
         output, document, manifest = run(sys.argv[1], 'printed_page', root, image)
         page = document['pages'][0]
         blocks = page['blocks']
-        assert document['schema_version'] == '1.7'
+        assert document['schema_version'] == '1.9'
         assert blocks[0]['provenance']['visual']['evidence'] == 'explicit_success'
         assert blocks[0]['provenance']['visual']['token_count'] == 0
         assert blocks[0]['provenance']['visual']['canvas_size'] == [256, 256]
         assert [block['status'] for block in blocks] == [
-            'ok', 'skipped', 'ok', 'ok', 'partial', 'skipped']
+            'ok', 'ok', 'ok', 'ok', 'partial', 'skipped']
         assert [block['type'] for block in blocks] == [
             'text', 'image', 'table', 'text', 'formula', 'unknown']
         assert [block['bbox'] for block in blocks] == [[0, 0, 2, 1], [0, 0, 1, 1],
@@ -75,7 +75,7 @@ def main():
         assert all((output / block['content']['resource']).read_bytes().startswith(b'\x89PNG') for block in blocks)
         assert '中文，English!\n第二行。' in (output / 'document.md').read_text()
         assert [item['stop_reason'] for item in manifest['regions']] == [
-            'normal', 'recognition_not_executed', 'normal', 'normal', 'normal', 'unknown_layout_class']
+            'normal', 'normal', 'normal', 'normal']
         assert all(item['elapsed_ms'] >= 0 for item in manifest['regions'])
         assert manifest['processing'][4]['status'] == 'delegated_runtime'
         markdown = (output / 'document.md').read_text()
@@ -84,7 +84,7 @@ def main():
 
         visual_out, visual_doc, visual_manifest = run(sys.argv[1], 'printed_page_visual_empty', root, image)
         visual_block = visual_doc['pages'][0]['blocks'][0]
-        assert visual_doc['schema_version'] == '1.7'
+        assert visual_doc['schema_version'] == '1.9'
         assert visual_block['status'] == 'failed'
         assert visual_block['provenance']['raw_output'] == '1. 2. spurious text'
         assert visual_block['provenance']['visual']['evidence'] == 'no_visual_tokens'

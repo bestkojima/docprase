@@ -11,4 +11,8 @@ inline constexpr const char* document_schema_1_6_image = @DOCUMENT_SCHEMA_1_6_IM
 inline constexpr const char* document_schema_1_6_pdf = @DOCUMENT_SCHEMA_1_6_PDF_LITERALS@;
 inline constexpr const char* document_schema_1_7_image = @DOCUMENT_SCHEMA_1_7_IMAGE_LITERALS@;
 inline constexpr const char* document_schema_1_7_pdf = @DOCUMENT_SCHEMA_1_7_PDF_LITERALS@;
+inline constexpr const char* document_schema_1_8_image = @DOCUMENT_SCHEMA_1_8_IMAGE_LITERALS@;
+inline constexpr const char* document_schema_1_8_pdf = @DOCUMENT_SCHEMA_1_8_PDF_LITERALS@;
+inline constexpr const char* document_schema_1_9_image = @DOCUMENT_SCHEMA_1_9_IMAGE_LITERALS@;
+inline constexpr const char* document_schema_1_9_pdf = @DOCUMENT_SCHEMA_1_9_PDF_LITERALS@;
 }

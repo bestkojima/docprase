@@ -22,6 +22,10 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-21/document-ir-1.6-pdf.schema.json"
   "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-image.schema.json"
   "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-pdf.schema.json"
 )
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-4/document-ir-1.0.schema.json" DOCUMENT_SCHEMA_1_0)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-8/document-ir-1.1.schema.json" DOCUMENT_SCHEMA_1_1)
@@ -34,16 +38,20 @@ file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-21/document-ir-1.6-image.schem
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-21/document-ir-1.6-pdf.schema.json" DOCUMENT_SCHEMA_1_6_PDF)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-image.schema.json" DOCUMENT_SCHEMA_1_7_IMAGE)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-pdf.schema.json" DOCUMENT_SCHEMA_1_7_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-image.schema.json" DOCUMENT_SCHEMA_1_8_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-pdf.schema.json" DOCUMENT_SCHEMA_1_8_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-image.schema.json" DOCUMENT_SCHEMA_1_9_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-pdf.schema.json" DOCUMENT_SCHEMA_1_9_PDF)
 function(dococr_split_schema input output)
   # 每行独立为一个短原始字面量，保留原始换行并避开 MSVC C2026。
   string(REPLACE "\n" "\n)SCHEMA\"\nR\"SCHEMA(" split "${${input}}")
   set(${output} "R\"SCHEMA(${split})SCHEMA\"" PARENT_SCOPE)
 endfunction()
-foreach(version IN ITEMS 1_0 1_1 1_2 1_3 1_4 1_5_IMAGE 1_5_PDF 1_6_IMAGE 1_6_PDF 1_7_IMAGE 1_7_PDF)
+foreach(version IN ITEMS 1_0 1_1 1_2 1_3 1_4 1_5_IMAGE 1_5_PDF 1_6_IMAGE 1_6_PDF 1_7_IMAGE 1_7_PDF 1_8_IMAGE 1_8_PDF 1_9_IMAGE 1_9_PDF)
   dococr_split_schema(DOCUMENT_SCHEMA_${version} DOCUMENT_SCHEMA_${version}_LITERALS)
 endforeach()
 configure_file(src/document_schemas.hpp.in "${CMAKE_CURRENT_BINARY_DIR}/generated/document_schemas.hpp" @ONLY)
-add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
+add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/region_structure.cpp src/layout_region_policy.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
 set_target_properties(dococr_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb third_party/nlohmann)
 target_compile_features(dococr_core PUBLIC cxx_std_17)
@@ -181,6 +189,12 @@ if(DOCOCR_BUILD_TESTS)
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_table_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME reading_order_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/reading_order_integration.py $<TARGET_FILE:dococr_cli_fixture>)
+  add_test(NAME issue26_structure COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue26_structure.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME issue26_region_mapping COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue26_region_mapping.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME pdf_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/pdf_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME pdf_abi COMMAND ${Python3_EXECUTABLE}

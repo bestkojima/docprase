@@ -27,7 +27,7 @@ def main():
         (output / f'{name}.stderr.log').write_text(process.stderr)
         assert process.returncode == 0, process.stderr
         doc = json.loads((saved / 'document.json').read_text())
-        jsonschema.validate(doc, json.loads((ROOT / 'docs/issue-22/document-ir-1.7-image.schema.json').read_text()))
+        jsonschema.validate(doc, json.loads((ROOT / 'docs/issue-26/document-ir-1.9-image.schema.json').read_text()))
         blocks = doc['pages'][0]['blocks']
         known = [b for b in blocks if b['provenance']['raw_output'].strip() == expected]
         assert len(known) == 1 and known[0]['status'] == 'ok', known

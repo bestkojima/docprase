@@ -235,8 +235,12 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                     }
                     output_bytes += page_bytes;
                     Json fragment = Json::parse(run.output.json);
-                    if (fragment.at("schema_version") == "1.7") document["schema_version"] = "1.7";
-                    else if (fragment.at("schema_version") == "1.5" && document["schema_version"] != "1.7")
+                    if (fragment.at("schema_version") == "1.9") document["schema_version"] = "1.9";
+                    else if (fragment.at("schema_version") == "1.8" && document["schema_version"] != "1.9")
+                        document["schema_version"] = "1.8";
+                    else if (fragment.at("schema_version") == "1.7" && document["schema_version"] != "1.8" && document["schema_version"] != "1.9")
+                        document["schema_version"] = "1.7";
+                    else if (fragment.at("schema_version") == "1.5" && document["schema_version"] != "1.7" && document["schema_version"] != "1.8" && document["schema_version"] != "1.9")
                         document["schema_version"] = "1.5";
                     Json page_data = fragment.at("pages").at(0);
                     page_data.update(geometry);

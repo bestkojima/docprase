@@ -9,5 +9,5 @@ struct MarkdownBlock {
     std::string assessment_state;
     std::string assessment_reason;
 };
-std::string render_markdown_block(const MarkdownBlock& block);
+std::string render_markdown_block(const MarkdownBlock& block, bool uncertain_caption = false);
 }

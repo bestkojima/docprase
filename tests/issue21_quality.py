@@ -61,8 +61,8 @@ def main():
                 if forbidden:
                     assert forbidden.encode() not in markdown
                 import jsonschema
-                schema = json.loads((ROOT / 'docs/issue-22/document-ir-1.7-image.schema.json').read_text())
-                assert doc['schema_version'] == '1.7'
+                schema = json.loads((ROOT / 'docs/issue-26/document-ir-1.9-image.schema.json').read_text())
+                assert doc['schema_version'] == '1.9'
                 jsonschema.validate(doc, schema)
                 assert doc['pages'][0]['blocks'][3]['status'] == 'ok'
                 assert '中文，English!'.encode() in markdown
@@ -125,6 +125,9 @@ def main():
               stop_reason='normal'), 'ok', '正常的旧文档。', None)
         legacy = json.loads((saved / 'document.json').read_text())
         legacy['schema_version'] = '1.5'
+        legacy['pages'][0].pop('structure_plan')
+        for region in legacy['pages'][0]['regions']:
+            region.pop('recognition_type')
         for block in legacy['pages'][0]['blocks']:
             block['provenance'].pop('assessment')
             block['provenance'].pop('recognition', None)

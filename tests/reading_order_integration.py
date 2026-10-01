@@ -9,7 +9,7 @@ from printed_page_integration import run
 
 def check(binary, root, image, scenario, source, reason):
     output, document, manifest = run(binary, scenario, root, image)
-    assert document['schema_version'] == '1.7'
+    assert document['schema_version'] == '1.9'
     page = document['pages'][0]
     blocks = page['blocks']
     candidate_by_layout = {b['id']: b['candidate_id'] for b in page['layout_blocks']
@@ -34,7 +34,8 @@ def check(binary, root, image, scenario, source, reason):
     }
     assert document['layout_diagnostics']['candidates'][11]['filter_reason'] == 'below_score_threshold'
     assert next(b for b in blocks if candidate_of(b) == 10)['type'] == 'unknown'
-    assert len(manifest['regions']) == 11
+    assert [r['request_id'] for r in manifest['regions']] == [
+        b['provenance']['request_id'] for b in blocks if b['type'] in ('text', 'formula', 'table')]
     markdown = (output / 'document.md').read_text()
     assert markdown.index('第一节') < markdown.index('左段¹') < markdown.index('图1 插图')
     assert markdown.index('图1 插图') < markdown.rindex('右段') < markdown.index('表1 统计')

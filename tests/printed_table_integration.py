@@ -18,7 +18,7 @@ def main():
         image.write_bytes(png_2x2())
         out, doc, manifest = run(sys.argv[1], 'printed_page_table', root, image)
         page = doc['pages'][0]
-        assert doc['schema_version'] == '1.7'
+        assert doc['schema_version'] == '1.9'
         assert [block['type'] for block in page['blocks']] == ['text', 'table']
         table = page['blocks'][1]
         assert table['status'] == 'ok'
@@ -44,7 +44,7 @@ def main():
         assert '外部表题' in markdown
         assert len(manifest['regions']) == 2
         schema = json.loads((Path(__file__).resolve().parents[1] /
-                             'docs/issue-22/document-ir-1.7-image.schema.json').read_text())
+                             'docs/issue-26/document-ir-1.9-image.schema.json').read_text())
         for status in ('partial', 'failed', 'skipped'):
             invalid = copy.deepcopy(doc)
             invalid_table = invalid['pages'][0]['blocks'][1]
@@ -68,7 +68,7 @@ def main():
         process = layout_run(sys.argv[1], layout_config('fixture:layout_table'), image, layout_out)
         assert process.returncode == 0, process.stderr
         layout_doc = json.loads((layout_out / 'document.json').read_text())
-        assert layout_doc['schema_version'] == '1.3'
+        assert layout_doc['schema_version'] == '1.9'
         assert [b['type'] for b in layout_doc['pages'][0]['blocks']] == ['table', 'text']
         assert layout_doc['pages'][0]['relations'] == []
         for scenario, error in [

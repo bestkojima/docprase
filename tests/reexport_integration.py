@@ -84,11 +84,11 @@ def main():
 
         generated = {}
         for scenario, version in [('formula_table', '1.0'),
-                                  ('printed_page_formula', '1.7'),
-                                  ('printed_page_table', '1.7'),
-                                  ('printed_page_reading', '1.7'),
-                                  ('printed_page_visual_empty', '1.7'),
-                                  ('printed_page_failure', '1.7')]:
+                                  ('printed_page_formula', '1.9'),
+                                  ('printed_page_table', '1.9'),
+                                  ('printed_page_reading', '1.9'),
+                                  ('printed_page_visual_empty', '1.9'),
+                                  ('printed_page_failure', '1.9')]:
             if scenario == 'formula_table':
                 saved = root / scenario
                 run(fixture, '--backend', 'fixture:formula_table', '--input', image, '--out', str(saved))
@@ -116,8 +116,24 @@ def main():
                 assert candidate.get('recognition_crop_bbox') is None
                 candidate.pop('recognition_crop_bbox', None)
                 candidate.pop('crop_expansion_reason', None)
+        def remove_region_mapping(page):
+            for region in page['regions']:
+                region.pop('recognition_type', None)
+            for block in page['blocks']:
+                if block['type'] == 'image':
+                    block['status'] = 'skipped'
+                    block['error'] = 'recognition_not_executed'
+                    if 'assessment' in block['provenance']:
+                        block['provenance']['assessment'].update(
+                            state='skipped', reason='recognition_not_executed')
         old_formula = copy.deepcopy(formula)
         old_formula['schema_version'] = '1.1'
+        for old_page in old_formula['pages']:
+            old_page.pop('structure_plan', None)
+            remove_region_mapping(old_page)
+            for relation in old_page['relations']:
+                if relation.get('evidence') == 'pre_recognition_geometry':
+                    relation['evidence'] = 'model_figure_title_and_geometry'
         remove_new_crop_diagnostics(old_formula)
         old_formula['pages'][0].pop('reading_order_evidence', None)
         for block in old_formula['pages'][0]['blocks']:
@@ -129,6 +145,12 @@ def main():
         reexport(formula_saved, old_formula)
         legacy = copy.deepcopy(table)
         legacy['schema_version'] = '1.2'
+        for old_page in legacy['pages']:
+            old_page.pop('structure_plan', None)
+            remove_region_mapping(old_page)
+            for relation in old_page['relations']:
+                if relation.get('evidence') == 'pre_recognition_geometry':
+                    relation['evidence'] = 'model_figure_title_and_geometry'
         remove_new_crop_diagnostics(legacy)
         legacy['pages'][0].pop('reading_order_evidence', None)
         for block in legacy['pages'][0]['blocks']:
@@ -140,12 +162,20 @@ def main():
         jsonschema.validate(legacy, json.loads((ROOT / 'docs/issue-9/document-ir-1.2.schema.json').read_text()))
         reexport(table_saved, legacy)
         for version, schema_path in [('1.3', 'docs/issue-10/document-ir-1.3.schema.json'),
-                                     ('1.5', 'docs/issue-18/document-ir-1.5-image.schema.json')]:
+                                     ('1.5', 'docs/issue-18/document-ir-1.5-image.schema.json'),
+                                     ('1.7', 'docs/issue-22/document-ir-1.7-image.schema.json')]:
             historical = copy.deepcopy(table)
             historical['schema_version'] = version
+            for old_page in historical['pages']:
+                old_page.pop('structure_plan', None)
+                remove_region_mapping(old_page)
+                for relation in old_page['relations']:
+                    if relation.get('evidence') == 'pre_recognition_geometry':
+                        relation['evidence'] = 'model_figure_title_and_geometry'
             for block in historical['pages'][0]['blocks']:
-                block['provenance'].pop('assessment')
-                block['provenance'].pop('recognition', None)
+                if version != '1.7':
+                    block['provenance'].pop('assessment')
+                    block['provenance'].pop('recognition', None)
                 if version == '1.3':
                     block['provenance'].pop('visual', None)
             jsonschema.validate(historical, json.loads((ROOT / schema_path).read_text()))
@@ -154,6 +184,12 @@ def main():
         without_optional_diagnostics = copy.deepcopy(table)
         historical_16 = copy.deepcopy(table)
         historical_16['schema_version'] = '1.6'
+        for old_page in historical_16['pages']:
+            old_page.pop('structure_plan', None)
+            remove_region_mapping(old_page)
+            for relation in old_page['relations']:
+                if relation.get('evidence') == 'pre_recognition_geometry':
+                    relation['evidence'] = 'model_figure_title_and_geometry'
         for block in historical_16['pages'][0]['blocks']:
             block['provenance'].pop('recognition')
         jsonschema.validate(historical_16, json.loads((ROOT / 'docs/issue-21/document-ir-1.6-image.schema.json').read_text()))
@@ -242,11 +278,17 @@ def main():
         run(fixture, '--config', str(setting), '--input', str(pdf), '--out', str(pdf_saved),
             '--dpi', '72')
         pdf_data = json.loads((pdf_saved / 'document.json').read_text())
-        assert pdf_data['schema_version'] == '1.7'
+        assert pdf_data['schema_version'] == '1.9'
         assert [p['status'] for p in pdf_data['pages']] == ['partial', 'failed', 'blank']
         reexport(pdf_saved)
         historical_pdf = copy.deepcopy(pdf_data)
         historical_pdf['schema_version'] = '1.4'
+        for old_page in historical_pdf['pages']:
+            old_page.pop('structure_plan', None)
+            remove_region_mapping(old_page)
+            for relation in old_page['relations']:
+                if relation.get('evidence') == 'pre_recognition_geometry':
+                    relation['evidence'] = 'model_figure_title_and_geometry'
         for page in historical_pdf['pages']:
             for block in page['blocks']:
                 block['provenance'].pop('assessment')
@@ -256,6 +298,12 @@ def main():
         reexport(pdf_saved, historical_pdf)
         visual_pdf = copy.deepcopy(pdf_data)
         visual_pdf['schema_version'] = '1.5'
+        for old_page in visual_pdf['pages']:
+            old_page.pop('structure_plan', None)
+            remove_region_mapping(old_page)
+            for relation in old_page['relations']:
+                if relation.get('evidence') == 'pre_recognition_geometry':
+                    relation['evidence'] = 'model_figure_title_and_geometry'
         for candidate in visual_pdf['pages'][0]['blocks']:
             candidate['provenance'].pop('assessment', None)
             candidate['provenance'].pop('recognition', None)
@@ -320,7 +368,7 @@ def main():
         assert '表格单元格' in reexport(table_saved, bad, code=3).stderr
         duplicate = root / 'duplicate.json'
         duplicate.write_text((table_saved / 'document.json').read_text().replace(
-            '"schema_version":"1.7"', '"schema_version":"1.7","schema_version":"1.7"', 1))
+            '"schema_version":"1.9"', '"schema_version":"1.9","schema_version":"1.9"', 1))
         target = root / 'duplicate-out'
         assert '重复' in run(production, '--reexport', str(duplicate), '--asset-root',
                             str(table_saved), '--out', str(target), code=3, cwd=root).stderr

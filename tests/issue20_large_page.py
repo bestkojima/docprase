@@ -33,7 +33,7 @@ def main():
         doc = json.loads((out / 'document.json').read_text())
         import jsonschema
         schema = json.loads((Path(__file__).resolve().parents[1] /
-                             'docs/issue-10/document-ir-1.3.schema.json').read_text())
+                             'docs/issue-26/document-ir-1.9-image.schema.json').read_text())
         jsonschema.validate(doc, schema)
         assert doc['pages'][0]['raster_size'] == [4100, 4200]
         transform = doc['layout_diagnostics']['input_transform']
@@ -81,7 +81,7 @@ def main():
         assert result.returncode == 0, result.stderr
         pdf_doc = json.loads((pdf_out / 'document.json').read_text())
         pdf_schema = json.loads((Path(__file__).resolve().parents[1] /
-                                 'docs/issue-11/document-ir-1.4.schema.json').read_text())
+                                 'docs/issue-26/document-ir-1.9-pdf.schema.json').read_text())
         jsonschema.validate(pdf_doc, pdf_schema)
         page = pdf_doc['pages'][0]
         assert page['raster_size'] == [4100, 4200]

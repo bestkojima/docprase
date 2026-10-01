@@ -7,6 +7,7 @@
 #include "markdown.hpp"
 #include "output_assessment.hpp"
 #include "region_recognition.hpp"
+#include "region_structure.hpp"
 #include "json.hpp"
 #include "content_validation.hpp"
 #include <algorithm>
@@ -20,6 +21,7 @@
 #include <numeric>
 #include <set>
 #include <memory>
+#include <map>
 #include <sstream>
 #include <stdexcept>
 #include <utility>
@@ -384,6 +386,96 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
     return evidence;
 }
 
+RegionStructure arrange_structure(std::vector<Block>& blocks, int width, int height,
+                                  ReadingOrderEvidence& evidence) {
+    std::vector<StructureItem> items;
+    std::map<std::string, size_t> by_id;
+    for (size_t i = 0; i < blocks.size(); ++i) {
+        const auto& b = blocks[i];
+        by_id[b.id] = i;
+        items.push_back({b.id, b.region_id, b.type, layout_region_policy(b.original_class_id).purpose, layout_geometry(b)});
+    }
+    RegionStructure plan = plan_image_structure(items, width, height);
+    std::map<std::string, std::vector<std::string>> members;
+    std::set<std::string> contained;
+    std::map<std::string, Box> group_bounds;
+    for (auto& group : plan.groups) {
+        for (const auto& item : group.items) {
+            for (const auto& bid : {item.image_block_id, item.caption_block_id}) {
+                if (bid.empty()) continue;
+                const Box crop = blocks.at(by_id.at(bid)).box;
+                group.bbox = {std::min(group.bbox.x0, crop.x0), std::min(group.bbox.y0, crop.y0),
+                              std::max(group.bbox.x1, crop.x1), std::max(group.bbox.y1, crop.y1)};
+            }
+        }
+        const std::string leader = group.items.front().image_block_id;
+        group_bounds[leader] = group.bbox;
+        for (const auto& item : group.items) {
+            members[leader].push_back(item.image_block_id);
+            contained.insert(item.image_block_id);
+            if (!item.caption_block_id.empty()) {
+                members[leader].push_back(item.caption_block_id);
+                contained.insert(item.caption_block_id);
+            }
+        }
+    }
+    for (const auto& caption : plan.captions) {
+        if (contained.count(caption.image_block_id)) continue;
+        members[caption.image_block_id] = {caption.image_block_id, caption.caption_block_id};
+        contained.insert(caption.image_block_id);
+        contained.insert(caption.caption_block_id);
+    }
+    std::vector<Block> units;
+    for (const auto& block : blocks) {
+        if (contained.count(block.id) && !members.count(block.id)) continue;
+        units.push_back(block);
+        if (group_bounds.count(block.id)) {
+            auto& unit = units.back();
+            unit.box = unit.layout_box = group_bounds.at(block.id);
+            unit.crop_expanded = false;
+            // A supported horizontal row is one structural unit, not several columns.
+            unit.model_label = "doc_title";
+        }
+    }
+    evidence = arrange_reading_order(units, width);
+    if (!plan.groups.empty()) evidence = {"geometry", "planned_horizontal_groups"};
+    std::vector<Block> ordered;
+    for (const auto& unit : units) {
+        const auto ids = members.count(unit.id) ? members.at(unit.id) : std::vector<std::string>{unit.id};
+        for (const auto& bid : ids) {
+            auto& block = blocks.at(by_id.at(bid));
+            plan.block_order.push_back(block.id);
+            plan.region_order.push_back(block.region_id);
+            if (requires_ovis(block.type)) plan.recognition_order.push_back(block.region_id);
+            ordered.push_back(std::move(block));
+        }
+    }
+    blocks = std::move(ordered);
+    return plan;
+}
+
+std::string structure_json(const RegionStructure& plan) {
+    using Json = nlohmann::json;
+    Json value = {{"stage", "before_recognition"}, {"policy", "image_structure_v2"},
+        {"block_order", plan.block_order}, {"region_order", plan.region_order},
+        {"recognition_order", plan.recognition_order},
+        {"groups", Json::array()}, {"captions", Json::array()},
+        {"ambiguous_caption_ids", plan.ambiguous_caption_ids}};
+    for (const auto& group : plan.groups) {
+        Json items = Json::array();
+        for (const auto& item : group.items)
+            items.push_back({{"image_block_id", item.image_block_id},
+                {"caption_block_id", item.caption_block_id.empty() ? Json(nullptr) : Json(item.caption_block_id)}});
+        value["groups"].push_back({{"id", group.id}, {"type", "horizontal_images"},
+            {"bbox", {group.bbox.x0, group.bbox.y0, group.bbox.x1, group.bbox.y1}},
+            {"evidence", "fixed_anchor_and_shared_body_or_labels"}, {"items", items}});
+    }
+    for (const auto& caption : plan.captions)
+        value["captions"].push_back({{"image_block_id", caption.image_block_id},
+                                     {"caption_block_id", caption.caption_block_id}});
+    return value.dump();
+}
+
 std::string footnote_marker(const std::string& text) {
     for (const std::string& marker : {"¹", "²", "³", "⁴", "⁵", "①", "②", "③", "④", "⑤",
                                       "[1]", "[2]", "[3]", "[4]", "[5]"}) {
@@ -578,19 +670,11 @@ int inline_formula_owner(const RawLayoutCandidate& formula,
 }
 
 const char* layout_label(int id) {
-    static const char* labels[] = {
-        "abstract", "algorithm", "aside_text", "chart", "content", "formula", "doc_title",
-        "figure_title", "footer", "footer", "footnote", "formula_number", "header", "header",
-        "image", "formula", "number", "paragraph_title", "reference", "reference_content",
-        "seal", "table", "text", "text", "vision_footnote"};
-    return id >= 0 && id < 25 ? labels[id] : nullptr;
+    return layout_region_policy(id).model_label;
 }
 
 std::string canonical_label(int id) {
-    if (id == 5 || id == 15) return "formula";
-    if (id == 21) return "table";
-    if (id == 3 || id == 14 || id == 20) return "image";
-    return layout_label(id) ? "text" : "unknown";
+    return region_type_name(layout_region_policy(id).type);
 }
 
 bool decode_real_layout(const TensorOutput& output, const Image& image,
@@ -1152,7 +1236,7 @@ bool valid_text_math(const std::string& text) {
     return true;
 }
 
-std::string render(const Block& b) {
+std::string render(const Block& b, bool uncertain_caption = false) {
     bool safe_table = b.table.valid;
     if (b.type == "table" && b.status == "ok" && !safe_table) {
         auto table = parse_table(b.text);
@@ -1160,7 +1244,7 @@ std::string render(const Block& b) {
     }
     return render_markdown_block({b.id, b.type, b.status, b.text, b.resource,
                                   b.display_formula, safe_table, b.assessment.state,
-                                  b.assessment.state == "skipped" ? "" : b.assessment.reason});
+                                  b.assessment.state == "skipped" ? "" : b.assessment.reason}, uncertain_caption);
 }
 
 std::string serialize(const Image& image, const std::string& state,
@@ -1171,7 +1255,8 @@ std::string serialize(const Image& image, const std::string& state,
                       bool structured_tables = false,
                       const ReadingOrderEvidence* order_evidence = nullptr,
                       const std::vector<SemanticRelation>& semantic = {},
-                      const LayoutPageTransform* layout_transform = nullptr, double score_threshold = .5) {
+                      const LayoutPageTransform* layout_transform = nullptr, double score_threshold = .5,
+                      const RegionStructure* structure = nullptr) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
@@ -1180,7 +1265,7 @@ std::string serialize(const Image& image, const std::string& state,
     const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
         return !b.visual.visual_evidence.empty();
     });
-    out << "{\"schema_version\":" << json_quote(structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
+    out << "{\"schema_version\":" << json_quote(structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
@@ -1197,6 +1282,7 @@ std::string serialize(const Image& image, const std::string& state,
     if (order_evidence)
         out << ",\"reading_order_evidence\":{\"source\":" << json_quote(order_evidence->source)
             << ",\"reason\":" << json_quote(order_evidence->reason) << '}';
+    if (structure) out << ",\"structure_plan\":" << structure_json(*structure);
     out << ",\"layout_blocks\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
@@ -1241,7 +1327,9 @@ std::string serialize(const Image& image, const std::string& state,
             << json_quote(b.layout_id);
         for (const auto& owned : b.owned_layout_ids) out << ',' << json_quote(owned);
         out << "],\"bbox\":" << box_json(b.box)
-            << ",\"coordinate_space\":\"raster_page\"}";
+            << ",\"coordinate_space\":\"raster_page\"";
+        if (structure) out << ",\"recognition_type\":" << json_quote(b.type);
+        out << '}';
     }
     out << "],\"blocks\":[";
     for (size_t i = 0; i < blocks.size(); ++i) {
@@ -1654,9 +1742,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     uint32_t region_total = 0, region_done = 0;
     for (const auto* candidate : selected)
         if (records[size_t(candidate->id)].handling_reason.empty() &&
-            (canonical_label(candidate->class_id) == "text" ||
-             canonical_label(candidate->class_id) == "formula" ||
-             canonical_label(candidate->class_id) == "table")) ++region_total;
+            requires_ovis(canonical_label(candidate->class_id))) ++region_total;
     std::string first_region_error_code, first_region_error_message;
     auto stop_after_cancel = [&] {
         audit.code = first_region_error_code.empty() ? RunCode::Cancelled : RunCode::Failed;
@@ -1700,11 +1786,32 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         if (block.type == "table" && !transcribe) block.format_override = "markdown";
         block.resource = block_asset(block.id);
         result.assets.push_back({block.resource, crop_png(image, block.box)});
+        if (block.type == "image") {
+            block.status = "ok";
+            block.error.clear();
+            block.assessment.state = "ok";
+            block.assessment.reason = "resource_saved";
+        }
         audit.did_crop = true;
-        if (transcribe) {
+        blocks.push_back(std::move(block));
+    }
+    for (auto& evidence : ownership) {
+        auto owner = std::find_if(blocks.begin(), blocks.end(), [&](const Block& block) {
+            return block.candidate_id == evidence.owner_candidate_id;
+        });
+        if (owner == blocks.end()) throw std::runtime_error("content_owner_missing");
+        evidence.owner_block_id = owner->id;
+    }
+    // All Region identities, crop bounds, ownership, groups and scheduling order
+    // are frozen before the first recognition call. Transcription cannot reorder them.
+    ReadingOrderEvidence order_evidence;
+    const RegionStructure structure = arrange_structure(blocks, image.width, image.height, order_evidence);
+    for (auto& block : blocks) {
+        if (cancelled) { stop_after_cancel(); return audit; }
+        if (transcribe && requires_ovis(block.type)) {
             const std::string request_id = "req" + block.region_id;
             RunResult::RegionRun region{request_id, "skipped", block.error, 0};
-            if (block.type == "text" || block.type == "formula" || block.type == "table") {
+            if (requires_ovis(block.type)) {
                 if (progress) progress("region_started", source_page ? source_page : 1,
                                        request_id, region_done, region_total);
                 auto region_start = Clock::now();
@@ -1855,7 +1962,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                 }
             }
             audit.regions.push_back(std::move(region));
-            if (block.type == "text" || block.type == "formula" || block.type == "table") {
+            if (requires_ovis(block.type)) {
                 ++region_done;
                 if (progress) progress("region_completed", source_page ? source_page : 1,
                                        request_id, region_done, region_total);
@@ -1866,17 +1973,16 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
             block.format_override = "markdown";
         }
         if (block.assessment.state == "skipped") block.assessment.reason = block.error;
-        blocks.push_back(std::move(block));
     }
-    for (auto& evidence : ownership) {
-        auto owner = std::find_if(blocks.begin(), blocks.end(), [&](const Block& block) {
-            return block.candidate_id == evidence.owner_candidate_id;
-        });
-        if (owner == blocks.end()) throw std::runtime_error("content_owner_missing");
-        evidence.owner_block_id = owner->id;
-    }
-    const ReadingOrderEvidence order_evidence = arrange_reading_order(blocks, image.width);
-    const std::vector<SemanticRelation> semantic = associate_annotations(blocks, image.width, image.height);
+    auto semantic = associate_annotations(blocks, image.width, image.height);
+    semantic.erase(std::remove_if(semantic.begin(), semantic.end(), [&](const SemanticRelation& relation) {
+        if (relation.type != "caption_of") return false;
+        auto target = std::find_if(blocks.begin(), blocks.end(), [&](const Block& b) { return b.id == relation.target_block_id; });
+        return target != blocks.end() && target->type == "image";
+    }), semantic.end());
+    for (const auto& caption : structure.captions)
+        semantic.push_back({"caption_of", caption.caption_block_id, caption.image_block_id,
+                            "pre_recognition_geometry"});
     if (cancelled) { stop_after_cancel(); return audit; }
     const std::string overlay_name = page_asset("layout-overlay.png");
     result.assets.push_back({overlay_name, layout_overlay(image, records, masks,
@@ -1887,14 +1993,15 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         (blocks.empty() || incomplete) ? "partial" : "ok";
     start = Clock::now();
     if (progress) progress("export_started", source_page ? source_page : 1, "", region_done, region_total);
+    const std::set<std::string> uncertain_captions(structure.ambiguous_caption_ids.begin(), structure.ambiguous_caption_ids.end());
     for (const auto& block : blocks) {
         if (!result.markdown.empty()) result.markdown += "\n\n";
-        result.markdown += render(block);
+        result.markdown += render(block, uncertain_captions.count(block.id));
     }
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,
-                            overlay_name, ownership, transcribe, &order_evidence, semantic,
-                            &layout_input.transform, score_threshold);
+                            overlay_name, ownership, true, &order_evidence, semantic,
+                            &layout_input.transform, score_threshold, &structure);
     audit.did_export = true;
     if (progress) progress("export_completed", source_page ? source_page : 1, "", region_done, region_total);
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());

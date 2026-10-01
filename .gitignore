@@ -1,0 +1,5 @@
+__pycache__/
+
+# 完整历史中间量 PNG/ZIP 留在本地产物目录；提交验收报告和重点图。
+/docs/issue-26/annotations/
+/docs/issue-26/fixed-annotations/annotated-pngs.zip

@@ -1,12 +1,15 @@
 #include "region_recognition.hpp"
 #include "output_assessment.hpp"
 #include "visual_adaptation.hpp"
+#include "layout_region_policy.hpp"
 #include <chrono>
+#include <stdexcept>
 
 namespace dococr {
 RegionRecognition recognize_region(IInferenceEngine& backend, const Image& crop, Box source_box,
     const std::string& type, const std::string& request_id, const ExecutionPlan& plan,
     ExecutionContext& context) {
+    if (!requires_ovis(type)) throw std::invalid_argument("unsupported_ovis_task");
     using Clock = std::chrono::steady_clock;
     RegionRecognition result;
     GenerationRequest request{crop, source_box, type, request_id, plan.max_new_tokens,

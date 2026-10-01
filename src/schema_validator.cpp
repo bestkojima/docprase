@@ -134,19 +134,23 @@ bool schema_matches(const Json& value, const Json& rule, const Json& root,
 }
 
 void validate_document_schema(const Json& document, const std::string& version) {
-    static const std::array<Json, 11> schemas = {
+    static const std::array<Json, 15> schemas = {
         Json::parse(document_schema_1_0), Json::parse(document_schema_1_1),
         Json::parse(document_schema_1_2), Json::parse(document_schema_1_3),
         Json::parse(document_schema_1_4), Json::parse(document_schema_1_5_image),
         Json::parse(document_schema_1_5_pdf), Json::parse(document_schema_1_6_image),
         Json::parse(document_schema_1_6_pdf), Json::parse(document_schema_1_7_image),
-        Json::parse(document_schema_1_7_pdf)};
+        Json::parse(document_schema_1_7_pdf), Json::parse(document_schema_1_8_image),
+        Json::parse(document_schema_1_8_pdf), Json::parse(document_schema_1_9_image),
+        Json::parse(document_schema_1_9_pdf)};
     const size_t index = version == "1.0" ? 0 : version == "1.1" ? 1 :
                          version == "1.2" ? 2 : version == "1.3" ? 3 :
                          version == "1.4" ? 4 :
                          version == "1.5" ? (document.at("source").at("type") == "pdf" ? 6 : 5) :
                          version == "1.6" ? (document.at("source").at("type") == "pdf" ? 8 : 7) :
-                         document.at("source").at("type") == "pdf" ? 10 : 9;
+                         version == "1.7" ? (document.at("source").at("type") == "pdf" ? 10 : 9) :
+                         version == "1.8" ? (document.at("source").at("type") == "pdf" ? 12 : 11) :
+                         document.at("source").at("type") == "pdf" ? 14 : 13;
     static const bool checked = [] {
         for (const auto& schema : schemas) check_supported_schema(schema);
         return true;
