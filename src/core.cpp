@@ -1029,7 +1029,12 @@ ParsedFormula parse_formula(const std::string& raw) {
         return result;
     int depth = 0, text_depth = -1;
     std::vector<char> delimiters, scalable;
-    std::vector<std::string> environments;
+    struct FormulaEnvironment {
+        std::string name;
+        std::vector<char> delimiters, scalable;
+        size_t content_begin;
+    };
+    std::vector<FormulaEnvironment> environments;
     bool next_text_brace = false, math_evidence = has_wrapper;
     for (size_t i = 0; i < value.size(); ++i) {
         unsigned char ch = static_cast<unsigned char>(value[i]);
@@ -1101,15 +1106,30 @@ ParsedFormula parse_formula(const std::string& raw) {
                 }
                 if (command == "begin" || command == "end") {
                     size_t end = formula_argument_end(value, i);
-                    size_t start = value.find('{', i);
-                    std::string environment = value.substr(start + 1, end - start - 2);
+                    size_t environment_name_start = value.find('{', i);
+                    std::string environment = value.substr(environment_name_start + 1, end - environment_name_start - 2);
                     if (environment != "aligned" && environment != "array" &&
                         environment != "matrix" && environment != "pmatrix" &&
                         environment != "bmatrix" && environment != "cases")
                         return result;
-                    if (command == "begin") environments.push_back(environment);
+                    if (command == "begin") {
+                        if (environment == "array") {
+                            size_t columns_end = formula_argument_end(value, end);
+                            if (columns_end == std::string::npos) return result;
+                            size_t columns_start = value.find('{', end);
+                            const std::string columns = value.substr(columns_start + 1, columns_end - columns_start - 2);
+                            if (columns.find_first_not_of("clr| \t\n") != std::string::npos ||
+                                columns.find_first_of("clr") == std::string::npos) return result;
+                            end = columns_end;
+                        }
+                        environments.push_back({environment, delimiters, scalable, end});
+                    }
                     else {
-                        if (environments.empty() || environments.back() != environment)
+                        if (environments.empty() || environments.back().name != environment ||
+                            environments.back().delimiters != delimiters ||
+                            environments.back().scalable != scalable ||
+                            trim_formula(value.substr(environments.back().content_begin,
+                                start - 1 - environments.back().content_begin)).empty())
                             return result;
                         environments.pop_back();
                     }

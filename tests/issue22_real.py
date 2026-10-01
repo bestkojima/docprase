@@ -27,7 +27,8 @@ def main():
     os.chdir(ROOT)
     library, binary, destination = Path(sys.argv[1]).resolve(), Path(sys.argv[2]).resolve(), Path(sys.argv[3]).resolve()
     destination.mkdir(parents=True, exist_ok=True)
-    setting = json.loads((ROOT / 'configs/printed-page.example.json').read_text())
+    config_path = Path(os.environ.get('DOCOCR_REAL_CONFIG_PATH', ROOT / 'configs/printed-page.example.json'))
+    setting = json.loads(config_path.read_text())
     setting['execution']['max_new_tokens'] = 8
     jobs = Jobs(library, setting, (ROOT / 'tests/fixtures/ovis/chinese_text.png').read_bytes())
     job = jobs.create()

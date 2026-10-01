@@ -14,6 +14,15 @@ VERSION = 'issue27-content-alignment-1'
 MATH = re.compile(r'(?<!\\)\$\$(.*?)\$\$|(?<!\\)\$(.*?)(?<!\\)\$|\\\((.*?)\\\)|\\\[(.*?)\\\]', re.S)
 
 
+def math_payload(value):
+    value = value.strip()
+    for opening, closing in (('$$', '$$'), ('$', '$'), (r'\(', r'\)'), (r'\[', r'\]')):
+        if value.startswith(opening) and value.endswith(closing) and len(value) >= len(opening) + len(closing):
+            value = value[len(opening):-len(closing)]
+            break
+    return formula(value)
+
+
 def score_inline(references, text_rows, indexed):
     parents = {r['annotation_id']: r for r in text_rows}
     used, rows = set(), []
@@ -28,7 +37,7 @@ def score_inline(references, text_rows, indexed):
                 bounds = parent['actual_range']
                 latex = next(g for g in found.groups() if g is not None)
                 if key not in used and bounds[0] <= found.start() < found.end() <= bounds[1] and \
-                        formula(latex) == formula(span['latex']):
+                        math_payload(latex) == math_payload(span['latex']):
                     occurrence = key
                     used.add(key)
                     break
@@ -190,13 +199,33 @@ def align_page(annotation, document):
     unresolved = [r['annotation_id'] for r in rows if not r['exact']]
     blockers = [f'{kind}:inexact_or_missing' for kind in ('inline_formula', 'independent_formula', 'table', 'figure')
                 if supplementary[kind]['exact'] != supplementary[kind]['denominator']]
+    blockers.extend(f'{kind}:extra_output' for kind in ('independent_formula', 'table', 'figure')
+                    if supplementary[kind]['extra_outputs'])
     if supplementary['reading_order']['correct'] != supplementary['reading_order']['denominator']:
         blockers.append('reading_order:wrong_or_unverified')
     if not references:
         blockers.append('no_text_reference')
+    if document.get('status') != 'ok':
+        blockers.append('document_non_ok')
     verified = not unresolved and not extras and not blockers
+    supplementary['quality_claim_blocked'] = not verified
+    supplementary['quality_claim_blockers'] = blockers + \
+        (['text:inexact_or_missing'] if unresolved else []) + (['text:extra_output'] if extras else [])
+    refs_by_id = {r['anno_id']: r for r in annotation['layout_dets']}
+    all_blocks = {b['id']: b for b in page.get('blocks', [])}
+    non_text = []
+    for kind in ('independent_formula', 'table', 'figure'):
+        for row in supplementary[kind]['rows']:
+            ref = refs_by_id[row['annotation_id']]
+            block = all_blocks.get(row['block_id'])
+            non_text.append(dict(kind=kind, annotation_id=row['annotation_id'], reference=ref,
+                block_id=row['block_id'], source_region_ids=block.get('source_region_ids', []) if block else [],
+                raw_output=block['provenance'].get('raw_output', '') if block else None,
+                content=block['content'] if block else None, error=block.get('error') if block else None,
+                status=row['status'], exact=row['exact']))
     return dict(version=VERSION, original=original, supplementary=supplementary,
-        alignment=traces, content_audit=dict(verified=verified, blockers=blockers,
+        alignment=traces, non_text_evidence=non_text,
+        reference_layout_dets=annotation['layout_dets'], content_audit=dict(verified=verified, blockers=blockers,
             unresolved_annotation_ids=unresolved, extra_text_block_ids=[e['block_id'] for e in extras],
             conclusion='逐字一致' if verified else '仍需核验'))
 

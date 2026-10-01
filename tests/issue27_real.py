@@ -16,19 +16,21 @@ from issue27_evidence import check_frozen, read
 
 def main():
     run = Path(sys.argv[1]).resolve()
-    record, _, binary, _, environment = check_frozen(run, Path(__file__))
+    record, _, binary, config, environment = check_frozen(run, Path(__file__))
     if '--safety' in sys.argv[2:]:
         destination = run / 'safety'
         destination.mkdir(exist_ok=False)
         command = [sys.executable, str(ROOT / 'tests/issue22_real.py'),
                    str(binary.parent / 'libdococr_c.so'), str(binary), str(destination)]
         with (destination / 'stdout.log').open('w') as stdout, (destination / 'stderr.log').open('w') as stderr:
-            result = subprocess.run(command, cwd=ROOT, env=environment, stdout=stdout, stderr=stderr, timeout=600)
+            result = subprocess.run(command, cwd=ROOT,
+                env=dict(environment, DOCOCR_REAL_CONFIG_PATH=str(config)), stdout=stdout, stderr=stderr, timeout=600)
         check_frozen(run, Path(__file__))
         summary = destination / 'summary.json'
         save(run / 'safety-verification.json', dict(returncode=result.returncode,
             candidate_sha256=record['candidate_sha256'], evaluation_sha256=sha(run / 'evaluation.json'),
-            summary_sha256=sha(summary) if summary.exists() else None, command=command))
+            summary_sha256=sha(summary) if summary.exists() else None, command=command,
+            source_config_sha256=sha(config)))
         return result.returncode
     records = {}
     for job_spec in record['jobs']:

@@ -43,6 +43,7 @@ class AlignmentCommandTests(unittest.TestCase):
         self.assertEqual([r['actual_range'] for r in rows], [[0, 6], [6, 11]])
         self.assertEqual(value['supplementary']['text']['reference_chars'], 11)
         self.assertTrue(value['content_audit']['verified'])
+        self.assertFalse(value['supplementary']['quality_claim_blocked'])
 
     def test_ambiguous_geometry_does_not_choose_the_better_transcription(self):
         extra = dict(id='b2', type='text', status='ok', bbox=[0, 0, 100, 30],
@@ -65,6 +66,10 @@ class AlignmentCommandTests(unittest.TestCase):
         value = self.evaluate(['$x+1$ and $x+1$'], '$x+1$', formulas=['x+1', 'x+1'])
         self.assertEqual(value['original']['inline_formula']['exact'], 2)
         self.assertEqual(value['supplementary']['inline_formula']['denominator'], 2)
+        self.assertEqual(value['supplementary']['inline_formula']['exact'], 1)
+
+    def test_inline_gt_math_wrappers_do_not_become_formula_characters(self):
+        value = self.evaluate(['$x+1$'], '$x+1$', formulas=['$x+1$'])
         self.assertEqual(value['supplementary']['inline_formula']['exact'], 1)
 
     def test_internal_order_requires_actual_content_evidence(self):

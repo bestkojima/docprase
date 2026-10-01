@@ -125,6 +125,7 @@ def main():
         blockers.append('automated_regression_not_verified_for_candidate')
     if not record or safety_binding.get('candidate_sha256') != record['candidate_sha256'] or \
             safety_binding.get('evaluation_sha256') != sha(run / 'evaluation.json') or \
+            safety_binding.get('source_config_sha256') != sha(run / 'candidate/config.json') or \
             safety_binding.get('returncode') != 0 or not safety.get('cancelled_safely') or \
             not safety.get('after_timeout_reference_matched') or not safety.get('reexport_identical') or \
             safety_binding.get('summary_sha256') != sha(run / 'safety/summary.json'):

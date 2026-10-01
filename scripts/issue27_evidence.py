@@ -16,7 +16,8 @@ TOOLS = ('scripts/issue27_evidence.py', 'scripts/issue27_alignment.py', 'scripts
          'scripts/issue15_quality.py', 'scripts/issue15_lineage.py', 'scripts/issue20_runtime.py',
          'scripts/issue25_materials.py', 'scripts/issue25_report.py',
          'tests/issue22_retry.py', 'tests/config_abi.py', 'tests/printed_page_integration.py',
-         'tests/cli_integration.py')
+         'tests/cli_integration.py', 'tests/pdf_real.py', 'tests/job_control.py',
+         'tests/config_integration.py')
 
 
 def read(path):
@@ -46,7 +47,10 @@ def suite_specs():
 def system_runtime(binary, environment):
     """同时记录项目库和系统动态库；PDF 的实际工具及其动态库亦固定。"""
     files = {}
-    for executable in (binary, Path(shutil.which('pdftoppm'))):
+    pdf_tools = [shutil.which(name) for name in ('pdftoppm', 'pdfinfo')]
+    if not all(pdf_tools):
+        raise ValueError('真实 PDF 运行时工具缺失')
+    for executable in (binary, *(Path(path) for path in pdf_tools)):
         files[str(executable.resolve())] = sha(executable)
         result = subprocess.run(['ldd', str(executable)], env=environment,
                                 capture_output=True, text=True, check=True)
@@ -63,7 +67,7 @@ def system_runtime(binary, environment):
 def freeze_evaluation(output, jobs, manifest, binary, environment):
     files = material_files(manifest)
     for path in (MANIFEST, DATA / 'OmniDocBench.json', ROOT / 'docs/issue-15/samples.json',
-                 ROOT / THRESHOLDS_PATH):
+                 ROOT / THRESHOLDS_PATH, ROOT / 'configs/printed-page.example.json'):
         files[str(path.relative_to(ROOT))] = sha(path)
     for job in jobs:
         source = Path(job['source'])
