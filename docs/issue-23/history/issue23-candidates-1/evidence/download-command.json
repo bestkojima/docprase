@@ -6,7 +6,6 @@
     "hf",
     "download",
     "opendatalab/OmniDocBench",
-    "OmniDocBench.json",
     "images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
     "images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
     "images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
@@ -31,6 +30,5 @@
   ],
   "env": {
     "HF_ENDPOINT": "https://hf-mirror.com"
-  },
-  "purpose": "跨机恢复时下载同一固定版本的12张原图、完整参考与README；本次复用已有文件，未重复下载。"
+  }
 }

@@ -1,167 +1,222 @@
 {
-  "freeze_id": "issue23-candidates-1",
-  "status": "not_ready",
-  "path": "output/issue-23/issue23-candidates-1.zip",
-  "size_bytes": 3404970,
-  "sha256": "2bee3576771a9b5575b75e0264446c2430c24ec80ad9f1b3b16a46b13bacee61",
+  "freeze_id": "issue23-annotated-evaluation-2",
+  "status": "annotated_evaluation_materials_ready",
+  "path": "output/issue-23/issue23-annotated-evaluation-2.zip",
+  "size_bytes": 3427580,
+  "sha256": "f3f237665401b0abe9e0121ad6efcabbe9840c4ee0cbe2eebc7f06b3cebd2d05",
   "contents": [
     {
       "path": "docs/issue-23/README.md",
+      "size_bytes": 6025,
+      "sha256": "644db2f2ea23aeea71899d0c66f8b7182aefdb83c9f77915acab4ce6688dea49"
+    },
+    {
+      "path": "docs/issue-23/code-review.md",
+      "size_bytes": 2099,
+      "sha256": "73ea8a4a2342853ca3cf4d8722908ee979227d898d4e7d8568a2cf80d6e7271e"
+    },
+    {
+      "path": "docs/issue-23/evidence/download-command.json",
+      "size_bytes": 1258,
+      "sha256": "1f928c97ad26c62738b594d388d0491e5d7b1937485e1ad446eaa78f46b7dd65"
+    },
+    {
+      "path": "docs/issue-23/evidence/history-verification.json",
+      "size_bytes": 3991,
+      "sha256": "5a2475d3168889871b03f1bc6a103b15d98fd0b6f32c3afca17a8bc7cfa76dfb"
+    },
+    {
+      "path": "docs/issue-23/evidence/requirements.json",
+      "size_bytes": 1070,
+      "sha256": "4a10d8edfc6b3b096f09ba0df4b21b31f06e4d29710acb105a387097f740c489"
+    },
+    {
+      "path": "docs/issue-23/evidence/restore-check.json",
+      "size_bytes": 3374,
+      "sha256": "3647b0a07a471b6ced290f44b3b5ca17acdb2f5d6ab91a4f0ec3c1d7d2aef328"
+    },
+    {
+      "path": "docs/issue-23/evidence/verification.json",
+      "size_bytes": 4551,
+      "sha256": "b4ce8baba76970bbe30a2f3ee76be6bb11e71c16759fb7d8a5408f819174f366"
+    },
+    {
+      "path": "docs/issue-23/history/issue23-candidates-1/README.md",
       "size_bytes": 10354,
       "sha256": "5359a8d149f5596a8bc2c7b3b9f3e60c649c290919c06f69222e4eca5ba2ff0e"
     },
     {
-      "path": "docs/issue-23/code-review.md",
+      "path": "docs/issue-23/history/issue23-candidates-1/code-review.md",
       "size_bytes": 3151,
       "sha256": "29f6e437e79922105a8bf4c40b3d313fd429b0dd5ff28d9339f76bd41cc6fb05"
     },
     {
-      "path": "docs/issue-23/evidence/business-manifest.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/business-manifest.json",
       "size_bytes": 25470,
       "sha256": "acd6164215410ee3e7894aef231670a33b8d6d4751f58640762eeb0c8c84d784"
     },
     {
-      "path": "docs/issue-23/evidence/download-command.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/download-command.json",
       "size_bytes": 1091,
       "sha256": "69897b975a947ab4dec19750ca4ec25133e3d19b6661b50c19050ae2ff15276c"
     },
     {
-      "path": "docs/issue-23/evidence/download.log",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/download.log",
       "size_bytes": 201,
       "sha256": "0631be7fab3e5246105e155055d23e6150f61ae15116c1beffb5e6c01c64176a"
     },
     {
-      "path": "docs/issue-23/evidence/final-build.log",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/final-build.log",
       "size_bytes": 503,
       "sha256": "572b75f0edad317dd2854a07105528c0a24f604ec60e81cf03409d365646ddbd"
     },
     {
-      "path": "docs/issue-23/evidence/final-ctest.log",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/final-ctest.log",
       "size_bytes": 2553,
       "sha256": "4024201e852cf7bb950a9d4015e60a0f64946641ff2ad77beb0d4e9ee6436203"
     },
     {
-      "path": "docs/issue-23/evidence/final-unittest.log",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/final-unittest.log",
       "size_bytes": 3811,
       "sha256": "3a79f89630af96d4c943f65f9dfffddd415e52366c66e17974c0b26e495c522c"
     },
     {
-      "path": "docs/issue-23/evidence/issue.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/issue.json",
       "size_bytes": 1456,
       "sha256": "40ff7dee2f36725c0931f9d72d698114d784ca44bc2f62745f944580447671fc"
     },
     {
-      "path": "docs/issue-23/evidence/restore-check.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/restore-check.json",
       "size_bytes": 3136,
       "sha256": "e39f4093c59447f331c9170d84363580c4c320525dedd6e89166dcfa70591503"
     },
     {
-      "path": "docs/issue-23/evidence/selection-before-download.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/selection-before-download.json",
       "size_bytes": 1120,
       "sha256": "f6daaf62638976180305e3f972dd33adc677bf5f8a638ea39772ce54aea966f1"
     },
     {
-      "path": "docs/issue-23/evidence/upstream-readme.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/upstream-readme.json",
       "size_bytes": 458,
       "sha256": "12f5870fe2b54e26984d1e7e042a7dd8445f8cc021c1984c876a029034cdeac0"
     },
     {
-      "path": "docs/issue-23/evidence/upstream-tree.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/upstream-tree.json",
       "size_bytes": 3555,
       "sha256": "65253e4a2aa013c689af778d60b1dbcad529d9014c3b40e669dcced0eaa7c90b"
     },
     {
-      "path": "docs/issue-23/evidence/verification.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/evidence/verification.json",
       "size_bytes": 8634,
       "sha256": "c47cf60e1adf434d0479057d7174fde4febebd4782a68fdb7fd1eb3854b4d43d"
     },
     {
-      "path": "docs/issue-23/exposure-audit.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/exposure-audit.json",
       "size_bytes": 717494,
       "sha256": "b44a92e7b4342b88fde859060b2f3aeda0ee7f20faa9e910fdfcb6d4d89c851b"
     },
     {
-      "path": "docs/issue-23/manifest.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/manifest.json",
       "size_bytes": 34920,
       "sha256": "9fbd7447d26ec452944a4f0b68a003734c494afb58a3b5e36e296f1a9c9da17b"
     },
     {
-      "path": "docs/issue-23/materials.sha256",
+      "path": "docs/issue-23/history/issue23-candidates-1/materials.sha256",
       "size_bytes": 1905,
       "sha256": "96ab6030ae3485a079bcbd258d9031b591d7d704527a8d94800bc12620440fe0"
     },
     {
-      "path": "docs/issue-23/source-audit.json",
+      "path": "docs/issue-23/history/issue23-candidates-1/package.json",
+      "size_bytes": 6624,
+      "sha256": "7b9518c1c417e5ad4bd331d2fb69be14c3de3070519701ce4e8eca2eb8a9d01e"
+    },
+    {
+      "path": "docs/issue-23/history/issue23-candidates-1/seal.sha256",
+      "size_bytes": 1963,
+      "sha256": "45062fe261dde766159a3031f199f8a36c7e0a70140d4c9d9508de7cccd64d80"
+    },
+    {
+      "path": "docs/issue-23/history/issue23-candidates-1/source-audit.json",
       "size_bytes": 53716,
       "sha256": "959b5aa4aca686dfbc41f228252155e61a6c97b2a9c90ddd00dbbfbe803b1f4f"
     },
     {
-      "path": "output/issue-23/sealed/OmniDocBench.json",
+      "path": "docs/issue-23/manifest.json",
+      "size_bytes": 36158,
+      "sha256": "dbd5b0c056189c874c00a3302eebb10698c6ee7d40307f6bf9efc040ff59359e"
+    },
+    {
+      "path": "docs/issue-23/materials.sha256",
+      "size_bytes": 2143,
+      "sha256": "47522e1f234348459dc386455c043ee0561409b32f194b8079989de264eb75e3"
+    },
+    {
+      "path": "output/issue-23/annotated-evaluation-v2/OmniDocBench.json",
       "size_bytes": 375817,
       "sha256": "404224f7384b9b94edc5a7b0984053267b02d067d119fd64831bc5c0b134f463"
     },
     {
-      "path": "output/issue-23/sealed/README.upstream.md",
+      "path": "output/issue-23/annotated-evaluation-v2/README.upstream.md",
       "size_bytes": 13441,
       "sha256": "9ac999a6615ae74009c997c4ddc8a72c52423c2b0384235b4126bdc213576e81"
     },
     {
-      "path": "output/issue-23/sealed/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+      "path": "output/issue-23/annotated-evaluation-v2/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
       "size_bytes": 303007,
       "sha256": "11485df0351fbc277beb14493273db2600a9ecc60fcf446fb078a8411e0b56b2"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
       "size_bytes": 291240,
       "sha256": "d737d2e2ffac3874557a726d43ccc325ed36a3429bc72c71a7d0c2040d5641e2"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
       "size_bytes": 297198,
       "sha256": "13ae3c78d760f1fa096a104e531b0de549f04cc2a12b523392573b2f01f7b6b4"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
       "size_bytes": 184012,
       "sha256": "853341856d6a39050db422a0aa65a0efae85716484f8c2397b1b22c5dba075d7"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
       "size_bytes": 264446,
       "sha256": "910d138724d2eab08e50f69c4ee5fa03f4324a01cccfed5e79551b1fe057e6f7"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
       "size_bytes": 636125,
       "sha256": "76b15f4e30defa8b666196a51ea9e80916ed62a90a77a7258b6e18ec6a8888cd"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
       "size_bytes": 326994,
       "sha256": "eccc1cdd31021703a6119cb1844bf90038e9ca6dbac4014358d09ff370873e58"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
       "size_bytes": 276449,
       "sha256": "5582324aab4c19eaa8637954e38cd4a0415c087f057575d2e7ecdfc91ba5cabb"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
       "size_bytes": 252077,
       "sha256": "190bc1e05bb282d5df78d0621938af245147b68531119a934743cbfdc1895c1f"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
       "size_bytes": 260120,
       "sha256": "d27fcc6aa85b2f9c819e715b1f32bf38f5dc4b541f4a40ce1e1a4ac3712e6fd0"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
       "size_bytes": 248703,
       "sha256": "ea3df293a181a05689c4a25b92626a3a743c8c4ae5122ae8df63c0ee9acc24c8"
     },
     {
-      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+      "path": "output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
       "size_bytes": 314141,
       "sha256": "fb1caf6806c48824ce998c5b9d0bac600e298d2c778ce1d5b92087c883b5117b"
     }
@@ -170,5 +225,5 @@
     "docs/issue-23/package.json",
     "docs/issue-23/seal.sha256"
   ],
-  "note": "包 SHA 与包含它的封存记录存于包外，避免循环哈希；解压到仓库根目录后可使用 materials.sha256。"
+  "note": "便携包含当前材料及修订前历史记录；包SHA与外部封存清单存于包外。解压到仓库根目录后校验当前materials.sha256；历史清单须在独立旧版目录校验。"
 }

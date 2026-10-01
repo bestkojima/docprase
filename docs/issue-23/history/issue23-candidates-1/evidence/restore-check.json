@@ -1,0 +1,77 @@
+{
+  "method": "按 README 跨机恢复片段，在空临时目录从原图与固定上游重建材料；使用已下载的字节，未重复网络下载或运行模型",
+  "files_checked": [
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+      "sha256": "d737d2e2ffac3874557a726d43ccc325ed36a3429bc72c71a7d0c2040d5641e2",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+      "sha256": "13ae3c78d760f1fa096a104e531b0de549f04cc2a12b523392573b2f01f7b6b4",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+      "sha256": "76b15f4e30defa8b666196a51ea9e80916ed62a90a77a7258b6e18ec6a8888cd",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+      "sha256": "eccc1cdd31021703a6119cb1844bf90038e9ca6dbac4014358d09ff370873e58",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+      "sha256": "5582324aab4c19eaa8637954e38cd4a0415c087f057575d2e7ecdfc91ba5cabb",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+      "sha256": "d27fcc6aa85b2f9c819e715b1f32bf38f5dc4b541f4a40ce1e1a4ac3712e6fd0",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+      "sha256": "ea3df293a181a05689c4a25b92626a3a743c8c4ae5122ae8df63c0ee9acc24c8",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+      "sha256": "910d138724d2eab08e50f69c4ee5fa03f4324a01cccfed5e79551b1fe057e6f7",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+      "sha256": "853341856d6a39050db422a0aa65a0efae85716484f8c2397b1b22c5dba075d7",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+      "sha256": "190bc1e05bb282d5df78d0621938af245147b68531119a934743cbfdc1895c1f",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+      "sha256": "fb1caf6806c48824ce998c5b9d0bac600e298d2c778ce1d5b92087c883b5117b",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+      "sha256": "11485df0351fbc277beb14493273db2600a9ecc60fcf446fb078a8411e0b56b2",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/OmniDocBench.json",
+      "sha256": "404224f7384b9b94edc5a7b0984053267b02d067d119fd64831bc5c0b134f463",
+      "matches": true
+    },
+    {
+      "path": "output/issue-23/sealed/README.upstream.md",
+      "sha256": "9ac999a6615ae74009c997c4ddc8a72c52423c2b0384235b4126bdc213576e81",
+      "matches": true
+    }
+  ],
+  "status": "passed",
+  "recognition_executed": false
+}

@@ -1,0 +1,253 @@
+{
+  "verified_at": "2026-10-01T12:53:17+08:00",
+  "status": "material_integrity_passed_holdout_not_ready",
+  "image_checks": [
+    {
+      "id": "candidate-01",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-02",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-03",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-04",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-05",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-06",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-07",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-08",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-09",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-10",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-11",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    },
+    {
+      "id": "candidate-12",
+      "decoded": true,
+      "dimensions_match": true,
+      "copy_byte_identical": true,
+      "reference_fields_missing": []
+    }
+  ],
+  "unique_new_image_hashes": 12,
+  "known_inventory_image_hash_overlap": [],
+  "original_reference_records_equal_upstream": true,
+  "business_manifest_snapshot_byte_identical": true,
+  "business_original_20_image_hashes_match": true,
+  "business_original_manifest_sha256": "acd6164215410ee3e7894aef231670a33b8d6d4751f58640762eeb0c8c84d784",
+  "candidate_exposure_hits": {
+    "candidate-01": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-02": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-03": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-04": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-05": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-06": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-07": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-08": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-09": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-10": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-11": [
+      "output/ovis-source/OmniDocBench.json"
+    ],
+    "candidate-12": [
+      "output/ovis-source/OmniDocBench.json"
+    ]
+  },
+  "qualified_holdout_ids": [],
+  "holdout_readiness": "not_ready",
+  "recognition_executed": false,
+  "caveat": "图像去重、可读性和原始标注一致性核验通过，不能代替源文档隔离资格通过",
+  "historical_annotation_archive_sha256": "a45cd84b04ad8b793e775089640e6b681209abea33ead54c1828ddca35fae496",
+  "candidate_recognition_evidence_matches": {
+    "candidate-01": [],
+    "candidate-02": [],
+    "candidate-03": [],
+    "candidate-04": [],
+    "candidate-05": [],
+    "candidate-06": [],
+    "candidate-07": [],
+    "candidate-08": [],
+    "candidate-09": [],
+    "candidate-10": [],
+    "candidate-11": [],
+    "candidate-12": []
+  },
+  "business_source_file_checks": [
+    {
+      "source_id": "math-neea-420",
+      "path": "output/quality-corpus-20/sources/math-exam-420.jpg",
+      "expected_sha256": "3cb3bf6e4a6750ce26b77339d4c9214c7192902dcadd80101d3c16bdae680e97",
+      "actual_sha256": "3cb3bf6e4a6750ce26b77339d4c9214c7192902dcadd80101d3c16bdae680e97",
+      "matches": true
+    },
+    {
+      "source_id": "math-neea-422",
+      "path": "output/quality-corpus-20/sources/math-exam-422.jpg",
+      "expected_sha256": "7a9f19dbfee950131dbed8c6ad5e5583dbf0b4e8ede9f0b84de092a44171c414",
+      "actual_sha256": "7a9f19dbfee950131dbed8c6ad5e5583dbf0b4e8ede9f0b84de092a44171c414",
+      "matches": true
+    },
+    {
+      "source_id": "math-neea-421",
+      "path": "output/quality-corpus-20/sources/math-exam-421.jpg",
+      "expected_sha256": "5b25891d9a452d69f0ef79dacd28fedebedfdbe6e065552b02492f8907714b1b",
+      "actual_sha256": "5b25891d9a452d69f0ef79dacd28fedebedfdbe6e065552b02492f8907714b1b",
+      "matches": true
+    },
+    {
+      "source_id": "math-neea-423",
+      "path": "output/quality-corpus-20/sources/math-exam-423.jpg",
+      "expected_sha256": "45354936fd225b919511f0b464926aba2e692988163f02eb6de4394432ec69c4",
+      "actual_sha256": "45354936fd225b919511f0b464926aba2e692988163f02eb6de4394432ec69c4",
+      "matches": true
+    },
+    {
+      "source_id": "math-junior-exam",
+      "path": "output/quality-corpus-20/sources/math-junior-exam.pdf",
+      "expected_sha256": "11fc301baccb58fd44bf57abd884b2e8bb19e9c525c73df4a4267f1235313ef5",
+      "actual_sha256": "11fc301baccb58fd44bf57abd884b2e8bb19e9c525c73df4a4267f1235313ef5",
+      "matches": true
+    },
+    {
+      "source_id": "math-high",
+      "path": "output/quality-corpus-20/sources/math-high.pdf",
+      "expected_sha256": "8a121e7cb36cd4a9e8582b369574ec7f5e539771f87ab210d7850a574407ba39",
+      "actual_sha256": "8a121e7cb36cd4a9e8582b369574ec7f5e539771f87ab210d7850a574407ba39",
+      "matches": true
+    },
+    {
+      "source_id": "math-junior",
+      "path": "output/quality-corpus-20/sources/math-junior.pdf",
+      "expected_sha256": "0c9ce86ae90f59091f5c9a2204d3a56cb11fc31da46865c28fa65a18e3ecaedc",
+      "actual_sha256": "0c9ce86ae90f59091f5c9a2204d3a56cb11fc31da46865c28fa65a18e3ecaedc",
+      "matches": true
+    },
+    {
+      "source_id": "physics-exam",
+      "path": "output/quality-corpus-20/sources/physics-exam.pdf",
+      "expected_sha256": "1d353e2fd639005b2caaa3b358c052410749a6dd841f5c09d79215adc955de92",
+      "actual_sha256": "1d353e2fd639005b2caaa3b358c052410749a6dd841f5c09d79215adc955de92",
+      "matches": true
+    },
+    {
+      "source_id": "chemistry-exam",
+      "path": "output/quality-corpus-20/sources/chemistry-exam-2021.pdf",
+      "expected_sha256": "1853e3d492272844e84443f9358c5c40427a747d3c457a3a2d506b908de43756",
+      "actual_sha256": "1853e3d492272844e84443f9358c5c40427a747d3c457a3a2d506b908de43756",
+      "matches": true
+    },
+    {
+      "source_id": "physics-student",
+      "path": "output/quality-corpus-20/sources/physics-student.pdf",
+      "expected_sha256": "0279bc50d53ee1f41f93ebfdcf82dbcc10a96bb5775c0ce54342652520cb15b7",
+      "actual_sha256": "0279bc50d53ee1f41f93ebfdcf82dbcc10a96bb5775c0ce54342652520cb15b7",
+      "matches": true
+    },
+    {
+      "source_id": "chemistry-student",
+      "path": "output/quality-corpus-20/sources/chemistry-student.pdf",
+      "expected_sha256": "62e5616df6507ffe48e47794321c59e281eccadc10f6c4afd92bf26a32a7a70e",
+      "actual_sha256": "62e5616df6507ffe48e47794321c59e281eccadc10f6c4afd92bf26a32a7a70e",
+      "matches": true
+    },
+    {
+      "source_id": "biology",
+      "path": "output/quality-corpus-20/sources/biology.pdf",
+      "expected_sha256": "580b4b975ca045cef6287aec101e37cc95b5b138d33e5f986dbbd757e171a030",
+      "actual_sha256": "580b4b975ca045cef6287aec101e37cc95b5b138d33e5f986dbbd757e171a030",
+      "matches": true
+    },
+    {
+      "source_id": "chinese-exam",
+      "path": "output/quality-corpus-20/sources/chinese-exam.jpg",
+      "expected_sha256": "ded866622252861644235229be617a444c4bb7aa1e6d5e51970e57b564e4e9a2",
+      "actual_sha256": "ded866622252861644235229be617a444c4bb7aa1e6d5e51970e57b564e4e9a2",
+      "matches": true
+    },
+    {
+      "source_id": "english-exam",
+      "path": "output/quality-corpus-20/sources/english-exam.jpg",
+      "expected_sha256": "3624833cf9a65649824a0300dae829053230f5d0bc592b4ed459e696180c15f7",
+      "actual_sha256": "3624833cf9a65649824a0300dae829053230f5d0bc592b4ed459e696180c15f7",
+      "matches": true
+    }
+  ]
+}
