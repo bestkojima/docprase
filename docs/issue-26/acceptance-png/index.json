@@ -1,0 +1,66 @@
+[
+  {
+    "page_id": "odb-03",
+    "path": "odb-03/04-reading-order.png",
+    "sha256": "078d4b66e7a7282512cb26f4193ad5dcd776f44b02143af3726e4d27b1206248",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-03/04-reading-order.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-03/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-03/evidence.json"
+  },
+  {
+    "page_id": "odb-03",
+    "path": "odb-03/q17-comparison.png",
+    "sha256": "86d1d3bb83b7caea3cdeae7582d76ed4a46c1d04ae7475068454606cff059cd1",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-03/q17-comparison.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-03/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-03/evidence.json"
+  },
+  {
+    "page_id": "odb-03",
+    "path": "odb-03/q18-comparison.png",
+    "sha256": "37070faf13cb5ab8079fb83dca9c1809c274577e13fdb641b683860274e70344",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-03/q18-comparison.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-03/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-03/evidence.json"
+  },
+  {
+    "page_id": "odb-07",
+    "path": "odb-07/04-reading-order.png",
+    "sha256": "d6797e53409f162ffbde2b9d39fd4f1f3cd70aec5f6243d309dac8d9dd64d9be",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-07/04-reading-order.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-07/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-07/evidence.json"
+  },
+  {
+    "page_id": "odb-08",
+    "path": "odb-08/04-reading-order.png",
+    "sha256": "99c7e2e2e6ebb604367e0f1b5a5150b44612d50be4a51b8ecc6dcbc4e17138a2",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-08/04-reading-order.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-08/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-08/evidence.json"
+  },
+  {
+    "page_id": "odb-11",
+    "path": "odb-11/04-reading-order.png",
+    "sha256": "c613183231a4259c22cb7ea83c98f86d2aeca84109f8019c98e3b0f7c0d8a0c3",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-11/04-reading-order.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-11/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-11/evidence.json"
+  },
+  {
+    "page_id": "odb-13",
+    "path": "odb-13/04-reading-order.png",
+    "sha256": "3daa086a78e2da8826a185d3d4fe57d658843c07554866af60beae977794fce8",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-13/04-reading-order.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-13/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-13/evidence.json"
+  },
+  {
+    "page_id": "odb-17",
+    "path": "odb-17/04-reading-order.png",
+    "sha256": "03fc66dacb9df4ce3c93514f36bcafdd785a7e108f9d7cce015a45bf6c7e8978",
+    "source_png": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-17/04-reading-order.png",
+    "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20/odb-17/job",
+    "evidence_path": "/home/dr/project/docprase/output/issue-26/acceptance-20-png/odb-17/evidence.json"
+  }
+]

@@ -1,0 +1,42 @@
+test_duplicate_relation_and_wrong_owner_are_rejected (test_issue15_lineage.Issue15LineageTest.test_duplicate_relation_and_wrong_owner_are_rejected) ... ok
+test_duplicate_source_is_rejected_despite_different_geometry (test_issue15_lineage.Issue15LineageTest.test_duplicate_source_is_rejected_despite_different_geometry) ... ok
+test_merged_content_has_one_owner_per_layout_source (test_issue15_lineage.Issue15LineageTest.test_merged_content_has_one_owner_per_layout_source) ... ok
+test_anchor_positions_follow_reading_order_and_repeats_are_ambiguous (test_issue15_quality.Issue15QualityTest.test_anchor_positions_follow_reading_order_and_repeats_are_ambiguous) ... ok
+test_missing_pdf_page_counts_every_reference_line_as_deleted (test_issue15_quality.Issue15QualityTest.test_missing_pdf_page_counts_every_reference_line_as_deleted) ... ok
+test_complete_control_is_not_blocked (test_issue17_baseline.BaselineFailures.test_complete_control_is_not_blocked) ... ok
+test_duplicate_output_is_reported (test_issue17_baseline.BaselineFailures.test_duplicate_output_is_reported) ... ok
+test_errata_keeps_upstream_annotation_unchanged (test_issue17_baseline.BaselineFailures.test_errata_keeps_upstream_annotation_unchanged) ... ok
+test_failed_document_gives_no_content_credit (test_issue17_baseline.BaselineFailures.test_failed_document_gives_no_content_credit) ... ok
+test_full_fallback_cannot_score_as_correct (test_issue17_baseline.BaselineFailures.test_full_fallback_cannot_score_as_correct) ... ok
+test_missing_block_remains_in_denominator (test_issue17_baseline.BaselineFailures.test_missing_block_remains_in_denominator) ... ok
+test_nonzero_exit_blocks_aggregate_even_with_complete_document (test_issue17_baseline.BaselineFailures.test_nonzero_exit_blocks_aggregate_even_with_complete_document) ... ok
+test_repeated_generation_is_visible (test_issue17_baseline.BaselineFailures.test_repeated_generation_is_visible) ... ok
+test_changed_frozen_rules_are_rejected_before_scoring (test_issue25_acceptance.AcceptanceCommandTests.test_changed_frozen_rules_are_rejected_before_scoring) ... ok
+test_report_tool_version_must_match_the_run_freeze (test_issue25_acceptance.AcceptanceCommandTests.test_report_tool_version_must_match_the_run_freeze) ... ok
+test_unexecuted_pages_keep_all_reference_denominators (test_issue25_acceptance.AcceptanceCommandTests.test_unexecuted_pages_keep_all_reference_denominators) ... ok
+test_model_probe_layout (unittest.loader._FailedTest.test_model_probe_layout) ... ERROR
+test_normal_stop_requires_actual_vision_work (test_model_probe_ovis.OvisProbeTests.test_normal_stop_requires_actual_vision_work) ... ok
+test_suite_rejects_normal_eos_when_formula_or_table_format_is_missing (test_model_probe_ovis.OvisProbeTests.test_suite_rejects_normal_eos_when_formula_or_table_format_is_missing) ... ok
+test_timeout_kills_child_process_group (test_model_probe_ovis.OvisProbeTests.test_timeout_kills_child_process_group) ... ok
+test_timeout_kills_term_ignoring_child_after_leader_exits (test_model_probe_ovis.OvisProbeTests.test_timeout_kills_term_ignoring_child_after_leader_exits) ... ok
+test_zero_exit_at_token_cap_is_incomplete (test_model_probe_ovis.OvisProbeTests.test_zero_exit_at_token_cap_is_incomplete) ... ok
+
+======================================================================
+ERROR: test_model_probe_layout (unittest.loader._FailedTest.test_model_probe_layout)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_model_probe_layout
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 394, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/loader.py", line 337, in _get_module_from_name
+    __import__(name)
+  File "/home/dr/.codex/worktrees/c6c4/docprase/tests/test_model_probe_layout.py", line 10, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+
+----------------------------------------------------------------------
+Ran 22 tests in 11.945s
+
+FAILED (errors=1)

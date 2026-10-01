@@ -1,0 +1,49 @@
+{
+  "command": [
+    "/home/dr/project/docprase/output/issue-26/real-final/.runtime/dococr_cli",
+    "--config",
+    "/home/dr/project/docprase/output/issue-26/real-final/.runtime/config.json",
+    "--input",
+    "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+    "--out",
+    "/home/dr/project/docprase/output/issue-26/real-final/odb-03/job"
+  ],
+  "execution": "fresh_public_MNN_OvisOCR_inference",
+  "input_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+  "provenance": {
+    "runtime": {
+      "dococr_cli": {
+        "source": "/home/dr/project/docprase/output/issue-26/real-final/.runtime/dococr_cli",
+        "sha256": "028544f3a8643b0d0af32b50a9ac75960f30a7d4366b97f631fcf5b807655f4b"
+      },
+      "libdococr_c.so": {
+        "source": "/home/dr/project/docprase/output/issue-26/real-final/.runtime/libdococr_c.so",
+        "sha256": "003dcce53dcb01a8f167bf769d12eba842502ff5f0e00a7674a73487c2d13b94"
+      },
+      "libMNN.so": {
+        "source": "/home/dr/project/MNN/build/libMNN.so",
+        "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+      },
+      "libllm.so": {
+        "source": "/home/dr/project/MNN/build/libllm.so",
+        "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+      },
+      "libMNNOpenCV.so": {
+        "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+        "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+      },
+      "libMNNAudio.so": {
+        "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+        "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+      }
+    },
+    "config_sha256": "379eb357c4ac1715f099b23aa7cae689f071a8e6bc9b13859b981205684215a2",
+    "sources": {
+      "src/core.cpp": "d2789245281b6c891d435b77b0e3a7c933f6c153f1bb9e8acae8a078e501fcd6",
+      "src/region_structure.cpp": "7d9d1481d0df8c3d9d837dc6a67e66ba862f4e1ed75f0af2be6bd7db145c9079",
+      "src/reexport.cpp": "1ce18819edc6218eaefd7a1f9cc2970589ae5edfcbb79542cdd7037e453310e8"
+    }
+  },
+  "returncode": 0,
+  "elapsed_seconds": 67.6786875559992
+}

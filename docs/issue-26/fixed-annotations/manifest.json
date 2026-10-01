@@ -1,0 +1,173 @@
+{
+  "role": "issue26_debug_intermediates",
+  "pages": [
+    {
+      "page_id": "odb-03",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+      "source_image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "source_job": "/home/dr/project/docprase/output/issue-26/real-final/odb-03/job",
+      "source_document_sha256": "5f228311c100cb666bef283eb534a4913ba0a84a38daf10cdbceef7ca37ef0a5",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/home/dr/project/docprase/output/issue-26/real-final/.runtime/dococr_cli",
+            "sha256": "028544f3a8643b0d0af32b50a9ac75960f30a7d4366b97f631fcf5b807655f4b"
+          },
+          "libdococr_c.so": {
+            "source": "/home/dr/project/docprase/output/issue-26/real-final/.runtime/libdococr_c.so",
+            "sha256": "003dcce53dcb01a8f167bf769d12eba842502ff5f0e00a7674a73487c2d13b94"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          }
+        },
+        "config_sha256": "379eb357c4ac1715f099b23aa7cae689f071a8e6bc9b13859b981205684215a2",
+        "sources": {
+          "src/core.cpp": "d2789245281b6c891d435b77b0e3a7c933f6c153f1bb9e8acae8a078e501fcd6",
+          "src/region_structure.cpp": "7d9d1481d0df8c3d9d837dc6a67e66ba862f4e1ed75f0af2be6bd7db145c9079",
+          "src/reexport.cpp": "1ce18819edc6218eaefd7a1f9cc2970589ae5edfcbb79542cdd7037e453310e8"
+        }
+      },
+      "config_hash": "3f1f34cf97dd77743ea2bd2f3b760491b7e0e168d756d8ca733b3c50dd24ca40",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 37,
+      "filter_reasons": {
+        "nms_cross_class": 4,
+        "below_score_threshold": 259
+      },
+      "source_size": [
+        1434,
+        2025
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "7980b1118c1ea1058e849c8af7b383beb554d9411f65614115bbceca11ec69d8",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "a91c245facd44024551bcb228729683c5b6ef378568b7de9d689dc66e544c6d3",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "8ceeb5545818f16764c5fb656d5f0753e03d12f3aa4a26b8523b8bf563741f2f",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "078d4b66e7a7282512cb26f4193ad5dcd776f44b02143af3726e4d27b1206248",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "32462e5d37b6033df7fcb410ad3e89fbc060fa28bc3030ff5745dd13b330d0fe",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "q17-comparison.png": {
+          "sha256": "86d1d3bb83b7caea3cdeae7582d76ed4a46c1d04ae7475068454606cff059cd1",
+          "size": [
+            1330,
+            1587
+          ],
+          "source_viewport": [
+            40,
+            320,
+            1370,
+            745
+          ]
+        },
+        "q18-comparison.png": {
+          "sha256": "37070faf13cb5ab8079fb83dca9c1809c274577e13fdb641b683860274e70344",
+          "size": [
+            1120,
+            1557
+          ],
+          "source_viewport": [
+            100,
+            705,
+            1220,
+            1120
+          ]
+        }
+      }
+    }
+  ],
+  "stages": {
+    "01-score-filtered": [
+      "Score-filtered original boxes",
+      "Before local NMS / containment / overlap filtering"
+    ],
+    "02-postprocessed": [
+      "Postprocessed layout boxes",
+      "Selected crop_bbox; owned children shown in gray"
+    ],
+    "03-regions": [
+      "Saved recognition regions",
+      "Final saved Region bounds; dashed outline = expanded owner"
+    ],
+    "04-reading-order": [
+      "Saved final reading order",
+      "# = final order; dashed vertical line = page midpoint"
+    ],
+    "05-ground-truth": [
+      "Upstream ground truth",
+      "Reference annotations; not model detections"
+    ]
+  },
+  "max_edge": 4096,
+  "renderer_sha256": "398d78a0081eb77cc1516e20d4ee7a12a9a6b416f8f1800b01f81d52ecd2fcd9"
+}

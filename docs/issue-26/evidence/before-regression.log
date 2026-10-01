@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/dr/.codex/worktrees/c6c4/docprase/tests/issue26_structure.py", line 148, in <module>
+    main()
+  File "/home/dr/.codex/worktrees/c6c4/docprase/tests/issue26_structure.py", line 114, in main
+    invoke(sys.argv[1], sys.argv[2], root, 'two-option-rows', fixture())
+  File "/home/dr/.codex/worktrees/c6c4/docprase/tests/issue26_structure.py", line 57, in invoke
+    assert actual == expected, f'{name}: expected={expected}, actual={actual}'
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: two-option-rows: expected=[0, 1, 5, 2, 6, 3, 7, 4, 8, 9, 10, 14, 11, 15, 12, 16, 13, 17], actual=[0, 1, 2, 5, 6, 4, 7, 8, 3, 9, 10, 11, 14, 15, 13, 16, 17, 12]

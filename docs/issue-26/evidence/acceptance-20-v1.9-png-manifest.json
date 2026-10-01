@@ -1,0 +1,3313 @@
+{
+  "role": "issue26_debug_intermediates",
+  "pages": [
+    {
+      "page_id": "odb-01",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+      "source_image_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-01/job",
+      "source_document_sha256": "acac107f483e34ea922db70c9c45567aebe94218a84ab2100b52fd7d2b23b979",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 68,
+      "filter_reasons": {
+        "nms_cross_class": 3,
+        "below_score_threshold": 229
+      },
+      "source_size": [
+        3308,
+        2339
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "22efef8ea2886e19280faa2f1a6b9673a69acacb21d2822c795823487e2a10ae",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "2ae885bc17aa04c2ba7b76e18baed6d207647f290a7a8eb6e7fb85e14322f609",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "2311852da93251925bf1e06a819e8470be25471a52ee663a85802ee8337c3b39",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "21e634f4cac7c9038052b20cae1387b5dcd533cbd819177bdc4b1e5d7d81630f",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "ce873fd5905df916a716b4022c378d0756107b02e519db2b4ddefb1d50ff2ae1",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-02",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_96657786.pdf_0.jpg",
+      "source_image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-02/job",
+      "source_document_sha256": "14fc364d55768e0c50163a6d462c8e818b72ab7b38c69eadfe9c202e570e41ae",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 101,
+      "filter_reasons": {
+        "outer_overlap": 3,
+        "nms_cross_class": 5,
+        "below_score_threshold": 191
+      },
+      "source_size": [
+        3308,
+        2339
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "0b59f14622d0c505665c7ee523a8e02161a94c5579dc788266cb5593821f70b8",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "9587a5accb5f7f0941f59608be9597cb7202b3d65c9ce1094c8660cfef367e6f",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "b9eb7b705b406567ad29e732ed4d589826397a39e6e3135da6654205c951d18a",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "a12066907be140bf6d45873b3d325794ddaea746d997065f290a7926113f2dc6",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "1f0ae5c436f77b44a2b871d45d1dc6dffb048d0c7dd36fc90d5dbda409dbfb01",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.619105199516324,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-03",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+      "source_image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-03/job",
+      "source_document_sha256": "82ac444a13c7b33b8fa62f374c68af398a26cce03361dc00ed95982810eae172",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 37,
+      "filter_reasons": {
+        "nms_cross_class": 4,
+        "below_score_threshold": 259
+      },
+      "source_size": [
+        1434,
+        2025
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "8525f836fe85364281a8403e4afd1ea4f36cc1eb3f69ebc9daa87f4f45ed493b",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "081475f1eb6b5082eb1f55271874a8317bc8e8b919c381ec324383ba8e152735",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "da88b7fc8255b192865fc0063b8c99eb6d9126bdb63ae3a4f01f66b82f54c7ef",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "7f5c8d9b31896357ed30e51f981db3523d04b31115f611f43cebff10952e6501",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "5112696f38b1c002508af102dad38a62a2e62e82d99150799922a83b81848d0c",
+          "size": [
+            1434,
+            2121
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "q17-comparison.png": {
+          "sha256": "a95c6e8f57e03c12695f5837cb70057b0db13a75eb492ec756b4903703a7fdc2",
+          "size": [
+            1330,
+            1587
+          ],
+          "source_viewport": [
+            40,
+            320,
+            1370,
+            745
+          ]
+        },
+        "q18-comparison.png": {
+          "sha256": "83c7ebc2eec2ed8f47f81cac583e606f92c3ec346a6e197a090032df1afd60c9",
+          "size": [
+            1120,
+            1557
+          ],
+          "source_viewport": [
+            100,
+            705,
+            1220,
+            1120
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-04",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_1564.jpg",
+      "source_image_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-04/job",
+      "source_document_sha256": "86b7a32bbdaf05c17a338acae221f96ede741c1fc0283100ee3dd4594c028649",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 92,
+      "filter_reasons": {
+        "nms_cross_class": 1,
+        "outer_overlap": 1,
+        "contained_by_large_class": 2,
+        "below_score_threshold": 204
+      },
+      "source_size": [
+        2633,
+        1809
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "3a72b2058c94ab9ef2fd05fb3c37c21497c7326090920fdb7face7d40fb0082a",
+          "size": [
+            2048,
+            1503
+          ],
+          "scale": 0.7778199772123053,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "044b4ea7c642fae3ca24df7a7dff32ff28ab7488c73afb85557d1437c3e41e19",
+          "size": [
+            2048,
+            1503
+          ],
+          "scale": 0.7778199772123053,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "772df0ed157d55976f6c0e97365b8d8d32028bfe9fc0c2a6514a598e825436e4",
+          "size": [
+            2048,
+            1503
+          ],
+          "scale": 0.7778199772123053,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "2ae8edf93293eb8906e6ffaa0f462e65ec1e1b1883c69a802fef49cf9d674816",
+          "size": [
+            2048,
+            1503
+          ],
+          "scale": 0.7778199772123053,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "dbc86020f554c033c1cfcc2d83cad8dc5f256a1e16deba8d858015ba17cc7abc",
+          "size": [
+            2048,
+            1503
+          ],
+          "scale": 0.7778199772123053,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-05",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+      "source_image_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-05/job",
+      "source_document_sha256": "6d9934d0286421c5c042cafdb317fc052c288d8cdc16ce0ec6b8422332134958",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 44,
+      "filter_reasons": {
+        "below_score_threshold": 256
+      },
+      "source_size": [
+        1654,
+        2339
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "cdb8dd1ab1ddb9d4230084c78f1eb0d007541668dc8ec78c79556c3866b372d2",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "85149dbb776b6aaf840ce30727c2800972177fca8b4b9c1bd922f77b2351eb54",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "abb357c7eda5cd9cf507b993130de63b9239b2434e7b78f7125b4d3b3cc2bd4a",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "f7f3662f2a81444052319cf077ff449c34aa15825a825967a2276676223064ba",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "ccb10577c0907f89a4fc8805f469b11b0bb49f66d50927468ad3740766511473",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-06",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_4065.jpg",
+      "source_image_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-06/job",
+      "source_document_sha256": "06804cec800395dd1022fa3404753fa464323c6eae7e64ae29341dc1b78709bb",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 71,
+      "filter_reasons": {
+        "contained_by_large_class": 1,
+        "outer_overlap": 1,
+        "below_score_threshold": 227
+      },
+      "source_size": [
+        2339,
+        1653
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "5af984c0e439390933935ede7539f89407d2ff3b8fbb3111427f4a3b9ef2ed18",
+          "size": [
+            2048,
+            1543
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "89142de3d2388384fd99ac4691b415481148b9a46fc141df7185475a07d341cb",
+          "size": [
+            2048,
+            1543
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "07663f2fc60974659d86b12fcaf464c3da8a9df12ce15cf54530747605b1f3dc",
+          "size": [
+            2048,
+            1543
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "a6c794840160db154a864bd3d967eb0bde3bb856b4c9c62076896526aefd8a0f",
+          "size": [
+            2048,
+            1543
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "d1442dca0bdf42960550c5025b4e37fa3f40d9b429a33ad0f38921f47a9d379f",
+          "size": [
+            2048,
+            1543
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-07",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+      "source_image_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-07/job",
+      "source_document_sha256": "31131bb192aa4776bd64d33bc42eceac7de2a3b9c34aa1701ebc7cdeedf36732",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 11,
+      "filter_reasons": {
+        "below_score_threshold": 289
+      },
+      "source_size": [
+        1449,
+        2048
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "47385e669c5feb07d08fa841379450e04961d1f5539e9cc0caf81ac859be0fc3",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "ea50df22e7cd615b363d158b1c0ebab39db5f97d2444914bcb3c0c6b808369d3",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "502ba87ce56b52ed1eb1eba88e6c04f506fb63df2ebeb49d140cbf6f2344a9f3",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "d0409feb834e4a8bae88afd957c8eefe568c93fb6a9e8bbbfcb27a113011a4f5",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "75d8c88a519cdfc7b6b7823ea004b3ceb7cb9e99154b06846e6c86ab81045d5c",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-08",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-a70b2ec9-379a-4e83-9f64-852c343ec8cd.png",
+      "source_image_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-08/job",
+      "source_document_sha256": "20b5d5895481182c0f9896d1a953af70839d01ac46a4cee3c56997cbbdced1f0",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 44,
+      "filter_reasons": {
+        "below_score_threshold": 256
+      },
+      "source_size": [
+        1449,
+        2048
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "1a7531a0d6f03905ca8a9e2e39f42f8e0fe21f83f288b3f333c645dc2532634a",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "411ecbf4416e4db284a7d94ae2ede77fe7f8af81458529a5226ee4af014bd863",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "ccfea5d33d84931d49d111af6dd9bc8608ab7d382a67738ecc69b5a1ff222b33",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "7b5fb2ef406fc8b5f23c8daa164c940886b7c07e2196815df9371ad18cb26fff",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "79a7029f541d50b3341ece642b3b7af35ebb9639136929754a584be97415889d",
+          "size": [
+            1449,
+            2144
+          ],
+          "scale": 1.0,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-09",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+      "source_image_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-09/job",
+      "source_document_sha256": "987c4cf5667a75d654f82892f4657d0121ff983b2c2d189071ef6ed7865079cf",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 10,
+      "filter_reasons": {
+        "below_score_threshold": 290
+      },
+      "source_size": [
+        1653,
+        2339
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "361da5856db9887f57c7dadaeb447139d14a326c64baf5c38f966bda9b2e3f96",
+          "size": [
+            1447,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "28a6f096aba05d1cef9af344691d0e17287a8825976cfaac8e45a031c83b9e8d",
+          "size": [
+            1447,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "cfdfc0b96cec4be771b791104757b0cea8b4c575e4bf7ff28d67506bcb480312",
+          "size": [
+            1447,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "f0411781c5ded4d98d9d25f9bf6d055214da84bbee3ee42fe13739c608d2b67c",
+          "size": [
+            1447,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "4e6f4d4e6c2d17ff4fdb101086de3febcb15d08b90528472b3e5d3ad7e8539d1",
+          "size": [
+            1447,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-10",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+      "source_image_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-10/job",
+      "source_document_sha256": "73c3a39f382d832d9c81a6da86d81494345f222dbfc7b211ef22eb7e392c0bb8",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 23,
+      "filter_reasons": {
+        "outer_overlap": 5,
+        "contained_by_large_class": 2,
+        "nms_cross_class": 1,
+        "nms_same_class": 1,
+        "below_score_threshold": 268
+      },
+      "source_size": [
+        1654,
+        2339
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "234506c865c4b355d4e7dcebd67fc7e70425331d0e6a0a92dca4b6e3fd5a1d68",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "aeb4cf30df2c40760d9bf8345fa30d24855f812a9d96f10a7ab5e976d0caa78b",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "d7aca8a2f83187ac2cbc7a9ba15dfbc7468582caab817239c8c8dd3a9f4df714",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "6b22805fb7318dbebdd05367dab431eef29fbd3578f5fe8e70043fd63e1a6c13",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "012c47ed2b5dcae78262d42b33250405b01ffcb4f7c17da56bdcfe48f5ee6985",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-11",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+      "source_image_sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-11/job",
+      "source_document_sha256": "bb696982b41eac4076661a11f1fc6d53cc4c2bc341c67b7dc21a6084df38b03c",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 12,
+      "filter_reasons": {
+        "nms_cross_class": 1,
+        "below_score_threshold": 287
+      },
+      "source_size": [
+        5556,
+        8175
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "0683d2a61e14308c28cff63ca91271757baced717915d4f8b1a3573325fb7448",
+          "size": [
+            1392,
+            2144
+          ],
+          "scale": 0.250519877675841,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "eef973238ee7913a8f2e31e09df87bd37fdf2a588379c81198a040254efff209",
+          "size": [
+            1392,
+            2144
+          ],
+          "scale": 0.250519877675841,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "d120e045793d85e4d1b4ac039d0dbb155e36bf7f91d96f84805d1c6afd0fc1ec",
+          "size": [
+            1392,
+            2144
+          ],
+          "scale": 0.250519877675841,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "694e77c98871a740f373bc8ebaffa68501fccb442c507b6ce63341997f4fd05a",
+          "size": [
+            1392,
+            2144
+          ],
+          "scale": 0.250519877675841,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "12db13f458a403d45c8bc196e9cefb4ff7d45628e93e2b4263cef4f2f4c27ccd",
+          "size": [
+            1392,
+            2144
+          ],
+          "scale": 0.250519877675841,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-12",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+      "source_image_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-12/job",
+      "source_document_sha256": "bfed50b0c88bab5de5f86861dfe8e7659de5844062d142c796583a1c3a664ea5",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 20,
+      "filter_reasons": {
+        "below_score_threshold": 280
+      },
+      "source_size": [
+        1654,
+        2339
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "255288e1966aa65955e4d6eeed40f5ff48738e35387c285caef8375346aadd83",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "2167a98dc7534be5bfe8590c9438d71335229809a462ad05fd0c59bb70653325",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "2c719eda4623a34553b0f2ae10a6d229c8dea0988e59e6e9e46942151ba9b401",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "8c780bbc04c644e8a56d7dc78dfa477808fd128e476b0f4aaaed033f8c829ee5",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "c806375dd0b4a124cda145cea3b863d5a1314cbf4063cc287896eacac6b399d8",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-13",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+      "source_image_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-13/job",
+      "source_document_sha256": "ef2c81424ea890ea610bc7da42fac73312733dfa3094925c93c6c8a2ddfc98b0",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 16,
+      "filter_reasons": {
+        "nms_cross_class": 2,
+        "below_score_threshold": 282
+      },
+      "source_size": [
+        2339,
+        1654
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "56960661df5f0a042888617fe214aed84a1f3cbb7d691321401f9d8755e67a5f",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "c8203a96b7ac5c6f05af7967bdf08f49b5305b792e0c09f56d8f9f1b5cac3f4a",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "cd9bf11101402afe3b6167accad1d7ac77cbc1b588b1500b360842d9bc850b73",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "629bf373da8034a3b60aec5408e51af9156bf6ff3d56eb9d0d02cd1a28d849cb",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "040a212d261f0859536c275ea05084a08cc6e51138c223795d0a9c8348a8df1c",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-14",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+      "source_image_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-14/job",
+      "source_document_sha256": "98f560edfa67ab3c6a66b897f827737950fe0c69f7d48028419ab40b60c7d14d",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 13,
+      "filter_reasons": {
+        "below_score_threshold": 287
+      },
+      "source_size": [
+        2339,
+        1654
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "4f670303399c8fb5aea2464bc684cdfefece3c2258002505d1f94877287942cd",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "b2626ecbeb6b6f9ae8af364841cef21dc2d05b3ae4516bff8be7de39c2dc7fc7",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "2c77c8488c1d0811452ec0eef2b3ba0130bd6cd9f1e9a9900cb6cf64e1409ef0",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "2a74e350ff85a77955bf9e5609d79bb91160fef0784530e32b2a21a49d7a960a",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "c21f84ce760809d40da0311ad6b3c5c860bc5f761ed2043817d2e4a096f9a592",
+          "size": [
+            2048,
+            1544
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-15",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "source_image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-15/job",
+      "source_document_sha256": "c68d4cf7652e4b4a5560984fbe4f47e6a03b4731a90ba8c9597a3d62446f6bd9",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 18,
+      "filter_reasons": {
+        "below_score_threshold": 282
+      },
+      "source_size": [
+        1528,
+        2213
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "1220fa1999b750f424412c44196f883321fd09959cd489741064a80a2a5ac5c9",
+          "size": [
+            1414,
+            2144
+          ],
+          "scale": 0.9254405784003615,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "151d82ad7cd9492352e6526be7eb0921fb6e7bed00f618fac6ab1261e61ae99f",
+          "size": [
+            1414,
+            2144
+          ],
+          "scale": 0.9254405784003615,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "b5da3f5742abb6fa9e99c9d66ec2652bbfc8dc994267c559080f695376e63819",
+          "size": [
+            1414,
+            2144
+          ],
+          "scale": 0.9254405784003615,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "d078a142beb55f58bd5e338cbf9bb5c5d0030c51c16bafc349ef8526ee816f83",
+          "size": [
+            1414,
+            2144
+          ],
+          "scale": 0.9254405784003615,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "eab4f906d9be0f452e281ad17a28ded437b78d79c4bae35efd9490eb46e4b4bf",
+          "size": [
+            1414,
+            2144
+          ],
+          "scale": 0.9254405784003615,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-16",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2100.jpg",
+      "source_image_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-16/job",
+      "source_document_sha256": "a21141b15ded0ea7260910277aec3b437a95b6be22926f4c32eaeebbd745a84c",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 19,
+      "filter_reasons": {
+        "below_score_threshold": 281
+      },
+      "source_size": [
+        1504,
+        2095
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "545f327e1d54978132cb96d60ff40ede10939917a661632b31fea72ff54e3ce5",
+          "size": [
+            1470,
+            2144
+          ],
+          "scale": 0.9775656324582339,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "c626a271f6d0d92c2d37469bfbaef3dd85060fba4b949b6c1d55778b617f8341",
+          "size": [
+            1470,
+            2144
+          ],
+          "scale": 0.9775656324582339,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "a2496aae73c21f5b66a9adc4168a6897c99f71bde53d424e9e21912443b0d88f",
+          "size": [
+            1470,
+            2144
+          ],
+          "scale": 0.9775656324582339,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "f35d47d3c99502c656fbfe57ac90e024db435e1f5e374b224f65afb27e0b0917",
+          "size": [
+            1470,
+            2144
+          ],
+          "scale": 0.9775656324582339,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "eb81d781b95dd88780e8d60d434b8f46a03ec0ecfef2a0d0888c66e0dff45ce1",
+          "size": [
+            1470,
+            2144
+          ],
+          "scale": 0.9775656324582339,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-17",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_952.jpg",
+      "source_image_sha256": "3563a859d407026c160f6917d5a625407a7565d83429f13ff85220b2ed356136",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-17/job",
+      "source_document_sha256": "4bada2a6a23e06012695205b33551049af86068f57c2572b9c814bd7843eefd8",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 55,
+      "filter_reasons": {
+        "below_score_threshold": 245
+      },
+      "source_size": [
+        5556,
+        8125
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "211dee54d3df76aa9cda6c07783d2c3c910cd46c8bb9fd1acec8697eee71d02d",
+          "size": [
+            1400,
+            2144
+          ],
+          "scale": 0.25206153846153845,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "a5ea767b74a3a614a532b7018b2489bb8165b9b12fbf285772a513eddcbd8217",
+          "size": [
+            1400,
+            2144
+          ],
+          "scale": 0.25206153846153845,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "a91c1304c87ef3e0204910feca079f05a74070f51e8930d7b5e1602f646bc29a",
+          "size": [
+            1400,
+            2144
+          ],
+          "scale": 0.25206153846153845,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "7fdceccdcc08799403c1f8405a38ef5225ebaebee31668390842c8fc55e15bf5",
+          "size": [
+            1400,
+            2144
+          ],
+          "scale": 0.25206153846153845,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "66fd6ada370c95d370bf01481632edcfa40d49ad2a5d0ced32b46bd7b4477103",
+          "size": [
+            1400,
+            2144
+          ],
+          "scale": 0.25206153846153845,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-18",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3313.jpg",
+      "source_image_sha256": "46e8933d18a8ee8135f43fd29da3df9f2f68449e96667c44dfc103c385d86402",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-18/job",
+      "source_document_sha256": "29018046ce5f7587f01f2ed60da14f0014c1808d917fceb13a6fbd1435c2b97a",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 24,
+      "filter_reasons": {
+        "below_score_threshold": 276
+      },
+      "source_size": [
+        1717,
+        2400
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "a5bf5f2f4bce42333cc993fd74930301584e50caf53fcdcb181c5daa05174689",
+          "size": [
+            1465,
+            2144
+          ],
+          "scale": 0.8533333333333334,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "73cd3ae437f59f8b7cd17a633b71a5343f881ac5acb9fb8d650858cc8516a96e",
+          "size": [
+            1465,
+            2144
+          ],
+          "scale": 0.8533333333333334,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "664b54371c8b56cfb127db4d5e0e1aa778256d6d2ba514d8fc6051ca8f88b272",
+          "size": [
+            1465,
+            2144
+          ],
+          "scale": 0.8533333333333334,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "5e5246d221bdee8658ad4bf9e19c2c588140b68beaed077bb12aa92693ce751a",
+          "size": [
+            1465,
+            2144
+          ],
+          "scale": 0.8533333333333334,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "b5c5f9a7cf06c9138f52a0ede7ae92f3cbb02796ac88fc3e422eb5560dc9c846",
+          "size": [
+            1465,
+            2144
+          ],
+          "scale": 0.8533333333333334,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-19",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_377.jpg",
+      "source_image_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-19/job",
+      "source_document_sha256": "50f004de21249425378c38243ede33a353969939e3530e2cd7f3a52ff8420004",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 74,
+      "filter_reasons": {
+        "outer_overlap": 7,
+        "below_score_threshold": 219
+      },
+      "source_size": [
+        3355,
+        2385
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "6aabe4f21a75fc282c2bee186ce5736c7a7a28ab7e7cfb8682ab68aba278aff0",
+          "size": [
+            2048,
+            1552
+          ],
+          "scale": 0.6104321907600596,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "e095269c2b60f8d4264556852a004ca072498ba23667312e87f10224313f14c4",
+          "size": [
+            2048,
+            1552
+          ],
+          "scale": 0.6104321907600596,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "1d8cc6f2b73d2a82ef75c9249af6deaf28f73fd1c035907158e8027f983731e4",
+          "size": [
+            2048,
+            1552
+          ],
+          "scale": 0.6104321907600596,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "6316b3de21e504072af62f3abe66179e843748f0584d89516d1387642e9b1a04",
+          "size": [
+            2048,
+            1552
+          ],
+          "scale": 0.6104321907600596,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "5936fbc5fa4a5d38407776f4b3ccf2828bab263c6903433c99b6af0e80f3cd1f",
+          "size": [
+            2048,
+            1552
+          ],
+          "scale": 0.6104321907600596,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "odb-20",
+      "source_image": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+      "source_image_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+      "source_job": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9/odb-20/job",
+      "source_document_sha256": "6c41488c1eec8b9e15820a4d1bcec23466ca41f4942e19f4d0639f9c5a60a8a8",
+      "execution": "rendered_saved_public_job_not_new_inference",
+      "source_execution": "fresh_public_MNN_OvisOCR_inference",
+      "source_runtime": {
+        "runtime": {
+          "dococr_cli": {
+            "source": "/tmp/docprase-issue26-build/dococr_cli",
+            "sha256": "48c04f2ea602c41e54c00a81d09067a3e022b9e578c2c51f0af814726f7fa4ce"
+          },
+          "libdococr_c.so": {
+            "source": "/tmp/docprase-issue26-build/libdococr_c.so",
+            "sha256": "b85d77d6d69a293ac109b31851033192b9e555172131f77432689ea30009b384"
+          },
+          "libMNN.so": {
+            "source": "/home/dr/project/MNN/build/libMNN.so",
+            "sha256": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded"
+          },
+          "libllm.so": {
+            "source": "/home/dr/project/MNN/build/libllm.so",
+            "sha256": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01"
+          },
+          "libMNNOpenCV.so": {
+            "source": "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so",
+            "sha256": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be"
+          },
+          "libMNNAudio.so": {
+            "source": "/home/dr/project/MNN/build/tools/audio/libMNNAudio.so",
+            "sha256": "0d26cfaaafa176dd7a77b8d7d8a310e7c7d04196adb40f8d0885303f2bdacc2c"
+          },
+          "libMNN_Express.so": {
+            "source": "/home/dr/project/MNN/build/express/libMNN_Express.so",
+            "sha256": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+          }
+        },
+        "config_sha256": "e135b89a82f5840bf1e46c4cf3a6e1a0568a2231640f12c8b58642e744272d08",
+        "source_sha256": {
+          "src/abi.cpp": "aa5a5f2c6ffc49840e27c40f2a89c1ab6184d110325a4a89c9c60000b38ad75b",
+          "src/backend_factory.hpp": "7a5367a96ea28d1bbf33e96989015cb55db63dee644003647ce57cba680c2b74",
+          "src/config.cpp": "9c069522f1aa004754bf8851e32ad245cfd45d076a5ab7894997a9946a783042",
+          "src/config.hpp": "f98dc0ef7be579fe99cb4611962828e5c88cf0200a72622bd690fb211f8af69c",
+          "src/content_validation.hpp": "8e9005673202efd8ed049f47efef25cf40123b27ac868ec99be80db4105e0920",
+          "src/core.cpp": "98e367bc4a4edeee6040ec85232f6ec8eb4da28fb5c0175e5969cca2e175e0c2",
+          "src/document_schemas.hpp.in": "3f98d78f7951d61c46f9a2ad3b22643a170304bbe0e616f8ca344f3a43e2f200",
+          "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+          "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+          "src/layout_preprocess.hpp": "d03fd617e5709e386c61e640525e6036f1ee40eb0f849d2292e5be96c76b6f57",
+          "src/layout_region_policy.cpp": "4dcfdddfe3ce8f06cc6fd1c478b802d0f031af59ad940ae62d318b3380e70561",
+          "src/layout_region_policy.hpp": "4e2e17f5616e47f714792f1730fb2fca713fd1d02b54511af4cf96b0359736d8",
+          "src/markdown.cpp": "e30ffc6abd34c66ecff20a04e643d4128ef038bd17b4866ffd2ebaa095754823",
+          "src/markdown.hpp": "7be0cf19bc28d28259ade41f8b5b8bde448ce903c783b0e3eac280a05e984bcb",
+          "src/output_assessment.cpp": "1a89e46223e2ee6902829b3b603e460228d16bd9b13917d25f3f2c758de9ade4",
+          "src/output_assessment.hpp": "acf2b3b16904746cc052179a210bf696d7319f9e3b7a9671b6420e7ef11b430e",
+          "src/pdf_job.cpp": "14ffd79daa7602b31aff7bb72de0fe54b5d6802d58d0fc48e67524e501acd11d",
+          "src/pdf_job.hpp": "57960317d8eba6829dbee9b1b5c38f6a6f2cfa6b59949dcc81c7ca11680d8f12",
+          "src/pdf_page_id.hpp": "48038fd4294d996a1a39df5f7694a88143567188461cba5f4f9473000eef3c81",
+          "src/pdf_renderer.cpp": "38581953944fc3663e66e76294b123bebe497bdf7f6a9967d536ec9d7f490346",
+          "src/pdf_renderer.hpp": "ffd0726773ff06066c1f48a157f83f570cb941dc2047f584ae8fb8ad3f0075a2",
+          "src/printed_page_mnn_backend.cpp": "d0e3b8ca52940754a681bdb7df6416b004692e24e7c403dbf6c610dd94aed90a",
+          "src/production_backend.cpp": "100b26158daf1a4c8c86201a11e37bb55fc052531d0170af368be1ac0e72a6da",
+          "src/reexport.cpp": "24838fce97e0003776e65dd3e89283cad67dd40e4668156871a0d0333898cee8",
+          "src/reexport.hpp": "5f2c8043c34e3c9042bb1c805034bac5d1e66f736ba60feefc89f08213a060a8",
+          "src/region_recognition.cpp": "30001942026f582eeda60f7ee8d4cd1821490d9f3ac7641886f8fbfbdc4958d5",
+          "src/region_recognition.hpp": "0683d6f11d7787c8a8acc0444e36e20d3028e7ca0de349819898252a260052bc",
+          "src/region_structure.cpp": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+          "src/region_structure.hpp": "56549d422d4d996e7455c157d190bd4e57d4851be0b70e09219d7b63fb7118e9",
+          "src/schema_validator.cpp": "63e4da588c998f08757fa2cbf61aff53f95cedc2b5881de734a8a1edfbd07fa6",
+          "src/schema_validator.hpp": "4194cc9d9566e9b21c8debbdfd59b9d5047e81fc5315a50a411585f8bffd0552",
+          "src/sha256.cpp": "15cdc6dd135c83e7fc1f9ee5b81633904ef2650684eb3d8bfc7a7cbda31e3dd9",
+          "src/table_parser.cpp": "8cdaa9759a160a2170b6b5a26570e1d530119412c55381dbcccbe937e511ab87",
+          "src/table_parser.hpp": "3532e5fa7f9feb3241a98d9cb6064c3c9c1c85e3ee21f5a730b6fed32c673365",
+          "src/visual_adaptation.cpp": "309cc69991925735050df1ce275a755ff12baa4bca81ecb1e0c924c6aef45f7b",
+          "src/visual_adaptation.hpp": "1e93e297b86baa47e4459a270e0ce917725511b4bb58d988f7ac51976e362b3b",
+          "include/dococr/dococr.h": "988948fcdf93b41ba17fa5ebdfdd4a43f837d785cdf8ccf68f2bc3a64a91c214",
+          "include/dococr/inference.hpp": "67b9b832d4c64b0cf50d1ff10040c7a61c45983ebefea1b7c1009b94a5f131bb",
+          "CMakeLists.txt": "6ebe0155d6f414ed9f78d51d813a15325599f272cb32438dc77dbc336d6848a5",
+          "docs/issue-26/document-ir-1.8-image.schema.json": "887d624d63d018932393b6ee76adb057171c0415c793f856d70fa018efe67871",
+          "docs/issue-26/document-ir-1.8-pdf.schema.json": "4d82f5b1a2b6cddfd33bef0ddbb7db3c0750dbe364c64f27832d5860b2eb273b",
+          "docs/issue-26/document-ir-1.9-image.schema.json": "084eba8a3030450fe368a9c5e2b52d0e399a3f7493737d9904437bafac0a316c",
+          "docs/issue-26/document-ir-1.9-pdf.schema.json": "8aebcbad92043511cc89840e49db2ff167389e97289014c76d030c007c72fbdc"
+        },
+        "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968"
+      },
+      "config_hash": "b22bde894225c5a0679d323f15585df9f78c0da451e9fd9aeefc711a23a213f3",
+      "preprocessing": "smartresize_lanczos",
+      "score_threshold": 0.3,
+      "raw_candidates": 300,
+      "selected_candidates": 16,
+      "filter_reasons": {
+        "nms_cross_class": 3,
+        "contained_by_large_class": 1,
+        "below_score_threshold": 280
+      },
+      "source_size": [
+        1654,
+        2339
+      ],
+      "pngs": {
+        "01-score-filtered.png": {
+          "sha256": "0ca2b97b32e19a49d7a70b2c736169c9118a6c6f503d69e2c197b4ebcc8bfdd6",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "02-postprocessed.png": {
+          "sha256": "bdb4785245509b68be2ec49c385da9c879b29627003d1f5828302c7733bf75de",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "03-regions.png": {
+          "sha256": "fd5aed2b67079b5479a6279473c6e3c6c04fe536b2135edef67e6f6e9b959004",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "04-reading-order.png": {
+          "sha256": "79d1d6171edf7ac11941a6471235a0e83914e40f1df15b511e5f1d8874318649",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        },
+        "05-ground-truth.png": {
+          "sha256": "84697416bb0e13a7d8f9044480fbed47bca7cb7df8e983ad5c4764fef3ab893b",
+          "size": [
+            1448,
+            2144
+          ],
+          "scale": 0.8755878580589995,
+          "page_origin_in_png": [
+            0,
+            96
+          ]
+        }
+      }
+    }
+  ],
+  "stages": {
+    "01-score-filtered": [
+      "Score-filtered original boxes",
+      "Before local NMS / containment / overlap filtering"
+    ],
+    "02-postprocessed": [
+      "Postprocessed layout boxes",
+      "Selected crop_bbox; owned children shown in gray"
+    ],
+    "03-regions": [
+      "Saved recognition regions",
+      "Final saved Region bounds; dashed outline = expanded owner"
+    ],
+    "04-reading-order": [
+      "Saved final reading order",
+      "# = final order; dashed vertical line = page midpoint"
+    ],
+    "05-ground-truth": [
+      "Upstream ground truth",
+      "Reference annotations; not model detections"
+    ]
+  },
+  "max_edge": 2048,
+  "renderer_sha256": "398d78a0081eb77cc1516e20d4ee7a12a9a6b416f8f1800b01f81d52ecd2fcd9"
+}

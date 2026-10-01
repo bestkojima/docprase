@@ -1,0 +1,127 @@
+{
+  "execution": "fresh_public_MNN_OvisOCR_inference",
+  "completed": 20,
+  "all_jobs_completed": true,
+  "pages": [
+    {
+      "page_id": "odb-01",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 135.76416837700526
+    },
+    {
+      "page_id": "odb-02",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 151.5435231779993
+    },
+    {
+      "page_id": "odb-03",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 59.749960424000164
+    },
+    {
+      "page_id": "odb-04",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 123.66473239199695
+    },
+    {
+      "page_id": "odb-05",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 51.032311132999894
+    },
+    {
+      "page_id": "odb-06",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 103.9645929679973
+    },
+    {
+      "page_id": "odb-07",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 34.98124341900257
+    },
+    {
+      "page_id": "odb-08",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 64.94496210200305
+    },
+    {
+      "page_id": "odb-09",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 36.1280863199936
+    },
+    {
+      "page_id": "odb-10",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 49.70156288600265
+    },
+    {
+      "page_id": "odb-11",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 78.48719867700129
+    },
+    {
+      "page_id": "odb-12",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 45.85830429300404
+    },
+    {
+      "page_id": "odb-13",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 50.821079743000155
+    },
+    {
+      "page_id": "odb-14",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 50.9251018319992
+    },
+    {
+      "page_id": "odb-15",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 58.05160229399917
+    },
+    {
+      "page_id": "odb-16",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 47.64577409800404
+    },
+    {
+      "page_id": "odb-17",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 128.36137923099886
+    },
+    {
+      "page_id": "odb-18",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 67.64075279799727
+    },
+    {
+      "page_id": "odb-19",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 217.19351683299465
+    },
+    {
+      "page_id": "odb-20",
+      "returncode": 0,
+      "candidate_intact": true,
+      "elapsed_seconds": 50.31480837100389
+    }
+  ]
+}

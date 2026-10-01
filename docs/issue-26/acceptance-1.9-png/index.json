@@ -1,0 +1,46 @@
+{
+  "source_run": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9",
+  "source_png_directory": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png",
+  "files": [
+    {
+      "path": "acceptance-1.9-png/odb-03/04-reading-order.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-03/04-reading-order.png",
+      "sha256": "7f5c8d9b31896357ed30e51f981db3523d04b31115f611f43cebff10952e6501"
+    },
+    {
+      "path": "acceptance-1.9-png/odb-03/q17-comparison.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-03/q17-comparison.png",
+      "sha256": "a95c6e8f57e03c12695f5837cb70057b0db13a75eb492ec756b4903703a7fdc2"
+    },
+    {
+      "path": "acceptance-1.9-png/odb-03/q18-comparison.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-03/q18-comparison.png",
+      "sha256": "83c7ebc2eec2ed8f47f81cac583e606f92c3ec346a6e197a090032df1afd60c9"
+    },
+    {
+      "path": "acceptance-1.9-png/odb-07/04-reading-order.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-07/04-reading-order.png",
+      "sha256": "d0409feb834e4a8bae88afd957c8eefe568c93fb6a9e8bbbfcb27a113011a4f5"
+    },
+    {
+      "path": "acceptance-1.9-png/odb-08/04-reading-order.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-08/04-reading-order.png",
+      "sha256": "7b5fb2ef406fc8b5f23c8daa164c940886b7c07e2196815df9371ad18cb26fff"
+    },
+    {
+      "path": "acceptance-1.9-png/odb-11/04-reading-order.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-11/04-reading-order.png",
+      "sha256": "694e77c98871a740f373bc8ebaffa68501fccb442c507b6ce63341997f4fd05a"
+    },
+    {
+      "path": "acceptance-1.9-png/odb-13/04-reading-order.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-13/04-reading-order.png",
+      "sha256": "629bf373da8034a3b60aec5408e51af9156bf6ff3d56eb9d0d02cd1a28d849cb"
+    },
+    {
+      "path": "acceptance-1.9-png/odb-17/04-reading-order.png",
+      "source": "/home/dr/project/docprase/output/issue-26/acceptance-20-v1.9-png/odb-17/04-reading-order.png",
+      "sha256": "7fdceccdcc08799403c1f8405a38ef5225ebaebee31668390842c8fc55e15bf5"
+    }
+  ]
+}

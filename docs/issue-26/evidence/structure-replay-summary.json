@@ -1,0 +1,2144 @@
+{
+  "execution": "captured_model_tensors_and_transcription_replay_not_fresh_model_inference",
+  "fixture_cli_sha256": "e60adbd8054c66b9c635a091318217af97784cb5f093518c8e900963c5d44828",
+  "production_cli_sha256": "028544f3a8643b0d0af32b50a9ac75960f30a7d4366b97f631fcf5b807655f4b",
+  "fixture_library_sha256": "52e9de707a543290ad6c08af80bc82b66040c9dab17e064e4bad9c9fe1b56074",
+  "baseline_library_sha256": "1ef9fba7b8bc777e4f03855cca1fab633809708b6aecbb2e6866cebeda2bc680",
+  "baseline_core_source_sha256": "6e146ff0b7cc145d4ba3b7267ad35bdc5a4a8ab4a464b8a20df1a1ea090d7f8b",
+  "fixture_backend_source_sha256": "310edc7f83e83eae165b0037de9391d14846a379fe6f472cff890e8034b1d639",
+  "annotation_sha256": "b8abbc6706157b31281040207668e1bb035878c6b836f45bd63225d661a8500f",
+  "core_source_sha256": "d2789245281b6c891d435b77b0e3a7c933f6c153f1bb9e8acae8a078e501fcd6",
+  "structure_source_sha256": "7d9d1481d0df8c3d9d837dc6a67e66ba862f4e1ed75f0af2be6bd7db145c9079",
+  "pages": [
+    {
+      "page_id": "odb-01",
+      "source_image_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+      "before_document_sha256": "d5eea4a10e8c0b2b7c34e6bd6cf7b53ee90aaa2f242a1bdce1b1efda8d49ebe1",
+      "after_document_sha256": "491dd781ffe51d204f8bda8c335928e44cb6801769196d208345a787a086b50f",
+      "selected_candidates": 68,
+      "regions": 44,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 171,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-02",
+      "source_image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+      "before_document_sha256": "e767b58e1c68ac0cf177ebc74b9f43821d05a6ab2c7aaffcd64f430d161f02fc",
+      "after_document_sha256": "6eae7536f6929a0cf2100f094a7c4313ee18d52f5544162992e2cb3fb598c12e",
+      "selected_candidates": 101,
+      "regions": 48,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 231,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-03",
+      "source_image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "before_document_sha256": "1f6e7bf181be630ef0f4ea5250a9fe1c9e2308fc6c9bc8b4fdcd3d575d7f2d4a",
+      "after_document_sha256": "936bed6aa27bcb32a1d1994cda92fcdcb7f94c274f87bba3e85fdab9f1b21c28",
+      "selected_candidates": 37,
+      "regions": 30,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [
+        {
+          "bbox": [
+            69,
+            460,
+            1280,
+            700
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0008",
+          "items": [
+            {
+              "caption_block_id": "b0014",
+              "image_block_id": "b0008"
+            },
+            {
+              "caption_block_id": "b0013",
+              "image_block_id": "b0007"
+            },
+            {
+              "caption_block_id": "b0012",
+              "image_block_id": "b0010"
+            },
+            {
+              "caption_block_id": "b0011",
+              "image_block_id": "b0009"
+            }
+          ],
+          "type": "horizontal_images"
+        },
+        {
+          "bbox": [
+            146,
+            789,
+            1114,
+            1092
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0017",
+          "items": [
+            {
+              "caption_block_id": "b0021",
+              "image_block_id": "b0017"
+            },
+            {
+              "caption_block_id": "b0020",
+              "image_block_id": "b0016"
+            },
+            {
+              "caption_block_id": "b0022",
+              "image_block_id": "b0019"
+            },
+            {
+              "caption_block_id": "b0023",
+              "image_block_id": "b0018"
+            }
+          ],
+          "type": "horizontal_images"
+        }
+      ],
+      "captions": [
+        {
+          "caption_block_id": "b0013",
+          "image_block_id": "b0007"
+        },
+        {
+          "caption_block_id": "b0014",
+          "image_block_id": "b0008"
+        },
+        {
+          "caption_block_id": "b0011",
+          "image_block_id": "b0009"
+        },
+        {
+          "caption_block_id": "b0012",
+          "image_block_id": "b0010"
+        },
+        {
+          "caption_block_id": "b0020",
+          "image_block_id": "b0016"
+        },
+        {
+          "caption_block_id": "b0021",
+          "image_block_id": "b0017"
+        },
+        {
+          "caption_block_id": "b0023",
+          "image_block_id": "b0018"
+        },
+        {
+          "caption_block_id": "b0022",
+          "image_block_id": "b0019"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 190,
+        "fixed": [
+          {
+            "annotation_ids": [
+              29,
+              30
+            ],
+            "block_ids": [
+              "b0014",
+              "b0007"
+            ]
+          },
+          {
+            "annotation_ids": [
+              29,
+              28
+            ],
+            "block_ids": [
+              "b0014",
+              "b0013"
+            ]
+          },
+          {
+            "annotation_ids": [
+              23,
+              25
+            ],
+            "block_ids": [
+              "b0010",
+              "b0012"
+            ]
+          },
+          {
+            "annotation_ids": [
+              23,
+              21
+            ],
+            "block_ids": [
+              "b0010",
+              "b0009"
+            ]
+          },
+          {
+            "annotation_ids": [
+              23,
+              27
+            ],
+            "block_ids": [
+              "b0010",
+              "b0011"
+            ]
+          },
+          {
+            "annotation_ids": [
+              25,
+              21
+            ],
+            "block_ids": [
+              "b0012",
+              "b0009"
+            ]
+          },
+          {
+            "annotation_ids": [
+              25,
+              27
+            ],
+            "block_ids": [
+              "b0012",
+              "b0011"
+            ]
+          },
+          {
+            "annotation_ids": [
+              22,
+              18
+            ],
+            "block_ids": [
+              "b0021",
+              "b0016"
+            ]
+          },
+          {
+            "annotation_ids": [
+              24,
+              26
+            ],
+            "block_ids": [
+              "b0019",
+              "b0022"
+            ]
+          },
+          {
+            "annotation_ids": [
+              24,
+              17
+            ],
+            "block_ids": [
+              "b0019",
+              "b0018"
+            ]
+          },
+          {
+            "annotation_ids": [
+              24,
+              19
+            ],
+            "block_ids": [
+              "b0019",
+              "b0023"
+            ]
+          },
+          {
+            "annotation_ids": [
+              26,
+              17
+            ],
+            "block_ids": [
+              "b0022",
+              "b0018"
+            ]
+          }
+        ],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-04",
+      "source_image_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
+      "before_document_sha256": "49f6cb3ecca7289b46475c91bc5f58f9c4314cd1c157c121ae03b374afc45874",
+      "after_document_sha256": "6d28826f8ad8ea45473348ea7f0d05ebe97a36dbb93da45c1af9e15332b8da2f",
+      "selected_candidates": 92,
+      "regions": 42,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [
+        {
+          "caption_block_id": "b0036",
+          "image_block_id": "b0030"
+        },
+        {
+          "caption_block_id": "b0035",
+          "image_block_id": "b0031"
+        },
+        {
+          "caption_block_id": "b0034",
+          "image_block_id": "b0032"
+        },
+        {
+          "caption_block_id": "b0037",
+          "image_block_id": "b0033"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 231,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-05",
+      "source_image_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+      "before_document_sha256": "c2f52344aa9139552bbc99b6e0531dcb50cefb39709486c3b3bfdc4448b152ef",
+      "after_document_sha256": "39ccefb954ec18f7c5f9e1ac990ed099f207bf11931093ab690b5664943bd3a9",
+      "selected_candidates": 44,
+      "regions": 14,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 91,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-06",
+      "source_image_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
+      "before_document_sha256": "9241f413f476f3f07c588be4e129dd1c253d0812b93fe89368bc5d53d83f7761",
+      "after_document_sha256": "9ba1810d420ef651049517950b41aef9d85a505b1f76e0c07e5bb81b8576f126",
+      "selected_candidates": 71,
+      "regions": 34,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [
+        {
+          "bbox": [
+            204,
+            1087,
+            948,
+            1336
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0024",
+          "items": [
+            {
+              "caption_block_id": "b0030",
+              "image_block_id": "b0024"
+            },
+            {
+              "caption_block_id": "b0029",
+              "image_block_id": "b0025"
+            }
+          ],
+          "type": "horizontal_images"
+        }
+      ],
+      "captions": [
+        {
+          "caption_block_id": "b0030",
+          "image_block_id": "b0024"
+        },
+        {
+          "caption_block_id": "b0029",
+          "image_block_id": "b0025"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 66,
+        "fixed": [
+          {
+            "annotation_ids": [
+              5,
+              21
+            ],
+            "block_ids": [
+              "b0030",
+              "b0025"
+            ]
+          },
+          {
+            "annotation_ids": [
+              5,
+              22
+            ],
+            "block_ids": [
+              "b0030",
+              "b0029"
+            ]
+          }
+        ],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-07",
+      "source_image_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "before_document_sha256": "edbe77a1623b95a3c6532d592a7c100624452df3db6fc04c439336fcfae9ca1b",
+      "after_document_sha256": "75e33352bb1dace95e4f22a0bc1f64471ff4904a319e86ca8fa395aa99cc6b70",
+      "selected_candidates": 11,
+      "regions": 11,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 45,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-08",
+      "source_image_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "before_document_sha256": "cfcd6a2bcb38254b193d287acc22b840b2a797f7c35fd7c69905f1c4952d6455",
+      "after_document_sha256": "c6f570108e59302eccbcb1fd6ce5bb45e944f12f55ed98ec45c75da1e6f23e6d",
+      "selected_candidates": 44,
+      "regions": 44,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [
+        {
+          "bbox": [
+            274,
+            1072,
+            1105,
+            1216
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0016",
+          "items": [
+            {
+              "caption_block_id": "b0020",
+              "image_block_id": "b0016"
+            },
+            {
+              "caption_block_id": "b0021",
+              "image_block_id": "b0018"
+            },
+            {
+              "caption_block_id": "b0022",
+              "image_block_id": "b0019"
+            },
+            {
+              "caption_block_id": "b0023",
+              "image_block_id": "b0017"
+            }
+          ],
+          "type": "horizontal_images"
+        },
+        {
+          "bbox": [
+            275,
+            1262,
+            1105,
+            1410
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0024",
+          "items": [
+            {
+              "caption_block_id": "b0028",
+              "image_block_id": "b0024"
+            },
+            {
+              "caption_block_id": "b0030",
+              "image_block_id": "b0025"
+            },
+            {
+              "caption_block_id": "b0031",
+              "image_block_id": "b0026"
+            },
+            {
+              "caption_block_id": "b0029",
+              "image_block_id": "b0027"
+            }
+          ],
+          "type": "horizontal_images"
+        },
+        {
+          "bbox": [
+            275,
+            1459,
+            1106,
+            1604
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0032",
+          "items": [
+            {
+              "caption_block_id": "b0036",
+              "image_block_id": "b0032"
+            },
+            {
+              "caption_block_id": "b0037",
+              "image_block_id": "b0033"
+            },
+            {
+              "caption_block_id": "b0038",
+              "image_block_id": "b0034"
+            },
+            {
+              "caption_block_id": "b0039",
+              "image_block_id": "b0035"
+            }
+          ],
+          "type": "horizontal_images"
+        }
+      ],
+      "captions": [
+        {
+          "caption_block_id": "b0020",
+          "image_block_id": "b0016"
+        },
+        {
+          "caption_block_id": "b0023",
+          "image_block_id": "b0017"
+        },
+        {
+          "caption_block_id": "b0021",
+          "image_block_id": "b0018"
+        },
+        {
+          "caption_block_id": "b0022",
+          "image_block_id": "b0019"
+        },
+        {
+          "caption_block_id": "b0028",
+          "image_block_id": "b0024"
+        },
+        {
+          "caption_block_id": "b0030",
+          "image_block_id": "b0025"
+        },
+        {
+          "caption_block_id": "b0031",
+          "image_block_id": "b0026"
+        },
+        {
+          "caption_block_id": "b0029",
+          "image_block_id": "b0027"
+        },
+        {
+          "caption_block_id": "b0036",
+          "image_block_id": "b0032"
+        },
+        {
+          "caption_block_id": "b0037",
+          "image_block_id": "b0033"
+        },
+        {
+          "caption_block_id": "b0038",
+          "image_block_id": "b0034"
+        },
+        {
+          "caption_block_id": "b0039",
+          "image_block_id": "b0035"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 946,
+        "fixed": [
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-4b9a0hhc"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0016"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box_id_13"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0020"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-skyl0c32"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0019"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-sxdjkzn1"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0022"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-tciz4fhq"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0017"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-ldi7ig2g"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0023"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-vsk65hqs"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0026"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-at7lkvcj"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0031"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-gqyrxxuo"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0027"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-a7j84i4i"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0029"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_11",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0014",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-4b9a0hhc"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0016"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box_id_13"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0020"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-skyl0c32"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0019"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-sxdjkzn1"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0022"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-tciz4fhq"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0017"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-ldi7ig2g"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0023"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-vsk65hqs"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0026"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-at7lkvcj"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0031"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-gqyrxxuo"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0027"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-a7j84i4i"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0029"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box_id_12",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0015",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-skyl0c32"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0019"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-sxdjkzn1"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0022"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-tciz4fhq"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0017"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-ldi7ig2g"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0023"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-vsk65hqs"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0026"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-at7lkvcj"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0031"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-gqyrxxuo"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0027"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-a7j84i4i"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0029"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-olgm3udy",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0018",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-skyl0c32"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0019"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-sxdjkzn1"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0022"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-tciz4fhq"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0017"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-ldi7ig2g"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0023"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-vsk65hqs"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0026"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-at7lkvcj"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0031"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-gqyrxxuo"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0027"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-a7j84i4i"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0029"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ug0haj9k",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0021",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-skyl0c32",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0019",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-skyl0c32",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0019",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-skyl0c32",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0019",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-skyl0c32",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0019",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-sxdjkzn1",
+              "box-tciz4fhq"
+            ],
+            "block_ids": [
+              "b0022",
+              "b0017"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-sxdjkzn1",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0022",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-sxdjkzn1",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0022",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-sxdjkzn1",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0022",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-sxdjkzn1",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0022",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-tciz4fhq",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0017",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-tciz4fhq",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0017",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-tciz4fhq",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0017",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-tciz4fhq",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0017",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ldi7ig2g",
+              "box-rpvc9hug"
+            ],
+            "block_ids": [
+              "b0023",
+              "b0024"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ldi7ig2g",
+              "box-dk3riamq"
+            ],
+            "block_ids": [
+              "b0023",
+              "b0028"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ldi7ig2g",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0023",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-ldi7ig2g",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0023",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-vsk65hqs"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0026"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-at7lkvcj"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0031"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-gqyrxxuo"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0027"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-a7j84i4i"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0029"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-kqjiomm1",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0025",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-vsk65hqs"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0026"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-at7lkvcj"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0031"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-gqyrxxuo"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0027"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-a7j84i4i"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0029"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-waz6wbj2",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0030",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-vsk65hqs",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0026",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-vsk65hqs",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0026",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-at7lkvcj",
+              "box-gqyrxxuo"
+            ],
+            "block_ids": [
+              "b0031",
+              "b0027"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-at7lkvcj",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0031",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-at7lkvcj",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0031",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-gqyrxxuo",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0027",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-gqyrxxuo",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0027",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-a7j84i4i",
+              "box-hfwbtc9b"
+            ],
+            "block_ids": [
+              "b0029",
+              "b0032"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-a7j84i4i",
+              "box-sis3nz60"
+            ],
+            "block_ids": [
+              "b0029",
+              "b0036"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-jgw4k7zp",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0033",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-jgw4k7zp",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0033",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-jgw4k7zp",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0033",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-jgw4k7zp",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0033",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-y2welj2p",
+              "box-u3vta2gp"
+            ],
+            "block_ids": [
+              "b0037",
+              "b0034"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-y2welj2p",
+              "box-wn2olkx6"
+            ],
+            "block_ids": [
+              "b0037",
+              "b0038"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-y2welj2p",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0037",
+              "b0035"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-y2welj2p",
+              "box-dhrk0qmz"
+            ],
+            "block_ids": [
+              "b0037",
+              "b0039"
+            ]
+          },
+          {
+            "annotation_ids": [
+              "box-wn2olkx6",
+              "box-eg7fgwui"
+            ],
+            "block_ids": [
+              "b0038",
+              "b0035"
+            ]
+          }
+        ],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-09",
+      "source_image_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+      "before_document_sha256": "d2efb66c73f931f8de9b55e7f0bcc655cc73aca4e0060e908eea6fc18fd90a97",
+      "after_document_sha256": "8091f75d44e4c3b8f98f6046aaedaabffc00af61fc69bfe88460f84882edf5c3",
+      "selected_candidates": 10,
+      "regions": 10,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 36,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-10",
+      "source_image_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+      "before_document_sha256": "ead514ec2c91f1590c18b8963809459183622f4344d8150d636423ffa831c7fa",
+      "after_document_sha256": "1b98e1cf328997468a5824a5cf64b150a753e3cff564346e78d8a0ca8603d941",
+      "selected_candidates": 23,
+      "regions": 11,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 55,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-11",
+      "source_image_sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68",
+      "before_document_sha256": "09151454fb84937e3787055f566cd4f07358fc49a2e26fa799ed9ead1210e62b",
+      "after_document_sha256": "87fabad2dd965e22b7a78a3788e4d514f40fad82fcfb1b42f0258c328a8972c0",
+      "selected_candidates": 12,
+      "regions": 8,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 6,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-12",
+      "source_image_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
+      "before_document_sha256": "7201dc227e0ac06cfd16b31482cffdacabd966954fe8f4d9685b15fd2a6e9f10",
+      "after_document_sha256": "1aedc582e9ddfcc80394395bc7ab02425d9607f6b7a2c5a6ac8147055fea2091",
+      "selected_candidates": 20,
+      "regions": 15,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 78,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-13",
+      "source_image_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "before_document_sha256": "d7ee9f69808f06725f30be21e89331b2577c194498739a91bc73b0946b16d904",
+      "after_document_sha256": "3f038ea205647848e51c63ef718be0ad43465414a282918d1be992720c0b0939",
+      "selected_candidates": 16,
+      "regions": 16,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [
+        {
+          "bbox": [
+            1692,
+            306,
+            2063,
+            530
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0006",
+          "items": [
+            {
+              "caption_block_id": "b0009",
+              "image_block_id": "b0006"
+            },
+            {
+              "caption_block_id": "b0008",
+              "image_block_id": "b0005"
+            }
+          ],
+          "type": "horizontal_images"
+        },
+        {
+          "bbox": [
+            147,
+            1156,
+            889,
+            1441
+          ],
+          "evidence": "fixed_anchor_and_shared_body_or_labels",
+          "id": "images-r0012",
+          "items": [
+            {
+              "caption_block_id": "b0016",
+              "image_block_id": "b0012"
+            },
+            {
+              "caption_block_id": "b0015",
+              "image_block_id": "b0013"
+            }
+          ],
+          "type": "horizontal_images"
+        }
+      ],
+      "captions": [
+        {
+          "caption_block_id": "b0008",
+          "image_block_id": "b0005"
+        },
+        {
+          "caption_block_id": "b0009",
+          "image_block_id": "b0006"
+        },
+        {
+          "caption_block_id": "b0016",
+          "image_block_id": "b0012"
+        },
+        {
+          "caption_block_id": "b0015",
+          "image_block_id": "b0013"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 105,
+        "fixed": [
+          {
+            "annotation_ids": [
+              10,
+              14
+            ],
+            "block_ids": [
+              "b0009",
+              "b0005"
+            ]
+          },
+          {
+            "annotation_ids": [
+              25,
+              26
+            ],
+            "block_ids": [
+              "b0016",
+              "b0013"
+            ]
+          }
+        ],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-14",
+      "source_image_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+      "before_document_sha256": "3b1eeaf58df14d01cdecbb68d8c80eaf46ebc203857fe1372f9e319933411deb",
+      "after_document_sha256": "a738231691d180a1daf1d3e844a0757797728dff6608cf63d97b92c9d2a4aede",
+      "selected_candidates": 13,
+      "regions": 9,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 28,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-15",
+      "source_image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "before_document_sha256": "51ab45f10b498bca18885f7c9cc50474e15853274c5a9c321209290af2aca89a",
+      "after_document_sha256": "826c1c1ff0a5f84793a1eb4b2a202d51eee152b1699e3317fd55a25d2576c5b1",
+      "selected_candidates": 18,
+      "regions": 18,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [
+        {
+          "caption_block_id": "b0005",
+          "image_block_id": "b0004"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 91,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-16",
+      "source_image_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
+      "before_document_sha256": "05731523b06bd73fd2deb51869b5e91e3526b450322869ad03937d17fb3571a8",
+      "after_document_sha256": "95f7754c36e6a67594b780014ee031c2bf3974e5b150f2d7b7b2dd43d84df990",
+      "selected_candidates": 19,
+      "regions": 14,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [
+        {
+          "caption_block_id": "b0004",
+          "image_block_id": "b0003"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 55,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-17",
+      "source_image_sha256": "3563a859d407026c160f6917d5a625407a7565d83429f13ff85220b2ed356136",
+      "before_document_sha256": "cc64dea4551a57aa4388dfe397ba6e2f965c9f78921056780b03e0f4cd009619",
+      "after_document_sha256": "b5222798eacdfec0f5313e180ac5b3b544fa8cb1c15a7bbd7cf71c4fbd7ea143",
+      "selected_candidates": 55,
+      "regions": 22,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 105,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-18",
+      "source_image_sha256": "46e8933d18a8ee8135f43fd29da3df9f2f68449e96667c44dfc103c385d86402",
+      "before_document_sha256": "468b2971900d0cbecb0983cfaaea2069a140e19208256604e37db9cb68c1edd4",
+      "after_document_sha256": "79c84fc22d56fecb3deb058fd4caaba44412726569f9a55aa62bc7e12a83ef8e",
+      "selected_candidates": 24,
+      "regions": 24,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [
+        {
+          "caption_block_id": "b0011",
+          "image_block_id": "b0010"
+        },
+        {
+          "caption_block_id": "b0020",
+          "image_block_id": "b0017"
+        }
+      ],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 190,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-19",
+      "source_image_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
+      "before_document_sha256": "cee7b309ba2f098a7bcf06b302ff41ad152d540138ca4ab4fc16d4bd54d22c48",
+      "after_document_sha256": "75525e66b94dd4f9c7acd15df204e591e99bf1d3e1d59d15224ee3c10fe6a11c",
+      "selected_candidates": 74,
+      "regions": 74,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 903,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    },
+    {
+      "page_id": "odb-20",
+      "source_image_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+      "before_document_sha256": "56934a51f97a3394025b801af2d595a9f379e5a82dfcfa29d674350868dafaff",
+      "after_document_sha256": "2ee5cac99be210897139d9e233e8ff196a3798c8216f92a7ac77a5e971d32ad6",
+      "selected_candidates": 16,
+      "regions": 16,
+      "unchanged_candidates_regions_ownership_and_transcription": true,
+      "first_export_equals_reexport": true,
+      "groups": [],
+      "captions": [],
+      "ambiguous_caption_ids": [],
+      "reading_order": {
+        "denominator": 120,
+        "fixed": [],
+        "newly_wrong": [],
+        "basis": "fixed_baseline_GT_pairing; image-caption semantic adjacency may differ from GT row order"
+      }
+    }
+  ]
+}

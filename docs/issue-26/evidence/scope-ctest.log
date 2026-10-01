@@ -1,0 +1,53 @@
+Test project /tmp/docprase-issue26-build
+      Start  1: contract
+ 1/24 Test  #1: contract .........................   Passed    0.02 sec
+      Start  2: visual_adaptation_probe
+ 2/24 Test  #2: visual_adaptation_probe ..........   Passed    0.04 sec
+      Start  3: cli_integration
+ 3/24 Test  #3: cli_integration ..................   Passed    0.20 sec
+      Start  4: reexport_integration
+ 4/24 Test  #4: reexport_integration .............   Passed    1.66 sec
+      Start  5: config_integration
+ 5/24 Test  #5: config_integration ...............   Passed    0.29 sec
+      Start  6: config_abi
+ 6/24 Test  #6: config_abi .......................   Passed    0.59 sec
+      Start  7: layout_integration
+ 7/24 Test  #7: layout_integration ...............   Passed    0.49 sec
+      Start  8: issue19_dedup
+ 8/24 Test  #8: issue19_dedup ....................   Passed    0.21 sec
+      Start  9: issue20_geometry
+ 9/24 Test  #9: issue20_geometry .................   Passed    0.13 sec
+      Start 10: issue20_owned_crop
+10/24 Test #10: issue20_owned_crop ...............   Passed    0.50 sec
+      Start 11: issue20_tuning
+11/24 Test #11: issue20_tuning ...................   Passed    0.68 sec
+      Start 12: issue20_large_page
+12/24 Test #12: issue20_large_page ...............   Passed    2.91 sec
+      Start 13: printed_page_integration
+13/24 Test #13: printed_page_integration .........   Passed    1.45 sec
+      Start 14: issue21_quality
+14/24 Test #14: issue21_quality ..................   Passed    1.74 sec
+      Start 15: issue22_retry
+15/24 Test #15: issue22_retry ....................   Passed    1.82 sec
+      Start 16: printed_formula_integration
+16/24 Test #16: printed_formula_integration ......   Passed    3.82 sec
+      Start 17: printed_table_integration
+17/24 Test #17: printed_table_integration ........   Passed    1.60 sec
+      Start 18: reading_order_integration
+18/24 Test #18: reading_order_integration ........   Passed    2.40 sec
+      Start 19: issue26_structure
+19/24 Test #19: issue26_structure ................   Passed    2.63 sec
+      Start 20: pdf_integration
+20/24 Test #20: pdf_integration ..................   Passed    2.20 sec
+      Start 21: pdf_abi
+21/24 Test #21: pdf_abi ..........................   Passed    0.16 sec
+      Start 22: printed_page_cancel
+22/24 Test #22: printed_page_cancel ..............   Passed    0.90 sec
+      Start 23: job_control
+23/24 Test #23: job_control ......................   Passed    3.77 sec
+      Start 24: cli_job_control
+24/24 Test #24: cli_job_control ..................   Passed    0.67 sec
+
+100% tests passed out of 24
+
+Total Test time (real) =  30.89 sec

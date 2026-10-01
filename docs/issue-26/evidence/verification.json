@@ -1,0 +1,51 @@
+{
+  "scope": "issue26_first_two_items_image_order_and_caption_binding",
+  "ctest": {
+    "total": 24,
+    "passed": 24
+  },
+  "older_1_7_reexport_passed": true,
+  "before_regression": {
+    "returncode": 1,
+    "evidence": "before-regression.log"
+  },
+  "real": {
+    "page_id": "odb-03",
+    "command": [
+      "/home/dr/project/docprase/output/issue-26/real-final/.runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue-26/real-final/.runtime/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue-26/real-final/odb-03/job"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 67.6786875559992,
+    "document_sha256": "5f228311c100cb666bef283eb534a4913ba0a84a38daf10cdbceef7ca37ef0a5",
+    "source_hashes": {
+      "src/core.cpp": "d2789245281b6c891d435b77b0e3a7c933f6c153f1bb9e8acae8a078e501fcd6",
+      "src/region_structure.cpp": "7d9d1481d0df8c3d9d837dc6a67e66ba862f4e1ed75f0af2be6bd7db145c9079",
+      "src/reexport.cpp": "1ce18819edc6218eaefd7a1f9cc2970589ae5edfcbb79542cdd7037e453310e8"
+    },
+    "groups": 2,
+    "captions": 8,
+    "questions_17_18_left_to_right": true,
+    "first_export_equals_reexport": true
+  },
+  "replay": {
+    "pages": 20,
+    "selected_candidates": 768,
+    "regions": 504,
+    "comparable_order_pairs": 3743,
+    "fixed_order_pairs": 139,
+    "newly_wrong_order_pairs": 0,
+    "execution": "captured_model_tensors_and_transcription_replay_not_fresh_model_inference"
+  },
+  "python_unittest": {
+    "passed_cases": 21,
+    "unloaded_module": "test_model_probe_layout",
+    "reason": "NumPy absent",
+    "evidence": "unittest-with-deps.log"
+  }
+}

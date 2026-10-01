@@ -1,0 +1,9 @@
+{
+  "implementation_commit": "4b1cf084de80e188a67eaf254d7c77413e11b556",
+  "frozen_base_commit": "d5cd4beeb6b2cee17ab907b08fa4436718206edd",
+  "execution_was_uncommitted": true,
+  "submitted_sources_match_frozen_candidate": true,
+  "verified_source_files": 43,
+  "freeze_sha256": "54f54ec408b9cd906b79ab30d5111b51dfcf7a118362771c32d356d4bc293968",
+  "acceptance_sha256": "c465628b374765d6b1dc68837e8cdca24179beeb789b44b1fee534da52e6a199"
+}
