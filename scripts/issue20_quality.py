@@ -91,6 +91,32 @@ def ownership_audit(document, annotation=None):
                 unverified_formula_ownership=unmatched_formula)
 
 
+def common_reading_order(before, after):
+    """只比较两侧共同可评的同一标注对，避免新增匹配改变分母。"""
+    def indexed(value):
+        return {(category, str(r['annotation_id'])): r for category in
+                ('text', 'independent_formula', 'table', 'figure')
+                for r in value['recognition'][category]['rows'] if isinstance(r.get('order'), int)
+                and r.get('reading_order_position') is not None}
+    old, new = indexed(before), indexed(after)
+    common = sorted(old.keys() & new.keys(), key=lambda k: (old[k]['order'], k))
+    counts, examples = Counter(), []
+    for i, a in enumerate(common):
+        for b in common[i+1:]:
+            if old[a]['order'] == old[b]['order']:
+                continue
+            was_correct = old[a]['reading_order_position'] < old[b]['reading_order_position']
+            is_correct = new[a]['reading_order_position'] < new[b]['reading_order_position']
+            counts['evaluable'] += 1
+            counts['before_correct'] += was_correct
+            counts['after_correct'] += is_correct
+            counts['newly_wrong'] += was_correct and not is_correct
+            counts['corrected'] += not was_correct and is_correct
+            if was_correct and not is_correct and len(examples) < 10:
+                examples.append(dict(first=a, second=b))
+    return dict(counts=counts, newly_wrong_examples=examples)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--before', type=Path, required=True)
@@ -140,12 +166,20 @@ def main():
                                          recognition_unit_difference=sorted(actual_units ^ expected_units)))
             receipt = document_path.parent.parent/'command.json'
             row[name]['execution_receipt'] = json.loads(receipt.read_text()) if receipt.exists() else None
+            positions = {bid: i for i, bid in enumerate(page['reading_order'])}
+            for category in ('text', 'independent_formula', 'table', 'figure'):
+                for item in row[name]['recognition'][category]['rows']:
+                    item['reading_order_position'] = positions.get(item['block_id'])
         report['pages'][spec['id']] = row
     # 对照只纳入两侧均有产物的页面；完整运行必须覆盖20页。
     paired = {p: r for p, r in report['pages'].items() if 'before' in r and 'after' in r}
     report['paired_pages'] = list(paired)
     report['annotation_changes'] = dict(newly_matched=[], newly_unmatched=[])
+    report['common_reading_order'] = dict(counts=Counter(), pages={})
     for page_id, row in paired.items():
+        order = common_reading_order(row['before'], row['after'])
+        report['common_reading_order']['counts'].update(order['counts'])
+        report['common_reading_order']['pages'][page_id] = order
         def matched(side):
             return {(c, str(a)) for c, m in row[side]['layout'].items() if c != 'total' for a, _ in m['matches']}
         before, after = matched('before'), matched('after')

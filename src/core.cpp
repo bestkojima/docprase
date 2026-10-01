@@ -226,7 +226,7 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
         const Block& block = blocks[i];
         if (layout_geometry(block).x0 < page_width * 0.45)
             left_edge = std::min(left_edge, layout_geometry(block).x0);
-        if (layout_geometry(block).x0 >= page_width * 0.52 && block.model_label != "header" &&
+        if (layout_geometry(block).x0 >= page_width * 0.50 && block.model_label != "header" &&
             block.model_label != "footer" && block.model_label != "footnote" &&
             block.model_label != "vision_footnote") right_body.push_back(i);
     }
@@ -259,22 +259,45 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
         segment[i] = 2 * before + (is_span[i] ? 1 : 0);
     }
     for (int band = 0; band <= 2 * int(spans.size()); band += 2) {
+        if (page_width < 64) continue;
         bool left = false, right = false;
         for (size_t i = 0; i < size; ++i) if (segment[i] == band) {
-            if (layout_geometry(blocks[i]).x1 <= page_width * 0.48) left = true;
-            else if (layout_geometry(blocks[i]).x0 >= page_width * 0.52) right = true;
+            if (layout_geometry(blocks[i]).x1 <= page_width * 0.50) left = true;
+            else if (layout_geometry(blocks[i]).x0 >= page_width * 0.50) right = true;
         }
         if (!left || !right) continue;
         for (size_t i = 0; i < size; ++i) if (segment[i] == band)
-            column[i] = layout_geometry(blocks[i]).x1 <= page_width * 0.48 ? 0 :
-                layout_geometry(blocks[i]).x0 >= page_width * 0.52 ? 1 : 2;
+            column[i] = layout_geometry(blocks[i]).x1 <= page_width * 0.50 ? 0 :
+                layout_geometry(blocks[i]).x0 >= page_width * 0.50 ? 1 : 2;
     }
     std::vector<size_t> geometry(size);
     std::iota(geometry.begin(), geometry.end(), 0);
+    // 图片及短图注的一像素top抖动不能改变同一行的左右顺序。
+    // 固定行锚点先生成整数排序键；不用带容差的比较器，也不链式合并行。
+    std::vector<int> row_top(size);
+    for (size_t i = 0; i < size; ++i) row_top[i] = layout_geometry(blocks[i]).y0;
+    std::stable_sort(geometry.begin(), geometry.end(), [&](size_t a, size_t b) {
+        return row_top[a] < row_top[b];
+    });
+    std::vector<size_t> anchors;
+    for (size_t i : geometry) {
+        const Block& block = blocks[i];
+        if (block.type != "image" && block.model_label != "figure_title" &&
+            block.model_label != "vision_footnote" && block.model_label != "formula_number" &&
+            block.model_label != "number") continue;
+        const Box& bounds = layout_geometry(block);
+        auto anchor = std::find_if(anchors.rbegin(), anchors.rend(), [&](size_t a) {
+            const Box& other = layout_geometry(blocks[a]);
+            return segment[a] == segment[i] && column[a] == column[i] && blocks[a].type == block.type &&
+                bounds.y0 - other.y0 <= std::max(2, std::min(bounds.y1-bounds.y0, other.y1-other.y0)/10);
+        });
+        if (anchor == anchors.rend()) anchors.push_back(i);
+        else row_top[i] = row_top[*anchor];
+    }
     std::stable_sort(geometry.begin(), geometry.end(), [&](size_t a, size_t b) {
         if (segment[a] != segment[b]) return segment[a] < segment[b];
         if (column[a] != column[b]) return column[a] < column[b];
-        if (layout_geometry(blocks[a]).y0 != layout_geometry(blocks[b]).y0) return layout_geometry(blocks[a]).y0 < layout_geometry(blocks[b]).y0;
+        if (row_top[a] != row_top[b]) return row_top[a] < row_top[b];
         if (layout_geometry(blocks[a]).x0 != layout_geometry(blocks[b]).x0) return layout_geometry(blocks[a]).x0 < layout_geometry(blocks[b]).x0;
         return a < b;
     });
@@ -421,8 +444,8 @@ std::vector<SemanticRelation> associate_annotations(const std::vector<Block>& bl
             int max_gap = std::max(12, std::min(page_height * 5 / 100,
                 2 * (layout_geometry(heading).y1 - layout_geometry(heading).y0)));
             if (gap > max_gap) continue;
-            int column = span ? layout_geometry(other).x1 <= page_width * 0.48 ? 0 :
-                layout_geometry(other).x0 >= page_width * 0.52 ? 1 : 2 : 0;
+            int column = span ? layout_geometry(other).x1 <= page_width * 0.50 ? 0 :
+                layout_geometry(other).x0 >= page_width * 0.50 ? 1 : 2 : 0;
             if (gap < best_gap[column]) {
                 first[column] = &other; best_gap[column] = gap; ties[column] = false;
             } else if (gap == best_gap[column]) ties[column] = true;

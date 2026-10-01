@@ -46,7 +46,7 @@ def main():
                                 cwd=ROOT, capture_output=True, text=True)
         assert result.returncode == 0, result.stderr
         assert json.loads((root / 'rebuilt/document.json').read_text()) == doc
-        # 子框裁图跨出48%栏边界，不得改变原版面框的左右栏或rank顺序。
+        # 子框裁图跨出中线，不得改变原版面框的左右栏或rank顺序。
         Image.new('RGB', (1000, 1000), 'white').save(root / 'edge.png')
         result = run(fixture, config('printed_page_reading_owned_edge'), root / 'edge.png', root / 'edge')
         assert result.returncode == 0, result.stderr
@@ -56,8 +56,16 @@ def main():
         edge_regions = {r['id']: r for r in edge['regions']}
         assert [edge_layouts[edge_regions[b['source_region_ids'][0]]['source_layout_block_ids'][0]]['candidate_id']
                 for b in edge['blocks']] == [0, 1, 2, 3]
-        assert edge['blocks'][0]['bbox'][2] == 483
-        assert next(l for l in edge['layout_blocks'] if l['candidate_id'] == 0)['bbox'][2] == 480
+        assert edge['blocks'][0]['bbox'][2] == 503
+        assert next(l for l in edge['layout_blocks'] if l['candidate_id'] == 0)['bbox'][2] == 500
+        result = run(fixture, config('printed_page_reading_noise'), root / 'edge.png', root / 'noise')
+        assert result.returncode == 0, result.stderr
+        noise = json.loads((root / 'noise/document.json').read_text())['pages'][0]
+        noise_layouts = {l['id']: l for l in noise['layout_blocks']}
+        noise_regions = {r['id']: r for r in noise['regions']}
+        assert [noise_layouts[noise_regions[b['source_region_ids'][0]]['source_layout_block_ids'][0]]['candidate_id']
+                for b in noise['blocks']] == [0, 2, 3, 4, 5, 1]
+        assert noise['reading_order_evidence'] == {'source': 'geometry', 'reason': 'model_column_conflict'}
 
 
 if __name__ == '__main__':
