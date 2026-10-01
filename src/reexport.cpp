@@ -180,6 +180,138 @@ GenerationOutput saved_output(const Json& block) {
     }
     return output;
 }
+
+std::string decode_saved_bytes(const Json& saved, const char* key) {
+    if (saved.at(key).is_string()) return saved.at(key).get<std::string>();
+    const auto encoded = saved.at(std::string(key) + "_base64").get<std::string>();
+    const std::string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    require(encoded.size() % 4 == 0, "尝试 Base64 长度无效");
+    std::string result;
+    uint32_t bits = 0;
+    unsigned count = 0, padding = 0;
+    for (char character : encoded) {
+        if (character == '=') { ++padding; continue; }
+        const auto value = alphabet.find(character);
+        require(!padding && value != std::string::npos, "尝试 Base64 字符无效");
+        bits = (bits << 6) | uint32_t(value);
+        count += 6;
+        if (count >= 8) {
+            count -= 8;
+            result.push_back(char((bits >> count) & 255));
+        }
+    }
+    require(padding <= 2 && count == padding * 2 && (bits & ((1u << count) - 1)) == 0,
+            "尝试 Base64 补位无效");
+    return result;
+}
+
+GenerationOutput attempt_output(const Json& attempt) {
+    const auto& saved = attempt.at("output");
+    GenerationOutput output;
+    output.text = decode_saved_bytes(saved, "text");
+    output.raw_output = decode_saved_bytes(saved, "raw_output");
+    output.error = decode_saved_bytes(saved, "error");
+    output.finish_reason = saved.at("finish_reason").get<std::string>();
+    output.stop_reason = saved.at("stop_reason").get<std::string>();
+    output.visual_evidence = attempt.at("visual").at("evidence").get<std::string>();
+    output.visual_tokens = attempt.at("visual").at("token_count").get<uint32_t>();
+    return output;
+}
+
+void validate_recognition(const Json& block, const std::string& where) {
+    const auto& provenance = block.at("provenance");
+    const auto& recognition = provenance.at("recognition");
+    const auto& attempts = recognition.at("attempts");
+    uint64_t budget = 0, generation_ms = 0;
+    require(attempts.empty() ? recognition.at("selected_attempt").is_null() :
+        recognition.at("selected_attempt") == attempts.size(), where + " 最终采用尝试无效");
+    for (size_t i = 0; i < attempts.size(); ++i) {
+        const auto& attempt = attempts[i];
+        const auto& config = attempt.at("config");
+        const auto& output = attempt.at("output");
+        require(attempt.at("index") == i + 1, where + " 尝试序号无效");
+        require(output.at("generation_elapsed_ms").get<uint64_t>() <= attempt.at("elapsed_ms").get<uint64_t>(),
+                where + " 生成耗时超过尝试耗时");
+        for (const auto* key : {"text", "raw_output", "error"}) {
+            const auto& encoded = output.at(std::string(key) + "_base64");
+            require(output.at(key).is_null() != encoded.is_null(), where + " 尝试输出编码无效");
+            (void)decode_saved_bytes(output, key);
+        }
+        if (attempt.at("input_visual").is_object()) {
+            const auto& input = attempt.at("input_visual");
+            const auto& canvas = input.at("canvas_size");
+            const auto& content = input.at("content_size");
+            const auto& pad = input.at("pad_offset");
+            const auto& bbox = block.at("bbox");
+            const int w = bbox[2].get<int>() - bbox[0].get<int>(), h = bbox[3].get<int>() - bbox[1].get<int>();
+            const int cw = canvas[0].get<int>(), ch = canvas[1].get<int>();
+            const auto pixels = int64_t(cw) * ch;
+            const double scale = input.at("scale").get<double>();
+            require(cw > 0 && ch > 0 && cw % 32 == 0 && ch % 32 == 0 &&
+                pixels >= config.at("visual_min_pixels").get<int64_t>() &&
+                pixels <= config.at("visual_max_pixels").get<int64_t>() &&
+                std::abs(scale - std::min(double(cw) / w, double(ch) / h)) < 1e-9 &&
+                content[0] == std::round(w * scale) && content[1] == std::round(h * scale) &&
+                pad[0] == (cw - content[0].get<int>()) / 2 && pad[1] == (ch - content[1].get<int>()) / 2 &&
+                std::abs(input.at("rounding_error")[0].get<double>() - (content[0].get<int>() - w * scale)) < 1e-9 &&
+                std::abs(input.at("rounding_error")[1].get<double>() - (content[1].get<int>() - h * scale)) < 1e-9,
+                where + " 计划视觉输入变换无效");
+            if (attempt.at("visual").at("scale").get<double>() > 0)
+                for (const auto& item : input.items())
+                    require(item.value() == attempt.at("visual").at(item.key()), where + " 实际视觉变换与计划不一致");
+        }
+        budget += config.at("generation_timeout_ms").get<uint64_t>();
+        generation_ms += output.at("generation_elapsed_ms").get<uint64_t>();
+        if (i == 0) {
+            require(attempt.at("correction") == "initial" && config.at("visual_min_pixels") == 65536 &&
+                config.at("visual_max_pixels") == 313600, where + " 首次尝试配置无效");
+        } else {
+            const auto& previous = attempts[i - 1];
+            const auto& before = previous.at("config");
+            const auto first = attempt_output(previous);
+            const auto assessment = assess_output(first, block.at("type").get<std::string>());
+            require(config.at("generation_timeout_ms") == before.at("generation_timeout_ms"),
+                    where + " 重试生成时间预算改变");
+            if (attempt.at("correction") == "increase_token_budget")
+                require(assessment.state == "incomplete" && first.stop_reason == "token_limit" &&
+                    before.at("max_new_tokens").get<uint64_t>() < 4096 &&
+                    config.at("max_new_tokens") == 4096 && config.at("visual_min_pixels") == before.at("visual_min_pixels") &&
+                    config.at("visual_max_pixels") == before.at("visual_max_pixels"), where + " token 重试修正无效");
+            else if (attempt.at("correction") == "increase_visual_resolution")
+                require(first.stop_reason == "vision_missing" && first.visual_evidence == "no_visual_tokens" &&
+                    first.visual_tokens == 0 && config.at("max_new_tokens") == before.at("max_new_tokens") &&
+                    config.at("visual_min_pixels") == 262144 && config.at("visual_max_pixels") == 1120000 &&
+                    attempt.at("input_visual").is_object() && previous.at("input_visual").is_object() &&
+                    attempt.at("input_visual").at("scale").get<double>() > previous.at("input_visual").at("scale").get<double>() &&
+                    attempt.at("input_visual").at("canvas_size") != previous.at("input_visual").at("canvas_size"),
+                    where + " 视觉重试没有有效输入修正");
+            else require(false, where + " 重试修正缺失");
+        }
+    }
+    require(recognition.at("configured_generation_budget_ms") == budget && budget <= 240000 &&
+        recognition.at("generation_elapsed_ms") == generation_ms, where + " 尝试预算或耗时汇总无效");
+    if (attempts.empty()) {
+        require(block.at("status") == "skipped" || provenance.at("assessment").at("finish_reason") == "",
+                where + " 已执行结果缺少尝试记录");
+        return;
+    }
+    const auto& selected = attempts.back();
+    const auto& output = selected.at("output");
+    const auto& assessment = provenance.at("assessment");
+    require(output.at("raw_output") == provenance.at("raw_output") &&
+        output.at("raw_output_base64") == provenance.at("raw_output_base64") &&
+        output.at("text") == assessment.at("generation_text") &&
+        output.at("text_base64") == provenance.at("text_base64") &&
+        output.at("finish_reason") == assessment.at("finish_reason") &&
+        output.at("stop_reason") == assessment.at("stop_reason"), where + " 最终结果与采用尝试不一致");
+    const Json error = output.at("error").is_string() && output.at("error") != "" ? output.at("error") : Json(nullptr);
+    require(error == assessment.at("backend_error") && output.at("error_base64") == block.at("error_base64"),
+            where + " 后端错误与采用尝试不一致");
+    if (provenance.contains("visual")) {
+        for (const auto& item : selected.at("visual").items())
+            require(item.value() == provenance.at("visual").at(item.key()), where + " 视觉证据与采用尝试不一致");
+    } else require(selected.at("visual").at("evidence") == "", where + " 最终视觉证据缺失");
+}
 std::string render_page_markdown(const Json& page,
                                  const std::unordered_map<std::string, const Json*>& by_id) {
     std::string markdown;
@@ -226,7 +358,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     catch (const std::exception& error) { throw std::invalid_argument(std::string("JSON 解析失败：") + error.what()); }
     const auto version = string_field(document, "schema_version", "document");
     require(version == "1.0" || version == "1.1" || version == "1.2" ||
-            version == "1.3" || version == "1.4" || version == "1.5" || version == "1.6", "不支持 schema_version " + version);
+            version == "1.3" || version == "1.4" || version == "1.5" || (version == "1.6" || version == "1.7"), "不支持 schema_version " + version);
     validate_document_schema(document, version);
     const bool pdf = document.at("source").at("type") == "pdf";
     id(string_field(document, "document_id", "document"), "doc-[0-9a-f]{16}", "document_id");
@@ -353,7 +485,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                         where + " 公式格式无效");
             if (type == "table" && content.contains("table") && content.at("table").is_object())
                 require(format == "html", where + " 表格 format 无效");
-            if (type == "table" && (version == "1.2" || version == "1.3" || version == "1.5" || version == "1.6" || pdf)) {
+            if (type == "table" && (version == "1.2" || version == "1.3" || version == "1.5" || (version == "1.6" || version == "1.7") || pdf)) {
                 if (block.at("status") == "ok") structured_table(content, where);
                 else require(field(content, "table", where).is_null() &&
                              content.at("text") == "" && format == "markdown",
@@ -370,7 +502,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             if (type == "image" || block.at("status") != "ok")
                 require(content.at("resource").is_string(), where + " 图片/占位块缺少 resource");
             const auto& provenance = field(block, "provenance", where);
-            if ((version == "1.5" || version == "1.6") && block.at("status") == "ok" &&
+            if ((version == "1.5" || (version == "1.6" || version == "1.7")) && block.at("status") == "ok" &&
                 (type == "text" || type == "formula" || type == "table"))
                 require(provenance.contains("visual"), where + " 正常识别缺少视觉证据");
             const auto& raw = field(provenance, "raw_output", where);
@@ -449,7 +581,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             require((error.is_null() || error.is_string()) &&
                     (error_base64.is_null() || error_base64.is_string()),
                     where + " error 字段无效");
-            if (version == "1.6") {
+            if ((version == "1.6" || version == "1.7")) {
+                if (version == "1.7") validate_recognition(block, where);
                 const auto& assessment = provenance.at("assessment");
                 const auto state = assessment.at("state").get<std::string>();
                 require(assessment_block_status(state) == block.at("status"), where + " 判定状态与块状态不一致");
@@ -473,7 +606,9 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                     const bool structural = state == "unverified" && derived.state == "ok" &&
                         (reason == "invalid_formula_syntax" || reason == "invalid_inline_formula_syntax" ||
                          reason == "invalid_table_structure");
-                    require(structural || (state == derived.state && reason == derived.reason),
+                    const bool exception = state == "failed" && derived.state == "failed" &&
+                        !output.error.empty() && reason == "region_inference_exception:" + output.error;
+                    require(structural || exception || (state == derived.state && reason == derived.reason),
                             where + " 判定与输出或停止原因不一致");
                 }
                 if (state != "ok" && state != "skipped")
@@ -518,7 +653,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 require(part_of_owner, where + " 内容归属不属于 owner 的源区域");
             } else {
                 require((type == "caption_of" || type == "footnote_of" || type == "heading_precedes") &&
-                        (version == "1.3" || version == "1.5" || version == "1.6" || pdf) &&
+                        (version == "1.3" || version == "1.5" || (version == "1.6" || version == "1.7") || pdf) &&
                         blocks.count(string_field(relation, "source_block_id", where)) &&
                         blocks.count(string_field(relation, "target_block_id", where)), where + " 语义关系引用不存在");
             }

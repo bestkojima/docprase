@@ -6,6 +6,8 @@
 #include "table_parser.hpp"
 #include "markdown.hpp"
 #include "output_assessment.hpp"
+#include "region_recognition.hpp"
+#include "json.hpp"
 #include "content_validation.hpp"
 #include <algorithm>
 #include <chrono>
@@ -196,7 +198,47 @@ struct Block {
     ParsedTable table;
     GenerationOutput visual;
     OutputAssessment assessment;
+    RegionRecognition recognition;
 };
+
+std::string recognition_json(const RegionRecognition& recognition) {
+    using Json = nlohmann::json;
+    auto transform_json = [](const VisualTransform& t) {
+        return Json{{"canvas_size", {t.canvas_width, t.canvas_height}},
+            {"content_size", {t.content_width, t.content_height}}, {"pad_offset", {t.pad_x, t.pad_y}},
+            {"scale", t.scale}, {"rounding_error", {t.rounding_error_x, t.rounding_error_y}}};
+    };
+    Json attempts = Json::array();
+    uint64_t budget = 0, generation_ms = 0;
+    for (const auto& attempt : recognition.attempts) {
+        const auto& output = attempt.output;
+        auto visual = transform_json(output.visual_transform);
+        visual["evidence"] = output.visual_evidence;
+        visual["token_count"] = output.visual_tokens;
+        Json saved = {{"finish_reason", output.finish_reason}, {"stop_reason", output.stop_reason},
+            {"generation_elapsed_ms", output.generation_elapsed_ms}};
+        for (const auto& value : {std::make_pair("text", output.text),
+             std::make_pair("raw_output", output.raw_output), std::make_pair("error", output.error)}) {
+            saved[value.first] = valid_utf8(value.second) ? Json(value.second) : Json(nullptr);
+            saved[std::string(value.first) + "_base64"] = valid_utf8(value.second) ? Json(nullptr) : Json(base64(value.second));
+        }
+        attempts.push_back({{"index", attempts.size() + 1}, {"correction", attempt.correction},
+            {"config", {{"max_new_tokens", attempt.max_new_tokens},
+                        {"generation_timeout_ms", attempt.generation_timeout_ms},
+                        {"visual_min_pixels", attempt.visual_min_pixels},
+                        {"visual_max_pixels", attempt.visual_max_pixels}}},
+            {"elapsed_ms", attempt.elapsed_ms}, {"output", saved},
+            {"visual", visual},
+            {"input_visual", attempt.input_visual ? transform_json(*attempt.input_visual) : Json(nullptr)}});
+        budget += attempt.generation_timeout_ms;
+        generation_ms += output.generation_elapsed_ms;
+    }
+    return Json{{"policy", "targeted-retry-v1"}, {"max_attempts", 2},
+        {"max_total_generation_budget_ms", 240000}, {"configured_generation_budget_ms", budget},
+        {"generation_elapsed_ms", generation_ms},
+        {"selected_attempt", attempts.empty() ? Json(nullptr) : Json(attempts.size())},
+        {"attempts", attempts}}.dump();
+}
 
 struct ReadingOrderEvidence {
     std::string source = "geometry";
@@ -1138,7 +1180,7 @@ std::string serialize(const Image& image, const std::string& state,
     const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
         return !b.visual.visual_evidence.empty();
     });
-    out << "{\"schema_version\":" << json_quote(structured_tables ? "1.6" : has_visual ? "1.5" : order_evidence ? "1.3" :
+    out << "{\"schema_version\":" << json_quote(structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state)
@@ -1262,6 +1304,7 @@ std::string serialize(const Image& image, const std::string& state,
             out << std::setprecision(9);
         }
         if (structured_tables) {
+            out << ",\"recognition\":" << recognition_json(b.recognition);
             const auto& a = b.assessment;
             out << ",\"assessment\":{\"policy\":" << json_quote(assessment_policy)
                 << ",\"state\":" << json_quote(a.state) << ",\"reason\":" << json_quote(a.reason)
@@ -1670,23 +1713,27 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                     block.error = "recognition_unavailable_after_backend_failure";
                     region.stop_reason = "backend_unavailable";
                 } else try {
-                    if (!backend->reset()) {
-                        audit.reset_failed = true;
-                        recognition_unavailable = true;
-                        block.status = "failed"; block.error = "region_reset_failed";
-                        region.stop_reason = "reset_failed";
-                    } else {
-                        audit.did_reset = true;
-                        audit.did_recognition = true;
-                        Image crop = crop_rgb(image, block.box);
-                        auto response = backend->execute({request_id, GenerationRequest{
-                            std::move(crop), block.box, block.type, request_id,
-                            plan->max_new_tokens}}, context);
-                        auto* generation = std::get_if<GenerationOutput>(&response.payload);
+                    block.recognition = recognize_region(*backend, crop_rgb(image, block.box), block.box,
+                        block.type, request_id, *plan, context);
+                    region.recognition_json = recognition_json(block.recognition);
+                    recognition_unavailable = block.recognition.backend_unavailable;
+                    if (cancelled && block.recognition.attempts.empty()) {
+                        region.status = "cancelled"; region.stop_reason = "cancelled_before_attempt";
+                        audit.regions.push_back(std::move(region));
+                        stop_after_cancel(); return audit;
+                    }
+                    audit.reset_failed |= block.recognition.reset_failed;
+                    audit.did_reset |= !block.recognition.reset_failed && !block.recognition.attempts.empty();
+                    audit.did_recognition |= !block.recognition.reset_failed && !block.recognition.attempts.empty();
+                    {
+                        auto* generation = block.recognition.attempts.empty() ? nullptr :
+                            &block.recognition.attempts.back().output;
                         if (cancelled && generation && generation->finish_reason == "failed" &&
                             generation->stop_reason == "cancelled") {
                             region.status = "cancelled";
                             region.stop_reason = generation->stop_reason;
+                            region.elapsed_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - region_start).count());
+                            audit.recognition_ms += region.elapsed_ms;
                             audit.regions.push_back(std::move(region));
                             stop_after_cancel();
                             return audit;
@@ -1759,6 +1806,10 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                             if (!valid_utf8(generation->error)) {
                                 block.status = "failed"; block.error = "invalid_backend_error_utf8";
                             }
+                            if (block.recognition.backend_unavailable && !block.recognition.reset_failed &&
+                                generation->error != "generation_response_type_mismatch")
+                                block.error = "region_inference_exception:" + (valid_utf8(generation->error) ?
+                                    generation->error : "invalid_utf8");
                             if (block.status == "failed" ||
                                 (block.status != "ok" && block.assessment.state == "ok"))
                                 block.assessment.state = block.status == "failed" ? "failed" : "unverified";

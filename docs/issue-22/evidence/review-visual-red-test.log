@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/issue22_retry.py", line 242, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/issue22_retry.py", line 173, in main
+    check('visual-exception', dict(text='', finish_reason='failed', stop_reason='vision_missing',
+  File "/home/dr/project/docprase/tests/issue22_retry.py", line 161, in check
+    assert process.returncode == 0, process.stderr
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: DocumentIR 无效：pages[0] 视觉重试没有有效输入修正
+

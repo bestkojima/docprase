@@ -1,0 +1,11 @@
+Test project /home/dr/project/docprase/build/issue22
+    Start 13: printed_page_integration
+1/3 Test #13: printed_page_integration .........   Passed    2.64 sec
+    Start 15: issue22_retry
+2/3 Test #15: issue22_retry ....................   Passed    1.38 sec
+    Start 19: pdf_integration
+3/3 Test #19: pdf_integration ..................   Passed    2.17 sec
+
+100% tests passed out of 3
+
+Total Test time (real) =   6.19 sec

@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "config_hash": "8da1b49db825dc10bed28a4ffe7166cc6469108d2bc5169bc784ca3e7fa3cc79",
+  "job_status": "cancelled",
+  "failure_code": null,
+  "failure_detail": null,
+  "budget_stage": null,
+  "actual_backend": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+  "backend_id": "mnn:pp-doclayout-v3+ovisocr2",
+  "actual_device": "cpu",
+  "runtime_version": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=2562851de14afaf74cbd869de0d062ccab8a03c1c2a4264251c65a24244fb2c6",
+  "effective_parameters": {
+    "threads": 1,
+    "max_new_tokens": 8,
+    "max_page_pixels": 64000000,
+    "max_output_bytes": 67108864,
+    "layout_preprocess": "smartresize_lanczos",
+    "layout_score_threshold": 0.3
+  },
+  "artifacts": [
+    {
+      "model": "layout",
+      "path": "/home/dr/project/docprase/models/doclayout/PP-DocLayoutV3.mnn",
+      "sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/config.json",
+      "sha256": "b81ac7008ba5f894301b7b9265bba882889df52c6e25c86390514c1bd4afe0c4",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/llm_config.json",
+      "sha256": "bb0d93883767c2c47de7f6965494c689c9890fffb79e3ca5e00e6f1fa5fd9770",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/llm.mnn",
+      "sha256": "1da84439dec62e4f966833c54438859e1bdae8a07b03a55c643aabbeb48bc880",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/llm.mnn.weight",
+      "sha256": "f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/visual.mnn",
+      "sha256": "d85dbe1c24890bdd514cf35f23d2c0dfdb3d207489f50c05705782759881daa5",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/visual.mnn.weight",
+      "sha256": "2a1b5138bdc1f6369df64f2b21b379b11f47ec51a46bb74a5013e4b2b9c4aa6d",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/tokenizer.mtok",
+      "sha256": "1a0c1ee1d04a63791ea87be31bb8c1f6346ecdd9c3b55ccdbb894cea32fbedfa",
+      "contract_status": "contract_verified"
+    },
+    {
+      "model": "recognition",
+      "path": "/home/dr/project/docprase/models/ovis/export_args.json",
+      "sha256": "953745b0456e0e4e3d2d4a0b31dd5a2d4dce632230a0b1d7c0ccfeead2de9334",
+      "contract_status": "contract_verified"
+    }
+  ],
+  "runtime_configuration": {
+    "layout_threads": 1,
+    "ovis_threads": 1,
+    "device": "cpu",
+    "sampler": "greedy",
+    "seed": null,
+    "seed_status": "not_configured",
+    "temperature": 0.8,
+    "top_k": 40,
+    "top_p": 0.9,
+    "min_p": 0.05,
+    "tfs_z": 1.0,
+    "typical": 0.95,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "penalty_window": 0,
+    "n_gram": 8,
+    "ngram_factor": 1.0,
+    "llm_precision": "low",
+    "llm_memory": "low",
+    "vision_precision": "normal",
+    "vision_memory": "low",
+    "reuse_kv": false,
+    "prompt_cache": false,
+    "use_mmap": false,
+    "kvcache_mmap": false,
+    "async": false,
+    "timeout_ms": 120000,
+    "session_strategy": "shared_model_reset_before_each_region",
+    "prompt_sha256": "de9617f877f6110d22adf1a6ba2a96221189dc246fb1fef161e408d37bff5267"
+  },
+  "processing": [
+    {
+      "id": "decode",
+      "owner": "adapter",
+      "status": "executed",
+      "reason": "image_decoded"
+    },
+    {
+      "id": "rgb_identity",
+      "owner": "none",
+      "status": "identity_validated",
+      "reason": "owned_rgb8_source"
+    },
+    {
+      "id": "normalize",
+      "owner": "adapter",
+      "status": "executed",
+      "reason": "torchvision_uint8_bicubic_800_rgb_nchw"
+    },
+    {
+      "id": "crop",
+      "owner": "adapter",
+      "status": "executed",
+      "reason": "region_crop"
+    },
+    {
+      "id": "session_reset",
+      "owner": "runtime",
+      "status": "delegated_runtime",
+      "reason": "ovis_same_instance_reset"
+    },
+    {
+      "id": "deskew",
+      "owner": "none",
+      "status": "skipped_disabled",
+      "reason": "optional_disabled"
+    }
+  ],
+  "regions": [
+    {
+      "request_id": "reqr0001",
+      "status": "cancelled",
+      "stop_reason": "cancelled",
+      "elapsed_ms": 526,
+      "recognition": {
+        "attempts": [
+          {
+            "config": {
+              "generation_timeout_ms": 120000,
+              "max_new_tokens": 8,
+              "visual_max_pixels": 313600,
+              "visual_min_pixels": 65536
+            },
+            "correction": "initial",
+            "elapsed_ms": 526,
+            "index": 1,
+            "input_visual": null,
+            "output": {
+              "error": "cancelled",
+              "error_base64": null,
+              "finish_reason": "failed",
+              "generation_elapsed_ms": 0,
+              "raw_output": "",
+              "raw_output_base64": null,
+              "stop_reason": "cancelled",
+              "text": "",
+              "text_base64": null
+            },
+            "visual": {
+              "canvas_size": [
+                1152,
+                96
+              ],
+              "content_size": [
+                1152,
+                82
+              ],
+              "evidence": "image_pad_tokens",
+              "pad_offset": [
+                0,
+                7
+              ],
+              "rounding_error": [
+                0.0,
+                -0.0712423979148582
+              ],
+              "scale": 1.000868809730669,
+              "token_count": 108
+            }
+          }
+        ],
+        "configured_generation_budget_ms": 120000,
+        "generation_elapsed_ms": 0,
+        "max_attempts": 2,
+        "max_total_generation_budget_ms": 240000,
+        "policy": "targeted-retry-v1",
+        "selected_attempt": 1
+      }
+    }
+  ],
+  "timings_ms": {
+    "decode": 0,
+    "layout": 1314,
+    "recognition": 526,
+    "export": 0
+  },
+  "timing_status": {
+    "decode": "measured",
+    "layout": "measured",
+    "recognition": "measured",
+    "export": "not_run"
+  },
+  "metrics": {
+    "peak_memory_bytes": {
+      "status": "unavailable",
+      "reason": "portable sampler not implemented"
+    }
+  }
+}

@@ -14,7 +14,16 @@ from printed_page_integration import config, ROOT
 from layout_integration import config as layout_config
 
 PDF_SCHEMA = json.loads((ROOT / 'docs/issue-11/document-ir-1.4.schema.json').read_text())
-VISUAL_PDF_SCHEMA = json.loads((ROOT / 'docs/issue-21/document-ir-1.6-pdf.schema.json').read_text())
+VISUAL_PDF_SCHEMA = json.loads((ROOT / 'docs/issue-22/document-ir-1.7-pdf.schema.json').read_text())
+
+
+def without_timings(value):
+    if isinstance(value, dict):
+        return {key: without_timings(item) for key, item in value.items()
+                if key not in ('elapsed_ms', 'generation_elapsed_ms')}
+    if isinstance(value, list):
+        return [without_timings(item) for item in value]
+    return value
 
 
 def run(binary, setting, pdf, out, *options, expected=0, env=None):
@@ -24,7 +33,7 @@ def run(binary, setting, pdf, out, *options, expected=0, env=None):
     assert process.returncode == expected, (process.returncode, process.stdout, process.stderr)
     if expected == 0:
         document = json.loads((out / 'document.json').read_text(encoding='utf-8'))
-        jsonschema.validate(document, VISUAL_PDF_SCHEMA if document['schema_version'] == '1.6' else PDF_SCHEMA)
+        jsonschema.validate(document, VISUAL_PDF_SCHEMA if document['schema_version'] == '1.7' else PDF_SCHEMA)
         return document
     return process
 
@@ -47,7 +56,7 @@ def main():
             tool_env = dict(os.environ, DOCOCR_POPPLER_BIN=str(tool_dir))
         selected = run(sys.argv[1], setting, pdf, root / 'selected', '--pages', '2-3',
                        '--dpi', '72', env=tool_env)
-        assert selected['schema_version'] == '1.6'
+        assert selected['schema_version'] == '1.7'
         assert [p['page_id'] for p in selected['pages']] == ['p0002', 'p0003']
         assert [p['pdf_page_number'] for p in selected['pages']] == [2, 3]
         ids = [block['id'] for page in selected['pages'] for block in page['blocks']]
@@ -56,7 +65,7 @@ def main():
         assert len(resources) == len(set(resources))
         assert all((root / 'selected' / name).is_file() for name in resources)
         whole = run(sys.argv[1], setting, pdf, root / 'whole', '--dpi', '72')
-        assert selected['pages'] == whole['pages'][1:]
+        assert without_timings(selected['pages']) == without_timings(whole['pages'][1:])
         assert selected['resources'] == [r for r in whole['resources']
                                          if r['source_block_id'].startswith(('p0002-', 'p0003-'))]
         manifest = json.loads((root / 'selected' / 'run-manifest.json').read_text())

@@ -186,7 +186,8 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                     record["regions"] = Json::array();
                     for (const auto& region : run.regions)
                         record["regions"].push_back({{"request_id", region.request_id},
-                            {"status", region.status}, {"stop_reason", region.stop_reason}});
+                            {"status", region.status}, {"stop_reason", region.stop_reason},
+                            {"recognition", region.recognition_json.empty() ? Json(nullptr) : Json::parse(region.recognition_json)}});
                     record["total_ms"] = milliseconds(page_start);
                     return cancel_with_evidence(&record);
                 }
@@ -207,7 +208,8 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                 for (const auto& region : run.regions)
                     record["regions"].push_back({{"request_id", region.request_id},
                         {"status", region.status}, {"stop_reason", region.stop_reason},
-                        {"elapsed_ms", region.elapsed_ms}});
+                        {"elapsed_ms", region.elapsed_ms},
+                        {"recognition", region.recognition_json.empty() ? Json(nullptr) : Json::parse(region.recognition_json)}});
                 result.run.regions.insert(result.run.regions.end(), run.regions.begin(), run.regions.end());
                 result.run.page_pixels += run.page_pixels;
                 result.run.decode_ms += run.decode_ms;
@@ -233,8 +235,8 @@ PdfJobResult run_pdf(IInferenceEngine* backend, InputView input,
                     }
                     output_bytes += page_bytes;
                     Json fragment = Json::parse(run.output.json);
-                    if (fragment.at("schema_version") == "1.6") document["schema_version"] = "1.6";
-                    else if (fragment.at("schema_version") == "1.5" && document["schema_version"] != "1.6")
+                    if (fragment.at("schema_version") == "1.7") document["schema_version"] = "1.7";
+                    else if (fragment.at("schema_version") == "1.5" && document["schema_version"] != "1.7")
                         document["schema_version"] = "1.5";
                     Json page_data = fragment.at("pages").at(0);
                     page_data.update(geometry);

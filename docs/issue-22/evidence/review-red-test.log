@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/issue22_retry.py", line 242, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/issue22_retry.py", line 172, in main
+    check('first-exception', {}, 'failed', 1, normal_sibling=False)
+  File "/home/dr/project/docprase/tests/issue22_retry.py", line 161, in check
+    assert process.returncode == 0, process.stderr
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: DocumentIR 无效：pages[0] 判定与输出或停止原因不一致
+

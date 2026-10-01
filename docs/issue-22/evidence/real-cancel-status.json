@@ -1,0 +1,22 @@
+{
+  "state": "cancelled",
+  "error": {
+    "request_id": "p0001",
+    "stage": "inference",
+    "code": "cancelled",
+    "message": "job cancelled"
+  },
+  "running": false,
+  "terminal": true,
+  "cancel_requested": true,
+  "timeout_requested": false,
+  "cancellation_granularity": "after_backend_call",
+  "page_current": 1,
+  "page_completed": 0,
+  "page_total": 1,
+  "region_completed": 0,
+  "region_total": 1,
+  "events_pending": 4,
+  "events_dropped": 0,
+  "engine_ready": true
+}

@@ -27,6 +27,7 @@ struct ExecutionPlan {
     uint64_t max_page_pixels = 16000000;
     uint64_t max_output_bytes = 1048576;
     uint64_t max_new_tokens = 4096;
+    uint64_t generation_timeout_ms = 120000;
     std::vector<ProcessingStep> processing;
     std::vector<ArtifactInfo> artifacts;
 };

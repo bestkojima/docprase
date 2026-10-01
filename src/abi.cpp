@@ -212,7 +212,7 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
             "\"vision_precision\":\"normal\",\"vision_memory\":\"low\","
             "\"reuse_kv\":false,"
             "\"prompt_cache\":false,\"use_mmap\":false,\"kvcache_mmap\":false,"
-            "\"async\":false,\"timeout_ms\":120000,"
+            "\"async\":false,\"timeout_ms\":" + std::to_string(plan.generation_timeout_ms) + ","
             "\"session_strategy\":\"shared_model_reset_before_each_region\","
             "\"prompt_sha256\":\"de9617f877f6110d22adf1a6ba2a96221189dc246fb1fef161e408d37bff5267\"}";
     }
@@ -258,7 +258,9 @@ std::string manifest_json(const dococr::ExecutionPlan& plan, const dococr::RunRe
         out += "{\"request_id\":" + dococr::json_quote(region.request_id) +
             ",\"status\":" + dococr::json_quote(region.status) +
             ",\"stop_reason\":" + dococr::json_quote(region.stop_reason) +
-            ",\"elapsed_ms\":" + std::to_string(region.elapsed_ms) + "}";
+            ",\"elapsed_ms\":" + std::to_string(region.elapsed_ms);
+        if (!region.recognition_json.empty()) out += ",\"recognition\":" + region.recognition_json;
+        out += "}";
     }
     out += "],\"timings_ms\":{\"decode\":" + std::to_string(result.decode_ms) +
         ",\"layout\":" + std::to_string(result.layout_ms) +

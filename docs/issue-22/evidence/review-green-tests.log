@@ -1,0 +1,17 @@
+Test project /home/dr/project/docprase/build/issue22
+    Start  4: reexport_integration
+1/6 Test  #4: reexport_integration .............   Passed    1.55 sec
+    Start 14: issue21_quality
+2/6 Test #14: issue21_quality ..................   Passed    1.57 sec
+    Start 15: issue22_retry
+3/6 Test #15: issue22_retry ....................   Passed    1.80 sec
+    Start 19: pdf_integration
+4/6 Test #19: pdf_integration ..................   Passed    2.21 sec
+    Start 22: job_control
+5/6 Test #22: job_control ......................   Passed    2.66 sec
+    Start 23: cli_job_control
+6/6 Test #23: cli_job_control ..................   Passed    0.67 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =  10.47 sec

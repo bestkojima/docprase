@@ -61,8 +61,8 @@ def main():
                 if forbidden:
                     assert forbidden.encode() not in markdown
                 import jsonschema
-                schema = json.loads((ROOT / 'docs/issue-21/document-ir-1.6-image.schema.json').read_text())
-                assert doc['schema_version'] == '1.6'
+                schema = json.loads((ROOT / 'docs/issue-22/document-ir-1.7-image.schema.json').read_text())
+                assert doc['schema_version'] == '1.7'
                 jsonschema.validate(doc, schema)
                 assert doc['pages'][0]['blocks'][3]['status'] == 'ok'
                 assert '中文，English!'.encode() in markdown
@@ -127,6 +127,7 @@ def main():
         legacy['schema_version'] = '1.5'
         for block in legacy['pages'][0]['blocks']:
             block['provenance'].pop('assessment')
+            block['provenance'].pop('recognition', None)
         block = legacy['pages'][0]['blocks'][0]
         block['content']['text'] = block['provenance']['raw_output'] = raw
         block['provenance']['visual']['stop_reason'] = 'token_limit'

@@ -203,9 +203,13 @@ public:
         }
         if (generation->max_new_tokens == 0 || generation->max_new_tokens > 4096)
             throw std::runtime_error("ovis_token_budget_unsupported");
+        if (generation->generation_timeout_ms == 0 || generation->generation_timeout_ms > 120000)
+            throw std::runtime_error("ovis_time_budget_unsupported");
+        if (!llm_->set_config("{\"timeout_ms\":" + std::to_string(generation->generation_timeout_ms) + "}"))
+            throw std::runtime_error("ovis_time_budget_config_failed");
         AdaptedVisual adapted;
         try {
-            adapted = adapt_visual(generation->image);
+            adapted = adapt_visual(generation->image, {generation->visual_min_pixels, generation->visual_max_pixels});
         } catch (const std::exception& error) {
             output.finish_reason = "failed"; output.stop_reason = "visual_adaptation_failed";
             output.error = error.what(); output.visual_evidence = "adaptation_failed";
@@ -228,8 +232,14 @@ public:
             return {output};
         }
         output.visual_evidence = "image_pad_tokens";
+        if (context.cancelled) {
+            output.finish_reason = "failed"; output.stop_reason = "cancelled";
+            output.error = "cancelled"; return {output};
+        }
         std::ostringstream raw;
+        const auto generation_start = Clock::now();
         llm_->response(tokens, &raw, nullptr, int(generation->max_new_tokens));
+        output.generation_elapsed_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-generation_start).count());
         output.raw_output = raw.str();
         output.elapsed_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-begin).count());
         const auto* state = llm_->getContext();

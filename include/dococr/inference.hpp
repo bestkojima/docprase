@@ -34,6 +34,8 @@ struct GenerationRequest {
     std::string task; // text, formula, table
     std::string request_id;
     uint64_t max_new_tokens = 4096;
+    uint64_t generation_timeout_ms = 120000;
+    int64_t visual_min_pixels = 65536, visual_max_pixels = 560 * 560;
 };
 struct InferenceRequest { std::string request_id; std::variant<TensorRequest, GenerationRequest> payload; };
 struct TensorOutput { std::vector<Tensor> outputs; };
@@ -55,6 +57,7 @@ struct GenerationOutput {
     std::string visual_evidence;
     uint32_t visual_tokens = 0;
     VisualTransform visual_transform;
+    uint64_t generation_elapsed_ms = 0;
 };
 struct InferenceResponse { std::variant<TensorOutput, GenerationOutput> payload; };
 struct ExecutionContext { std::atomic_bool& cancelled; };
@@ -99,7 +102,11 @@ struct RunResult {
     std::string budget_stage;
     std::string error_code, error_message;
     uint64_t decode_ms = 0, layout_ms = 0, recognition_ms = 0, export_ms = 0;
-    struct RegionRun { std::string request_id, status, stop_reason; uint64_t elapsed_ms = 0; };
+    struct RegionRun {
+        std::string request_id, status, stop_reason;
+        uint64_t elapsed_ms = 0;
+        std::string recognition_json;
+    };
     std::vector<RegionRun> regions;
 };
 struct InputView {

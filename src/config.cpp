@@ -370,7 +370,7 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     uint64_t threads = positive(config.at("platform").at("threads"), "threads");
     if (threads != 1) throw ConfigError("unsupported_parameter", "threads: only 1 is implemented");
     plan->threads = 1;
-    object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens",
+    object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens", "generation_timeout_ms",
                                    "layout_preprocess", "layout_score_threshold"});
     const auto& execution = config.at("execution").object;
     if (execution.count("layout_preprocess")) {
@@ -398,8 +398,13 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     plan->max_output_bytes = positive(config.at("execution").at("max_output_bytes"), "max_output_bytes");
     if (plan->max_output_bytes > 67108864) throw ConfigError("unsupported_parameter", "max_output_bytes exceeds decoder limit");
     plan->max_new_tokens = positive(config.at("execution").at("max_new_tokens"), "max_new_tokens");
-    if (real_pair && plan->max_new_tokens > 4096)
+    if (!plan->layout_only && plan->uses_doclayout() && plan->max_new_tokens > 4096)
         throw ConfigError("unsupported_parameter", "max_new_tokens exceeds Ovis runtime limit");
+    if (config.at("execution").object.count("generation_timeout_ms")) {
+        plan->generation_timeout_ms = positive(config.at("execution").at("generation_timeout_ms"), "generation_timeout_ms");
+        if (plan->layout_only || !plan->uses_doclayout() || plan->generation_timeout_ms > 120000)
+            throw ConfigError("unsupported_parameter", "generation_timeout_ms exceeds region generation limit");
+    }
     plan->config_hash = sha256(dump(config));
     std::string resolved_processing = "[";
     for (const auto& step : plan->processing) {

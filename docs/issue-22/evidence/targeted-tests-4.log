@@ -1,0 +1,13 @@
+Test project /home/dr/project/docprase/build/issue22
+    Start  4: reexport_integration
+1/4 Test  #4: reexport_integration .............   Passed    1.54 sec
+    Start  5: config_integration
+2/4 Test  #5: config_integration ...............   Passed    0.28 sec
+    Start  6: config_abi
+3/4 Test  #6: config_abi .......................   Passed    0.61 sec
+    Start 15: issue22_retry
+4/4 Test #15: issue22_retry ....................   Passed    1.60 sec
+
+100% tests passed out of 4
+
+Total Test time (real) =   4.03 sec

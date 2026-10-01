@@ -1,0 +1,29 @@
+Test project /home/dr/project/docprase/build/issue22
+    Start  4: reexport_integration
+1/6 Test  #4: reexport_integration .............   Passed    1.52 sec
+    Start 13: printed_page_integration
+2/6 Test #13: printed_page_integration .........***Failed    0.32 sec
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/printed_page_integration.py", line 175, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/printed_page_integration.py", line 94, in main
+    assert visual_block['provenance']['visual']['scale'] == 128
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+    Start 14: issue21_quality
+3/6 Test #14: issue21_quality ..................   Passed    1.57 sec
+    Start 15: issue22_retry
+4/6 Test #15: issue22_retry ....................   Passed    0.22 sec
+    Start 22: job_control
+5/6 Test #22: job_control ......................   Passed    2.46 sec
+    Start 23: cli_job_control
+6/6 Test #23: cli_job_control ..................   Passed    0.71 sec
+
+83% tests passed, 1 tests failed out of 6
+
+Total Test time (real) =   6.80 sec
+
+The following tests FAILED:
+	 13 - printed_page_integration (Failed)
+Errors while running CTest

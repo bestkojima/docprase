@@ -1,0 +1,10 @@
+real cancellation: safely returned, engine ready
+real recovery: token retry completed, reference matched, reexport identical
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Traceback (most recent call last):
+  File "/home/dr/project/docprase/tests/issue22_real.py", line 99, in <module>
+    main()
+  File "/home/dr/project/docprase/tests/issue22_real.py", line 86, in main
+    assert jobs.metadata('job_status', job)['engine_ready']
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^~
+AssertionError

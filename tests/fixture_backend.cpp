@@ -66,7 +66,7 @@ public:
                 !(scenario_ == "printed_page_visual_missing_complete" && generation.source_box.y0 == 0))
             {
                 output->visual_evidence = "explicit_success";
-                output->visual_transform = adapt_visual(generation.image).transform;
+                output->visual_transform = adapt_visual(generation.image, {generation.visual_min_pixels, generation.visual_max_pixels}).transform;
             }
         }
         return response;
@@ -357,16 +357,28 @@ public:
             nlohmann::json fixture;
             file >> fixture;
             if (generation.task == fixture.value("task", "text")) {
+                if (fixture.contains("retry_output") && (generation.max_new_tokens > fixture.value("initial_token_budget", uint64_t(4096)) ||
+                    generation.visual_min_pixels > 65536))
+                    fixture = fixture.at("retry_output");
+                if (fixture.contains("gate")) {
+                    std::ofstream(fixture.at("entered").get<std::string>()).put('1');
+                    while (std::filesystem::exists(fixture.at("gate").get<std::string>()))
+                        std::this_thread::sleep_for(std::chrono::milliseconds(2));
+                    if (context.cancelled)
+                        return {GenerationOutput{"", "cancelled retry raw", "failed", "cancelled", "cancelled"}};
+                }
                 GenerationOutput output;
                 output.text = fixture.at("text").get<std::string>();
                 output.raw_output = fixture.value("raw_output", output.text);
+                if (fixture.value("invalid_utf8", false))
+                    output.text = output.raw_output = std::string("first cut\xff", 10);
                 output.finish_reason = fixture.at("finish_reason").get<std::string>();
                 output.stop_reason = fixture.at("stop_reason").get<std::string>();
                 output.error = fixture.value("error", "");
                 if (fixture.value("visual", true)) {
                     output.visual_evidence = "explicit_success";
-                    output.visual_transform = adapt_visual(generation.image).transform;
                 } else output.visual_evidence = "no_visual_tokens";
+                output.visual_transform = adapt_visual(generation.image, {generation.visual_min_pixels, generation.visual_max_pixels}).transform;
                 return {output};
             }
         }
@@ -426,7 +438,7 @@ public:
                 result.stop_reason = "vision_missing";
                 result.error = "ovis_visual_tokens_missing";
                 result.visual_evidence = "no_visual_tokens";
-                result.visual_transform = adapt_visual(generation.image).transform;
+                result.visual_transform = adapt_visual(generation.image, {generation.visual_min_pixels, generation.visual_max_pixels}).transform;
                 return {result};
             }
             if (scenario_ == "printed_page_visual_missing_complete" && generation.source_box.y0 == 0) {

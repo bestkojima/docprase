@@ -41,7 +41,7 @@ def main():
     job = output / 'job'
     document = json.loads((job / 'document.json').read_text())
     manifest = json.loads((job / 'run-manifest.json').read_text())
-    schema = json.loads((ROOT / 'docs/issue-21/document-ir-1.6-pdf.schema.json').read_text())
+    schema = json.loads((ROOT / 'docs/issue-22/document-ir-1.7-pdf.schema.json').read_text())
     jsonschema.validate(document, schema)
     assert document['source']['sha256'] == SOURCE_SHA
     assert document['status'] == 'ok'

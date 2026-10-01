@@ -9,4 +9,6 @@ inline constexpr const char* document_schema_1_5_image = @DOCUMENT_SCHEMA_1_5_IM
 inline constexpr const char* document_schema_1_5_pdf = @DOCUMENT_SCHEMA_1_5_PDF_LITERALS@;
 inline constexpr const char* document_schema_1_6_image = @DOCUMENT_SCHEMA_1_6_IMAGE_LITERALS@;
 inline constexpr const char* document_schema_1_6_pdf = @DOCUMENT_SCHEMA_1_6_PDF_LITERALS@;
+inline constexpr const char* document_schema_1_7_image = @DOCUMENT_SCHEMA_1_7_IMAGE_LITERALS@;
+inline constexpr const char* document_schema_1_7_pdf = @DOCUMENT_SCHEMA_1_7_PDF_LITERALS@;
 }
