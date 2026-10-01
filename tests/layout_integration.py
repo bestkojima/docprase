@@ -10,7 +10,7 @@ import tempfile
 from cli_integration import png_2x2
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SCHEMA = json.loads((ROOT / 'docs/issue-26/document-ir-1.9-image.schema.json').read_text())
+SCHEMA = json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text())
 
 
 def config(backend):

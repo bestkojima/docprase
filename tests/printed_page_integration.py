@@ -31,15 +31,15 @@ def run(binary, scenario, root, image):
     document = json.loads((output / 'document.json').read_text())
     manifest = json.loads((output / 'run-manifest.json').read_text())
     import jsonschema
-    schema_path = ('docs/issue-26/document-ir-1.9-image.schema.json'
+    schema_path = ('schemas/document-ir/document-ir-1.9-image.schema.json'
                    if document['schema_version'] == '1.9'
-                   else 'docs/issue-10/document-ir-1.3.schema.json'
+                   else 'schemas/document-ir/document-ir-1.3.schema.json'
                    if document['schema_version'] == '1.3'
-                   else 'docs/issue-9/document-ir-1.2.schema.json'
+                   else 'schemas/document-ir/document-ir-1.2.schema.json'
                    if document['schema_version'] == '1.2'
-                   else 'docs/issue-8/document-ir-1.1.schema.json'
+                   else 'schemas/document-ir/document-ir-1.1.schema.json'
                    if document['schema_version'] == '1.1'
-                   else 'docs/issue-4/document-ir-1.0.schema.json')
+                   else 'schemas/document-ir/document-ir-1.0.schema.json')
     schema = json.loads((ROOT / schema_path).read_text())
     jsonschema.validate(document, schema)
     return output, document, manifest

@@ -11,37 +11,37 @@ option(DOCOCR_REQUIRE_MNN "缺少 MNN 时配置失败" OFF)
 option(DOCOCR_REQUIRE_LLM "缺少 Ovis 所需 LLM 运行时时配置失败" OFF)
 # schema 更新时重新生成 CLI 内嵌校验契约。
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-4/document-ir-1.0.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-8/document-ir-1.1.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-9/document-ir-1.2.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-10/document-ir-1.3.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-11/document-ir-1.4.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-18/document-ir-1.5-image.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-18/document-ir-1.5-pdf.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-21/document-ir-1.6-image.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-21/document-ir-1.6-pdf.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-image.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-pdf.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-image.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-pdf.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-image.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.0.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.1.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.2.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.3.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.4.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.5-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.5-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.6-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.6-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.7-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.7-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.8-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.8-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-pdf.schema.json"
 )
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-4/document-ir-1.0.schema.json" DOCUMENT_SCHEMA_1_0)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-8/document-ir-1.1.schema.json" DOCUMENT_SCHEMA_1_1)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-9/document-ir-1.2.schema.json" DOCUMENT_SCHEMA_1_2)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-10/document-ir-1.3.schema.json" DOCUMENT_SCHEMA_1_3)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-11/document-ir-1.4.schema.json" DOCUMENT_SCHEMA_1_4)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-18/document-ir-1.5-image.schema.json" DOCUMENT_SCHEMA_1_5_IMAGE)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-18/document-ir-1.5-pdf.schema.json" DOCUMENT_SCHEMA_1_5_PDF)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-21/document-ir-1.6-image.schema.json" DOCUMENT_SCHEMA_1_6_IMAGE)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-21/document-ir-1.6-pdf.schema.json" DOCUMENT_SCHEMA_1_6_PDF)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-image.schema.json" DOCUMENT_SCHEMA_1_7_IMAGE)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-22/document-ir-1.7-pdf.schema.json" DOCUMENT_SCHEMA_1_7_PDF)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-image.schema.json" DOCUMENT_SCHEMA_1_8_IMAGE)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.8-pdf.schema.json" DOCUMENT_SCHEMA_1_8_PDF)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-image.schema.json" DOCUMENT_SCHEMA_1_9_IMAGE)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/docs/issue-26/document-ir-1.9-pdf.schema.json" DOCUMENT_SCHEMA_1_9_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.0.schema.json" DOCUMENT_SCHEMA_1_0)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.1.schema.json" DOCUMENT_SCHEMA_1_1)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.2.schema.json" DOCUMENT_SCHEMA_1_2)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.3.schema.json" DOCUMENT_SCHEMA_1_3)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.4.schema.json" DOCUMENT_SCHEMA_1_4)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.5-image.schema.json" DOCUMENT_SCHEMA_1_5_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.5-pdf.schema.json" DOCUMENT_SCHEMA_1_5_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.6-image.schema.json" DOCUMENT_SCHEMA_1_6_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.6-pdf.schema.json" DOCUMENT_SCHEMA_1_6_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.7-image.schema.json" DOCUMENT_SCHEMA_1_7_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.7-pdf.schema.json" DOCUMENT_SCHEMA_1_7_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.8-image.schema.json" DOCUMENT_SCHEMA_1_8_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.8-pdf.schema.json" DOCUMENT_SCHEMA_1_8_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-image.schema.json" DOCUMENT_SCHEMA_1_9_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-pdf.schema.json" DOCUMENT_SCHEMA_1_9_PDF)
 function(dococr_split_schema input output)
   # 每行独立为一个短原始字面量，保留原始换行并避开 MSVC C2026。
   string(REPLACE "\n" "\n)SCHEMA\"\nR\"SCHEMA(" split "${${input}}")

@@ -13,8 +13,8 @@ import jsonschema
 from printed_page_integration import config, ROOT
 from layout_integration import config as layout_config
 
-PDF_SCHEMA = json.loads((ROOT / 'docs/issue-11/document-ir-1.4.schema.json').read_text())
-VISUAL_PDF_SCHEMA = json.loads((ROOT / 'docs/issue-26/document-ir-1.9-pdf.schema.json').read_text())
+PDF_SCHEMA = json.loads((ROOT / 'schemas/document-ir/document-ir-1.4.schema.json').read_text())
+VISUAL_PDF_SCHEMA = json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-pdf.schema.json').read_text())
 
 
 def without_timings(value):

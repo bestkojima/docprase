@@ -44,7 +44,7 @@ def main():
         assert '外部表题' in markdown
         assert len(manifest['regions']) == 2
         schema = json.loads((Path(__file__).resolve().parents[1] /
-                             'docs/issue-26/document-ir-1.9-image.schema.json').read_text())
+                             'schemas/document-ir/document-ir-1.9-image.schema.json').read_text())
         for status in ('partial', 'failed', 'skipped'):
             invalid = copy.deepcopy(doc)
             invalid_table = invalid['pages'][0]['blocks'][1]

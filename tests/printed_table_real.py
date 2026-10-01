@@ -64,7 +64,7 @@ def box_overlap(block, poly):
 
 def compare(job, image, references, min_tables):
     document = json.loads((job / 'document.json').read_text())
-    schema = json.loads((ROOT / 'docs/issue-26/document-ir-1.9-image.schema.json').read_text())
+    schema = json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text())
     jsonschema.validate(document, schema)
     assert document['schema_version'] == '1.9'
     assert json.loads(json.dumps(document, ensure_ascii=False)) == document

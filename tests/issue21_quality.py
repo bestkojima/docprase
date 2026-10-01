@@ -61,7 +61,7 @@ def main():
                 if forbidden:
                     assert forbidden.encode() not in markdown
                 import jsonschema
-                schema = json.loads((ROOT / 'docs/issue-26/document-ir-1.9-image.schema.json').read_text())
+                schema = json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text())
                 assert doc['schema_version'] == '1.9'
                 jsonschema.validate(doc, schema)
                 assert doc['pages'][0]['blocks'][3]['status'] == 'ok'

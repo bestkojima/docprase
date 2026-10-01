@@ -42,7 +42,7 @@ def run(fixture_cli, production_cli, root, name, label, bounds, linked):
     assert resource['provenance']['assessment']['reason'] == 'resource_saved'
     assert doc['status'] == 'ok'
     assert doc['schema_version'] == '1.9'
-    jsonschema.validate(doc, json.loads((ROOT / 'docs/issue-26/document-ir-1.9-image.schema.json').read_text()))
+    jsonschema.validate(doc, json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text()))
     regions = {r['id']: r for r in page['regions']}
     for block in page['blocks']:
         assert regions[block['source_region_ids'][0]]['recognition_type'] == block['type']

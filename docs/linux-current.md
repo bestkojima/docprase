@@ -20,7 +20,7 @@ cmake --build build/linux-current -j4
 ctest --test-dir build/linux-current --output-on-failure
 ```
 
-入口是 `build/linux-current/dococr_cli`，无需 Python 服务。此构建在当前工作树上完成，`ctest` 为 15/15；构建和测试日志保存在 [output/linux-current/](../output/linux-current/)。可执行文件链接本机 MNN 构建目录中的动态库；移动到其他机器前须另行准备同一运行时与模型。
+入口是 `build/linux-current/dococr_cli`，无需 Python 服务。下文实测结果来自 2026-09-27 的首轮 Linux 收口，当时 `ctest` 为 15/15；历史构建和测试日志保存在 [output/linux-current/](../output/linux-current/)。当前检出版本须重新构建并运行上述回归，生产 Schema 从 [稳定契约目录](../schemas/document-ir/README.md) 读取。可执行文件链接本机 MNN 构建目录中的动态库；移动到其他机器前须另行准备同一运行时与模型。
 
 ## 解析自己的文件
 
@@ -48,9 +48,9 @@ build/linux-current/dococr_cli --reexport '旧作业/document.json' \
   --asset-root '旧作业' --out '新导出目录'
 ```
 
-重新导出读取原 JSON 和资源，复制 JSON 原始字节与所引用的资源，并重新生成 Markdown；不会再次运行模型或 PDF 渲染。新目录包含 `document.json`、`document.md` 和 `assets/`，不生成新的作业状态或运行清单。已保存文档支持 DocumentIR 1.0～1.4。
+重新导出读取原 JSON 和资源，复制 JSON 原始字节与所引用的资源，并重新生成 Markdown；不会再次运行模型或 PDF 渲染。新目录包含 `document.json`、`document.md` 和 `assets/`，不生成新的作业状态或运行清单。当前 CLI 支持已保存的 DocumentIR 1.0～1.9，按版本与图片/PDF 类型使用对应 Schema；旧文档的缺失证据不补造。版本及来源见 [契约目录](../schemas/document-ir/README.md)。
 
-## 本次实测结果
+## 首轮实测结果（2026-09-27）
 
 以下固定样本命令已在本机通过生产 CLI 实际执行，均退出 0。真实识别验证脚本分别为 `tests/printed_page_real.py` 和 `tests/pdf_real.py`；输出目录已有结果，若重跑须换新目录。本节链接指向当前工作树的本机证据；`output/` 被 Git 忽略，不随文档提交，新检出须运行命令生成自己的结果。
 

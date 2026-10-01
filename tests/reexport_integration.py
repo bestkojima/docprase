@@ -64,8 +64,8 @@ def main():
             run(fixture, '--config', str(setting), '--input', str(input_image), '--out', str(saved))
             return saved, json.loads((saved / 'document.json').read_text())
 
-        for name, schema_file in [('historical-1.1', 'docs/issue-8/document-ir-1.1.schema.json'),
-                                  ('historical-1.2', 'docs/issue-9/document-ir-1.2.schema.json')]:
+        for name, schema_file in [('historical-1.1', 'schemas/document-ir/document-ir-1.1.schema.json'),
+                                  ('historical-1.2', 'schemas/document-ir/document-ir-1.2.schema.json')]:
             saved = ROOT / 'tests' / 'fixtures' / 'reexport' / name
             data = json.loads((saved / 'document.json').read_text())
             jsonschema.validate(data, json.loads((ROOT / schema_file).read_text()))
@@ -141,7 +141,7 @@ def main():
             block['provenance'].pop('visual', None)
             block['provenance'].pop('assessment', None)
             block['provenance'].pop('recognition', None)
-        jsonschema.validate(old_formula, json.loads((ROOT / 'docs/issue-8/document-ir-1.1.schema.json').read_text()))
+        jsonschema.validate(old_formula, json.loads((ROOT / 'schemas/document-ir/document-ir-1.1.schema.json').read_text()))
         reexport(formula_saved, old_formula)
         legacy = copy.deepcopy(table)
         legacy['schema_version'] = '1.2'
@@ -159,11 +159,11 @@ def main():
             block['provenance'].pop('assessment', None)
             block['provenance'].pop('recognition', None)
         # 1.2 的表格语义与 1.3 相同；保存后的旧版文件仍须可读。
-        jsonschema.validate(legacy, json.loads((ROOT / 'docs/issue-9/document-ir-1.2.schema.json').read_text()))
+        jsonschema.validate(legacy, json.loads((ROOT / 'schemas/document-ir/document-ir-1.2.schema.json').read_text()))
         reexport(table_saved, legacy)
-        for version, schema_path in [('1.3', 'docs/issue-10/document-ir-1.3.schema.json'),
-                                     ('1.5', 'docs/issue-18/document-ir-1.5-image.schema.json'),
-                                     ('1.7', 'docs/issue-22/document-ir-1.7-image.schema.json')]:
+        for version, schema_path in [('1.3', 'schemas/document-ir/document-ir-1.3.schema.json'),
+                                     ('1.5', 'schemas/document-ir/document-ir-1.5-image.schema.json'),
+                                     ('1.7', 'schemas/document-ir/document-ir-1.7-image.schema.json')]:
             historical = copy.deepcopy(table)
             historical['schema_version'] = version
             for old_page in historical['pages']:
@@ -192,7 +192,7 @@ def main():
                     relation['evidence'] = 'model_figure_title_and_geometry'
         for block in historical_16['pages'][0]['blocks']:
             block['provenance'].pop('recognition')
-        jsonschema.validate(historical_16, json.loads((ROOT / 'docs/issue-21/document-ir-1.6-image.schema.json').read_text()))
+        jsonschema.validate(historical_16, json.loads((ROOT / 'schemas/document-ir/document-ir-1.6-image.schema.json').read_text()))
         reexport(table_saved, historical_16)
         without_optional_diagnostics.pop('layout_diagnostics')
         for block in without_optional_diagnostics['pages'][0]['blocks']:
@@ -294,7 +294,7 @@ def main():
                 block['provenance'].pop('assessment')
                 block['provenance'].pop('recognition', None)
                 block['provenance'].pop('visual', None)
-        jsonschema.validate(historical_pdf, json.loads((ROOT / 'docs/issue-11/document-ir-1.4.schema.json').read_text()))
+        jsonschema.validate(historical_pdf, json.loads((ROOT / 'schemas/document-ir/document-ir-1.4.schema.json').read_text()))
         reexport(pdf_saved, historical_pdf)
         visual_pdf = copy.deepcopy(pdf_data)
         visual_pdf['schema_version'] = '1.5'
@@ -325,7 +325,7 @@ def main():
                 'rounding_error': [cw-width*scale, ch-height*scale],
                 'canvas_to_page_affine': [sx, 0, x0-px*sx, 0, sy, y0-py*sy],
                 'stop_reason': 'normal' if candidate['status'] == 'ok' else 'vision_missing'}
-        jsonschema.validate(visual_pdf, json.loads((ROOT / 'docs/issue-18/document-ir-1.5-pdf.schema.json').read_text()))
+        jsonschema.validate(visual_pdf, json.loads((ROOT / 'schemas/document-ir/document-ir-1.5-pdf.schema.json').read_text()))
         reexport(pdf_saved, visual_pdf)
         broken_pdf = copy.deepcopy(pdf_data)
         broken_pdf['pages'][0]['regions'][0]['page_id'] = 'p0003'
