@@ -1,6 +1,5 @@
 """从无损原始包验证12页真实产物、图片资源及冻结生产 CLI 重新导出。"""
 import json
-import os
 from pathlib import Path
 import subprocess
 import sys
@@ -11,19 +10,16 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from issue25_materials import read_frozen, restore_page
+from issue25_materials import frozen_runtime, read_frozen, restore_page
 from issue24_run import candidate_intact, save, sha
 
 
 def main():
     run = Path(sys.argv[1]).resolve()
-    record, manifest, _ = read_frozen(run)
+    record, manifest, _ = read_frozen(run, Path(__file__))
     candidate = json.loads((run / 'freeze/docs/issue-24/evidence/candidate.json').read_text())
     candidate_run = Path(record['candidate_run'])
-    if not candidate_intact(candidate_run, candidate):
-        raise ValueError('重新导出使用的候选 SHA 不符')
-    binary = candidate_run / 'candidate/runtime/dococr_cli'
-    environment = dict(os.environ, LD_LIBRARY_PATH=str(binary.parent))
+    binary, _, environment = frozen_runtime(candidate_run, candidate)
     records = {}
     for spec in manifest['pages']:
         errors, resources = [], {}

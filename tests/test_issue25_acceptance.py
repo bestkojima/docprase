@@ -1,5 +1,6 @@
 """通过公开评分命令验证缺失或失败结果不能获得质量通过。"""
 import json
+import hashlib
 from pathlib import Path
 import subprocess
 import sys
@@ -10,6 +11,30 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class AcceptanceCommandTests(unittest.TestCase):
+    def test_report_tool_version_must_match_the_run_freeze(self):
+        with tempfile.TemporaryDirectory(prefix='issue25-test-') as directory:
+            run = Path(directory)
+            snapshots = {}
+            names = ('issue24_report.py', 'issue24_run.py', 'issue17_baseline.py',
+                     'issue15_quality.py', 'issue15_lineage.py', 'issue20_runtime.py',
+                     'issue25_report.py', 'issue25_materials.py')
+            for name in names:
+                relative = f'scripts/{name}'
+                contents = (ROOT / relative).read_bytes()
+                if name == 'issue25_report.py':
+                    contents += b'\n# frozen tool version differs\n'
+                target = run / 'freeze' / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(contents)
+                snapshots[relative] = hashlib.sha256(contents).hexdigest()
+            (run / 'evaluation.json').write_text(json.dumps({'snapshot_files': snapshots}))
+            report = run / 'report.json'
+            result = subprocess.run([sys.executable, str(ROOT / 'scripts/issue25_report.py'),
+                '--run', str(run), '--out', str(report)], cwd=ROOT, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 1, result.stderr)
+            self.assertIn('当前评分工具', result.stderr)
+            self.assertFalse(report.exists())
+
     def test_changed_frozen_rules_are_rejected_before_scoring(self):
         with tempfile.TemporaryDirectory(prefix='issue25-test-') as directory:
             run = Path(directory)

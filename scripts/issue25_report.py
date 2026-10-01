@@ -72,7 +72,7 @@ def main():
     frozen = (run / 'evaluation.json').exists()
     blockers = []
     if frozen:
-        record, manifest, annotations = read_frozen(run)
+        record, manifest, annotations = read_frozen(run, Path(__file__))
         snapshot = run / 'freeze'
         candidate = json.loads((snapshot / 'docs/issue-24/evidence/candidate.json').read_text())
         if (sha(snapshot / 'docs/issue-24/evidence/candidate.json') != record['candidate_sha256'] or

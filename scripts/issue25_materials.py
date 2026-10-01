@@ -123,15 +123,21 @@ def verify_sources(record, candidate):
             candidate_intact(Path(record['candidate_run']), candidate))
 
 
-def read_frozen(run):
+def read_frozen(run, entrypoint):
     record = json.loads((run / 'evaluation.json').read_text())
     for name, digest in record['snapshot_files'].items():
         if sha(run / 'freeze' / name) != digest:
             raise ValueError(f'评测冻结副本 SHA 不符：{name}')
-    for name in SCORERS:
-        path = f'scripts/{name}'
-        if sha(ROOT / path) != record['snapshot_files'][path]:
-            raise ValueError(f'当前评分实现与运行前冻结版本不同：{name}')
+    # 同时校验本次门槛判定、材料校验和验证器，不能只冻结旧评分函数。
+    tools = {name: ROOT / name for name in record['snapshot_files']
+             if name.startswith(('scripts/', 'tests/'))}
+    tools['scripts/issue25_materials.py'] = Path(__file__)
+    entrypoints = {'issue25_report.py': 'scripts/issue25_report.py',
+                  'issue25_real.py': 'tests/issue25_real.py'}
+    tools[entrypoints[entrypoint.name]] = entrypoint
+    for name, path in tools.items():
+        if sha(path) != record['snapshot_files'][name]:
+            raise ValueError(f'当前评分工具与运行前冻结版本不同：{name}')
     manifest_path = run / 'freeze' / MANIFEST_PATH
     manifest = json.loads(manifest_path.read_text())
     manifest, annotations = read_materials(manifest_path,
