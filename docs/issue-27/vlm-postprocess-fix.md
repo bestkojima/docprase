@@ -61,3 +61,5 @@ ctest --test-dir build/vlm-postprocess --output-on-failure
 首次导出、重新导出和混合 formula Region 复用上述规则。普通 `--reexport` 保持保存的 JSON 和判定；`--revalidate` 可恢复旧版误拒绝的合法符号，保留旧文档及前后记录。回归覆盖中英文金额、小数和千分位、多个金额与公式、旧式公式分隔符、代码示例、历史恢复，以及未知命令、坏参数和未闭合公式的拒绝。
 
 本轮完整验证：Linux/MNN Release 构建通过，CTest **32/32**（96.25 秒）、Python unittest **40/40**（66.198 秒），Python 编译、Node.js 语法及差异空白检查通过。全部 195 个目录符号经过父正文、独立公式、首次导出、重新导出及真实 KaTeX 排版验证。[证据与红绿记录](math-policy-evidence.json)单独保留，不覆盖上一轮结果；这仍是受控 VLM 输出的后处理验证，不是新一轮 OCR 精度结论。
+
+上述全量套件对应 `f2b1fd7`。双轴审查发现并在 `1b37b5c` 修复一项兼容性回归：金额后紧接 `\(`、`\[` 或已转义的 `\$` 时，将其识别为后续独立内容，其他反斜杠仍作为数学续接检查。修正后的公式/历史重新校验专项通过，Markdown 导出与真实 KaTeX 两项最终复测 **2/2**（20.96 秒）；期间修正了一处测试变量被下一案例覆盖的问题，失败与重跑日志均保留。最终 Standards、Spec 各 **0 项未解决**，详见[审查记录](vlm-postprocess-review.md)。常用 `build/linux-current/dococr_cli` 已构建至该修正；先前五个原始反例也已通过该运行目录的 CLI 恢复或重新导出并生成离线 HTML。

@@ -48,7 +48,8 @@
     ],
     "katex_version": "0.19.0",
     "production_reexport": "首次导出/重新导出字节一致，JSON 原始内容保留",
-    "historical_revalidation": "旧符号误判恢复；坏参数、未知命令、宏、外链和未闭合公式继续拒绝"
+    "historical_revalidation": "旧符号误判恢复；坏参数、未知命令、宏、外链和未闭合公式继续拒绝",
+    "commit": "f2b1fd7"
   },
   "logs": [
     {
@@ -74,6 +75,26 @@
     {
       "path": ".scratch/vlm-postprocess/math-policy-unittest.log",
       "sha256": "d288f80a9f6aeab924d1c74779db5bda40d97d2edbc3f1f048cd8af971023f7a"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/currency-adjacent-red.log",
+      "sha256": "250cca04d7487b27a15cc6cf6f522b4168f372bf7c8aa2e6ad665e19977af945"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/math-policy-review-build.log",
+      "sha256": "b00106b9394470458917a635a17c64eca6975e46661a9903ee9e475a4ed2111d"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/math-policy-review-ctest.log",
+      "sha256": "6a559a9cb95ceb052ef650335310ea9a3d0dbed8e120b663ec8b196e8623c40c"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/math-policy-review-render-green.log",
+      "sha256": "2e1e22ea4ff60d69f6b1581f4210d4fd33bb75f903f7f7e5bdb0c96023e67fd5"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/math-policy-review-linux-build.log",
+      "sha256": "03eca358cd0ca8220e716673ae5ca4c0daacb8d230d1ddba43389fe3cd8e9fc2"
     }
   ],
   "preexisting_user_source": {
@@ -85,5 +106,68 @@
     "不是完整 TeX 解析器",
     "未重跑模型精度验收",
     "表格换行、表格坏公式校验、重复上下标不属于本轮完成范围"
-  ]
+  ],
+  "review": {
+    "base_commit": "c73f4ab285339fc6911eeb43caf05778f71a366c",
+    "implementation_commits": [
+      "f2b1fd7",
+      "1b37b5c"
+    ],
+    "standards_unresolved": 0,
+    "spec_unresolved": 0,
+    "fixed_finding": "金额后独立旧式公式或转义金额被误判为当前公式的续接；显式区分三个独立内容起点",
+    "verification": {
+      "printed_formula_integration": "passed",
+      "formula_revalidation_integration": "passed",
+      "markdown_export_and_katex": {
+        "passed": 2,
+        "total": 2,
+        "seconds": 20.96
+      },
+      "independent_reproduction": "旧式行内/显示公式紧随金额均为 ok"
+    },
+    "intermediate_test_failure": "第一次复测3/4：新增测试的局部 raw/expected 被内层循环覆盖，导致下一案例的预期数学列表不匹配；分离变量后实际导出/排版2/2通过"
+  },
+  "production_cli": {
+    "path": "build/linux-current/dococr_cli",
+    "built_through_commit": "1b37b5c",
+    "original_counterexamples_replayed_at": "f2b1fd7",
+    "result": [
+      {
+        "case": "body-valid-div",
+        "operation": "--revalidate",
+        "status": "ok",
+        "preview_ok": true,
+        "markdown": "计算 $6\\div 2=3$。\n"
+      },
+      {
+        "case": "body-valid-cup",
+        "operation": "--revalidate",
+        "status": "ok",
+        "preview_ok": true,
+        "markdown": "集合 $A\\cup B$。\n"
+      },
+      {
+        "case": "body-valid-epsilon",
+        "operation": "--revalidate",
+        "status": "ok",
+        "preview_ok": true,
+        "markdown": "误差 $\\epsilon=0.01$。\n"
+      },
+      {
+        "case": "body-valid-omega",
+        "operation": "--revalidate",
+        "status": "ok",
+        "preview_ok": true,
+        "markdown": "电阻 $R=10\\Omega$。\n"
+      },
+      {
+        "case": "body-currency-math",
+        "operation": "--reexport",
+        "status": "ok",
+        "preview_ok": true,
+        "markdown": "价格 \\$5，公式 $x^2$。\n"
+      }
+    ]
+  }
 }
