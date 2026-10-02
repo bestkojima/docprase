@@ -82,7 +82,10 @@ def validate_controlled_job(job, name):
         ownership = [r for r in page['relations'] if r['type'] == 'content_owned_by']
         if not (len(regions) == len(blocks) == len(ownership) == 1 and
                 len(regions[0]['source_layout_block_ids']) == 2 and
-                regions[0]['recognition_type'] == expected_type and blocks[0]['status'] == 'ok'):
+                regions[0]['recognition_type'] == blocks[0]['type'] == expected_type and
+                blocks[0]['source_region_ids'] == [regions[0]['id']] and
+                ownership[0]['source_layout_block_id'] in regions[0]['source_layout_block_ids'] and
+                ownership[0]['owner_block_id'] == blocks[0]['id'] and blocks[0]['status'] == 'ok'):
             raise ValueError(f'{name}: 父子内容必须由一个成功的父区域输出')
         checks.append('single_owner_region_and_output')
     if name == 'all_labels':
@@ -92,12 +95,35 @@ def validate_controlled_job(job, name):
                     else 'table' if i == 21 else 'text' for i in range(25) if i != 18}
         if actual != expected:
             raise ValueError('25 类的公共输出路由不符合三类任务/image 映射')
+        # 本用例各框分离，无内容归属；每个保留 class 必须生成唯一 Region 和输出。
+        layout_classes = {b['id']: b['original_class_id'] for b in layouts}
+        region_classes = {}
+        for region in page['regions']:
+            sources = region['source_layout_block_ids']
+            if len(sources) != 1 or sources[0] not in layout_classes:
+                raise ValueError('独立类别 Region 的来源不唯一或缺失')
+            class_id = layout_classes[sources[0]]
+            if region['recognition_type'] != expected[class_id]:
+                raise ValueError('Region 识别任务与来源类别不一致')
+            region_classes[region['id']] = class_id
+        if len(region_classes) != len(expected) or sorted(region_classes.values()) != sorted(expected):
+            raise ValueError('独立类别 Region 缺失或重复')
+        output_classes = []
         for block in page['blocks']:
+            sources = block['source_region_ids']
+            if len(sources) != 1 or sources[0] not in region_classes:
+                raise ValueError('独立类别输出的 Region 来源不唯一或缺失')
+            class_id = region_classes[sources[0]]
+            if block['type'] != expected[class_id]:
+                raise ValueError('输出类型与来源类别不一致')
+            output_classes.append(class_id)
             if block['type'] == 'image':
                 if block['status'] != 'ok' or block['provenance']['recognition']['attempts']:
                     raise ValueError('图片资源不应执行 Ovis 或记为识别失败')
                 if not (job / block['content']['resource']).is_file():
                     raise ValueError('图片资源缺失')
+        if sorted(output_classes) != sorted(expected):
+            raise ValueError('独立类别输出缺失或重复，包括五类图片资源')
         checks.append('all_classes_and_image_without_ovis')
     if name == 'unknown_label':
         if not any(b['original_class_id'] == 25 and b['label'] == 'unknown' for b in page['layout_blocks']):

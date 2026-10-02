@@ -56,7 +56,7 @@
 
 逐页数量、来源哈希、控制案例裁图/归属、压缩的完整官方阶段轨迹和测试结果见 [证据摘要](evidence/summary.json)。完整运行产物留在 `output/issue-28/audit-3/`，归档文件都有哈希可核对。源码基点为 `ce0dbae`；运行时包括工作区已有的 `src/region_structure.cpp` 修改，具体源码和 MNN 动态库哈希见 [local-sources.json](evidence/local-sources.json)。这些既有修改不属于本次提交。
 
-审查后把归属/路由断言纳入 runner，重新执行全部 17 组受控作业；随后对原 38 份公共作业产物校验原图输入张量、候选、mask、DocumentIR 和清单哈希，重放增强后的原因追踪。归档 `comparison.json.gz` 为这次重放版本，官方矩形/auto 输出与初次执行逐项一致。[初次记录](evidence/run-report.json) 与 [重放记录](evidence/review-replay-report.json) 分别保存，不把重放记作新模型推理。初次全套 32 CTest、42 Python 测试通过；审查后的 Python 定向测试、38 份重放和编译检查通过，生产代码未变，未重复运行无关全套测试。
+审查后把归属/路由断言纳入 runner，重新执行全部 17 组受控作业；随后对原 38 份公共作业产物校验原图输入张量、候选、mask、DocumentIR 和清单哈希，重放增强后的原因追踪。归档 `comparison.json.gz` 为这次重放版本，官方矩形/auto 输出与初次执行逐项一致。[初次记录](evidence/run-report.json) 与 [重放记录](evidence/review-replay-report.json) 分别保存，不把重放记作新模型推理。初次全套 32 CTest、42 Python 测试通过；审查修复并增加负例后，最终全套 46 Python 测试、6 个定向测试、38 份重放和编译检查通过。生产代码未变，没有重复运行 CTest。
 
 ## 复现
 
@@ -67,7 +67,7 @@ cmake -S . -B build -DDOCOCR_REQUIRE_MNN=ON -DDOCOCR_REQUIRE_LLM=ON
 cmake --build build -j 4
 python scripts/issue28_audit.py --cli build/dococr_cli \
   --fixture-cli build/dococr_cli_fixture --out output/issue-28/new-run --real
-python -m unittest discover -s tests -p test_issue28_reference.py
+python -m unittest discover -s tests -p 'test_issue28*.py'
 python tests/issue19_real.py build/dococr_cli
 ctest --test-dir build --output-on-failure
 python scripts/issue28_replay.py --from-report output/issue-28/new-run/report.json \

@@ -60,8 +60,8 @@
   ],
   "production_changed": false,
   "script_sha256": {
-    "issue28_audit.py": "e65e10e5e754ca33f18759c2755b7ab481fdd9208eebcb067cfbe025476d3e52",
-    "issue28_reference.py": "79c38e5653fb53a582e466bb1a4c43851bdc71b47823859843bff79620e9ad0c"
+    "issue28_audit.py": "e6e5bd175d1f5166728e652d82f74f00b31c5a74ac7f83269b29bc1987b83c75",
+    "issue28_reference.py": "6e4db6050bab623ff37504721600c5e18e663fb69cfbc8cabe31105b50f882b4"
   },
   "runtime": {
     "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
@@ -78,12 +78,12 @@
     "build/libdococr_c.so": "919443092e7948f4b9c150f81d882eea5fc06c917340da92a3c37a17fcfc1e1e",
     "build/libdococr_c_test.so": "9cb430c933ae716c26190a1dc5ad332c0f58930c09dbe53cfc6ae302a4629aba"
   },
-  "git_head": "3eede0c43a19112e157eeb96afc577b67cd4a473",
-  "working_tree_diff_sha256": "e57482fcfaee9c147d1adef8781e77abadee34443938f2a28ac3ff4d4a3b3946",
+  "git_head": "6ef3fad542064a8c7d5e3de5583585b9d0a09102",
+  "working_tree_diff_sha256": "492b0504cd91524cba65866ad180b43bad4824ed7ba96299c7bad187be72b44b",
   "cases": {
     "legal_table_child": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/legal_table_child/comparison.json",
-      "sha256": "d044132a26347eb58072b86c6d6f4530fd2f185fd1e9f19f1aeeeb1dccf635c1",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/legal_table_child/comparison.json",
+      "sha256": "d5461d486b4f8b6f699090963a936d36b78aca12ef3cd90f180285d14e5c831e",
       "input": {
         "rows": [
           [
@@ -119,8 +119,8 @@
       "status": "passed"
     },
     "legal_inline_formula": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/legal_inline_formula/comparison.json",
-      "sha256": "ec5c338b565955ac30902e82527ede1355ee00241feff2345dfc02b6de69d91f",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/legal_inline_formula/comparison.json",
+      "sha256": "089e4ee4d8e31d4b417bbab68ef90cdd7f22cd2dc6664fff9ae6d0ce3b47bf31",
       "input": {
         "rows": [
           [
@@ -156,8 +156,8 @@
       "status": "passed"
     },
     "short_title": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/short_title/comparison.json",
-      "sha256": "17ea92b84d72c891fccfc327bbfc18d3a224f5a1a8a7133a14b28056dfb4e347",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/short_title/comparison.json",
+      "sha256": "d699c1ded227041e32dc48d025348f0829bee8e4146c41d8bc2e98ea82ec28a9",
       "input": {
         "rows": [
           [
@@ -179,8 +179,8 @@
       "status": "passed"
     },
     "legal_caption": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/legal_caption/comparison.json",
-      "sha256": "c2ac26e1afce391500f505cbe98f37f4283705485cc94cd1a597b6036143b804",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/legal_caption/comparison.json",
+      "sha256": "f6686abc6f72ffb8fc62884642954df5c3768ae439f591e06e98f520276fd391",
       "input": {
         "rows": [
           [
@@ -214,8 +214,8 @@
       "status": "passed"
     },
     "partial_containment": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/partial_containment/comparison.json",
-      "sha256": "32dc1879d8dc5182205af8fa70b733f29413602c8e668cffe5644ef6b2c0428f",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/partial_containment/comparison.json",
+      "sha256": "b2f67fd3891f30dcf40046ae50a3f70bc72602f949af469414082bcdc49b6cdd",
       "input": {
         "rows": [
           [
@@ -250,8 +250,8 @@
       "status": "passed"
     },
     "independent_formula": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/independent_formula/comparison.json",
-      "sha256": "7c6ccc062b5e360579aa9c5b3211b79ca43d0f16554e41748b0bc2807c77bfc4",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/independent_formula/comparison.json",
+      "sha256": "563b1ec9ffd82035377c2f2a099e3ce3445eed360932ce6e172e18e81e830bea",
       "input": {
         "rows": [
           [
@@ -286,8 +286,8 @@
       "status": "passed"
     },
     "page_boundary": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/page_boundary/comparison.json",
-      "sha256": "ee1b1f7b217b923919b44e8f59d59cf3b061c51f3223cf3f981d31884775d244",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/page_boundary/comparison.json",
+      "sha256": "6b40d4d6fb0a9e74bdc73a82b8e82a91452350b485a84efcc9538afa5f4b8caa",
       "input": {
         "rows": [
           [
@@ -311,8 +311,8 @@
       "status": "passed"
     },
     "subpixel_width": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/subpixel_width/comparison.json",
-      "sha256": "e673165dc52daa26f9608e6e58adda9bce8082ad19c0672547b135159e8b793c",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/subpixel_width/comparison.json",
+      "sha256": "ca53fb1f77f00b25437e795f7007d54a9d24251c5742553d4fbd7de2d7edb267",
       "input": {
         "rows": [
           [
@@ -334,8 +334,8 @@
       "status": "passed"
     },
     "union_adjacent": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/union_adjacent/comparison.json",
-      "sha256": "6578a962e777c3db5dbc494f7509e09e98899438c1672df210993cbd847839bc",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/union_adjacent/comparison.json",
+      "sha256": "a52ed6b8b43d355ff5a25937b41480a633fb71ff56e66d324db41a1dc9e4ccdb",
       "input": {
         "rows": [
           [
@@ -370,8 +370,8 @@
       "status": "passed"
     },
     "nms_same_and_cross": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/nms_same_and_cross/comparison.json",
-      "sha256": "ea78c597a2a2e51b698882e065e8426fefcb66e3eb40b7a47121a374364d5c9e",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/nms_same_and_cross/comparison.json",
+      "sha256": "4fc448cf835707b987bfdb8737454e7be276d8689780d7bee75c57680587eb5f",
       "input": {
         "rows": [
           [
@@ -413,8 +413,8 @@
       "status": "passed"
     },
     "score_boundary": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/score_boundary/comparison.json",
-      "sha256": "3145682939d31e6515aa89e85a15195776cb4fa4d72f11b7bcaf71ed56c1dc88",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/score_boundary/comparison.json",
+      "sha256": "becbfc82d186f0fa058c25ce5e732289c7cef02dcf7ce12f6a1540e207addb04",
       "input": {
         "rows": [
           [
@@ -436,8 +436,8 @@
       "status": "passed"
     },
     "large_page_image": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/large_page_image/comparison.json",
-      "sha256": "eaacf92990a25f5c1049379b76d1a4489f3968a638ffb314a6c2d3ac4911c64e",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/large_page_image/comparison.json",
+      "sha256": "a95fb1afaa6440cf954c99915a0607fcb7d864b81fc0164d6fcfdfd5b1c5031e",
       "input": {
         "rows": [
           [
@@ -470,8 +470,8 @@
       "status": "passed"
     },
     "display_formula_in_chart": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/display_formula_in_chart/comparison.json",
-      "sha256": "c5fd20686f49a70970c368bdc89fa0a2e68c4b6367393f4514e279d8d4f1090c",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/display_formula_in_chart/comparison.json",
+      "sha256": "ad713e15da56b5e9a32a220f9b2839e3d9a8323e84f84021ef1121d8b2c1b104",
       "input": {
         "rows": [
           [
@@ -505,8 +505,8 @@
       "status": "passed"
     },
     "reference_skip": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/reference_skip/comparison.json",
-      "sha256": "8233f0e966780bf07ced12985fee945926c9df45e09d958ddedd23753f6b364c",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/reference_skip/comparison.json",
+      "sha256": "98d9ae48e58a781854457a7ce8a275319f4bd373fbf75ad7fc7bbba24b52d42c",
       "input": {
         "rows": [
           [
@@ -539,8 +539,8 @@
       "status": "passed"
     },
     "rank_mask": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/rank_mask/comparison.json",
-      "sha256": "07e5583569b6ac89719b7b4fcecd98c9b49e01b8992c618886d5df8b5cd60298",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/rank_mask/comparison.json",
+      "sha256": "d2fbebd11b2c43d54b44be0d9e576125a9befc1153081f01936f6b87003a4805",
       "input": {
         "rows": [
           [
@@ -584,8 +584,8 @@
       "status": "passed"
     },
     "unknown_label": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/unknown_label/comparison.json",
-      "sha256": "60e2fb3779ffb1befbe2bcb021ea6b1146d8c3d07b2df9ae41c7684669046ce5",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/unknown_label/comparison.json",
+      "sha256": "9ed646d5a6b18e7220ec37d523603529fbaeceb3dd99c9614aa7acde5cc2b3f9",
       "input": {
         "rows": [
           [
@@ -609,8 +609,8 @@
       "status": "passed"
     },
     "all_labels": {
-      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/all_labels/comparison.json",
-      "sha256": "a96a07007ac4f9a0785fbba5ced00510d2e3e98ad6d9b7f8726c2d798a4cdecb",
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-7/all_labels/comparison.json",
+      "sha256": "71349f5c46c4410e4e4ce63bef452e8f41933e90eed097eb421725301512b957",
       "input": {
         "rows": [
           [

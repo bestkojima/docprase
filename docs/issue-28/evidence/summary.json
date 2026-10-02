@@ -8,10 +8,18 @@
       "total": 32
     },
     "python_unittest": {
+      "passed": 46,
+      "total": 46
+    },
+    "issue19_original_reference": "passed",
+    "issue28_targeted": {
+      "passed": 6,
+      "total": 6
+    },
+    "python_unittest_initial": {
       "passed": 42,
       "total": 42
-    },
-    "issue19_original_reference": "passed"
+    }
   },
   "production_changes": false,
   "pages": {
@@ -2645,7 +2653,7 @@
   "content_quality_verdict": "not_verified_full_transcription_not_rerun; no production policy change",
   "post_review_replay": {
     "report": "review-replay-report.json",
-    "sha256": "417a316f4f51e1f3ee17720a001354eb38fcb9dad8fa2cba162a6cff502dfc52",
+    "sha256": "91245daf5cc1ae0ea9c1e1aed7bf7f407ff3ce0f1a8421f9a62214c2823d659b",
     "entries": 38,
     "official_outputs_unchanged": true,
     "content_ownership_and_routing_assertions": "passed",
