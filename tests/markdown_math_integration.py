@@ -163,6 +163,7 @@ def main():
                         r'{x^2}^3', r'x^2+y^3', r'x^2{}^3', r'x^2\,^3',
                         r'\frac{x^2}{y^3}', r'\sqrt[3]{x^2}', r"x'^{2}",
                         r'\sum_{i=1}^{n}x_i', r'\left(x^2\right)^3',
+                        r'\xrightarrow[[a]]{b}', r'\xrightarrow[a[b]c]{d}',
                         r'\begin{matrix}x^2&y^3\\x_1&y_2\end{matrix}']:
             raw = '$' + formula + '$'
             cases.append(check_case(args, root, 'script-groups-' + str(len(cases)), raw, raw,

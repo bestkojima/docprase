@@ -118,6 +118,9 @@ def main():
     fixture, production = sys.argv[1:3]
     with tempfile.TemporaryDirectory(prefix='dococr-formula-revalidation-') as temporary:
         root = Path(temporary)
+        for name, raw in [('nested-arrow-label', r'$\xrightarrow[[a]]{b}$'),
+                          ('mixed-arrow-label', r'$\xrightarrow[a[b]c]{d}$')]:
+            check_case(root, fixture, production, name, raw, class_id=5)
         check_case(root, fixture, production, 'historical-table-symbols',
             r'<table><tr><td>$6\div 2=3$</td></tr></table>', class_id=21, historical=True)
         for class_id in [22, 5, 21]:

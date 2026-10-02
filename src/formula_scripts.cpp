@@ -70,8 +70,14 @@ private:
             if (text[pos] == close) { ++pos; return true; }
             unsigned scripts = 0;
             bool primes = false;
+            // Optional labels can contain nested brackets. Only the matching
+            // closing bracket terminates the current optional argument.
+            if (close == ']' && text[pos] == '[') {
+                ++pos;
+                if (!expression(']', depth + 1)) return false;
+            }
             // TeX permits a script on an implicit empty base, e.g. ^{14}C.
-            if (text[pos] != '^' && text[pos] != '_' && text[pos] != '\'' && !atom(depth)) return false;
+            else if (text[pos] != '^' && text[pos] != '_' && text[pos] != '\'' && !atom(depth)) return false;
             while (true) {
                 whitespace();
                 if (pos == text.size()) break;
