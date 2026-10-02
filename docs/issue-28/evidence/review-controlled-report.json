@@ -1,0 +1,902 @@
+{
+  "sources": {
+    "pipeline.yaml": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/configs/pipelines/PaddleOCR-VL-1.5.yaml",
+      "sha256": "f8d3b49965997e1934bde5433bb86e24c8061bcbe92ce31c47a2405c5e3264f5"
+    },
+    "predictor.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/layout_analysis/predictor.py",
+      "sha256": "e08b4347d79c029da1a4b592808629fb4a88f2a63e747ac15410191e4ff3ddf6"
+    },
+    "pipeline.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/pipelines/paddleocr_vl/pipeline.py",
+      "sha256": "32966d14aad6ac1bc043737c96352a4f0b4efcbead96f9354254dd4b9d1c6675"
+    },
+    "layout.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/layout_analysis/processors.py",
+      "sha256": "b9e0d53738cd9147b2b665a96b4cd38bef8668f75e9c85ba4b8826cd41f02ca2"
+    },
+    "detection.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/object_detection/processors.py",
+      "sha256": "de2bb4f14f01619435c65df09272d978619c045c915cba465990dc4c32ac3540"
+    },
+    "pipeline_utils.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/pipelines/paddleocr_vl/uilts.py",
+      "sha256": "63bf7d0ccf03225dd6be582e2b25628283e2eed0ad0b1c7864e086e3b95f923a"
+    },
+    "inference.yml": {
+      "url": "https://huggingface.co/PaddlePaddle/PP-DocLayoutV3/resolve/241f8bdfc77a7c7bee915a5057aaee58c235a8d3/inference.yml",
+      "sha256": "506fcfac13b3b546ae40d7886b44126420f392adb694e3f8bb6a6286a1f90fdc",
+      "note": "model label metadata fetched separately; not versioned by PaddleX commit",
+      "revision": "241f8bdfc77a7c7bee915a5057aaee58c235a8d3"
+    }
+  },
+  "labels": [
+    "abstract",
+    "algorithm",
+    "aside_text",
+    "chart",
+    "content",
+    "display_formula",
+    "doc_title",
+    "figure_title",
+    "footer",
+    "footer_image",
+    "footnote",
+    "formula_number",
+    "header",
+    "header_image",
+    "image",
+    "inline_formula",
+    "number",
+    "paragraph_title",
+    "reference",
+    "reference_content",
+    "seal",
+    "table",
+    "text",
+    "vertical_text",
+    "vision_footnote"
+  ],
+  "production_changed": false,
+  "script_sha256": {
+    "issue28_audit.py": "e65e10e5e754ca33f18759c2755b7ab481fdd9208eebcb067cfbe025476d3e52",
+    "issue28_reference.py": "79c38e5653fb53a582e466bb1a4c43851bdc71b47823859843bff79620e9ad0c"
+  },
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/home/dr/project/docprase/.scratch/issue20-experiments-env/bin/python",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "opencv": "5.0.0",
+    "pillow": "12.3.0",
+    "shapely": "2.1.2"
+  },
+  "binaries": {
+    "build/dococr_cli": "542a6c53ea117972eff0ba7196c9fc7eefd324e6fa820294a3ec1c961bab8241",
+    "build/dococr_cli_fixture": "78b0c8ab724b4b810836bb77ec3078e1677378e7aa801c3c28c95c0a78825666",
+    "build/libdococr_c.so": "919443092e7948f4b9c150f81d882eea5fc06c917340da92a3c37a17fcfc1e1e",
+    "build/libdococr_c_test.so": "9cb430c933ae716c26190a1dc5ad332c0f58930c09dbe53cfc6ae302a4629aba"
+  },
+  "git_head": "3eede0c43a19112e157eeb96afc577b67cd4a473",
+  "working_tree_diff_sha256": "e57482fcfaee9c147d1adef8781e77abadee34443938f2a28ac3ff4d4a3b3946",
+  "cases": {
+    "legal_table_child": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/legal_table_child/comparison.json",
+      "sha256": "d044132a26347eb58072b86c6d6f4530fd2f185fd1e9f19f1aeeeb1dccf635c1",
+      "input": {
+        "rows": [
+          [
+            21,
+            0.95,
+            10,
+            10,
+            180,
+            180,
+            0
+          ],
+          [
+            22,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "public_behavior_checks": [
+        "single_owner_region_and_output"
+      ],
+      "status": "passed"
+    },
+    "legal_inline_formula": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/legal_inline_formula/comparison.json",
+      "sha256": "ec5c338b565955ac30902e82527ede1355ee00241feff2345dfc02b6de69d91f",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            60,
+            0
+          ],
+          [
+            15,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "public_behavior_checks": [
+        "single_owner_region_and_output"
+      ],
+      "status": "passed"
+    },
+    "short_title": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/short_title/comparison.json",
+      "sha256": "17ea92b84d72c891fccfc327bbfc18d3a224f5a1a8a7133a14b28056dfb4e347",
+      "input": {
+        "rows": [
+          [
+            17,
+            0.9,
+            10,
+            10,
+            90,
+            14,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": []
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "legal_caption": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/legal_caption/comparison.json",
+      "sha256": "c2ac26e1afce391500f505cbe98f37f4283705485cc94cd1a597b6036143b804",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            100,
+            0
+          ],
+          [
+            7,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "partial_containment": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/partial_containment/comparison.json",
+      "sha256": "32dc1879d8dc5182205af8fa70b733f29413602c8e668cffe5644ef6b2c0428f",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            60,
+            0
+          ],
+          [
+            5,
+            0.9,
+            160,
+            20,
+            190,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0,
+          1
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "independent_formula": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/independent_formula/comparison.json",
+      "sha256": "7c6ccc062b5e360579aa9c5b3211b79ca43d0f16554e41748b0bc2807c77bfc4",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            60,
+            0
+          ],
+          [
+            5,
+            0.9,
+            20,
+            90,
+            160,
+            130,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0,
+          1
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "page_boundary": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/page_boundary/comparison.json",
+      "sha256": "ee1b1f7b217b923919b44e8f59d59cf3b061c51f3223cf3f981d31884775d244",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.9,
+            -1.4,
+            90.2,
+            40.3,
+            201,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "subpixel_width": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/subpixel_width/comparison.json",
+      "sha256": "e673165dc52daa26f9608e6e58adda9bce8082ad19c0672547b135159e8b793c",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.9,
+            10.1,
+            10.1,
+            10.4,
+            20.4,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": []
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "union_adjacent": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/union_adjacent/comparison.json",
+      "sha256": "6578a962e777c3db5dbc494f7509e09e98899438c1672df210993cbd847839bc",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            90,
+            40,
+            0
+          ],
+          [
+            22,
+            0.9,
+            10,
+            42,
+            90,
+            72,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0,
+          1
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "nms_same_and_cross": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/nms_same_and_cross/comparison.json",
+      "sha256": "ea78c597a2a2e51b698882e065e8426fefcb66e3eb40b7a47121a374364d5c9e",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            90,
+            50,
+            0
+          ],
+          [
+            22,
+            0.9,
+            11,
+            10,
+            90,
+            50,
+            1
+          ],
+          [
+            17,
+            0.8,
+            10,
+            10,
+            90,
+            50,
+            2
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "score_boundary": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/score_boundary/comparison.json",
+      "sha256": "3145682939d31e6515aa89e85a15195776cb4fa4d72f11b7bcaf71ed56c1dc88",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.3,
+            10,
+            10,
+            90,
+            50,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": []
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "large_page_image": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/large_page_image/comparison.json",
+      "sha256": "eaacf92990a25f5c1049379b76d1a4489f3968a638ffb314a6c2d3ac4911c64e",
+      "input": {
+        "rows": [
+          [
+            14,
+            0.95,
+            0,
+            0,
+            200,
+            200,
+            0
+          ],
+          [
+            22,
+            0.9,
+            20,
+            20,
+            90,
+            50,
+            1
+          ]
+        ],
+        "local_selected": [
+          1
+        ],
+        "official_selected": [
+          1
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "display_formula_in_chart": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/display_formula_in_chart/comparison.json",
+      "sha256": "c5fd20686f49a70970c368bdc89fa0a2e68c4b6367393f4514e279d8d4f1090c",
+      "input": {
+        "rows": [
+          [
+            3,
+            0.95,
+            10,
+            10,
+            180,
+            180,
+            0
+          ],
+          [
+            5,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "reference_skip": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/reference_skip/comparison.json",
+      "sha256": "8233f0e966780bf07ced12985fee945926c9df45e09d958ddedd23753f6b364c",
+      "input": {
+        "rows": [
+          [
+            18,
+            0.9,
+            10,
+            10,
+            90,
+            50,
+            0
+          ],
+          [
+            19,
+            0.8,
+            10,
+            60,
+            90,
+            100,
+            1
+          ]
+        ],
+        "local_selected": [
+          1
+        ],
+        "official_selected": [
+          1
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "rank_mask": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/rank_mask/comparison.json",
+      "sha256": "07e5583569b6ac89719b7b4fcecd98c9b49e01b8992c618886d5df8b5cd60298",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.9,
+            10,
+            10,
+            90,
+            50,
+            2
+          ],
+          [
+            15,
+            0.8,
+            20,
+            20,
+            80,
+            40,
+            0
+          ],
+          [
+            17,
+            0.7,
+            100,
+            80,
+            180,
+            84,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1,
+          2
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "public_behavior_checks": [],
+      "status": "passed"
+    },
+    "unknown_label": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/unknown_label/comparison.json",
+      "sha256": "60e2fb3779ffb1befbe2bcb021ea6b1146d8c3d07b2df9ae41c7684669046ce5",
+      "input": {
+        "rows": [
+          [
+            25,
+            0.9,
+            10,
+            10,
+            90,
+            50,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": null
+      },
+      "public_behavior_checks": [
+        "unknown_preserved"
+      ],
+      "status": "passed"
+    },
+    "all_labels": {
+      "path": "/home/dr/project/docprase/output/issue-28/controlled-4/all_labels/comparison.json",
+      "sha256": "a96a07007ac4f9a0785fbba5ced00510d2e3e98ad6d9b7f8726c2d798a4cdecb",
+      "input": {
+        "rows": [
+          [
+            0,
+            0.95,
+            5,
+            5,
+            35,
+            25,
+            0
+          ],
+          [
+            1,
+            0.949,
+            43,
+            5,
+            73,
+            25,
+            1
+          ],
+          [
+            2,
+            0.948,
+            81,
+            5,
+            111,
+            25,
+            2
+          ],
+          [
+            3,
+            0.947,
+            119,
+            5,
+            149,
+            25,
+            3
+          ],
+          [
+            4,
+            0.946,
+            157,
+            5,
+            187,
+            25,
+            4
+          ],
+          [
+            5,
+            0.945,
+            5,
+            43,
+            35,
+            63,
+            5
+          ],
+          [
+            6,
+            0.944,
+            43,
+            43,
+            73,
+            63,
+            6
+          ],
+          [
+            7,
+            0.943,
+            81,
+            43,
+            111,
+            63,
+            7
+          ],
+          [
+            8,
+            0.942,
+            119,
+            43,
+            149,
+            63,
+            8
+          ],
+          [
+            9,
+            0.941,
+            157,
+            43,
+            187,
+            63,
+            9
+          ],
+          [
+            10,
+            0.94,
+            5,
+            81,
+            35,
+            101,
+            10
+          ],
+          [
+            11,
+            0.939,
+            43,
+            81,
+            73,
+            101,
+            11
+          ],
+          [
+            12,
+            0.938,
+            81,
+            81,
+            111,
+            101,
+            12
+          ],
+          [
+            13,
+            0.9369999999999999,
+            119,
+            81,
+            149,
+            101,
+            13
+          ],
+          [
+            14,
+            0.9359999999999999,
+            157,
+            81,
+            187,
+            101,
+            14
+          ],
+          [
+            15,
+            0.9349999999999999,
+            5,
+            119,
+            35,
+            139,
+            15
+          ],
+          [
+            16,
+            0.9339999999999999,
+            43,
+            119,
+            73,
+            139,
+            16
+          ],
+          [
+            17,
+            0.9329999999999999,
+            81,
+            119,
+            111,
+            139,
+            17
+          ],
+          [
+            18,
+            0.9319999999999999,
+            119,
+            119,
+            149,
+            139,
+            18
+          ],
+          [
+            19,
+            0.9309999999999999,
+            157,
+            119,
+            187,
+            139,
+            19
+          ],
+          [
+            20,
+            0.9299999999999999,
+            5,
+            157,
+            35,
+            177,
+            20
+          ],
+          [
+            21,
+            0.9289999999999999,
+            43,
+            157,
+            73,
+            177,
+            21
+          ],
+          [
+            22,
+            0.9279999999999999,
+            81,
+            157,
+            111,
+            177,
+            22
+          ],
+          [
+            23,
+            0.9269999999999999,
+            119,
+            157,
+            149,
+            177,
+            23
+          ],
+          [
+            24,
+            0.9259999999999999,
+            157,
+            157,
+            187,
+            177,
+            24
+          ]
+        ],
+        "local_selected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "official_selected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "public_behavior_checks": [
+        "all_classes_and_image_without_ovis"
+      ],
+      "status": "passed"
+    }
+  },
+  "real": {}
+}

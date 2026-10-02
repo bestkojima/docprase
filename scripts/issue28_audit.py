@@ -71,6 +71,41 @@ def invoke(command, folder, env=None):
         raise RuntimeError(f'公共作业失败：{folder}: {result.stderr}')
 
 
+def validate_controlled_job(job, name):
+    """从公共 DocumentIR 验证内容只输出一次、三类任务与资源记账。"""
+    document = json.loads((job / 'document.json').read_text())
+    page = document['pages'][0]
+    checks = []
+    if name in ('legal_table_child', 'legal_inline_formula'):
+        expected_type = 'table' if name == 'legal_table_child' else 'text'
+        regions, blocks = page['regions'], page['blocks']
+        ownership = [r for r in page['relations'] if r['type'] == 'content_owned_by']
+        if not (len(regions) == len(blocks) == len(ownership) == 1 and
+                len(regions[0]['source_layout_block_ids']) == 2 and
+                regions[0]['recognition_type'] == expected_type and blocks[0]['status'] == 'ok'):
+            raise ValueError(f'{name}: 父子内容必须由一个成功的父区域输出')
+        checks.append('single_owner_region_and_output')
+    if name == 'all_labels':
+        layouts = page['layout_blocks']
+        actual = {b['original_class_id']: b['label'] for b in layouts}
+        expected = {i: 'image' if i in (3, 9, 13, 14, 20) else 'formula' if i in (5, 15)
+                    else 'table' if i == 21 else 'text' for i in range(25) if i != 18}
+        if actual != expected:
+            raise ValueError('25 类的公共输出路由不符合三类任务/image 映射')
+        for block in page['blocks']:
+            if block['type'] == 'image':
+                if block['status'] != 'ok' or block['provenance']['recognition']['attempts']:
+                    raise ValueError('图片资源不应执行 Ovis 或记为识别失败')
+                if not (job / block['content']['resource']).is_file():
+                    raise ValueError('图片资源缺失')
+        checks.append('all_classes_and_image_without_ovis')
+    if name == 'unknown_label':
+        if not any(b['original_class_id'] == 25 and b['label'] == 'unknown' for b in page['layout_blocks']):
+            raise ValueError('未知类别被静默丢弃或当成正文')
+        checks.append('unknown_preserved')
+    return checks
+
+
 def compare_job(job, env, labels):
     document = json.loads((job / 'document.json').read_text())
     diag = document['layout_diagnostics']
@@ -78,6 +113,11 @@ def compare_job(job, env, labels):
     count = int(np.fromfile(job / assets['fetch_name_1'], '<i4')[0])
     rows = np.fromfile(job / assets['fetch_name_0'], '<f4').reshape(300, 7)[:count].copy()
     masks = read_masks(job / assets['fetch_name_2'])[:count]
+    if not 0 <= count <= 300 or len(diag['candidates']) != count:
+        raise ValueError('公共产物候选数量不符')
+    for candidate, mask in zip(diag['candidates'], masks):
+        if candidate['mask_nonzero'] != np.count_nonzero(mask):
+            raise ValueError('公共产物 mask 统计与原始行不符')
     page = document['pages'][0]
     size = tuple(page['raster_size'])
     transform = diag.get('input_transform')
@@ -179,7 +219,8 @@ def main():
                     raise ValueError(f'{name}/{mode}: 官方候选不符合反例规格 {selected}')
         save(folder/'comparison.json', comparison)
         report['cases'][name] = dict(path=str(folder/'comparison.json'), sha256=sha(folder/'comparison.json'),
-                                    input=case, status='passed')
+                                    input=case, public_behavior_checks=validate_controlled_job(folder/'job', name),
+                                    status='passed')
         print(name, 'passed', flush=True)
     if args.real:
         manifest_path = ROOT/'docs/omnidocbench-20/manifest.json'

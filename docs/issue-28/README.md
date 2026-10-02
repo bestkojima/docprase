@@ -31,6 +31,8 @@
 
 `StageTrace` 使用 Python 行事件只读观察冻结 `apply` 的阶段局部数组，不替换后处理算法。官方函数和类从校验过的 AST 装载，只移除依赖/计时装饰器及包导入；保留 `SKIP_ORDER_LABELS`。包含、NMS、mask、扩框、结构化和两种外层过滤均执行官方函数。若候选完整行也重复、无法唯一追溯，工具明确报错，禁止按相同分数猜测来源。
 
+`removed_at` 表示删除阶段；`removal_reason` 进一步区分 `reference_label / short_box / inline_formula_overlap / smaller_overlapping_box`。`OuterTrace` 观察官方实际执行的删除分支，并记录 `related_candidate_id`，不通过另一套重叠算法猜测原因。
+
 ## 三类识别、资源与 skip
 
 25 个原始类别统一映射为 17 个 text、2 个 formula、1 个 table、5 个 image；本地原始别名与官方名称分别保存。image 包括 class 3/9/13/14/20（chart、footer_image、header_image、image、seal），不调用 Ovis。旧说明中“9/13 为 text、image 只有 3 类”的表格已落后于当前源码；本次以公共作业 `all_labels` 的输出和 `src/layout_region_policy.cpp` 为依据，未覆盖修改已有文档。
@@ -54,6 +56,8 @@
 
 逐页数量、来源哈希、控制案例裁图/归属、压缩的完整官方阶段轨迹和测试结果见 [证据摘要](evidence/summary.json)。完整运行产物留在 `output/issue-28/audit-3/`，归档文件都有哈希可核对。源码基点为 `ce0dbae`；运行时包括工作区已有的 `src/region_structure.cpp` 修改，具体源码和 MNN 动态库哈希见 [local-sources.json](evidence/local-sources.json)。这些既有修改不属于本次提交。
 
+审查后把归属/路由断言纳入 runner，重新执行全部 17 组受控作业；随后对原 38 份公共作业产物校验原图输入张量、候选、mask、DocumentIR 和清单哈希，重放增强后的原因追踪。归档 `comparison.json.gz` 为这次重放版本，官方矩形/auto 输出与初次执行逐项一致。[初次记录](evidence/run-report.json) 与 [重放记录](evidence/review-replay-report.json) 分别保存，不把重放记作新模型推理。初次全套 32 CTest、42 Python 测试通过；审查后的 Python 定向测试、38 份重放和编译检查通过，生产代码未变，未重复运行无关全套测试。
+
 ## 复现
 
 使用 Python 3.12 安装 [requirements.txt](requirements.txt)，构建启用 MNN 的 CLI，并准备仓库固定模型和 `output/omnidocbench/selected-20` 数据：
@@ -66,6 +70,8 @@ python scripts/issue28_audit.py --cli build/dococr_cli \
 python -m unittest discover -s tests -p test_issue28_reference.py
 python tests/issue19_real.py build/dococr_cli
 ctest --test-dir build --output-on-failure
+python scripts/issue28_replay.py --from-report output/issue-28/new-run/report.json \
+  --out output/issue-28/new-replay
 ```
 
 输出目录必须不存在，以免混合不同运行来源。去掉 `--real` 仅执行受控公共作业。默认参照缓存 `.scratch/issue28-reference`；不存在时从固定 URL 下载并校验。单独执行官方参照：

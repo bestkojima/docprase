@@ -1,0 +1,17 @@
+legal_table_child passed
+legal_inline_formula passed
+short_title passed
+legal_caption passed
+partial_containment passed
+independent_formula passed
+page_boundary passed
+subpixel_width passed
+union_adjacent passed
+nms_same_and_cross passed
+score_boundary passed
+large_page_image passed
+display_formula_in_chart passed
+reference_skip passed
+rank_mask passed
+unknown_label passed
+all_labels passed

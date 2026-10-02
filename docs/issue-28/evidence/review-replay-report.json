@@ -1,0 +1,286 @@
+{
+  "execution": "same_captured_public_jobs_reference_replay_no_new_model_inference",
+  "source_report": "/home/dr/project/docprase/output/issue-28/audit-3/report.json",
+  "source_report_sha256": "396a65f3716cb9dcd49c20fb39d87765be020692dacaa6a3fba4e2466a523726",
+  "scripts": {
+    "issue28_reference.py": "6e4db6050bab623ff37504721600c5e18e663fb69cfbc8cabe31105b50f882b4",
+    "issue28_audit.py": "e65e10e5e754ca33f18759c2755b7ab481fdd9208eebcb067cfbe025476d3e52",
+    "issue28_replay.py": "805645b7a0c862c8b08de636e36c9b611fd7728fb615468fa7c5ab17e5c01c6a"
+  },
+  "entries": {
+    "legal_table_child": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/legal_table_child.json",
+      "sha256": "1144867323c9937d546e24dc62421383f85b72d60f66cc3bf46209c10738624e",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/legal_table_child/job",
+      "public_behavior_checks": [
+        "single_owner_region_and_output"
+      ],
+      "official_outputs_unchanged": true
+    },
+    "legal_inline_formula": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/legal_inline_formula.json",
+      "sha256": "57b28e8ce7590b47ee89089a233ce6e5ba3a4ee7a60c8bac13e253c260aa58bb",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/legal_inline_formula/job",
+      "public_behavior_checks": [
+        "single_owner_region_and_output"
+      ],
+      "official_outputs_unchanged": true
+    },
+    "short_title": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/short_title.json",
+      "sha256": "a914f84f4c92e46eb1d6f7d8e6c0da32674bc68c8d90c75cc36c76edd05c33d8",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/short_title/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "legal_caption": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/legal_caption.json",
+      "sha256": "d15cbc6264bafe76a9d02f5ec308337bf20ec34f3204020b98691c4f01d36da5",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/legal_caption/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "partial_containment": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/partial_containment.json",
+      "sha256": "192963e3eeef6f5875b62dc9d7bd628ee4fc062a3cb4bec8a6f2b45b77ba9f50",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/partial_containment/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "independent_formula": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/independent_formula.json",
+      "sha256": "56db94e1b827b5d3a039da6901d242a547eb69da2079de0d1322f1c4c40cf241",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/independent_formula/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "page_boundary": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/page_boundary.json",
+      "sha256": "5a56c8e0b6d36ae4f5f78fd251b7c5284f7a12204e203465d93754f1eb696053",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/page_boundary/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "subpixel_width": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/subpixel_width.json",
+      "sha256": "6deb8b382cfecc8a982b577c421072101f60692854f7372b8ddb868a63d74870",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/subpixel_width/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "union_adjacent": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/union_adjacent.json",
+      "sha256": "89c20229d0bd2f313b25322115618e3a446ed9b5a82286ecf9e6a6b65baa4538",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/union_adjacent/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "nms_same_and_cross": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/nms_same_and_cross.json",
+      "sha256": "386fd4c1813fb17d1e849dcf792117f6b14ee4a54cf5e58dbb547cb39a9cd013",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/nms_same_and_cross/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "score_boundary": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/score_boundary.json",
+      "sha256": "c9c24618de8b2a71378f706a809d1c76e13823a1f02fdc4b20b8df09a03a0ab2",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/score_boundary/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "large_page_image": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/large_page_image.json",
+      "sha256": "792feffadafa8fc890ac4acda4dd5b1a2ac4f7c5a2bfb1c5b8f119887f4bb23d",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/large_page_image/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "display_formula_in_chart": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/display_formula_in_chart.json",
+      "sha256": "b474b260900dcba1a087fc7ba360f536fdd92e455c8c242b818c0eb1932ccc4b",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/display_formula_in_chart/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "reference_skip": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/reference_skip.json",
+      "sha256": "a6f53e298f29f1f8d9c6577d88de86bbf74bce2c88d082ddddad2a0af8abfe18",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/reference_skip/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "rank_mask": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/rank_mask.json",
+      "sha256": "797b6e9a495d7f6beebdbc426396b85fcdd921be14243935c3cff6d8ecd68409",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/rank_mask/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "unknown_label": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/unknown_label.json",
+      "sha256": "65dd6e09c6d30e6e8fd9aa11e9f5a5fe10bedf8bc74efed8b3e8f597befc12bb",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/unknown_label/job",
+      "public_behavior_checks": [
+        "unknown_preserved"
+      ],
+      "official_outputs_unchanged": true
+    },
+    "all_labels": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/all_labels.json",
+      "sha256": "066dc7580e6692a9b560448c6cbddc7735aaa034ced037765c1ab39b97cb6a99",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/all_labels/job",
+      "public_behavior_checks": [
+        "all_classes_and_image_without_ovis"
+      ],
+      "official_outputs_unchanged": true
+    },
+    "issue19-reference": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/issue19-reference.json",
+      "sha256": "a0ec104ea8a97fda8145696e0012a598d6391f3b025f9063df3301ed647e565f",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/issue19-reference/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-01": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-01.json",
+      "sha256": "cb0f2dbb13b232884432387a80c733e0a60bb857bc165e7d8ed79f344227fc19",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-01/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-02": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-02.json",
+      "sha256": "3d2b8a542cef5bd5e86112c0c3919e5184a8310d7b4fa2c5d3f8bbf272c30604",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-02/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-03": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-03.json",
+      "sha256": "b6d7a4f58c624fe2bf2c0eff48cbcd840e5d1a93e56f6ab7d08922ef68292e7a",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-03/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-04": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-04.json",
+      "sha256": "8f422095c6ce30d310d71487f99623e8419b7f72a500eaaec44fd670a229be49",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-04/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-05": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-05.json",
+      "sha256": "7d34064efc8ff9259663fe2d6e1af88693886b735e049341c20f24f4e51deb50",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-05/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-06": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-06.json",
+      "sha256": "776721a1ead802d0be9c38b690dd6bea302063b869fe3765dd218eeba9099069",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-06/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-07": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-07.json",
+      "sha256": "69729e5db7feac407808fecc41b08e93e1d6d6c90040ccd9da266c14b2f89fa8",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-07/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-08": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-08.json",
+      "sha256": "5f57b82ba94985e54cb3c5b9af167e9ac89f5cfb5a797265c4dbdb054a6c27c5",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-08/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-09": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-09.json",
+      "sha256": "b00790286ab06cea5cafa36a4006d7d3a5576672e79c80673741643c1ecc73f5",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-09/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-10": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-10.json",
+      "sha256": "a7e92df883375e6ca71c43d158232c9bcc498442aba8b6b88d04cdcb6247ea9c",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-10/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-11": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-11.json",
+      "sha256": "13265afc5d395a7782aee458c67005ccd596685a5eef66ccc081e100c4c2f484",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-11/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-12": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-12.json",
+      "sha256": "b83f1554f6fc04bb219c76fddb8cb8f165b7c44dddeba7f5bc5070cbbee14d16",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-12/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-13": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-13.json",
+      "sha256": "f01671268dd30c4e2933e6bf3c95e552843aff8bdab10781dbba497aad21718a",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-13/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-14": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-14.json",
+      "sha256": "aa04620554c61aef68988ddd4c3fb34cc0f57f0478b34ce08ba76ef54577d055",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-14/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-15": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-15.json",
+      "sha256": "a996d13ace0884e428720a5b4ff7ab3bb4fbbf0d05ea2ee26384493b8728f9bc",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-15/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-16": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-16.json",
+      "sha256": "a78f2e82ed961f1fd037bb4fc66d1e350c5646aaaedd6e7ecee9aa3df863652a",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-16/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-17": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-17.json",
+      "sha256": "9d44b29ff910190a7cb67e36d6c7ea01b433b60df3c3960be43be1de45392756",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-17/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-18": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-18.json",
+      "sha256": "cf4f49ed0db8320fedbad643df065543d9d072a01137c575170c4efb6c17e91b",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-18/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-19": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-19.json",
+      "sha256": "470e696755a9769f75c4183051f2da8a908f1f4d7fd4b1aee40813300d2dfa2a",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-19/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    },
+    "odb-20": {
+      "path": "/home/dr/project/docprase/output/issue-28/review-replay-6/odb-20.json",
+      "sha256": "a02e1907c427a413a11eb5694fad22b3e9024792d9b87dc957deed1c3ecbad99",
+      "source_job": "/home/dr/project/docprase/output/issue-28/audit-3/odb-20/job",
+      "public_behavior_checks": [],
+      "official_outputs_unchanged": true
+    }
+  }
+}

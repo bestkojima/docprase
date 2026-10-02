@@ -128,6 +128,57 @@ class StageTrace:
         return self
 
 
+class OuterTrace:
+    """观察实际执行的删除分支；原因和关联框不靠重新计算重叠推断。"""
+    def __init__(self, function, boxes):
+        self.code = function.__code__
+        self.original_ids = {box['candidate_id'] for box in boxes}
+        self.removals = {}
+        self.lines = {}
+        tree = ast.parse(Path(self.code.co_filename).read_text())
+        function_node = next(n for n in tree.body if isinstance(n, ast.FunctionDef)
+                             and n.name == 'filter_overlap_boxes')
+
+        def visit(node, reason=None):
+            if isinstance(node, ast.If):
+                condition = ast.unparse(node.test)
+                if condition == 'not boxes':
+                    self.reference_line = node.lineno
+                if condition == 'widths[i] < 6 or heights[i] < 6':
+                    reason = 'short_box'
+                elif condition == 'overlap_ratio > 0.5':
+                    reason = 'inline_formula_overlap'
+                elif condition == 'areas[i] >= areas[j]':
+                    reason = 'smaller_overlapping_box'
+            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and \
+                    ast.unparse(node.func) == 'dropped_indexes.add':
+                index = ast.unparse(node.args[0])
+                if reason is None or index not in ('i', 'j'):
+                    raise ValueError('官方外层删除分支定位不完整')
+                self.lines[node.lineno] = (reason, index)
+            for child in ast.iter_child_nodes(node):
+                visit(child, reason)
+        visit(function_node)
+        if len(self.lines) != 5:
+            raise ValueError('官方外层删除分支数量变化')
+
+    def __call__(self, frame, event, arg):
+        if frame.f_code is not self.code:
+            return None
+        if event == 'line':
+            values = frame.f_locals
+            if frame.f_lineno == self.reference_line:
+                for index in self.original_ids - {b['candidate_id'] for b in values['boxes']}:
+                    self.removals[index] = dict(reason='reference_label', related_candidate_id=None)
+            if frame.f_lineno in self.lines:
+                reason, index_name = self.lines[frame.f_lineno]
+                candidate = values['boxes'][values[index_name]]['candidate_id']
+                other = None if reason == 'short_box' else \
+                    values['boxes'][values['j' if index_name == 'i' else 'i']]['candidate_id']
+                self.removals[candidate] = dict(reason=reason, related_candidate_id=other)
+        return self
+
+
 def run_reference(env, labels, rows, masks, size, threshold, mode, unclip=(1., 1.)):
     rows = np.asarray(rows, dtype=np.float32).reshape(-1, 7)
     masks = np.asarray(masks, dtype=np.int32)
@@ -161,14 +212,24 @@ def run_reference(env, labels, rows, masks, size, threshold, mode, unclip=(1., 1
     standalone = env['update_order_index'](env['filter_boxes'](deepcopy(structured), mode), env['SKIP_ORDER_LABELS'])
     # VL 管线：模型 filter_overlap_boxes=False → update_order_index → 管线外层过滤。
     model_output = env['update_order_index'](deepcopy(structured), env['SKIP_ORDER_LABELS'])
-    pipeline = env['filter_overlap_boxes']({'boxes': model_output}, mode)['boxes']
+    outer_trace = OuterTrace(env['filter_overlap_boxes'], model_output)
+    try:
+        sys.settrace(outer_trace)
+        pipeline = env['filter_overlap_boxes']({'boxes': model_output}, mode)['boxes']
+    finally:
+        sys.settrace(previous_trace)
     survivors = {box['candidate_id'] for box in pipeline}
+    if set(outer_trace.removals) != set(valid_ids) - survivors:
+        raise ValueError('外层删除原因与实际输出不一致')
     for index in set(valid_ids) - survivors:
         trace.removed[index] = 'outer_overlap'
     candidates = [dict(candidate_id=i, class_id=int(row[0]), original_bbox=row[2:6].tolist(),
                        rank=int(row[6]), mask_row=i, mask_sha256=trace.mask_hashes[i],
                        mask_nonzero=int(np.count_nonzero(masks[i])), selected=i in survivors,
-                       removed_at=trace.removed.get(i)) for i, row in enumerate(rows)]
+                       removed_at=trace.removed.get(i),
+                       removal_reason=outer_trace.removals.get(i, {}).get('reason', trace.removed.get(i)),
+                       related_candidate_id=outer_trace.removals.get(i, {}).get('related_candidate_id'))
+                  for i, row in enumerate(rows)]
     return dict(stages=trace.stages, candidates=candidates, model_output=model_output,
                 pipeline_output=pipeline, standalone_output=standalone)
 
