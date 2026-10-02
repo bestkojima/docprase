@@ -10,6 +10,7 @@
 #include "region_structure.hpp"
 #include "json.hpp"
 #include "content_validation.hpp"
+#include "formula_symbols.hpp"
 #include <algorithm>
 #include <chrono>
 #include <cmath>
@@ -1065,25 +1066,27 @@ ParsedFormula parse_formula(const std::string& raw) {
                 if (i >= value.size() || value[i] == '\n' || value[i] == '\r') return result;
             } else {
                 std::string command = value.substr(start, i - start);
-                static const std::vector<std::string> known = {
+                // Commands with arguments or parser effects stay explicit here.
+                // The versioned catalog contains only standalone math symbols
+                // and operators, verified through public exports and KaTeX.
+                static const std::set<std::string> symbols = [] {
+                    std::set<std::string> names;
+                    const auto catalog = nlohmann::json::parse(formula_symbols_json);
+                    for (const auto& category : catalog.at("categories"))
+                        for (const auto& name : category) names.insert(name.get<std::string>());
+                    return names;
+                }();
+                static const std::vector<std::string> structural = {
                     "frac", "dfrac", "tfrac", "sqrt", "left", "right", "text",
-                    "mathrm", "mathbf", "mathbb", "operatorname", "alpha", "beta",
-                    "gamma", "delta", "Delta", "theta", "lambda", "mu", "pi",
-                    "varphi", "Phi", "omega", "rho", "xi", "sigma",
-                    "sum", "int", "lim", "infty", "cdots", "ldots", "dots",
-                    "sin", "cos", "tan", "cot", "ln", "log", "lg", "exp", "prime", "max", "min",
-                    "times", "cdot", "pm", "mp", "le", "leq", "ge", "geq",
-                    "ne", "neq", "approx", "in", "notin", "gt", "lt",
-                    "leqslant", "geqslant", "sim", "mid", "cap", "perp",
-                    "forall", "exists", "vee", "ominus", "circ", "triangle", "angle", "therefore",
-                    "to", "rightarrow", "rightleftharpoons", "leftrightharpoons", "uparrow",
+                    "mathrm", "mathbf", "mathbb", "operatorname",
                     "xrightarrow", "xleftarrow",
-                    "Rightarrow", "partial", "overline", "overrightarrow", "hat", "vec", "bar",
+                    "overline", "overrightarrow", "hat", "vec", "bar",
                     "begin", "end", "quad", "qquad", "big", "Big", "bigl",
                     "bigr", "Bigl", "Bigr", "langle", "rangle", "lvert",
                     "rvert", "lbrace", "rbrace"
                 };
-                if (std::find(known.begin(), known.end(), command) == known.end())
+                if (!symbols.count(command) &&
+                    std::find(structural.begin(), structural.end(), command) == structural.end())
                     return result;
                 if (command == "xrightarrow" || command == "xleftarrow") {
                     const size_t end = formula_arrow_argument_end(value, i);
@@ -1235,39 +1238,8 @@ bool valid_text_math(const std::string& text, size_t* math_spans = nullptr) {
     for (size_t i = 0; i < text.size();) {
         if (text[i] == '\\' && i + 1 < text.size() &&
             (text[i+1] == '$' || text[i+1] == '\\')) { i += 2; continue; }
-        // A currency amount such as "$5，" is not an opening math delimiter.
-        if (text[i] == '$' && i + 1 < text.size() &&
-            text[i+1] >= '0' && text[i+1] <= '9') {
-            size_t closing_math = text.find('$', i + 1);
-            while (closing_math != std::string::npos) {
-                size_t slashes = 0;
-                for (size_t k = closing_math; k > 0 && text[k-1] == '\\'; --k)
-                    ++slashes;
-                if (slashes % 2 == 0) break;
-                closing_math = text.find('$', closing_math + 1);
-            }
-            bool complete_math = closing_math != std::string::npos &&
-                parse_formula(text.substr(i, closing_math - i + 1)).valid;
-            size_t amount_end = i + 1;
-            while (amount_end < text.size() &&
-                   ((text[amount_end] >= '0' && text[amount_end] <= '9') ||
-                    text[amount_end] == ',' || text[amount_end] == '.'))
-                ++amount_end;
-            size_t after_space = amount_end;
-            while (after_space < text.size() &&
-                   (text[after_space] == ' ' || text[after_space] == '\t'))
-                ++after_space;
-            bool math_continues = after_space < text.size() &&
-                std::string("$=+-*/_^<>").find(text[after_space]) != std::string::npos;
-            if (!complete_math && !math_continues &&
-                (amount_end == text.size() ||
-                 static_cast<unsigned char>(text[amount_end]) >= 0x80 ||
-                 text[amount_end] == ' ' || text[amount_end] == '\t' ||
-                 text[amount_end] == ';' || text[amount_end] == ':')) {
-                i = amount_end;
-                continue;
-            }
-        }
+        const size_t amount_end = currency_amount_end(text, i);
+        if (amount_end > i) { i = amount_end; continue; }
         std::string close;
         size_t open_length = 0;
         if (text[i] == '$') {
@@ -1570,6 +1542,42 @@ std::string serialize(const Image& image, const std::string& state,
 }
 } // namespace
 
+size_t currency_amount_end(const std::string& text, size_t i) {
+    if (i >= text.size() || text[i] != '$' || i + 1 == text.size() ||
+        text[i+1] < '0' || text[i+1] > '9') return 0;
+    size_t slashes = 0;
+    for (size_t k = i; k > 0 && text[k-1] == '\\'; --k) ++slashes;
+    if (slashes % 2) return 0;
+    size_t closing_math = text.find('$', i + 1);
+    while (closing_math != std::string::npos) {
+        size_t slashes = 0;
+        for (size_t k = closing_math; k > 0 && text[k-1] == '\\'; --k)
+            ++slashes;
+        if (slashes % 2 == 0) break;
+        closing_math = text.find('$', closing_math + 1);
+    }
+    bool complete_math = closing_math != std::string::npos &&
+        parse_formula(text.substr(i, closing_math - i + 1)).valid;
+    size_t amount_end = i + 1;
+    while (amount_end < text.size() &&
+           ((text[amount_end] >= '0' && text[amount_end] <= '9') ||
+            text[amount_end] == ',' || text[amount_end] == '.'))
+        ++amount_end;
+    size_t after_space = amount_end;
+    while (after_space < text.size() &&
+           (text[after_space] == ' ' || text[after_space] == '\t'))
+        ++after_space;
+    bool math_continues = after_space < text.size() &&
+        std::string("$=+-*/_^<>\\").find(text[after_space]) != std::string::npos;
+    if (!complete_math && !math_continues &&
+        (amount_end == text.size() ||
+         static_cast<unsigned char>(text[amount_end]) >= 0x80 ||
+         text[amount_end] == ' ' || text[amount_end] == '\t' ||
+         text[amount_end] == ';' || text[amount_end] == ':')) {
+        return amount_end;
+    }
+    return 0;
+}
 ParsedFormula parse_formula_content(const std::string& generated) {
     return parse_formula(generated);
 }

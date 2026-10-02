@@ -1,0 +1,6 @@
+#pragma once
+
+namespace dococr {
+// Compiled in: production parsing never reads a mutable runtime catalog.
+constexpr char formula_symbols_json[] = R"SYMBOLS(@FORMULA_SYMBOLS_JSON@)SYMBOLS";
+}

@@ -60,9 +60,14 @@ foreach(version IN ITEMS 1_0 1_1 1_2 1_3 1_4 1_5_IMAGE 1_5_PDF 1_6_IMAGE 1_6_PDF
   dococr_split_schema(DOCUMENT_SCHEMA_${version} DOCUMENT_SCHEMA_${version}_LITERALS)
 endforeach()
 configure_file(src/document_schemas.hpp.in "${CMAKE_CURRENT_BINARY_DIR}/generated/document_schemas.hpp" @ONLY)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  "${CMAKE_CURRENT_SOURCE_DIR}/configs/formula-symbols.json")
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/configs/formula-symbols.json" FORMULA_SYMBOLS_JSON)
+configure_file(src/formula_symbols.hpp.in "${CMAKE_CURRENT_BINARY_DIR}/generated/formula_symbols.hpp" @ONLY)
 add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/region_structure.cpp src/layout_region_policy.cpp src/label_export_policy.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
 set_target_properties(dococr_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
-target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb third_party/nlohmann)
+target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb third_party/nlohmann
+  "${CMAKE_CURRENT_BINARY_DIR}/generated")
 target_compile_features(dococr_core PUBLIC cxx_std_17)
 set(DOCOCR_MNN_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../MNN" CACHE PATH "MNN 公共头文件与已构建库所在目录")
 find_path(DOCOCR_MNN_INCLUDE MNN/Interpreter.hpp PATHS "${DOCOCR_MNN_ROOT}/include" NO_DEFAULT_PATH)

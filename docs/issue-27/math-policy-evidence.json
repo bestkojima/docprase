@@ -1,0 +1,89 @@
+{
+  "scope": "#27：完善常用公式符号与正文货币处理机制，仅受控输出和导出/排版验证",
+  "base_commit": "c73f4ab285339fc6911eeb43caf05778f71a366c",
+  "catalog": {
+    "version": 1,
+    "symbols": 195,
+    "categories": 9,
+    "path": "configs/formula-symbols.json"
+  },
+  "reproductions": [
+    {
+      "case": "common-math-symbols",
+      "before": "invalid_inline_formula_syntax；父正文回退",
+      "after": "ok；公式保留并完成 KaTeX 排版"
+    },
+    {
+      "case": "body-currency-with-math",
+      "before": "金额美元符号未转义，KaTeX 消费错误的数学起点",
+      "after": "Markdown 金额转义；公式原样排版；JSON 内容/原始输出不变"
+    },
+    {
+      "case": "currency-in-code-span",
+      "before": "首次修正给代码示例插入了多余反斜杠",
+      "after": "代码示例金额原样保留"
+    },
+    {
+      "case": "number-with-unclosed-command",
+      "before": "未闭合的 $2 \\epsilon 被作为金额判为 ok",
+      "after": "partial；invalid_inline_formula_syntax"
+    }
+  ],
+  "validation": {
+    "build": "Linux/MNN Release passed",
+    "ctest": {
+      "passed": 32,
+      "total": 32,
+      "seconds": 96.25
+    },
+    "python_unittest": {
+      "passed": 40,
+      "total": 40,
+      "seconds": 66.198
+    },
+    "static_checks": [
+      "Python py_compile",
+      "Node --check",
+      "git diff --check"
+    ],
+    "katex_version": "0.19.0",
+    "production_reexport": "首次导出/重新导出字节一致，JSON 原始内容保留",
+    "historical_revalidation": "旧符号误判恢复；坏参数、未知命令、宏、外链和未闭合公式继续拒绝"
+  },
+  "logs": [
+    {
+      "path": ".scratch/vlm-postprocess/symbol-catalog-red.log",
+      "sha256": "e23dc344849148a8441be2cb37a49e00d44f15f7f85a6a1446d18a44e1e35997"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/body-currency-red.log",
+      "sha256": "85d464bf4baa9c3ea4da96d1b1c655e678d8e26b617aa7be2bb946c8d4794200"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/currency-code-red.log",
+      "sha256": "c1c7ea24cfa34b1b026822c0b0efb023f7e7bcfd592bb2698625906a296f65a6"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/currency-unclosed-red.log",
+      "sha256": "67b08a7a5f99c2ecde077db89183c721c1fc6edbc42a207db3fcf6736945a080"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/math-policy-ctest.log",
+      "sha256": "9f326059ed37e6d1232d20d3e29dd39b6245b2ba686da12a86b8dd9182a459e6"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/math-policy-unittest.log",
+      "sha256": "d288f80a9f6aeab924d1c74779db5bda40d97d2edbc3f1f048cd8af971023f7a"
+    }
+  ],
+  "preexisting_user_source": {
+    "path": "src/region_structure.cpp",
+    "sha256": "661175e53d11f8ffec65f34b63b9c22bf60a4a11dd327afc21ec71871d4ba277",
+    "committed": false
+  },
+  "limitations": [
+    "不是完整 TeX 解析器",
+    "未重跑模型精度验收",
+    "表格换行、表格坏公式校验、重复上下标不属于本轮完成范围"
+  ]
+}

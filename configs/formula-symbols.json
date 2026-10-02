@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "categories": {
+    "greek_lower": ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "iota", "kappa", "varkappa", "lambda", "mu", "nu", "xi", "omicron", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega"],
+    "greek_upper": ["Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"],
+    "arithmetic": ["times", "div", "cdot", "cdotp", "pm", "mp", "ast", "star", "circ", "bullet", "oplus", "ominus", "otimes", "oslash", "odot"],
+    "relations": ["le", "leq", "ge", "geq", "ne", "neq", "approx", "gt", "lt", "leqslant", "geqslant", "sim", "simeq", "equiv", "cong", "propto", "ll", "gg", "prec", "succ", "preceq", "succeq", "perp", "parallel", "nparallel", "mid", "nmid"],
+    "sets_and_logic": ["in", "notin", "ni", "subset", "supset", "subseteq", "supseteq", "nsubseteq", "nsupseteq", "subsetneq", "supsetneq", "cup", "cap", "setminus", "emptyset", "varnothing", "forall", "exists", "nexists", "neg", "land", "lor", "wedge", "vee", "top", "bot", "therefore", "because"],
+    "arrows": ["to", "rightarrow", "leftarrow", "leftrightarrow", "Rightarrow", "Leftarrow", "Leftrightarrow", "mapsto", "longrightarrow", "longleftarrow", "longleftrightarrow", "Longrightarrow", "Longleftarrow", "Longleftrightarrow", "uparrow", "downarrow", "updownarrow", "nearrow", "searrow", "swarrow", "nwarrow", "rightleftharpoons", "leftrightharpoons"],
+    "large_operators": ["sum", "prod", "coprod", "int", "iint", "iiint", "oint", "bigcup", "bigcap", "bigvee", "bigwedge"],
+    "named_operators": ["sin", "cos", "tan", "cot", "sec", "csc", "arcsin", "arccos", "arctan", "sinh", "cosh", "tanh", "coth", "ln", "log", "lg", "exp", "lim", "limsup", "liminf", "max", "min", "sup", "inf", "det", "dim", "gcd", "ker", "deg", "Pr"],
+    "other_symbols": ["infty", "partial", "nabla", "ell", "hbar", "imath", "jmath", "Re", "Im", "aleph", "angle", "triangle", "degree", "prime", "cdots", "ldots", "dots", "vdots", "ddots"]
+  }
+}

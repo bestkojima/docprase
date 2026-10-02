@@ -39,6 +39,7 @@ MathSpan math_span(const std::string& source, size_t start) {
         (source[start + 1] == '(' || source[start + 1] == '[');
     if (source[start] != '$' && !brackets) return {};
     if (escaped_at(source, start)) return {};
+    if (currency_amount_end(source, start) > start) return {};
     size_t width = 0;
     std::string close;
     bool display = false;
@@ -120,7 +121,7 @@ std::string trim_horizontal(std::string text) {
 
 // Protect math, code and quoted examples before looking for exam labels or
 // caption headings. These constructs may contain the exact same characters.
-std::vector<bool> protected_text(const std::string& source) {
+std::vector<bool> protected_text(const std::string& source, bool code_only = false) {
     std::vector<bool> protected_bytes(source.size(), false);
     const std::array<std::pair<std::string, std::string>, 5> quotes = {{{"\"", "\""},
         {"“", "”"}, {"‘", "’"}, {"「", "」"}, {"『", "』"}}};
@@ -162,6 +163,7 @@ std::vector<bool> protected_text(const std::string& source) {
             i = run;
             continue;
         }
+        if (code_only) { ++i; continue; }
         const auto math = math_span(source, i);
         if (math.end > i) {
             std::fill(protected_bytes.begin() + i, protected_bytes.begin() + math.end, true);
@@ -274,8 +276,16 @@ std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption
         std::string result;
         result.reserve(source.size());
         const auto escape_link = link_openers(source);
+        const auto code_bytes = protected_text(source, true);
         size_t consecutive_backslashes = 0;
         for (size_t i = 0; i < source.size(); ++i) {
+            const size_t amount_end = code_bytes[i] ? 0 : currency_amount_end(source, i);
+            if (amount_end > i) {
+                result += "\\$" + source.substr(i + 1, amount_end - i - 1);
+                i = amount_end - 1;
+                consecutive_backslashes = 0;
+                continue;
+            }
             const auto math = math_span(source, i);
             if (math.end > i) {
                 result += math.markdown;

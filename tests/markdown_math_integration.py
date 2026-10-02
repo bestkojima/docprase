@@ -75,6 +75,48 @@ def main():
         cases = [check_case(args, root, 'inline-comparisons', raw,
             '正文 &lt;说明&gt; &amp; $' + formula + '$，且 $a>b$。',
             formulas=[formula, 'a>b'])]
+        formulas = [r'6\div 2=3', r'A\cup B', r'\epsilon=0.01', r'R=10\Omega']
+        raw = '；'.join('$' + formula + '$' for formula in formulas) + '。'
+        cases.append(check_case(args, root, 'common-math-symbols', raw, raw,
+            formulas=formulas))
+        raw = '价格 $5，公式 $x^2$；再付 $10。'
+        cases.append(check_case(args, root, 'body-currency-with-math', raw,
+            r'价格 \$5，公式 $x^2$；再付 \$10。', formulas=['x^2']))
+        raw = '示例：`价格 $5 `，正文 $x^2$。'
+        cases.append(check_case(args, root, 'currency-in-code-span', raw, raw,
+            formulas=['x^2']))
+        for name, raw, expected, formulas in [
+            ('english', 'Price $5, formula $x^2$; pay $10.',
+             r'Price \$5, formula $x^2$; pay \$10.', ['x^2']),
+            ('decimal', '价格 $1,200.50，条件 $x>0$；余款 $0.25。',
+             r'价格 \$1,200.50，条件 $x>0$；余款 \$0.25。', ['x>0']),
+            ('multiple', '价格 $5 和 $10，公式 $x^2$ 与 $y^2$。',
+             r'价格 \$5 和 \$10，公式 $x^2$ 与 $y^2$。', ['x^2', 'y^2']),
+            ('escaped', r'价格 \$5，公式 $x^2$；再付 \$10。',
+             r'价格 \$5，公式 $x^2$；再付 \$10。', ['x^2']),
+            ('end', '求 $x^2$，费用 $5', r'求 $x^2$，费用 \$5', ['x^2']),
+            ('numbers', '$2(x+1)$；$2[1+x]$；$2!$；$2FeO$；$2 x$；价格 $5。',
+             r'$2(x+1)$；$2[1+x]$；$2!$；$2FeO$；$2 x$；价格 \$5。',
+             ['2(x+1)', '2[1+x]', '2!', '2FeO', '2 x']),
+            ('code-fence', '```text\n价格 $5 \n```\n\n$x^2$',
+             '```text\n价格 $5 \n```\n\n$x^2$', ['x^2']),
+        ]:
+            cases.append(check_case(args, root, 'body-currency-' + name, raw, expected,
+                formulas=formulas))
+        raw = r'价格 $5，条件 \(x<y\)；结果 \[z=x+y\]。'
+        expected = r'价格 \$5，条件 $x<y$；结果 $$z=x+y$$。'
+        for class_id in [22, 5]:
+            cases.append(check_case(args, root, f'currency-legacy-math-{class_id}', raw, expected,
+                class_id=class_id, formulas=['x<y', 'z=x+y'], display_modes=[False, True],
+                content_format='markdown' if class_id == 5 else None))
+        catalog = json.loads((ROOT / 'configs/formula-symbols.json').read_text())
+        for category, names in catalog['categories'].items():
+            formula = ' '.join('\\' + name for name in names)
+            raw = '$' + formula + '$'
+            cases.append(check_case(args, root, 'symbol-catalog-' + category, raw, raw,
+                formulas=[formula]))
+            cases.append(check_case(args, root, 'symbol-region-' + category, raw, raw,
+                class_id=5, formulas=[formula]))
         raw = r'参数 $p_{sbl}$ 与 $q_{sik}$。'
         cases.append(check_case(args, root, 'long-variable-subscripts', raw, raw,
             formulas=['p_{sbl}', 'q_{sik}']))

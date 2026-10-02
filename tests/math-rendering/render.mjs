@@ -43,9 +43,11 @@ for (test of JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))) {
     assert(html.includes('&lt;img src=x onerror=alert(1)&gt;'));
     assert(html.includes('<br>'));
   }
-  if (test.name === 'table-currency-with-math') {
+  if (['table-currency-with-math', 'body-currency-with-math'].includes(test.name)) {
     assert(html.includes('价格 $5，公式 ') && html.includes('；再付 $10。'));
   }
+  if (test.name === 'currency-in-code-span') assert(html.includes('<code>价格 $5 </code>'));
+  if (test.name === 'body-currency-code-fence') assert(html.includes('价格 $5 \n'));
   console.log(`${test.name}: KaTeX ${katex.version} PASS (${inputs.length} formulas)`);
 }
 const standalone = createDocumentRenderer();

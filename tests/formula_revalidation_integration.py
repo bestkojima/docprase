@@ -98,6 +98,24 @@ def main():
         root = Path(temporary)
         check_case(root, fixture, production, 'historical-inline-interval',
             r'区间 $[-1,+\infty)$，以及 $\left(a,b\right]$。', historical=True)
+        check_case(root, fixture, production, 'historical-common-symbols',
+            r'计算 $6\div 2=3$，集合 $A\cup B$，误差 $\epsilon=0.01$，电阻 $R=10\Omega$。',
+            historical=True)
+        check_case(root, fixture, production, 'historical-symbol-formula',
+            r'$$\prod_{i=1}^{n}x_i+\sum_{i=1}^{n}x_i$$', class_id=5, historical=True)
+        check_case(root, fixture, production, 'currency-and-math',
+            r'价格 $5，公式 $x^2$。')
+        for name, raw in [
+            ('unknown-symbol', r'$\invented$'),
+            ('definition', r'$\def\x{1}\x$'),
+            ('external-link', r'$\href{https://example.invalid}{x}$'),
+            ('macro', r'$\newcommand{\x}{1}$'),
+            ('symbol-with-broken-group', r'$\epsilon+\frac{1}{$'),
+            ('currency-with-broken-formula', r'价格 $5，公式 $\frac{a}$。'),
+            ('number-with-unknown-command', r'$2\unknown{x}$'),
+            ('number-with-unclosed-command', r'$2 \epsilon'),
+        ]:
+            check_case(root, fixture, production, name, raw, expected_status='partial')
         check_case(root, fixture, production, 'historical-display-interval',
             r'$$\left[-1,+\infty\right)$$', class_id=5, historical=True)
         check_case(root, fixture, production, 'historical-formula-sequence',
