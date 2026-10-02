@@ -65,6 +65,7 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/configs/formula-symbols.json" FORMULA_SYMBOLS_JSON)
 configure_file(src/formula_symbols.hpp.in "${CMAKE_CURRENT_BINARY_DIR}/generated/formula_symbols.hpp" @ONLY)
 add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/region_structure.cpp src/layout_region_policy.cpp src/label_export_policy.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
+target_sources(dococr_core PRIVATE src/formula_scripts.cpp)
 set_target_properties(dococr_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb third_party/nlohmann
   "${CMAKE_CURRENT_BINARY_DIR}/generated")

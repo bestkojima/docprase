@@ -28,7 +28,17 @@ export function createDocumentRenderer(engine = katex) {
   const parser = withMath(new MarkdownIt({html: true}));
   // Cell prose is literal HTML text, not another Markdown document. Recognize
   // only math delimiters, including legacy wrappers and multiline formulas.
-  function renderCellText(source) {
+  function renderCellText(source, lineBreaks) {
+    // BR is whitespace inside TeX, but remains an explicit break in prose.
+    const renderProse = (start, end) => {
+      let html = '', plain = start;
+      for (let i = start; i < end; i++) {
+        if (!lineBreaks.has(i)) continue;
+        html += parser.utils.escapeHtml(source.slice(plain, i)) + '<br>';
+        plain = i + 1;
+      }
+      return html + parser.utils.escapeHtml(source.slice(plain, end));
+    };
     const delimiters = [['$$', '$$', true], ['\\[', '\\]', true],
       ['\\(', '\\)', false], ['$', '$', false]];
     const escaped = position => {
@@ -60,13 +70,13 @@ export function createDocumentRenderer(engine = katex) {
       if (end === -1) throw new SyntaxError('表格单元格数学分隔符未闭合');
       const latex = source.slice(position + open.length, end).trim();
       if (!latex) throw new SyntaxError('表格单元格数学内容为空');
-      html += parser.utils.escapeHtml(source.slice(plain, position));
+      html += renderProse(plain, position);
       html += engine.renderToString(latex, {
         displayMode, throwOnError: true, trust: false, strict: 'ignore',
       });
       position = plain = end + close.length;
     }
-    return html + parser.utils.escapeHtml(source.slice(plain));
+    return html + renderProse(plain, source.length);
   }
   const allowed = new Set(['table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th', 'br']);
   parser.renderer.rules.html_block = (tokens, index) => {
@@ -74,6 +84,8 @@ export function createDocumentRenderer(engine = katex) {
     const fragment = parseFragment(source);
     function safe(node) {
       if (node.nodeName === '#text') return true;
+      if (['td', 'th'].includes(node.tagName) && (node.childNodes || []).some(
+        child => child.nodeName !== '#text' && child.tagName !== 'br')) return false;
       if (node.tagName && !allowed.has(node.tagName)) return false;
       if ((node.attrs || []).some(({name, value}) =>
         !['td', 'th'].includes(node.tagName) ||
@@ -84,15 +96,14 @@ export function createDocumentRenderer(engine = katex) {
       return parser.utils.escapeHtml(source);
     function renderCells(node) {
       if (node.tagName === 'td' || node.tagName === 'th') {
-        const children = [];
+        let source = '';
+        const lineBreaks = new Set();
         for (const child of node.childNodes) {
-          if (child.nodeName === '#text') {
-            const rendered = parseFragment(renderCellText(child.value));
-            children.push(...rendered.childNodes);
-          } else children.push(child);
+          if (child.nodeName === '#text') source += child.value;
+          else { lineBreaks.add(source.length); source += '\n'; }
         }
-        node.childNodes = children;
-        for (const child of children) child.parentNode = node;
+        node.childNodes = parseFragment(renderCellText(source, lineBreaks)).childNodes;
+        for (const child of node.childNodes) child.parentNode = node;
       } else for (const child of node.childNodes || []) renderCells(child);
     }
     renderCells(fragment);

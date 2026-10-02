@@ -14,6 +14,7 @@ struct RevalidatedDocument {
     std::string report;
     ReexportDocument rendered;
 };
-// Explicitly reassess saved formula failures; ordinary reexport preserves status.
+// Explicitly reassess saved math (including table cells), upgrading past false
+// failures or downgrading false successes. Ordinary reexport preserves status.
 RevalidatedDocument revalidate_formula_document(const std::string& json);
 }

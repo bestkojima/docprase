@@ -48,6 +48,10 @@ for (test of JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))) {
   }
   if (test.name === 'currency-in-code-span') assert(html.includes('<code>价格 $5 </code>'));
   if (test.name === 'body-currency-code-fence') assert(html.includes('价格 $5 \n'));
+  if (test.name === 'table-math-across-break') {
+    assert.equal((html.match(/<br>/g) || []).length, 2);
+    assert(html.includes('条件<br>') && html.includes('<br>下一行 '));
+  }
   console.log(`${test.name}: KaTeX ${katex.version} PASS (${inputs.length} formulas)`);
 }
 const standalone = createDocumentRenderer();

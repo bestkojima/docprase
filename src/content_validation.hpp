@@ -16,7 +16,13 @@ struct ParsedFormulaRegion {
     bool display = true;
 };
 ParsedFormulaRegion parse_formula_region(const std::string& generated);
+// Match historical normalized content to its source without treating its old
+// successful status as proof of current mathematical validity.
+bool matches_saved_formula_content(const std::string& generated, const std::string& content,
+                                   const std::string& format, bool display);
 bool valid_text_math_content(const std::string& content);
+struct ParsedTable;
+bool valid_table_math_content(const ParsedTable& table);
 // Exclusive end of an unescaped currency amount, or 0 for a math opener.
 // Validation and Markdown export must agree before consuming a dollar sign.
 size_t currency_amount_end(const std::string& content, size_t position);

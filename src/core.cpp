@@ -11,6 +11,7 @@
 #include "json.hpp"
 #include "content_validation.hpp"
 #include "formula_symbols.hpp"
+#include "formula_scripts.hpp"
 #include <algorithm>
 #include <chrono>
 #include <cmath>
@@ -1008,7 +1009,7 @@ ScalableDelimiter scalable_delimiter(const std::string& value, size_t pos) {
         ScalableDelimiter{} : ScalableDelimiter{ch, 1};
 }
 
-ParsedFormula parse_formula(const std::string& raw) {
+ParsedFormula parse_formula(const std::string& raw, bool check_scripts = true) {
     ParsedFormula result;
     std::string value = trim_formula(raw);
     if (value.empty()) return result;
@@ -1094,11 +1095,6 @@ ParsedFormula parse_formula(const std::string& raw) {
                     // Arrow labels are annotations and may contain Chinese or
                     // words. Keep scanning their contents to validate structure.
                     annotation_end = std::max(annotation_end, end);
-                } else if (command == "frac" || command == "dfrac" || command == "tfrac") {
-                    size_t first = formula_argument_end(value, i);
-                    if (first == std::string::npos ||
-                        formula_argument_end(value, first) == std::string::npos)
-                        return result;
                 } else if (command == "sqrt") {
                     size_t argument = i;
                     if (argument < value.size() && value[argument] == '[') {
@@ -1108,13 +1104,12 @@ ParsedFormula parse_formula(const std::string& raw) {
                     }
                     if (formula_argument_end(value, argument) == std::string::npos)
                         return result;
-                } else if (command == "text" || command == "mathrm" ||
-                           command == "mathbf" || command == "mathbb" ||
-                           command == "operatorname" || command == "overline" ||
-                           command == "overrightarrow" || command == "hat" || command == "vec" || command == "bar" ||
-                           command == "begin" || command == "end") {
-                    if (formula_argument_end(value, i) == std::string::npos)
-                        return result;
+                } else {
+                    size_t argument = i;
+                    for (int group = 0; group < formula_group_arguments(command); ++group) {
+                        argument = formula_argument_end(value, argument);
+                        if (argument == std::string::npos) return result;
+                    }
                 }
                 if (command == "left" || command == "right") {
                     ScalableDelimiter delimiter = scalable_delimiter(value, i);
@@ -1227,13 +1222,13 @@ ParsedFormula parse_formula(const std::string& raw) {
         // A complete transcription may faithfully end with an exam answer blank,
         // such as "$z=$". Generation completeness is checked separately.
         value.back() == '+' || value.back() == '-' ||
-        !math_evidence) return result;
+        !math_evidence || (check_scripts && !valid_formula_scripts(value))) return result;
     result.valid = true;
     result.latex = std::move(value);
     return result;
 }
 
-bool valid_text_math(const std::string& text, size_t* math_spans = nullptr) {
+bool valid_text_math(const std::string& text, size_t* math_spans = nullptr, bool check_scripts = true) {
     if (math_spans) *math_spans = 0;
     for (size_t i = 0; i < text.size();) {
         if (text[i] == '\\' && i + 1 < text.size() &&
@@ -1263,12 +1258,21 @@ bool valid_text_math(const std::string& text, size_t* math_spans = nullptr) {
                 found = true; break;
             }
         }
-        if (!found || !parse_formula(text.substr(i, end + close.size() - i)).valid)
+        if (!found || !parse_formula(text.substr(i, end + close.size() - i), check_scripts).valid)
             return false;
         if (math_spans) ++*math_spans;
         i = end + close.size();
     }
     return true;
+}
+
+ParsedFormulaRegion parse_formula_region_policy(const std::string& generated, bool check_scripts) {
+    const auto single = parse_formula(generated, check_scripts);
+    if (single.valid) return {true, "latex", single.latex, single.display};
+    size_t spans = 0;
+    if (valid_text_math(generated, &spans, check_scripts) && spans > 0)
+        return {true, "markdown", generated, false};
+    return {};
 }
 
 std::string render(const Block& b, bool uncertain_caption = false, bool semantic_text = false) {
@@ -1565,7 +1569,8 @@ size_t currency_amount_end(const std::string& text, size_t i) {
         ++amount_end;
     size_t after_space = amount_end;
     while (after_space < text.size() &&
-           (text[after_space] == ' ' || text[after_space] == '\t'))
+           (text[after_space] == ' ' || text[after_space] == '\t' ||
+            text[after_space] == '\r' || text[after_space] == '\n'))
         ++after_space;
     // A following legacy math opener (or an escaped dollar) starts separate
     // content. Other TeX commands still continue the numeric math candidate,
@@ -1578,6 +1583,7 @@ size_t currency_amount_end(const std::string& text, size_t i) {
         (amount_end == text.size() ||
          static_cast<unsigned char>(text[amount_end]) >= 0x80 ||
          text[amount_end] == ' ' || text[amount_end] == '\t' ||
+         text[amount_end] == '\r' || text[amount_end] == '\n' ||
          text[amount_end] == ';' || text[amount_end] == ':')) {
         return amount_end;
     }
@@ -1587,15 +1593,21 @@ ParsedFormula parse_formula_content(const std::string& generated) {
     return parse_formula(generated);
 }
 ParsedFormulaRegion parse_formula_region(const std::string& generated) {
-    const auto single = parse_formula(generated);
-    if (single.valid) return {true, "latex", single.latex, single.display};
-    size_t spans = 0;
-    if (valid_text_math(generated, &spans) && spans > 0)
-        return {true, "markdown", generated, false};
-    return {};
+    return parse_formula_region_policy(generated, true);
+}
+bool matches_saved_formula_content(const std::string& generated, const std::string& content,
+                                   const std::string& format, bool display) {
+    // Only provenance matching uses the pre-script-check policy. Current
+    // recognition, rendering and explicit revalidation always use strict rules.
+    const auto parsed = parse_formula_region_policy(generated, false);
+    return parsed.valid && parsed.text == content && parsed.format == format && parsed.display == display;
 }
 bool valid_text_math_content(const std::string& content) {
     return valid_text_math(content);
+}
+bool valid_table_math_content(const ParsedTable& table) {
+    return table.valid && std::all_of(table.cells.begin(), table.cells.end(),
+        [](const TableCell& cell) { return valid_text_math(cell.text); });
 }
 bool matches_formula_content(const std::string& generated, const std::string& content, bool display) {
     const auto formula = parse_formula(generated);
@@ -1993,11 +2005,12 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                                     }
                                 } else {
                                     block.table = parse_table(block.text);
-                                    if (block.table.valid) {
+                                    if (valid_table_math_content(block.table)) {
                                         block.status = "ok"; block.error.clear();
                                         block.text = block.table.html;
                                     } else {
-                                        block.status = "partial"; block.error = "invalid_table_structure";
+                                        block.status = "partial";
+                                        block.error = block.table.valid ? "invalid_table_formula_syntax" : "invalid_table_structure";
                                         block.format_override = "markdown";
                                     }
                                 }
@@ -2075,6 +2088,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         }
         if (transcribe && block.type == "table" && block.status != "ok") {
             block.text.clear();
+            block.table = {};
             block.format_override = "markdown";
         }
         if (block.assessment.state == "skipped") block.assessment.reason = block.error;

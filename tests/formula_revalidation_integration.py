@@ -20,7 +20,7 @@ def command(*args, code=0):
 
 
 def check_case(root, fixture, production, name, raw, *, class_id=22, historical=False,
-               finish_reason='complete', stop_reason='normal', expected_status='ok'):
+               finish_reason='complete', stop_reason='normal', expected_status='ok', historical_ok=False):
     folder = root / name
     folder.mkdir()
     image = folder / 'page.png'
@@ -38,14 +38,28 @@ def check_case(root, fixture, production, name, raw, *, class_id=22, historical=
     fresh = json.loads((job / 'document.json').read_text())
     source = copy.deepcopy(fresh)
     block = source['pages'][0]['blocks'][0]
+    if historical_ok:
+        source['status'] = source['pages'][0]['status'] = block['status'] = 'ok'
+        block['error'] = None
+        block['provenance']['assessment'].update(state='ok', reason='normal_completion')
+        if class_id == 5:
+            block['content'].update(format='latex', text=raw[1:-1], display=False)
+        if class_id == 21:
+            assert raw.startswith('<table><tr><td>') and raw.endswith('</td></tr></table>')
+            block['content'].update(format='html', text=raw, table=dict(rows=1, columns=1,
+                cells=[dict(row=0, column=0, rowspan=1, colspan=1, header=False,
+                            text=raw[len('<table><tr><td>'):-len('</td></tr></table>')], bbox=None)]))
     if historical:
         # 构造旧版误判记录，保留实际生成/视觉/停止证据，与旧第 9 题判定一致。
-        reason = 'invalid_formula_syntax' if class_id == 5 else 'invalid_inline_formula_syntax'
+        reason = {5: 'invalid_formula_syntax', 21: 'invalid_table_formula_syntax'}.get(
+            class_id, 'invalid_inline_formula_syntax')
         source['status'] = source['pages'][0]['status'] = block['status'] = 'partial'
         block['error'] = reason
         block['provenance']['assessment'].update(state='unverified', reason=reason)
         if class_id == 5:
             block['content'].update(format='markdown', text=raw)
+        if class_id == 21:
+            block['content'].update(format='markdown', text='', table=None)
         if source['schema_version'] == '1.11':
             source['schema_version'] = '1.10'
     saved = folder / 'saved-document.json'
@@ -54,8 +68,15 @@ def check_case(root, fixture, production, name, raw, *, class_id=22, historical=
     plain = folder / 'plain-export'
     command(production, '--reexport', str(saved), '--asset-root', str(job), '--out', str(plain))
     assert (plain / 'document.json').read_bytes() == old_bytes
-    if historical:
+    if historical or historical_ok:
         assert '[待核验：' in (plain / 'document.md').read_text()
+    if historical_ok:
+        forged = copy.deepcopy(source)
+        forged['pages'][0]['blocks'][0]['content']['text'] += '改写'
+        forged_path = folder / 'forged.json'
+        forged_path.write_text(json.dumps(forged, ensure_ascii=False))
+        command(production, '--revalidate', str(forged_path), '--asset-root', str(job),
+                '--out', str(folder / 'forged-output'), code=3)
     out = folder / 'revalidated'
     command(production, '--revalidate', str(saved), '--asset-root', str(job), '--out', str(out))
     assert saved.read_bytes() == old_bytes
@@ -72,14 +93,15 @@ def check_case(root, fixture, production, name, raw, *, class_id=22, historical=
     assert report['execution'] == 'saved_output_no_ocr'
     assert report['source_document_sha256'] == hashlib.sha256(old_bytes).hexdigest()
     assert report['result_document_sha256'] == hashlib.sha256((out / 'document.json').read_bytes()).hexdigest()
-    if historical:
+    if historical or historical_ok:
         assert document == fresh, (name, document, fresh)
         assert (out / 'document.md').read_bytes() == (job / 'document.md').read_bytes()
         assert len(report['blocks']) == 1 and report['changed_blocks'] == 1
         record = report['blocks'][0]
         assert record['before']['assessment'] == block['provenance']['assessment']
         assert record['after']['assessment'] == new['provenance']['assessment']
-        assert record['before']['status'] == 'partial' and record['after']['status'] == 'ok'
+        assert record['before']['status'] == ('ok' if historical_ok else 'partial')
+        assert record['after']['status'] == expected_status
     else:
         assert (out / 'document.json').read_bytes() == old_bytes
         assert report['changed_blocks'] == 0
@@ -96,6 +118,31 @@ def main():
     fixture, production = sys.argv[1:3]
     with tempfile.TemporaryDirectory(prefix='dococr-formula-revalidation-') as temporary:
         root = Path(temporary)
+        check_case(root, fixture, production, 'historical-table-symbols',
+            r'<table><tr><td>$6\div 2=3$</td></tr></table>', class_id=21, historical=True)
+        for class_id in [22, 5, 21]:
+            raw = '$x^2^3$'
+            if class_id == 21: raw = '<table><tr><td>' + raw + '</td></tr></table>'
+            check_case(root, fixture, production, f'historical-false-ok-{class_id}', raw,
+                class_id=class_id, historical_ok=True, expected_status='partial')
+        for class_id in [22, 5, 21]:
+            for name, formula in [('double-upper', 'x^2^3'), ('double-lower', 'x_1_2'),
+                                  ('nested-double', r'x^{y^2^3}'),
+                                  ('braced-double', r'x^{2}^{3}'),
+                                  ('numeric-double', '2^3^4'),
+                                  ('prime-after-upper', "x^2'"),
+                                  ('command-double', r'x^\frac{1}{2}^3')]:
+                raw = '$' + formula + '$'
+                if class_id == 21:
+                    raw = '<table><tr><td>' + raw + '</td></tr></table>'
+                check_case(root, fixture, production, f'{name}-{class_id}', raw,
+                    class_id=class_id, expected_status='partial')
+        for name, raw in [
+            ('table-broken-fraction', r'<table><tr><td>$\frac{1}{$</td></tr></table>'),
+            ('table-unknown-command', r'<table><tr><td>$\unknown{x}$</td></tr></table>'),
+            ('table-unclosed-math', '<table><tr><td>$x+1</td></tr></table>'),
+        ]:
+            check_case(root, fixture, production, name, raw, class_id=21, expected_status='partial')
         check_case(root, fixture, production, 'historical-inline-interval',
             r'区间 $[-1,+\infty)$，以及 $\left(a,b\right]$。', historical=True)
         check_case(root, fixture, production, 'historical-common-symbols',

@@ -760,7 +760,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                     const auto reason = assessment.at("reason").get<std::string>();
                     const bool structural = state == "unverified" && derived.state == "ok" &&
                         (reason == "invalid_formula_syntax" || reason == "invalid_inline_formula_syntax" ||
-                         reason == "invalid_table_structure");
+                         reason == "invalid_table_structure" || reason == "invalid_table_formula_syntax");
                     const bool exception = state == "failed" && derived.state == "failed" &&
                         !output.error.empty() && reason == "region_inference_exception:" + output.error;
                     require(structural || exception || (state == derived.state && reason == derived.reason),
@@ -776,9 +776,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                     if (type == "text")
                         require(text == output.text, where + " 正文与保存的识别文字不一致");
                     else if (type == "formula") {
-                        const auto parsed = parse_formula_region(output.text);
-                        require(parsed.valid && parsed.format == format && parsed.text == text &&
-                                parsed.display == content.at("display").get<bool>(),
+                        require(matches_saved_formula_content(output.text, text, format,
+                                content.at("display").get<bool>()),
                                 where + " 公式与保存的识别文字不一致");
                     }
                     else if (type == "table") {
@@ -877,10 +876,16 @@ RevalidatedDocument revalidate_formula_document(const std::string& json) {
         bool page_changed = false;
         for (auto& block : page.at("blocks")) {
             const auto type = block.at("type").get<std::string>();
-            const bool inline_formula = type == "text" && block.at("error") == "invalid_inline_formula_syntax";
-            const bool formula = type == "formula" && block.at("error") == "invalid_formula_syntax";
+            const bool inline_formula = type == "text";
+            const bool formula = type == "formula";
+            const bool table = type == "table";
+            const std::string syntax_error = inline_formula ? "invalid_inline_formula_syntax" :
+                formula ? "invalid_formula_syntax" : "invalid_table_formula_syntax";
+            const bool was_ok = block.at("status") == "ok";
+            const bool prior_syntax_failure = block.at("status") == "partial" &&
+                block.at("error") == syntax_error;
             auto& provenance = block.at("provenance");
-            if ((!inline_formula && !formula) || block.at("status") != "partial" ||
+            if ((!inline_formula && !formula && !table) || (!was_ok && !prior_syntax_failure) ||
                 !provenance.contains("assessment")) continue;
             auto& assessment = provenance.at("assessment");
             const Json before = {{"status", block.at("status")}, {"error", block.at("error")},
@@ -888,37 +893,61 @@ RevalidatedDocument revalidate_formula_document(const std::string& json) {
             const auto output = saved_output(block);
             const auto completion = assess_output(output, type);
             const auto parsed = formula ? parse_formula_region(output.text) : ParsedFormulaRegion{};
+            const auto parsed_table = table ? parse_table(output.text) : ParsedTable{};
             const bool can_store_mixed = document.at("schema_version") == "1.10" ||
                                          document.at("schema_version") == "1.11";
             const bool valid = completion.state == "ok" &&
-                (inline_formula ? valid_text_math_content(output.text) :
+                (inline_formula ? valid_text_math_content(output.text) : table ? valid_table_math_content(parsed_table) :
                     parsed.valid && (parsed.format == "latex" || can_store_mixed));
-            if (valid) {
+            auto& content = block.at("content");
+            if (valid && !was_ok) {
                 block["status"] = "ok";
                 block["error"] = nullptr;
                 assessment["state"] = completion.state;
                 assessment["reason"] = completion.reason;
-                auto& content = block.at("content");
-                content["text"] = inline_formula ? output.text : parsed.text;
+                content["text"] = inline_formula ? output.text : table ? parsed_table.html : parsed.text;
                 if (formula) {
                     content["format"] = parsed.format;
                     content["display"] = parsed.display;
                     if (parsed.format == "markdown") document["schema_version"] = "1.11";
+                } else if (table) {
+                    content["format"] = "html";
+                    Json cells = Json::array();
+                    for (const auto& cell : parsed_table.cells)
+                        cells.push_back({{"row", cell.row}, {"column", cell.column},
+                            {"rowspan", cell.rowspan}, {"colspan", cell.colspan},
+                            {"header", cell.header}, {"text", cell.text}, {"bbox", nullptr}});
+                    content["table"] = {{"rows", parsed_table.rows}, {"columns", parsed_table.columns}, {"cells", cells}};
                 }
-                ++changed;
-                page_changed = true;
+            } else if (!valid && was_ok && completion.state == "ok") {
+                block["status"] = "partial";
+                block["error"] = syntax_error;
+                assessment["state"] = "unverified";
+                assessment["reason"] = syntax_error;
+                content["format"] = "markdown";
+                content["text"] = table ? "" : output.text;
+                if (table) content["table"] = nullptr;
+                if (formula) content["display"] = true;
             }
             const Json after = {{"status", block.at("status")}, {"error", block.at("error")},
                 {"assessment", assessment}, {"content", block.at("content")}};
+            const bool block_changed = before != after;
+            if (block_changed) { ++changed; page_changed = true; }
             records.push_back({{"page_id", page.at("page_id")}, {"block_id", block.at("id")},
-                {"changed", valid}, {"completion_state", completion.state},
+                {"changed", block_changed}, {"completion_state", completion.state},
                 {"completion_reason", completion.reason}, {"before", before}, {"after", after}});
         }
+        if (page_changed && page.at("status") == "ok" &&
+            std::any_of(page.at("blocks").begin(), page.at("blocks").end(),
+                [](const Json& block) { return block.at("status") == "partial"; })) page["status"] = "partial";
         if (page_changed && page.at("status") == "partial" &&
             std::all_of(page.at("blocks").begin(), page.at("blocks").end(),
                 [](const Json& block) { return block.at("status") == "ok"; })) page["status"] = "ok";
     }
     if (changed) {
+        if (document.at("status") == "ok" &&
+            std::any_of(document.at("pages").begin(), document.at("pages").end(),
+                [](const Json& page) { return page.at("status") == "partial"; })) document["status"] = "partial";
         if (document.at("status") == "partial" &&
             std::all_of(document.at("pages").begin(), document.at("pages").end(),
                 [](const Json& page) { return page.at("status") == "ok" || page.at("status") == "blank"; }))
@@ -926,7 +955,7 @@ RevalidatedDocument revalidate_formula_document(const std::string& json) {
         result.json = document.dump(2) + '\n';
         result.rendered = validate_and_render_document(result.json);
     }
-    result.report = Json({{"policy", "formula-revalidation-v1"}, {"execution", "saved_output_no_ocr"},
+    result.report = Json({{"policy", "formula-revalidation-v2"}, {"execution", "saved_output_no_ocr"},
         {"source_document_sha256", sha256(json)}, {"result_document_sha256", sha256(result.json)},
         {"changed_blocks", changed}, {"blocks", records}}).dump(2) + '\n';
     return result;

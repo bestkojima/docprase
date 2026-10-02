@@ -148,6 +148,25 @@ def main():
         raw = '<table><tr><td>$x^2$</td></tr></table>'
         cases.append(check_case(args, root, 'table-math', raw, raw,
             class_id=21, formulas=['x^2']))
+        raw = '<table><tr><td>条件<br/>$x<br/>+1$<br/>下一行 $y$</td></tr></table>'
+        cases.append(check_case(args, root, 'table-math-across-break', raw, raw,
+            class_id=21, formulas=['x\n+1', 'y']))
+        for opening, closing, display in [('$', '$', False), ('$$', '$$', True),
+                                          (r'\(', r'\)', False), (r'\[', r'\]', True)]:
+            raw = '<table><tr><td>' + opening + r'\frac{1<br/>+x}{2}' + closing + '</td></tr></table>'
+            cases.append(check_case(args, root, 'table-break-delimiter-' + str(len(cases)), raw, raw,
+                class_id=21, formulas=['\\frac{1\n+x}{2}'], display_modes=[display]))
+        raw = '<table><tr><td>价格 $5<br/>公式 $x^2$</td></tr></table>'
+        cases.append(check_case(args, root, 'table-currency-break', raw, raw,
+            class_id=21, formulas=['x^2']))
+        for formula in [r'x_i^2', r'x^2_i', r'x^{y^2}', r'x_{i_j}', r'x^12^3',
+                        r'{x^2}^3', r'x^2+y^3', r'x^2{}^3', r'x^2\,^3',
+                        r'\frac{x^2}{y^3}', r'\sqrt[3]{x^2}', r"x'^{2}",
+                        r'\sum_{i=1}^{n}x_i', r'\left(x^2\right)^3',
+                        r'\begin{matrix}x^2&y^3\\x_1&y_2\end{matrix}']:
+            raw = '$' + formula + '$'
+            cases.append(check_case(args, root, 'script-groups-' + str(len(cases)), raw, raw,
+                class_id=5, formulas=[formula]))
         matrix = r'\begin{matrix}a&b\\c&d\end{matrix}'
         raw = ('<table><tr><th colspan="2">公式 &amp; 条件</th></tr>'
                '<tr><td rowspan="2">$a&lt;b$<br/>[原文](https://example.invalid)</td>'

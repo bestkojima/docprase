@@ -1,5 +1,6 @@
 #include "markdown.hpp"
 #include "content_validation.hpp"
+#include "table_parser.hpp"
 #include <algorithm>
 #include <array>
 #include <utility>
@@ -265,6 +266,29 @@ std::string semantic_text(const std::string& source, const std::string& label) {
 }
 
 std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption) {
+    // A saved "ok" may predate stricter mathematical validation. Preserve the
+    // JSON, but never feed known-invalid math into the current preview.
+    if (b.status == "ok") {
+        std::string reason;
+        // Early text-only records have no mathematical assessment contract;
+        // e.g. \[label] can be an escaped Markdown link, not legacy TeX.
+        if (b.type == "text" && !b.assessment_state.empty() && !valid_text_math_content(b.text))
+            reason = "invalid_inline_formula_syntax";
+        if (b.type == "formula") {
+            const std::string delimiter = b.display_formula ? "$$" : "$";
+            if (!parse_formula_region(b.mixed_formula ? b.text : delimiter + b.text + delimiter).valid)
+                reason = "invalid_formula_syntax";
+        }
+        if (b.type == "table" && b.structured_table && !valid_table_math_content(parse_table(b.text)))
+            reason = "invalid_table_formula_syntax";
+        if (!reason.empty()) {
+            auto fallback = b;
+            fallback.status = "partial";
+            fallback.assessment_state = "unverified";
+            fallback.assessment_reason = reason;
+            return render_markdown_block(fallback, uncertain_caption);
+        }
+    }
     auto with_relation_note = [&](std::string rendered) {
         if (uncertain_caption) {
             rendered += "\n\n> 图注与图片的对应关系尚未确认，请核对原图。";

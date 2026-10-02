@@ -21,6 +21,8 @@ ctest --test-dir build/issue27 -R '^markdown_.*integration$' --output-on-failure
 
 测试与可复用预览共用 `document-renderer.mjs`。HTML 表格由 [parse5](https://parse5.js.org/) 解析，解码单元格文本中的 HTML 实体后，将 `$...$`、`$$...$$`、`\(...\)`、`\[...\]` 内的原始 LaTeX 交给 KaTeX。保留表头、`rowspan`、`colspan` 和换行；普通单元格文字不再次解释成 Markdown 链接或活动 HTML。数学排版失败抛出错误，不把错误文字当成成功的 HTML。
 
+数学分隔符按完整单元格识别：跨 `<br/>` 的公式在 KaTeX 中按空白衔接，公式外的 `<br/>` 保留；各单元格独立处理。生产端先检查表格结构，再校验单元格数学。当前规则不通过的旧 `ok` 结果在重新导出的 Markdown 中回退为原图，显式 `--revalidate` 才改变保存的判定并记录前后证据。直接给参考渲染器输入未经生产校验的坏数学仍明确抛错。
+
 ```bash
 node tests/math-rendering/preview.mjs output/自己的作业/document.md
 ```

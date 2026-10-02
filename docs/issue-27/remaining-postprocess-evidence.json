@@ -1,0 +1,198 @@
+{
+  "scope": "#27：表格公式跨换行、坏表格公式漏检、重复上下标漏检及历史兼容",
+  "base_commit": "5504c2b",
+  "reference_sources": [
+    {
+      "project": "PaddleX",
+      "commit": "ffb64904d23708863ff5b8da312a5cbd52a7f462",
+      "url": "https://github.com/PaddlePaddle/PaddleX/blob/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/pipelines/layout_parsing/result_v2.py",
+      "local_file_sha256": "eed217d4dbf307c7497bdc73817cf2e9573fef3c186c8170581e935e922b25e0",
+      "applied": "按内容类型组织显示转换，结构与显示分层"
+    },
+    {
+      "project": "PaddleOCR",
+      "commit": "dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/postprocess/rec_postprocess.py",
+      "local_file_sha256": "a5e5376514991656f7c7977f4a51ac61224ca6939f8ba41bc18e32ce9d15c872",
+      "applied": "集中公式后处理职责；不照搬改写原始识别内容的规范化"
+    }
+  ],
+  "reproductions": [
+    {
+      "case": "table-math-across-break",
+      "before": "status=ok，但预览将同一公式拆断，报分隔符未闭合",
+      "after": "按完整单元格识别数学边界，公式外BR保留，KaTeX正确处理内部换行"
+    },
+    {
+      "case": "table-broken-fraction",
+      "before": "结构合法被当作整表有效，预览失败",
+      "after": "partial / invalid_table_formula_syntax，保留原始输出与资源"
+    },
+    {
+      "case": "double-upper/lower",
+      "before": "x^2^3 和 x_1_2 被误标ok，KaTeX报错",
+      "after": "正文/formula/table三类统一拒绝，合法嵌套及不同底数的上下标仍通过"
+    }
+  ],
+  "validation": {
+    "build": "Linux/MNN Release passed",
+    "ctest": {
+      "passed": 32,
+      "total": 32,
+      "seconds": 82.77
+    },
+    "python_unittest": {
+      "passed": 40,
+      "total": 40,
+      "seconds": 61.415
+    },
+    "static_checks": [
+      "Python py_compile",
+      "Node --check",
+      "git diff --check"
+    ],
+    "first_full_run": {
+      "passed": 31,
+      "total": 32,
+      "seconds": 104.2,
+      "failure": "reexport_integration：早期正文转义链接被当作公式；按数学判定契约区分后保持原安全导出行为"
+    },
+    "katex": "0.19.0",
+    "schema": "既有1.0–1.11兼容回归通过，未修改Schema",
+    "revalidation_policy": "formula-revalidation-v2"
+  },
+  "production_replays": [
+    {
+      "case": "table-br-math",
+      "operation": "--reexport",
+      "status": "ok",
+      "error": null,
+      "math_count": 1,
+      "preview_ok": true,
+      "raw_preserved": true
+    },
+    {
+      "case": "table-br-math",
+      "operation": "--revalidate",
+      "status": "ok",
+      "error": null,
+      "math_count": 1,
+      "preview_ok": true,
+      "raw_preserved": true
+    },
+    {
+      "case": "table-invalid-math",
+      "operation": "--reexport",
+      "status": "ok",
+      "error": null,
+      "math_count": 0,
+      "preview_ok": true,
+      "raw_preserved": true
+    },
+    {
+      "case": "table-invalid-math",
+      "operation": "--revalidate",
+      "status": "partial",
+      "error": "invalid_table_formula_syntax",
+      "math_count": 0,
+      "preview_ok": true,
+      "raw_preserved": true
+    },
+    {
+      "case": "formula-double-superscript",
+      "operation": "--reexport",
+      "status": "ok",
+      "error": null,
+      "math_count": 0,
+      "preview_ok": true,
+      "raw_preserved": true
+    },
+    {
+      "case": "formula-double-superscript",
+      "operation": "--revalidate",
+      "status": "partial",
+      "error": "invalid_formula_syntax",
+      "math_count": 0,
+      "preview_ok": true,
+      "raw_preserved": true
+    },
+    {
+      "case": "formula-double-subscript",
+      "operation": "--reexport",
+      "status": "ok",
+      "error": null,
+      "math_count": 0,
+      "preview_ok": true,
+      "raw_preserved": true
+    },
+    {
+      "case": "formula-double-subscript",
+      "operation": "--revalidate",
+      "status": "partial",
+      "error": "invalid_formula_syntax",
+      "math_count": 0,
+      "preview_ok": true,
+      "raw_preserved": true
+    }
+  ],
+  "logs": [
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/table-break-red.log",
+      "sha256": "8e3487ab470017a51ac7c4c222f5b32c2c685f0f179037c0a24d8a8f5732c708"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/table-break-green.log",
+      "sha256": "0bafc72817f760f7175f079e22d5b2fbd9a8cf3a1f15c35ad0cc30ca7819e310"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/table-validation-red.log",
+      "sha256": "df1519defeb9ba10fa250025186b6adc32cbbb1da81b449a901019b4b54d2ea3"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/table-validation-green.log",
+      "sha256": "0cd8ea478aee1386c5a5b968f1e75a05e12169daaba6e4736aae1548e544a6e0"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/scripts-red.log",
+      "sha256": "92d6b9076e2117b252c10be879521757d77b5c54d69ba1b4237ce8e964ac3e78"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/scripts-targeted.log",
+      "sha256": "293dfd4aa1443cbee573db32892a85a617efcb845c75e1d307c140ea3a73dacc"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/table-break-currency-red.log",
+      "sha256": "94e979e524f6c0ed6373549cd3c4c4ce3f414b5031b4ddea8d2cc03b6ba46e31"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/historical-false-ok-red.log",
+      "sha256": "b5a54c961a25ff6116cbe44aaa1172d7a774ac5802db5a1acda3832f642c507f"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/historical-targeted.log",
+      "sha256": "1584d722eb9047955da4d25e2b3996a97c70db43395e7f23dbbd3db5f6b0b2df"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/ctest-full.log",
+      "sha256": "6fad992a20be0a163a0877887101e328f1b0fe1207ce8d9acc7c6ec81eb93cd1"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/ctest-final.log",
+      "sha256": "181e95387bbc2ed52fa19b48ca6b3e46d816a121366d2b6cf68c1ffeea490047"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/unittest-full.log",
+      "sha256": "9e6d0bf73e90812ef33703371b4588809c6258dabb67aec963189d124a341906"
+    }
+  ],
+  "preexisting_user_source": {
+    "path": "src/region_structure.cpp",
+    "sha256": "661175e53d11f8ffec65f34b63b9c22bf60a4a11dd327afc21ec71871d4ba277",
+    "committed": false
+  },
+  "limitations": [
+    "数学检查限于项目支持的TeX子集，不是完整TeX解析器",
+    "没有新跑OCR精度验收",
+    "无数学判定证据的早期正文保留原安全转义，不补造来源"
+  ]
+}
