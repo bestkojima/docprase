@@ -973,6 +973,23 @@ size_t formula_argument_end(const std::string& value, size_t pos) {
     return std::string::npos;
 }
 
+size_t formula_arrow_argument_end(const std::string& value, size_t pos) {
+    while (pos < value.size() && (value[pos] == ' ' || value[pos] == '\t' || value[pos] == '\n')) ++pos;
+    if (pos < value.size() && value[pos] == '[') {
+        int brackets = 1, braces = 0;
+        for (++pos; pos < value.size(); ++pos) {
+            const char ch = value[pos];
+            if (ch == '\\' && pos + 1 < value.size()) { ++pos; continue; }
+            if (ch == '{') ++braces;
+            else if (ch == '}' && --braces < 0) return std::string::npos;
+            else if (braces == 0 && ch == '[') ++brackets;
+            else if (braces == 0 && ch == ']' && --brackets == 0) { ++pos; break; }
+        }
+        if (brackets != 0 || braces != 0) return std::string::npos;
+    }
+    return formula_argument_end(value, pos);
+}
+
 struct ScalableDelimiter {
     char symbol = 0;
     size_t width = 0;
@@ -1028,6 +1045,7 @@ ParsedFormula parse_formula(const std::string& raw) {
         value.find("\\tag") != std::string::npos || value.find("\\label") != std::string::npos)
         return result;
     int depth = 0, text_depth = -1;
+    size_t annotation_end = 0;
     std::vector<char> delimiters, scalable;
     struct FormulaEnvironment {
         std::string name;
@@ -1051,19 +1069,29 @@ ParsedFormula parse_formula(const std::string& raw) {
                     "frac", "dfrac", "tfrac", "sqrt", "left", "right", "text",
                     "mathrm", "mathbf", "mathbb", "operatorname", "alpha", "beta",
                     "gamma", "delta", "Delta", "theta", "lambda", "mu", "pi",
+                    "varphi", "Phi", "omega", "rho", "xi", "sigma",
                     "sum", "int", "lim", "infty", "cdots", "ldots", "dots",
-                    "sin", "cos", "tan", "cot", "ln", "log", "exp", "prime",
+                    "sin", "cos", "tan", "cot", "ln", "log", "lg", "exp", "prime", "max", "min",
                     "times", "cdot", "pm", "mp", "le", "leq", "ge", "geq",
                     "ne", "neq", "approx", "in", "notin", "gt", "lt",
-                    "to", "rightarrow",
-                    "Rightarrow", "partial", "overline", "hat", "vec", "bar",
+                    "leqslant", "geqslant", "sim", "mid", "cap", "perp",
+                    "forall", "exists", "vee", "ominus", "circ", "triangle", "angle", "therefore",
+                    "to", "rightarrow", "rightleftharpoons", "leftrightharpoons", "uparrow",
+                    "xrightarrow", "xleftarrow",
+                    "Rightarrow", "partial", "overline", "overrightarrow", "hat", "vec", "bar",
                     "begin", "end", "quad", "qquad", "big", "Big", "bigl",
                     "bigr", "Bigl", "Bigr", "langle", "rangle", "lvert",
                     "rvert", "lbrace", "rbrace"
                 };
                 if (std::find(known.begin(), known.end(), command) == known.end())
                     return result;
-                if (command == "frac" || command == "dfrac" || command == "tfrac") {
+                if (command == "xrightarrow" || command == "xleftarrow") {
+                    const size_t end = formula_arrow_argument_end(value, i);
+                    if (end == std::string::npos) return result;
+                    // Arrow labels are annotations and may contain Chinese or
+                    // words. Keep scanning their contents to validate structure.
+                    annotation_end = std::max(annotation_end, end);
+                } else if (command == "frac" || command == "dfrac" || command == "tfrac") {
                     size_t first = formula_argument_end(value, i);
                     if (first == std::string::npos ||
                         formula_argument_end(value, first) == std::string::npos)
@@ -1080,7 +1108,7 @@ ParsedFormula parse_formula(const std::string& raw) {
                 } else if (command == "text" || command == "mathrm" ||
                            command == "mathbf" || command == "mathbb" ||
                            command == "operatorname" || command == "overline" ||
-                           command == "hat" || command == "vec" || command == "bar" ||
+                           command == "overrightarrow" || command == "hat" || command == "vec" || command == "bar" ||
                            command == "begin" || command == "end") {
                     if (formula_argument_end(value, i) == std::string::npos)
                         return result;
@@ -1167,16 +1195,20 @@ ParsedFormula parse_formula(const std::string& raw) {
                 return result;
             delimiters.pop_back();
         }
-        else if (ch >= 0x80 && text_depth < 0) return result;
+        else if (ch >= 0x80 && text_depth < 0 && i >= annotation_end) return result;
         else if (ch == '$' || ch == '#' || ch == '%' || ch == '\x60' ||
                  (ch == '&' && environments.empty())) return result;
-        else if (ch >= 'A' && ch <= 'Z' && text_depth < 0) {
+        else if (ch >= 'A' && ch <= 'Z' && text_depth < 0 && i >= annotation_end) {
             size_t end = i + 1;
             while (end < value.size() && ((value[end] >= 'A' && value[end] <= 'Z') ||
                    (value[end] >= 'a' && value[end] <= 'z'))) ++end;
-            if (end - i > 2) return result;
+            const bool geometry_points = end - i <= 4 && std::all_of(
+                value.begin() + i, value.begin() + end, [](char letter) {
+                    return letter >= 'A' && letter <= 'Z';
+                });
+            if (end - i > 2 && !geometry_points) return result;
             i = end - 1;
-        } else if (ch >= 'a' && ch <= 'z' && text_depth < 0) {
+        } else if (ch >= 'a' && ch <= 'z' && text_depth < 0 && i >= annotation_end) {
             size_t end = i + 1;
             while (end < value.size() && ((value[end] >= 'A' && value[end] <= 'Z') ||
                    (value[end] >= 'a' && value[end] <= 'z'))) ++end;
@@ -1191,7 +1223,9 @@ ParsedFormula parse_formula(const std::string& raw) {
     if (depth != 0 || !delimiters.empty() || !scalable.empty() ||
         !environments.empty() ||
         value.back() == '\\' || value.back() == '^' || value.back() == '_' ||
-        value.back() == '+' || value.back() == '-' || value.back() == '=' ||
+        // A complete transcription may faithfully end with an exam answer blank,
+        // such as "$z=$". Generation completeness is checked separately.
+        value.back() == '+' || value.back() == '-' ||
         !math_evidence) return result;
     result.valid = true;
     result.latex = std::move(value);
