@@ -61,8 +61,8 @@ def main():
                 if forbidden:
                     assert forbidden.encode() not in markdown
                 import jsonschema
-                schema = json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text())
-                assert doc['schema_version'] == '1.9'
+                schema = json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text())
+                assert doc['schema_version'] == '1.10'
                 jsonschema.validate(doc, schema)
                 assert doc['pages'][0]['blocks'][3]['status'] == 'ok'
                 assert '中文，English!'.encode() in markdown
@@ -124,6 +124,12 @@ def main():
         _, saved = check('legacy-seed', dict(text='正常的旧文档。', finish_reason='complete',
               stop_reason='normal'), 'ok', '正常的旧文档。', None)
         legacy = json.loads((saved / 'document.json').read_text())
+        legacy.pop('export_policy', None)
+        for page in legacy['pages']:
+            for layout in page['layout_blocks']:
+                layout.pop('semantic_label', None)
+            for block in page['blocks']:
+                block.pop('block_order', None)
         legacy['schema_version'] = '1.5'
         legacy['pages'][0].pop('structure_plan')
         for region in legacy['pages'][0]['regions']:

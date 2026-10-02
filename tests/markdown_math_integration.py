@@ -29,7 +29,7 @@ def check_case(args, root, name, raw, expected, class_id=22, formulas=None, disp
     block = document['pages'][0]['blocks'][0]
     assert block['status'] == 'ok', (name, block['error'])
     assert block['provenance']['raw_output'] == raw
-    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text()))
+    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text()))
     markdown = (job / 'document.md').read_text()
     assert markdown == expected + '\n', (name, markdown, expected)
     exported = folder / 'reexport'

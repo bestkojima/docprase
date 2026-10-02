@@ -55,7 +55,7 @@ def invoke(fixture_cli, production_cli, root, name, value, expected=None, captio
     if caption_rows is None:
         caption_rows = [[5, 6, 7, 8], [14, 15, 16, 17]]
     assert actual == expected, f'{name}: expected={expected}, actual={actual}'
-    assert d['schema_version'] == '1.9'
+    assert d['schema_version'] == '1.10'
     plan = page['structure_plan']
     assert plan['stage'] == 'before_recognition'
     assert plan['block_order'] == page['reading_order']

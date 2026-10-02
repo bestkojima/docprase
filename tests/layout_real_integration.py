@@ -16,7 +16,7 @@ REF = ROOT / 'docs/research-evidence/runtime/layout/issue-2'
 SOURCE = ROOT / 'tests/fixtures/layout/exam-jee-346.jpg'
 LOSSLESS = ROOT / 'tests/fixtures/layout/exam-jee-346-pil-rgb.png'
 CONFIG = ROOT / 'configs/layout-plan.example.json'
-SCHEMA = json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text())
+SCHEMA = json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text())
 
 
 def hash_file(path):
@@ -76,7 +76,7 @@ def main():
     document = json.loads((job / 'document.json').read_text())
     schema_check = subprocess.run(['python3', '-c',
         'import json,jsonschema,sys;jsonschema.validate(json.load(open(sys.argv[1])),json.load(open(sys.argv[2])))',
-        str(job / 'document.json'), str(ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json')],
+        str(job / 'document.json'), str(ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json')],
         capture_output=True, text=True)
     assert schema_check.returncode == 0, schema_check.stderr
     manifest = json.loads((job / 'run-manifest.json').read_text())

@@ -59,7 +59,7 @@ def check_case(root, fixture, production, name, raw, *, class_id=22, historical=
     assert saved.read_bytes() == old_bytes
     assert (out / 'previous-document.json').read_bytes() == old_bytes
     document = json.loads((out / 'document.json').read_text())
-    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text()))
+    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text()))
     new = document['pages'][0]['blocks'][0]
     assert new['status'] == expected_status, (name, new['status'], new['error'])
     assert new['provenance']['raw_output'] == raw

@@ -27,6 +27,8 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.8-pdf.schema.json"
   "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-image.schema.json"
   "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-pdf.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.10-image.schema.json"
+  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.10-pdf.schema.json"
 )
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.0.schema.json" DOCUMENT_SCHEMA_1_0)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.1.schema.json" DOCUMENT_SCHEMA_1_1)
@@ -43,16 +45,18 @@ file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.8-image
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.8-pdf.schema.json" DOCUMENT_SCHEMA_1_8_PDF)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-image.schema.json" DOCUMENT_SCHEMA_1_9_IMAGE)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.9-pdf.schema.json" DOCUMENT_SCHEMA_1_9_PDF)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.10-image.schema.json" DOCUMENT_SCHEMA_1_10_IMAGE)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.10-pdf.schema.json" DOCUMENT_SCHEMA_1_10_PDF)
 function(dococr_split_schema input output)
   # 每行独立为一个短原始字面量，保留原始换行并避开 MSVC C2026。
   string(REPLACE "\n" "\n)SCHEMA\"\nR\"SCHEMA(" split "${${input}}")
   set(${output} "R\"SCHEMA(${split})SCHEMA\"" PARENT_SCOPE)
 endfunction()
-foreach(version IN ITEMS 1_0 1_1 1_2 1_3 1_4 1_5_IMAGE 1_5_PDF 1_6_IMAGE 1_6_PDF 1_7_IMAGE 1_7_PDF 1_8_IMAGE 1_8_PDF 1_9_IMAGE 1_9_PDF)
+foreach(version IN ITEMS 1_0 1_1 1_2 1_3 1_4 1_5_IMAGE 1_5_PDF 1_6_IMAGE 1_6_PDF 1_7_IMAGE 1_7_PDF 1_8_IMAGE 1_8_PDF 1_9_IMAGE 1_9_PDF 1_10_IMAGE 1_10_PDF)
   dococr_split_schema(DOCUMENT_SCHEMA_${version} DOCUMENT_SCHEMA_${version}_LITERALS)
 endforeach()
 configure_file(src/document_schemas.hpp.in "${CMAKE_CURRENT_BINARY_DIR}/generated/document_schemas.hpp" @ONLY)
-add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/region_structure.cpp src/layout_region_policy.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
+add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/region_structure.cpp src/layout_region_policy.cpp src/label_export_policy.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
 set_target_properties(dococr_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb third_party/nlohmann)
 target_compile_features(dococr_core PUBLIC cxx_std_17)
@@ -175,6 +179,9 @@ if(DOCOCR_BUILD_TESTS)
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME issue20_large_page COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue20_large_page.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME label_pipeline COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/label_pipeline.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME printed_page_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_integration.py $<TARGET_FILE:dococr_cli_fixture>)

@@ -144,7 +144,7 @@ def main():
                 assert current_jobs.lib.dococr_job_run(job, c.byref(current_jobs.input)) == 0
                 doc, markdown = current_jobs.save(job, root / name)
                 import jsonschema
-                jsonschema.validate(doc, json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text()))
+                jsonschema.validate(doc, json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text()))
                 block = doc['pages'][0]['blocks'][0]
                 record = block['provenance']['recognition']
                 assert block['provenance']['assessment']['state'] == state, block

@@ -56,7 +56,9 @@ def main():
 
         def generate(scenario):
             setting = root / (scenario + '.json')
-            setting.write_text(json.dumps(config(scenario)), encoding='utf-8')
+            options = config(scenario)
+            options['execution'].update(markdown_ignore_labels=[], show_formula_number=True)
+            setting.write_text(json.dumps(options), encoding='utf-8')
             saved = root / scenario
             input_image = image
             if scenario == 'printed_page_reading':
@@ -90,11 +92,11 @@ def main():
 
         generated = {}
         for scenario, version in [('formula_table', '1.0'),
-                                  ('printed_page_formula', '1.9'),
-                                  ('printed_page_table', '1.9'),
-                                  ('printed_page_reading', '1.9'),
-                                  ('printed_page_visual_empty', '1.9'),
-                                  ('printed_page_failure', '1.9')]:
+                                  ('printed_page_formula', '1.10'),
+                                  ('printed_page_table', '1.10'),
+                                  ('printed_page_reading', '1.10'),
+                                  ('printed_page_visual_empty', '1.10'),
+                                  ('printed_page_failure', '1.10')]:
             if scenario == 'formula_table':
                 saved = root / scenario
                 run(fixture, '--backend', 'fixture:formula_table', '--input', image, '--out', str(saved))
@@ -122,6 +124,14 @@ def main():
                 assert candidate.get('recognition_crop_bbox') is None
                 candidate.pop('recognition_crop_bbox', None)
                 candidate.pop('crop_expansion_reason', None)
+        def remove_label_export(value):
+            value.pop('export_policy', None)
+            for page in value['pages']:
+                for layout in page['layout_blocks']:
+                    layout.pop('semantic_label', None)
+                for block in page['blocks']:
+                    block.pop('block_order', None)
+
         def remove_region_mapping(page):
             for region in page['regions']:
                 region.pop('recognition_type', None)
@@ -133,6 +143,7 @@ def main():
                         block['provenance']['assessment'].update(
                             state='skipped', reason='recognition_not_executed')
         old_formula = copy.deepcopy(formula)
+        remove_label_export(old_formula)
         old_formula['schema_version'] = '1.1'
         for old_page in old_formula['pages']:
             old_page.pop('structure_plan', None)
@@ -150,6 +161,7 @@ def main():
         jsonschema.validate(old_formula, json.loads((ROOT / 'schemas/document-ir/document-ir-1.1.schema.json').read_text()))
         reexport(formula_saved, old_formula)
         legacy = copy.deepcopy(table)
+        remove_label_export(legacy)
         legacy['schema_version'] = '1.2'
         for old_page in legacy['pages']:
             old_page.pop('structure_plan', None)
@@ -171,6 +183,7 @@ def main():
                                      ('1.5', 'schemas/document-ir/document-ir-1.5-image.schema.json'),
                                      ('1.7', 'schemas/document-ir/document-ir-1.7-image.schema.json')]:
             historical = copy.deepcopy(table)
+            remove_label_export(historical)
             historical['schema_version'] = version
             for old_page in historical['pages']:
                 old_page.pop('structure_plan', None)
@@ -189,6 +202,7 @@ def main():
 
         without_optional_diagnostics = copy.deepcopy(table)
         historical_16 = copy.deepcopy(table)
+        remove_label_export(historical_16)
         historical_16['schema_version'] = '1.6'
         for old_page in historical_16['pages']:
             old_page.pop('structure_plan', None)
@@ -279,15 +293,18 @@ def main():
                       ('white', 'black', '#e6e6e6')]
         pdf_images[0].save(pdf, save_all=True, append_images=pdf_images[1:])
         setting = root / 'pdf-config.json'
-        setting.write_text(json.dumps(config('printed_page_reading_pdf_mixed')))
+        options = config('printed_page_reading_pdf_mixed')
+        options['execution'].update(markdown_ignore_labels=[], show_formula_number=True)
+        setting.write_text(json.dumps(options))
         pdf_saved = root / 'pdf-saved'
         run(fixture, '--config', str(setting), '--input', str(pdf), '--out', str(pdf_saved),
             '--dpi', '72')
         pdf_data = json.loads((pdf_saved / 'document.json').read_text())
-        assert pdf_data['schema_version'] == '1.9'
+        assert pdf_data['schema_version'] == '1.10'
         assert [p['status'] for p in pdf_data['pages']] == ['partial', 'failed', 'blank']
         reexport(pdf_saved)
         historical_pdf = copy.deepcopy(pdf_data)
+        remove_label_export(historical_pdf)
         historical_pdf['schema_version'] = '1.4'
         for old_page in historical_pdf['pages']:
             old_page.pop('structure_plan', None)
@@ -303,6 +320,7 @@ def main():
         jsonschema.validate(historical_pdf, json.loads((ROOT / 'schemas/document-ir/document-ir-1.4.schema.json').read_text()))
         reexport(pdf_saved, historical_pdf)
         visual_pdf = copy.deepcopy(pdf_data)
+        remove_label_export(visual_pdf)
         visual_pdf['schema_version'] = '1.5'
         for old_page in visual_pdf['pages']:
             old_page.pop('structure_plan', None)
@@ -374,7 +392,7 @@ def main():
         assert '表格单元格' in reexport(table_saved, bad, code=3).stderr
         duplicate = root / 'duplicate.json'
         duplicate.write_text((table_saved / 'document.json').read_text().replace(
-            '"schema_version":"1.9"', '"schema_version":"1.9","schema_version":"1.9"', 1))
+            '"schema_version":"1.10"', '"schema_version":"1.10","schema_version":"1.10"', 1))
         target = root / 'duplicate-out'
         assert '重复' in run(production, '--reexport', str(duplicate), '--asset-root',
                             str(table_saved), '--out', str(target), code=3, cwd=root).stderr

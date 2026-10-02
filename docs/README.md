@@ -19,7 +19,7 @@
 | 行为 | 实现入口 | 已提交的规则与验收来源 |
 |---|---|---|
 | 版面候选、筛选、归属及识别前计划 | [core.cpp](../src/core.cpp)、[区域结构](../src/region_structure.cpp) | [去重](issue-19/layout-dedup.md)、[几何与归属](issue-20/geometry-and-ownership.md)、[结构修复](issue-26/structure-fix.md) |
-| 三类识别、图片资源和显式跳过的记账 | [标签映射](../src/layout_region_policy.cpp) | [标签处理契约](issue-26/label-policy.md) |
+| 三类识别、图片资源、标签导出及显式跳过的记账 | [标签映射](../src/layout_region_policy.cpp)、[导出策略](../src/label_export_policy.cpp) | [当前标签流水线](label-pipeline.md)、[1.9 历史契约](issue-26/label-policy.md) |
 | 小裁图适配与视觉成功证据 | [视觉适配](../src/visual_adaptation.cpp)、[MNN 识别后端](../src/printed_page_mnn_backend.cpp) | [视觉适配验收](issue-18/verification.md) |
 | 异常、不完整、失败与待核验展示 | [输出判定](../src/output_assessment.cpp)、[Markdown](../src/markdown.cpp) | [异常隔离](issue-21/README.md) |
 | 定向重试与作业取消/恢复 | [区域识别](../src/region_recognition.cpp)、[C ABI 实现](../src/abi.cpp) | [重试与恢复](issue-22/README.md) |

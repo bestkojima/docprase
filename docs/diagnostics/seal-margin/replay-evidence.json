@@ -1,0 +1,321 @@
+{
+  "status": "diagnosis_complete_bug_still_present",
+  "execution": "captured_model_outputs_replay_not_fresh_inference",
+  "replay_script_sha256": "805780e2b5db97325b200e9f4405a055a3187bb3610c0309c1ab6a8776f0e325",
+  "runs": [
+    {
+      "label": "original",
+      "report_path": "output/seal-margin-diagnosis/1790922934061864183/report.json",
+      "results": [
+        {
+          "case": "odb-01",
+          "mode": "original",
+          "verdict": "FAIL",
+          "leaked_identity_lines": [
+            "## 座位号",
+            "## 考场号",
+            "## 准考证号",
+            "## 姓名"
+          ],
+          "instruction_retained": true,
+          "probes": {
+            "class_id": null,
+            "move_to_body": false,
+            "plain_name": false
+          },
+          "observations": [],
+          "block_count": 44,
+          "elapsed_seconds": 4.715,
+          "command": [
+            "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+            "--config",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790922934061864183/odb-01/config.json",
+            "--input",
+            "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+            "--out",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790922934061864183/odb-01/job"
+          ],
+          "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+          "cli_sha256": "def171bd065de895063ba45d3fdb6609928fc670bb84ffbafd498e917134b128",
+          "library_sha256": "726e8e4971552dac7a6a2bf8c57885b328fafbf201cc4e115ed8aa57cd91e656",
+          "production_cli_sha256": "8eb3430195c55b3f6b591c3ccfbbdbec59fd4638769ff23864978d8a68f127bf",
+          "reexport_consistent": true,
+          "execution": "captured_outputs_replay_not_fresh_model_inference"
+        },
+        {
+          "case": "odb-02",
+          "mode": "original",
+          "verdict": "FAIL",
+          "leaked_identity_lines": [
+            "## 座位号",
+            "## 考场号",
+            "## 准考证号",
+            "## 姓名"
+          ],
+          "instruction_retained": true,
+          "probes": {
+            "class_id": null,
+            "move_to_body": false,
+            "plain_name": false
+          },
+          "observations": [],
+          "block_count": 48,
+          "elapsed_seconds": 6.654,
+          "command": [
+            "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+            "--config",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790922934061864183/odb-02/config.json",
+            "--input",
+            "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_96657786.pdf_0.jpg",
+            "--out",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790922934061864183/odb-02/job"
+          ],
+          "source_document_sha256": "4c4a79cdd55344d907a4bee6e34d1217f840d7d3d12faebf3238bb60ad59b466",
+          "cli_sha256": "def171bd065de895063ba45d3fdb6609928fc670bb84ffbafd498e917134b128",
+          "library_sha256": "726e8e4971552dac7a6a2bf8c57885b328fafbf201cc4e115ed8aa57cd91e656",
+          "production_cli_sha256": "8eb3430195c55b3f6b591c3ccfbbdbec59fd4638769ff23864978d8a68f127bf",
+          "reexport_consistent": true,
+          "execution": "captured_outputs_replay_not_fresh_model_inference"
+        }
+      ]
+    },
+    {
+      "label": "minimal",
+      "report_path": "output/seal-margin-diagnosis/1790923203709430954/report.json",
+      "results": [
+        {
+          "case": "odb-01",
+          "mode": "minimal",
+          "verdict": "FAIL",
+          "leaked_identity_lines": [
+            "## 姓名"
+          ],
+          "instruction_retained": null,
+          "probes": {
+            "class_id": null,
+            "move_to_body": false,
+            "plain_name": false
+          },
+          "observations": [
+            {
+              "type": "text",
+              "bbox": [
+                105,
+                1932,
+                155,
+                2015
+              ],
+              "in_reading_order": true,
+              "content_role": null,
+              "text": "## 姓名\n"
+            }
+          ],
+          "block_count": 1,
+          "elapsed_seconds": 0.71,
+          "command": [
+            "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+            "--config",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203709430954/odb-01/config.json",
+            "--input",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203709430954/odb-01/page.png",
+            "--out",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203709430954/odb-01/job"
+          ],
+          "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+          "cli_sha256": "def171bd065de895063ba45d3fdb6609928fc670bb84ffbafd498e917134b128",
+          "library_sha256": "726e8e4971552dac7a6a2bf8c57885b328fafbf201cc4e115ed8aa57cd91e656",
+          "production_cli_sha256": "8eb3430195c55b3f6b591c3ccfbbdbec59fd4638769ff23864978d8a68f127bf",
+          "reexport_consistent": true,
+          "execution": "captured_outputs_replay_not_fresh_model_inference"
+        }
+      ]
+    },
+    {
+      "label": "without-name",
+      "report_path": "output/seal-margin-diagnosis/1790923021159769390/report.json",
+      "results": [
+        {
+          "case": "odb-01",
+          "mode": "without-name",
+          "verdict": "PASS",
+          "leaked_identity_lines": [],
+          "instruction_retained": null,
+          "probes": {
+            "class_id": null,
+            "move_to_body": false,
+            "plain_name": false
+          },
+          "observations": [],
+          "block_count": 0,
+          "elapsed_seconds": 0.488,
+          "command": [
+            "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+            "--config",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923021159769390/odb-01/config.json",
+            "--input",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923021159769390/odb-01/page.png",
+            "--out",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923021159769390/odb-01/job"
+          ],
+          "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+          "cli_sha256": "def171bd065de895063ba45d3fdb6609928fc670bb84ffbafd498e917134b128",
+          "library_sha256": "726e8e4971552dac7a6a2bf8c57885b328fafbf201cc4e115ed8aa57cd91e656",
+          "production_cli_sha256": "8eb3430195c55b3f6b591c3ccfbbdbec59fd4638769ff23864978d8a68f127bf",
+          "reexport_consistent": true,
+          "execution": "captured_outputs_replay_not_fresh_model_inference"
+        }
+      ]
+    },
+    {
+      "label": "class-id-22",
+      "report_path": "output/seal-margin-diagnosis/1790923203708377570/report.json",
+      "results": [
+        {
+          "case": "odb-01",
+          "mode": "minimal",
+          "verdict": "FAIL",
+          "leaked_identity_lines": [
+            "## 姓名"
+          ],
+          "instruction_retained": null,
+          "probes": {
+            "class_id": 22,
+            "move_to_body": false,
+            "plain_name": false
+          },
+          "observations": [
+            {
+              "type": "text",
+              "bbox": [
+                105,
+                1932,
+                155,
+                2015
+              ],
+              "in_reading_order": true,
+              "content_role": null,
+              "text": "## 姓名\n"
+            }
+          ],
+          "block_count": 1,
+          "elapsed_seconds": 0.778,
+          "command": [
+            "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+            "--config",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203708377570/odb-01/config.json",
+            "--input",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203708377570/odb-01/page.png",
+            "--out",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203708377570/odb-01/job"
+          ],
+          "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+          "cli_sha256": "def171bd065de895063ba45d3fdb6609928fc670bb84ffbafd498e917134b128",
+          "library_sha256": "726e8e4971552dac7a6a2bf8c57885b328fafbf201cc4e115ed8aa57cd91e656",
+          "production_cli_sha256": "8eb3430195c55b3f6b591c3ccfbbdbec59fd4638769ff23864978d8a68f127bf",
+          "reexport_consistent": true,
+          "execution": "captured_outputs_replay_not_fresh_model_inference"
+        }
+      ]
+    },
+    {
+      "label": "move-to-body",
+      "report_path": "output/seal-margin-diagnosis/1790923203704320927/report.json",
+      "results": [
+        {
+          "case": "odb-01",
+          "mode": "minimal",
+          "verdict": "PASS",
+          "leaked_identity_lines": [],
+          "instruction_retained": null,
+          "probes": {
+            "class_id": null,
+            "move_to_body": true,
+            "plain_name": false
+          },
+          "observations": [
+            {
+              "type": "text",
+              "bbox": [
+                805,
+                1932,
+                855,
+                2015
+              ],
+              "in_reading_order": true,
+              "content_role": null,
+              "text": "## 姓名\n"
+            }
+          ],
+          "block_count": 1,
+          "elapsed_seconds": 0.719,
+          "command": [
+            "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+            "--config",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203704320927/odb-01/config.json",
+            "--input",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203704320927/odb-01/page.png",
+            "--out",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923203704320927/odb-01/job"
+          ],
+          "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+          "cli_sha256": "def171bd065de895063ba45d3fdb6609928fc670bb84ffbafd498e917134b128",
+          "library_sha256": "726e8e4971552dac7a6a2bf8c57885b328fafbf201cc4e115ed8aa57cd91e656",
+          "production_cli_sha256": "8eb3430195c55b3f6b591c3ccfbbdbec59fd4638769ff23864978d8a68f127bf",
+          "reexport_consistent": true,
+          "execution": "captured_outputs_replay_not_fresh_model_inference"
+        }
+      ]
+    },
+    {
+      "label": "plain-name",
+      "report_path": "output/seal-margin-diagnosis/1790923020314639078/report.json",
+      "results": [
+        {
+          "case": "odb-01",
+          "mode": "minimal",
+          "verdict": "FAIL",
+          "leaked_identity_lines": [
+            "姓名"
+          ],
+          "instruction_retained": null,
+          "probes": {
+            "class_id": null,
+            "move_to_body": false,
+            "plain_name": true
+          },
+          "observations": [
+            {
+              "type": "text",
+              "bbox": [
+                105,
+                1932,
+                155,
+                2015
+              ],
+              "in_reading_order": true,
+              "content_role": null,
+              "text": "姓名\n"
+            }
+          ],
+          "block_count": 1,
+          "elapsed_seconds": 0.524,
+          "command": [
+            "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+            "--config",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923020314639078/odb-01/config.json",
+            "--input",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923020314639078/odb-01/page.png",
+            "--out",
+            "/home/dr/project/docprase/output/seal-margin-diagnosis/1790923020314639078/odb-01/job"
+          ],
+          "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+          "cli_sha256": "def171bd065de895063ba45d3fdb6609928fc670bb84ffbafd498e917134b128",
+          "library_sha256": "726e8e4971552dac7a6a2bf8c57885b328fafbf201cc4e115ed8aa57cd91e656",
+          "production_cli_sha256": "8eb3430195c55b3f6b591c3ccfbbdbec59fd4638769ff23864978d8a68f127bf",
+          "reexport_consistent": true,
+          "execution": "captured_outputs_replay_not_fresh_model_inference"
+        }
+      ]
+    }
+  ]
+}

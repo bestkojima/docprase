@@ -4,7 +4,7 @@
 
 ## 当前能力与质量状态
 
-已实现单页图片、多页 PDF 与页范围、区域内容归属、阅读顺序、公式/表格输出、进度与取消、定向重试，以及从 JSON 重新导出。Ovis 执行 text / formula / table 三类识别；图片保存为资源，内嵌公式与表格子块由父区域输出一次。当前真实识别作业使用 DocumentIR 1.9，重新导出兼容 1.0～1.9。
+已实现单页图片、多页 PDF 与页范围、区域内容归属、阅读顺序、公式/表格输出、进度与取消、定向重试，以及从 JSON 重新导出。Ovis 执行 text / formula / table 三类识别；图片保存为资源，内嵌公式与表格子块由父区域输出一次。当前真实识别作业使用 DocumentIR 1.10，重新导出兼容 1.0～1.10。按 Paddle 的标签策略，密封线旁注、页眉页脚和页码默认保留在 JSON 中，正文 Markdown 省略；忽略列表可配置。完整映射和试卷示例见 [标签流水线](docs/label-pipeline.md)。
 
 工程能力与模型质量分别验收。首轮 Linux 实施票已关闭，整体识别质量仍由 [#24](https://github.com/bestkojima/docprase/issues/24) 和 [#27](https://github.com/bestkojima/docprase/issues/27) 跟踪；[#25](https://github.com/bestkojima/docprase/issues/25) 按用户豁免结案，实测质量未达原门槛。项目规格和最新任务状态以 [GitHub Issues](https://github.com/bestkojima/docprase/issues) 为准。
 

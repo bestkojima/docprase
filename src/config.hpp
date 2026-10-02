@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include "dococr/inference.hpp"
+#include "label_export_policy.hpp"
 
 namespace dococr {
 inline constexpr uint64_t max_layout_source_pixels = 64000000;
@@ -19,6 +20,7 @@ struct ExecutionPlan {
     bool layout_only = false;
     std::string layout_preprocess = "auto";
     double layout_score_threshold = 0.5;
+    LabelExportPolicy label_export;
     bool uses_doclayout() const {
         return layout_only || backend == "mnn:pp-doclayout-v3+ovisocr2" ||
                backend.rfind("fixture:printed_page", 0) == 0;

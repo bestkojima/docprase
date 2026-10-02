@@ -48,7 +48,7 @@ build/linux-current/dococr_cli --reexport '旧作业/document.json' \
   --asset-root '旧作业' --out '新导出目录'
 ```
 
-重新导出读取原 JSON 和资源，复制 JSON 原始字节与所引用的资源，并重新生成 Markdown；不会再次运行模型或 PDF 渲染。新目录包含 `document.json`、`document.md` 和 `assets/`，不生成新的作业状态或运行清单。当前 CLI 支持已保存的 DocumentIR 1.0～1.9，按版本与图片/PDF 类型使用对应 Schema；旧文档的缺失证据不补造。版本及来源见 [契约目录](../schemas/document-ir/README.md)。
+重新导出读取原 JSON 和资源，复制 JSON 原始字节与所引用的资源，并重新生成 Markdown；不会再次运行模型或 PDF 渲染。新目录包含 `document.json`、`document.md` 和 `assets/`，不生成新的作业状态或运行清单。当前 CLI 支持已保存的 DocumentIR 1.0～1.10，按版本与图片/PDF 类型使用对应 Schema；旧文档的缺失证据不补造。版本及来源见 [契约目录](../schemas/document-ir/README.md)。
 
 ## 首轮实测结果（2026-09-27）
 

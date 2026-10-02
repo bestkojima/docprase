@@ -1,6 +1,7 @@
 #include "reexport.hpp"
 #include "markdown.hpp"
 #include "layout_region_policy.hpp"
+#include "label_export_policy.hpp"
 #include "output_assessment.hpp"
 #include "content_validation.hpp"
 #include "pdf_page_id.hpp"
@@ -315,8 +316,37 @@ void validate_recognition(const Json& block, const std::string& where) {
             require(item.value() == provenance.at("visual").at(item.key()), where + " 视觉证据与采用尝试不一致");
     } else require(selected.at("visual").at("evidence") == "", where + " 最终视觉证据缺失");
 }
+int block_class_id(const Json& page, const Json& block) {
+    const auto& rid = block.at("source_region_ids").at(0);
+    for (const auto& region : page.at("regions")) if (region.at("id") == rid) {
+        const auto& lid = region.at("source_layout_block_ids").at(0);
+        for (const auto& layout : page.at("layout_blocks")) if (layout.at("id") == lid)
+            return layout.at("original_class_id").get<int>();
+    }
+    throw std::invalid_argument("输出块缺少主版面块来源");
+}
+
+void validate_label_export(const Json& page, const LabelExportPolicy& policy,
+                           const std::unordered_map<std::string, const Json*>& blocks,
+                           const std::string& where) {
+    for (const auto& layout : page.at("layout_blocks")) {
+        const auto class_id = layout.at("original_class_id").get<int>();
+        require(layout.at("semantic_label") == layout_semantic_label(class_id), where + " 语义标签与源类别不一致");
+        require(layout.at("label") == region_type_name(layout_region_policy(class_id).type), where + " 标签识别路由不一致");
+    }
+    size_t body_order = 0;
+    for (const auto& bid : page.at("reading_order")) {
+        const auto& block = *blocks.at(bid.get<std::string>());
+        const auto class_id = block_class_id(page, block);
+        require(block.at("type") == region_type_name(layout_region_policy(class_id).type), where + " 主版面类别与输出类型不一致");
+        const Json expected = policy.has_block_order(class_id) ? Json(++body_order) : Json(nullptr);
+        require(block.at("block_order") == expected, where + " block_order 与标签策略/阅读顺序不一致");
+    }
+}
+
 std::string render_page_markdown(const Json& page,
-                                 const std::unordered_map<std::string, const Json*>& by_id) {
+                                 const std::unordered_map<std::string, const Json*>& by_id,
+                                 const LabelExportPolicy* label_export = nullptr) {
     std::string markdown;
     const auto& order = page.contains("structure_plan") ? page.at("structure_plan").at("block_order") : page.at("reading_order");
     std::set<std::string> uncertain_captions;
@@ -325,6 +355,7 @@ std::string render_page_markdown(const Json& page,
             uncertain_captions.insert(bid.get<std::string>());
     for (const auto& value : order) {
         const auto& block = *by_id.at(value.get<std::string>());
+        if (label_export && !label_export->markdown_visible(block_class_id(page, block))) continue;
         const auto& content = block.at("content");
         const auto& resource = content.at("resource");
         const std::string type = block.at("type").get<std::string>();
@@ -446,9 +477,23 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     try { document = Json::parse(json, reject_duplicates); }
     catch (const std::exception& error) { throw std::invalid_argument(std::string("JSON 解析失败：") + error.what()); }
     const auto version = string_field(document, "schema_version", "document");
-    require(version == "1.0" || version == "1.1" || version == "1.2" ||
-            version == "1.3" || version == "1.4" || version == "1.5" || (version == "1.6" || version == "1.7" || (version == "1.8" || version == "1.9")), "不支持 schema_version " + version);
+    require(version == "1.0" || version == "1.1" || version == "1.2" || version == "1.3" ||
+            version == "1.4" || version == "1.5" || version == "1.6" || version == "1.7" ||
+            version == "1.8" || version == "1.9" || version == "1.10", "不支持 schema_version " + version);
+    const bool has_region_mapping = version == "1.9" || version == "1.10";
+    const bool has_structure_plan = version == "1.8" || has_region_mapping;
+    const bool has_recognition_evidence = version == "1.7" || has_structure_plan;
+    const bool has_assessment = version == "1.6" || has_recognition_evidence;
+    const bool has_visual_evidence = version == "1.5" || has_assessment;
     validate_document_schema(document, version);
+    LabelExportPolicy label_export;
+    if (version == "1.10") {
+        const auto& policy = document.at("export_policy");
+        label_export.markdown_ignore_labels = policy.at("markdown_ignore_labels").get<std::vector<std::string>>();
+        label_export.show_formula_number = policy.at("show_formula_number").get<bool>();
+        for (const auto& label : label_export.markdown_ignore_labels)
+            require(known_layout_semantic_label(label), "未知 Markdown 忽略标签 " + label);
+    }
     const bool pdf = document.at("source").at("type") == "pdf";
     id(string_field(document, "document_id", "document"), "doc-[0-9a-f]{16}", "document_id");
     status(string_field(document, "status", "document"), false, "document");
@@ -563,7 +608,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             auto type = string_field(block, "type", where);
             require(type == "text" || type == "formula" || type == "table" ||
                     type == "image" || type == "unknown", where + " block.type 无效");
-            if (version == "1.9")
+            if (has_region_mapping)
                 for (const auto& rid : sources)
                     require(region_data.at(rid.get<std::string>())->at("recognition_type") == type,
                             where + " Region 识别类型与输出块不一致");
@@ -578,7 +623,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                         where + " 公式格式无效");
             if (type == "table" && content.contains("table") && content.at("table").is_object())
                 require(format == "html", where + " 表格 format 无效");
-            if (type == "table" && (version == "1.2" || version == "1.3" || version == "1.5" || (version == "1.6" || version == "1.7" || (version == "1.8" || version == "1.9")) || pdf)) {
+            if (type == "table" && (version == "1.2" || version == "1.3" || version == "1.5" || has_assessment || pdf)) {
                 if (block.at("status") == "ok") structured_table(content, where);
                 else require(field(content, "table", where).is_null() &&
                              content.at("text") == "" && format == "markdown",
@@ -595,7 +640,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             if (type == "image" || block.at("status") != "ok")
                 require(content.at("resource").is_string(), where + " 图片/占位块缺少 resource");
             const auto& provenance = field(block, "provenance", where);
-            if (version == "1.9" && type == "image") {
+            if (has_region_mapping && type == "image") {
                 const auto& recognition = provenance.at("recognition");
                 const auto& assessment = provenance.at("assessment");
                 require(recognition.at("attempts").empty() && recognition.at("selected_attempt").is_null() &&
@@ -608,7 +653,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                     require(assessment.at("reason") == "resource_saved" && block.at("error").is_null(),
                             where + " 图片资源保存状态无效");
             }
-            if ((version == "1.5" || (version == "1.6" || version == "1.7" || (version == "1.8" || version == "1.9"))) && block.at("status") == "ok" &&
+            if (has_visual_evidence && block.at("status") == "ok" &&
                 (type == "text" || type == "formula" || type == "table"))
                 require(provenance.contains("visual"), where + " 正常识别缺少视觉证据");
             const auto& raw = field(provenance, "raw_output", where);
@@ -687,8 +732,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             require((error.is_null() || error.is_string()) &&
                     (error_base64.is_null() || error_base64.is_string()),
                     where + " error 字段无效");
-            if ((version == "1.6" || version == "1.7" || (version == "1.8" || version == "1.9"))) {
-                if (version == "1.7" || (version == "1.8" || version == "1.9")) validate_recognition(block, where);
+            if (has_assessment) {
+                if (has_recognition_evidence) validate_recognition(block, where);
                 const auto& assessment = provenance.at("assessment");
                 const auto state = assessment.at("state").get<std::string>();
                 require(assessment_block_status(state) == block.at("status"), where + " 判定状态与块状态不一致");
@@ -720,7 +765,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 if (state != "ok" && state != "skipped")
                     require(error == assessment.at("reason"), where + " 判定原因与错误记录不一致");
                 if (state == "ok") {
-                    require(((version == "1.9" && type == "image") || derived.state == "ok") && error.is_null() &&
+                    require(((has_region_mapping && type == "image") || derived.state == "ok") && error.is_null() &&
                             provenance.at("raw_output_base64").is_null() && provenance.at("text_base64").is_null(),
                             where + " 不可靠结果不可标记正常");
                     const auto text = content.at("text").get<std::string>();
@@ -759,12 +804,13 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 require(part_of_owner, where + " 内容归属不属于 owner 的源区域");
             } else {
                 require((type == "caption_of" || type == "footnote_of" || type == "heading_precedes") &&
-                        (version == "1.3" || version == "1.5" || (version == "1.6" || version == "1.7" || (version == "1.8" || version == "1.9")) || pdf) &&
+                        (version == "1.3" || version == "1.5" || has_assessment || pdf) &&
                         blocks.count(string_field(relation, "source_block_id", where)) &&
                         blocks.count(string_field(relation, "target_block_id", where)), where + " 语义关系引用不存在");
             }
         }
-        if ((version == "1.8" || version == "1.9") && !failed) validate_structure(page, by_id, width, height, where);
+        if (has_structure_plan && !failed) validate_structure(page, by_id, width, height, where);
+        if (version == "1.10") validate_label_export(page, label_export, by_id, where);
         if (page.contains("layout_diagnostics")) diagnostics(page.at("layout_diagnostics"), all_paths, where);
         if (pdf) {
             if (failed) {
@@ -774,8 +820,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 continue;
             }
             result.markdown += "## 第 " + std::to_string(page.at("pdf_page_number").get<uint64_t>()) + " 页\n\n" +
-                               render_page_markdown(page, by_id) + "\n";
-        } else result.markdown = render_page_markdown(page, by_id);
+                               render_page_markdown(page, by_id, version == "1.10" ? &label_export : nullptr) + "\n";
+        } else result.markdown = render_page_markdown(page, by_id, version == "1.10" ? &label_export : nullptr);
     }
     if (document.contains("layout_diagnostics")) diagnostics(document.at("layout_diagnostics"), all_paths, "document");
     for (const auto& resource : resources) {

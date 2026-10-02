@@ -1303,7 +1303,8 @@ std::string serialize(const Image& image, const std::string& state,
                       const ReadingOrderEvidence* order_evidence = nullptr,
                       const std::vector<SemanticRelation>& semantic = {},
                       const LayoutPageTransform* layout_transform = nullptr, double score_threshold = .5,
-                      const RegionStructure* structure = nullptr) {
+                      const RegionStructure* structure = nullptr,
+                      const LabelExportPolicy* label_export = nullptr) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
@@ -1312,11 +1313,12 @@ std::string serialize(const Image& image, const std::string& state,
     const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
         return !b.visual.visual_evidence.empty();
     });
-    out << "{\"schema_version\":" << json_quote(structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
+    out << "{\"schema_version\":" << json_quote(label_export ? "1.10" : structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
-        << ",\"status\":" << json_quote(state)
-        << ",\"source\":{\"type\":" << json_quote(current_pdf_page ? "pdf" : "image")
+        << ",\"status\":" << json_quote(state);
+    if (label_export) out << ",\"export_policy\":" << label_export_policy_json(*label_export);
+    out << ",\"source\":{\"type\":" << json_quote(current_pdf_page ? "pdf" : "image")
         << "},\"pages\":[{\"page_id\":" << json_quote(page_id())
         << ",\"page_index\":" << (current_pdf_page ? current_pdf_page - 1 : 0) << ','
         << "\"raster_size\":[" << image.width << ',' << image.height << "],\"coordinate_space\":\"raster_page\","
@@ -1334,7 +1336,9 @@ std::string serialize(const Image& image, const std::string& state,
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << json_quote(b.layout_id) << ",\"page_id\":" << json_quote(page_id()) << ",\"label\":" << json_quote(b.type)
+        if (label_export) out << "{\"semantic_label\":" << json_quote(layout_semantic_label(b.original_class_id)) << ',';
+        else out << '{';
+        out << "\"id\":" << json_quote(b.layout_id) << ",\"page_id\":" << json_quote(page_id()) << ",\"label\":" << json_quote(b.type)
             << ",\"bbox\":" << box_json(b.crop_expanded ? b.layout_box : b.box) << ",\"coordinate_space\":\"raster_page\","
             << "\"detection_score\":" << b.detection_score << ",\"candidate_rank\":" << b.candidate_rank
             << ",\"original_class_id\":" << b.original_class_id
@@ -1352,7 +1356,9 @@ std::string serialize(const Image& image, const std::string& state,
     for (const auto& evidence : ownership) {
         const auto& c = *evidence.candidate;
         if (!blocks.empty() || &evidence != &ownership.front()) out << ',';
-        out << "{\"id\":" << json_quote(evidence.layout_id)
+        if (label_export) out << "{\"semantic_label\":" << json_quote(layout_semantic_label(c.class_id)) << ',';
+        else out << '{';
+        out << "\"id\":" << json_quote(evidence.layout_id)
             << ",\"page_id\":" << json_quote(page_id()) << ",\"label\":" << json_quote(canonical_label(c.class_id))
             << ",\"bbox\":" << box_json(c.crop)
             << ",\"coordinate_space\":\"raster_page\",\"detection_score\":" << c.score
@@ -1379,10 +1385,13 @@ std::string serialize(const Image& image, const std::string& state,
         out << '}';
     }
     out << "],\"blocks\":[";
+    size_t body_order = 0;
     for (size_t i = 0; i < blocks.size(); ++i) {
         if (i) out << ',';
         const Block& b = blocks[i];
-        out << "{\"id\":" << json_quote(b.id) << ",\"page_id\":" << json_quote(page_id()) << ",\"type\":" << json_quote(b.type)
+        out << '{';
+        if (label_export) out << "\"block_order\":" << (label_export->has_block_order(b.original_class_id) ? std::to_string(++body_order) : "null") << ',';
+        out << "\"id\":" << json_quote(b.id) << ",\"page_id\":" << json_quote(page_id()) << ",\"type\":" << json_quote(b.type)
             << ",\"source_region_ids\":[" << json_quote(b.region_id) << "],\"bbox\":" << box_json(b.box)
             << ",\"coordinate_space\":\"raster_page\",\"geometry_granularity\":\"region\","
             << "\"reading_order_source\":" << json_quote(order_evidence ? order_evidence->source : "geometry") << ','
@@ -2047,14 +2056,16 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     start = Clock::now();
     if (progress) progress("export_started", source_page ? source_page : 1, "", region_done, region_total);
     const std::set<std::string> uncertain_captions(structure.ambiguous_caption_ids.begin(), structure.ambiguous_caption_ids.end());
+    const LabelExportPolicy label_export = plan ? plan->label_export : LabelExportPolicy{};
     for (const auto& block : blocks) {
+        if (!label_export.markdown_visible(block.original_class_id)) continue;
         if (!result.markdown.empty()) result.markdown += "\n\n";
         result.markdown += render(block, uncertain_captions.count(block.id));
     }
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,
                             overlay_name, ownership, true, &order_evidence, semantic,
-                            &layout_input.transform, score_threshold, &structure);
+                            &layout_input.transform, score_threshold, &structure, &label_export);
     audit.did_export = true;
     if (progress) progress("export_completed", source_page ? source_page : 1, "", region_done, region_total);
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());

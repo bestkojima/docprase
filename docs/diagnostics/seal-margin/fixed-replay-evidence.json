@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-02",
+  "scope": "Paddle 标签路由、Markdown 忽略、完整 JSON 保留和正文序号；密封线诊断修复",
+  "reference": {
+    "repository": "PaddlePaddle/PaddleX",
+    "commit": "ffb64904d23708863ff5b8da312a5cbd52a7f462",
+    "policy": "paddleocr-vl-1.5-labels-v1"
+  },
+  "regression_before_fix": {
+    "command": "python3 tests/label_pipeline.py build/linux-current/dococr_cli_fixture build/linux-current/dococr_cli",
+    "exit_code": 1,
+    "symptom": "AssertionError: 密封线 aside_text 混入正文"
+  },
+  "original_replay": [
+    {
+      "case": "odb-01",
+      "mode": "original",
+      "verdict": "PASS",
+      "leaked_identity_lines": [],
+      "instruction_retained": true,
+      "aside_block_count": 11,
+      "aside_metadata_retained": true,
+      "probes": {
+        "class_id": null,
+        "move_to_body": false,
+        "plain_name": false
+      },
+      "observations": [],
+      "block_count": 44,
+      "elapsed_seconds": 5.227,
+      "command": [
+        "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+        "--config",
+        "output/seal-margin-label-pipeline-verified-20261002/odb-01/config.json",
+        "--input",
+        "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+        "--out",
+        "output/seal-margin-label-pipeline-verified-20261002/odb-01/job"
+      ],
+      "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+      "cli_sha256": "bba5873336dfbffb84d5c53e989f8493b63b168c5bf5b738165e441ad576db78",
+      "library_sha256": "6f3687e2e0268cd0c0f3f74d02c0939d33b1f50cb8c43090ae32fd670b8e2b5f",
+      "production_cli_sha256": "1ab28b1d2f16e3c8211dec2958a0cb9040f5c8625db4638f61086c26b5796fdb",
+      "reexport_consistent": true,
+      "execution": "captured_outputs_replay_not_fresh_model_inference"
+    },
+    {
+      "case": "odb-02",
+      "mode": "original",
+      "verdict": "PASS",
+      "leaked_identity_lines": [],
+      "instruction_retained": true,
+      "aside_block_count": 9,
+      "aside_metadata_retained": true,
+      "probes": {
+        "class_id": null,
+        "move_to_body": false,
+        "plain_name": false
+      },
+      "observations": [],
+      "block_count": 48,
+      "elapsed_seconds": 6.874,
+      "command": [
+        "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+        "--config",
+        "output/seal-margin-label-pipeline-verified-20261002/odb-02/config.json",
+        "--input",
+        "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_96657786.pdf_0.jpg",
+        "--out",
+        "output/seal-margin-label-pipeline-verified-20261002/odb-02/job"
+      ],
+      "source_document_sha256": "4c4a79cdd55344d907a4bee6e34d1217f840d7d3d12faebf3238bb60ad59b466",
+      "cli_sha256": "bba5873336dfbffb84d5c53e989f8493b63b168c5bf5b738165e441ad576db78",
+      "library_sha256": "6f3687e2e0268cd0c0f3f74d02c0939d33b1f50cb8c43090ae32fd670b8e2b5f",
+      "production_cli_sha256": "1ab28b1d2f16e3c8211dec2958a0cb9040f5c8625db4638f61086c26b5796fdb",
+      "reexport_consistent": true,
+      "execution": "captured_outputs_replay_not_fresh_model_inference"
+    }
+  ],
+  "minimal_replay": [
+    {
+      "case": "odb-01",
+      "mode": "minimal",
+      "verdict": "PASS",
+      "leaked_identity_lines": [],
+      "instruction_retained": null,
+      "aside_block_count": 1,
+      "aside_metadata_retained": true,
+      "probes": {
+        "class_id": null,
+        "move_to_body": false,
+        "plain_name": false
+      },
+      "observations": [
+        {
+          "type": "text",
+          "bbox": [
+            105,
+            1932,
+            155,
+            2015
+          ],
+          "in_reading_order": true,
+          "content_role": null,
+          "text": "## 姓名\n"
+        }
+      ],
+      "block_count": 1,
+      "elapsed_seconds": 0.463,
+      "command": [
+        "/home/dr/project/docprase/build/linux-current/dococr_cli_fixture",
+        "--config",
+        "output/seal-margin-label-minimal-verified-20261002/odb-01/config.json",
+        "--input",
+        "output/seal-margin-label-minimal-verified-20261002/odb-01/page.png",
+        "--out",
+        "output/seal-margin-label-minimal-verified-20261002/odb-01/job"
+      ],
+      "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+      "cli_sha256": "bba5873336dfbffb84d5c53e989f8493b63b168c5bf5b738165e441ad576db78",
+      "library_sha256": "6f3687e2e0268cd0c0f3f74d02c0939d33b1f50cb8c43090ae32fd670b8e2b5f",
+      "production_cli_sha256": "1ab28b1d2f16e3c8211dec2958a0cb9040f5c8625db4638f61086c26b5796fdb",
+      "reexport_consistent": true,
+      "execution": "captured_outputs_replay_not_fresh_model_inference"
+    }
+  ],
+  "verification": {
+    "build": "cmake --build build/linux-current -j4",
+    "ctest_command": "ctest --test-dir build/linux-current --output-on-failure -j4",
+    "ctest_passed": 30,
+    "ctest_failed": 0,
+    "ctest_duration_seconds": 20.6,
+    "schema_checksum_command": "sha256sum -c schemas/document-ir/SHA256SUMS",
+    "schema_checks_passed": 32,
+    "before_identity_leaks": 8,
+    "after_identity_leaks": 0,
+    "retained_aside_blocks": 20,
+    "fresh_model_inference": false,
+    "unseen_quality_evaluation": false
+  },
+  "working_tree_sources": {
+    "src/label_export_policy.cpp": "db57f4cdc68e375ad253fe9f28d415af58ba21d971889085a20b681406177fed",
+    "src/label_export_policy.hpp": "936a2cb9c1ac69bb522a7109fb08718d07feb9c84db9019470547a49421f2d6b",
+    "src/layout_region_policy.cpp": "9a8b7f5b52ef82a16ba6ce9c23fc53f32592066e1e868a18851e088a918d3772",
+    "src/core.cpp": "2e281c29b0e324bacbd156f663a73c6ec15d9056244dc5b8f6cc71684f112941",
+    "src/reexport.cpp": "8ec327bf9c3cd9db00be2acb3ee4093b327c4af60d032b89a47778d115d55bba",
+    "src/config.cpp": "f23046ecad545296702e1f89020ee650d65823e4e50a6f0337be88d34eca90d0",
+    "src/config.hpp": "04d7fd015858df4d53636c2d1ad7b6c77a3a2b79132b74b3aab3029c05eaf416",
+    "src/pdf_job.cpp": "9731668dd5db3466913536750c11626fb62947ebd334d8bb65ff2f1d3af1e7ab",
+    "src/region_structure.cpp": "661175e53d11f8ffec65f34b63b9c22bf60a4a11dd327afc21ec71871d4ba277",
+    "src/schema_validator.cpp": "32200afc9bdf1fe8bd06ba1bed81b59556cdbf2c65dc88ba7441f8bb7ee4028b",
+    "tests/label_pipeline.py": "c6031776eb6ff56f06aff995a6b0f50ae5cd277d76f5cb8f79b1415b6b04865d",
+    "schemas/document-ir/document-ir-1.10-image.schema.json": "12c2d841cf0a0ec9c7f4bcac6b05c8af7a828e61f87623e401aa411e84a32ed0",
+    "schemas/document-ir/document-ir-1.10-pdf.schema.json": "679ff15cc9d5fbfa499ebd491a0d4b83d785cd49b94bd13c02efd5d20bbbed30"
+  },
+  "commit_candidate_validation": {
+    "tested_tree": "2001d9dc257432ff74dc8cc2e98b9578d94bf53d",
+    "method": "git archive 暂存树，在独立目录构建与测试；排除工作区其他未提交改动",
+    "build_exit_code": 0,
+    "ctest_passed": 30,
+    "ctest_failed": 0,
+    "ctest_duration_seconds": 17.88,
+    "original_replay": [
+      {
+        "case": "odb-01",
+        "mode": "original",
+        "verdict": "PASS",
+        "leaked_identity_lines": [],
+        "instruction_retained": true,
+        "aside_block_count": 11,
+        "aside_metadata_retained": true,
+        "probes": {
+          "class_id": null,
+          "move_to_body": false,
+          "plain_name": false
+        },
+        "observations": [],
+        "block_count": 44,
+        "elapsed_seconds": 4.606,
+        "command": [
+          "/tmp/docprase-label-commit-check-x5kbdfpa/build/dococr_cli_fixture",
+          "--config",
+          "output/seal-margin-commit-candidate-20261002/odb-01/config.json",
+          "--input",
+          "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+          "--out",
+          "output/seal-margin-commit-candidate-20261002/odb-01/job"
+        ],
+        "source_document_sha256": "fae74b38f1d50977dd6978eb57a163c57729eac5ef0789e2c72557050ede1047",
+        "cli_sha256": "f218d11aa4f407e29daa55e6d5b55f4c85cbfa5c6167695e44fa16a569f17aed",
+        "library_sha256": "969b4ee373027260e0749bd2686bfc30d2a0a6cab078578e049e74da74e634c0",
+        "production_cli_sha256": "716931d9d6fae75aaef2646eb69a61c122c7a55cdc0c58de3abae4f4b931da80",
+        "reexport_consistent": true,
+        "execution": "captured_outputs_replay_not_fresh_model_inference"
+      },
+      {
+        "case": "odb-02",
+        "mode": "original",
+        "verdict": "PASS",
+        "leaked_identity_lines": [],
+        "instruction_retained": true,
+        "aside_block_count": 9,
+        "aside_metadata_retained": true,
+        "probes": {
+          "class_id": null,
+          "move_to_body": false,
+          "plain_name": false
+        },
+        "observations": [],
+        "block_count": 48,
+        "elapsed_seconds": 6.441,
+        "command": [
+          "/tmp/docprase-label-commit-check-x5kbdfpa/build/dococr_cli_fixture",
+          "--config",
+          "output/seal-margin-commit-candidate-20261002/odb-02/config.json",
+          "--input",
+          "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_96657786.pdf_0.jpg",
+          "--out",
+          "output/seal-margin-commit-candidate-20261002/odb-02/job"
+        ],
+        "source_document_sha256": "4c4a79cdd55344d907a4bee6e34d1217f840d7d3d12faebf3238bb60ad59b466",
+        "cli_sha256": "f218d11aa4f407e29daa55e6d5b55f4c85cbfa5c6167695e44fa16a569f17aed",
+        "library_sha256": "969b4ee373027260e0749bd2686bfc30d2a0a6cab078578e049e74da74e634c0",
+        "production_cli_sha256": "716931d9d6fae75aaef2646eb69a61c122c7a55cdc0c58de3abae4f4b931da80",
+        "reexport_consistent": true,
+        "execution": "captured_outputs_replay_not_fresh_model_inference"
+      }
+    ],
+    "tested_region_structure_sha256": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+    "changes_after_tests": "仅补充图例处理说明和本条验证记录，生产代码及测试未再修改"
+  }
+}

@@ -9,7 +9,7 @@ from printed_page_integration import run
 
 def check(binary, root, image, scenario, source, reason):
     output, document, manifest = run(binary, scenario, root, image)
-    assert document['schema_version'] == '1.9'
+    assert document['schema_version'] == '1.10'
     page = document['pages'][0]
     blocks = page['blocks']
     candidate_by_layout = {b['id']: b['candidate_id'] for b in page['layout_blocks']

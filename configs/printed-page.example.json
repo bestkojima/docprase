@@ -132,6 +132,16 @@
     "max_output_bytes": 67108864,
     "max_new_tokens": 512,
     "layout_preprocess": "smartresize_lanczos",
-    "layout_score_threshold": 0.3
+    "layout_score_threshold": 0.3,
+    "markdown_ignore_labels": [
+      "number",
+      "footnote",
+      "header",
+      "header_image",
+      "footer",
+      "footer_image",
+      "aside_text"
+    ],
+    "show_formula_number": false
   }
 }

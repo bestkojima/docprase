@@ -45,7 +45,7 @@ def render_case(fixture_cli, production_cli, root, name, raw, class_id=22, valid
         assert '![原图]' in markdown and f'[{marker}：' in markdown
         assert raw not in markdown
     assert (job / block['content']['resource']).is_file()
-    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.9-image.schema.json').read_text()))
+    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text()))
     exported = folder / 'reexport'
     result = subprocess.run([production_cli, '--reexport', str(job / 'document.json'),
         '--asset-root', str(job), '--out', str(exported)], cwd=ROOT, capture_output=True, text=True)

@@ -3,7 +3,7 @@
 
 namespace dococr {
 enum class RegionType { Text, Formula, Table, Image, Unknown };
-enum class LayoutPurpose { Body, Heading, Annotation, Footnote, PageMarker, Number, None };
+enum class LayoutPurpose { Body, Heading, Annotation, Footnote, PageMarker, Number, Aside, None };
 struct LayoutRegionPolicy {
     const char* model_label;
     RegionType type;

@@ -1,0 +1,322 @@
+[
+  {
+    "page": "odb-01",
+    "image": "output/issue27-two-page-20261002T041025Z/odb-01/original.jpg",
+    "image_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+    "raster_size": [
+      3308,
+      2339
+    ],
+    "vertical_line_measurement": {
+      "search_band": "left_12_percent",
+      "vertical_sample": [
+        233,
+        2105
+      ],
+      "dark_pixel_threshold": 110,
+      "strongest_columns": [
+        {
+          "x": 176,
+          "black_fraction": 1.0
+        },
+        {
+          "x": 177,
+          "black_fraction": 1.0
+        }
+      ]
+    },
+    "outside_line_blocks": [
+      {
+        "block_id": "b0004",
+        "bbox": [
+          100,
+          318,
+          160,
+          562
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 座位号\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0006",
+        "bbox": [
+          37,
+          408,
+          76,
+          460
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 邦\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0012",
+        "bbox": [
+          33,
+          614,
+          78,
+          669
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 知\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0014",
+        "bbox": [
+          101,
+          631,
+          160,
+          884
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 考场号\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0018",
+        "bbox": [
+          33,
+          827,
+          77,
+          879
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 不\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0023",
+        "bbox": [
+          36,
+          1036,
+          78,
+          1088
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 点\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0025",
+        "bbox": [
+          38,
+          1245,
+          77,
+          1296
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 恭\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0031",
+        "bbox": [
+          107,
+          1445,
+          155,
+          1609
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 准考证号\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0032",
+        "bbox": [
+          37,
+          1457,
+          77,
+          1505
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 口\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0037",
+        "bbox": [
+          37,
+          1665,
+          77,
+          1717
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 狗\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0041",
+        "bbox": [
+          105,
+          1932,
+          155,
+          2015
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 姓名\n",
+        "in_reading_order": true
+      }
+    ],
+    "scope": "two_observed_pages_only_not_a_production_classifier"
+  },
+  {
+    "page": "odb-02",
+    "image": "output/issue27-two-page-20261002T041025Z/odb-02/original.jpg",
+    "image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+    "raster_size": [
+      3308,
+      2339
+    ],
+    "vertical_line_measurement": {
+      "search_band": "left_12_percent",
+      "vertical_sample": [
+        233,
+        2105
+      ],
+      "dark_pixel_threshold": 110,
+      "strongest_columns": [
+        {
+          "x": 176,
+          "black_fraction": 1.0
+        },
+        {
+          "x": 177,
+          "black_fraction": 1.0
+        }
+      ]
+    },
+    "outside_line_blocks": [
+      {
+        "block_id": "b0005",
+        "bbox": [
+          100,
+          317,
+          160,
+          561
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 座位号\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0007",
+        "bbox": [
+          37,
+          407,
+          76,
+          459
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 邦\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0013",
+        "bbox": [
+          96,
+          628,
+          161,
+          883
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 考场号\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0019",
+        "bbox": [
+          32,
+          826,
+          77,
+          879
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 不\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0023",
+        "bbox": [
+          33,
+          1040,
+          80,
+          1301
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 订\n\n## 装\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0033",
+        "bbox": [
+          93,
+          1446,
+          152,
+          1606
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 准考证号\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0034",
+        "bbox": [
+          37,
+          1456,
+          77,
+          1504
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 口\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0038",
+        "bbox": [
+          36,
+          1664,
+          78,
+          1717
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 寿\n",
+        "in_reading_order": true
+      },
+      {
+        "block_id": "b0042",
+        "bbox": [
+          106,
+          1931,
+          154,
+          2016
+        ],
+        "model_label": "aside_text",
+        "type": "text",
+        "text": "## 姓名\n",
+        "in_reading_order": true
+      }
+    ],
+    "scope": "two_observed_pages_only_not_a_production_classifier"
+  }
+]

@@ -371,8 +371,25 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     if (threads != 1) throw ConfigError("unsupported_parameter", "threads: only 1 is implemented");
     plan->threads = 1;
     object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens", "generation_timeout_ms",
-                                   "layout_preprocess", "layout_score_threshold"});
+                                   "layout_preprocess", "layout_score_threshold", "markdown_ignore_labels", "show_formula_number"});
     const auto& execution = config.at("execution").object;
+    if (execution.count("markdown_ignore_labels")) {
+        if (!plan->uses_doclayout()) throw ConfigError("invalid_layout_parameter", "markdown_ignore_labels");
+        const auto& labels = execution.at("markdown_ignore_labels");
+        array(labels);
+        plan->label_export.markdown_ignore_labels.clear();
+        std::set<std::string> seen;
+        for (const auto& value : labels.array) {
+            const auto label = str(value);
+            if (!known_layout_semantic_label(label) || !seen.insert(label).second)
+                throw ConfigError("invalid_layout_parameter", "markdown_ignore_labels: " + label);
+            plan->label_export.markdown_ignore_labels.push_back(label);
+        }
+    }
+    if (execution.count("show_formula_number")) {
+        if (!plan->uses_doclayout()) throw ConfigError("invalid_layout_parameter", "show_formula_number");
+        plan->label_export.show_formula_number = boolean(execution.at("show_formula_number"));
+    }
     if (execution.count("layout_preprocess")) {
         plan->layout_preprocess = str(execution.at("layout_preprocess"));
         if (!plan->uses_doclayout() || (plan->layout_preprocess != "auto" &&
@@ -416,7 +433,8 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     plan->json = "{\"schema_version\":\"1.0\",\"config_hash\":" + json_quote(plan->config_hash) +
         ",\"effective_config\":" + dump(config) +
         ",\"resolved_flow\":" + resolved_flow +
-        ",\"resolved_processing\":" + resolved_processing + "}";
+        ",\"resolved_processing\":" + resolved_processing +
+        (plan->uses_doclayout() ? ",\"resolved_export_policy\":" + label_export_policy_json(plan->label_export) : "") + "}";
     return plan;
 }
 } // namespace dococr
