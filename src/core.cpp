@@ -1567,7 +1567,12 @@ size_t currency_amount_end(const std::string& text, size_t i) {
     while (after_space < text.size() &&
            (text[after_space] == ' ' || text[after_space] == '\t'))
         ++after_space;
-    bool math_continues = after_space < text.size() &&
+    // A following legacy math opener (or an escaped dollar) starts separate
+    // content. Other TeX commands still continue the numeric math candidate,
+    // including non-letter commands such as \{ and \,.
+    const bool separate_content = text.compare(after_space, 2, "\\(") == 0 ||
+        text.compare(after_space, 2, "\\[") == 0 || text.compare(after_space, 2, "\\$") == 0;
+    bool math_continues = !separate_content && after_space < text.size() &&
         std::string("$=+-*/_^<>\\").find(text[after_space]) != std::string::npos;
     if (!complete_math && !math_continues &&
         (amount_end == text.size() ||

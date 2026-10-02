@@ -95,6 +95,10 @@ def main():
             ('escaped', r'价格 \$5，公式 $x^2$；再付 \$10。',
              r'价格 \$5，公式 $x^2$；再付 \$10。', ['x^2']),
             ('end', '求 $x^2$，费用 $5', r'求 $x^2$，费用 \$5', ['x^2']),
+            ('mixed-escapes', r'价格 $5 和 \$10，公式 $x^2$。',
+             r'价格 \$5 和 \$10，公式 $x^2$。', ['x^2']),
+            ('adjacent-escaped-amount', r'价格 $5 \$10，公式 $x^2$。',
+             r'价格 \$5 \$10，公式 $x^2$。', ['x^2']),
             ('numbers', '$2(x+1)$；$2[1+x]$；$2!$；$2FeO$；$2 x$；价格 $5。',
              r'$2(x+1)$；$2[1+x]$；$2!$；$2FeO$；$2 x$；价格 \$5。',
              ['2(x+1)', '2[1+x]', '2!', '2FeO', '2 x']),
@@ -109,6 +113,13 @@ def main():
             cases.append(check_case(args, root, f'currency-legacy-math-{class_id}', raw, expected,
                 class_id=class_id, formulas=['x<y', 'z=x+y'], display_modes=[False, True],
                 content_format='markdown' if class_id == 5 else None))
+            for opening, closing, display in [(r'\(', r'\)', False), (r'\[', r'\]', True)]:
+                adjacent_raw = '价格 $5 ' + opening + 'x^2' + closing + '。'
+                delimiter = '$$' if display else '$'
+                adjacent_expected = r'价格 \$5 ' + delimiter + 'x^2' + delimiter + '。'
+                cases.append(check_case(args, root, f'currency-adjacent-legacy-{class_id}-{display}',
+                    adjacent_raw, adjacent_expected, class_id=class_id, formulas=['x^2'], display_modes=[display],
+                    content_format='markdown' if class_id == 5 else None))
         catalog = json.loads((ROOT / 'configs/formula-symbols.json').read_text())
         for category, names in catalog['categories'].items():
             formula = ' '.join('\\' + name for name in names)

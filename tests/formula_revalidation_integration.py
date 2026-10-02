@@ -114,6 +114,8 @@ def main():
             ('currency-with-broken-formula', r'价格 $5，公式 $\frac{a}$。'),
             ('number-with-unknown-command', r'$2\unknown{x}$'),
             ('number-with-unclosed-command', r'$2 \epsilon'),
+            ('number-with-unclosed-escaped-brace', r'$2 \{'),
+            ('number-with-unclosed-spacing', r'$2 \,'),
         ]:
             check_case(root, fixture, production, name, raw, expected_status='partial')
         check_case(root, fixture, production, 'historical-display-interval',
