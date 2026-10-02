@@ -12,7 +12,7 @@ from issue24_run import freeze, save, sha
 from issue27_evidence import check_frozen, freeze_evaluation, suite_specs
 
 
-def main():
+def main(freeze_evaluation_fn=freeze_evaluation):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cli', type=Path, required=True)
     parser.add_argument('--config', type=Path, default=ROOT / 'configs/printed-page.example.json')
@@ -22,7 +22,7 @@ def main():
     output = args.out.resolve()
     output.mkdir(parents=True, exist_ok=False)
     binary, config, environment = freeze(args.cli, args.config, output, ROOT / 'docs/issue-24/thresholds.json')
-    freeze_evaluation(output, jobs, manifest, binary, environment)
+    freeze_evaluation_fn(output, jobs, manifest, binary, environment)
     record, *_ = check_frozen(output, Path(__file__))
     save(output / 'integrity-before.json', dict(passed=True, evaluation_sha256=sha(output / 'evaluation.json')))
     receipts = {}

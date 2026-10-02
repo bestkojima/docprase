@@ -1,0 +1,164 @@
+[
+  {
+    "block_id": "b0004",
+    "command": [
+      "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0004/crop.png",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0004",
+      "65536",
+      "313600",
+      "4096",
+      "1",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 4.22087591298623,
+    "source": "/home/dr/project/docprase/output/issue31-input-final-20261003/evaluation/candidate-07/job/assets/p0001-b0004.png",
+    "source_sha256": "4b775a7e6e9308517f71f5313159fbb14a6d6deae754dcd607f760370f0022f8",
+    "margin_box": [
+      18,
+      23,
+      367,
+      73
+    ],
+    "before": "$$ S_{n}=\\frac{a_{1}-a_{n}q}{1-q}\\quad(q\\neq1). $$\n",
+    "after": "$$ S_{n}=\\frac{a_{1}-a_{n}q}{1-q}\\quad(q\\neq1). $$\n"
+  },
+  {
+    "block_id": "b0015",
+    "command": [
+      "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0015/crop.png",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0015",
+      "65536",
+      "313600",
+      "4096",
+      "1",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 3.5050285210018046,
+    "source": "/home/dr/project/docprase/output/issue31-input-final-20261003/evaluation/candidate-07/job/assets/p0001-b0015.png",
+    "source_sha256": "5ff5c172847b0c00d9bab66f38941374b1abd17a97b8ecf08959cf32a97c91ca",
+    "margin_box": [
+      16,
+      9,
+      228,
+      75
+    ],
+    "before": "$$ \\frac{1}{243}=27\\cdot q^{8}. $$\n",
+    "after": "$$ \\frac{1}{243}=27\\cdot q^{8}. $$\n"
+  },
+  {
+    "block_id": "b0017",
+    "command": [
+      "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0017/crop.png",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0017",
+      "65536",
+      "313600",
+      "4096",
+      "1",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 3.9662807490094565,
+    "source": "/home/dr/project/docprase/output/issue31-input-final-20261003/evaluation/candidate-07/job/assets/p0001-b0017.png",
+    "source_sha256": "f093ce50026d6e3e968e3cb94b69ce8834a905e413d89be566b42c5d6b05a9af",
+    "margin_box": [
+      15,
+      7,
+      142,
+      75
+    ],
+    "before": "$$ q=-\\frac{1}{3}. $$\n",
+    "after": "##  $q = -\\frac{1}{3}$\n"
+  },
+  {
+    "block_id": "b0006",
+    "command": [
+      "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0006/crop.png",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0006",
+      "65536",
+      "313600",
+      "4096",
+      "1",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 4.5924614389950875,
+    "source": "/home/dr/project/docprase/output/issue31-input-final-20261003/evaluation/candidate-07/job/assets/p0001-b0006.png",
+    "source_sha256": "bb191ad2c4c38802c1bcf7a034547f4bc6141bd78f2971df03b94a8b2cba007b",
+    "margin_box": [
+      13,
+      9,
+      303,
+      253
+    ],
+    "before": "$$ \\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{54})}{1-2}\\\\&=2^{54}-1.\\end{aligned} $$\n",
+    "after": "$$ \\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{64})}{1-2}\\\\&=2^{64}-1.\\end{aligned} $$\n"
+  },
+  {
+    "block_id": "b0013",
+    "command": [
+      "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0013/crop.png",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0013",
+      "65536",
+      "313600",
+      "4096",
+      "1",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 3.9282352100126445,
+    "source": "/home/dr/project/docprase/output/issue31-input-final-20261003/evaluation/candidate-07/job/assets/p0001-b0013.png",
+    "source_sha256": "e6e8e874a5aba560c0b982bdff6ce9af7db22c4dcccb70cfb1b62cf4428c532c",
+    "margin_box": [
+      16,
+      10,
+      427,
+      169
+    ],
+    "before": "$$ S_{n}=\\frac{\\frac{1}{2}\\left[1-\\left(\\frac{1}{2}\\right)^{8}\\right]}{1-\\frac{1}{2}}=\\frac{255}{256}. $$\n",
+    "after": "$$ S_{n}=\\frac{\\frac{1}{2}\\left[1-\\left(\\frac{1}{2}\\right)^{8}\\right]}{1-\\frac{1}{2}}=\\frac{255}{256}. $$\n"
+  },
+  {
+    "block_id": "b0019",
+    "command": [
+      "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0019/crop.png",
+      "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+      "/home/dr/project/docprase/output/issue31-margin-probe-20261003/b0019",
+      "65536",
+      "313600",
+      "4096",
+      "1",
+      "0"
+    ],
+    "returncode": 0,
+    "seconds": 4.342686649004463,
+    "source": "/home/dr/project/docprase/output/issue31-input-final-20261003/evaluation/candidate-07/job/assets/p0001-b0019.png",
+    "source_sha256": "911ee806c923bc0dbf3a6976e96ab89d364cac48d028e771266b9d5e8852bf04",
+    "margin_box": [
+      16,
+      8,
+      509,
+      170
+    ],
+    "before": "$$ S_{8}=\\frac{27\\left[1-\\left(-\\frac{1}{3}\\right)^{8}\\right]}{1-\\left(-\\frac{1}{3}\\right)}=\\frac{1\\ 640}{81}. $$\n",
+    "after": "$$ S_{8}=\\frac{27\\left[1-\\left(-\\frac{1}{3}\\right)^{8}\\right]}{1-\\left(-\\frac{1}{3}\\right)}=\\frac{1\\ 640}{81}. $$\n"
+  }
+]
