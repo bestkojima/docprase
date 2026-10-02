@@ -6,6 +6,7 @@
 #include "pdf_page_id.hpp"
 #include "table_parser.hpp"
 #include "schema_validator.hpp"
+#include "config.hpp"
 #include "json.hpp"
 #include <algorithm>
 #include <climits>
@@ -809,6 +810,68 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                                      "content.resource 未在 resources 中声明");
     }
     result.asset_paths.assign(all_paths.begin(), all_paths.end());
+    return result;
+}
+
+RevalidatedDocument revalidate_formula_document(const std::string& json) {
+    // Validate the original provenance, stop evidence, geometry and resources
+    // before interpreting any previous structural failure under current rules.
+    RevalidatedDocument result{json, "", validate_and_render_document(json)};
+    Json document = Json::parse(json);
+    Json records = Json::array();
+    size_t changed = 0;
+    for (auto& page : document.at("pages")) {
+        bool page_changed = false;
+        for (auto& block : page.at("blocks")) {
+            const auto type = block.at("type").get<std::string>();
+            const bool inline_formula = type == "text" && block.at("error") == "invalid_inline_formula_syntax";
+            const bool formula = type == "formula" && block.at("error") == "invalid_formula_syntax";
+            auto& provenance = block.at("provenance");
+            if ((!inline_formula && !formula) || block.at("status") != "partial" ||
+                !provenance.contains("assessment")) continue;
+            auto& assessment = provenance.at("assessment");
+            const Json before = {{"status", block.at("status")}, {"error", block.at("error")},
+                {"assessment", assessment}, {"content", block.at("content")}};
+            const auto output = saved_output(block);
+            const auto completion = assess_output(output, type);
+            const auto parsed = formula ? parse_formula_content(output.text) : ParsedFormula{};
+            const bool valid = completion.state == "ok" &&
+                (inline_formula ? valid_text_math_content(output.text) : parsed.valid);
+            if (valid) {
+                block["status"] = "ok";
+                block["error"] = nullptr;
+                assessment["state"] = completion.state;
+                assessment["reason"] = completion.reason;
+                auto& content = block.at("content");
+                content["text"] = inline_formula ? output.text : parsed.latex;
+                if (formula) {
+                    content["format"] = "latex";
+                    content["display"] = parsed.display;
+                }
+                ++changed;
+                page_changed = true;
+            }
+            const Json after = {{"status", block.at("status")}, {"error", block.at("error")},
+                {"assessment", assessment}, {"content", block.at("content")}};
+            records.push_back({{"page_id", page.at("page_id")}, {"block_id", block.at("id")},
+                {"changed", valid}, {"completion_state", completion.state},
+                {"completion_reason", completion.reason}, {"before", before}, {"after", after}});
+        }
+        if (page_changed && page.at("status") == "partial" &&
+            std::all_of(page.at("blocks").begin(), page.at("blocks").end(),
+                [](const Json& block) { return block.at("status") == "ok"; })) page["status"] = "ok";
+    }
+    if (changed) {
+        if (document.at("status") == "partial" &&
+            std::all_of(document.at("pages").begin(), document.at("pages").end(),
+                [](const Json& page) { return page.at("status") == "ok" || page.at("status") == "blank"; }))
+            document["status"] = "ok";
+        result.json = document.dump(2) + '\n';
+        result.rendered = validate_and_render_document(result.json);
+    }
+    result.report = Json({{"policy", "formula-revalidation-v1"}, {"execution", "saved_output_no_ocr"},
+        {"source_document_sha256", sha256(json)}, {"result_document_sha256", sha256(result.json)},
+        {"changed_blocks", changed}, {"blocks", records}}).dump(2) + '\n';
     return result;
 }
 }

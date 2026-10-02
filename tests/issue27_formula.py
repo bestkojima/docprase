@@ -34,6 +34,12 @@ def main():
             (r'$$\begin{aligned}\frac{a}\\x=1\end{aligned}$$', False),
             (r'$$\begin{unknown}x=1\end{unknown}$$', False),
             (r'$$\begin{aligned}Please solve x\end{aligned}$$', False),
+            (r'$$\frac{a}{b$$', False),
+            (r'$$\left[a,b$$', False),
+            (r'$$a,b\right)$$', False),
+            (r'$$\left({x\right)}$$', False),
+            (r'$${\left(x}\right)$$', False),
+            (r'$$\begin{matrix}\left(x&y\end{matrix}\right)$$', False),
         ]
         for i, (raw, valid) in enumerate(cases):
             trace = root / 'fixture.json'

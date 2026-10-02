@@ -41,7 +41,6 @@ def main():
         assert len(manifest['regions']) == 3
         for scenario, raw, error in [
             ('printed_page_formula_unclosed', r'$$\frac{a}{b}=c', 'invalid_formula_syntax'),
-            ('printed_page_formula_fragment', '$a+(b$', 'invalid_formula_syntax'),
             ('printed_page_formula_mixed', '$a+b$，则', 'invalid_formula_syntax'),
             ('printed_page_formula_prose', 'Please solve x+y', 'invalid_formula_syntax'),
             ('printed_page_formula_unknown_command', r'$$\foo{a}$$', 'invalid_formula_syntax'),
@@ -50,8 +49,6 @@ def main():
             ('printed_page_formula_sqrt_empty', r'$$\sqrt{}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_spaced_empty', r'$$\frac {}{b}=c$$',
              'invalid_formula_syntax'),
-            ('printed_page_formula_misnested', '$$([)]$$', 'invalid_formula_syntax'),
-            ('printed_page_formula_misnested_brace', '$$({)}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_env_mismatch',
              r'$$\begin{aligned}x\end{matrix}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_left_missing', r'$$\left\right$$', 'invalid_formula_syntax'),
@@ -83,6 +80,17 @@ def main():
         chinese = chinese_doc['pages'][0]['blocks'][1]
         assert chinese['status'] == 'ok'
         assert chinese['content']['text'] == r'\frac{\text{甲}}{b}=c'
+        # 普通圆/方括号属于显示符号。数学写法是否合理不作为 LaTeX 错误。
+        for scenario, expected in [
+            ('printed_page_formula_fragment', 'a+(b'),
+            ('printed_page_formula_misnested', '([)]'),
+            ('printed_page_formula_misnested_brace', '({)}'),
+        ]:
+            rendered_out, rendered_doc, _ = run(sys.argv[1], scenario, root, image)
+            rendered = rendered_doc['pages'][0]['blocks'][1]
+            assert rendered['status'] == 'ok' and rendered['error'] is None
+            assert rendered['content']['text'] == expected
+            assert expected in (rendered_out / 'document.md').read_text()
         for scenario, expected in [
             ('printed_page_formula_scalable_dot', r'\left. x\right)'),
             ('printed_page_formula_scalable_angle', r'\left\langle x\right\rangle'),

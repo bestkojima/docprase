@@ -56,6 +56,25 @@ def main():
         cases = [check_case(args, root, 'inline-comparisons', raw,
             '正文 &lt;说明&gt; &amp; $' + formula + '$，且 $a>b$。',
             formulas=[formula, 'a>b'])]
+        formula = r'[-1,+\infty)'
+        raw = '区间 $' + formula + '$。'
+        cases.append(check_case(args, root, 'half-open-interval-body', raw, raw,
+            formulas=[formula]))
+        formula = r'[a,b],\quad(a,b),\quad[a,b),\quad(a,b]'
+        raw = '区间 $' + formula + '$。'
+        cases.append(check_case(args, root, 'interval-endpoints', raw, raw, formulas=[formula]))
+        formula = r'\left[-1,+\infty\right)'
+        cases.append(check_case(args, root, 'scalable-half-open-interval', '$$' + formula + '$$',
+            '$$\n' + formula + '\n$$', class_id=5, formulas=[formula], display_modes=[True]))
+        formula = r'\left(a,\frac{1}{b}\right]'
+        raw = '区间 $' + formula + '$。'
+        cases.append(check_case(args, root, 'scalable-nested-interval', raw, raw, formulas=[formula]))
+        formula = r'\left]a,b\right['
+        raw = '区间 $' + formula + '$。'
+        cases.append(check_case(args, root, 'scalable-open-interval', raw, raw, formulas=[formula]))
+        formula = r'\begin{matrix}[a,b)&(a,b]\\{[c,d)}&{(c,d]}\end{matrix}'
+        cases.append(check_case(args, root, 'interval-matrix', '$$' + formula + '$$',
+            '$$\n' + formula + '\n$$', class_id=5, formulas=[formula], display_modes=[True]))
         matrix = r'\begin{matrix}a&b\\c&d\end{matrix}'
         cases.append(check_case(args, root, 'display-matrix', '$$' + matrix + '$$',
             '$$\n' + matrix + '\n$$', class_id=5, formulas=[matrix], display_modes=[True]))

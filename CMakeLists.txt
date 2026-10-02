@@ -195,6 +195,9 @@ if(DOCOCR_BUILD_TESTS)
   add_test(NAME markdown_math_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/markdown_math_integration.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME formula_revalidation_integration COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/formula_revalidation_integration.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   if(DOCOCR_TEST_KATEX)
     find_program(DOCOCR_NODE_EXECUTABLE node REQUIRED)
     add_test(NAME markdown_katex_integration COMMAND ${Python3_EXECUTABLE}

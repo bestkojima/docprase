@@ -10,6 +10,7 @@
 #include <limits>
 #include <string>
 #include <thread>
+#include <utility>
 #include <vector>
 #ifdef _WIN32
 #define NOMINMAX
@@ -59,7 +60,7 @@ bool has_symlink_component(const fs::path& path, const fs::path& root) {
     }
     return false;
 }
-int reexport(const fs::path& input, const fs::path& asset_root, const fs::path& output) {
+int reexport(const fs::path& input, const fs::path& asset_root, const fs::path& output, bool revalidate = false) {
     if (!fs::is_regular_file(input) || !fs::is_directory(asset_root) || fs::exists(output))
         throw std::invalid_argument("重新导出要求现有 JSON/资源根和新的输出目录");
     const auto source = fs::canonical(asset_root);
@@ -69,7 +70,14 @@ int reexport(const fs::path& input, const fs::path& asset_root, const fs::path& 
     std::ifstream stream(input, std::ios::binary);
     if (!stream) throw std::invalid_argument("无法打开 DocumentIR JSON");
     const std::string json(std::istreambuf_iterator<char>{stream}, {});
-    auto document = dococr::validate_and_render_document(json);
+    std::string exported_json = json, report;
+    dococr::ReexportDocument document;
+    if (revalidate) {
+        auto checked = dococr::revalidate_formula_document(json);
+        exported_json = std::move(checked.json);
+        report = std::move(checked.report);
+        document = std::move(checked.rendered);
+    } else document = dococr::validate_and_render_document(json);
     for (const auto& path : document.asset_paths) {
         auto relative = fs::u8path(path);
         if (has_symlink_component(relative, source) ||
@@ -85,11 +93,21 @@ int reexport(const fs::path& input, const fs::path& asset_root, const fs::path& 
             fs::copy_file(source / relative, output / relative);
         }
         std::ofstream json_file(output / "document.json", std::ios::binary);
-        json_file.write(json.data(), static_cast<std::streamsize>(json.size()));
+        json_file.write(exported_json.data(), static_cast<std::streamsize>(exported_json.size()));
         if (!json_file) throw std::runtime_error("写入 document.json 失败");
         std::ofstream markdown_file(output / "document.md", std::ios::binary);
         markdown_file.write(document.markdown.data(), static_cast<std::streamsize>(document.markdown.size()));
         if (!markdown_file) throw std::runtime_error("写入 document.md 失败");
+        if (revalidate) {
+            std::ofstream previous(output / "previous-document.json", std::ios::binary);
+            previous.write(json.data(), static_cast<std::streamsize>(json.size()));
+            previous.close();
+            if (!previous) throw std::runtime_error("写入 previous-document.json 失败");
+            std::ofstream audit(output / "formula-revalidation.json", std::ios::binary);
+            audit.write(report.data(), static_cast<std::streamsize>(report.size()));
+            audit.close();
+            if (!audit) throw std::runtime_error("写入 formula-revalidation.json 失败");
+        }
     } catch (...) {
         fs::remove_all(output);
         throw;
@@ -117,15 +135,17 @@ uint64_t positive_number(const std::string& value) {
 }
 }
 int cli_main(int argc, char** argv) {
-    if (argc == 7 && std::string(argv[1]) == "--reexport" &&
+    if (argc == 7 && (std::string(argv[1]) == "--reexport" || std::string(argv[1]) == "--revalidate") &&
         std::string(argv[3]) == "--asset-root" && std::string(argv[5]) == "--out") {
-        try { return reexport(fs::u8path(argv[2]), fs::u8path(argv[4]), fs::u8path(argv[6])); }
+        try { return reexport(fs::u8path(argv[2]), fs::u8path(argv[4]), fs::u8path(argv[6]),
+                             std::string(argv[1]) == "--revalidate"); }
         catch (const std::exception& error) { std::cerr << error.what() << '\n'; return 3; }
     }
     if (argc < 7 || argc % 2 == 0 || (std::string(argv[1]) != "--backend" && std::string(argv[1]) != "--config") ||
         std::string(argv[3]) != "--input" || std::string(argv[5]) != "--out") {
         std::cerr << "用法：dococr_cli (--backend NAME | --config config.json) --input 文件 --out 输出目录 [--pages 首-末] [--dpi 72..600] [--max-page-pixels 正整数] [--timeout-ms 正整数]\n"
                   << "      dococr_cli --reexport document.json --asset-root 原资源目录 --out 新输出目录\n";
+        std::cerr << "      dococr_cli --revalidate document.json --asset-root 原资源目录 --out 新输出目录\n";
         return 2;
     }
     try {

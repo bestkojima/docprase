@@ -944,12 +944,6 @@ bool decode_layout(const TensorOutput& result, std::vector<LayoutCandidate>& can
     return true;
 }
 
-struct ParsedFormula {
-    bool valid = false;
-    bool display = true;
-    std::string latex;
-};
-
 std::string trim_formula(const std::string& value) {
     const auto start = value.find_first_not_of(" \t\r\n");
     if (start == std::string::npos) return {};
@@ -1046,10 +1040,12 @@ ParsedFormula parse_formula(const std::string& raw) {
         return result;
     int depth = 0, text_depth = -1;
     size_t annotation_end = 0;
-    std::vector<char> delimiters, scalable;
+    std::vector<char> delimiters;
+    std::vector<int> scalable;
     struct FormulaEnvironment {
         std::string name;
-        std::vector<char> delimiters, scalable;
+        std::vector<char> delimiters;
+        std::vector<int> scalable;
         size_t content_begin;
     };
     std::vector<FormulaEnvironment> environments;
@@ -1118,20 +1114,12 @@ ParsedFormula parse_formula(const std::string& raw) {
                     if (!delimiter.symbol) return result;
                     skip_delimiter = delimiter.width;
                     if (command == "left") {
-                        if (std::string("([{<|.").find(delimiter.symbol) == std::string::npos)
-                            return result;
-                        scalable.push_back(delimiter.symbol);
+                        scalable.push_back(depth);
                     } else {
-                        if (scalable.empty()) return result;
+                        if (scalable.empty() || scalable.back() != depth) return result;
                         if (!environments.empty() && scalable.size() <= environments.back().scalable.size())
                             return result;
-                        char opening = scalable.back();
                         scalable.pop_back();
-                        char expected = opening == '(' ? ')' : opening == '[' ? ']' :
-                                        opening == '{' ? '}' : opening == '<' ? '>' : opening;
-                        if (delimiter.symbol != '.' && opening != '.' &&
-                            delimiter.symbol != expected)
-                            return result;
                     }
                 }
                 if (command == "begin" || command == "end") {
@@ -1182,19 +1170,15 @@ ParsedFormula parse_formula(const std::string& raw) {
             next_text_brace = false;
         } else if (ch == '}') {
             if (delimiters.empty() || delimiters.back() != '{') return result;
+            if (!scalable.empty() && scalable.back() == depth) return result;
             if (!environments.empty() && delimiters.size() <= environments.back().delimiters.size())
                 return result;
             delimiters.pop_back();
             if (--depth < 0) return result;
             if (text_depth > depth) text_depth = -1;
-        } else if (ch == '[' || ch == '(') delimiters.push_back(ch);
-        else if (ch == ']' || ch == ')') {
-            if (delimiters.empty() ||
-                delimiters.back() != (ch == ']' ? '[' : '(')) return result;
-            if (!environments.empty() && delimiters.size() <= environments.back().delimiters.size())
-                return result;
-            delimiters.pop_back();
         }
+        // Round and square brackets are printed symbols in TeX, not grouping
+        // syntax. Mixed interval endpoints such as [a,b) are valid content.
         else if (ch >= 0x80 && text_depth < 0 && i >= annotation_end) return result;
         else if (ch == '$' || ch == '#' || ch == '%' || ch == '\x60' ||
                  (ch == '&' && environments.empty())) return result;
@@ -1556,6 +1540,12 @@ std::string serialize(const Image& image, const std::string& state,
 }
 } // namespace
 
+ParsedFormula parse_formula_content(const std::string& generated) {
+    return parse_formula(generated);
+}
+bool valid_text_math_content(const std::string& content) {
+    return valid_text_math(content);
+}
 bool matches_formula_content(const std::string& generated, const std::string& content, bool display) {
     const auto formula = parse_formula(generated);
     return formula.valid && formula.latex == content && formula.display == display;
