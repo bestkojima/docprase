@@ -2,8 +2,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import katex from 'katex';
-import MarkdownIt from 'markdown-it';
-import texmath from 'markdown-it-texmath';
+import {createDocumentRenderer} from './document-renderer.mjs';
 
 let test;
 let inputs;
@@ -22,9 +21,7 @@ const engine = {
     }
   },
 };
-const parser = new MarkdownIt({html: true}).use(texmath, {
-  engine, delimiters: 'dollars', katexOptions: {strict: 'ignore'},
-});
+const parser = createDocumentRenderer(engine);
 for (test of JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))) {
   inputs = [];
   errors = [];
@@ -40,5 +37,22 @@ for (test of JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))) {
   if (test.name.includes('matrix') || test.name.includes('cases')) {
     assert((html.match(/<mtr>/g) || []).length >= 2, `${test.name}: 未形成多行数学排版`);
   }
+  if (test.name === 'table-matrix-and-merged-cells') {
+    assert(html.includes('rowspan="2"') && html.includes('colspan="2"'));
+    assert(html.includes('[原文](https://example.invalid)'));
+    assert(html.includes('&lt;img src=x onerror=alert(1)&gt;'));
+    assert(html.includes('<br>'));
+  }
   console.log(`${test.name}: KaTeX ${katex.version} PASS (${inputs.length} formulas)`);
 }
+const standalone = createDocumentRenderer();
+for (const markdown of [
+  '<table><tr><td>$\\frac{a}$</td></tr></table>',
+  '<table><tr><td>$\\unknown{x}$</td></tr></table>',
+  '<table><tr><td>$x^2</td></tr></table>',
+]) assert.throws(() => standalone.render(markdown), undefined, '损坏单元格公式不能冒充排版成功');
+const literal = standalone.render('```html\n<table><tr><td>$x$</td></tr></table>\n```');
+assert(!literal.includes('class="katex"') && literal.includes('$x$'));
+const currency = standalone.render('<table><tr><td>价格 $5 and $10</td></tr></table>');
+assert(!currency.includes('class="katex"') && currency.includes('$5 and $10'));
+console.log('table-rendering-errors-and-literals: PASS');

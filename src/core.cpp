@@ -1039,7 +1039,7 @@ ParsedFormula parse_formula(const std::string& raw) {
         value.find("\\tag") != std::string::npos || value.find("\\label") != std::string::npos)
         return result;
     int depth = 0, text_depth = -1;
-    size_t annotation_end = 0;
+    size_t annotation_end = 0, script_end = 0;
     std::vector<char> delimiters;
     std::vector<int> scalable;
     struct FormulaEnvironment {
@@ -1052,6 +1052,10 @@ ParsedFormula parse_formula(const std::string& raw) {
     bool next_text_brace = false, math_evidence = has_wrapper;
     for (size_t i = 0; i < value.size(); ++i) {
         unsigned char ch = static_cast<unsigned char>(value[i]);
+        if (ch == '_' || ch == '^') {
+            const size_t end = formula_argument_end(value, i + 1);
+            if (end != std::string::npos) script_end = std::max(script_end, end);
+        }
         if (ch == '\\') {
             size_t start = ++i;
             size_t skip_delimiter = 0;
@@ -1179,7 +1183,7 @@ ParsedFormula parse_formula(const std::string& raw) {
         }
         // Round and square brackets are printed symbols in TeX, not grouping
         // syntax. Mixed interval endpoints such as [a,b) are valid content.
-        else if (ch >= 0x80 && text_depth < 0 && i >= annotation_end) return result;
+        else if (ch >= 0x80 && text_depth < 0 && i >= annotation_end && i >= script_end) return result;
         else if (ch == '$' || ch == '#' || ch == '%' || ch == '\x60' ||
                  (ch == '&' && environments.empty())) return result;
         else if (ch >= 'A' && ch <= 'Z' && text_depth < 0 && i >= annotation_end) {
@@ -1190,13 +1194,23 @@ ParsedFormula parse_formula(const std::string& raw) {
                 value.begin() + i, value.begin() + end, [](char letter) {
                     return letter >= 'A' && letter <= 'Z';
                 });
-            if (end - i > 2 && !geometry_points) return result;
+            // Chemical symbols are uppercase letters with an optional lowercase
+            // suffix. This checks notation (FeO, NaOH), not chemical correctness.
+            bool chemical_symbols = true;
+            for (size_t symbol = i; symbol < end;) {
+                if (value[symbol] < 'A' || value[symbol] > 'Z') {
+                    chemical_symbols = false; break;
+                }
+                ++symbol;
+                if (symbol < end && value[symbol] >= 'a' && value[symbol] <= 'z') ++symbol;
+            }
+            if (end - i > 2 && !geometry_points && !chemical_symbols && i >= script_end) return result;
             i = end - 1;
         } else if (ch >= 'a' && ch <= 'z' && text_depth < 0 && i >= annotation_end) {
             size_t end = i + 1;
             while (end < value.size() && ((value[end] >= 'A' && value[end] <= 'Z') ||
                    (value[end] >= 'a' && value[end] <= 'z'))) ++end;
-            if (end - i > 2) return result;
+            if (end - i > 2 && i >= script_end) return result;
             i = end - 1;
         }
         else if (ch == '^' || ch == '_' || ch == '=' || ch == '<' || ch == '>' ||
@@ -1216,7 +1230,8 @@ ParsedFormula parse_formula(const std::string& raw) {
     return result;
 }
 
-bool valid_text_math(const std::string& text) {
+bool valid_text_math(const std::string& text, size_t* math_spans = nullptr) {
+    if (math_spans) *math_spans = 0;
     for (size_t i = 0; i < text.size();) {
         if (text[i] == '\\' && i + 1 < text.size() &&
             (text[i+1] == '$' || text[i+1] == '\\')) { i += 2; continue; }
@@ -1278,6 +1293,7 @@ bool valid_text_math(const std::string& text) {
         }
         if (!found || !parse_formula(text.substr(i, end + close.size() - i)).valid)
             return false;
+        if (math_spans) ++*math_spans;
         i = end + close.size();
     }
     return true;
@@ -1292,7 +1308,8 @@ std::string render(const Block& b, bool uncertain_caption = false, bool semantic
     return render_markdown_block({b.id, b.type, b.status, b.text, b.resource,
                                   b.display_formula, safe_table, b.assessment.state,
                                   b.assessment.state == "skipped" ? "" : b.assessment.reason,
-                                  semantic_text ? layout_semantic_label(b.original_class_id) : ""}, uncertain_caption);
+                                  semantic_text ? layout_semantic_label(b.original_class_id) : "",
+                                  b.type == "formula" && b.format_override == "markdown"}, uncertain_caption);
 }
 
 std::string serialize(const Image& image, const std::string& state,
@@ -1314,7 +1331,10 @@ std::string serialize(const Image& image, const std::string& state,
     const bool has_visual = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
         return !b.visual.visual_evidence.empty();
     });
-    out << "{\"schema_version\":" << json_quote(label_export ? "1.10" : structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
+    const bool mixed_formula = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
+        return b.type == "formula" && b.status == "ok" && b.format_override == "markdown";
+    });
+    out << "{\"schema_version\":" << json_quote(label_export ? (mixed_formula ? "1.11" : "1.10") : structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state);
@@ -1552,6 +1572,14 @@ std::string serialize(const Image& image, const std::string& state,
 
 ParsedFormula parse_formula_content(const std::string& generated) {
     return parse_formula(generated);
+}
+ParsedFormulaRegion parse_formula_region(const std::string& generated) {
+    const auto single = parse_formula(generated);
+    if (single.valid) return {true, "latex", single.latex, single.display};
+    size_t spans = 0;
+    if (valid_text_math(generated, &spans) && spans > 0)
+        return {true, "markdown", generated, false};
+    return {};
 }
 bool valid_text_math_content(const std::string& content) {
     return valid_text_math(content);
@@ -1939,10 +1967,11 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
                                         block.error = "invalid_inline_formula_syntax";
                                     }
                                 } else if (block.type == "formula") {
-                                    ParsedFormula formula = parse_formula(block.text);
+                                    const auto formula = parse_formula_region(block.text);
                                     if (formula.valid) {
                                         block.status = "ok"; block.error.clear();
-                                        block.text = std::move(formula.latex);
+                                        block.text = formula.text;
+                                        block.format_override = formula.format;
                                         block.display_formula = formula.display;
                                     } else {
                                         block.status = "partial";

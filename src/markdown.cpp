@@ -321,6 +321,7 @@ std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption
         return with_relation_note(b.resource.empty() ? marker : "![原图](" + b.resource + ")\n\n" + marker);
     }
     if (b.type == "formula") {
+        if (b.mixed_formula) return safe_text(b.text);
         const std::string delimiter = b.display_formula ? "$$" : "$";
         const std::string formula = matches_formula_content(delimiter + b.text + delimiter,
             b.text, b.display_formula) ? math_content(b.text) : safe_text(b.text);

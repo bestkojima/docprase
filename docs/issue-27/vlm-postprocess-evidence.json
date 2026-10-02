@@ -1,0 +1,167 @@
+{
+  "execution": "fixed_output_public_cli_and_actual_rendering_no_new_model_inference",
+  "base_commit": "782bd5ebcc9f6e7cc6027c2d9c26d5028315e922",
+  "preexisting_region_structure_sha256": "661175e53d11f8ffec65f34b63b9c22bf60a4a11dd327afc21ec71871d4ba277",
+  "before": [
+    {
+      "case": "long-subscript",
+      "type": "text",
+      "status": "partial",
+      "error": "invalid_inline_formula_syntax",
+      "raw_preserved": true,
+      "markdown": "![原图](assets/p0001-b0001.png)\n\n[待核验：b0001](assets/p0001-b0001.png)\n\n> 输出的完整性或结构尚未确认，请核对原图。\n"
+    },
+    {
+      "case": "chemical",
+      "type": "text",
+      "status": "partial",
+      "error": "invalid_inline_formula_syntax",
+      "raw_preserved": true,
+      "markdown": "![原图](assets/p0001-b0001.png)\n\n[待核验：b0001](assets/p0001-b0001.png)\n\n> 输出的完整性或结构尚未确认，请核对原图。\n"
+    },
+    {
+      "case": "chinese-subscript",
+      "type": "text",
+      "status": "partial",
+      "error": "invalid_inline_formula_syntax",
+      "raw_preserved": true,
+      "markdown": "![原图](assets/p0001-b0001.png)\n\n[待核验：b0001](assets/p0001-b0001.png)\n\n> 输出的完整性或结构尚未确认，请核对原图。\n"
+    },
+    {
+      "case": "formula-sequence",
+      "type": "formula",
+      "status": "partial",
+      "error": "invalid_formula_syntax",
+      "raw_preserved": true,
+      "markdown": "![原图](assets/p0001-b0001.png)\n\n[待核验：b0001](assets/p0001-b0001.png)\n\n> 输出的完整性或结构尚未确认，请核对原图。\n"
+    },
+    {
+      "case": "table-math",
+      "type": "table",
+      "status": "ok",
+      "error": null,
+      "raw_preserved": true,
+      "markdown": "<table><tr><td>$x^2$</td></tr></table>\n"
+    }
+  ],
+  "after": [
+    {
+      "case": "long-subscript",
+      "type": "text",
+      "status": "ok",
+      "error": null,
+      "raw_preserved": true,
+      "markdown": "参数 $p_{sbl}$ 与 $q_{sik}$。\n"
+    },
+    {
+      "case": "chemical",
+      "type": "text",
+      "status": "ok",
+      "error": null,
+      "raw_preserved": true,
+      "markdown": "$FeO$ 为氧化物。\n"
+    },
+    {
+      "case": "chinese-subscript",
+      "type": "text",
+      "status": "ok",
+      "error": null,
+      "raw_preserved": true,
+      "markdown": "方差 $s_{甲}^{2}=1.2$。\n"
+    },
+    {
+      "case": "formula-sequence",
+      "type": "formula",
+      "status": "ok",
+      "error": null,
+      "raw_preserved": true,
+      "markdown": "积化和差：$\\cos A\\cos B=\\frac{1}{2}[\\cos(A+B)+\\cos(A-B)]$；$\\sin A\\sin B=\\frac{1}{2}[\\cos(A-B)-\\cos(A+B)]$。\n"
+    },
+    {
+      "case": "table-math",
+      "type": "table",
+      "status": "ok",
+      "error": null,
+      "raw_preserved": true,
+      "markdown": "<table><tr><td>$x^2$</td></tr></table>\n"
+    }
+  ],
+  "browser": {
+    "browser": "153.0.8010.12",
+    "formulas": 11,
+    "tableFormulas": 5,
+    "errors": 0,
+    "visible": true,
+    "fonts": true,
+    "rowspan": 2,
+    "colspan": 2,
+    "annotations": [
+      "p_{sbl}",
+      "q_{sik}",
+      "FeO",
+      "s_{甲}^{2}=1.2",
+      "\\cos A\\cos B=\\frac{1}{2}[\\cos(A+B)+\\cos(A-B)]",
+      "\\sin A\\sin B=\\frac{1}{2}[\\cos(A-B)-\\cos(A+B)]",
+      "x^2",
+      "a<b",
+      "\\begin{matrix}a&b\\\\c&d\\end{matrix}",
+      "s_{甲}^{2}",
+      "FeO"
+    ],
+    "failedRequests": []
+  },
+  "source_sha256": {
+    "src/core.cpp": "87847faf11ae902416fdd4e8445d2836d98b4dd242e4a704d45a49ab92f576e8",
+    "src/content_validation.hpp": "eaabd56a3a492dc706d2462a611abae1e75a8f741ad6a2e3de5018439328e728",
+    "src/reexport.cpp": "f02346d9dab039358d9e74cd914a6f25a3359076cb6666bbf76a4b1a835d1993",
+    "src/markdown.cpp": "85be1f073a1875e448c514b51a1ba2a904f958d5ac2a81070a9062303fbfc485",
+    "src/markdown.hpp": "ac787aeaab7d07f66665b80cce97dac31a09a043bea43895c8ca82fc0dada8d3",
+    "src/pdf_job.cpp": "f37e5172f7b881a58e9562976a9c763277f297585a46c9368bf139f76b656ef7",
+    "src/schema_validator.cpp": "0ba46e30aec26ae5cae4c908993ad08e2172710eacf592e53b472f831ad607e1",
+    "src/document_schemas.hpp.in": "ed05d8f20b416a195a7c48d55760132f8e09e45f833da67f4779de734dac74c3",
+    "CMakeLists.txt": "6ffbbba277b529114b421b9966db9ddfdfcae82096c617719f6b18aadfa2482c",
+    "tests/math-rendering/document-renderer.mjs": "b20bdced1763e5dddba75d5e8729b1096e08e7b3ee76751386436187f488afdb",
+    "tests/math-rendering/preview.mjs": "8559b4f872851c484bbe273b4d5d18ae20e02002a9f4f9cb0847403516cf28ab",
+    "tests/math-rendering/package-lock.json": "c8dede53256e3ce3a5f07d377a140902043f404125ce08893888ea7cc78e5032",
+    "tests/markdown_math_integration.py": "336a36a257b8d61e5e4ee604aad28fcd1aca91742c898261fb3f63504a5082bd",
+    "tests/formula_revalidation_integration.py": "44e14468a4a3e86f52e012b8d3da338bd902324c650b59dda8b53370d56a1627",
+    "tests/pdf_integration.py": "4fd40477a9e30484a096be1e863b24713a0e81772a3bb8f7d39f155b02217d74"
+  },
+  "artifacts_sha256": {
+    "build/vlm-postprocess/dococr_cli": "16dcb151aa998aa27bb56fdac173f93f82d4b543665775571c1c329ce89fc837",
+    "build/vlm-postprocess/dococr_cli_fixture": "abecc05494027d3dcff3cc1d9e25675fa1c798f9e44f370fe688115adf76578a",
+    "build/vlm-postprocess/libdococr_c.so": "2413c81906dd3f9152eb8506f61d8fd77ae50fccd14357ac28621880f01262d5"
+  },
+  "red_logs": {
+    "table-math-red.log": "6f0d3087c596f86e35ccf9a355655c2ed5ffdc9b908a8be335900be23b90d82b",
+    "long-subscript-red.log": "93a06c4fc6b374725f0c1f54230d4a10886c12af7594f0eb817581e316fb785a",
+    "chinese-script-red.log": "8d26d8e3e506e94650978b60522f7daf884f522f0162677e2f4ece26b2ffae64",
+    "formula-region-red.log": "f12d6ec35004b2ca599297728b820fe7110a88ffd77daadbf2c1497ce76f55dc",
+    "table-delimiters-red.log": "19e29aa4beb347ee9ec4d32fe25e0f797a3bc6cf194ce11e721e81e043e84376",
+    "chemical-red.log": "adf3ebe93fc62daba324ef22b01f120976a60096cd1e4b379216f22c507fe36b",
+    "formula-revalidation-red.log": "6feed903d439a1a64260d38b14a76819c391a9e8d81e36b6ef4b622470e69b59"
+  },
+  "scope": "Only VLM postprocessing items 1, 2, 3. No full OCR accuracy claim.",
+  "verification": {
+    "ctest": {
+      "passed": 32,
+      "total": 32,
+      "elapsed_seconds": 80.77
+    },
+    "python_unittest": {
+      "passed": 40,
+      "total": 40,
+      "elapsed_seconds": 70.021
+    },
+    "python_compileall": "passed",
+    "node_syntax": "passed",
+    "schema_sha256_manifest": "passed",
+    "diff_whitespace": "passed",
+    "logs_sha256": {
+      "ctest-final.log": "d9c70492b16c5bc27080d87d496ef770c169d8373bf0aa67a05f31604e8c1742",
+      "unittest-final.log": "1415f49089a62aab77bbbde9ce90eeeb26755fac4fec92acabbc32e9255308cf",
+      "build-final.log": "34289b3ae1eb67bfde9fee657cd6f21903cf6d77bb426b119748792d9850a3f0",
+      "schema-hashes.log": "7f0e7bb287cd0fceaec7ccc58fa05e3c918b2e39f5178e569a750f4fe6f17c73"
+    }
+  }
+}

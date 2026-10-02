@@ -31,7 +31,9 @@ def run(binary, scenario, root, image):
     document = json.loads((output / 'document.json').read_text())
     manifest = json.loads((output / 'run-manifest.json').read_text())
     import jsonschema
-    schema_path = ('schemas/document-ir/document-ir-1.10-image.schema.json'
+    schema_path = ('schemas/document-ir/document-ir-1.11-image.schema.json'
+                   if document['schema_version'] == '1.11'
+                   else 'schemas/document-ir/document-ir-1.10-image.schema.json'
                    if document['schema_version'] == '1.10'
                    else 'schemas/document-ir/document-ir-1.3.schema.json'
                    if document['schema_version'] == '1.3'

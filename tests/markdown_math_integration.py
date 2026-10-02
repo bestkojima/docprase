@@ -1,5 +1,6 @@
 """公共 CLI 导出：正文安全转义，数学原样输出，并可由真实 KaTeX 排版。"""
 import argparse
+import copy
 import json
 import os
 from pathlib import Path
@@ -11,7 +12,8 @@ from PIL import Image
 from printed_page_integration import ROOT, config
 
 
-def check_case(args, root, name, raw, expected, class_id=22, formulas=None, display_modes=None):
+def check_case(args, root, name, raw, expected, class_id=22, formulas=None, display_modes=None,
+               content_format=None):
     folder = root / name
     folder.mkdir()
     image = folder / 'page.png'
@@ -29,7 +31,14 @@ def check_case(args, root, name, raw, expected, class_id=22, formulas=None, disp
     block = document['pages'][0]['blocks'][0]
     assert block['status'] == 'ok', (name, block['error'])
     assert block['provenance']['raw_output'] == raw
-    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text()))
+    if content_format:
+        assert block['content']['format'] == content_format
+        assert block['type'] == 'formula'
+        assert len(document['pages'][0]['regions']) == 1
+        assert len(block['provenance']['recognition']['attempts']) == 1
+        assert block['content']['text'] == raw
+    version = document['schema_version']
+    jsonschema.validate(document, json.loads((ROOT / f'schemas/document-ir/document-ir-{version}-image.schema.json').read_text()))
     markdown = (job / 'document.md').read_text()
     assert markdown == expected + '\n', (name, markdown, expected)
     exported = folder / 'reexport'
@@ -38,6 +47,16 @@ def check_case(args, root, name, raw, expected, class_id=22, formulas=None, disp
     assert result.returncode == 0, result.stderr
     assert (exported / 'document.json').read_bytes() == (job / 'document.json').read_bytes()
     assert (exported / 'document.md').read_bytes() == (job / 'document.md').read_bytes()
+    if content_format:
+        for field, value in [('text', '$x=999$'), ('format', 'latex'), ('display', True)]:
+            altered = copy.deepcopy(document)
+            altered['pages'][0]['blocks'][0]['content'][field] = value
+            saved = folder / f'altered-{field}.json'
+            saved.write_text(json.dumps(altered, ensure_ascii=False))
+            rejected = subprocess.run([args.production_cli, '--reexport', str(saved),
+                '--asset-root', str(job), '--out', str(folder / f'rejected-{field}')],
+                cwd=ROOT, capture_output=True, text=True)
+            assert rejected.returncode == 3, (name, field, rejected.stderr)
     print(f'{name}: PASS', flush=True)
     return dict(name=name, markdown=markdown, formulas=formulas or [],
         display_modes=display_modes or [False] * len(formulas or []))
@@ -56,6 +75,36 @@ def main():
         cases = [check_case(args, root, 'inline-comparisons', raw,
             '正文 &lt;说明&gt; &amp; $' + formula + '$，且 $a>b$。',
             formulas=[formula, 'a>b'])]
+        raw = r'参数 $p_{sbl}$ 与 $q_{sik}$。'
+        cases.append(check_case(args, root, 'long-variable-subscripts', raw, raw,
+            formulas=['p_{sbl}', 'q_{sik}']))
+        raw = r'$FeO$ 与 $NaOH$。'
+        cases.append(check_case(args, root, 'chemical-symbol-sequences', raw, raw,
+            formulas=['FeO', 'NaOH']))
+        raw = r'方差 $s_{甲}^{2}=1.2$ 与 $s_{乙}^{2}=1.1$。'
+        cases.append(check_case(args, root, 'chinese-script-labels', raw, raw,
+            formulas=['s_{甲}^{2}=1.2', 's_{乙}^{2}=1.1']))
+        first = r'\cos A\cos B=\frac{1}{2}[\cos(A+B)+\cos(A-B)]'
+        second = r'\sin A\sin B=\frac{1}{2}[\cos(A-B)-\cos(A+B)]'
+        raw = f'积化和差：${first}$；${second}$。'
+        cases.append(check_case(args, root, 'formula-region-sequence', raw, raw,
+            class_id=5, formulas=[first, second], content_format='markdown'))
+        raw = '结论：$x<y$\n\n$$z=x+y$$。'
+        cases.append(check_case(args, root, 'formula-region-mixed-modes', raw, raw,
+            class_id=5, formulas=['x<y', 'z=x+y'], display_modes=[False, True], content_format='markdown'))
+        raw = '<table><tr><td>$x^2$</td></tr></table>'
+        cases.append(check_case(args, root, 'table-math', raw, raw,
+            class_id=21, formulas=['x^2']))
+        matrix = r'\begin{matrix}a&b\\c&d\end{matrix}'
+        raw = ('<table><tr><th colspan="2">公式 &amp; 条件</th></tr>'
+               '<tr><td rowspan="2">$a&lt;b$<br/>[原文](https://example.invalid)</td>'
+               '<td>$$' + matrix.replace('&', '&amp;') + '$$</td></tr>'
+               '<tr><td>&lt;img src=x onerror=alert(1)&gt;</td></tr></table>')
+        cases.append(check_case(args, root, 'table-matrix-and-merged-cells', raw, raw,
+            class_id=21, formulas=['a<b', matrix], display_modes=[False, True]))
+        raw = r'<table><tr><td>条件 \(a&lt;b\)，值 \[x^2\]，$ x+1 $</td></tr></table>'
+        cases.append(check_case(args, root, 'table-math-delimiters', raw, raw,
+            class_id=21, formulas=['a<b', 'x^2', 'x+1'], display_modes=[False, True, False]))
         formula = r'[-1,+\infty)'
         raw = '区间 $' + formula + '$。'
         cases.append(check_case(args, root, 'half-open-interval-body', raw, raw,
@@ -135,6 +184,13 @@ def main():
             manifest = root / 'cases.json'
             manifest.write_text(json.dumps(cases, ensure_ascii=False))
             subprocess.run([args.katex, str(ROOT / 'tests/math-rendering/render.mjs'), str(manifest)], check=True, cwd=ROOT)
+            preview_source = root / 'table-matrix-and-merged-cells/job/document.md'
+            subprocess.run([args.katex, str(ROOT / 'tests/math-rendering/preview.mjs'), str(preview_source)],
+                check=True, cwd=ROOT)
+            html = preview_source.with_suffix('.html').read_text()
+            assert '<table>' in html and 'class="katex"' in html
+            assert 'data:font/woff2;base64,' in html
+            assert '$$' not in html and '<script' not in html
 
 
 if __name__ == '__main__':

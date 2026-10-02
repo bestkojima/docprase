@@ -33,7 +33,10 @@ def run(binary, setting, pdf, out, *options, expected=0, env=None):
     assert process.returncode == expected, (process.returncode, process.stdout, process.stderr)
     if expected == 0:
         document = json.loads((out / 'document.json').read_text(encoding='utf-8'))
-        jsonschema.validate(document, VISUAL_PDF_SCHEMA if document['schema_version'] == '1.10' else PDF_SCHEMA)
+        schema = (json.loads((ROOT / 'schemas/document-ir/document-ir-1.11-pdf.schema.json').read_text())
+                  if document['schema_version'] == '1.11' else
+                  VISUAL_PDF_SCHEMA if document['schema_version'] == '1.10' else PDF_SCHEMA)
+        jsonschema.validate(document, schema)
         return document
     return process
 
@@ -65,6 +68,28 @@ def main():
         assert len(resources) == len(set(resources))
         assert all((root / 'selected' / name).is_file() for name in resources)
         whole = run(sys.argv[1], setting, pdf, root / 'whole', '--dpi', '72')
+        formula_setting = root / 'formula-sequence-config.json'
+        formula_config = config('printed_page_structure')
+        formula_config['execution'].update(layout_preprocess='reference', layout_score_threshold=.3)
+        formula_setting.write_text(json.dumps(formula_config))
+        formula_trace = root / 'formula-sequence-trace.json'
+        formula_trace.write_text(json.dumps(dict(candidates=[[5, .95, 10, 10, 90, 90, 0]],
+            outputs=[dict(bbox=[10, 10, 90, 90], text='$a+b$，则')])) )
+        sequences = run(sys.argv[1], formula_setting, pdf, root / 'formula-sequences', '--dpi', '72',
+            env=dict(os.environ, DOCOCR_TEST_STRUCTURE_PATH=str(formula_trace)))
+        assert sequences['schema_version'] == '1.11'
+        assert len(sequences['pages']) == 3
+        for page in sequences['pages']:
+            formulas = [b for b in page['blocks'] if b['type'] == 'formula']
+            assert len(formulas) == 1
+            assert formulas[0]['status'] == 'ok'
+            assert formulas[0]['content']['text'] == '$a+b$，则'
+        exported = root / 'formula-sequences-exported'
+        process = subprocess.run([sys.argv[1], '--reexport', str(root / 'formula-sequences/document.json'),
+            '--asset-root', str(root / 'formula-sequences'), '--out', str(exported)],
+            cwd=ROOT, capture_output=True, text=True)
+        assert process.returncode == 0, process.stderr
+        assert (exported / 'document.md').read_bytes() == (root / 'formula-sequences/document.md').read_bytes()
         assert without_timings(selected['pages']) == without_timings(whole['pages'][1:])
         assert selected['resources'] == [r for r in whole['resources']
                                          if r['source_block_id'].startswith(('p0002-', 'p0003-'))]

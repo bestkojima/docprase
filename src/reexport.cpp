@@ -363,6 +363,7 @@ std::string render_page_markdown(const Json& page,
             block.at("status").get<std::string>(), content.at("text").get<std::string>(),
             resource.is_null() ? "" : resource.get<std::string>(), content.value("display", true),
             type == "table" && block.at("status") == "ok"};
+        render.mixed_formula = type == "formula" && content.at("format") == "markdown";
         if (label_export) render.semantic_label = layout_semantic_label(block_class_id(page, block));
         if (block.at("provenance").contains("assessment")) {
             render.assessment_state = block.at("provenance").at("assessment").at("state").get<std::string>();
@@ -480,15 +481,16 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     const auto version = string_field(document, "schema_version", "document");
     require(version == "1.0" || version == "1.1" || version == "1.2" || version == "1.3" ||
             version == "1.4" || version == "1.5" || version == "1.6" || version == "1.7" ||
-            version == "1.8" || version == "1.9" || version == "1.10", "不支持 schema_version " + version);
-    const bool has_region_mapping = version == "1.9" || version == "1.10";
+            version == "1.8" || version == "1.9" || version == "1.10" || version == "1.11", "不支持 schema_version " + version);
+    const bool has_label_policy = version == "1.10" || version == "1.11";
+    const bool has_region_mapping = version == "1.9" || has_label_policy;
     const bool has_structure_plan = version == "1.8" || has_region_mapping;
     const bool has_recognition_evidence = version == "1.7" || has_structure_plan;
     const bool has_assessment = version == "1.6" || has_recognition_evidence;
     const bool has_visual_evidence = version == "1.5" || has_assessment;
     validate_document_schema(document, version);
     LabelExportPolicy label_export;
-    if (version == "1.10") {
+    if (has_label_policy) {
         const auto& policy = document.at("export_policy");
         label_export.markdown_ignore_labels = policy.at("markdown_ignore_labels").get<std::vector<std::string>>();
         label_export.show_formula_number = policy.at("show_formula_number").get<bool>();
@@ -620,7 +622,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 require(format == "resource", where + " 图片/未知块 format 无效");
             if (type == "text") require(format == "markdown", where + " 文本 format 无效");
             if (type == "formula" && block.at("status") == "ok")
-                require(format == "latex" && field(content, "display", where).is_boolean(),
+                require((format == "latex" || (version == "1.11" && format == "markdown")) &&
+                        field(content, "display", where).is_boolean(),
                         where + " 公式格式无效");
             if (type == "table" && content.contains("table") && content.at("table").is_object())
                 require(format == "html", where + " 表格 format 无效");
@@ -772,9 +775,12 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                     const auto text = content.at("text").get<std::string>();
                     if (type == "text")
                         require(text == output.text, where + " 正文与保存的识别文字不一致");
-                    else if (type == "formula")
-                        require(matches_formula_content(output.text, text, content.at("display").get<bool>()),
+                    else if (type == "formula") {
+                        const auto parsed = parse_formula_region(output.text);
+                        require(parsed.valid && parsed.format == format && parsed.text == text &&
+                                parsed.display == content.at("display").get<bool>(),
                                 where + " 公式与保存的识别文字不一致");
+                    }
                     else if (type == "table") {
                         const auto normalized = parse_table(output.text);
                         require(normalized.valid && normalized.html == text,
@@ -811,7 +817,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
             }
         }
         if (has_structure_plan && !failed) validate_structure(page, by_id, width, height, where);
-        if (version == "1.10") validate_label_export(page, label_export, by_id, where);
+        if (has_label_policy) validate_label_export(page, label_export, by_id, where);
         if (page.contains("layout_diagnostics")) diagnostics(page.at("layout_diagnostics"), all_paths, where);
         if (pdf) {
             if (failed) {
@@ -821,8 +827,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 continue;
             }
             result.markdown += "## 第 " + std::to_string(page.at("pdf_page_number").get<uint64_t>()) + " 页\n\n" +
-                               render_page_markdown(page, by_id, version == "1.10" ? &label_export : nullptr) + "\n";
-        } else result.markdown = render_page_markdown(page, by_id, version == "1.10" ? &label_export : nullptr);
+                               render_page_markdown(page, by_id, has_label_policy ? &label_export : nullptr) + "\n";
+        } else result.markdown = render_page_markdown(page, by_id, has_label_policy ? &label_export : nullptr);
     }
     if (document.contains("layout_diagnostics")) diagnostics(document.at("layout_diagnostics"), all_paths, "document");
     for (const auto& resource : resources) {
@@ -881,19 +887,23 @@ RevalidatedDocument revalidate_formula_document(const std::string& json) {
                 {"assessment", assessment}, {"content", block.at("content")}};
             const auto output = saved_output(block);
             const auto completion = assess_output(output, type);
-            const auto parsed = formula ? parse_formula_content(output.text) : ParsedFormula{};
+            const auto parsed = formula ? parse_formula_region(output.text) : ParsedFormulaRegion{};
+            const bool can_store_mixed = document.at("schema_version") == "1.10" ||
+                                         document.at("schema_version") == "1.11";
             const bool valid = completion.state == "ok" &&
-                (inline_formula ? valid_text_math_content(output.text) : parsed.valid);
+                (inline_formula ? valid_text_math_content(output.text) :
+                    parsed.valid && (parsed.format == "latex" || can_store_mixed));
             if (valid) {
                 block["status"] = "ok";
                 block["error"] = nullptr;
                 assessment["state"] = completion.state;
                 assessment["reason"] = completion.reason;
                 auto& content = block.at("content");
-                content["text"] = inline_formula ? output.text : parsed.latex;
+                content["text"] = inline_formula ? output.text : parsed.text;
                 if (formula) {
-                    content["format"] = "latex";
+                    content["format"] = parsed.format;
                     content["display"] = parsed.display;
+                    if (parsed.format == "markdown") document["schema_version"] = "1.11";
                 }
                 ++changed;
                 page_changed = true;

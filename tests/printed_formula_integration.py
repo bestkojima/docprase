@@ -41,7 +41,6 @@ def main():
         assert len(manifest['regions']) == 3
         for scenario, raw, error in [
             ('printed_page_formula_unclosed', r'$$\frac{a}{b}=c', 'invalid_formula_syntax'),
-            ('printed_page_formula_mixed', '$a+b$，则', 'invalid_formula_syntax'),
             ('printed_page_formula_prose', 'Please solve x+y', 'invalid_formula_syntax'),
             ('printed_page_formula_unknown_command', r'$$\foo{a}$$', 'invalid_formula_syntax'),
             ('printed_page_formula_missing_arg', r'$$\frac{a}$$', 'invalid_formula_syntax'),
@@ -66,6 +65,13 @@ def main():
             assert (failed_out / formula['content']['resource']).exists()
             marker = '识别不完整' if scenario == 'printed_page_formula_truncated' else '待核验'
             assert f'[{marker}：b0002]' in (failed_out / 'document.md').read_text()
+        mixed_out, mixed_doc, _ = run(sys.argv[1], 'printed_page_formula_mixed', root, image)
+        mixed = mixed_doc['pages'][0]['blocks'][1]
+        assert mixed_doc['schema_version'] == '1.11'
+        assert mixed['type'] == 'formula' and mixed['status'] == 'ok'
+        assert mixed['content']['format'] == 'markdown'
+        assert mixed['content']['text'] == '$a+b$，则'
+        assert '$a+b$，则' in (mixed_out / 'document.md').read_text()
         inline_out, inline_doc, _ = run(sys.argv[1], 'printed_page_formula_inline_wrapper', root, image)
         inline = inline_doc['pages'][0]['blocks'][1]
         assert inline['content']['display'] is False

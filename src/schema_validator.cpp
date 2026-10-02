@@ -134,7 +134,7 @@ bool schema_matches(const Json& value, const Json& rule, const Json& root,
 }
 
 void validate_document_schema(const Json& document, const std::string& version) {
-    static const std::array<Json, 17> schemas = {
+    static const std::array<Json, 19> schemas = {
         Json::parse(document_schema_1_0), Json::parse(document_schema_1_1),
         Json::parse(document_schema_1_2), Json::parse(document_schema_1_3),
         Json::parse(document_schema_1_4), Json::parse(document_schema_1_5_image),
@@ -143,7 +143,8 @@ void validate_document_schema(const Json& document, const std::string& version) 
         Json::parse(document_schema_1_7_pdf), Json::parse(document_schema_1_8_image),
         Json::parse(document_schema_1_8_pdf), Json::parse(document_schema_1_9_image),
         Json::parse(document_schema_1_9_pdf), Json::parse(document_schema_1_10_image),
-        Json::parse(document_schema_1_10_pdf)};
+        Json::parse(document_schema_1_10_pdf), Json::parse(document_schema_1_11_image),
+        Json::parse(document_schema_1_11_pdf)};
     const size_t index = version == "1.0" ? 0 : version == "1.1" ? 1 :
                          version == "1.2" ? 2 : version == "1.3" ? 3 :
                          version == "1.4" ? 4 :
@@ -152,7 +153,8 @@ void validate_document_schema(const Json& document, const std::string& version) 
                          version == "1.7" ? (document.at("source").at("type") == "pdf" ? 10 : 9) :
                          version == "1.8" ? (document.at("source").at("type") == "pdf" ? 12 : 11) :
                          version == "1.9" ? (document.at("source").at("type") == "pdf" ? 14 : 13) :
-                         document.at("source").at("type") == "pdf" ? 16 : 15;
+                         version == "1.10" ? (document.at("source").at("type") == "pdf" ? 16 : 15) :
+                         document.at("source").at("type") == "pdf" ? 18 : 17;
     static const bool checked = [] {
         for (const auto& schema : schemas) check_supported_schema(schema);
         return true;

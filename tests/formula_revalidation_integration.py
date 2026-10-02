@@ -46,6 +46,8 @@ def check_case(root, fixture, production, name, raw, *, class_id=22, historical=
         block['provenance']['assessment'].update(state='unverified', reason=reason)
         if class_id == 5:
             block['content'].update(format='markdown', text=raw)
+        if source['schema_version'] == '1.11':
+            source['schema_version'] = '1.10'
     saved = folder / 'saved-document.json'
     saved.write_text(json.dumps(source, ensure_ascii=False))
     old_bytes = saved.read_bytes()
@@ -59,7 +61,8 @@ def check_case(root, fixture, production, name, raw, *, class_id=22, historical=
     assert saved.read_bytes() == old_bytes
     assert (out / 'previous-document.json').read_bytes() == old_bytes
     document = json.loads((out / 'document.json').read_text())
-    jsonschema.validate(document, json.loads((ROOT / 'schemas/document-ir/document-ir-1.10-image.schema.json').read_text()))
+    version = document['schema_version']
+    jsonschema.validate(document, json.loads((ROOT / f'schemas/document-ir/document-ir-{version}-image.schema.json').read_text()))
     new = document['pages'][0]['blocks'][0]
     assert new['status'] == expected_status, (name, new['status'], new['error'])
     assert new['provenance']['raw_output'] == raw
@@ -97,6 +100,23 @@ def main():
             r'区间 $[-1,+\infty)$，以及 $\left(a,b\right]$。', historical=True)
         check_case(root, fixture, production, 'historical-display-interval',
             r'$$\left[-1,+\infty\right)$$', class_id=5, historical=True)
+        check_case(root, fixture, production, 'historical-formula-sequence',
+            r'公式：$x^2+y^2=1$；$z=x+y$。', class_id=5, historical=True)
+        check_case(root, fixture, production, 'sequence-broken-second-formula',
+            r'公式：$x^2$；$\frac{a}$。', class_id=5, expected_status='partial')
+        check_case(root, fixture, production, 'sequence-unclosed-second-formula',
+            r'公式：$x^2$；$y', class_id=5, expected_status='partial')
+        check_case(root, fixture, production, 'sequence-unknown-command',
+            r'公式：$x^2$；$\foo{x}$。', class_id=5, expected_status='partial')
+        check_case(root, fixture, production, 'formula-without-math',
+            'Please solve this question.', class_id=5, expected_status='partial')
+        check_case(root, fixture, production, 'sequence-truncated',
+            r'公式：$x^2$；$y=1$。', class_id=5, finish_reason='truncated',
+            stop_reason='token_limit', expected_status='partial')
+        check_case(root, fixture, production, 'script-unknown-command',
+            r'$p_{\foo{x}}$', expected_status='partial')
+        check_case(root, fixture, production, 'script-scope-does-not-include-prose',
+            r'$p_{sbl}中文$', expected_status='partial')
         check_case(root, fixture, production, 'broken-group-retained', r'$\frac{a}{b$', expected_status='partial')
         check_case(root, fixture, production, 'broken-environment-retained',
             r'$$\begin{matrix}a&b$$', class_id=5, expected_status='partial')
