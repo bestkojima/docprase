@@ -43,9 +43,16 @@ export function createDocumentRenderer(engine = katex) {
       const [open, close, displayMode] = delimiter;
       let end = source.indexOf(close, position + open.length);
       while (end !== -1 && escaped(end)) end = source.indexOf(close, end + close.length);
-      // An unpaired currency amount is ordinary text, not broken TeX.
-      if (open === '$' && /^\d/.test(source.slice(position + 1)) &&
-          (end === -1 || /^\d/.test(source.slice(end + 1)))) { position++; continue; }
+      // A currency amount may precede a real formula in the same text node.
+      // Do not consume that formula's opener as the currency's closing dollar.
+      const amount = open === '$' && /^\d[\d,.]*/.exec(source.slice(position + 1));
+      if (amount) {
+        const rest = source.slice(position + 1 + amount[0].length,
+          end === -1 ? source.length : end).trim();
+        const continuesMath = /^[=+\-*/_^<>\\]/.test(rest) ||
+          /^[A-Za-z]{1,2}(?:[^A-Za-z]|$)/.test(rest);
+        if (!continuesMath && (end === -1 || rest.length > 0)) { position++; continue; }
+      }
       if (end === -1) throw new SyntaxError('表格单元格数学分隔符未闭合');
       const latex = source.slice(position + open.length, end).trim();
       if (!latex) throw new SyntaxError('表格单元格数学内容为空');

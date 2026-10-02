@@ -105,6 +105,9 @@ def main():
         raw = r'<table><tr><td>条件 \(a&lt;b\)，值 \[x^2\]，$ x+1 $</td></tr></table>'
         cases.append(check_case(args, root, 'table-math-delimiters', raw, raw,
             class_id=21, formulas=['a<b', 'x^2', 'x+1'], display_modes=[False, True, False]))
+        raw = '<table><tr><td>价格 $5，公式 $x^2$；再付 $10。</td></tr></table>'
+        cases.append(check_case(args, root, 'table-currency-with-math', raw, raw,
+            class_id=21, formulas=['x^2']))
         formula = r'[-1,+\infty)'
         raw = '区间 $' + formula + '$。'
         cases.append(check_case(args, root, 'half-open-interval-body', raw, raw,

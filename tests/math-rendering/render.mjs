@@ -43,6 +43,9 @@ for (test of JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))) {
     assert(html.includes('&lt;img src=x onerror=alert(1)&gt;'));
     assert(html.includes('<br>'));
   }
+  if (test.name === 'table-currency-with-math') {
+    assert(html.includes('价格 $5，公式 ') && html.includes('；再付 $10。'));
+  }
   console.log(`${test.name}: KaTeX ${katex.version} PASS (${inputs.length} formulas)`);
 }
 const standalone = createDocumentRenderer();
