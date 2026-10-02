@@ -14,12 +14,6 @@ RegionRecognition recognize_region(IInferenceEngine& backend, const Image& crop,
     RegionRecognition result;
     GenerationRequest request{crop, source_box, type, request_id, plan.max_new_tokens,
                               plan.generation_timeout_ms};
-    // Small superscripts need more visual detail than ordinary prose. Keep the
-    // budget tied to the pre-recognition task, never to a guessed transcript.
-    if (type == "formula") {
-        request.visual_min_pixels = 262144;
-        request.visual_max_pixels = 1120000;
-    }
     std::string correction = "initial";
     std::optional<VisualTransform> corrected_visual;
     for (unsigned index = 0; index < 2 && !context.cancelled; ++index) {

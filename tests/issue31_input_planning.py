@@ -1,4 +1,4 @@
-"""公共 CLI：重叠文字行只识别一次，页码不制造分栏，独立公式保留细节预算。"""
+"""公共 CLI：重叠文字行只识别一次，页码不制造分栏，保持公式预算兼容。"""
 import json
 import os
 from pathlib import Path
@@ -78,8 +78,8 @@ def main():
         bounds = [10, 10, 335, 310]
         d = run(root, 'formula-visual-budget', [[5,.95,*bounds,0]], [dict(bbox=bounds,text='$2^{64}-1$')])
         attempt = d['pages'][0]['blocks'][0]['provenance']['recognition']['attempts'][0]
-        if attempt['config']['visual_min_pixels'] != 262144 or attempt['config']['visual_max_pixels'] != 1120000:
-            failures.append('独立公式仍使用正文视觉预算')
+        if attempt['config']['visual_min_pixels'] != 65536 or attempt['config']['visual_max_pixels'] != 313600:
+            failures.append('初次公式识别使用了未经整体质量验证的视觉预算')
         assert not failures, failures
     print('input planning: PASS')
 
