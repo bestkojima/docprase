@@ -40,8 +40,10 @@ ctest --test-dir build/vlm-postprocess --output-on-failure
 .scratch/issue27-test-env/bin/python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-离线预览使用 `node tests/math-rendering/preview.mjs 作业目录/document.md`，详见[渲染说明](../../tests/math-rendering/README.md)。本机[修复预览](../../output/issue27-vlm-postprocess-20261002/document.html)及[截图](../../output/issue27-vlm-postprocess-20261002/preview.png)已通过 Chromium 检查：11 条公式（其中 5 条在表格内）可见，数学错误和失败资源请求均为 0，字体加载与合并单元格正常。
+离线预览使用 `node tests/math-rendering/preview.mjs 作业目录/document.md`，详见[渲染说明](../../tests/math-rendering/README.md)。本机[修复预览](../../output/issue27-vlm-postprocess-20261002/document.html)及[截图](../../output/issue27-vlm-postprocess-20261002/preview.png)已通过 Chromium 检查：12 条公式（其中 6 条在表格内）可见，数学错误和失败资源请求均为 0，字体加载与合并单元格正常。
 
 生产 C++ CLI 无新增 Node.js 依赖。其他 Markdown 查看器仍须支持 HTML 表格内数学；本轮交付参考渲染器和离线预览，并不修改外部查看器。#27 的父区域完整质量验收继续保持独立，本轮不关闭该 Issue。
 
 完整验证：Linux/MNN 构建通过，CTest 32/32（80.77 秒）、Python unittest 40/40（70.021 秒）通过；Python 编译、Node.js 语法、Schema SHA 和差异空白检查通过。测试时工作区原有 `src/region_structure.cpp` 修改保留且未纳入本轮提交，其源码 SHA 单独记录。
+
+双轴审查发现的货币混排及数字开头公式回归已修复，最终 Standards/Spec 均为 0 项未解决，见[审查记录](vlm-postprocess-review.md)。完整套件对应 `6ff6e11`，后续 `4fb1ffb` 通过受影响的两项导出/排版 CTest；常用 `build/linux-current` 已重新构建，首次导出/生产重新导出及最终浏览器预览再次验证通过。

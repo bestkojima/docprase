@@ -88,8 +88,8 @@
   ],
   "browser": {
     "browser": "153.0.8010.12",
-    "formulas": 11,
-    "tableFormulas": 5,
+    "formulas": 12,
+    "tableFormulas": 6,
     "errors": 0,
     "visible": true,
     "fonts": true,
@@ -106,40 +106,49 @@
       "a<b",
       "\\begin{matrix}a&b\\\\c&d\\end{matrix}",
       "s_{甲}^{2}",
-      "FeO"
+      "FeO",
+      "2(x+1)"
     ],
+    "currency": true,
     "failedRequests": []
   },
   "source_sha256": {
-    "src/core.cpp": "87847faf11ae902416fdd4e8445d2836d98b4dd242e4a704d45a49ab92f576e8",
+    "CMakeLists.txt": "6ffbbba277b529114b421b9966db9ddfdfcae82096c617719f6b18aadfa2482c",
+    "schemas/document-ir/document-ir-1.11-image.schema.json": "ccdc4d9807850f4cc8c99efc05cbe848f301074c301ad950fe29960943949f94",
+    "schemas/document-ir/document-ir-1.11-pdf.schema.json": "fd93ae3b3191a5dc603d560f2bf5226b82680cedcd4d84afc03bd62f1bf37232",
     "src/content_validation.hpp": "eaabd56a3a492dc706d2462a611abae1e75a8f741ad6a2e3de5018439328e728",
-    "src/reexport.cpp": "f02346d9dab039358d9e74cd914a6f25a3359076cb6666bbf76a4b1a835d1993",
+    "src/core.cpp": "87847faf11ae902416fdd4e8445d2836d98b4dd242e4a704d45a49ab92f576e8",
+    "src/document_schemas.hpp.in": "ed05d8f20b416a195a7c48d55760132f8e09e45f833da67f4779de734dac74c3",
     "src/markdown.cpp": "85be1f073a1875e448c514b51a1ba2a904f958d5ac2a81070a9062303fbfc485",
     "src/markdown.hpp": "ac787aeaab7d07f66665b80cce97dac31a09a043bea43895c8ca82fc0dada8d3",
     "src/pdf_job.cpp": "f37e5172f7b881a58e9562976a9c763277f297585a46c9368bf139f76b656ef7",
+    "src/reexport.cpp": "f02346d9dab039358d9e74cd914a6f25a3359076cb6666bbf76a4b1a835d1993",
     "src/schema_validator.cpp": "0ba46e30aec26ae5cae4c908993ad08e2172710eacf592e53b472f831ad607e1",
-    "src/document_schemas.hpp.in": "ed05d8f20b416a195a7c48d55760132f8e09e45f833da67f4779de734dac74c3",
-    "CMakeLists.txt": "6ffbbba277b529114b421b9966db9ddfdfcae82096c617719f6b18aadfa2482c",
-    "tests/math-rendering/document-renderer.mjs": "b20bdced1763e5dddba75d5e8729b1096e08e7b3ee76751386436187f488afdb",
-    "tests/math-rendering/preview.mjs": "8559b4f872851c484bbe273b4d5d18ae20e02002a9f4f9cb0847403516cf28ab",
-    "tests/math-rendering/package-lock.json": "c8dede53256e3ce3a5f07d377a140902043f404125ce08893888ea7cc78e5032",
-    "tests/markdown_math_integration.py": "336a36a257b8d61e5e4ee604aad28fcd1aca91742c898261fb3f63504a5082bd",
     "tests/formula_revalidation_integration.py": "44e14468a4a3e86f52e012b8d3da338bd902324c650b59dda8b53370d56a1627",
+    "tests/markdown_math_integration.py": "4ff6e481ebcffdfb22d39af555c5279ec3fd3dd9a0ed0088afece4af7b288d38",
+    "tests/math-rendering/document-renderer.mjs": "ca0bb81da2dbaf35e3bb823c7a1d5bc7a5bbd264ef6073fd1be020306bcbcd35",
+    "tests/math-rendering/package-lock.json": "c8dede53256e3ce3a5f07d377a140902043f404125ce08893888ea7cc78e5032",
+    "tests/math-rendering/preview.mjs": "8559b4f872851c484bbe273b4d5d18ae20e02002a9f4f9cb0847403516cf28ab",
+    "tests/math-rendering/render.mjs": "e00b8eec623b9786d109d36d78c2e3bffaae75c900f032863bd95a36c46afdd3",
     "tests/pdf_integration.py": "4fd40477a9e30484a096be1e863b24713a0e81772a3bb8f7d39f155b02217d74"
   },
   "artifacts_sha256": {
     "build/vlm-postprocess/dococr_cli": "16dcb151aa998aa27bb56fdac173f93f82d4b543665775571c1c329ce89fc837",
     "build/vlm-postprocess/dococr_cli_fixture": "abecc05494027d3dcff3cc1d9e25675fa1c798f9e44f370fe688115adf76578a",
-    "build/vlm-postprocess/libdococr_c.so": "2413c81906dd3f9152eb8506f61d8fd77ae50fccd14357ac28621880f01262d5"
+    "build/vlm-postprocess/libdococr_c.so": "2413c81906dd3f9152eb8506f61d8fd77ae50fccd14357ac28621880f01262d5",
+    "build/linux-current/dococr_cli": "59c90944813bcb55dcf149417c6584fcb75777e8fe5e1ce89f5b4ebff17d1970",
+    "build/linux-current/libdococr_c.so": "2413c81906dd3f9152eb8506f61d8fd77ae50fccd14357ac28621880f01262d5"
   },
   "red_logs": {
-    "table-math-red.log": "6f0d3087c596f86e35ccf9a355655c2ed5ffdc9b908a8be335900be23b90d82b",
-    "long-subscript-red.log": "93a06c4fc6b374725f0c1f54230d4a10886c12af7594f0eb817581e316fb785a",
+    "chemical-red.log": "adf3ebe93fc62daba324ef22b01f120976a60096cd1e4b379216f22c507fe36b",
     "chinese-script-red.log": "8d26d8e3e506e94650978b60522f7daf884f522f0162677e2f4ece26b2ffae64",
     "formula-region-red.log": "f12d6ec35004b2ca599297728b820fe7110a88ffd77daadbf2c1497ce76f55dc",
+    "formula-revalidation-red.log": "6feed903d439a1a64260d38b14a76819c391a9e8d81e36b6ef4b622470e69b59",
+    "long-subscript-red.log": "93a06c4fc6b374725f0c1f54230d4a10886c12af7594f0eb817581e316fb785a",
+    "table-currency-red.log": "983ebdb4b039ea3775ec0a85b203fa1e8de1d6b2c60ccc8bcb47492655d0bb15",
     "table-delimiters-red.log": "19e29aa4beb347ee9ec4d32fe25e0f797a3bc6cf194ce11e721e81e043e84376",
-    "chemical-red.log": "adf3ebe93fc62daba324ef22b01f120976a60096cd1e4b379216f22c507fe36b",
-    "formula-revalidation-red.log": "6feed903d439a1a64260d38b14a76819c391a9e8d81e36b6ef4b622470e69b59"
+    "table-math-red.log": "6f0d3087c596f86e35ccf9a355655c2ed5ffdc9b908a8be335900be23b90d82b",
+    "table-number-leading-red.log": "ccb6f94f064fd482581748a83e6c6691db454d811426a33d68511e6997d23db2"
   },
   "scope": "Only VLM postprocessing items 1, 2, 3. No full OCR accuracy claim.",
   "verification": {
@@ -162,6 +171,43 @@
       "unittest-final.log": "1415f49089a62aab77bbbde9ce90eeeb26755fac4fec92acabbc32e9255308cf",
       "build-final.log": "34289b3ae1eb67bfde9fee657cd6f21903cf6d77bb426b119748792d9850a3f0",
       "schema-hashes.log": "7f0e7bb287cd0fceaec7ccc58fa05e3c918b2e39f5178e569a750f4fe6f17c73"
+    },
+    "full_suite_code_commit": "6ff6e11",
+    "review_followup": {
+      "code_commit": "4fb1ffb",
+      "targeted_ctest_passed": 2,
+      "targeted_ctest_total": 2,
+      "targeted_elapsed_seconds": 9.64,
+      "log_sha256": "86cb69203279c9f7e813553310d0eed9ee845a52b0767b42907646a4cbc958de",
+      "linux_current_build": "passed",
+      "linux_current_reexport_cases": 35,
+      "linux_current_reexport_log_sha256": "5cb096bb06adb3b9742999f1089ed06f921ee8aa5b4748fba8a1e36e9817dc64",
+      "node_syntax": "passed",
+      "standards_unresolved": 0,
+      "spec_unresolved": 0
     }
+  },
+  "full_suite_source_sha256": {
+    "src/core.cpp": "87847faf11ae902416fdd4e8445d2836d98b4dd242e4a704d45a49ab92f576e8",
+    "src/content_validation.hpp": "eaabd56a3a492dc706d2462a611abae1e75a8f741ad6a2e3de5018439328e728",
+    "src/reexport.cpp": "f02346d9dab039358d9e74cd914a6f25a3359076cb6666bbf76a4b1a835d1993",
+    "src/markdown.cpp": "85be1f073a1875e448c514b51a1ba2a904f958d5ac2a81070a9062303fbfc485",
+    "src/markdown.hpp": "ac787aeaab7d07f66665b80cce97dac31a09a043bea43895c8ca82fc0dada8d3",
+    "src/pdf_job.cpp": "f37e5172f7b881a58e9562976a9c763277f297585a46c9368bf139f76b656ef7",
+    "src/schema_validator.cpp": "0ba46e30aec26ae5cae4c908993ad08e2172710eacf592e53b472f831ad607e1",
+    "src/document_schemas.hpp.in": "ed05d8f20b416a195a7c48d55760132f8e09e45f833da67f4779de734dac74c3",
+    "CMakeLists.txt": "6ffbbba277b529114b421b9966db9ddfdfcae82096c617719f6b18aadfa2482c",
+    "tests/math-rendering/document-renderer.mjs": "b20bdced1763e5dddba75d5e8729b1096e08e7b3ee76751386436187f488afdb",
+    "tests/math-rendering/preview.mjs": "8559b4f872851c484bbe273b4d5d18ae20e02002a9f4f9cb0847403516cf28ab",
+    "tests/math-rendering/package-lock.json": "c8dede53256e3ce3a5f07d377a140902043f404125ce08893888ea7cc78e5032",
+    "tests/markdown_math_integration.py": "336a36a257b8d61e5e4ee604aad28fcd1aca91742c898261fb3f63504a5082bd",
+    "tests/formula_revalidation_integration.py": "44e14468a4a3e86f52e012b8d3da338bd902324c650b59dda8b53370d56a1627",
+    "tests/pdf_integration.py": "4fd40477a9e30484a096be1e863b24713a0e81772a3bb8f7d39f155b02217d74"
+  },
+  "preview_sha256": {
+    "output/issue27-vlm-postprocess-20261002/browser-verification.json": "5b4410b492dc5a368c89d5cd6fff6f8aa907db84bfd72278d0753e5848e12870",
+    "output/issue27-vlm-postprocess-20261002/document.html": "f6c1c1e7a2c870c0b003ee218563e497b7ba3e8b8e965cd38700d82ade20ac84",
+    "output/issue27-vlm-postprocess-20261002/document.md": "d3db7ed85411b1e01ba68697d4c5edd465079aa23448a2604dacbb73d112aac5",
+    "output/issue27-vlm-postprocess-20261002/preview.png": "a8b82dce340f8795672d02dca5bd9974e067f656f65ca0528024c95191787acc"
   }
 }
