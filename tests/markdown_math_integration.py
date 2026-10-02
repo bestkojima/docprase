@@ -108,6 +108,9 @@ def main():
         raw = '<table><tr><td>价格 $5，公式 $x^2$；再付 $10。</td></tr></table>'
         cases.append(check_case(args, root, 'table-currency-with-math', raw, raw,
             class_id=21, formulas=['x^2']))
+        raw = '<table><tr><td>$2(x+1)$；$2[1+x]$；$2!$；$2FeO$；$2 x$</td></tr></table>'
+        cases.append(check_case(args, root, 'table-number-leading-math', raw, raw,
+            class_id=21, formulas=['2(x+1)', '2[1+x]', '2!', '2FeO', '2 x']))
         formula = r'[-1,+\infty)'
         raw = '区间 $' + formula + '$。'
         cases.append(check_case(args, root, 'half-open-interval-body', raw, raw,

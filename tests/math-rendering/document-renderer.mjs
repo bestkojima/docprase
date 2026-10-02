@@ -47,11 +47,15 @@ export function createDocumentRenderer(engine = katex) {
       // Do not consume that formula's opener as the currency's closing dollar.
       const amount = open === '$' && /^\d[\d,.]*/.exec(source.slice(position + 1));
       if (amount) {
-        const rest = source.slice(position + 1 + amount[0].length,
-          end === -1 ? source.length : end).trim();
-        const continuesMath = /^[=+\-*/_^<>\\]/.test(rest) ||
-          /^[A-Za-z]{1,2}(?:[^A-Za-z]|$)/.test(rest);
-        if (!continuesMath && (end === -1 || rest.length > 0)) { position++; continue; }
+        const suffix = source.slice(position + 1 + amount[0].length,
+          end === -1 ? source.length : end);
+        const rest = suffix.trim();
+        const prose = /^[，。；：！？\u3400-\u9fff]/u.test(rest) ||
+          (/^\s/.test(suffix) && /^[a-z]{3,}(?:\s+[a-z]+)*[ ,;:]*$/i.test(rest) &&
+           (end === -1 || /^[A-Za-z0-9]/.test(source.slice(end + 1))));
+        // Only positive currency evidence bypasses the math renderer. A numeric
+        // formula may continue with any valid TeX, e.g. 2(x+1), 2!, or 2FeO.
+        if (prose || (end === -1 && !rest)) { position++; continue; }
       }
       if (end === -1) throw new SyntaxError('表格单元格数学分隔符未闭合');
       const latex = source.slice(position + open.length, end).trim();
