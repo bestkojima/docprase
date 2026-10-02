@@ -89,6 +89,46 @@ void diagnostics(const Json& diag, std::set<std::string>& paths, const std::stri
         asset_path(path, where);
         paths.insert(path);
     }
+    for (const auto& candidate : candidates)
+        if (candidate.at("filter_reason") == "review_confirmed_watermark" ||
+            candidate.at("filter_reason") == "review_confirmed_decoration")
+            require(diag.contains("candidate_reviews"), where + " review skip 缺少证据");
+    if (diag.contains("candidate_reviews")) {
+        const auto& review = diag.at("candidate_reviews");
+        const auto& source = review.at("source_asset");
+        if (!source.is_null()) {
+            asset_path(source.get<std::string>(), where);
+            paths.insert(source.get<std::string>());
+        }
+        require(!review.at("decisions").empty() || !source.is_null(), where + " review 收集缺少原页");
+        std::set<int> skipped;
+        for (const auto& decision : review.at("decisions")) {
+            require(decision.at("outcome") == "page_mismatch" || !source.is_null(),
+                    where + " review 缺少原页");
+            const auto& crop = decision.at("crop_asset");
+            if (!crop.is_null()) {
+                auto path = crop.get<std::string>();
+                asset_path(path, where);
+                paths.insert(path);
+            }
+            if (decision.at("outcome") == "skipped") {
+                const int id = decision.at("candidate_id").get<int>();
+                require(id >= 0 && size_t(id) < candidates.size(), where + " review candidate 缺失");
+                const auto& candidate = candidates.at(size_t(id));
+                const auto verdict = decision.at("decision").get<std::string>();
+                require((verdict == "confirmed_watermark" || verdict == "confirmed_decoration") &&
+                        decision.at("page_rgb_sha256") == review.at("page_rgb_sha256") &&
+                        candidate.at("candidate_id") == id && candidate.at("class_id") == 14 && candidate.at("selected") == false &&
+                        candidate.at("filter_reason") == "review_" + verdict && !crop.is_null() &&
+                        !candidate.at("mask_asset").is_null() && skipped.insert(id).second,
+                        where + " review skip 证据不一致");
+            }
+        }
+        for (const auto& candidate : candidates)
+            if (candidate.at("filter_reason") == "review_confirmed_watermark" ||
+                candidate.at("filter_reason") == "review_confirmed_decoration")
+                require(skipped.count(candidate.at("candidate_id").get<int>()), where + " review skip 缺少记录");
+    }
     for (const auto& candidate : candidates) {
         const auto& path = field(candidate, "mask_asset", where);
         require(path.is_null() || path.is_string(), where + ".mask_asset 无效");
@@ -481,8 +521,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     const auto version = string_field(document, "schema_version", "document");
     require(version == "1.0" || version == "1.1" || version == "1.2" || version == "1.3" ||
             version == "1.4" || version == "1.5" || version == "1.6" || version == "1.7" ||
-            version == "1.8" || version == "1.9" || version == "1.10" || version == "1.11", "不支持 schema_version " + version);
-    const bool has_label_policy = version == "1.10" || version == "1.11";
+            version == "1.8" || version == "1.9" || version == "1.10" || (version == "1.11" || version == "1.12"), "不支持 schema_version " + version);
+    const bool has_label_policy = version == "1.10" || (version == "1.11" || version == "1.12");
     const bool has_region_mapping = version == "1.9" || has_label_policy;
     const bool has_structure_plan = version == "1.8" || has_region_mapping;
     const bool has_recognition_evidence = version == "1.7" || has_structure_plan;
@@ -622,7 +662,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 require(format == "resource", where + " 图片/未知块 format 无效");
             if (type == "text") require(format == "markdown", where + " 文本 format 无效");
             if (type == "formula" && block.at("status") == "ok")
-                require((format == "latex" || (version == "1.11" && format == "markdown")) &&
+                require((format == "latex" || ((version == "1.11" || version == "1.12") && format == "markdown")) &&
                         field(content, "display", where).is_boolean(),
                         where + " 公式格式无效");
             if (type == "table" && content.contains("table") && content.at("table").is_object())

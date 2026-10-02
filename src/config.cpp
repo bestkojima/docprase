@@ -371,8 +371,38 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     if (threads != 1) throw ConfigError("unsupported_parameter", "threads: only 1 is implemented");
     plan->threads = 1;
     object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens", "generation_timeout_ms",
-                                   "layout_preprocess", "layout_score_threshold", "markdown_ignore_labels", "show_formula_number"});
+                                   "layout_preprocess", "layout_score_threshold", "markdown_ignore_labels", "show_formula_number", "layout_candidate_reviews"});
     const auto& execution = config.at("execution").object;
+    if (execution.count("layout_candidate_reviews")) {
+        if (!plan->uses_doclayout()) throw ConfigError("invalid_layout_parameter", "layout_candidate_reviews");
+        plan->collect_candidate_reviews = true;
+        const auto& reviews = execution.at("layout_candidate_reviews");
+        array(reviews);
+        if (reviews.array.size() > 300) throw ConfigError("invalid_layout_parameter", "too many candidate reviews");
+        std::set<std::pair<std::string, int>> seen;
+        for (const auto& value : reviews.array) {
+            object(value, {"page_rgb_sha256", "candidate_id", "candidate_sha256", "decision", "reason"});
+            LayoutCandidateReview review;
+            review.page_rgb_sha256 = str(value.at("page_rgb_sha256"));
+            review.candidate_sha256 = str(value.at("candidate_sha256"));
+            for (const auto& hash : {review.page_rgb_sha256, review.candidate_sha256})
+                if (hash.size() != 64 || hash.find_first_not_of("0123456789abcdef") != std::string::npos)
+                    throw ConfigError("invalid_layout_parameter", "candidate review SHA-256");
+            const auto& id = value.at("candidate_id");
+            if (id.kind != Json::Number || id.scalar.empty() || id.scalar.size() > 3 ||
+                id.scalar.find_first_not_of("0123456789") != std::string::npos || std::stoi(id.scalar) >= 300)
+                throw ConfigError("invalid_layout_parameter", "candidate review ID");
+            review.candidate_id = std::stoi(id.scalar);
+            review.decision = str(value.at("decision"));
+            review.reason = str(value.at("reason"));
+            if ((review.decision != "confirmed_watermark" && review.decision != "confirmed_decoration" &&
+                 review.decision != "suspected" && review.decision != "keep") ||
+                review.reason.find_first_not_of(" \t\r\n") == std::string::npos || review.reason.size() > 4096 ||
+                !seen.emplace(review.page_rgb_sha256, review.candidate_id).second)
+                throw ConfigError("invalid_layout_parameter", "candidate review decision/reason/duplicate");
+            plan->layout_candidate_reviews.push_back(std::move(review));
+        }
+    }
     if (execution.count("markdown_ignore_labels")) {
         if (!plan->uses_doclayout()) throw ConfigError("invalid_layout_parameter", "markdown_ignore_labels");
         const auto& labels = execution.at("markdown_ignore_labels");

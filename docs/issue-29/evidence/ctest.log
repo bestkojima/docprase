@@ -1,0 +1,73 @@
+Test project /home/dr/project/docprase/build/issue29
+      Start  1: contract
+ 1/34 Test  #1: contract ...........................   Passed    0.02 sec
+      Start  2: visual_adaptation_probe
+ 2/34 Test  #2: visual_adaptation_probe ............   Passed    0.05 sec
+      Start  3: cli_integration
+ 3/34 Test  #3: cli_integration ....................   Passed    0.21 sec
+      Start  4: reexport_integration
+ 4/34 Test  #4: reexport_integration ...............   Passed    2.56 sec
+      Start  5: config_integration
+ 5/34 Test  #5: config_integration .................   Passed    1.42 sec
+      Start  6: config_abi
+ 6/34 Test  #6: config_abi .........................   Passed    4.19 sec
+      Start  7: layout_integration
+ 7/34 Test  #7: layout_integration .................   Passed    1.56 sec
+      Start  8: issue19_dedup
+ 8/34 Test  #8: issue19_dedup ......................   Passed    0.25 sec
+      Start  9: issue20_geometry
+ 9/34 Test  #9: issue20_geometry ...................   Passed    0.14 sec
+      Start 10: issue20_owned_crop
+10/34 Test #10: issue20_owned_crop .................   Passed    0.53 sec
+      Start 11: issue20_tuning
+11/34 Test #11: issue20_tuning .....................   Passed    0.83 sec
+      Start 12: issue20_large_page
+12/34 Test #12: issue20_large_page .................   Passed    3.55 sec
+      Start 13: label_pipeline
+13/34 Test #13: label_pipeline .....................   Passed   18.73 sec
+      Start 14: semantic_text_rendering
+14/34 Test #14: semantic_text_rendering ............   Passed    2.25 sec
+      Start 15: printed_page_integration
+15/34 Test #15: printed_page_integration ...........   Passed    1.48 sec
+      Start 16: issue21_quality
+16/34 Test #16: issue21_quality ....................   Passed    1.94 sec
+      Start 17: issue22_retry
+17/34 Test #17: issue22_retry ......................   Passed    2.31 sec
+      Start 18: printed_formula_integration
+18/34 Test #18: printed_formula_integration ........   Passed    5.60 sec
+      Start 19: issue27_formula
+19/34 Test #19: issue27_formula ....................   Passed    1.96 sec
+      Start 20: issue27_rendering
+20/34 Test #20: issue27_rendering ..................   Passed    2.79 sec
+      Start 21: markdown_math_integration
+21/34 Test #21: markdown_math_integration ..........   Passed   40.71 sec
+      Start 22: formula_revalidation_integration
+22/34 Test #22: formula_revalidation_integration ...   Passed   19.37 sec
+      Start 23: markdown_katex_integration
+23/34 Test #23: markdown_katex_integration .........   Passed   15.48 sec
+      Start 24: printed_table_integration
+24/34 Test #24: printed_table_integration ..........   Passed    1.76 sec
+      Start 25: reading_order_integration
+25/34 Test #25: reading_order_integration ..........   Passed    2.90 sec
+      Start 26: issue29_reviews
+26/34 Test #26: issue29_reviews ....................   Passed    5.59 sec
+      Start 27: issue26_structure
+27/34 Test #27: issue26_structure ..................   Passed    3.07 sec
+      Start 28: issue26_region_mapping
+28/34 Test #28: issue26_region_mapping .............   Passed    2.59 sec
+      Start 29: issue31_input_planning
+29/34 Test #29: issue31_input_planning .............   Passed   14.55 sec
+      Start 30: pdf_integration
+30/34 Test #30: pdf_integration ....................   Passed   10.26 sec
+      Start 31: pdf_abi
+31/34 Test #31: pdf_abi ............................   Passed    0.21 sec
+      Start 32: printed_page_cancel
+32/34 Test #32: printed_page_cancel ................   Passed    0.92 sec
+      Start 33: job_control
+33/34 Test #33: job_control ........................   Passed    2.73 sec
+      Start 34: cli_job_control
+34/34 Test #34: cli_job_control ....................   Passed    0.65 sec
+
+100% tests passed out of 34
+
+Total Test time (real) = 173.17 sec

@@ -1316,7 +1316,8 @@ std::string serialize(const Image& image, const std::string& state,
                       const std::vector<SemanticRelation>& semantic = {},
                       const LayoutPageTransform* layout_transform = nullptr, double score_threshold = .5,
                       const RegionStructure* structure = nullptr,
-                      const LabelExportPolicy* label_export = nullptr) {
+                      const LabelExportPolicy* label_export = nullptr,
+                      const std::string& candidate_reviews = {}) {
     std::ostringstream out;
     out.imbue(std::locale::classic());
     out << std::setprecision(9);
@@ -1328,7 +1329,7 @@ std::string serialize(const Image& image, const std::string& state,
     const bool mixed_formula = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
         return b.type == "formula" && b.status == "ok" && b.format_override == "markdown";
     });
-    out << "{\"schema_version\":" << json_quote(label_export ? (mixed_formula ? "1.11" : "1.10") : structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
+    out << "{\"schema_version\":" << json_quote(!candidate_reviews.empty() ? "1.12" : label_export ? (mixed_formula ? "1.11" : "1.10") : structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state);
@@ -1557,7 +1558,9 @@ std::string serialize(const Image& image, const std::string& state,
                 << ",\"recognition_crop_bbox\":" << (c.crop_expanded ? box_json(c.recognition_crop) : "null")
                 << ",\"crop_expansion_reason\":" << (c.crop_expanded ? "\"owned_content_union\"" : "null") << '}';
         }
-        out << "]}";
+        out << ']';
+        if (!candidate_reviews.empty()) out << ",\"candidate_reviews\":" << candidate_reviews;
+        out << '}';
     }
     out << '}';
     return out.str();
@@ -1763,6 +1766,66 @@ std::vector<uint8_t> layout_page_mask(const Image& image, const RawLayoutCandida
     return pixels;
 }
 
+// An explicit review is scoped to exact decoded pixels and the full model row/mask.
+// No size, color, location, GT absence, or label alone can authorize removal.
+std::string apply_candidate_reviews(const ExecutionPlan* plan, const Image& image,
+                                    const TensorOutput& output, const uint8_t* masks,
+                                    std::vector<RawLayoutCandidate>& records,
+                                    const LayoutPageTransform& transform, RunResult& audit) {
+    if (!plan || !plan->collect_candidate_reviews) return {};
+    using Json = nlohmann::json;
+    std::string pixels = std::to_string(image.width) + "x" + std::to_string(image.height) + ":";
+    pixels.append(reinterpret_cast<const char*>(image.rgb.data()), image.rgb.size());
+    const auto page_hash = sha256(pixels);
+    const auto source_asset = page_asset("review-source.png");
+    const bool relevant = plan->layout_candidate_reviews.empty() ||
+        std::any_of(plan->layout_candidate_reviews.begin(), plan->layout_candidate_reviews.end(),
+                    [&](const LayoutCandidateReview& review) { return review.page_rgb_sha256 == page_hash; });
+    if (relevant) audit.output.assets.push_back({source_asset, crop_png(image, {0, 0, image.width, image.height})});
+    Json evidence = {{"policy", "explicit-candidate-review-v1"}, {"page_rgb_sha256", page_hash},
+                     {"source_asset", relevant ? Json(source_asset) : Json(nullptr)}, {"decisions", Json::array()}};
+    const auto tensor = std::find_if(output.outputs.begin(), output.outputs.end(),
+                                   [](const Tensor& t) { return t.name == "fetch_name_0"; });
+    for (const auto& review : plan->layout_candidate_reviews) {
+        Json decision = {{"candidate_id", review.candidate_id}, {"page_rgb_sha256", review.page_rgb_sha256},
+                         {"candidate_sha256", review.candidate_sha256}, {"decision", review.decision},
+                         {"reason", review.reason}, {"outcome", "page_mismatch"}, {"crop_asset", nullptr}};
+        if (review.page_rgb_sha256 == page_hash) {
+            decision["outcome"] = "candidate_mismatch";
+            if (size_t(review.candidate_id) < records.size()) {
+                auto& candidate = records[size_t(review.candidate_id)];
+                std::string bytes = box_json(candidate.crop) + ":";
+                bytes.append(reinterpret_cast<const char*>(tensor->data.data() + size_t(candidate.id)*7*sizeof(float)), 7*sizeof(float));
+                bytes.append(reinterpret_cast<const char*>(masks + size_t(candidate.id)*200*200*sizeof(int32_t)), 200*200*sizeof(int32_t));
+                if (sha256(bytes) == review.candidate_sha256) {
+                    decision["outcome"] = "already_filtered";
+                    if (candidate.selected) {
+                        const auto crop_asset = page_asset("review-c") + std::to_string(candidate.id) + ".png";
+                        audit.output.assets.push_back({crop_asset, crop_png(image, candidate.crop)});
+                        decision["crop_asset"] = crop_asset;
+                        decision["outcome"] = "retained";
+                        const bool confirmed = review.decision == "confirmed_watermark" || review.decision == "confirmed_decoration";
+                        // Only original image (class 14) may be skipped; headers and all other labels are protected.
+                        if (confirmed && candidate.class_id == 14) {
+                            candidate.mask_asset = page_asset("mask-c") + std::to_string(candidate.id) + ".png";
+                            auto pixels = layout_page_mask(image, candidate, masks, &transform);
+                            std::vector<uint8_t> png;
+                            if (!stbi_write_png_to_func(png_write, &png, image.width, image.height, 1, pixels.data(), image.width))
+                                throw std::runtime_error("review mask PNG encoding failed");
+                            audit.output.assets.push_back({candidate.mask_asset, std::move(png)});
+                            candidate.selected = false;
+                            candidate.reason = "review_" + review.decision;
+                            decision["outcome"] = "skipped";
+                        } else if (confirmed) decision["outcome"] = "protected_content";
+                    }
+                }
+            }
+        }
+        evidence["decisions"].push_back(std::move(decision));
+    }
+    return evidence.dump();
+}
+
 RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::atomic_bool& cancelled,
                           const ExecutionPlan* plan, RunResult audit,
                           uint32_t source_page, const ProgressCallback& progress) {
@@ -1823,6 +1886,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         filter_layout_containment(records);
         filter_layout_overlap(records, image);
     }
+    const auto candidate_reviews = apply_candidate_reviews(plan, image, *output, masks, records, layout_input.transform, audit);
     audit.did_layout = true;
     if (progress) progress("layout_completed", source_page ? source_page : 1, "", 0, 0);
     for (const auto& tensor : output->outputs) {
@@ -2163,7 +2227,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,
                             overlay_name, ownership, true, &order_evidence, semantic,
-                            &layout_input.transform, score_threshold, &structure, &label_export);
+                            &layout_input.transform, score_threshold, &structure, &label_export, candidate_reviews);
     audit.did_export = true;
     if (progress) progress("export_completed", source_page ? source_page : 1, "", region_done, region_total);
     audit.export_ms = uint64_t(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now()-start).count());

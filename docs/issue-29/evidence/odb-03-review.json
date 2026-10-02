@@ -1,0 +1,7 @@
+{
+  "page_rgb_sha256": "91424b57e6972d9d42084c5c616dcd3730eb909d3e3cc85823331273d647f08f",
+  "candidate_id": 34,
+  "candidate_sha256": "a52948f9ee2fa0f83dd267cff5ea5617f08f4f5ddfa7d26d628f17ed049e2cfd",
+  "decision": "confirmed_watermark",
+  "reason": "原页 c34 是重复的浅蓝精华在线背景标志片段；页面右侧和底部重复同形标志。此框不含坐标轴、曲线、题目或选项标签；页眉同源标志及八幅选项图保留。"
+}

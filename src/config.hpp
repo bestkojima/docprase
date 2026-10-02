@@ -15,12 +15,18 @@ struct ProcessingStep {
     std::string id, owner;
     bool enabled = true;
 };
+struct LayoutCandidateReview {
+    std::string page_rgb_sha256, candidate_sha256, decision, reason;
+    int candidate_id = 0;
+};
 struct ExecutionPlan {
     std::string config_hash, backend, mode, device, json;
     bool layout_only = false;
     std::string layout_preprocess = "auto";
     double layout_score_threshold = 0.5;
     LabelExportPolicy label_export;
+    bool collect_candidate_reviews = false;
+    std::vector<LayoutCandidateReview> layout_candidate_reviews;
     bool uses_doclayout() const {
         return layout_only || backend == "mnn:pp-doclayout-v3+ovisocr2" ||
                backend.rfind("fixture:printed_page", 0) == 0;

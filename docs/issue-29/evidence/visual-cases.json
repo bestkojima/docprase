@@ -1,0 +1,3594 @@
+{
+  "basis": "原始页面与逐候选内容目视复核；不以GT缺失确认误检",
+  "reviewed_selected_class14_candidates": 49,
+  "source_revision": "aa1ee96d106dbe53d0ae59474d75c6e6d9b53fec",
+  "cases": [
+    {
+      "page": "odb-03",
+      "candidate_id": 34,
+      "verdict": "confirmed_watermark",
+      "reason": "同页右侧和底部重复出现浅蓝背景标志；c34 只包含标志片段，不含坐标轴、曲线、文字或选项标签。允许通过本页明确复核记录跳过。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c34-source-crop.png",
+      "candidate": {
+        "candidate_id": 34,
+        "mask_row": 34,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.395996958,
+        "original_bbox": [
+          124.252678,
+          418.795685,
+          213.631577,
+          459.802155
+        ],
+        "rank": 105,
+        "mask_nonzero": 36,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c34.png",
+        "clamped": false,
+        "crop_bbox": [
+          124,
+          418,
+          214,
+          460
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            124,
+            418,
+            214,
+            460
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.395996958,
+          "candidate_rank": 105,
+          "original_class_id": 14,
+          "candidate_id": 34,
+          "mask_row": 34,
+          "mask_nonzero": 36,
+          "model_label": "image",
+          "original_bbox": [
+            124.252678,
+            418.795685,
+            213.631577,
+            459.802155
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            124,
+            418,
+            214,
+            460
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 34
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 8,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c8-source-crop.png",
+      "candidate": {
+        "candidate_id": 8,
+        "mask_row": 8,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.902075768,
+        "original_bbox": [
+          69.0814209,
+          462.839081,
+          321.405518,
+          646.593994
+        ],
+        "rank": 108,
+        "mask_nonzero": 442,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c8.png",
+        "clamped": false,
+        "crop_bbox": [
+          69,
+          462,
+          322,
+          647
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            69,
+            462,
+            322,
+            647
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.902075768,
+          "candidate_rank": 108,
+          "original_class_id": 14,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 442,
+          "model_label": "image",
+          "original_bbox": [
+            69.081421,
+            462.839081,
+            321.405518,
+            646.593994
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014"
+          ],
+          "bbox": [
+            69,
+            462,
+            322,
+            647
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 8
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 5,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c5-source-crop.png",
+      "candidate": {
+        "candidate_id": 5,
+        "mask_row": 5,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.91681689,
+        "original_bbox": [
+          397.386475,
+          460.321747,
+          642.080566,
+          645.789612
+        ],
+        "rank": 113,
+        "mask_nonzero": 445,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c5.png",
+        "clamped": false,
+        "crop_bbox": [
+          397,
+          460,
+          643,
+          646
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            397,
+            460,
+            643,
+            646
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.91681689,
+          "candidate_rank": 113,
+          "original_class_id": 14,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 445,
+          "model_label": "image",
+          "original_bbox": [
+            397.386475,
+            460.321747,
+            642.080566,
+            645.789612
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            397,
+            460,
+            643,
+            646
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 5
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 6,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c6-source-crop.png",
+      "candidate": {
+        "candidate_id": 6,
+        "mask_row": 6,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.915246129,
+        "original_bbox": [
+          709.458496,
+          469.215088,
+          956.265381,
+          651.184753
+        ],
+        "rank": 118,
+        "mask_nonzero": 438,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c6.png",
+        "clamped": false,
+        "crop_bbox": [
+          709,
+          469,
+          957,
+          652
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0016",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            709,
+            469,
+            957,
+            652
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.915246129,
+          "candidate_rank": 118,
+          "original_class_id": 14,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 438,
+          "model_label": "image",
+          "original_bbox": [
+            709.458496,
+            469.215088,
+            956.265381,
+            651.184753
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0016",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0016"
+          ],
+          "bbox": [
+            709,
+            469,
+            957,
+            652
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 6
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 13,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c13-source-crop.png",
+      "candidate": {
+        "candidate_id": 13,
+        "mask_row": 13,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.864237487,
+        "original_bbox": [
+          1036.39685,
+          467.574951,
+          1279.56091,
+          650.576904
+        ],
+        "rank": 124,
+        "mask_nonzero": 417,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c13.png",
+        "clamped": false,
+        "crop_bbox": [
+          1036,
+          467,
+          1280,
+          651
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0015",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1036,
+            467,
+            1280,
+            651
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.864237487,
+          "candidate_rank": 124,
+          "original_class_id": 14,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 417,
+          "model_label": "image",
+          "original_bbox": [
+            1036.396851,
+            467.574951,
+            1279.560913,
+            650.576904
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0015",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0015"
+          ],
+          "bbox": [
+            1036,
+            467,
+            1280,
+            651
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 13
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 4,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c4-source-crop.png",
+      "candidate": {
+        "candidate_id": 4,
+        "mask_row": 4,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.918530166,
+        "original_bbox": [
+          146.982437,
+          795.725464,
+          360.615479,
+          1009.75507
+        ],
+        "rank": 163,
+        "mask_nonzero": 437,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c4.png",
+        "clamped": false,
+        "crop_bbox": [
+          146,
+          795,
+          361,
+          1010
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0024",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            146,
+            795,
+            361,
+            1010
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.918530166,
+          "candidate_rank": 163,
+          "original_class_id": 14,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 437,
+          "model_label": "image",
+          "original_bbox": [
+            146.982437,
+            795.725464,
+            360.615479,
+            1009.755066
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0024",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0024"
+          ],
+          "bbox": [
+            146,
+            795,
+            361,
+            1010
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 4
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 1,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c1-source-crop.png",
+      "candidate": {
+        "candidate_id": 1,
+        "mask_row": 1,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.938497066,
+        "original_bbox": [
+          408.16037,
+          789.480713,
+          609.811829,
+          1021.836
+        ],
+        "rank": 175,
+        "mask_nonzero": 465,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c1.png",
+        "clamped": false,
+        "crop_bbox": [
+          408,
+          789,
+          610,
+          1022
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0023",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            408,
+            789,
+            610,
+            1022
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.938497066,
+          "candidate_rank": 175,
+          "original_class_id": 14,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 465,
+          "model_label": "image",
+          "original_bbox": [
+            408.16037,
+            789.480713,
+            609.811829,
+            1021.835999
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0023",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0023"
+          ],
+          "bbox": [
+            408,
+            789,
+            610,
+            1022
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 1
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 0,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c0-source-crop.png",
+      "candidate": {
+        "candidate_id": 0,
+        "mask_row": 0,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.940743923,
+        "original_bbox": [
+          640.274414,
+          799.021423,
+          841.453674,
+          1028.36633
+        ],
+        "rank": 182,
+        "mask_nonzero": 452,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c0.png",
+        "clamped": false,
+        "crop_bbox": [
+          640,
+          799,
+          842,
+          1029
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0026",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            640,
+            799,
+            842,
+            1029
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.940743923,
+          "candidate_rank": 182,
+          "original_class_id": 14,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 452,
+          "model_label": "image",
+          "original_bbox": [
+            640.274414,
+            799.021423,
+            841.453674,
+            1028.366333
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0026",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0026"
+          ],
+          "bbox": [
+            640,
+            799,
+            842,
+            1029
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 0
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 2,
+      "verdict": "keep_valid_option",
+      "reason": "第17或18题的坐标轴/函数曲线选项；与题干、A–D短标签构成有效选项，不能因位置、尺寸、蓝色背景水印或邻近c34删除。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c2-source-crop.png",
+      "candidate": {
+        "candidate_id": 2,
+        "mask_row": 2,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.934720516,
+        "original_bbox": [
+          908.559143,
+          795.208862,
+          1113.33118,
+          1001.08496
+        ],
+        "rank": 186,
+        "mask_nonzero": 411,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c2.png",
+        "clamped": false,
+        "crop_bbox": [
+          908,
+          795,
+          1114,
+          1002
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0025",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            908,
+            795,
+            1114,
+            1002
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.934720516,
+          "candidate_rank": 186,
+          "original_class_id": 14,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 411,
+          "model_label": "image",
+          "original_bbox": [
+            908.559143,
+            795.208862,
+            1113.331177,
+            1001.084961
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0025",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0025"
+          ],
+          "bbox": [
+            908,
+            795,
+            1114,
+            1002
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 2
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 24,
+      "verdict": "keep_valid_header",
+      "reason": "精华在线页眉标志为有效来源标识，与背景标志同源但职能不同；原始header_image受保护。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c24-source-crop.png",
+      "candidate": {
+        "candidate_id": 24,
+        "mask_row": 24,
+        "class_id": 13,
+        "model_label": "header",
+        "score": 0.664036334,
+        "original_bbox": [
+          80.0392609,
+          52.7395058,
+          342.106506,
+          100.860954
+        ],
+        "rank": 0,
+        "mask_nonzero": 130,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c24.png",
+        "clamped": false,
+        "crop_bbox": [
+          80,
+          52,
+          343,
+          101
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header_image",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            80,
+            52,
+            343,
+            101
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.664036334,
+          "candidate_rank": 0,
+          "original_class_id": 13,
+          "candidate_id": 24,
+          "mask_row": 24,
+          "mask_nonzero": 130,
+          "model_label": "header",
+          "original_bbox": [
+            80.039261,
+            52.739506,
+            342.106506,
+            100.860954
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            80,
+            52,
+            343,
+            101
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 24
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 32,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c32-source-crop.png",
+      "candidate": {
+        "candidate_id": 32,
+        "mask_row": 32,
+        "class_id": 7,
+        "model_label": "figure_title",
+        "score": 0.438990533,
+        "original_bbox": [
+          189.476227,
+          670.043518,
+          229.556351,
+          699.850769
+        ],
+        "rank": 112,
+        "mask_nonzero": 12,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c32.png",
+        "clamped": false,
+        "crop_bbox": [
+          189,
+          670,
+          230,
+          700
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "figure_title",
+          "id": "l0020",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            189,
+            670,
+            230,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.438990533,
+          "candidate_rank": 112,
+          "original_class_id": 7,
+          "candidate_id": 32,
+          "mask_row": 32,
+          "mask_nonzero": 12,
+          "model_label": "figure_title",
+          "original_bbox": [
+            189.476227,
+            670.043518,
+            229.556351,
+            699.850769
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0020",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0020"
+          ],
+          "bbox": [
+            189,
+            670,
+            230,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 32
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 27,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c27-source-crop.png",
+      "candidate": {
+        "candidate_id": 27,
+        "mask_row": 27,
+        "class_id": 22,
+        "model_label": "text",
+        "score": 0.526187956,
+        "original_bbox": [
+          487.930786,
+          669.249573,
+          525.394104,
+          699.467712
+        ],
+        "rank": 120,
+        "mask_nonzero": 12,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c27.png",
+        "clamped": false,
+        "crop_bbox": [
+          487,
+          669,
+          526,
+          700
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "text",
+          "id": "l0019",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            487,
+            669,
+            526,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.526187956,
+          "candidate_rank": 120,
+          "original_class_id": 22,
+          "candidate_id": 27,
+          "mask_row": 27,
+          "mask_nonzero": 12,
+          "model_label": "text",
+          "original_bbox": [
+            487.930786,
+            669.249573,
+            525.394104,
+            699.467712
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0019",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0019"
+          ],
+          "bbox": [
+            487,
+            669,
+            526,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 27
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 36,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c36-source-crop.png",
+      "candidate": {
+        "candidate_id": 36,
+        "mask_row": 36,
+        "class_id": 22,
+        "model_label": "text",
+        "score": 0.367132396,
+        "original_bbox": [
+          753.875671,
+          668.322083,
+          795.087646,
+          699.243591
+        ],
+        "rank": 125,
+        "mask_nonzero": 13,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c36.png",
+        "clamped": false,
+        "crop_bbox": [
+          753,
+          668,
+          796,
+          700
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "text",
+          "id": "l0018",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            753,
+            668,
+            796,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.367132396,
+          "candidate_rank": 125,
+          "original_class_id": 22,
+          "candidate_id": 36,
+          "mask_row": 36,
+          "mask_nonzero": 13,
+          "model_label": "text",
+          "original_bbox": [
+            753.875671,
+            668.322083,
+            795.087646,
+            699.243591
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0018",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0018"
+          ],
+          "bbox": [
+            753,
+            668,
+            796,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 36
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 33,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c33-source-crop.png",
+      "candidate": {
+        "candidate_id": 33,
+        "mask_row": 33,
+        "class_id": 22,
+        "model_label": "text",
+        "score": 0.39880994,
+        "original_bbox": [
+          1079.8656,
+          667.74176,
+          1120.91077,
+          699.223145
+        ],
+        "rank": 132,
+        "mask_nonzero": 12,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c33.png",
+        "clamped": false,
+        "crop_bbox": [
+          1079,
+          667,
+          1121,
+          700
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "text",
+          "id": "l0017",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1079,
+            667,
+            1121,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.39880994,
+          "candidate_rank": 132,
+          "original_class_id": 22,
+          "candidate_id": 33,
+          "mask_row": 33,
+          "mask_nonzero": 12,
+          "model_label": "text",
+          "original_bbox": [
+            1079.865601,
+            667.74176,
+            1120.910767,
+            699.223145
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0017",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0017"
+          ],
+          "bbox": [
+            1079,
+            667,
+            1121,
+            700
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 33
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 26,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c26-source-crop.png",
+      "candidate": {
+        "candidate_id": 26,
+        "mask_row": 26,
+        "class_id": 7,
+        "model_label": "figure_title",
+        "score": 0.564086497,
+        "original_bbox": [
+          188.23349,
+          1059.54297,
+          231.4328,
+          1091.96167
+        ],
+        "rank": 167,
+        "mask_nonzero": 13,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c26.png",
+        "clamped": false,
+        "crop_bbox": [
+          188,
+          1059,
+          232,
+          1092
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "figure_title",
+          "id": "l0028",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            188,
+            1059,
+            232,
+            1092
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.564086497,
+          "candidate_rank": 167,
+          "original_class_id": 7,
+          "candidate_id": 26,
+          "mask_row": 26,
+          "mask_nonzero": 13,
+          "model_label": "figure_title",
+          "original_bbox": [
+            188.23349,
+            1059.542969,
+            231.4328,
+            1091.96167
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0028",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0028"
+          ],
+          "bbox": [
+            188,
+            1059,
+            232,
+            1092
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 26
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 31,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c31-source-crop.png",
+      "candidate": {
+        "candidate_id": 31,
+        "mask_row": 31,
+        "class_id": 7,
+        "model_label": "figure_title",
+        "score": 0.452691466,
+        "original_bbox": [
+          472.92868,
+          1058.56812,
+          511.994965,
+          1091.85059
+        ],
+        "rank": 180,
+        "mask_nonzero": 14,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c31.png",
+        "clamped": false,
+        "crop_bbox": [
+          472,
+          1058,
+          512,
+          1092
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "figure_title",
+          "id": "l0027",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            472,
+            1058,
+            512,
+            1092
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.452691466,
+          "candidate_rank": 180,
+          "original_class_id": 7,
+          "candidate_id": 31,
+          "mask_row": 31,
+          "mask_nonzero": 14,
+          "model_label": "figure_title",
+          "original_bbox": [
+            472.92868,
+            1058.568115,
+            511.994965,
+            1091.850586
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0027",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0027"
+          ],
+          "bbox": [
+            472,
+            1058,
+            512,
+            1092
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 31
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 25,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c25-source-crop.png",
+      "candidate": {
+        "candidate_id": 25,
+        "mask_row": 25,
+        "class_id": 7,
+        "model_label": "figure_title",
+        "score": 0.614651978,
+        "original_bbox": [
+          740.004395,
+          1059.56763,
+          779.608459,
+          1090.84192
+        ],
+        "rank": 184,
+        "mask_nonzero": 14,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c25.png",
+        "clamped": false,
+        "crop_bbox": [
+          740,
+          1059,
+          780,
+          1091
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "figure_title",
+          "id": "l0029",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            740,
+            1059,
+            780,
+            1091
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.614651978,
+          "candidate_rank": 184,
+          "original_class_id": 7,
+          "candidate_id": 25,
+          "mask_row": 25,
+          "mask_nonzero": 14,
+          "model_label": "figure_title",
+          "original_bbox": [
+            740.004395,
+            1059.567627,
+            779.608459,
+            1090.841919
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0029",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0029"
+          ],
+          "bbox": [
+            740,
+            1059,
+            780,
+            1091
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 25
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 30,
+      "verdict": "keep_valid_short_label",
+      "reason": "选项 A–D 短标签与图形一一对应；尺寸小不构成删除依据。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c30-source-crop.png",
+      "candidate": {
+        "candidate_id": 30,
+        "mask_row": 30,
+        "class_id": 7,
+        "model_label": "figure_title",
+        "score": 0.473172218,
+        "original_bbox": [
+          1022.2467,
+          1059.0343,
+          1064.20532,
+          1091.4093
+        ],
+        "rank": 190,
+        "mask_nonzero": 15,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c30.png",
+        "clamped": false,
+        "crop_bbox": [
+          1022,
+          1059,
+          1065,
+          1092
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "figure_title",
+          "id": "l0030",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1022,
+            1059,
+            1065,
+            1092
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.473172218,
+          "candidate_rank": 190,
+          "original_class_id": 7,
+          "candidate_id": 30,
+          "mask_row": 30,
+          "mask_nonzero": 15,
+          "model_label": "figure_title",
+          "original_bbox": [
+            1022.246704,
+            1059.034302,
+            1064.205322,
+            1091.409302
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0030",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0030"
+          ],
+          "bbox": [
+            1022,
+            1059,
+            1065,
+            1092
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 30
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": 275,
+      "verdict": "mixed_content_do_not_skip",
+      "reason": "候选包含浅蓝背景与第19题的有效编号 (2)，不能删除整个框。该候选已被旧阈值筛选，当前无LayoutBlock/Region；这不是本票新增skip。",
+      "source_asset": "odb-03-original.jpg",
+      "source_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "crop_asset": "odb-03-c275-source-crop.png",
+      "candidate": {
+        "candidate_id": 275,
+        "mask_row": 275,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.0198634062,
+        "original_bbox": [
+          131.013855,
+          1337.07385,
+          179.832642,
+          1392.81384
+        ],
+        "rank": 221,
+        "mask_nonzero": 27,
+        "selected": false,
+        "filter_reason": "below_score_threshold",
+        "handling_reason": null,
+        "mask_asset": null,
+        "clamped": false,
+        "crop_bbox": null,
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [],
+      "regions": [],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-03/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-03/p0001-fetch_name_2.rle.gz",
+      "mask_row": 275
+    },
+    {
+      "page": "odb-07",
+      "candidate_id": 9,
+      "verdict": "keep_valid_illustration",
+      "reason": "数学阅读页的人物肖像及其图框，与文章人物介绍相关；不是装饰误检。",
+      "source_asset": "odb-07-original.jpg",
+      "source_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "crop_asset": "odb-07-c9-source-crop.png",
+      "candidate": {
+        "candidate_id": 9,
+        "mask_row": 9,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.635730982,
+        "original_bbox": [
+          142.496979,
+          1084.95996,
+          651.495544,
+          1468.77002
+        ],
+        "rank": 197,
+        "mask_nonzero": 1833,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c9.png",
+        "clamped": false,
+        "crop_bbox": [
+          142,
+          1084,
+          652,
+          1469
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            142,
+            1084,
+            652,
+            1469
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.635730982,
+          "candidate_rank": 197,
+          "original_class_id": 14,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 1833,
+          "model_label": "image",
+          "original_bbox": [
+            142.496979,
+            1084.959961,
+            651.495544,
+            1468.77002
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            142,
+            1084,
+            652,
+            1469
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-07/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-07/p0001-fetch_name_2.rle.gz",
+      "mask_row": 9
+    },
+    {
+      "page": "odb-07",
+      "candidate_id": 5,
+      "verdict": "keep_valid_illustration",
+      "reason": "数学阅读页的人物肖像及其图框，与文章人物介绍相关；不是装饰误检。",
+      "source_asset": "odb-07-original.jpg",
+      "source_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "crop_asset": "odb-07-c5-source-crop.png",
+      "candidate": {
+        "candidate_id": 5,
+        "mask_row": 5,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.771836221,
+        "original_bbox": [
+          531.743713,
+          312.196411,
+          974.86261,
+          694.315674
+        ],
+        "rank": 69,
+        "mask_nonzero": 1641,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c5.png",
+        "clamped": false,
+        "crop_bbox": [
+          531,
+          312,
+          975,
+          695
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            531,
+            312,
+            975,
+            695
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.771836221,
+          "candidate_rank": 69,
+          "original_class_id": 14,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 1641,
+          "model_label": "image",
+          "original_bbox": [
+            531.743713,
+            312.196411,
+            974.86261,
+            694.315674
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            531,
+            312,
+            975,
+            695
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-07/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-07/p0001-fetch_name_2.rle.gz",
+      "mask_row": 5
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 2,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c2-source-crop.png",
+      "candidate": {
+        "candidate_id": 2,
+        "mask_row": 2,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.924460709,
+        "original_bbox": [
+          307.262543,
+          656.747314,
+          500.16153,
+          809.218567
+        ],
+        "rank": 100,
+        "mask_nonzero": 285,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c2.png",
+        "clamped": false,
+        "crop_bbox": [
+          307,
+          656,
+          501,
+          810
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            307,
+            656,
+            501,
+            810
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.924460709,
+          "candidate_rank": 100,
+          "original_class_id": 14,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 285,
+          "model_label": "image",
+          "original_bbox": [
+            307.262543,
+            656.747314,
+            500.16153,
+            809.218567
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            307,
+            656,
+            501,
+            810
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 2
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 20,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c20-source-crop.png",
+      "candidate": {
+        "candidate_id": 20,
+        "mask_row": 20,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.861567438,
+        "original_bbox": [
+          877.144226,
+          390.753723,
+          1290.47253,
+          560.609741
+        ],
+        "rank": 80,
+        "mask_nonzero": 694,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c20.png",
+        "clamped": false,
+        "crop_bbox": [
+          877,
+          390,
+          1291,
+          561
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            877,
+            390,
+            1291,
+            561
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.861567438,
+          "candidate_rank": 80,
+          "original_class_id": 14,
+          "candidate_id": 20,
+          "mask_row": 20,
+          "mask_nonzero": 694,
+          "model_label": "image",
+          "original_bbox": [
+            877.144226,
+            390.753723,
+            1290.472534,
+            560.609741
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            877,
+            390,
+            1291,
+            561
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 20
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 11,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c11-source-crop.png",
+      "candidate": {
+        "candidate_id": 11,
+        "mask_row": 11,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.892871976,
+        "original_bbox": [
+          799.453857,
+          659.684509,
+          946.666443,
+          809.446533
+        ],
+        "rank": 118,
+        "mask_nonzero": 221,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c11.png",
+        "clamped": false,
+        "crop_bbox": [
+          799,
+          659,
+          947,
+          810
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            799,
+            659,
+            947,
+            810
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.892871976,
+          "candidate_rank": 118,
+          "original_class_id": 14,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 221,
+          "model_label": "image",
+          "original_bbox": [
+            799.453857,
+            659.684509,
+            946.666443,
+            809.446533
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            799,
+            659,
+            947,
+            810
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 11
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 4,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c4-source-crop.png",
+      "candidate": {
+        "candidate_id": 4,
+        "mask_row": 4,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.924047112,
+        "original_bbox": [
+          1001.0589,
+          658.221802,
+          1196.17566,
+          808.363892
+        ],
+        "rank": 126,
+        "mask_nonzero": 284,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c4.png",
+        "clamped": false,
+        "crop_bbox": [
+          1001,
+          658,
+          1197,
+          809
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1001,
+            658,
+            1197,
+            809
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.924047112,
+          "candidate_rank": 126,
+          "original_class_id": 14,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 284,
+          "model_label": "image",
+          "original_bbox": [
+            1001.058899,
+            658.221802,
+            1196.175659,
+            808.363892
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            1001,
+            658,
+            1197,
+            809
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 4
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 3,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c3-source-crop.png",
+      "candidate": {
+        "candidate_id": 3,
+        "mask_row": 3,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.924307585,
+        "original_bbox": [
+          553.043396,
+          660.940552,
+          750.416992,
+          806.924316
+        ],
+        "rank": 109,
+        "mask_nonzero": 283,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c3.png",
+        "clamped": false,
+        "crop_bbox": [
+          553,
+          660,
+          751,
+          807
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            553,
+            660,
+            751,
+            807
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.924307585,
+          "candidate_rank": 109,
+          "original_class_id": 14,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 283,
+          "model_label": "image",
+          "original_bbox": [
+            553.043396,
+            660.940552,
+            750.416992,
+            806.924316
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            553,
+            660,
+            751,
+            807
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 3
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 6,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c6-source-crop.png",
+      "candidate": {
+        "candidate_id": 6,
+        "mask_row": 6,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.913495779,
+        "original_bbox": [
+          331.759155,
+          1072.59009,
+          516.880737,
+          1211.33618
+        ],
+        "rank": 141,
+        "mask_nonzero": 234,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c6.png",
+        "clamped": false,
+        "crop_bbox": [
+          331,
+          1072,
+          517,
+          1212
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0016",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            331,
+            1072,
+            517,
+            1212
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.913495779,
+          "candidate_rank": 141,
+          "original_class_id": 14,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 234,
+          "model_label": "image",
+          "original_bbox": [
+            331.759155,
+            1072.590088,
+            516.880737,
+            1211.336182
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0016",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0016"
+          ],
+          "bbox": [
+            331,
+            1072,
+            517,
+            1212
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 6
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 12,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c12-source-crop.png",
+      "candidate": {
+        "candidate_id": 12,
+        "mask_row": 12,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.892554104,
+        "original_bbox": [
+          666.278687,
+          1081.90686,
+          763.488953,
+          1173.26575
+        ],
+        "rank": 147,
+        "mask_nonzero": 88,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c12.png",
+        "clamped": false,
+        "crop_bbox": [
+          666,
+          1081,
+          764,
+          1174
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0018",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            666,
+            1081,
+            764,
+            1174
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.892554104,
+          "candidate_rank": 147,
+          "original_class_id": 14,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 88,
+          "model_label": "image",
+          "original_bbox": [
+            666.278687,
+            1081.90686,
+            763.488953,
+            1173.265747
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0018",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0018"
+          ],
+          "bbox": [
+            666,
+            1081,
+            764,
+            1174
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 12
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 8,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c8-source-crop.png",
+      "candidate": {
+        "candidate_id": 8,
+        "mask_row": 8,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.904541135,
+        "original_bbox": [
+          834.026001,
+          1081.51379,
+          931.165649,
+          1173.49548
+        ],
+        "rank": 159,
+        "mask_nonzero": 81,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c8.png",
+        "clamped": false,
+        "crop_bbox": [
+          834,
+          1081,
+          932,
+          1174
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0019",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            834,
+            1081,
+            932,
+            1174
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.904541135,
+          "candidate_rank": 159,
+          "original_class_id": 14,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 81,
+          "model_label": "image",
+          "original_bbox": [
+            834.026001,
+            1081.513794,
+            931.165649,
+            1173.495483
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0019",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0019"
+          ],
+          "bbox": [
+            834,
+            1081,
+            932,
+            1174
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 8
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 10,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c10-source-crop.png",
+      "candidate": {
+        "candidate_id": 10,
+        "mask_row": 10,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.897823691,
+        "original_bbox": [
+          1005.04773,
+          1080.74597,
+          1104.11646,
+          1174.19446
+        ],
+        "rank": 171,
+        "mask_nonzero": 88,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c10.png",
+        "clamped": false,
+        "crop_bbox": [
+          1005,
+          1080,
+          1105,
+          1175
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0017",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1005,
+            1080,
+            1105,
+            1175
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.897823691,
+          "candidate_rank": 171,
+          "original_class_id": 14,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 88,
+          "model_label": "image",
+          "original_bbox": [
+            1005.047729,
+            1080.745972,
+            1104.116455,
+            1174.194458
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0017",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0017"
+          ],
+          "bbox": [
+            1005,
+            1080,
+            1105,
+            1175
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 10
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 9,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c9-source-crop.png",
+      "candidate": {
+        "candidate_id": 9,
+        "mask_row": 9,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.904221058,
+        "original_bbox": [
+          332.222809,
+          1262.66504,
+          519.861694,
+          1407.5437
+        ],
+        "rank": 186,
+        "mask_nonzero": 260,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c9.png",
+        "clamped": false,
+        "crop_bbox": [
+          332,
+          1262,
+          520,
+          1408
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0024",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            332,
+            1262,
+            520,
+            1408
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.904221058,
+          "candidate_rank": 186,
+          "original_class_id": 14,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 260,
+          "model_label": "image",
+          "original_bbox": [
+            332.222809,
+            1262.665039,
+            519.861694,
+            1407.543701
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0024",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0024"
+          ],
+          "bbox": [
+            332,
+            1262,
+            520,
+            1408
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 9
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 22,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c22-source-crop.png",
+      "candidate": {
+        "candidate_id": 22,
+        "mask_row": 22,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.857714593,
+        "original_bbox": [
+          664.096375,
+          1277.15588,
+          762.596069,
+          1371.47449
+        ],
+        "rank": 196,
+        "mask_nonzero": 90,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c22.png",
+        "clamped": false,
+        "crop_bbox": [
+          664,
+          1277,
+          763,
+          1372
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0025",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            664,
+            1277,
+            763,
+            1372
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.857714593,
+          "candidate_rank": 196,
+          "original_class_id": 14,
+          "candidate_id": 22,
+          "mask_row": 22,
+          "mask_nonzero": 90,
+          "model_label": "image",
+          "original_bbox": [
+            664.096375,
+            1277.155884,
+            762.596069,
+            1371.474487
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0025",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0025"
+          ],
+          "bbox": [
+            664,
+            1277,
+            763,
+            1372
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 22
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 14,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c14-source-crop.png",
+      "candidate": {
+        "candidate_id": 14,
+        "mask_row": 14,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.882229924,
+        "original_bbox": [
+          834.744751,
+          1277.75317,
+          932.459778,
+          1371.62329
+        ],
+        "rank": 208,
+        "mask_nonzero": 81,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c14.png",
+        "clamped": false,
+        "crop_bbox": [
+          834,
+          1277,
+          933,
+          1372
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0026",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            834,
+            1277,
+            933,
+            1372
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.882229924,
+          "candidate_rank": 208,
+          "original_class_id": 14,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 81,
+          "model_label": "image",
+          "original_bbox": [
+            834.744751,
+            1277.753174,
+            932.459778,
+            1371.623291
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0026",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0026"
+          ],
+          "bbox": [
+            834,
+            1277,
+            933,
+            1372
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 14
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 17,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c17-source-crop.png",
+      "candidate": {
+        "candidate_id": 17,
+        "mask_row": 17,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.876070142,
+        "original_bbox": [
+          1005.63684,
+          1277.19873,
+          1104.63,
+          1371.41699
+        ],
+        "rank": 217,
+        "mask_nonzero": 85,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c17.png",
+        "clamped": false,
+        "crop_bbox": [
+          1005,
+          1277,
+          1105,
+          1372
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0027",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1005,
+            1277,
+            1105,
+            1372
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.876070142,
+          "candidate_rank": 217,
+          "original_class_id": 14,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 85,
+          "model_label": "image",
+          "original_bbox": [
+            1005.636841,
+            1277.19873,
+            1104.630005,
+            1371.416992
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0027",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0027"
+          ],
+          "bbox": [
+            1005,
+            1277,
+            1105,
+            1372
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 17
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 7,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c7-source-crop.png",
+      "candidate": {
+        "candidate_id": 7,
+        "mask_row": 7,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.907661736,
+        "original_bbox": [
+          332.295898,
+          1459.7301,
+          519.582764,
+          1603.21057
+        ],
+        "rank": 237,
+        "mask_nonzero": 252,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c7.png",
+        "clamped": false,
+        "crop_bbox": [
+          332,
+          1459,
+          520,
+          1604
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0032",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            332,
+            1459,
+            520,
+            1604
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.907661736,
+          "candidate_rank": 237,
+          "original_class_id": 14,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 252,
+          "model_label": "image",
+          "original_bbox": [
+            332.295898,
+            1459.730103,
+            519.582764,
+            1603.210571
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0032",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0032"
+          ],
+          "bbox": [
+            332,
+            1459,
+            520,
+            1604
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 7
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 19,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c19-source-crop.png",
+      "candidate": {
+        "candidate_id": 19,
+        "mask_row": 19,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.871634603,
+        "original_bbox": [
+          665.660278,
+          1474.71521,
+          764.7771,
+          1568.08557
+        ],
+        "rank": 240,
+        "mask_nonzero": 90,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c19.png",
+        "clamped": false,
+        "crop_bbox": [
+          665,
+          1474,
+          765,
+          1569
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0033",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            665,
+            1474,
+            765,
+            1569
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.871634603,
+          "candidate_rank": 240,
+          "original_class_id": 14,
+          "candidate_id": 19,
+          "mask_row": 19,
+          "mask_nonzero": 90,
+          "model_label": "image",
+          "original_bbox": [
+            665.660278,
+            1474.71521,
+            764.7771,
+            1568.085571
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0033",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0033"
+          ],
+          "bbox": [
+            665,
+            1474,
+            765,
+            1569
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 19
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 13,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c13-source-crop.png",
+      "candidate": {
+        "candidate_id": 13,
+        "mask_row": 13,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.891972601,
+        "original_bbox": [
+          834.583496,
+          1474.49146,
+          933.807434,
+          1567.59229
+        ],
+        "rank": 248,
+        "mask_nonzero": 86,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c13.png",
+        "clamped": false,
+        "crop_bbox": [
+          834,
+          1474,
+          934,
+          1568
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0034",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            834,
+            1474,
+            934,
+            1568
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.891972601,
+          "candidate_rank": 248,
+          "original_class_id": 14,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 86,
+          "model_label": "image",
+          "original_bbox": [
+            834.583496,
+            1474.491455,
+            933.807434,
+            1567.592285
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0034",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0034"
+          ],
+          "bbox": [
+            834,
+            1474,
+            934,
+            1568
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 13
+    },
+    {
+      "page": "odb-08",
+      "candidate_id": 15,
+      "verdict": "keep_valid_illustration",
+      "reason": "教材中的展开图、立体图或图中文字，是教学任务有效内容；浅蓝/绿色/黄色背景与小尺寸不能授权删除。",
+      "source_asset": "odb-08-original.jpg",
+      "source_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "crop_asset": "odb-08-c15-source-crop.png",
+      "candidate": {
+        "candidate_id": 15,
+        "mask_row": 15,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.882212639,
+        "original_bbox": [
+          1005.97333,
+          1474.90674,
+          1105.49268,
+          1567.94971
+        ],
+        "rank": 257,
+        "mask_nonzero": 82,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c15.png",
+        "clamped": false,
+        "crop_bbox": [
+          1005,
+          1474,
+          1106,
+          1568
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0035",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1005,
+            1474,
+            1106,
+            1568
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.882212639,
+          "candidate_rank": 257,
+          "original_class_id": 14,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 82,
+          "model_label": "image",
+          "original_bbox": [
+            1005.973328,
+            1474.906738,
+            1105.492676,
+            1567.949707
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0035",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0035"
+          ],
+          "bbox": [
+            1005,
+            1474,
+            1106,
+            1568
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-08/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-08/p0001-fetch_name_2.rle.gz",
+      "mask_row": 15
+    },
+    {
+      "page": "odb-13",
+      "candidate_id": 6,
+      "verdict": "keep_valid_illustration",
+      "reason": "整页题干第27题(4)明确引用图(a)/(b)表示沸腾前后气泡，不是重复纹理装饰或水印。",
+      "source_asset": "odb-13-original.jpg",
+      "source_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "crop_asset": "odb-13-c6-source-crop.png",
+      "candidate": {
+        "candidate_id": 6,
+        "mask_row": 6,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.934235394,
+        "original_bbox": [
+          1692.08411,
+          307.896973,
+          1844.05054,
+          489.324341
+        ],
+        "rank": 130,
+        "mask_nonzero": 199,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c6.png",
+        "clamped": false,
+        "crop_bbox": [
+          1692,
+          307,
+          1845,
+          490
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1692,
+            307,
+            1845,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.934235394,
+          "candidate_rank": 130,
+          "original_class_id": 14,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 199,
+          "model_label": "image",
+          "original_bbox": [
+            1692.084106,
+            307.896973,
+            1844.050537,
+            489.324341
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            1692,
+            307,
+            1845,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-13/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-13/p0001-fetch_name_2.rle.gz",
+      "mask_row": 6
+    },
+    {
+      "page": "odb-13",
+      "candidate_id": 7,
+      "verdict": "keep_valid_illustration",
+      "reason": "整页题干第27题(4)明确引用图(a)/(b)表示沸腾前后气泡，不是重复纹理装饰或水印。",
+      "source_asset": "odb-13-original.jpg",
+      "source_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "crop_asset": "odb-13-c7-source-crop.png",
+      "candidate": {
+        "candidate_id": 7,
+        "mask_row": 7,
+        "class_id": 14,
+        "model_label": "image",
+        "score": 0.929754138,
+        "original_bbox": [
+          1907.61462,
+          306.472046,
+          2062.99902,
+          489.293579
+        ],
+        "rank": 140,
+        "mask_nonzero": 199,
+        "selected": true,
+        "filter_reason": null,
+        "handling_reason": null,
+        "mask_asset": "assets/p0001-mask-c7.png",
+        "clamped": false,
+        "crop_bbox": [
+          1907,
+          306,
+          2063,
+          490
+        ],
+        "recognition_crop_bbox": null,
+        "crop_expansion_reason": null
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "image",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1907,
+            306,
+            2063,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.929754138,
+          "candidate_rank": 140,
+          "original_class_id": 14,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 199,
+          "model_label": "image",
+          "original_bbox": [
+            1907.614624,
+            306.472046,
+            2062.999023,
+            489.293579
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            1907,
+            306,
+            2063,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "model_evidence": "../../../docs/issue-28/evidence/runs/odb-13/document.json.gz",
+      "mask_evidence": "../../../docs/issue-28/evidence/runs/odb-13/p0001-fetch_name_2.rle.gz",
+      "mask_row": 7
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": null,
+      "layout_blocks": [],
+      "regions": [],
+      "class_id": null,
+      "score": null,
+      "rank": null,
+      "mask_row": null,
+      "source_asset": "odb-03-original.jpg",
+      "crop_asset": "odb-03-background-bottom.png",
+      "observation_bbox": [
+        510,
+        1765,
+        620,
+        1870
+      ],
+      "verdict": "confirmed_background_without_standalone_selected_candidate",
+      "reason": "与c34及本页其他位置相同的浅蓝背景标志；该位置没有独立选中的对应候选。不创建虚构LayoutBlock/Region，不修改包含它的有效内容。"
+    },
+    {
+      "page": "odb-03",
+      "candidate_id": null,
+      "layout_blocks": [],
+      "regions": [],
+      "class_id": null,
+      "score": null,
+      "rank": null,
+      "mask_row": null,
+      "source_asset": "odb-03-original.jpg",
+      "crop_asset": "odb-03-background-right.png",
+      "observation_bbox": [
+        1250,
+        405,
+        1370,
+        505
+      ],
+      "verdict": "confirmed_background_without_standalone_selected_candidate",
+      "reason": "与c34及本页其他位置相同的浅蓝背景标志；该位置没有独立选中的对应候选。不创建虚构LayoutBlock/Region，不修改包含它的有效内容。"
+    }
+  ]
+}

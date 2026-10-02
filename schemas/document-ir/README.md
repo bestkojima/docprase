@@ -20,6 +20,9 @@
 | 1.9 | image / pdf | [image](document-ir-1.9-image.schema.json)、[pdf](document-ir-1.9-pdf.schema.json) | [image](../../docs/issue-26/document-ir-1.9-image.schema.json)、[pdf](../../docs/issue-26/document-ir-1.9-pdf.schema.json) |
 | 1.10 | image / pdf | [image](document-ir-1.10-image.schema.json)、[pdf](document-ir-1.10-pdf.schema.json) | 当前标签流水线契约 |
 | 1.11 | image / pdf | [image](document-ir-1.11-image.schema.json)、[pdf](document-ir-1.11-pdf.schema.json) | [公式区域混合内容](../../docs/issue-27/vlm-postprocess-fix.md) |
+| 1.12 | image / pdf | [image](document-ir-1.12-image.schema.json)、[pdf](document-ir-1.12-pdf.schema.json) | [候选显式复核](../../docs/issue-29/README.md) |
+
+1.12 在启用候选复核时记录原页、候选绑定、判断理由、结果和证据资源；失配记录不执行删除。未启用时继续生成原有版本。
 
 1.11 保留 `type=formula` 与单一 Region。单表达式仍为 `format=latex`；含完整数学片段和说明的区域为 `format=markdown`，`text` 保存原始识别文字及分隔符，顺序不变。混合内容的 `display=false` 表示块级不再统一包裹，每个数学片段由自身分隔符决定行内/显示模式。仅普通文字、损坏数学或未完成生成不会因此成为正常公式。首次导出、重新导出均核验保存的识别文字与展示内容一致。
 
@@ -31,7 +34,7 @@
 sha256sum -c schemas/document-ir/SHA256SUMS
 ```
 
-[SHA 清单](SHA256SUMS) 覆盖 19 份稳定契约及 15 份历史来源。1.0～1.9 副本与历史来源的哈希相同，`$id` 中的原 Issue URL 也保留；该元数据身份不要求读取历史目录。CMake 将稳定文件嵌入 CLI，JSON 重新导出在运行时无需再读取这些源文件。
+[SHA 清单](SHA256SUMS) 覆盖 21 份稳定契约及 15 份历史来源。1.0～1.9 副本与历史来源的哈希相同，`$id` 中的原 Issue URL 也保留；该元数据身份不要求读取历史目录。CMake 将稳定文件嵌入 CLI，JSON 重新导出在运行时无需再读取这些源文件。
 
 ## 维护约定
 

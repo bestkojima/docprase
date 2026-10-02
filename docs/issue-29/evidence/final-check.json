@@ -1,0 +1,8 @@
+{
+  "real_pages": 4,
+  "replayed_pages": 20,
+  "ctest": "34/34",
+  "python_unittest": "46/46",
+  "final_source_and_runtime_hashes_verified": true,
+  "policy": "explicit-candidate-review-v1"
+}

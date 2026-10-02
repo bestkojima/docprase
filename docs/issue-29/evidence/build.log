@@ -1,0 +1,28 @@
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/dr/project/docprase/build/issue29
+[  4%] Built target dococr_layout_jpeg_decode_probe
+[  8%] Built target dococr_layout_mnn_probe
+[ 13%] Built target dococr_issue18_token_probe
+[ 17%] Built target dococr_ovis_same_instance_probe
+[ 19%] Building CXX object CMakeFiles/dococr_core.dir/src/core.cpp.o
+[ 21%] Linking CXX static library libdococr_core.a
+[ 52%] Built target dococr_core
+[ 56%] Linking CXX executable dococr_visual_adaptation_probe
+[ 56%] Linking CXX executable dococr_layout_preprocess_probe
+[ 60%] Linking CXX shared library libdococr_c.so
+[ 60%] Linking CXX shared library libdococr_c_test.so
+[ 65%] Built target dococr_layout_preprocess_probe
+[ 65%] Built target dococr_visual_adaptation_probe
+[ 69%] Built target dococr_c_test
+[ 78%] Built target dococr_c
+[ 80%] Linking CXX executable dococr_contract_test
+[ 84%] Building CXX object CMakeFiles/dococr_cli_fixture.dir/src/schema_validator.cpp.o
+[ 84%] Building CXX object CMakeFiles/dococr_cli_fixture.dir/src/reexport.cpp.o
+[ 86%] Building CXX object CMakeFiles/dococr_cli.dir/src/schema_validator.cpp.o
+[ 89%] Building CXX object CMakeFiles/dococr_cli.dir/src/reexport.cpp.o
+[ 91%] Built target dococr_contract_test
+[ 93%] Linking CXX executable dococr_cli_fixture
+[ 95%] Linking CXX executable dococr_cli
+[ 97%] Built target dococr_cli_fixture
+[100%] Built target dococr_cli

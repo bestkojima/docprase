@@ -32,3 +32,5 @@ ef3bdfef5a4e61decc257a43ab0b968a397695e643f21f68edb9302709837e19  docs/issue-8/d
 679ff15cc9d5fbfa499ebd491a0d4b83d785cd49b94bd13c02efd5d20bbbed30  schemas/document-ir/document-ir-1.10-pdf.schema.json
 ccdc4d9807850f4cc8c99efc05cbe848f301074c301ad950fe29960943949f94  schemas/document-ir/document-ir-1.11-image.schema.json
 fd93ae3b3191a5dc603d560f2bf5226b82680cedcd4d84afc03bd62f1bf37232  schemas/document-ir/document-ir-1.11-pdf.schema.json
+94f5a4f0166029db5a3dfc22407764c796ad322b5d8b32beb270757eb1c67f58  schemas/document-ir/document-ir-1.12-image.schema.json
+225de26fc1c3eec0cde5e9c3defb2f6f05e4cbaacdaf0bd0c43cf56409c60811  schemas/document-ir/document-ir-1.12-pdf.schema.json
