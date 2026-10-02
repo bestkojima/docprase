@@ -267,8 +267,12 @@ void validate_recognition(const Json& block, const std::string& where) {
         budget += config.at("generation_timeout_ms").get<uint64_t>();
         generation_ms += output.at("generation_elapsed_ms").get<uint64_t>();
         if (i == 0) {
-            require(attempt.at("correction") == "initial" && config.at("visual_min_pixels") == 65536 &&
-                config.at("visual_max_pixels") == 313600, where + " 首次尝试配置无效");
+            const bool legacy_budget = config.at("visual_min_pixels") == 65536 &&
+                config.at("visual_max_pixels") == 313600;
+            const bool formula_budget = block.at("type") == "formula" &&
+                config.at("visual_min_pixels") == 262144 && config.at("visual_max_pixels") == 1120000;
+            require(attempt.at("correction") == "initial" && (legacy_budget || formula_budget),
+                    where + " 首次尝试配置无效");
         } else {
             const auto& previous = attempts[i - 1];
             const auto& before = previous.at("config");

@@ -1,0 +1,206 @@
+{
+  "scope": "#31 具体困难页：区分转写与输入/区域规划并修复逻辑",
+  "base_commit": "6107960",
+  "reference_commit": "ffb64904d23708863ff5b8da312a5cbd52a7f462",
+  "controls": [
+    {
+      "name": "formula-original",
+      "command": [
+        "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+        "/home/dr/project/docprase/output/issue31-defect-recheck-20261003/evaluation/candidate-07/job/assets/p0001-b0006.png",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/formula-original",
+        "65536",
+        "313600",
+        "4096",
+        "1",
+        "0"
+      ],
+      "returncode": 0,
+      "seconds": 5.567612098006066
+    },
+    {
+      "name": "formula-more-pixels",
+      "command": [
+        "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+        "/home/dr/project/docprase/output/issue31-defect-recheck-20261003/evaluation/candidate-07/job/assets/p0001-b0006.png",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/formula-more-pixels",
+        "262144",
+        "1120000",
+        "4096",
+        "1",
+        "0"
+      ],
+      "returncode": 0,
+      "seconds": 7.158058803004678
+    },
+    {
+      "name": "text-clipped",
+      "command": [
+        "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+        "/home/dr/project/docprase/output/issue31-defect-recheck-20261003/evaluation/candidate-05/job/assets/p0001-b0012.png",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/text-clipped",
+        "65536",
+        "313600",
+        "4096",
+        "1",
+        "0"
+      ],
+      "returncode": 0,
+      "seconds": 11.784959502983838
+    },
+    {
+      "name": "text-complete-top",
+      "command": [
+        "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/complete-top-line.png",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/text-complete-top",
+        "65536",
+        "313600",
+        "4096",
+        "1",
+        "0"
+      ],
+      "returncode": 0,
+      "seconds": 11.919602056994336
+    },
+    {
+      "name": "threshold02-en_jee",
+      "command": [
+        "/home/dr/project/docprase/output/issue31-defect-recheck-20261003/candidate/runtime/dococr_cli",
+        "--config",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/threshold02-en_jee/config.json",
+        "--input",
+        "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346.jpg",
+        "--out",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/threshold02-en_jee/job"
+      ],
+      "returncode": 0,
+      "seconds": 31.034136278001824
+    },
+    {
+      "name": "threshold02-candidate-03",
+      "command": [
+        "/home/dr/project/docprase/output/issue31-defect-recheck-20261003/candidate/runtime/dococr_cli",
+        "--config",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/threshold02-candidate-03/config.json",
+        "--input",
+        "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+        "--out",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/threshold02-candidate-03/job"
+      ],
+      "returncode": 0,
+      "seconds": 108.36231219401816
+    },
+    {
+      "name": "inequality-original",
+      "command": [
+        "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+        "/home/dr/project/docprase/output/issue31-defect-recheck-20261003/evaluation/candidate-03/job/assets/p0001-b0031.png",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/inequality-original",
+        "65536",
+        "313600",
+        "4096",
+        "1",
+        "0"
+      ],
+      "returncode": 0,
+      "seconds": 12.31571602000622
+    },
+    {
+      "name": "inequality-more-pixels",
+      "command": [
+        "/home/dr/project/docprase/output/resize-sweep-20261002/resize_sweep_probe",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/probe-config.json",
+        "/home/dr/project/docprase/output/issue31-defect-recheck-20261003/evaluation/candidate-03/job/assets/p0001-b0031.png",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/prompt.txt",
+        "/home/dr/project/docprase/output/issue31-attribution-20261003/inequality-more-pixels",
+        "262144",
+        "1120000",
+        "4096",
+        "1",
+        "0"
+      ],
+      "returncode": 0,
+      "seconds": 9.733580013999017
+    }
+  ],
+  "raw_probes": {
+    "formula-more-pixels": {
+      "path": "output/issue31-attribution-20261003/formula-more-pixels/raw-0.txt",
+      "sha256": "eb8511e28d8c54b5c19bcdac6a52c5b81fa2d9de3cb7f69d979dad9ee158f04b",
+      "text": "$$ \\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{64})}{1-2}\\\\&=2^{64}-1.\\end{aligned} $$\n"
+    },
+    "formula-original": {
+      "path": "output/issue31-attribution-20261003/formula-original/raw-0.txt",
+      "sha256": "a235d2601d4fbe4ab455dc845b7c4ce48a4e30a571dc44f50d4753586fc00ec1",
+      "text": "$$ \\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{54})}{1-2}\\\\&=2^{54}-1.\\end{aligned} $$\n"
+    },
+    "inequality-more-pixels": {
+      "path": "output/issue31-attribution-20261003/inequality-more-pixels/raw-0.txt",
+      "sha256": "85a864fc06ed43d5c863d6d479fb64c508ca6bb174ab0b8b50f53a2dc217e8d8",
+      "text": "23.（10分）已知函数  $f(x)=\\left|x-\\frac{1}{2}\\right|+\\left|x+\\frac{1}{2}\\right|$，M 为不等式  $f(x)<2$ 的解集.\n\n(1) 求  $M$;\n\n(2) 证明：当  $a, b \\in M$ 时， $|a + b| < |1 + ab|$.\n"
+    },
+    "inequality-original": {
+      "path": "output/issue31-attribution-20261003/inequality-original/raw-0.txt",
+      "sha256": "eb90a243efa7cc1ba4f19fdf27cdba82bcb7f6248524c0b2424ddde16d7ffc28",
+      "text": "23.（10分）已知函数  $f(x)=\\left|x-\\frac{1}{2}\\right|+\\left|x+\\frac{1}{2}\\right|$，M 为不等式  $f(x)<2$ 的解集.\n\n（1）求  $M;$\n\n（2）证明：当  $a, b \\in M$ 时， $|a + b| < 1 + ab|$.\n"
+    },
+    "text-clipped": {
+      "path": "output/issue31-attribution-20261003/text-clipped/raw-0.txt",
+      "sha256": "763499a5bd489e38390d67b61bd1709fe96489ab8ca981a98801bf4d5a701a5e",
+      "text": "①当  $a \\geqslant 0$ 时， $f(x) \\geqslant 0$ 恒成立，此时  $f(x)$ 任 K 上早调递增，不仔任权值点。\n\n②当  $a > 0$ 时，令  $f'(x) > 0$，即  $x^2 - a > 0$，解得： $x < -\\sqrt{a}$ 或  $x > \\sqrt{a}$，\n\n令  $f'(x) < 0$，即  $x^2 - a < 0$，解得  $x \\in (-\\sqrt{a}, \\sqrt{a})$\n\n故此时  $f(x)$ 在  $(-\\infty, -\\sqrt{a})$ 递增，在  $(-\\sqrt{a}, \\sqrt{a})$ 递减，在  $(\\sqrt{a}, +\\infty)$ 递增，\n\n所以  $f(x)$ 在  $x = -\\sqrt{a}$ 时取得极大值，在  $x = \\sqrt{a}$ 时取得极小值，故此时极值点个数为 2，\n\n综上所述： $a \\leqslant 0$ 时， $f(x)$ 无极值点，\n"
+    },
+    "text-complete-top": {
+      "path": "output/issue31-attribution-20261003/text-complete-top/raw-0.txt",
+      "sha256": "8fb376ae41e9d3ba6905574ae1f33dac6a520c1b6111829b578891a91a809068",
+      "text": "①当 $a\\leqslant0$时， $f'(x)\\geqslant0$恒成立，此时 $f(x)$在R上单调递增，不存在极值点.\n\n②当 $a>0$时，令 $f'(x)>0$，即 $x^{2}-a>0$，解得： $x<-\\sqrt{a}$或 $x>\\sqrt{a}$，\n\n令  $f'(x)<0$，即  $x^{2}-a<0$，解得  $x\\in(-\\sqrt{a},\\sqrt{a})$\n\n故此时  $f(x)$ 在  $(-\\infty, -\\sqrt{a})$ 递增，在  $(-\\sqrt{a}, \\sqrt{a})$ 递减，在  $(\\sqrt{a}, +\\infty)$ 递增，\n\n所以  $f(x)$ 在  $x = -\\sqrt{a}$ 时取得极大值，在  $x = \\sqrt{a}$ 时取得极小值，故此时极值点个数为 2，\n\n综上所述:  $a \\leqslant 0$ 时,  $f(x)$ 无极值点,\n"
+    }
+  },
+  "validation": {
+    "ctest": {
+      "passed": 33,
+      "total": 33,
+      "seconds": 177.65
+    },
+    "python": {
+      "passed": 40,
+      "total": 40,
+      "seconds": 84.686
+    },
+    "public_cli_red_green": true
+  },
+  "logs": [
+    {
+      "path": ".scratch/issue31-attribution/planning-red.log",
+      "sha256": "a5d3c1f61c7eba382c614e64d77a784cdedb97bbc44890c227c2fbff3ec3876b"
+    },
+    {
+      "path": ".scratch/issue31-attribution/planning-green.log",
+      "sha256": "9e6ccc65ec88ea67c2ac120a12db25bc6e7c0b226b630b8cb08ec86284895f89"
+    },
+    {
+      "path": ".scratch/issue31-attribution/ctest-full.log",
+      "sha256": "b0dcf7a7ffbcf7607864050b9bd6f5fda098f3eacdaf295c7578dee028715ab2"
+    },
+    {
+      "path": ".scratch/issue31-attribution/unittest.log",
+      "sha256": "d61cf52d805682c6a5b6d2a4d5c25448691374509ddb05939a894fe0c8f97707"
+    }
+  ],
+  "limitations": [
+    "原阈值0.3下的低置信度漏问句和完整反应图仍未恢复，0.2仅为诊断对照",
+    "正文预算不变，完整正文中的漏绝对值符号仍可能存在",
+    "不是全量八项质量验收"
+  ],
+  "preexisting_region_structure_sha256": "661175e53d11f8ffec65f34b63b9c22bf60a4a11dd327afc21ec71871d4ba277"
+}

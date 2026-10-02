@@ -311,6 +311,10 @@ ReadingOrderEvidence arrange_reading_order(std::vector<Block>& blocks, int page_
         if (page_width < 64) continue;
         bool left = false, right = false;
         for (size_t i = 0; i < size; ++i) if (segment[i] == band) {
+            const auto purpose = layout_region_policy(blocks[i].original_class_id).purpose;
+            // Marginal labels cannot establish a second prose column.
+            if (purpose == LayoutPurpose::PageMarker || purpose == LayoutPurpose::Number ||
+                purpose == LayoutPurpose::Footnote || purpose == LayoutPurpose::Aside) continue;
             if (layout_geometry(blocks[i]).x1 <= page_width * 0.50) left = true;
             else if (layout_geometry(blocks[i]).x0 >= page_width * 0.50) right = true;
         }
@@ -633,6 +637,19 @@ double covered_fraction(Box outer, Box inner) {
     return double(width) * height / area;
 }
 
+// A detected line can straddle a paragraph's boundary. Preserve its complete
+// pixels in that paragraph instead of recognizing the clipped line twice.
+// This does not merge disjoint adjacent paragraphs or different layout classes.
+bool overlapping_text_line(const RawLayoutCandidate& paragraph, const RawLayoutCandidate& line) {
+    if (paragraph.class_id != 22 || line.class_id != 22 || paragraph.id == line.id) return false;
+    const Box p = paragraph.crop, l = line.crop;
+    const int pw = p.x1 - p.x0, ph = p.y1 - p.y0, lw = l.x1 - l.x0, lh = l.y1 - l.y0;
+    if (lh <= 0 || lw < 4 * lh || ph < 2 * lh || lw < .6 * pw || lw > 1.1 * pw) return false;
+    const int horizontal = std::min(p.x1, l.x1) - std::max(p.x0, l.x0);
+    return horizontal >= .9 * lw && covered_fraction(p, l) >= .4 &&
+        (l.y0 <= p.y0 || l.y1 >= p.y1);
+}
+
 int table_owner(const RawLayoutCandidate& child,
                 const std::vector<const RawLayoutCandidate*>& selected) {
     const std::string label = canonical_label(child.class_id);
@@ -881,6 +898,7 @@ void filter_layout_overlap(std::vector<RawLayoutCandidate>& records, const Image
         for (size_t j = i+1; j < records.size(); ++j) {
             auto& second = records[j];
             if (!second.selected || overlap_of_smaller(first.crop, second.crop) <= 0.7) continue;
+            if (overlapping_text_line(first, second) || overlapping_text_line(second, first)) continue;
             const std::string first_label = first.label, second_label = second.label;
             const bool table_child =
                 (first.class_id == 21 && (second_label == "text" || second_label == "formula") &&
@@ -1830,9 +1848,32 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
         ownership.push_back({candidate, owner,
             id('l', selected.size() + size_t(candidate->id) + 1), {}});
     }
+    std::vector<int> text_owners(records.size(), -1);
+    if (transcribe) for (const auto* child : selected) {
+        if (table_owners[size_t(child->id)] >= 0) continue;
+        int owner = -1, count = 0;
+        for (const auto* parent : selected) {
+            if (table_owners[size_t(parent->id)] >= 0 || !overlapping_text_line(*parent, *child)) continue;
+            owner = parent->id;
+            ++count;
+        }
+        if (count == 1) text_owners[size_t(child->id)] = owner;
+    }
+    // Parent heights strictly increase, so ownership cannot cycle. Flatten
+    // before constructing Regions, including formulas owned by an absorbed line.
+    auto text_root = [&](int owner) {
+        while (owner >= 0 && text_owners[size_t(owner)] >= 0) owner = text_owners[size_t(owner)];
+        return owner;
+    };
+    if (transcribe) for (const auto* child : selected) {
+        if (text_owners[size_t(child->id)] < 0) continue;
+        const int owner = text_root(child->id);
+        records[size_t(child->id)].handling_reason = "overlapping_text_owned_by_text";
+        ownership.push_back({child, owner, id('l', selected.size() + size_t(child->id) + 1), {}});
+    }
     if (transcribe) for (const auto* candidate : selected) {
         if (table_owners[size_t(candidate->id)] >= 0) continue;
-        int owner = inline_formula_owner(*candidate, selected, table_owners);
+        int owner = text_root(inline_formula_owner(*candidate, selected, table_owners));
         if (owner < 0) continue;
         auto& owned = records[size_t(candidate->id)];
         owned.handling_reason = "inline_formula_owned_by_text";

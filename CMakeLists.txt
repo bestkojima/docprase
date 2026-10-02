@@ -235,6 +235,9 @@ if(DOCOCR_BUILD_TESTS)
   add_test(NAME issue26_region_mapping COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue26_region_mapping.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME issue31_input_planning COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue31_input_planning.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME pdf_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/pdf_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME pdf_abi COMMAND ${Python3_EXECUTABLE}
