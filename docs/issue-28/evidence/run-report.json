@@ -1,0 +1,1026 @@
+{
+  "sources": {
+    "pipeline.yaml": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/configs/pipelines/PaddleOCR-VL-1.5.yaml",
+      "sha256": "f8d3b49965997e1934bde5433bb86e24c8061bcbe92ce31c47a2405c5e3264f5"
+    },
+    "predictor.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/layout_analysis/predictor.py",
+      "sha256": "e08b4347d79c029da1a4b592808629fb4a88f2a63e747ac15410191e4ff3ddf6"
+    },
+    "pipeline.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/pipelines/paddleocr_vl/pipeline.py",
+      "sha256": "32966d14aad6ac1bc043737c96352a4f0b4efcbead96f9354254dd4b9d1c6675"
+    },
+    "layout.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/layout_analysis/processors.py",
+      "sha256": "b9e0d53738cd9147b2b665a96b4cd38bef8668f75e9c85ba4b8826cd41f02ca2"
+    },
+    "detection.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/object_detection/processors.py",
+      "sha256": "de2bb4f14f01619435c65df09272d978619c045c915cba465990dc4c32ac3540"
+    },
+    "pipeline_utils.py": {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/pipelines/paddleocr_vl/uilts.py",
+      "sha256": "63bf7d0ccf03225dd6be582e2b25628283e2eed0ad0b1c7864e086e3b95f923a"
+    },
+    "inference.yml": {
+      "url": "https://huggingface.co/PaddlePaddle/PP-DocLayoutV3/resolve/241f8bdfc77a7c7bee915a5057aaee58c235a8d3/inference.yml",
+      "sha256": "506fcfac13b3b546ae40d7886b44126420f392adb694e3f8bb6a6286a1f90fdc",
+      "note": "model label metadata fetched separately; not versioned by PaddleX commit",
+      "revision": "241f8bdfc77a7c7bee915a5057aaee58c235a8d3"
+    }
+  },
+  "labels": [
+    "abstract",
+    "algorithm",
+    "aside_text",
+    "chart",
+    "content",
+    "display_formula",
+    "doc_title",
+    "figure_title",
+    "footer",
+    "footer_image",
+    "footnote",
+    "formula_number",
+    "header",
+    "header_image",
+    "image",
+    "inline_formula",
+    "number",
+    "paragraph_title",
+    "reference",
+    "reference_content",
+    "seal",
+    "table",
+    "text",
+    "vertical_text",
+    "vision_footnote"
+  ],
+  "production_changed": false,
+  "script_sha256": {
+    "issue28_audit.py": "074517a54b41f55b281880248eac4c7348bd01525bd5f4000ff1bff22bf31047",
+    "issue28_reference.py": "79c38e5653fb53a582e466bb1a4c43851bdc71b47823859843bff79620e9ad0c"
+  },
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/home/dr/project/docprase/.scratch/issue20-experiments-env/bin/python",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "opencv": "5.0.0",
+    "pillow": "12.3.0",
+    "shapely": "2.1.2"
+  },
+  "binaries": {
+    "build/dococr_cli": "542a6c53ea117972eff0ba7196c9fc7eefd324e6fa820294a3ec1c961bab8241",
+    "build/dococr_cli_fixture": "78b0c8ab724b4b810836bb77ec3078e1677378e7aa801c3c28c95c0a78825666",
+    "build/libdococr_c.so": "919443092e7948f4b9c150f81d882eea5fc06c917340da92a3c37a17fcfc1e1e",
+    "build/libdococr_c_test.so": "9cb430c933ae716c26190a1dc5ad332c0f58930c09dbe53cfc6ae302a4629aba"
+  },
+  "git_head": "ce0dbaed6faea125000f0ffcfbc4e7f114f9067d",
+  "working_tree_diff_sha256": "953f8ba0a666926bff5e17975fb3db54f3795ee4d777ce3d72c0d99189d68207",
+  "cases": {
+    "legal_table_child": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/legal_table_child/comparison.json",
+      "sha256": "783c90ed1cbcabcbdf5f0eacad6c0d97c9ebeb80c6ac9f7ec9c6e0ed41beb9c3",
+      "input": {
+        "rows": [
+          [
+            21,
+            0.95,
+            10,
+            10,
+            180,
+            180,
+            0
+          ],
+          [
+            22,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "status": "passed"
+    },
+    "legal_inline_formula": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/legal_inline_formula/comparison.json",
+      "sha256": "c1b6f8d548e062898c75a8fb06aa500cd387de19950a225fbcf05378aa452a9b",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            60,
+            0
+          ],
+          [
+            15,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "status": "passed"
+    },
+    "short_title": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/short_title/comparison.json",
+      "sha256": "8260867211fda5d092e28b37401170fa2301a01f735cd504b716b748258c55d4",
+      "input": {
+        "rows": [
+          [
+            17,
+            0.9,
+            10,
+            10,
+            90,
+            14,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": []
+      },
+      "status": "passed"
+    },
+    "legal_caption": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/legal_caption/comparison.json",
+      "sha256": "6b44df67fd0eabae45a6ba3f89c7317921bb7070a38b15a71bbe5f200937ab18",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            100,
+            0
+          ],
+          [
+            7,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "status": "passed"
+    },
+    "partial_containment": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/partial_containment/comparison.json",
+      "sha256": "9233cb6467833bdd0875d8b614b8e65db2c6a654727519bcd36ba925f48b5cb8",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            60,
+            0
+          ],
+          [
+            5,
+            0.9,
+            160,
+            20,
+            190,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0,
+          1
+        ]
+      },
+      "status": "passed"
+    },
+    "independent_formula": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/independent_formula/comparison.json",
+      "sha256": "3610db11acc2953dc44b626d8e31f609698f6771b19e3ec0c057c8373c3af0a0",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            180,
+            60,
+            0
+          ],
+          [
+            5,
+            0.9,
+            20,
+            90,
+            160,
+            130,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0,
+          1
+        ]
+      },
+      "status": "passed"
+    },
+    "page_boundary": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/page_boundary/comparison.json",
+      "sha256": "a27142822b55b201e01f27fdf302997b4584987c05d5995f60cfc6d7464124f7",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.9,
+            -1.4,
+            90.2,
+            40.3,
+            201,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "status": "passed"
+    },
+    "subpixel_width": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/subpixel_width/comparison.json",
+      "sha256": "a041b5a047d1c54b91c3e482107ebfafcd96ac829af9660ef177cf6059f2d1a1",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.9,
+            10.1,
+            10.1,
+            10.4,
+            20.4,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": []
+      },
+      "status": "passed"
+    },
+    "union_adjacent": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/union_adjacent/comparison.json",
+      "sha256": "8a7b0f9ae12ac1c8593eb21ed47d940d98f8f113392e80cb12ea7766aec4c637",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            90,
+            40,
+            0
+          ],
+          [
+            22,
+            0.9,
+            10,
+            42,
+            90,
+            72,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0,
+          1
+        ]
+      },
+      "status": "passed"
+    },
+    "nms_same_and_cross": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/nms_same_and_cross/comparison.json",
+      "sha256": "3627eccfe8eaac05ec80f6da2f21ff442d4ac03b2d5957e434260d40d4172f05",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.95,
+            10,
+            10,
+            90,
+            50,
+            0
+          ],
+          [
+            22,
+            0.9,
+            11,
+            10,
+            90,
+            50,
+            1
+          ],
+          [
+            17,
+            0.8,
+            10,
+            10,
+            90,
+            50,
+            2
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "status": "passed"
+    },
+    "score_boundary": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/score_boundary/comparison.json",
+      "sha256": "3e290e29255e1b9ccd581ccbd8da90468b445200530d366cbffa9da346580237",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.3,
+            10,
+            10,
+            90,
+            50,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": []
+      },
+      "status": "passed"
+    },
+    "large_page_image": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/large_page_image/comparison.json",
+      "sha256": "7012455e2cf024bf7351ab8e37da6910dd15c7ca7843a26ed048c9eb9cd3630f",
+      "input": {
+        "rows": [
+          [
+            14,
+            0.95,
+            0,
+            0,
+            200,
+            200,
+            0
+          ],
+          [
+            22,
+            0.9,
+            20,
+            20,
+            90,
+            50,
+            1
+          ]
+        ],
+        "local_selected": [
+          1
+        ],
+        "official_selected": [
+          1
+        ]
+      },
+      "status": "passed"
+    },
+    "display_formula_in_chart": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/display_formula_in_chart/comparison.json",
+      "sha256": "133582b29bd99a6be382815b183f8fe61d8ac5f160a9bdbbcb6b41ba89bd5b31",
+      "input": {
+        "rows": [
+          [
+            3,
+            0.95,
+            10,
+            10,
+            180,
+            180,
+            0
+          ],
+          [
+            5,
+            0.9,
+            20,
+            20,
+            80,
+            40,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "status": "passed"
+    },
+    "reference_skip": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/reference_skip/comparison.json",
+      "sha256": "2aebede1e6460e450fa9dc6882fc2876620c47789e5135a653d683ed240edeb0",
+      "input": {
+        "rows": [
+          [
+            18,
+            0.9,
+            10,
+            10,
+            90,
+            50,
+            0
+          ],
+          [
+            19,
+            0.8,
+            10,
+            60,
+            90,
+            100,
+            1
+          ]
+        ],
+        "local_selected": [
+          1
+        ],
+        "official_selected": [
+          1
+        ]
+      },
+      "status": "passed"
+    },
+    "rank_mask": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/rank_mask/comparison.json",
+      "sha256": "2a9696307343628b7ef197dd682d3d7aaac962ac2ced6a91d1695cd1ec830edd",
+      "input": {
+        "rows": [
+          [
+            22,
+            0.9,
+            10,
+            10,
+            90,
+            50,
+            2
+          ],
+          [
+            15,
+            0.8,
+            20,
+            20,
+            80,
+            40,
+            0
+          ],
+          [
+            17,
+            0.7,
+            100,
+            80,
+            180,
+            84,
+            1
+          ]
+        ],
+        "local_selected": [
+          0,
+          1,
+          2
+        ],
+        "official_selected": [
+          0
+        ]
+      },
+      "status": "passed"
+    },
+    "unknown_label": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/unknown_label/comparison.json",
+      "sha256": "65dd6e09c6d30e6e8fd9aa11e9f5a5fe10bedf8bc74efed8b3e8f597befc12bb",
+      "input": {
+        "rows": [
+          [
+            25,
+            0.9,
+            10,
+            10,
+            90,
+            50,
+            0
+          ]
+        ],
+        "local_selected": [
+          0
+        ],
+        "official_selected": null
+      },
+      "status": "passed"
+    },
+    "all_labels": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/all_labels/comparison.json",
+      "sha256": "68cf2ac674bc73388d9a62141a679ae669e6252ee24e39f34e11d3c9d511b3b2",
+      "input": {
+        "rows": [
+          [
+            0,
+            0.95,
+            5,
+            5,
+            35,
+            25,
+            0
+          ],
+          [
+            1,
+            0.949,
+            43,
+            5,
+            73,
+            25,
+            1
+          ],
+          [
+            2,
+            0.948,
+            81,
+            5,
+            111,
+            25,
+            2
+          ],
+          [
+            3,
+            0.947,
+            119,
+            5,
+            149,
+            25,
+            3
+          ],
+          [
+            4,
+            0.946,
+            157,
+            5,
+            187,
+            25,
+            4
+          ],
+          [
+            5,
+            0.945,
+            5,
+            43,
+            35,
+            63,
+            5
+          ],
+          [
+            6,
+            0.944,
+            43,
+            43,
+            73,
+            63,
+            6
+          ],
+          [
+            7,
+            0.943,
+            81,
+            43,
+            111,
+            63,
+            7
+          ],
+          [
+            8,
+            0.942,
+            119,
+            43,
+            149,
+            63,
+            8
+          ],
+          [
+            9,
+            0.941,
+            157,
+            43,
+            187,
+            63,
+            9
+          ],
+          [
+            10,
+            0.94,
+            5,
+            81,
+            35,
+            101,
+            10
+          ],
+          [
+            11,
+            0.939,
+            43,
+            81,
+            73,
+            101,
+            11
+          ],
+          [
+            12,
+            0.938,
+            81,
+            81,
+            111,
+            101,
+            12
+          ],
+          [
+            13,
+            0.9369999999999999,
+            119,
+            81,
+            149,
+            101,
+            13
+          ],
+          [
+            14,
+            0.9359999999999999,
+            157,
+            81,
+            187,
+            101,
+            14
+          ],
+          [
+            15,
+            0.9349999999999999,
+            5,
+            119,
+            35,
+            139,
+            15
+          ],
+          [
+            16,
+            0.9339999999999999,
+            43,
+            119,
+            73,
+            139,
+            16
+          ],
+          [
+            17,
+            0.9329999999999999,
+            81,
+            119,
+            111,
+            139,
+            17
+          ],
+          [
+            18,
+            0.9319999999999999,
+            119,
+            119,
+            149,
+            139,
+            18
+          ],
+          [
+            19,
+            0.9309999999999999,
+            157,
+            119,
+            187,
+            139,
+            19
+          ],
+          [
+            20,
+            0.9299999999999999,
+            5,
+            157,
+            35,
+            177,
+            20
+          ],
+          [
+            21,
+            0.9289999999999999,
+            43,
+            157,
+            73,
+            177,
+            21
+          ],
+          [
+            22,
+            0.9279999999999999,
+            81,
+            157,
+            111,
+            177,
+            22
+          ],
+          [
+            23,
+            0.9269999999999999,
+            119,
+            157,
+            149,
+            177,
+            23
+          ],
+          [
+            24,
+            0.9259999999999999,
+            157,
+            157,
+            187,
+            177,
+            24
+          ]
+        ],
+        "local_selected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "official_selected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "status": "passed"
+    }
+  },
+  "real": {
+    "issue19-reference": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/issue19-reference/comparison.json",
+      "sha256": "40dfd455c4b795d14fba78fe4a2cf545285797c0a8d8c5040ee56f2d8dcff881",
+      "image_path": "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346-pil-rgb.png",
+      "image_sha256": "3f092c959987cc81e83a68d554361d07fce95b08a003cb23ed0ae323e9cd4817",
+      "config_sha256": "a8cd9eed1369bb719d323a201a713daaba49ea3abf25a915035b5d80d387078c"
+    },
+    "odb-01": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-01/comparison.json",
+      "sha256": "d4334ec36bfe1db10ca22dc17eda27ddbe8d4cb5b806d17136bf365bec57f881",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+      "image_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-02": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-02/comparison.json",
+      "sha256": "5d9d3e322cd667c307f8a00d1054b928812edcf5923606746885acfdf92d40f7",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_96657786.pdf_0.jpg",
+      "image_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-03": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-03/comparison.json",
+      "sha256": "846a8bc69544bacadceba706c1711d1d88dee2101b4577f655f83094a824d658",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+      "image_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-04": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-04/comparison.json",
+      "sha256": "a316160f50f3ecc77d59685e72ef59dbf995fc9b3078deb1e2c73eb4f3d94d71",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_1564.jpg",
+      "image_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-05": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-05/comparison.json",
+      "sha256": "e9b357b6fbb26d89463ebd8e19e80c37ae114a4669c723623bb170791d79ad0d",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+      "image_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-06": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-06/comparison.json",
+      "sha256": "034311b11ddeba2f61bb8e0983f64856761ec52cdc5f094e1b4c82cd7c38a3ce",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_4065.jpg",
+      "image_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-07": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-07/comparison.json",
+      "sha256": "11df3cfc1d5a3b6468009ee6f7d49ab9954fc64d662d00a5049d5d9aa9ed8edd",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+      "image_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-08": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-08/comparison.json",
+      "sha256": "19a3c8c099cafdb5189e16ef05d1184ac8b01f90b83505eafe08e0a99120a447",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-a70b2ec9-379a-4e83-9f64-852c343ec8cd.png",
+      "image_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-09": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-09/comparison.json",
+      "sha256": "5698b71362e6a01657b2d9217ece052cf11027c1b0ccb9b23294bda71c6e06aa",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+      "image_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-10": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-10/comparison.json",
+      "sha256": "4b2194b6da69d4948222e8bcc516dbd3778fde41109ae894685409d07ada533a",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+      "image_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-11": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-11/comparison.json",
+      "sha256": "8942226964b47923e301d5acb051ad7bfae183003008008fe4a503a30e3df13c",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+      "image_sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-12": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-12/comparison.json",
+      "sha256": "cc0d10c552e44eb5a44098a0c050eb900119fdd5407cf075372497548b5852db",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+      "image_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-13": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-13/comparison.json",
+      "sha256": "e61e4cffae3d773e55b0cd78021bcb5189de1962f7b138391ac55d20aea7a042",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+      "image_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-14": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-14/comparison.json",
+      "sha256": "0ed1e2dbe0e44a89d47aa9448dcfaeb5cc960471628fc4a68eb569f64ac02620",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+      "image_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-15": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-15/comparison.json",
+      "sha256": "60a65e0cb4cc8f1adc2b403fd44d98f8abffdd97bf7cabedcf4a82194d4c64be",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "image_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-16": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-16/comparison.json",
+      "sha256": "e23c073a19a28250df2b85196b0d97dc03dab2c3dbae072d3f2d1c0a1e7335dd",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2100.jpg",
+      "image_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-17": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-17/comparison.json",
+      "sha256": "b69e119e24df1e8eeb56d049bd5b290fd1734c44388bcafce8802dda46151b86",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_952.jpg",
+      "image_sha256": "3563a859d407026c160f6917d5a625407a7565d83429f13ff85220b2ed356136",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-18": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-18/comparison.json",
+      "sha256": "2a18e248fa846abf30c6d7015e20e59778345af469f2c410c6ff4dc1491c2175",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3313.jpg",
+      "image_sha256": "46e8933d18a8ee8135f43fd29da3df9f2f68449e96667c44dfc103c385d86402",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-19": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-19/comparison.json",
+      "sha256": "3c2027bdfca75a80d085e3823e2900065e98da2031ea098b96ec40c3e1277ab0",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_377.jpg",
+      "image_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    },
+    "odb-20": {
+      "path": "/home/dr/project/docprase/output/issue-28/audit-3/odb-20/comparison.json",
+      "sha256": "80a8450f70633aaf252ee9f0f377fe60263748ec2cac8439f6f2dd2cc3d7b9dd",
+      "image_path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+      "image_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+      "config_sha256": "7253ad7bb7c1bb18a0a56890f7cd965b0a16ac70eadaccc63537d5a6dd95eb8e"
+    }
+  },
+  "dataset_manifest_sha256": "d5910801ade14c86bc94805bf822c9412fe367d8b391a06d8e5fb678d8df0c78"
+}

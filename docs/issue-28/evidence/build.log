@@ -1,0 +1,49 @@
+[  8%] Built target dococr_layout_mnn_probe
+[  8%] Built target dococr_issue18_token_probe
+[ 13%] Built target dococr_layout_jpeg_decode_probe
+[ 15%] Building CXX object CMakeFiles/dococr_core.dir/src/core.cpp.o
+[ 17%] Building CXX object CMakeFiles/dococr_core.dir/src/config.cpp.o
+[ 19%] Building CXX object CMakeFiles/dococr_core.dir/src/sha256.cpp.o
+[ 23%] Built target dococr_ovis_same_instance_probe
+[ 26%] Building CXX object CMakeFiles/dococr_core.dir/src/layout_preprocess.cpp.o
+[ 28%] Building CXX object CMakeFiles/dococr_core.dir/src/visual_adaptation.cpp.o
+[ 30%] Building CXX object CMakeFiles/dococr_core.dir/src/table_parser.cpp.o
+[ 32%] Building CXX object CMakeFiles/dococr_core.dir/src/output_assessment.cpp.o
+[ 34%] Building CXX object CMakeFiles/dococr_core.dir/src/region_recognition.cpp.o
+[ 36%] Building CXX object CMakeFiles/dococr_core.dir/src/region_structure.cpp.o
+[ 39%] Building CXX object CMakeFiles/dococr_core.dir/src/layout_region_policy.cpp.o
+[ 41%] Building CXX object CMakeFiles/dococr_core.dir/src/label_export_policy.cpp.o
+[ 43%] Building CXX object CMakeFiles/dococr_core.dir/src/markdown.cpp.o
+[ 45%] Building CXX object CMakeFiles/dococr_core.dir/src/pdf_renderer.cpp.o
+[ 47%] Building CXX object CMakeFiles/dococr_core.dir/src/pdf_job.cpp.o
+[ 50%] Building CXX object CMakeFiles/dococr_core.dir/src/formula_scripts.cpp.o
+[ 52%] Linking CXX static library libdococr_core.a
+[ 52%] Built target dococr_core
+[ 54%] Building CXX object CMakeFiles/dococr_layout_preprocess_probe.dir/tests/layout_preprocess_probe.cpp.o
+[ 56%] Building CXX object CMakeFiles/dococr_c_test.dir/src/abi.cpp.o
+[ 58%] Building CXX object CMakeFiles/dococr_visual_adaptation_probe.dir/tests/visual_adaptation_probe.cpp.o
+[ 60%] Building CXX object CMakeFiles/dococr_c.dir/src/abi.cpp.o
+[ 63%] Linking CXX executable dococr_layout_preprocess_probe
+[ 63%] Built target dococr_layout_preprocess_probe
+[ 65%] Building CXX object CMakeFiles/dococr_c.dir/src/layout_mnn_backend.cpp.o
+[ 67%] Linking CXX executable dococr_visual_adaptation_probe
+[ 69%] Building CXX object CMakeFiles/dococr_c_test.dir/tests/fixture_backend.cpp.o
+[ 71%] Building CXX object CMakeFiles/dococr_c.dir/src/printed_page_mnn_backend.cpp.o
+[ 71%] Built target dococr_visual_adaptation_probe
+[ 73%] Building CXX object CMakeFiles/dococr_c.dir/src/production_backend.cpp.o
+[ 76%] Linking CXX shared library libdococr_c.so
+[ 76%] Built target dococr_c
+[ 82%] Building CXX object CMakeFiles/dococr_cli.dir/tools/cli.cpp.o
+[ 82%] Building CXX object CMakeFiles/dococr_cli.dir/src/reexport.cpp.o
+[ 82%] Building CXX object CMakeFiles/dococr_cli.dir/src/schema_validator.cpp.o
+[ 84%] Linking CXX shared library libdococr_c_test.so
+[ 84%] Built target dococr_c_test
+[ 86%] Linking CXX executable dococr_contract_test
+[ 89%] Building CXX object CMakeFiles/dococr_cli_fixture.dir/src/reexport.cpp.o
+[ 91%] Built target dococr_contract_test
+[ 93%] Building CXX object CMakeFiles/dococr_cli_fixture.dir/src/schema_validator.cpp.o
+[ 95%] Building CXX object CMakeFiles/dococr_cli_fixture.dir/tools/cli.cpp.o
+[ 97%] Linking CXX executable dococr_cli
+[ 97%] Built target dococr_cli
+[100%] Linking CXX executable dococr_cli_fixture
+[100%] Built target dococr_cli_fixture

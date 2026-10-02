@@ -1,0 +1,22 @@
+{
+  "sha256": {
+    "src/core.cpp": "96a2f5a4b9bbf832fee53d4a7e215d74e810f61e50c2a4fb316b98855e5443ae",
+    "src/layout_region_policy.cpp": "9a8b7f5b52ef82a16ba6ce9c23fc53f32592066e1e868a18851e088a918d3772",
+    "src/region_structure.cpp": "661175e53d11f8ffec65f34b63b9c22bf60a4a11dd327afc21ec71871d4ba277",
+    "src/layout_preprocess.cpp": "1500339b3f4d9b333d813ca0feaed0fa06dc9cfa9b2b0775cc5df2093dbe6dbf",
+    "src/layout_mnn_backend.cpp": "fb0b041a054d3892cba9e2e6a6bdd79a54a45e8bcd4fa9aec6d1d5b027c38fd3",
+    "configs/layout-plan.example.json": "d2e3892e7145ce0272c3bb7bc3bafc5df6c9fff21421b1147183f269ad8b6b4a",
+    "tests/fixtures/layout/reference-model-config.json": "3cf834b91d23a756b1519bce4db42c09e852f3e35c35092dd5a3e253a50c071a",
+    "docs/research-evidence/static.cpp": "efa112d9e59f6a145857eb835366f1ed6527633701dac39763345d3e725dff4f",
+    "models/doclayout/PP-DocLayoutV3.mnn": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+    "/home/dr/project/MNN/build/libMNN.so": "3dfe05cd51a3916db5da236d44a08f945b4054cfaae7ee1d88d0cc30b7655ded",
+    "/home/dr/project/MNN/build/libllm.so": "6350e3461088e4531a677db83ee2a54001587e10e228b563423d5623ffc4dd01",
+    "/home/dr/project/MNN/build/tools/cv/libMNNOpenCV.so": "91e9bfc4996bb97c70e7e69483e96417826283c5f904f2beb01ed41fd7b3c6be",
+    "/home/dr/project/MNN/build/express/libMNN_Express.so": "058d8669293ce6390d10bafe7f683992114c25da146a0bf250c3e708d9e97e63"
+  },
+  "preexisting_dirty_source": [
+    "src/region_structure.cpp"
+  ],
+  "production_changes_by_issue28": false,
+  "baseline_commit": "ce0dbaed6faea125000f0ffcfbc4e7f114f9067d"
+}

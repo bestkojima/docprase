@@ -1,0 +1,32 @@
+{
+  "pipeline.yaml": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/configs/pipelines/PaddleOCR-VL-1.5.yaml",
+    "sha256": "f8d3b49965997e1934bde5433bb86e24c8061bcbe92ce31c47a2405c5e3264f5"
+  },
+  "predictor.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/layout_analysis/predictor.py",
+    "sha256": "e08b4347d79c029da1a4b592808629fb4a88f2a63e747ac15410191e4ff3ddf6"
+  },
+  "pipeline.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/pipelines/paddleocr_vl/pipeline.py",
+    "sha256": "32966d14aad6ac1bc043737c96352a4f0b4efcbead96f9354254dd4b9d1c6675"
+  },
+  "layout.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/layout_analysis/processors.py",
+    "sha256": "b9e0d53738cd9147b2b665a96b4cd38bef8668f75e9c85ba4b8826cd41f02ca2"
+  },
+  "detection.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/models/object_detection/processors.py",
+    "sha256": "de2bb4f14f01619435c65df09272d978619c045c915cba465990dc4c32ac3540"
+  },
+  "pipeline_utils.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleX/ffb64904d23708863ff5b8da312a5cbd52a7f462/paddlex/inference/pipelines/paddleocr_vl/uilts.py",
+    "sha256": "63bf7d0ccf03225dd6be582e2b25628283e2eed0ad0b1c7864e086e3b95f923a"
+  },
+  "inference.yml": {
+    "url": "https://huggingface.co/PaddlePaddle/PP-DocLayoutV3/resolve/241f8bdfc77a7c7bee915a5057aaee58c235a8d3/inference.yml",
+    "sha256": "506fcfac13b3b546ae40d7886b44126420f392adb694e3f8bb6a6286a1f90fdc",
+    "note": "model label metadata fetched separately; not versioned by PaddleX commit",
+    "revision": "241f8bdfc77a7c7bee915a5057aaee58c235a8d3"
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "official": {
+    "commit": "ffb64904d23708863ff5b8da312a5cbd52a7f462",
+    "threshold": 0.3,
+    "comparison": ">",
+    "scale_size": [
+      800,
+      800
+    ],
+    "round_before_filter": "numpy.round (ties to even)",
+    "nms": {
+      "enabled": true,
+      "iou_same": 0.6,
+      "iou_diff": 0.98,
+      "suppression": ">=",
+      "area": "inclusive +1",
+      "order": "np.argsort(score)[::-1]"
+    },
+    "large_image": {
+      "class_id": 14,
+      "minimum_candidates": 2,
+      "landscape": 0.82,
+      "otherwise": 0.93,
+      "comparison": ">",
+      "restore_if_all_removed": true
+    },
+    "containment": {
+      "ratio": 0.9,
+      "comparison": ">=",
+      "formula_index": null,
+      "large_classes": [
+        3,
+        5,
+        6,
+        15,
+        17
+      ],
+      "union_classes": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "rank": "np.argsort(column 6), seven-column tensor",
+    "mask": {
+      "shape": [
+        300,
+        200,
+        200
+      ],
+      "stride": 4,
+      "interpolation": "INTER_NEAREST",
+      "epsilon_ratio": 0.004,
+      "max_dist_ratio": 0.3,
+      "sharp_angle_thresh": 45,
+      "wide_box_ratio": 0.6,
+      "auto_rect_quad_iou": 0.95,
+      "auto_polygon_quad_iou": 0.8,
+      "auto_previous_overlap": 0.01,
+      "max_box_w_expression": "max(boxes[:,4] - boxes[:,3]) (frozen implementation)"
+    },
+    "unclip": [
+      1.0,
+      1.0
+    ],
+    "outer": {
+      "reference_skip": 18,
+      "min_width": 6,
+      "min_height": 6,
+      "inline_formula_class": 15,
+      "inline_overlap": 0.5,
+      "small_overlap": 0.7,
+      "polygon_small_overlap": 0.7,
+      "preserve_mixed_labels": [
+        "image",
+        "table",
+        "seal",
+        "chart"
+      ]
+    },
+    "model_filter_overlap_in_VL_pipeline": false,
+    "pipeline_filter_overlap": true,
+    "order_update": "model after apply, before VL pipeline outer filter",
+    "skip_order_labels": [
+      "figure_title",
+      "vision_footnote",
+      "image",
+      "chart",
+      "table",
+      "header",
+      "header_image",
+      "footer",
+      "footer_image",
+      "footnote",
+      "aside_text"
+    ]
+  },
+  "local": {
+    "threshold_default": 0.5,
+    "example_threshold": 0.3,
+    "comparison": ">=",
+    "geometry": "float NMS/containment; floor/ceil original-image crop",
+    "containment_formula_index": 5,
+    "shape": "rectangular crop; mask kept as evidence",
+    "outer_order": "original candidate index before reading-order planning",
+    "short_box_removal": false,
+    "annotation_preserve_area_ratio": 0.8,
+    "inline_ownership": 0.85,
+    "table_ownership": 0.9,
+    "unknown": "preserved, no silent skip",
+    "reference_skip": 18,
+    "owned_crop_expansion": "union of owned content; not official layout union"
+  },
+  "class_mapping": [
+    {
+      "class_id": 0,
+      "official_label": "abstract",
+      "local_model_label": "abstract",
+      "type": "text",
+      "purpose": "Body",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 1,
+      "official_label": "algorithm",
+      "local_model_label": "algorithm",
+      "type": "text",
+      "purpose": "Body",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 2,
+      "official_label": "aside_text",
+      "local_model_label": "aside_text",
+      "type": "text",
+      "purpose": "Aside",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 3,
+      "official_label": "chart",
+      "local_model_label": "chart",
+      "type": "image",
+      "purpose": "None",
+      "ovis_task": null,
+      "explicit_skip": null
+    },
+    {
+      "class_id": 4,
+      "official_label": "content",
+      "local_model_label": "content",
+      "type": "text",
+      "purpose": "Body",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 5,
+      "official_label": "display_formula",
+      "local_model_label": "formula",
+      "type": "formula",
+      "purpose": "None",
+      "ovis_task": "formula",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 6,
+      "official_label": "doc_title",
+      "local_model_label": "doc_title",
+      "type": "text",
+      "purpose": "Heading",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 7,
+      "official_label": "figure_title",
+      "local_model_label": "figure_title",
+      "type": "text",
+      "purpose": "Annotation",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 8,
+      "official_label": "footer",
+      "local_model_label": "footer",
+      "type": "text",
+      "purpose": "PageMarker",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 9,
+      "official_label": "footer_image",
+      "local_model_label": "footer",
+      "type": "image",
+      "purpose": "PageMarker",
+      "ovis_task": null,
+      "explicit_skip": null
+    },
+    {
+      "class_id": 10,
+      "official_label": "footnote",
+      "local_model_label": "footnote",
+      "type": "text",
+      "purpose": "Footnote",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 11,
+      "official_label": "formula_number",
+      "local_model_label": "formula_number",
+      "type": "text",
+      "purpose": "None",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 12,
+      "official_label": "header",
+      "local_model_label": "header",
+      "type": "text",
+      "purpose": "PageMarker",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 13,
+      "official_label": "header_image",
+      "local_model_label": "header",
+      "type": "image",
+      "purpose": "PageMarker",
+      "ovis_task": null,
+      "explicit_skip": null
+    },
+    {
+      "class_id": 14,
+      "official_label": "image",
+      "local_model_label": "image",
+      "type": "image",
+      "purpose": "None",
+      "ovis_task": null,
+      "explicit_skip": null
+    },
+    {
+      "class_id": 15,
+      "official_label": "inline_formula",
+      "local_model_label": "formula",
+      "type": "formula",
+      "purpose": "None",
+      "ovis_task": "formula",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 16,
+      "official_label": "number",
+      "local_model_label": "number",
+      "type": "text",
+      "purpose": "Number",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 17,
+      "official_label": "paragraph_title",
+      "local_model_label": "paragraph_title",
+      "type": "text",
+      "purpose": "Heading",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 18,
+      "official_label": "reference",
+      "local_model_label": "reference",
+      "type": "text",
+      "purpose": "Body",
+      "ovis_task": "text",
+      "explicit_skip": "outer_reference"
+    },
+    {
+      "class_id": 19,
+      "official_label": "reference_content",
+      "local_model_label": "reference_content",
+      "type": "text",
+      "purpose": "Body",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 20,
+      "official_label": "seal",
+      "local_model_label": "seal",
+      "type": "image",
+      "purpose": "None",
+      "ovis_task": null,
+      "explicit_skip": null
+    },
+    {
+      "class_id": 21,
+      "official_label": "table",
+      "local_model_label": "table",
+      "type": "table",
+      "purpose": "None",
+      "ovis_task": "table",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 22,
+      "official_label": "text",
+      "local_model_label": "text",
+      "type": "text",
+      "purpose": "Body",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 23,
+      "official_label": "vertical_text",
+      "local_model_label": "text",
+      "type": "text",
+      "purpose": "Body",
+      "ovis_task": "text",
+      "explicit_skip": null
+    },
+    {
+      "class_id": 24,
+      "official_label": "vision_footnote",
+      "local_model_label": "vision_footnote",
+      "type": "text",
+      "purpose": "Annotation",
+      "ovis_task": "text",
+      "explicit_skip": null
+    }
+  ]
+}

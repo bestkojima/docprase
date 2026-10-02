@@ -1,0 +1,15 @@
+Test project /home/dr/project/docprase/build
+    Start  8: issue19_dedup
+1/5 Test  #8: issue19_dedup ....................   Passed    2.92 sec
+    Start  9: issue20_geometry
+2/5 Test  #9: issue20_geometry .................   Passed    0.62 sec
+    Start 25: issue26_structure
+3/5 Test #25: issue26_structure ................   Passed    8.11 sec
+    Start 26: issue26_region_mapping
+4/5 Test #26: issue26_region_mapping ...........   Passed   21.83 sec
+    Start 27: issue31_input_planning
+5/5 Test #27: issue31_input_planning ...........   Passed    8.23 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =  41.71 sec

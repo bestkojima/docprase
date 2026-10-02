@@ -1,0 +1,18 @@
+{
+  "legal_table_child": {"rows": [[21,0.95,10,10,180,180,0],[22,0.9,20,20,80,40,1]], "local_selected": [0,1], "official_selected": [0]},
+  "legal_inline_formula": {"rows": [[22,0.95,10,10,180,60,0],[15,0.9,20,20,80,40,1]], "local_selected": [0,1], "official_selected": [0]},
+  "short_title": {"rows": [[17,0.9,10,10,90,14,0]], "local_selected": [0], "official_selected": []},
+  "legal_caption": {"rows": [[22,0.95,10,10,180,100,0],[7,0.9,20,20,80,40,1]], "local_selected": [0,1], "official_selected": [0]},
+  "partial_containment": {"rows": [[22,0.95,10,10,180,60,0],[5,0.9,160,20,190,40,1]], "local_selected": [0,1], "official_selected": [0,1]},
+  "independent_formula": {"rows": [[22,0.95,10,10,180,60,0],[5,0.9,20,90,160,130,1]], "local_selected": [0,1], "official_selected": [0,1]},
+  "page_boundary": {"rows": [[22,0.9,-1.4,90.2,40.3,201,0]], "local_selected": [0], "official_selected": [0]},
+  "subpixel_width": {"rows": [[22,0.9,10.1,10.1,10.4,20.4,0]], "local_selected": [0], "official_selected": []},
+  "union_adjacent": {"rows": [[22,0.95,10,10,90,40,0],[22,0.9,10,42,90,72,1]], "local_selected": [0,1], "official_selected": [0,1]},
+  "nms_same_and_cross": {"rows": [[22,0.95,10,10,90,50,0],[22,0.9,11,10,90,50,1],[17,0.8,10,10,90,50,2]], "local_selected": [0], "official_selected": [0]},
+  "score_boundary": {"rows": [[22,0.3,10,10,90,50,0]], "local_selected": [0], "official_selected": []},
+  "large_page_image": {"rows": [[14,0.95,0,0,200,200,0],[22,0.9,20,20,90,50,1]], "local_selected": [1], "official_selected": [1]},
+  "display_formula_in_chart": {"rows": [[3,0.95,10,10,180,180,0],[5,0.9,20,20,80,40,1]], "local_selected": [0,1], "official_selected": [0]},
+  "reference_skip": {"rows": [[18,0.9,10,10,90,50,0],[19,0.8,10,60,90,100,1]], "local_selected": [1], "official_selected": [1]},
+  "rank_mask": {"rows": [[22,0.9,10,10,90,50,2],[15,0.8,20,20,80,40,0],[17,0.7,100,80,180,84,1]], "local_selected": [0,1,2], "official_selected": [0]},
+  "unknown_label": {"rows": [[25,0.9,10,10,90,50,0]], "local_selected": [0], "official_selected": null}
+}

@@ -1,0 +1,17 @@
+{
+  "graph_sha256": "1f659c01b4d9138bc5d79b2fc54ac00070aff15ac08193565846bb6b75f6f94a",
+  "operator_count": 2655,
+  "dedicated_nms_operators": [],
+  "decode_mask_rank_evidence_lines": [
+    2486,
+    2504,
+    2510,
+    2539,
+    2550,
+    2614,
+    2653,
+    2655
+  ],
+  "model_sha256": "5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67",
+  "scope": "static operator inspection; no original Paddle versus MNN numeric equivalence claim"
+}

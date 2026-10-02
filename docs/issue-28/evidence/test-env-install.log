@@ -1,0 +1,8 @@
+Using Python 3.11.16 environment at: .scratch/issue27-test-env
+Resolved 2 packages in 1.33s
+Downloading shapely (3.0MiB)
+ Downloaded shapely
+Prepared 1 package in 3.81s
+Installed 2 packages in 229ms
+ + numpy==2.4.6
+ + shapely==2.1.2
