@@ -1,4 +1,6 @@
 #include "markdown.hpp"
+#include "content_validation.hpp"
+#include <utility>
 #include <vector>
 
 namespace dococr {
@@ -7,6 +9,64 @@ bool escaped_at(const std::string& text, size_t position) {
     size_t slashes = 0;
     while (position > 0 && text[position - 1] == '\\') { --position; ++slashes; }
     return slashes % 2 != 0;
+}
+
+struct MathSpan {
+    size_t end = 0;
+    std::string markdown;
+};
+
+std::string math_content(const std::string& content) {
+    std::string result;
+    result.reserve(content.size());
+    for (size_t i = 0; i < content.size(); ++i) {
+        const char ch = content[i];
+        // A physical line break is TeX whitespace, but may end a Markdown
+        // paragraph or prevent an inline math parser from finding its end.
+        // Preserve explicit LaTeX row breaks (\\) and all other content.
+        if (ch == '\r' || ch == '\n') {
+            result += ' ';
+            if (ch == '\r' && i + 1 < content.size() && content[i + 1] == '\n') ++i;
+        } else result += ch;
+    }
+    return result;
+}
+
+MathSpan math_span(const std::string& source, size_t start) {
+    const bool brackets = source[start] == '\\' && start + 1 < source.size() &&
+        (source[start + 1] == '(' || source[start + 1] == '[');
+    if (source[start] != '$' && !brackets) return {};
+    if (escaped_at(source, start)) return {};
+    size_t width = 0;
+    std::string close;
+    bool display = false;
+    if (source[start] == '$') {
+        width = start + 1 < source.size() && source[start + 1] == '$' ? 2 : 1;
+        close.assign(width, '$');
+        display = width == 2;
+    } else {
+        width = 2;
+        display = source[start + 1] == '[';
+        close = display ? "\\]" : "\\)";
+    }
+    size_t end = source.find(close, start + width);
+    while (end != std::string::npos && escaped_at(source, end))
+        end = source.find(close, end + width);
+    if (end == std::string::npos) return {};
+    const std::string raw = source.substr(start, end + width - start);
+    const size_t first = source.find_first_not_of(" \t\r\n", start + width);
+    const size_t last = source.find_last_not_of(" \t\r\n", end - 1);
+    if (first >= end || last < first ||
+        !matches_formula_content(raw, source.substr(first, last - first + 1), display)) return {};
+    const std::string delimiter = display ? "$$" : "$";
+    std::string markdown = delimiter + math_content(source.substr(first, last - first + 1)) + delimiter;
+    const auto digit = [](char ch) { return ch >= '0' && ch <= '9'; };
+    // Dollar-aware Markdown parsers distinguish math from currency using the
+    // adjacent characters. Keep valid math recognizable after normalization.
+    if (start && (digit(source[start - 1]) || source[start - 1] == '\\'))
+        markdown.insert(0, 1, ' ');
+    if (end + width < source.size() && digit(source[end + width])) markdown += ' ';
+    return {end + width, std::move(markdown)};
 }
 
 struct LinkEscapes {
@@ -53,6 +113,13 @@ std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption
         const auto escape_link = link_openers(source);
         size_t consecutive_backslashes = 0;
         for (size_t i = 0; i < source.size(); ++i) {
+            const auto math = math_span(source, i);
+            if (math.end > i) {
+                result += math.markdown;
+                i = math.end - 1;
+                consecutive_backslashes = 0;
+                continue;
+            }
             char ch = source[i];
             if (ch == '\\') { result += ch; ++consecutive_backslashes; continue; }
             if (ch == '&') result += "&amp;";
@@ -91,7 +158,9 @@ std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption
         return with_relation_note(b.resource.empty() ? marker : "![原图](" + b.resource + ")\n\n" + marker);
     }
     if (b.type == "formula") {
-        const std::string formula = safe_text(b.text);
+        const std::string delimiter = b.display_formula ? "$$" : "$";
+        const std::string formula = matches_formula_content(delimiter + b.text + delimiter,
+            b.text, b.display_formula) ? math_content(b.text) : safe_text(b.text);
         return b.display_formula ? "$$\n" + formula + "\n$$" : "$" + formula + "$";
     }
     if (b.type == "table" && b.structured_table) return b.text;

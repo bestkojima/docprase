@@ -78,7 +78,7 @@ def main():
         compare = compare_doc['pages'][0]['blocks'][1]
         assert compare['status'] == 'ok'
         assert compare['content']['text'] == 'x>0'
-        assert '$$\nx&gt;0\n$$' in (compare_out / 'document.md').read_text()
+        assert '$$\nx>0\n$$' in (compare_out / 'document.md').read_text()
         _, chinese_doc, _ = run(sys.argv[1], 'printed_page_formula_chinese_text', root, image)
         chinese = chinese_doc['pages'][0]['blocks'][1]
         assert chinese['status'] == 'ok'

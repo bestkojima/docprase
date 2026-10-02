@@ -34,7 +34,7 @@ def main():
             assert (copied / path).read_bytes() == (source / path).read_bytes()
 
         attempts = 0
-        def reexport(saved, value=None, code=0, asset_root=None):
+        def reexport(saved, value=None, code=0, asset_root=None, expected_markdown=None):
             nonlocal attempts
             attempts += 1
             target = root / (saved.name + '-copy-' + str(attempts))
@@ -46,7 +46,8 @@ def main():
                          str(asset_root or saved), '--out', str(target), code=code, cwd=root)
             if code == 0:
                 assert json.loads((target / 'document.json').read_text()) == json.loads(input_json.read_text())
-                assert (target / 'document.md').read_bytes() == (saved / 'document.md').read_bytes()
+                expected_bytes = expected_markdown.encode() if expected_markdown is not None else (saved / 'document.md').read_bytes()
+                assert (target / 'document.md').read_bytes() == expected_bytes
                 for path in collect_assets(value or json.loads(input_json.read_text())):
                     assert (target / path).read_bytes() == (saved / path).read_bytes(), path
             else:
@@ -69,7 +70,12 @@ def main():
             saved = ROOT / 'tests' / 'fixtures' / 'reexport' / name
             data = json.loads((saved / 'document.json').read_text())
             jsonschema.validate(data, json.loads((ROOT / schema_file).read_text()))
-            reexport(saved)
+            # 历史 JSON 保持原字节；新导出规则恢复公式的不等号。
+            expected_markdown = None
+            if name == 'historical-1.1':
+                expected_markdown = (saved / 'document.md').read_text().replace(
+                    r'\beta&gt;0', r'\beta>0')
+            reexport(saved, expected_markdown=expected_markdown)
             if name.endswith('1.1'):
                 assert [b['type'] for b in data['pages'][0]['blocks']] == ['formula', 'text']
                 assert data['pages'][0]['relations'] == [{

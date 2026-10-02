@@ -7,6 +7,7 @@ if(MSVC)
   add_compile_options(/utf-8)
 endif()
 option(DOCOCR_BUILD_TESTS "构建无模型验收测试" ON)
+option(DOCOCR_TEST_KATEX "运行实际 KaTeX 排版测试（先 npm ci --prefix tests/math-rendering）" OFF)
 option(DOCOCR_REQUIRE_MNN "缺少 MNN 时配置失败" OFF)
 option(DOCOCR_REQUIRE_LLM "缺少 Ovis 所需 LLM 运行时时配置失败" OFF)
 # schema 更新时重新生成 CLI 内嵌校验契约。
@@ -191,6 +192,16 @@ if(DOCOCR_BUILD_TESTS)
   add_test(NAME issue27_rendering COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue27_rendering.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME markdown_math_integration COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/markdown_math_integration.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  if(DOCOCR_TEST_KATEX)
+    find_program(DOCOCR_NODE_EXECUTABLE node REQUIRED)
+    add_test(NAME markdown_katex_integration COMMAND ${Python3_EXECUTABLE}
+      ${CMAKE_CURRENT_SOURCE_DIR}/tests/markdown_math_integration.py
+      $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>
+      --katex ${DOCOCR_NODE_EXECUTABLE})
+  endif()
   add_test(NAME printed_table_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_table_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME reading_order_integration COMMAND ${Python3_EXECUTABLE}

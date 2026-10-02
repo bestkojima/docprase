@@ -1,0 +1,10 @@
+{
+  "name": "dococr-math-rendering-tests",
+  "private": true,
+  "description": "Markdown 导出结果的实际 KaTeX 排版测试依赖，仅供测试与预览。",
+  "dependencies": {
+    "katex": "0.19.0",
+    "markdown-it": "15.0.2",
+    "markdown-it-texmath": "1.0.0"
+  }
+}

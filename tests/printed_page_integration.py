@@ -151,7 +151,7 @@ def main():
         safe_markdown = (safe_out / 'document.md').read_text()
         assert '&lt;img src=' in safe_markdown
         assert r'\![]\(images/fake.png)' in safe_markdown
-        assert '\\(x+1\\) \\[a+b\\]' in safe_markdown
+        assert '$x+1$ $$a+b$$' in safe_markdown
         assert '<img src=' not in safe_markdown
         from markdown_it import MarkdownIt
         rendered = MarkdownIt().render(safe_markdown)
