@@ -39,12 +39,14 @@
     "ctest": {
       "passed": 32,
       "total": 32,
-      "seconds": 82.77
+      "seconds": 82.77,
+      "commit": "9f0e6bf"
     },
     "python_unittest": {
       "passed": 40,
       "total": 40,
-      "seconds": 61.415
+      "seconds": 61.415,
+      "commit": "9f0e6bf"
     },
     "static_checks": [
       "Python py_compile",
@@ -59,7 +61,22 @@
     },
     "katex": "0.19.0",
     "schema": "既有1.0–1.11兼容回归通过，未修改Schema",
-    "revalidation_policy": "formula-revalidation-v2"
+    "revalidation_policy": "formula-revalidation-v2",
+    "review_fix_targeted": {
+      "commit": "599e9f0",
+      "passed": 6,
+      "total": 6,
+      "seconds": 48.67,
+      "tests": [
+        "printed_formula_integration",
+        "issue27_formula",
+        "markdown_math_integration",
+        "formula_revalidation_integration",
+        "markdown_katex_integration",
+        "printed_table_integration"
+      ],
+      "production_build": "build/linux-current rebuilt successfully"
+    }
   },
   "production_replays": [
     {
@@ -183,6 +200,22 @@
     {
       "path": ".scratch/vlm-postprocess/remaining-fixes/unittest-full.log",
       "sha256": "9e6d0bf73e90812ef33703371b4588809c6258dabb67aec963189d124a341906"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/arrow-review-red.log",
+      "sha256": "76e3e2265f9227a1b31e42aed944c8b54104d4201d10f2de568ec50df4301024"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/arrow-review-build.log",
+      "sha256": "293a8920b407b1f26d802d2328697ed3e897bf6783bfd6b0661e4d03b41fa9e8"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/arrow-review-production-build.log",
+      "sha256": "b0d46930d41b696634cef32021d05795c6acc08234c7807f18789d194dca0687"
+    },
+    {
+      "path": ".scratch/vlm-postprocess/remaining-fixes/arrow-review-ctest.log",
+      "sha256": "c5a500094d194999736765a18ff3d0ae2d02eb46bdd777a7e59bc93a59c9c004"
     }
   ],
   "preexisting_user_source": {
@@ -194,5 +227,34 @@
     "数学检查限于项目支持的TeX子集，不是完整TeX解析器",
     "没有新跑OCR精度验收",
     "无数学判定证据的早期正文保留原安全转义，不补造来源"
-  ]
+  ],
+  "implementation_commits": [
+    "9f0e6bf",
+    "599e9f0"
+  ],
+  "review_fix": {
+    "finding": "新公式项检查过早结束箭头可选注释，误拒绝嵌套方括号",
+    "examples": [
+      "\\xrightarrow[[a]]{b}",
+      "\\xrightarrow[a[b]c]{d}"
+    ],
+    "red": "公共 CLI 回归复现 partial / invalid_formula_syntax",
+    "green": "嵌套边界修复后，首次导出、实际 KaTeX 排版与保存输出重新校验通过"
+  },
+  "review": {
+    "base": "5504c2b",
+    "head": "599e9f0",
+    "standards": {
+      "hard_violations": 0,
+      "code_smells": 0
+    },
+    "spec": {
+      "missing": 0,
+      "scope_creep": 0,
+      "implementation_errors": 0
+    },
+    "resolved_p2": 1,
+    "independent_recheck": "两种嵌套箭头首次导出为ok；保存的历史ok经普通重导出和重新校验均保持ok",
+    "record": "docs/issue-27/vlm-postprocess-review.md"
+  }
 }
