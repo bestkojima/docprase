@@ -11,10 +11,39 @@ from issue17_baseline import ROOT
 from issue24_run import save, sha
 from issue24_report import audit, old_seven, quality_metrics, compare
 from issue25_materials import restore_page
-from issue27_evidence import check_frozen, read, freeze_evaluation as freeze_legacy
+from issue27_evidence import check_frozen as check_legacy, read, freeze_evaluation as freeze_legacy, system_runtime
 from issue31_evaluation import evaluate_page, totals, gates, VERSION
 
 TOOLS = ('scripts/issue31_run.py', 'scripts/issue31_evaluation.py', 'scripts/issue31_suite.py')
+
+
+def check_frozen(run):
+    result = check_legacy(run)
+    record = result[0]
+    if system_runtime(Path(record['rendering_node']), result[4]) != record['rendering_runtime_sha256']:
+        raise ValueError('实际数学渲染运行时变化')
+    return result
+
+
+def load_job(run, spec, record):
+    folder = run / spec['key']
+    receipt = read(folder / 'command.json')
+    expected = dict(candidate_sha256=record['candidate_sha256'], evaluation_sha256=sha(run/'evaluation.json'),
+                    input_sha256=spec['input_sha256'], execution='fresh_public_cli_job', returncode=0,
+                    models_intact=True)
+    if any(receipt.get(key) != value for key, value in expected.items()):
+        raise ValueError('缺少成功的新推理或冻结绑定')
+    inventory = receipt.get('files_sha256', {})
+    if not {'job/document.json', 'job/document.md'} <= inventory.keys():
+        raise ValueError('导出产物未绑定原始作业收据')
+    for name, digest in inventory.items():
+        source = (folder / name).resolve()
+        if not source.is_relative_to(folder.resolve()) or sha(source) != digest:
+            raise ValueError(f'原始产物 SHA 不符：{name}')
+    document = read(folder / 'job/document.json')
+    if any('job/' + r['path'] not in inventory for r in document.get('resources', [])):
+        raise ValueError('资源未绑定原始作业收据')
+    return document
 
 
 def freeze_evaluation(output, jobs, manifest, binary, environment):
@@ -24,13 +53,16 @@ def freeze_evaluation(output, jobs, manifest, binary, environment):
     paths += list((ROOT / 'tests/math-rendering').glob('*.mjs'))
     paths += [ROOT / 'tests/math-rendering/package-lock.json']
     paths += [ROOT / 'tests/test_issue31_evaluation.py']
+    paths += [p for p in (ROOT / 'tests/math-rendering/node_modules').rglob('*') if p.is_file()]
     for path in paths:
         name = str(path.relative_to(ROOT))
         target = output / 'freeze' / name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(path, target)
         record['source_files'][name] = record['snapshot_files'][name] = sha(path)
-    record.update(version='issue31-evaluation-1', scoring_version=VERSION)
+    node = Path(shutil.which('node')).resolve()
+    record.update(version='issue31-evaluation-1', scoring_version=VERSION,
+                  rendering_node=str(node), rendering_runtime_sha256=system_runtime(node, environment))
     save(output / 'evaluation.json', record)
     return record
 
@@ -45,16 +77,7 @@ def verify_exports(run):
         job = folder / 'job'
         errors, resources, pages, renders = [], {}, 0, []
         try:
-            receipt = read(folder / 'command.json')
-            if receipt['returncode'] != 0 or receipt['candidate_sha256'] != record['candidate_sha256']:
-                raise ValueError('作业失败或候选不符')
-            if not {'job/document.json', 'job/document.md'} <= receipt['files_sha256'].keys():
-                raise ValueError('导出产物未绑定原始作业收据')
-            for name, digest in receipt['files_sha256'].items():
-                source = (folder / name).resolve()
-                if not source.is_relative_to(folder.resolve()) or sha(source) != digest:
-                    raise ValueError(f'原始产物变化：{name}')
-            document = read(job / 'document.json')
+            document = load_job(run, spec, record)
             schema = run / f"freeze/schemas/document-ir/document-ir-{document['schema_version']}-{document['source']['type']}.schema.json"
             jsonschema.validate(document, read(schema))
             errors.extend(audit(document, job)['errors'])
@@ -80,8 +103,8 @@ def verify_exports(run):
                 original.mkdir()
                 shutil.copy2(job / 'document.md', original / 'document.md')
                 for label, folder in [('first_export', original), ('reexport', exported)]:
-                    rendered = subprocess.run(['node', str(ROOT / 'tests/math-rendering/preview.mjs'),
-                        str(folder / 'document.md')], capture_output=True, text=True)
+                    rendered = subprocess.run([record['rendering_node'], str(ROOT / 'tests/math-rendering/preview.mjs'),
+                        str(folder / 'document.md')], env=environment, capture_output=True, text=True)
                     renders.append(dict(kind=label, returncode=rendered.returncode, stderr=rendered.stderr,
                         html_sha256=sha(folder / 'document.html') if rendered.returncode == 0 else None))
                     if rendered.returncode:
@@ -114,18 +137,7 @@ def report(run, output):
                 continue
             folder=run/spec['key']; errors=[]
             try:
-                receipt=read(folder/'command.json')
-                expected=dict(candidate_sha256=record['candidate_sha256'], evaluation_sha256=sha(run/'evaluation.json'),
-                    input_sha256=spec['input_sha256'], execution='fresh_public_cli_job', returncode=0, models_intact=True)
-                if any(receipt.get(k)!=v for k,v in expected.items()):
-                    raise ValueError('缺少成功的新推理或冻结绑定')
-                if 'job/document.json' not in receipt.get('files_sha256', {}):
-                    raise ValueError('DocumentIR 未绑定作业收据')
-                for name,digest in receipt['files_sha256'].items():
-                    source=(folder/name).resolve()
-                    if not source.is_relative_to(folder.resolve()) or sha(source)!=digest:
-                        raise ValueError('原始产物 SHA 不符')
-                document=read(folder/'job/document.json')
+                document=load_job(run, spec, record)
                 errors.extend(audit(document,folder/'job')['errors'])
             except (OSError, ValueError, KeyError) as error:
                 errors.append(str(error))

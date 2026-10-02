@@ -1,0 +1,237 @@
+{
+  "issue": 31,
+  "date": "2026-10-03",
+  "role": "exposed_development_and_regression",
+  "strict_independent_holdout_claim": false,
+  "pages": [
+    {
+      "key": "development/odb-01",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+      "input_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-02",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_96657786.pdf_0.jpg",
+      "input_sha256": "86e5302ed038502756c0011147eda6ca25889f88f74d2e9beb5dbeffc1933bf2",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-03",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+      "input_sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-04",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_1564.jpg",
+      "input_sha256": "5ffda82c7490be38909ba1b116f96f3c5c4479c616c3adddb939f17588c27e2b",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-05",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+      "input_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-06",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_4065.jpg",
+      "input_sha256": "c5bf45aab80e4ef1493fd3ab009a8806cc15ebcedb4ba095484e2ff5a0a17434",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-07",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+      "input_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-08",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-a70b2ec9-379a-4e83-9f64-852c343ec8cd.png",
+      "input_sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-09",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+      "input_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-10",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+      "input_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-11",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+      "input_sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-12",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+      "input_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-13",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+      "input_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-14",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+      "input_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-15",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "input_sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-16",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2100.jpg",
+      "input_sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-17",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_952.jpg",
+      "input_sha256": "3563a859d407026c160f6917d5a625407a7565d83429f13ff85220b2ed356136",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-18",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3313.jpg",
+      "input_sha256": "46e8933d18a8ee8135f43fd29da3df9f2f68449e96667c44dfc103c385d86402",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-19",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_377.jpg",
+      "input_sha256": "7d1e5ec70e4891bc86b9a9b458b93f6b7fb51093961a86a87e3b1748b4d28606",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "development/odb-20",
+      "source": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+      "input_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-01",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+      "input_sha256": "d737d2e2ffac3874557a726d43ccc325ed36a3429bc72c71a7d0c2040d5641e2",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-02",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+      "input_sha256": "13ae3c78d760f1fa096a104e531b0de549f04cc2a12b523392573b2f01f7b6b4",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-03",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1473.jpg",
+      "input_sha256": "76b15f4e30defa8b666196a51ea9e80916ed62a90a77a7258b6e18ec6a8888cd",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-04",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1719.jpg",
+      "input_sha256": "eccc1cdd31021703a6119cb1844bf90038e9ca6dbac4014358d09ff370873e58",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-05",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_2412.jpg",
+      "input_sha256": "5582324aab4c19eaa8637954e38cd4a0415c087f057575d2e7ecdfc91ba5cabb",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-06",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+      "input_sha256": "d27fcc6aa85b2f9c819e715b1f32bf38f5dc4b541f4a40ce1e1a4ac3712e6fd0",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-07",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+      "input_sha256": "ea3df293a181a05689c4a25b92626a3a743c8c4ae5122ae8df63c0ee9acc24c8",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-08",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+      "input_sha256": "910d138724d2eab08e50f69c4ee5fa03f4324a01cccfed5e79551b1fe057e6f7",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-09",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+      "input_sha256": "853341856d6a39050db422a0aa65a0efae85716484f8c2397b1b22c5dba075d7",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-10",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+      "input_sha256": "190bc1e05bb282d5df78d0621938af245147b68531119a934743cbfdc1895c1f",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-11",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+      "input_sha256": "fb1caf6806c48824ce998c5b9d0bac600e298d2c778ce1d5b92087c883b5117b",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "evaluation/candidate-12",
+      "source": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+      "input_sha256": "11485df0351fbc277beb14493273db2600a9ecc60fcf446fb078a8411e0b56b2",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "old-seven/zh_text_table",
+      "source": "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "input_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "old-seven/zh_formula",
+      "source": "/home/dr/project/docprase/tests/fixtures/ovis/formula_book_page.png",
+      "input_sha256": "861030411176ef8eb8cbf9607461d252b8db557808ab91e87a4e9bed4c69bb84",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "old-seven/zh_merged_table",
+      "source": "/home/dr/project/docprase/tests/fixtures/ovis/merged_table_book_page.png",
+      "input_sha256": "c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "old-seven/en_jee",
+      "source": "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346.jpg",
+      "input_sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "old-seven/zh_pdf",
+      "source": "/home/dr/project/docprase/tests/fixtures/pdf/printed_textbook_2p.pdf",
+      "input_sha256": "13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    },
+    {
+      "key": "old-seven/en_two_column",
+      "source": "/home/dr/project/docprase/tests/fixtures/issue15/printed_science_2col.png",
+      "input_sha256": "b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9",
+      "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
+    }
+  ],
+  "margin_probe": "output/issue31-margin-probe-20261003"
+}

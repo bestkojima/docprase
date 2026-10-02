@@ -89,6 +89,15 @@ class ParentEvaluationTests(unittest.TestCase):
         self.assertTrue(value['reference_plan']['unresolved'])
         self.assertFalse(value['content_audit']['verified'])
 
+    def test_one_parent_occurrence_cannot_cover_two_child_formulas(self):
+        parent=ref(1,'Value $x=1$.',(0,0,100,60))
+        first=ref(2,'',(10,10,70,25),'equation_isolated');first['latex']='x=1'
+        second=ref(3,'',(10,30,70,45),'equation_isolated');second['latex']='x=1'
+        value=self.evaluate([parent,first,second],[block('b1','Value $x=1$.')])
+        self.assertEqual(value['parent']['independent_formula']['denominator'],1)
+        self.assertTrue(value['reference_plan']['unresolved'])
+        self.assertFalse(value['content_audit']['verified'])
+
     def test_inline_representation_difference_is_diagnostic_not_new_gate(self):
         parent=ref(1,'$x^2$')
         parent['line_with_spans']=[dict(category_type='equation_inline',latex='x^{2}')]

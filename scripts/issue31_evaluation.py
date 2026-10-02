@@ -3,6 +3,7 @@ import argparse
 from copy import deepcopy
 import json
 from pathlib import Path
+import re
 
 from issue17_baseline import TEXT_CATEGORIES, box, overlap, table_grid, normalize
 from issue24_report import aggregate, quality_metrics
@@ -27,6 +28,7 @@ def reference_plan(annotation):
     projected = deepcopy(annotation)
     refs = [r for r in projected['layout_dets'] if not r.get('ignore')]
     ownership, unresolved, children = [], [], set()
+    consumed = {}
     for child in refs:
         category = child['category_type']
         if category not in TEXT_CATEGORIES | {'equation_isolated'}:
@@ -50,16 +52,26 @@ def reference_plan(annotation):
         expected = child.get('latex', '') if category == 'equation_isolated' else child.get('text', '')
         # Only collapse a redundant child reference whose content already occurs
         # exactly once in the original parent reference. Otherwise keep its score.
-        normalizer = math_payload if category == 'equation_isolated' else normalize
-        needle = normalizer(expected)
-        occurrences = sum(normalizer(t).count(needle) for t in texts) if needle else 0
-        if occurrences != 1:
+        needle = math_payload(expected) if category == 'equation_isolated' else normalize(expected)
+        pattern = (r'\s*'.join(re.escape(c) for c in needle) if category == 'equation_isolated'
+                   else r'\s+'.join(re.escape(word) for word in needle.split()))
+        occurrences = [(i, match.start(1), match.end(1)) for i, text in enumerate(texts)
+                       for match in re.finditer('(?=(' + pattern + '))', text)] if needle else []
+        if len(occurrences) != 1:
             unresolved.append(dict(annotation_id=child['anno_id'], parent_annotation_id=parent['anno_id'],
                                    reason='child_content_not_unique_in_parent_reference'))
             continue
+        text_index, start, end = occurrences[0]
+        key = (parent['anno_id'], text_index)
+        if any(start < right and left < end for left, right in consumed.get(key, [])):
+            unresolved.append(dict(annotation_id=child['anno_id'], parent_annotation_id=parent['anno_id'],
+                                   reason='parent_reference_span_already_owned'))
+            continue
+        consumed.setdefault(key, []).append((start, end))
         children.add(child['anno_id'])
         ownership.append(dict(annotation_id=child['anno_id'], parent_annotation_id=parent['anno_id'],
                               parent_category=parent['category_type'], reference=deepcopy(child),
+                              parent_reference_range=[text_index, start, end],
                               reason='content_already_counted_in_reference_parent'))
     projected['layout_dets'] = [r for r in projected['layout_dets'] if r['anno_id'] not in children]
     return projected, dict(owned_references=ownership, unresolved=unresolved,
