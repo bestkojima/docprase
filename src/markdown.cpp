@@ -1,5 +1,7 @@
 #include "markdown.hpp"
 #include "content_validation.hpp"
+#include <algorithm>
+#include <array>
 #include <utility>
 #include <vector>
 
@@ -97,6 +99,167 @@ LinkEscapes link_openers(const std::string& source) {
     }
     return escape;
 }
+
+bool horizontal_space(char ch) { return ch == ' ' || ch == '\t' || ch == '\r'; }
+
+size_t heading_content(const std::string& line) {
+    size_t start = 0;
+    while (start < line.size() && line[start] == ' ' && start < 3) ++start;
+    size_t end = start;
+    while (end < line.size() && line[end] == '#') ++end;
+    if (end == start || end - start > 6 || (end < line.size() && !horizontal_space(line[end]))) return 0;
+    while (end < line.size() && horizontal_space(line[end])) ++end;
+    return end;
+}
+
+std::string trim_horizontal(std::string text) {
+    const auto start = text.find_first_not_of(" \t\r");
+    if (start == std::string::npos) return {};
+    return text.substr(start, text.find_last_not_of(" \t\r") - start + 1);
+}
+
+// Protect math, code and quoted examples before looking for exam labels or
+// caption headings. These constructs may contain the exact same characters.
+std::vector<bool> protected_text(const std::string& source) {
+    std::vector<bool> protected_bytes(source.size(), false);
+    const std::array<std::pair<std::string, std::string>, 5> quotes = {{{"\"", "\""},
+        {"“", "”"}, {"‘", "’"}, {"「", "」"}, {"『", "』"}}};
+    char fence = 0;
+    size_t fence_width = 0;
+    for (size_t i = 0; i < source.size();) {
+        const bool line_start = i == 0 || source[i - 1] == '\n';
+        if (line_start) {
+            const size_t line_end = source.find('\n', i);
+            const size_t end = line_end == std::string::npos ? source.size() : line_end + 1;
+            size_t p = i;
+            while (p < end && source[p] == ' ' && p - i < 3) ++p;
+            const char ch = p < end ? source[p] : 0;
+            size_t run = p;
+            if (ch == '`' || ch == '~') while (run < end && source[run] == ch) ++run;
+            if (fence || run - p >= 3) {
+                std::fill(protected_bytes.begin() + i, protected_bytes.begin() + end, true);
+                if (fence && ch == fence && run - p >= fence_width &&
+                    trim_horizontal(source.substr(run, (line_end == std::string::npos ? end : line_end) - run)).empty()) fence = 0;
+                else if (!fence) { fence = ch; fence_width = run - p; }
+                i = end;
+                continue;
+            }
+        }
+        if (source[i] == '`' && !escaped_at(source, i)) {
+            size_t run = i;
+            while (run < source.size() && source[run] == '`') ++run;
+            const std::string ticks(run - i, '`');
+            size_t end = source.find(ticks, run);
+            while (end != std::string::npos &&
+                   ((end > 0 && source[end - 1] == '`') || (end + ticks.size() < source.size() && source[end + ticks.size()] == '`')))
+                end = source.find(ticks, end + ticks.size());
+            if (end != std::string::npos) {
+                end += ticks.size();
+                std::fill(protected_bytes.begin() + i, protected_bytes.begin() + end, true);
+                i = end;
+                continue;
+            }
+            i = run;
+            continue;
+        }
+        const auto math = math_span(source, i);
+        if (math.end > i) {
+            std::fill(protected_bytes.begin() + i, protected_bytes.begin() + math.end, true);
+            i = math.end;
+            continue;
+        }
+        bool quoted = false;
+        for (const auto& quote : quotes) {
+            if (source.compare(i, quote.first.size(), quote.first) != 0 || escaped_at(source, i)) continue;
+            size_t end = source.find(quote.second, i + quote.first.size());
+            while (end != std::string::npos && escaped_at(source, end))
+                end = source.find(quote.second, end + quote.second.size());
+            if (end == std::string::npos) continue;
+            end += quote.second.size();
+            std::fill(protected_bytes.begin() + i, protected_bytes.begin() + end, true);
+            i = end;
+            quoted = true;
+            break;
+        }
+        if (!quoted) ++i;
+    }
+    return protected_bytes;
+}
+
+struct ExamMarker { size_t start, end; bool answer; };
+std::vector<ExamMarker> exam_markers(const std::string& source, size_t start, size_t end,
+                                     const std::vector<bool>& protected_bytes) {
+    const std::array<std::pair<std::string, bool>, 4> labels = {{{"[答案]", true}, {"[解析]", false},
+                                                             {"【答案】", true}, {"【解析】", false}}};
+    std::vector<ExamMarker> markers;
+    for (size_t i = start; i < end; ++i) {
+        if (protected_bytes[i] || escaped_at(source, i)) continue;
+        for (const auto& label : labels) {
+            if (source.compare(i, label.first.size(), label.first) != 0) continue;
+            size_t p = i + label.first.size();
+            while (p < end && horizontal_space(source[p])) ++p;
+            if (p < end && source[p] == ':') ++p;
+            else if (p + 3 <= end && source.compare(p, 3, "：") == 0) p += 3;
+            else continue;
+            if (p > end || std::any_of(protected_bytes.begin() + i, protected_bytes.begin() + p,
+                                      [](bool value) { return value; })) continue;
+            markers.push_back({i, p, label.second});
+            i = p - 1;
+            break;
+        }
+    }
+    return markers;
+}
+
+bool choice_answer(std::string answer) {
+    answer = trim_horizontal(std::move(answer));
+    bool choice = false;
+    for (size_t i = 0; i < answer.size();) {
+        if (answer[i] >= 'A' && answer[i] <= 'H') { choice = true; ++i; }
+        else if (horizontal_space(answer[i]) || answer[i] == ',') ++i;
+        else if (answer.compare(i, 3, "、") == 0 || answer.compare(i, 3, "，") == 0) i += 3;
+        else return false;
+    }
+    return choice;
+}
+
+std::string semantic_text(const std::string& source, const std::string& label) {
+    if (label.empty()) return source;
+    const bool caption = label == "figure_title" || label == "vision_footnote";
+    const auto protected_bytes = protected_text(source);
+    std::string result;
+    for (size_t start = 0; start < source.size();) {
+        const size_t newline = source.find('\n', start);
+        const size_t end = newline == std::string::npos ? source.size() : newline;
+        std::string line = source.substr(start, end - start);
+        const size_t heading = heading_content(line);
+        const auto markers = caption ? std::vector<ExamMarker>{} : exam_markers(source, start, end, protected_bytes);
+        const bool standalone = !markers.empty() && markers.front().start >= start + heading &&
+            trim_horizontal(line.substr(heading, markers.front().start - start - heading)).empty();
+        const bool inline_pair = markers.size() >= 2 && markers[0].answer && !markers[1].answer &&
+            choice_answer(source.substr(markers[0].end, markers[1].start - markers[0].end));
+        if (standalone || inline_pair) {
+            if (standalone && !result.empty() && result.back() == '\n' &&
+                (result.size() < 2 || result[result.size() - 2] != '\n')) result += '\n';
+            if (!standalone) line = trim_horizontal(source.substr(start, markers[0].start - start));
+            else line.clear();
+            for (size_t i = 0; i < markers.size(); ++i) {
+                if (!line.empty()) line += "\n\n";
+                line += markers[i].answer ? "**答案：**" : "**解析：**";
+                const size_t stop = i + 1 == markers.size() ? end : markers[i + 1].start;
+                const auto value = trim_horizontal(source.substr(markers[i].end, stop - markers[i].end));
+                if (!value.empty()) line += ' ' + value;
+            }
+        } else if (caption && heading && !protected_bytes[start]) {
+            line = line.substr(heading);
+        }
+        result += line;
+        if (newline == std::string::npos) break;
+        result += '\n';
+        start = newline + 1;
+    }
+    return result;
+}
 }
 
 std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption) {
@@ -164,6 +327,6 @@ std::string render_markdown_block(const MarkdownBlock& b, bool uncertain_caption
         return b.display_formula ? "$$\n" + formula + "\n$$" : "$" + formula + "$";
     }
     if (b.type == "table" && b.structured_table) return b.text;
-    return with_relation_note(safe_text(b.text));
+    return with_relation_note(safe_text(b.type == "text" ? semantic_text(b.text, b.semantic_label) : b.text));
 }
 }

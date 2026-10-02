@@ -363,6 +363,7 @@ std::string render_page_markdown(const Json& page,
             block.at("status").get<std::string>(), content.at("text").get<std::string>(),
             resource.is_null() ? "" : resource.get<std::string>(), content.value("display", true),
             type == "table" && block.at("status") == "ok"};
+        if (label_export) render.semantic_label = layout_semantic_label(block_class_id(page, block));
         if (block.at("provenance").contains("assessment")) {
             render.assessment_state = block.at("provenance").at("assessment").at("state").get<std::string>();
             render.assessment_reason = block.at("provenance").at("assessment").at("reason").get<std::string>();

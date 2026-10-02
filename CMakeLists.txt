@@ -183,6 +183,9 @@ if(DOCOCR_BUILD_TESTS)
   add_test(NAME label_pipeline COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/label_pipeline.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME semantic_text_rendering COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/semantic_text_rendering.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME printed_page_integration COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/printed_page_integration.py $<TARGET_FILE:dococr_cli_fixture>)
   add_test(NAME issue21_quality COMMAND ${Python3_EXECUTABLE}

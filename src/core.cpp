@@ -1283,7 +1283,7 @@ bool valid_text_math(const std::string& text) {
     return true;
 }
 
-std::string render(const Block& b, bool uncertain_caption = false) {
+std::string render(const Block& b, bool uncertain_caption = false, bool semantic_text = false) {
     bool safe_table = b.table.valid;
     if (b.type == "table" && b.status == "ok" && !safe_table) {
         auto table = parse_table(b.text);
@@ -1291,7 +1291,8 @@ std::string render(const Block& b, bool uncertain_caption = false) {
     }
     return render_markdown_block({b.id, b.type, b.status, b.text, b.resource,
                                   b.display_formula, safe_table, b.assessment.state,
-                                  b.assessment.state == "skipped" ? "" : b.assessment.reason}, uncertain_caption);
+                                  b.assessment.state == "skipped" ? "" : b.assessment.reason,
+                                  semantic_text ? layout_semantic_label(b.original_class_id) : ""}, uncertain_caption);
 }
 
 std::string serialize(const Image& image, const std::string& state,
@@ -2060,7 +2061,7 @@ RunResult run_layout_only(IInferenceEngine* backend, const Image& image, std::at
     for (const auto& block : blocks) {
         if (!label_export.markdown_visible(block.original_class_id)) continue;
         if (!result.markdown.empty()) result.markdown += "\n\n";
-        result.markdown += render(block, uncertain_captions.count(block.id));
+        result.markdown += render(block, uncertain_captions.count(block.id), true);
     }
     if (!result.markdown.empty()) result.markdown += '\n';
     result.json = serialize(image, state, blocks, backend->profile(), &records,

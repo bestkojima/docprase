@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-02",
+  "verdict": "PASS",
+  "execution": "captured_outputs_replay_not_fresh_model_inference",
+  "baseline_commit": "8eef447",
+  "ctest": {
+    "passed": 31,
+    "total": 31,
+    "elapsed_seconds": 28.69
+  },
+  "semantic_render_cases": 18,
+  "pages": [
+    {
+      "case": "odb-01",
+      "verdict": "PASS",
+      "answer_paragraphs": 7,
+      "analysis_paragraphs": 7,
+      "preserved_headings": [
+        "数学",
+        "注意事项："
+      ],
+      "source_json_sha256": "e27a02a04439f60ea8d80429cf24ed58e39e6ffef064614ff5d7daba5d78c83e",
+      "reexport_json_sha256": "e27a02a04439f60ea8d80429cf24ed58e39e6ffef064614ff5d7daba5d78c83e",
+      "before_markdown_sha256": "63c5d7f9e5e888e437d6513a1221c8e383328b1251168210688e2fe7450c3311",
+      "after_markdown_sha256": "f3714bd484fbd564d93990a4f4eab6536d8ecbad020f7938769987a44ce9254d",
+      "prior_json_unchanged": true,
+      "prior_json_reexport_matches_new_replay": true,
+      "initial_and_reexport_identical": true,
+      "replay_json_difference_paths": [
+        "/pages/0/blocks/0/provenance/recognition/attempts/0/elapsed_ms"
+      ]
+    },
+    {
+      "case": "odb-02",
+      "verdict": "PASS",
+      "answer_paragraphs": 12,
+      "analysis_paragraphs": 12,
+      "preserved_headings": [
+        "黄冈市 2022 年高三年级 9 月调研考试",
+        "数学",
+        "注意事项："
+      ],
+      "source_json_sha256": "a37517a6002e72129c690877bf3df171d3189d68bbb6124d2c2ad5632a1fc522",
+      "reexport_json_sha256": "a37517a6002e72129c690877bf3df171d3189d68bbb6124d2c2ad5632a1fc522",
+      "before_markdown_sha256": "93b1937916254b4c8ea1dbef50974c400a2e7c2d659923c5653595b415a2c0b1",
+      "after_markdown_sha256": "9897b09e66d71c29d2bbde9ce9c4791163c20278718fa4593d93219d2d48cf07",
+      "prior_json_unchanged": true,
+      "prior_json_reexport_matches_new_replay": true,
+      "initial_and_reexport_identical": true,
+      "replay_json_difference_paths": [
+        "/pages/0/blocks/3/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/4/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/5/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/6/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/19/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/20/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/22/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/23/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/25/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/27/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/30/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/32/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/36/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/38/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/40/provenance/recognition/attempts/0/elapsed_ms",
+        "/pages/0/blocks/42/provenance/recognition/attempts/0/elapsed_ms"
+      ]
+    }
+  ],
+  "seal_margin": {
+    "leaked_identity_fields": 0,
+    "aside_blocks_retained": 20,
+    "metadata_and_instruction_retained": true
+  },
+  "binary_sha256": {
+    "dococr_cli": "6a8c1f99c02fee6ef44903d7900e01c1ac05fd9b4a967a9db886449ef7e131b4",
+    "dococr_cli_fixture": "65127bc54ca0bb5f464dfe0b121230b0d50acd2a5361ea55ec0f2a31174dbb10",
+    "libdococr_c.so": "8985a422568a35bebe43c381580a131623bee8b3375e60e2096ae5fa2c801f72",
+    "libdococr_c_test.so": "ff5f049932fe767346d9304dd4c7ed1c2efc0bd96bd9c9ce683c313a6d0ae118"
+  },
+  "source_sha256": {
+    "src/markdown.cpp": "dfc6cbe186d0a93030d375da1e1a2d1eddecf95ed65d3cdcc4f874ab0a583319",
+    "src/markdown.hpp": "945d83ff94ccea55df01eb2f1ac935a5c4850e33bb34a435de38cacd04d397b1",
+    "src/core.cpp": "abbd0623e8ed76b9127666c46ba01c77cc23f5816dfbbfdb2811723c60b79780",
+    "src/reexport.cpp": "ea5bf14575e57d55d517253c11ff3532095cfb7990b19226496070debd13b2af",
+    "tests/semantic_text_rendering.py": "256c8afd865a291198e1923e01aea403a9c8f3f39906d0bf9a5baee4c0b4106b",
+    "CMakeLists.txt": "025d0b129d6975fe3a689b1c2ce3ac2ee0ca04a61e9b4a4899b540750519ea61",
+    "src/region_structure.cpp": "661175e53d11f8ffec65f34b63b9c22bf60a4a11dd327afc21ec71871d4ba277"
+  },
+  "artifact_root": "/home/dr/project/docprase/output/semantic-text-fixed-20261002",
+  "commit_candidate_validation": {
+    "tested_tree_before_validation_record": "289512df6d2038fc533f4dbfa8e55251e92621ed",
+    "ctest": {
+      "passed": 31,
+      "total": 31,
+      "elapsed_seconds": 24.43
+    },
+    "excluded_unrelated_worktree_changes": true,
+    "committed_region_structure_sha256": "620d16b276af599d0982364a7c97a2c5d44648a237690390957df55135d5416b",
+    "binary_sha256": {
+      "dococr_cli": "b77f184952af00f4acde4464c3a9ef8a93ca483c8b6d4e7adcc0d2fd5af2aed3",
+      "dococr_cli_fixture": "c83b1fbe381d984ae0df39332316f6e86967f962fb68fe763dd89f2c145d212c",
+      "libdococr_c.so": "3fbebdcf75013d8a2f8d83e1cbb37610c8c8bdac3e2c35a97ad290a46fbc0973",
+      "libdococr_c_test.so": "95a34bee4025c2caf7e95b4284e5cd8ebf1fc9d5553ff4444be6e515a1ed1c51"
+    },
+    "pages": [
+      {
+        "case": "odb-01",
+        "verdict": "PASS",
+        "aside_blocks_retained": 11,
+        "leaked_identity_fields": 0,
+        "answer_paragraphs": 7,
+        "analysis_paragraphs": 7,
+        "markdown_matches_worktree_validation": true,
+        "initial_and_reexport_identical": true
+      },
+      {
+        "case": "odb-02",
+        "verdict": "PASS",
+        "aside_blocks_retained": 9,
+        "leaked_identity_fields": 0,
+        "answer_paragraphs": 12,
+        "analysis_paragraphs": 12,
+        "markdown_matches_worktree_validation": true,
+        "initial_and_reexport_identical": true
+      }
+    ],
+    "artifact_root": "/home/dr/project/docprase/output/semantic-text-commit-verified-20261002"
+  }
+}
