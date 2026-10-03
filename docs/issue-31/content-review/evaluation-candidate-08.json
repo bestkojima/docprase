@@ -1,0 +1,1307 @@
+{
+  "page": "evaluation-candidate-08",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "确认流体压强第2条右侧正文的覆盖缺口；其余正文、问题与选项字母内容一致。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "a7664afbff8693f7fc7b1f2aa972acba2eda52fc123239cd978e359341e867d9",
+    "sheet-01.jpg": "bc62cee28efae65ab72566385add47e2c899e812181e6ca08d79f3e2d64ac6fd"
+  },
+  "items": [
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          109.4600830078125,
+          102.7999038696289,
+          436.8008728027344,
+          102.7999038696289,
+          436.8008728027344,
+          152.00694274902344,
+          109.4600830078125,
+          152.00694274902344
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 11,
+        "text": "【新知讲解】流体压强",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "【新知讲解】流体压强",
+      "actual": "## 【新知讲解】流体压强",
+      "raw_parent": "## 【新知讲解】流体压强\n",
+      "bbox": [
+        109.4600830078125,
+        102.7999038696289,
+        436.8008728027344,
+        152.00694274902344
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            110,
+            108,
+            439,
+            150
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【新知讲解】流体压强\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【新知讲解】流体压强\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          95.33324432373047,
+          201.11119079589844,
+          661.2634887695312,
+          201.11119079589844,
+          661.2634887695312,
+          243.04534912109375,
+          95.33324432373047,
+          243.04534912109375
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 0,
+        "text": "Q1. 飞机是如何获得向上的升力飞起来的？",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": true,
+      "expected": "Q1. 飞机是如何获得向上的升力飞起来的？",
+      "actual": "Q1. 飞机是如何获得向上的升力飞起来的？",
+      "raw_parent": "Q1. 飞机是如何获得向上的升力飞起来的？\n",
+      "bbox": [
+        95.33324432373047,
+        201.11119079589844,
+        661.2634887695312,
+        243.04534912109375
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "问题Q1、Q2及完整联系方式与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            91,
+            203,
+            659,
+            242
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "Q1. 飞机是如何获得向上的升力飞起来的？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "Q1. 飞机是如何获得向上的升力飞起来的？\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:14",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          97.11093139648438,
+          531.0542602539062,
+          576.6268920898438,
+          531.0542602539062,
+          576.6268920898438,
+          571.03466796875,
+          97.11093139648438,
+          571.03466796875
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 14,
+        "text": "Q2. 下雨天雨伞为什么容易向上翻？",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": true,
+      "expected": "Q2. 下雨天雨伞为什么容易向上翻？",
+      "actual": "Q2. 下雨天雨伞为什么容易向上翻？",
+      "raw_parent": "Q2. 下雨天雨伞为什么容易向上翻？\n",
+      "bbox": [
+        97.11093139648438,
+        531.0542602539062,
+        576.6268920898438,
+        571.03466796875
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "问题Q1、Q2及完整联系方式与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            91,
+            532,
+            572,
+            571
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "Q2. 下雨天雨伞为什么容易向上翻？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "Q2. 下雨天雨伞为什么容易向上翻？\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          286.3126586210928,
+          1570.4389990171612,
+          410.3345449026813,
+          1570.4389990171612,
+          410.3345449026813,
+          1617.9367426994718,
+          286.3126586210928,
+          1617.9367426994718
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 4,
+        "text": "飞机升力",
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "飞机升力",
+      "actual": "## 飞机升力",
+      "raw_parent": "## 飞机升力\n",
+      "bbox": [
+        286.3126586210928,
+        1570.4389990171612,
+        410.3345449026813,
+        1617.9367426994718
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            287,
+            1575,
+            412,
+            1615
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 飞机升力\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 飞机升力\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          1025.1664492348111,
+          1577.4757017849108,
+          1189.6493764309603,
+          1577.4757017849108,
+          1189.6493764309603,
+          1613.538803469628,
+          1025.1664492348111,
+          1613.538803469628
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 9,
+        "text": "火车安全线",
+        "attribute": {}
+      },
+      "block_id": "b0016",
+      "strict_exact": false,
+      "expected": "火车安全线",
+      "actual": "## 火车安全线",
+      "raw_parent": "## 火车安全线\n",
+      "bbox": [
+        1025.1664492348111,
+        1577.4757017849108,
+        1189.6493764309603,
+        1613.538803469628
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            1027,
+            1577,
+            1187,
+            1616
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 火车安全线\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 火车安全线\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:17",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          114.96829223632812,
+          1719.5233154296875,
+          288.9617614746094,
+          1719.5233154296875,
+          288.9617614746094,
+          1765.66015625,
+          114.96829223632812,
+          1765.66015625
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 17,
+        "text": "【剑指中考】",
+        "attribute": {}
+      },
+      "block_id": "b0017",
+      "strict_exact": false,
+      "expected": "【剑指中考】",
+      "actual": "## 【剑指中考】",
+      "raw_parent": "## 【剑指中考】\n",
+      "bbox": [
+        114.96829223632812,
+        1719.5233154296875,
+        288.9617614746094,
+        1765.66015625
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0017",
+          "bbox": [
+            108,
+            1720,
+            291,
+            1766
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【剑指中考】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【剑指中考】\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          96.4111099243164,
+          1798.2950439453125,
+          1548.6160888671875,
+          1798.2950439453125,
+          1548.6160888671875,
+          1915.2752685546875,
+          96.4111099243164,
+          1915.2752685546875
+        ],
+        "ignore": false,
+        "order": 18,
+        "anno_id": 13,
+        "text": "例题1:飞机前进时，机翼与周围的空气发生相对运动，当气流迎面流过机翼时，气流对机翼上下表面产生向上的压力差，从而产生升力。能使图中的飞机前进时产生升力的秘密在于机翼，则机翼的横截剖面图应该是(    )",
+        "attribute": {}
+      },
+      "block_id": "b0018",
+      "strict_exact": false,
+      "expected": "例题1:飞机前进时，机翼与周围的空气发生相对运动，当气流迎面流过机翼时，气流对机翼上下表面产生向上的压力差，从而产生升力。能使图中的飞机前进时产生升力的秘密在于机翼，则机翼的横截剖面图应该是(    )",
+      "actual": "例题 1: 飞机前进时，机翼与周围的空气发生相对运动，当气流迎面流过机翼时，气流对机翼上下表面产生向上的压力差，从而产生升力。能使图中的飞机前进时产生升力的秘密在于机翼，则机翼的横截剖面图应该是（）",
+      "raw_parent": "例题 1: 飞机前进时，机翼与周围的空气发生相对运动，当气流迎面流过机翼时，气流对机翼上下表面产生向上的压力差，从而产生升力。能使图中的飞机前进时产生升力的秘密在于机翼，则机翼的横截剖面图应该是（）\n",
+      "bbox": [
+        96.4111099243164,
+        1798.2950439453125,
+        1548.6160888671875,
+        1915.2752685546875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "( )",
+          "actual": "（）"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0018",
+          "bbox": [
+            89,
+            1800,
+            1543,
+            1915
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 1: 飞机前进时，机翼与周围的空气发生相对运动，当气流迎面流过机翼时，气流对机翼上下表面产生向上的压力差，从而产生升力。能使图中的飞机前进时产生升力的秘密在于机翼，则机翼的横截剖面图应该是（）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 1: 飞机前进时，机翼与周围的空气发生相对运动，当气流迎面流过机翼时，气流对机翼上下表面产生向上的压力差，从而产生升力。能使图中的飞机前进时产生升力的秘密在于机翼，则机翼的横截剖面图应该是（）\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          95.03009796142622,
+          2049.391701559486,
+          129.30547788082436,
+          2049.391701559486,
+          129.30547788082436,
+          2098.8041872151125,
+          95.03009796142622,
+          2098.8041872151125
+        ],
+        "ignore": false,
+        "order": 19,
+        "anno_id": 6,
+        "text": "A.",
+        "attribute": {}
+      },
+      "block_id": "b0023",
+      "strict_exact": false,
+      "expected": "A.",
+      "actual": "## A",
+      "raw_parent": "## A\n",
+      "bbox": [
+        95.03009796142622,
+        2049.391701559486,
+        129.30547788082436,
+        2098.8041872151125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0023",
+          "bbox": [
+            92,
+            2056,
+            138,
+            2095
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## A\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## A\n",
+            "resource": "assets/p0001-b0023.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:27",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          440.0126185609283,
+          2053.458954964461,
+          484.5365886151013,
+          2053.458954964461,
+          484.5365886151013,
+          2095.680642982609,
+          440.0126185609283,
+          2095.680642982609
+        ],
+        "ignore": false,
+        "order": 21,
+        "anno_id": 27,
+        "text": "B.",
+        "attribute": {}
+      },
+      "block_id": "b0025",
+      "strict_exact": false,
+      "expected": "B.",
+      "actual": "## B",
+      "raw_parent": "## B\n",
+      "bbox": [
+        440.0126185609283,
+        2053.458954964461,
+        484.5365886151013,
+        2095.680642982609
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0025",
+          "bbox": [
+            444,
+            2057,
+            482,
+            2095
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## B\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## B\n",
+            "resource": "assets/p0001-b0025.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:21",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          795.5545877729663,
+          2059.19284672024,
+          833.2655710843119,
+          2059.19284672024,
+          833.2655710843119,
+          2091.681696534349,
+          795.5545877729663,
+          2091.681696534349
+        ],
+        "ignore": false,
+        "order": 23,
+        "anno_id": 21,
+        "text": "C.",
+        "attribute": {}
+      },
+      "block_id": "b0026",
+      "strict_exact": false,
+      "expected": "C.",
+      "actual": "## C",
+      "raw_parent": "## C\n",
+      "bbox": [
+        795.5545877729663,
+        2059.19284672024,
+        833.2655710843119,
+        2091.681696534349
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0026",
+          "bbox": [
+            794,
+            2057,
+            838,
+            2095
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## C\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## C\n",
+            "resource": "assets/p0001-b0026.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:23",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          1143.8039409311286,
+          2058.3298971732456,
+          1185.768111312734,
+          2058.3298971732456,
+          1185.768111312734,
+          2092.87218617369,
+          1143.8039409311286,
+          2092.87218617369
+        ],
+        "ignore": false,
+        "order": 25,
+        "anno_id": 23,
+        "text": "D.",
+        "attribute": {}
+      },
+      "block_id": "b0024",
+      "strict_exact": false,
+      "expected": "D.",
+      "actual": "## D",
+      "raw_parent": "## D\n",
+      "bbox": [
+        1143.8039409311286,
+        2058.3298971732456,
+        1185.768111312734,
+        2092.87218617369
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0024",
+          "bbox": [
+            1143,
+            2056,
+            1189,
+            2095
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## D\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## D\n",
+            "resource": "assets/p0001-b0024.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          636.244873046875,
+          63.12147903442383,
+          1009.25341796875,
+          63.12147903442383,
+          1009.25341796875,
+          95.29460906982422,
+          636.244873046875,
+          95.29460906982422
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 5,
+        "text": "春季初中物理专项班 (实验乐享)",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "春季初中物理专项班 (实验乐享)",
+      "actual": "## 春季初中物理专项班（实验乐享）",
+      "raw_parent": "## 春季初中物理专项班（实验乐享）\n",
+      "bbox": [
+        636.244873046875,
+        63.12147903442383,
+        1009.25341796875,
+        95.29460906982422
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": " (",
+          "actual": "（"
+        },
+        {
+          "reference": ")",
+          "actual": "）"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文与各选项标识保持；差异为Markdown标题、题号/选项句点和括号、空白占位；未见升力描述字词改变。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            635,
+            64,
+            1007,
+            95
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 春季初中物理专项班（实验乐享）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 春季初中物理专项班（实验乐享）\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:8",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          379.477294921875,
+          2236.409912109375,
+          1305.1143798828125,
+          2236.409912109375,
+          1305.1143798828125,
+          2283.371826171875,
+          379.477294921875,
+          2283.371826171875
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 8,
+        "text": "【更多课程加微信：41264124105 或 公众号：四小圈】",
+        "attribute": {}
+      },
+      "block_id": "b0027",
+      "strict_exact": true,
+      "expected": "【更多课程加微信：41264124105 或 公众号：四小圈】",
+      "actual": "【更多课程加微信：41264124105 或 公众号：四小圈】",
+      "raw_parent": "【更多课程加微信：41264124105 或 公众号：四小圈】\n",
+      "bbox": [
+        379.477294921875,
+        2236.409912109375,
+        1305.1143798828125,
+        2283.371826171875
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "问题Q1、Q2及完整联系方式与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0027",
+          "bbox": [
+            377,
+            2236,
+            1306,
+            2283
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【更多课程加微信：41264124105 或 公众号：四小圈】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【更多课程加微信：41264124105 或 公众号：四小圈】\n",
+            "resource": "assets/p0001-b0027.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:20",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          89.0077112917092,
+          917.3803913476876,
+          1369.970027129896,
+          917.3803913476876,
+          1369.970027129896,
+          1174.1947215116313,
+          89.0077112917092,
+          1174.1947215116313
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 20,
+        "text": "1、流体: 具有流动性的____和____ 统称为流体；\n2、流体压强与流速的关系:\n流体流速越大的位置压强越____, 流速越小的位置压强越____;\n3、流体压强的应用:",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              92.4295654296875,
+              920.3695068359375,
+              1173.6986083984375,
+              920.3695068359375,
+              1173.6986083984375,
+              964.5007934570312,
+              92.4295654296875,
+              964.5007934570312
+            ],
+            "ignore": false,
+            "order": 9,
+            "anno_id": 16,
+            "text": "1、流体: 具有流动性的____和____ 统称为流体；",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  99.99999999999994,
+                  922.3747589010604,
+                  1188.5751794192972,
+                  922.3747589010604,
+                  1188.5751794192972,
+                  966.7087351648996,
+                  99.99999999999994,
+                  966.7087351648996
+                ],
+                "text": "1、流体: 具有流动性的____和____ 统称为流体；"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              93.97496795654297,
+              992.2516479492188,
+              451.5851745605469,
+              992.2516479492188,
+              451.5851745605469,
+              1032.8865966796875,
+              93.97496795654297,
+              1032.8865966796875
+            ],
+            "ignore": false,
+            "order": 10,
+            "anno_id": 7,
+            "text": "2、流体压强与流速的关系:",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  98.29364514109189,
+                  997.4404677116383,
+                  454.58872119265305,
+                  997.4404677116383,
+                  454.58872119265305,
+                  1029.2261989550286,
+                  98.29364514109189,
+                  1029.2261989550286
+                ],
+                "text": "2、流体压强与流速的关系:"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              93.86155220940836,
+              1064.6029052734377,
+              1365.360107421875,
+              1064.6029052734377,
+              1365.360107421875,
+              1105.3176269531248,
+              93.86155220940836,
+              1105.3176269531248
+            ],
+            "ignore": false,
+            "order": 11,
+            "anno_id": 1,
+            "text": "流体流速越大的位置压强越____, 流速越小的位置压强越____;",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  95.59329819501667,
+                  1062.2496835037805,
+                  1363.1476258227826,
+                  1062.2496835037805,
+                  1363.1476258227826,
+                  1109.1266926616115,
+                  95.59329819501667,
+                  1109.1266926616115
+                ],
+                "text": "流体流速越大的位置压强越____, 流速越小的位置压强越____;"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              93.67582658218178,
+              1137.0036330597359,
+              364.69872959769003,
+              1137.0036330597359,
+              364.69872959769003,
+              1169.8380299343046,
+              93.67582658218178,
+              1169.8380299343046
+            ],
+            "ignore": false,
+            "order": 12,
+            "anno_id": 15,
+            "text": "3、流体压强的应用:",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  93.71821782870346,
+                  1133.5027374236845,
+                  369.3550316767532,
+                  1133.5027374236845,
+                  369.3550316767532,
+                  1176.6295858488893,
+                  93.71821782870346,
+                  1176.6295858488893
+                ],
+                "text": "3、流体压强的应用:"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "1、流体: 具有流动性的____和____ 统称为流体；\n2、流体压强与流速的关系:\n流体流速越大的位置压强越____, 流速越小的位置压强越____;\n3、流体压强的应用:",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        89.0077112917092,
+        917.3803913476876,
+        1369.970027129896,
+        1174.1947215116313
+      ],
+      "differences": [
+        {
+          "reference": "1、流体: 具有流动性的____和____ 统称为流体； 2、流体压强与流速的关系: 流体流速越大的位置压强越____, 流速越小的位置压强越____; 3、流体压强的应用:",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "coverage_error"
+        ],
+        "reason": "一个GT被拆成b0009/b0010/b0012；原图右侧流速越小的位置压强越这句不在已输出正文中，b0010实际裁图只到左侧半行，不能归为纯表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            91,
+            921,
+            1178,
+            962
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1、流体：具有流动性的___和___统称为流体；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1、流体：具有流动性的___和___统称为流体；\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0010",
+          "bbox": [
+            92,
+            992,
+            463,
+            1104
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "2、流体压强与流速的关系：\n\n流体流速越大的位置压强越\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2、流体压强与流速的关系：\n\n流体流速越大的位置压强越\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0012",
+          "bbox": [
+            93,
+            1133,
+            369,
+            1174
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "3、流体压强的应用：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3、流体压强的应用：\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0009",
+      "kind": "extra",
+      "block_id": "b0009",
+      "bbox": [
+        91,
+        921,
+        1178,
+        962
+      ],
+      "strict_exact": false,
+      "raw_parent": "1、流体：具有流动性的___和___统称为流体；\n",
+      "actual": "1、流体：具有流动性的___和___统称为流体；\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "第1条流体定义和第3条应用标题分别单独输出，属于GT一对多配对差异而非额外虚构正文。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            91,
+            921,
+            1178,
+            962
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1、流体：具有流动性的___和___统称为流体；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1、流体：具有流动性的___和___统称为流体；\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0010",
+      "kind": "extra",
+      "block_id": "b0010",
+      "bbox": [
+        92,
+        992,
+        463,
+        1104
+      ],
+      "strict_exact": false,
+      "raw_parent": "2、流体压强与流速的关系：\n\n流体流速越大的位置压强越\n",
+      "actual": "2、流体压强与流速的关系：\n\n流体流速越大的位置压强越\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "coverage_error"
+        ],
+        "reason": "一个GT被拆成b0009/b0010/b0012；原图右侧流速越小的位置压强越这句不在已输出正文中，b0010实际裁图只到左侧半行，不能归为纯表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            92,
+            992,
+            463,
+            1104
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "2、流体压强与流速的关系：\n\n流体流速越大的位置压强越\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2、流体压强与流速的关系：\n\n流体流速越大的位置压强越\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0012",
+      "kind": "extra",
+      "block_id": "b0012",
+      "bbox": [
+        93,
+        1133,
+        369,
+        1174
+      ],
+      "strict_exact": false,
+      "raw_parent": "3、流体压强的应用：\n",
+      "actual": "3、流体压强的应用：\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "第1条流体定义和第3条应用标题分别单独输出，属于GT一对多配对差异而非额外虚构正文。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            93,
+            1133,
+            369,
+            1174
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "3、流体压强的应用：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3、流体压强的应用：\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_14.jpg",
+    "sha256": "910d138724d2eab08e50f69c4ee5fa03f4324a01cccfed5e79551b1fe057e6f7"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/evaluation-candidate-08.json",
+    "sha256": "55b57f64f1d549414033bcdbee5e8cede679cc05b2bf88b5bed10724c1092c90"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 17,
+  "unverified_units": []
+}

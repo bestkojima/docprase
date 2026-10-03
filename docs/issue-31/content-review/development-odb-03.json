@@ -1,0 +1,3055 @@
+{
+  "page": "development-odb-03",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "题 19 缺失为拆分配对；品牌中文未转为文本，URL 已保留。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "05b8103c08f5bc0c6dab53a6e78a97c04afc202be88569b46771415713883820",
+    "sheet-01.jpg": "f009c1c4e364a7e5f7cd803fcdb9e41333251ac8042fce3afd7f024ded0be13c"
+  },
+  "items": [
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          50.28716816144471,
+          149.1687412430175,
+          1182.332633202958,
+          149.1687412430175,
+          1182.332633202958,
+          313.17577864025543,
+          50.28716816144471,
+          313.17577864025543
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 16,
+        "text": "16. 已知函数 $ y=-\\frac{1}{2}x+2 $ ，当 $ -1<x\\leq1 $时， y的取值范围是（    ）\nA. $ -\\frac{5}{2}<y\\leq\\frac{3}{2} $ B $ \\frac{3}{2}<y<\\frac{5}{2} $ ( $ \\frac{3}{2}\\leq y<\\frac{5}{2} $ D. $ \\frac{3}{2}<y\\leq\\frac{5}{2} $",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              79.47527728077797,
+              156.51060833933923,
+              948.7208827495278,
+              156.51060833933923,
+              948.7208827495278,
+              222.83403645914132,
+              79.47527728077797,
+              222.83403645914132
+            ],
+            "ignore": false,
+            "order": 2,
+            "anno_id": 2,
+            "text": "16. 已知函数 $ y=-\\frac{1}{2}x+2 $ ，当 $ -1<x\\leq1 $时， y的取值范围是（    ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  82.66666666666666,
+                  172,
+                  256,
+                  172,
+                  256,
+                  198.66666666666666,
+                  82.66666666666666,
+                  198.66666666666666
+                ],
+                "text": "16. 已知函数"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  257.3333333333333,
+                  152,
+                  408,
+                  152,
+                  408,
+                  224,
+                  257.3333333333333,
+                  224
+                ],
+                "latex": "$ y=-\\frac{1}{2}x+2 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  408,
+                  172,
+                  468,
+                  172,
+                  468,
+                  198.66666666666666,
+                  408,
+                  198.66666666666666
+                ],
+                "text": "，当"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  468,
+                  166.66666666666666,
+                  586.6666666666666,
+                  166.66666666666666,
+                  586.6666666666666,
+                  201.33333333333331,
+                  468,
+                  201.33333333333331
+                ],
+                "latex": "$ -1<x\\leq1 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  586.6666666666666,
+                  172,
+                  641.3333333333333,
+                  172,
+                  641.3333333333333,
+                  198.66666666666666,
+                  586.6666666666666,
+                  198.66666666666666
+                ],
+                "text": "时，"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  642.7552189903571,
+                  172.59689490731,
+                  667.8870008012346,
+                  172.59689490731,
+                  667.8870008012346,
+                  200.77495330132422,
+                  642.7552189903571,
+                  200.77495330132422
+                ],
+                "text": "y"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  668.9935917479261,
+                  172,
+                  947.7783312664681,
+                  172,
+                  947.7783312664681,
+                  198.66666666666663,
+                  668.9935917479261,
+                  198.66666666666663
+                ],
+                "text": "的取值范围是（    ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              133.54486083984375,
+              234.8164825439453,
+              1186.4681396484375,
+              234.8164825439453,
+              1186.4681396484375,
+              309.1695556640625,
+              133.54486083984375,
+              309.1695556640625
+            ],
+            "ignore": false,
+            "order": 3,
+            "anno_id": 0,
+            "text": "A. $ -\\frac{5}{2}<y\\leq\\frac{3}{2} $ B $ \\frac{3}{2}<y<\\frac{5}{2} $ ( $ \\frac{3}{2}\\leq y<\\frac{5}{2} $ D. $ \\frac{3}{2}<y\\leq\\frac{5}{2} $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  137.33333333333331,
+                  262.66666666666663,
+                  166.66666666666666,
+                  262.66666666666663,
+                  166.66666666666666,
+                  284,
+                  137.33333333333331,
+                  284
+                ],
+                "text": "A."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  188,
+                  233.33333333333331,
+                  332,
+                  233.33333333333331,
+                  332,
+                  312,
+                  188,
+                  312
+                ],
+                "latex": "$ -\\frac{5}{2}<y\\leq\\frac{3}{2} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  429.5892282457709,
+                  261.05050903532344,
+                  458.8121116485572,
+                  261.05050903532344,
+                  458.8121116485572,
+                  283.36969457880616,
+                  429.5892282457709,
+                  283.36969457880616
+                ],
+                "text": "B"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  479.03627039521854,
+                  237.32741788270198,
+                  599.3834255699351,
+                  237.32741788270198,
+                  599.3834255699351,
+                  314.25034180880925,
+                  479.03627039521854,
+                  314.25034180880925
+                ],
+                "latex": "$ \\frac{3}{2}<y<\\frac{5}{2} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  721.524257785172,
+                  260.76055997781634,
+                  748.576695642441,
+                  260.76055997781634,
+                  748.576695642441,
+                  282.28717113514335,
+                  721.524257785172,
+                  282.28717113514335
+                ],
+                "text": "("
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  771.6540019109098,
+                  238.49364877520134,
+                  889.5197724428486,
+                  238.49364877520134,
+                  889.5197724428486,
+                  311.69449573714235,
+                  771.6540019109098,
+                  311.69449573714235
+                ],
+                "latex": "$ \\frac{3}{2}\\leq y<\\frac{5}{2} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1013.8007000895271,
+                  261.33333333333314,
+                  1042.3780111409533,
+                  261.33333333333314,
+                  1042.3780111409533,
+                  282.89575178221924,
+                  1013.8007000895271,
+                  282.89575178221924
+                ],
+                "text": "D."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  1063.189925302853,
+                  239.28022582839503,
+                  1182.2963881561805,
+                  239.28022582839503,
+                  1182.2963881561805,
+                  311.8607266296416,
+                  1063.189925302853,
+                  311.8607266296416
+                ],
+                "latex": "$ \\frac{3}{2}<y\\leq\\frac{5}{2} $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "16. 已知函数 $ y=-\\frac{1}{2}x+2 $ ，当 $ -1<x\\leq1 $时， y的取值范围是（    ）\nA. $ -\\frac{5}{2}<y\\leq\\frac{3}{2} $ B $ \\frac{3}{2}<y<\\frac{5}{2} $ ( $ \\frac{3}{2}\\leq y<\\frac{5}{2} $ D. $ \\frac{3}{2}<y\\leq\\frac{5}{2} $",
+      "actual": "16. 已知函数 $y = -\\frac{1}{2}x + 2$，当 $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ） A. $-\\frac{5}{2} < y \\leq \\frac{3}{2}$ B. $\\frac{3}{2} < y < \\frac{5}{2}$ C. $\\frac{3}{2} \\leq y < \\frac{5}{2}$ D. $\\frac{3}{2} < y \\leq \\frac{5}{2}$",
+      "raw_parent": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+      "bbox": [
+        50.28716816144471,
+        149.1687412430175,
+        1182.332633202958,
+        313.17577864025543
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "y"
+        },
+        {
+          "reference": "y",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " \\frac{3}{2}$ B. $"
+        },
+        {
+          "reference": "",
+          "actual": "< y < \\frac{5}{2}"
+        },
+        {
+          "reference": "B",
+          "actual": "C."
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " \\leq y "
+        },
+        {
+          "reference": "y<",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ D."
+        },
+        {
+          "reference": " ( $ ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " < y "
+        },
+        {
+          "reference": "y<",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " D. $ \\frac{3}{2}<y\\leq\\frac{5}{2} $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "题 16 GT 将 C. 标作左括号且 B 丢点；原图与预测标签 A/B/C/D 完整。六个函数/不等式一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            73,
+            154,
+            1197,
+            313
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          76.15412139892578,
+          319.5438232421875,
+          1355.0472412109375,
+          319.5438232421875,
+          1355.0472412109375,
+          401.62646484375,
+          76.15412139892578,
+          401.62646484375
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 6,
+        "text": "17. 小明的父亲饭后散步，从家中走20分钟到一个离家900米的报亭看10分钟的报纸后，用15分钟返回家中，下列图形中表示小明父亲离家的时间与距离之间的关系是（    ）",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "17. 小明的父亲饭后散步，从家中走20分钟到一个离家900米的报亭看10分钟的报纸后，用15分钟返回家中，下列图形中表示小明父亲离家的时间与距离之间的关系是（    ）",
+      "actual": "17. 小明的父亲饭后散步，从家中走 20 分钟到一个离家 900 米的报亭看 10 分钟的报纸后，用 15 分钟返回家中，下列图形中表示小明父亲离家的时间与距离之间的关系是（）",
+      "raw_parent": "17. 小明的父亲饭后散步，从家中走 20 分钟到一个离家 900 米的报亭看 10 分钟的报纸后，用 15 分钟返回家中，下列图形中表示小明父亲离家的时间与距离之间的关系是（）\n",
+      "bbox": [
+        76.15412139892578,
+        319.5438232421875,
+        1355.0472412109375,
+        401.62646484375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            68,
+            318,
+            1359,
+            404
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "17. 小明的父亲饭后散步，从家中走 20 分钟到一个离家 900 米的报亭看 10 分钟的报纸后，用 15 分钟返回家中，下列图形中表示小明父亲离家的时间与距离之间的关系是（）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "17. 小明的父亲饭后散步，从家中走 20 分钟到一个离家 900 米的报亭看 10 分钟的报纸后，用 15 分钟返回家中，下列图形中表示小明父亲离家的时间与距离之间的关系是（）\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:29",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          188.45030848748743,
+          667.2861195988013,
+          228.4137017026791,
+          667.2861195988013,
+          228.4137017026791,
+          708.6701013555919,
+          188.45030848748743,
+          708.6701013555919
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 29,
+        "text": "A.",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "A.",
+      "actual": "## A",
+      "raw_parent": "## A\n",
+      "bbox": [
+        188.45030848748743,
+        667.2861195988013,
+        228.4137017026791,
+        708.6701013555919
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            189,
+            670,
+            230,
+            700
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## A\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## A\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:28",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          487.4981041409523,
+          668.7502403339516,
+          524.4289923710886,
+          668.7502403339516,
+          524.4289923710886,
+          706.3435908594231,
+          487.4981041409523,
+          706.3435908594231
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 28,
+        "text": "B.",
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "B.",
+      "actual": "## B",
+      "raw_parent": "## B\n",
+      "bbox": [
+        487.4981041409523,
+        668.7502403339516,
+        524.4289923710886,
+        706.3435908594231
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            487,
+            669,
+            526,
+            700
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## B\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## B\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:25",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          755.1834739371591,
+          660.3034517901343,
+          795.1468671523508,
+          660.3034517901343,
+          795.1468671523508,
+          701.6874335469249,
+          755.1834739371591,
+          701.6874335469249
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 25,
+        "text": "C.",
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "C.",
+      "actual": "## C",
+      "raw_parent": "## C\n",
+      "bbox": [
+        755.1834739371591,
+        660.3034517901343,
+        795.1468671523508,
+        701.6874335469249
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            753,
+            668,
+            796,
+            700
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## C\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## C\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:27",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          1075.3906575522603,
+          655.170938762894,
+          1115.3540507674518,
+          655.170938762894,
+          1115.3540507674518,
+          696.5549205196846,
+          1075.3906575522603,
+          696.5549205196846
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 27,
+        "text": "D.",
+        "attribute": {}
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "D.",
+      "actual": "## D",
+      "raw_parent": "## D\n",
+      "bbox": [
+        1075.3906575522603,
+        655.170938762894,
+        1115.3540507674518,
+        696.5549205196846
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            1079,
+            667,
+            1121,
+            700
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## D\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## D\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          75.9134292602539,
+          707.3922729492188,
+          1176.2410888671875,
+          707.3922729492188,
+          1176.2410888671875,
+          746.5034790039062,
+          75.9134292602539,
+          746.5034790039062
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 7,
+        "text": "18. 当 a < 0,b > 0时，函数 y=ax+b与 y=bx+a在同一坐标系中的图象大致是（    ）",
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "18. 当 a < 0,b > 0时，函数 y=ax+b与 y=bx+a在同一坐标系中的图象大致是（    ）",
+      "actual": "18. 当 $a < 0, b > 0$ 时，函数 $y = ax + b$ 与 $y = bx + a$ 在同一坐标系中的图象大致是（）",
+      "raw_parent": "18. 当  $a < 0, b > 0$ 时，函数  $y = ax + b$ 与  $y = bx + a$ 在同一坐标系中的图象大致是（）\n",
+      "bbox": [
+        75.9134292602539,
+        707.3922729492188,
+        1176.2410888671875,
+        746.5034790039062
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            71,
+            706,
+            1181,
+            746
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "18. 当  $a < 0, b > 0$ 时，函数  $y = ax + b$ 与  $y = bx + a$ 在同一坐标系中的图象大致是（）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "18. 当  $a < 0, b > 0$ 时，函数  $y = ax + b$ 与  $y = bx + a$ 在同一坐标系中的图象大致是（）\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:22",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          186.03218592053258,
+          1060.6113740866922,
+          231.16097990919386,
+          1060.6113740866922,
+          231.16097990919386,
+          1091.899530818699,
+          186.03218592053258,
+          1091.899530818699
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 22,
+        "text": "A.",
+        "attribute": {}
+      },
+      "block_id": "b0021",
+      "strict_exact": false,
+      "expected": "A.",
+      "actual": "## A",
+      "raw_parent": "## A\n",
+      "bbox": [
+        186.03218592053258,
+        1060.6113740866922,
+        231.16097990919386,
+        1091.899530818699
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0021",
+          "bbox": [
+            188,
+            1059,
+            232,
+            1092
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## A\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## A\n",
+            "resource": "assets/p0001-b0021.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:20",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          475.3353783491644,
+          1060.228428432927,
+          520.4641723378259,
+          1060.228428432927,
+          520.4641723378259,
+          1091.5165851649338,
+          475.3353783491644,
+          1091.5165851649338
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 20,
+        "text": "B.",
+        "attribute": {}
+      },
+      "block_id": "b0020",
+      "strict_exact": false,
+      "expected": "B.",
+      "actual": "## B",
+      "raw_parent": "## B\n",
+      "bbox": [
+        475.3353783491644,
+        1060.228428432927,
+        520.4641723378259,
+        1091.5165851649338
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0020",
+          "bbox": [
+            472,
+            1058,
+            512,
+            1092
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## B\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## B\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:26",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          738.5564468015326,
+          1060.9833014464064,
+          783.6852407901938,
+          1060.9833014464064,
+          783.6852407901938,
+          1092.2714581784132,
+          738.5564468015326,
+          1092.2714581784132
+        ],
+        "ignore": false,
+        "order": 19,
+        "anno_id": 26,
+        "text": "C.",
+        "attribute": {}
+      },
+      "block_id": "b0022",
+      "strict_exact": false,
+      "expected": "C.",
+      "actual": "## C",
+      "raw_parent": "## C\n",
+      "bbox": [
+        738.5564468015326,
+        1060.9833014464064,
+        783.6852407901938,
+        1092.2714581784132
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0022",
+          "bbox": [
+            740,
+            1059,
+            780,
+            1091
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## C\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## C\n",
+            "resource": "assets/p0001-b0022.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:19",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          1020.0858666343081,
+          1062.345422901431,
+          1065.2146606229694,
+          1062.345422901431,
+          1065.2146606229694,
+          1093.6335796334379,
+          1020.0858666343081,
+          1093.6335796334379
+        ],
+        "ignore": false,
+        "order": 21,
+        "anno_id": 19,
+        "text": "D.",
+        "attribute": {}
+      },
+      "block_id": "b0023",
+      "strict_exact": false,
+      "expected": "D.",
+      "actual": "## D",
+      "raw_parent": "## D\n",
+      "bbox": [
+        1020.0858666343081,
+        1062.345422901431,
+        1065.2146606229694,
+        1093.6335796334379
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": ".",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0023",
+          "bbox": [
+            1022,
+            1059,
+            1065,
+            1092
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## D\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## D\n",
+            "resource": "assets/p0001-b0023.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          76.02739715576172,
+          1150.0296630859375,
+          785.0083618164062,
+          1150.0296630859375,
+          785.0083618164062,
+          1187.307373046875,
+          76.02739715576172,
+          1187.307373046875
+        ],
+        "ignore": false,
+        "order": 22,
+        "anno_id": 13,
+        "text": "三、解答题（第19题6分，其余每题10分，共56分）",
+        "attribute": {}
+      },
+      "block_id": "b0024",
+      "strict_exact": false,
+      "expected": "三、解答题（第19题6分，其余每题10分，共56分）",
+      "actual": "## 三、 解答题（第19题6分，其余每题10分，共56分）",
+      "raw_parent": "## 三、 解答题（第19题6分，其余每题10分，共56分）\n",
+      "bbox": [
+        76.02739715576172,
+        1150.0296630859375,
+        785.0083618164062,
+        1187.307373046875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0024",
+          "bbox": [
+            69,
+            1149,
+            787,
+            1188
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 三、 解答题（第19题6分，其余每题10分，共56分）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 三、 解答题（第19题6分，其余每题10分，共56分）\n",
+            "resource": "assets/p0001-b0024.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          653.2736206054688,
+          106.6939468383789,
+          1355.6553955078125,
+          106.6939468383789,
+          1355.6553955078125,
+          139.216552734375,
+          653.2736206054688,
+          139.216552734375
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 11,
+        "text": "www.Jinghua.com “在线名师”→答疑室  随时随地提问互动",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "www.Jinghua.com “在线名师”→答疑室  随时随地提问互动",
+      "actual": "www.Jinghua.com “在线名师” → 答疑室 随时随地提问互动",
+      "raw_parent": "www.Jinghua.com “在线名师” → 答疑室 随时随地提问互动\n",
+      "bbox": [
+        653.2736206054688,
+        106.6939468383789,
+        1355.6553955078125,
+        139.216552734375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            657,
+            106,
+            1361,
+            139
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "www.Jinghua.com “在线名师” → 答疑室 随时随地提问互动\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "www.Jinghua.com “在线名师” → 答疑室 随时随地提问互动\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:10",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          647.0103759765625,
+          1882.5731201171875,
+          788.0069580078125,
+          1882.5731201171875,
+          788.0069580078125,
+          1910.0548095703125,
+          647.0103759765625,
+          1910.0548095703125
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 10,
+        "text": "第2页",
+        "attribute": {}
+      },
+      "block_id": "b0028",
+      "strict_exact": false,
+      "expected": "第2页",
+      "actual": "## 第 2 页",
+      "raw_parent": "## 第 2 页\n",
+      "bbox": [
+        647.0103759765625,
+        1882.5731201171875,
+        788.0069580078125,
+        1910.0548095703125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0028",
+          "bbox": [
+            668,
+            1880,
+            765,
+            1912
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第 2 页\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第 2 页\n",
+            "resource": "assets/p0001-b0028.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          76.61649322509766,
+          1914.505859375,
+          644.9990234375,
+          1914.505859375,
+          644.9990234375,
+          1977.3167724609375,
+          76.61649322509766,
+          1977.3167724609375
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 4,
+        "text": "在线学习网址：www.Jinghua.com客服热线：400-650-7766（9:00—21：00 everyday）",
+        "attribute": {}
+      },
+      "block_id": "b0029",
+      "strict_exact": false,
+      "expected": "在线学习网址：www.Jinghua.com客服热线：400-650-7766（9:00—21：00 everyday）",
+      "actual": "在线学习网址：www.Jinghua.com 客服热线：400-650-7766（9：00—21：00 everyday）",
+      "raw_parent": "在线学习网址：www.Jinghua.com\n\n客服热线：400-650-7766（9：00—21：00 everyday）\n",
+      "bbox": [
+        76.61649322509766,
+        1914.505859375,
+        644.9990234375,
+        1977.3167724609375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": ":",
+          "actual": "："
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0029",
+          "bbox": [
+            71,
+            1913,
+            649,
+            1979
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "在线学习网址：www.Jinghua.com\n\n客服热线：400-650-7766（9：00—21：00 everyday）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "在线学习网址：www.Jinghua.com\n\n客服热线：400-650-7766（9：00—21：00 everyday）\n",
+            "resource": "assets/p0001-b0029.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          887.4987182617188,
+          1944.3172607421875,
+          1358.8839111328125,
+          1944.3172607421875,
+          1358.8839111328125,
+          1980.1190185546875,
+          887.4987182617188,
+          1980.1190185546875
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 1,
+        "text": "版权所有北京天地精华教育科技有限公司",
+        "attribute": {}
+      },
+      "block_id": "b0030",
+      "strict_exact": false,
+      "expected": "版权所有北京天地精华教育科技有限公司",
+      "actual": "## 版权所有 北京天地精华教育科技有限公司",
+      "raw_parent": "## 版权所有 北京天地精华教育科技有限公司\n",
+      "bbox": [
+        887.4987182617188,
+        1944.3172607421875,
+        1358.8839111328125,
+        1980.1190185546875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题核对题干、八个图选项标签、地址/电话/时间、页脚；差异为标题、空格、点号、数学分隔和标点。所有数值和条件正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0030",
+          "bbox": [
+            884,
+            1945,
+            1358,
+            1978
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 版权所有 北京天地精华教育科技有限公司\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 版权所有 北京天地精华教育科技有限公司\n",
+            "resource": "assets/p0001-b0030.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:15",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          70.41854520145459,
+          1194.686396503058,
+          1357.2516238552564,
+          1194.686396503058,
+          1357.2516238552564,
+          1392.1489568824613,
+          70.41854520145459,
+          1392.1489568824613
+        ],
+        "ignore": false,
+        "order": 23,
+        "anno_id": 15,
+        "text": "19. 地壳的厚度约为8到 40km，在地表以下不太深的地方，温度可按 y=3.5x+t计算，其中 x是深度， t是地球表面温度， y是所达深度的温度.\n（1）在这个变化过程中，自变量和因变量分别是什么？\n（2）如果地表温度为 $ 2^{\\circ}C $计算当 x为 5km时地壳的温度.",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              76.29103336360785,
+              1201.194357438754,
+              1350.1482087104355,
+              1201.194357438754,
+              1350.1482087104355,
+              1286.8550351735732,
+              76.29103336360785,
+              1286.8550351735732
+            ],
+            "ignore": false,
+            "order": 24,
+            "anno_id": 8,
+            "text": "19. 地壳的厚度约为8到 40km，在地表以下不太深的地方，温度可按 y=3.5x+t计算，其中 x是深度， t是地球表面温度， y是所达深度的温度.",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  81.26143643074447,
+                  1205.3333333333335,
+                  404.50308896932125,
+                  1205.3333333333335,
+                  404.50308896932125,
+                  1233.3333333333335,
+                  81.26143643074447,
+                  1233.3333333333335
+                ],
+                "text": "19. 地壳的厚度约为8到"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  402.44795279104784,
+                  1206.3373811740971,
+                  487.8760680581896,
+                  1206.3373811740971,
+                  487.8760680581896,
+                  1235.5627890286453,
+                  402.44795279104784,
+                  1235.5627890286453
+                ],
+                "text": "40km，"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  498.3672401085404,
+                  1204.0892728775932,
+                  976.4649378316669,
+                  1204.0892728775932,
+                  976.4649378316669,
+                  1235.562789028645,
+                  498.3672401085404,
+                  1235.562789028645
+                ],
+                "text": "在地表以下不太深的地方，温度可按"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  973.4794719367643,
+                  1206.485035043956,
+                  1109.4761463012064,
+                  1206.485035043956,
+                  1109.4761463012064,
+                  1239.5127988181775,
+                  973.4794719367643,
+                  1239.5127988181775
+                ],
+                "text": "y=3.5x+t"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1110.6666666666665,
+                  1205.3333333333333,
+                  1258.6666666666665,
+                  1205.3333333333333,
+                  1258.6666666666665,
+                  1233.3333333333333,
+                  1110.6666666666665,
+                  1233.3333333333333
+                ],
+                "text": "计算，其中"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  1258.3493320724097,
+                  1203.2639803247357,
+                  1280.081045605279,
+                  1203.2639803247357,
+                  1280.081045605279,
+                  1232.489388179284,
+                  1258.3493320724097,
+                  1232.489388179284
+                ],
+                "text": "x"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1282.6666666666665,
+                  1205.3333333333333,
+                  1344,
+                  1205.3333333333333,
+                  1344,
+                  1233.3333333333333,
+                  1282.6666666666665,
+                  1233.3333333333333
+                ],
+                "text": "是深"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  138.6666666666668,
+                  1252,
+                  184.8371167403256,
+                  1252,
+                  184.8371167403256,
+                  1282.6666666666665,
+                  138.6666666666668,
+                  1282.6666666666665
+                ],
+                "text": "度，"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  185.17663706811146,
+                  1256.2614580534073,
+                  208.4070894653167,
+                  1256.2614580534073,
+                  208.4070894653167,
+                  1280.9906493149488,
+                  185.17663706811146,
+                  1280.9906493149488
+                ],
+                "text": "t"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  209.15645889748458,
+                  1250.2665025960641,
+                  427.22296365834654,
+                  1250.2665025960641,
+                  427.22296365834654,
+                  1286.236235340124,
+                  209.15645889748458,
+                  1286.236235340124
+                ],
+                "text": "是地球表面温度，"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  431.7191802513539,
+                  1257.7601969177435,
+                  460.9445881059025,
+                  1257.7601969177435,
+                  460.9445881059025,
+                  1283.9881270436204,
+                  431.7191802513539,
+                  1283.9881270436204
+                ],
+                "text": "y"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  466.93954356324576,
+                  1252.5146108925678,
+                  714.9808256108241,
+                  1252.5146108925678,
+                  714.9808256108241,
+                  1284.737496475788,
+                  466.93954356324576,
+                  1284.737496475788
+                ],
+                "text": "是所达深度的温度."
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              133.39815185348738,
+              1300.671273517899,
+              882.2382701159393,
+              1300.671273517899,
+              882.2382701159393,
+              1335.8208884195353,
+              133.39815185348738,
+              1335.8208884195353
+            ],
+            "ignore": false,
+            "order": 25,
+            "anno_id": 5,
+            "text": "（1）在这个变化过程中，自变量和因变量分别是什么？",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  140,
+                  1302.6666666666665,
+                  821.3333333333333,
+                  1302.6666666666665,
+                  821.3333333333333,
+                  1328,
+                  140,
+                  1328
+                ],
+                "text": "（1）在这个变化过程中，自变量和因变量分别是什么？"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              133.83528380657444,
+              1345.5478643567167,
+              878.0948559753424,
+              1345.5478643567167,
+              878.0948559753424,
+              1384.4596169506806,
+              133.83528380657444,
+              1384.4596169506806
+            ],
+            "ignore": false,
+            "order": 26,
+            "anno_id": 14,
+            "text": "（2）如果地表温度为 $ 2^{\\circ}C $计算当 x为 5km时地壳的温度.",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  137.4471666844166,
+                  1350.1707500266248,
+                  401.29594170628553,
+                  1350.1707500266248,
+                  401.29594170628553,
+                  1382.9977776816372,
+                  137.4471666844166,
+                  1382.9977776816372
+                ],
+                "text": "（2）如果地表温度为"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  401.3333333333333,
+                  1345.3333333333333,
+                  450.66666666666663,
+                  1345.3333333333333,
+                  450.66666666666663,
+                  1380,
+                  401.3333333333333,
+                  1380
+                ],
+                "latex": "$ 2^{\\circ}C $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  477.4595052553223,
+                  1345.1955716961202,
+                  569.7714203777617,
+                  1345.1955716961202,
+                  569.7714203777617,
+                  1380.4257228781141,
+                  477.4595052553223,
+                  1380.4257228781141
+                ],
+                "text": "计算当"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  571.1092742201159,
+                  1353.6686460310302,
+                  589.3932767322899,
+                  1353.6686460310302,
+                  589.3932767322899,
+                  1377.304063912621,
+                  571.1092742201159,
+                  1377.304063912621
+                ],
+                "text": "x"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  590.7311305746442,
+                  1345.641522976905,
+                  625.5153304758533,
+                  1345.641522976905,
+                  625.5153304758533,
+                  1377.7500151934055,
+                  590.7311305746442,
+                  1377.7500151934055
+                ],
+                "text": "为"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  633.2537378987643,
+                  1353.2137898790072,
+                  684.96022871835,
+                  1353.2137898790072,
+                  684.96022871835,
+                  1377.9429811405482,
+                  633.2537378987643,
+                  1377.9429811405482
+                ],
+                "text": "5km"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  690.2058147435255,
+                  1350.2163121503356,
+                  879.0469116498388,
+                  1350.2163121503356,
+                  879.0469116498388,
+                  1382.4391977335558,
+                  690.2058147435255,
+                  1382.4391977335558
+                ],
+                "text": "时地壳的温度."
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "19. 地壳的厚度约为8到 40km，在地表以下不太深的地方，温度可按 y=3.5x+t计算，其中 x是深度， t是地球表面温度， y是所达深度的温度.\n（1）在这个变化过程中，自变量和因变量分别是什么？\n（2）如果地表温度为 $ 2^{\\circ}C $计算当 x为 5km时地壳的温度.",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        70.41854520145459,
+        1194.686396503058,
+        1357.2516238552564,
+        1392.1489568824613
+      ],
+      "differences": [
+        {
+          "reference": "19. 地壳的厚度约为8到 40km，在地表以下不太深的地方，温度可按 y=3.5x+t计算，其中 x是深度， t是地球表面温度， y是所达深度的温度. （1）在这个变化过程中，自变量和因变量分别是什么？ （2）如果地表温度为 $ 2^{\\circ}C $计算当 x为 5km时地壳的温度.",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "题 19 拆为主干 b0025 和两个子问题 b0026/b0027，所有 8–40km、3.5x+t、2°C、5km 及文字完整。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0025",
+          "bbox": [
+            71,
+            1199,
+            1359,
+            1287
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+            "resource": "assets/p0001-b0025.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0026",
+          "bbox": [
+            128,
+            1295,
+            834,
+            1335
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+            "resource": "assets/p0001-b0026.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0027",
+          "bbox": [
+            127,
+            1343,
+            882,
+            1386
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+            "resource": "assets/p0001-b0027.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          76.13980102539038,
+          49.85710525512707,
+          346.93661499023415,
+          49.85710525512707,
+          346.93661499023415,
+          139.9979812671371,
+          76.13980102539038,
+          139.9979812671371
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 9,
+        "text": "精华在线 www.Jinghua.com",
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "精华在线 www.Jinghua.com",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        76.13980102539038,
+        49.85710525512707,
+        346.93661499023415,
+        139.9979812671371
+      ],
+      "differences": [
+        {
+          "reference": "精华在线 www.Jinghua.com",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "coverage_error"
+        ],
+        "reason": "原图 logo 中文“精华在线”未转为可读文本；URL 在 extra b0003 完整。将局部文本覆盖缺失与配对问题分别记录。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            78,
+            110,
+            346,
+            139
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "#### www.Jinghua.com\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "#### www.Jinghua.com\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:18",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0004",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ y=-\\frac{1}{2}x+2 $",
+        "actual_range": [
+          9,
+          32
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              9,
+              32
+            ],
+            "latex": "y = -\\frac{1}{2}x + 2"
+          },
+          {
+            "range": [
+              35,
+              50
+            ],
+            "latex": "-1 < x \\leq 1"
+          },
+          {
+            "range": [
+              54,
+              57
+            ],
+            "latex": "y"
+          },
+          {
+            "range": [
+              71,
+              106
+            ],
+            "latex": "-\\frac{5}{2} < y \\leq \\frac{3}{2}"
+          },
+          {
+            "range": [
+              110,
+              141
+            ],
+            "latex": "\\frac{3}{2} < y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              145,
+              179
+            ],
+            "latex": "\\frac{3}{2} \\leq y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              183,
+              217
+            ],
+            "latex": "\\frac{3}{2} < y \\leq \\frac{5}{2}"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "六条行内公式严格一致，并逐符号对照原图。",
+        "reviewed": true
+      },
+      "expected": "$ y=-\\frac{1}{2}x+2 $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        50.28716816144471,
+        149.1687412430175,
+        1182.332633202958,
+        313.17577864025543
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            73,
+            154,
+            1197,
+            313
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:19",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0004",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ -1<x\\leq1 $",
+        "actual_range": [
+          35,
+          50
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              9,
+              32
+            ],
+            "latex": "y = -\\frac{1}{2}x + 2"
+          },
+          {
+            "range": [
+              35,
+              50
+            ],
+            "latex": "-1 < x \\leq 1"
+          },
+          {
+            "range": [
+              54,
+              57
+            ],
+            "latex": "y"
+          },
+          {
+            "range": [
+              71,
+              106
+            ],
+            "latex": "-\\frac{5}{2} < y \\leq \\frac{3}{2}"
+          },
+          {
+            "range": [
+              110,
+              141
+            ],
+            "latex": "\\frac{3}{2} < y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              145,
+              179
+            ],
+            "latex": "\\frac{3}{2} \\leq y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              183,
+              217
+            ],
+            "latex": "\\frac{3}{2} < y \\leq \\frac{5}{2}"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "六条行内公式严格一致，并逐符号对照原图。",
+        "reviewed": true
+      },
+      "expected": "$ -1<x\\leq1 $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        50.28716816144471,
+        149.1687412430175,
+        1182.332633202958,
+        313.17577864025543
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            73,
+            154,
+            1197,
+            313
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:20",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0004",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ -\\frac{5}{2}<y\\leq\\frac{3}{2} $",
+        "actual_range": [
+          71,
+          106
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              9,
+              32
+            ],
+            "latex": "y = -\\frac{1}{2}x + 2"
+          },
+          {
+            "range": [
+              35,
+              50
+            ],
+            "latex": "-1 < x \\leq 1"
+          },
+          {
+            "range": [
+              54,
+              57
+            ],
+            "latex": "y"
+          },
+          {
+            "range": [
+              71,
+              106
+            ],
+            "latex": "-\\frac{5}{2} < y \\leq \\frac{3}{2}"
+          },
+          {
+            "range": [
+              110,
+              141
+            ],
+            "latex": "\\frac{3}{2} < y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              145,
+              179
+            ],
+            "latex": "\\frac{3}{2} \\leq y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              183,
+              217
+            ],
+            "latex": "\\frac{3}{2} < y \\leq \\frac{5}{2}"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "六条行内公式严格一致，并逐符号对照原图。",
+        "reviewed": true
+      },
+      "expected": "$ -\\frac{5}{2}<y\\leq\\frac{3}{2} $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        50.28716816144471,
+        149.1687412430175,
+        1182.332633202958,
+        313.17577864025543
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            73,
+            154,
+            1197,
+            313
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:21",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0004",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ \\frac{3}{2}<y<\\frac{5}{2} $",
+        "actual_range": [
+          110,
+          141
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              9,
+              32
+            ],
+            "latex": "y = -\\frac{1}{2}x + 2"
+          },
+          {
+            "range": [
+              35,
+              50
+            ],
+            "latex": "-1 < x \\leq 1"
+          },
+          {
+            "range": [
+              54,
+              57
+            ],
+            "latex": "y"
+          },
+          {
+            "range": [
+              71,
+              106
+            ],
+            "latex": "-\\frac{5}{2} < y \\leq \\frac{3}{2}"
+          },
+          {
+            "range": [
+              110,
+              141
+            ],
+            "latex": "\\frac{3}{2} < y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              145,
+              179
+            ],
+            "latex": "\\frac{3}{2} \\leq y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              183,
+              217
+            ],
+            "latex": "\\frac{3}{2} < y \\leq \\frac{5}{2}"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "六条行内公式严格一致，并逐符号对照原图。",
+        "reviewed": true
+      },
+      "expected": "$ \\frac{3}{2}<y<\\frac{5}{2} $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        50.28716816144471,
+        149.1687412430175,
+        1182.332633202958,
+        313.17577864025543
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            73,
+            154,
+            1197,
+            313
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:22",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0004",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ \\frac{3}{2}\\leq y<\\frac{5}{2} $",
+        "actual_range": [
+          145,
+          179
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              9,
+              32
+            ],
+            "latex": "y = -\\frac{1}{2}x + 2"
+          },
+          {
+            "range": [
+              35,
+              50
+            ],
+            "latex": "-1 < x \\leq 1"
+          },
+          {
+            "range": [
+              54,
+              57
+            ],
+            "latex": "y"
+          },
+          {
+            "range": [
+              71,
+              106
+            ],
+            "latex": "-\\frac{5}{2} < y \\leq \\frac{3}{2}"
+          },
+          {
+            "range": [
+              110,
+              141
+            ],
+            "latex": "\\frac{3}{2} < y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              145,
+              179
+            ],
+            "latex": "\\frac{3}{2} \\leq y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              183,
+              217
+            ],
+            "latex": "\\frac{3}{2} < y \\leq \\frac{5}{2}"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "六条行内公式严格一致，并逐符号对照原图。",
+        "reviewed": true
+      },
+      "expected": "$ \\frac{3}{2}\\leq y<\\frac{5}{2} $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        50.28716816144471,
+        149.1687412430175,
+        1182.332633202958,
+        313.17577864025543
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            73,
+            154,
+            1197,
+            313
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:23",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0004",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ \\frac{3}{2}<y\\leq\\frac{5}{2} $",
+        "actual_range": [
+          183,
+          217
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              9,
+              32
+            ],
+            "latex": "y = -\\frac{1}{2}x + 2"
+          },
+          {
+            "range": [
+              35,
+              50
+            ],
+            "latex": "-1 < x \\leq 1"
+          },
+          {
+            "range": [
+              54,
+              57
+            ],
+            "latex": "y"
+          },
+          {
+            "range": [
+              71,
+              106
+            ],
+            "latex": "-\\frac{5}{2} < y \\leq \\frac{3}{2}"
+          },
+          {
+            "range": [
+              110,
+              141
+            ],
+            "latex": "\\frac{3}{2} < y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              145,
+              179
+            ],
+            "latex": "\\frac{3}{2} \\leq y < \\frac{5}{2}"
+          },
+          {
+            "range": [
+              183,
+              217
+            ],
+            "latex": "\\frac{3}{2} < y \\leq \\frac{5}{2}"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "六条行内公式严格一致，并逐符号对照原图。",
+        "reviewed": true
+      },
+      "expected": "$ \\frac{3}{2}<y\\leq\\frac{5}{2} $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        50.28716816144471,
+        149.1687412430175,
+        1182.332633202958,
+        313.17577864025543
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            73,
+            154,
+            1197,
+            313
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 已知函数  $y = -\\frac{1}{2}x + 2$，当  $-1 < x \\leq 1$ 时， $y$ 的取值范围是（ ）\n\nA.  $-\\frac{5}{2} < y \\leq \\frac{3}{2}$\n\nB.  $\\frac{3}{2} < y < \\frac{5}{2}$\n\nC.  $\\frac{3}{2} \\leq y < \\frac{5}{2}$\n\nD.  $\\frac{3}{2} < y \\leq \\frac{5}{2}$\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:15:24",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 15,
+        "block_id": null,
+        "status": "missing",
+        "exact": false,
+        "reference": "$ 2^{\\circ}C $",
+        "actual_range": null,
+        "observed_parent_formulas": [],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "题 19 拆为主干 b0025 和两个子问题 b0026/b0027，所有 8–40km、3.5x+t、2°C、5km 及文字完整。",
+        "reviewed": true
+      },
+      "expected": "$ 2^{\\circ}C $",
+      "parent_item_id": "text:15",
+      "bbox": [
+        70.41854520145459,
+        1194.686396503058,
+        1357.2516238552564,
+        1392.1489568824613
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0025",
+          "bbox": [
+            71,
+            1199,
+            1359,
+            1287
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+            "resource": "assets/p0001-b0025.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0026",
+          "bbox": [
+            128,
+            1295,
+            834,
+            1335
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+            "resource": "assets/p0001-b0026.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0027",
+          "bbox": [
+            127,
+            1343,
+            882,
+            1386
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+            "resource": "assets/p0001-b0027.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0003",
+      "kind": "extra",
+      "block_id": "b0003",
+      "bbox": [
+        78,
+        110,
+        346,
+        139
+      ],
+      "strict_exact": false,
+      "raw_parent": "#### www.Jinghua.com\n",
+      "actual": "#### www.Jinghua.com\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "URL 来自原图 logo，与该 GT 同属一图文标志，完整正确，不是新增内容。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            78,
+            110,
+            346,
+            139
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "#### www.Jinghua.com\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "#### www.Jinghua.com\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0025",
+      "kind": "extra",
+      "block_id": "b0025",
+      "bbox": [
+        71,
+        1199,
+        1359,
+        1287
+      ],
+      "strict_exact": false,
+      "raw_parent": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+      "actual": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "题 19 拆为主干 b0025 和两个子问题 b0026/b0027，所有 8–40km、3.5x+t、2°C、5km 及文字完整。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0025",
+          "bbox": [
+            71,
+            1199,
+            1359,
+            1287
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "19. 地壳的厚度约为 8 到 40km，在地表以下不太深的地方，温度可按  $y=3.5x+t$ 计算，其中 x 是深度，t 是地球表面温度，y 是所达深度的温度.\n",
+            "resource": "assets/p0001-b0025.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0026",
+      "kind": "extra",
+      "block_id": "b0026",
+      "bbox": [
+        128,
+        1295,
+        834,
+        1335
+      ],
+      "strict_exact": false,
+      "raw_parent": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+      "actual": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "题 19 拆为主干 b0025 和两个子问题 b0026/b0027，所有 8–40km、3.5x+t、2°C、5km 及文字完整。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0026",
+          "bbox": [
+            128,
+            1295,
+            834,
+            1335
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 在这个变化过程中，自变量和因变量分别是什么？\n",
+            "resource": "assets/p0001-b0026.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0027",
+      "kind": "extra",
+      "block_id": "b0027",
+      "bbox": [
+        127,
+        1343,
+        882,
+        1386
+      ],
+      "strict_exact": false,
+      "raw_parent": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+      "actual": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "题 19 拆为主干 b0025 和两个子问题 b0026/b0027，所有 8–40km、3.5x+t、2°C、5km 及文字完整。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0027",
+          "bbox": [
+            127,
+            1343,
+            882,
+            1386
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（2）如果地表温度为  $2^{\\circ}$C，计算当 x 为 5km 时地壳的温度.\n",
+            "resource": "assets/p0001-b0027.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_c2-ma-11-q-11-cl.pdf_2.jpg",
+    "sha256": "550109ebaff0c14256e8ac484725ee32137ca955aba6b4fdab8f4421966c73c9"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-03.json",
+    "sha256": "c34ce395bb5024b16eba79357c83f602bedc7d65ae224ffd3d2a0f3ca8d50de6"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 29,
+  "unverified_units": []
+}

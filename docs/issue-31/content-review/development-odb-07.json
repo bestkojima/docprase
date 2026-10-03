@@ -1,0 +1,919 @@
+{
+  "page": "development-odb-07",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "正文内容正确；七处图内文字未转为文本，extra 段落是原图可见内容。",
+  "viewed_sheets": {
+    "sheet-03.jpg": "5ba08f4ace84d2d436515dd24b415847fe94e74803c4d5251057a446992ff971",
+    "sheet-02.jpg": "902e4857b83344ae59993246841d4f43a6c1111084b1c33b4f596b161accbe8f",
+    "sheet-01.jpg": "9298adf5d6a232b312dae1471a1c65a099278af673bcbb252af981bc8a6a227d"
+  },
+  "items": [
+    {
+      "id": "text:box_id_7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          161.90561040039051,
+          1661.4846975585938,
+          1371.5656036073544,
+          1661.4846975585938,
+          1371.5656036073544,
+          1871.7980067691665,
+          161.90561040039051,
+          1871.7980067691665
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": "box_id_7",
+        "attribute": {},
+        "text": "欧洲人迟迟不肯接受负数和他们自古以来对”数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量?”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数．不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论."
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "欧洲人迟迟不肯接受负数和他们自古以来对”数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量?”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数．不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论.",
+      "actual": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。",
+      "raw_parent": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+      "bbox": [
+        161.90561040039051,
+        1661.4846975585938,
+        1371.5656036073544,
+        1871.7980067691665
+      ],
+      "differences": [
+        {
+          "reference": "”",
+          "actual": "“"
+        },
+        {
+          "reference": "?",
+          "actual": "？"
+        },
+        {
+          "reference": "．",
+          "actual": "。"
+        },
+        {
+          "reference": ".",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文逐句相同；标题/空格/全角标点、人物中文及英文说明合并为同一区域为表示/区域分组差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            146,
+            1673,
+            1366,
+            1869
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_9",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          1080.9540000000002,
+          1922.0479999999998,
+          1263.7437805506477,
+          1922.0479999999998,
+          1263.7437805506477,
+          1956.3628301804017,
+          1080.9540000000002,
+          1956.3628301804017
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": "box_id_9",
+        "attribute": {},
+        "text": "第一章有理数"
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "第一章有理数",
+      "actual": "## 第一章 有理数",
+      "raw_parent": "## 第一章 有理数\n",
+      "bbox": [
+        1080.9540000000002,
+        1922.0479999999998,
+        1263.7437805506477,
+        1956.3628301804017
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文逐句相同；标题/空格/全角标点、人物中文及英文说明合并为同一区域为表示/区域分组差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            1078,
+            1922,
+            1263,
+            1958
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第一章 有理数\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第一章 有理数\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-gykg0ufn",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          322.195968768109,
+          1472.5828872173902,
+          446.100024820835,
+          1472.5828872173902,
+          446.100024820835,
+          1511.7104202368218,
+          322.195968768109,
+          1511.7104202368218
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": "box-gykg0ufn",
+        "attribute": {},
+        "text": "斐波那契"
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "斐波那契",
+      "actual": "## 斐波那契",
+      "raw_parent": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+      "bbox": [
+        322.195968768109,
+        1472.5828872173902,
+        446.100024820835,
+        1511.7104202368218
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文逐句相同；标题/空格/全角标点、人物中文及英文说明合并为同一区域为表示/区域分组差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            169,
+            1476,
+            596,
+            1565
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-uewggp45",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          183.54060956775368,
+          1521.0529691399845,
+          597.5503481058206,
+          1521.0529691399845,
+          597.5503481058206,
+          1560.2491789021658,
+          183.54060956775368,
+          1560.2491789021658
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": "box-uewggp45",
+        "attribute": {},
+        "text": "（Fibonacci，约1170—约1250）"
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "（Fibonacci，约1170—约1250）",
+      "actual": " (Fibonacci，约 1170—约 1250)",
+      "raw_parent": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+      "bbox": [
+        183.54060956775368,
+        1521.0529691399845,
+        597.5503481058206,
+        1560.2491789021658
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": " ("
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "）",
+          "actual": ")"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文逐句相同；标题/空格/全角标点、人物中文及英文说明合并为同一区域为表示/区域分组差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            169,
+            1476,
+            596,
+            1565
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-3a3vzctm",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          759.5688330527889,
+          1080.730399408739,
+          1241.2980700023602,
+          1080.730399408739,
+          1241.2980700023602,
+          1401.883187050783,
+          759.5688330527889,
+          1401.883187050783
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": "box-3a3vzctm",
+        "attribute": {},
+        "text": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数.  如笛卡儿，虽然他接受并比较全面和系统地使用 了负数，但他把方程的负根称作 “假根”."
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数.  如笛卡儿，虽然他接受并比较全面和系统地使用 了负数，但他把方程的负根称作 “假根”.",
+      "actual": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。",
+      "raw_parent": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+      "bbox": [
+        759.5688330527889,
+        1080.730399408739,
+        1241.2980700023602,
+        1401.883187050783
+      ],
+      "differences": [
+        {
+          "reference": ". ",
+          "actual": "。"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": ".",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文逐句相同；标题/空格/全角标点、人物中文及英文说明合并为同一区域为表示/区域分组差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            772,
+            1102,
+            1238,
+            1398
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-w8hqpqrg",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          1034.6351125546641,
+          327.89548606445874,
+          1364.6111607268542,
+          327.89548606445874,
+          1364.6111607268542,
+          686.5651425213615,
+          1034.6351125546641,
+          686.5651425213615
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": "box-w8hqpqrg",
+        "attribute": {},
+        "text": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员."
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员.",
+      "actual": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。",
+      "raw_parent": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+      "bbox": [
+        1034.6351125546641,
+        327.89548606445874,
+        1364.6111607268542,
+        686.5651425213615
+      ],
+      "differences": [
+        {
+          "reference": ".",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文逐句相同；标题/空格/全角标点、人物中文及英文说明合并为同一区域为表示/区域分组差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            1041,
+            339,
+            1357,
+            685
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-hg06maop",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          1289.3763793479536,
+          1924.6272704474436,
+          1317.4501124064234,
+          1924.6272704474436,
+          1317.4501124064234,
+          1953.9216332778667,
+          1289.3763793479536,
+          1953.9216332778667
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": "box-hg06maop",
+        "attribute": {},
+        "text": "19"
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "19",
+      "actual": "## 19",
+      "raw_parent": "## 19\n",
+      "bbox": [
+        1289.3763793479536,
+        1924.6272704474436,
+        1317.4501124064234,
+        1953.9216332778667
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "正文逐句相同；标题/空格/全角标点、人物中文及英文说明合并为同一区域为表示/区域分组差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            1284,
+            1924,
+            1321,
+            1956
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 19\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 19\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_8",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          524.9727,
+          1975.9104,
+          927.9395999999999,
+          1975.9104,
+          927.9395999999999,
+          2035.0976,
+          524.9727,
+          2035.0976
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": "box_id_8",
+        "attribute": {},
+        "text": "人民教育出版社"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "人民教育出版社",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        524.9727,
+        1975.9104,
+        927.9395999999999,
+        2035.0976
+      ],
+      "differences": [
+        {
+          "reference": "人民教育出版社",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图清晰可读，但两个出版社标志、三个时代标签、笛卡儿姓名及 Descartes 年代未出现在任何可读文本响应。图像是否保留应另看。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_10",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          524.9727,
+          7.9872,
+          927.0702,
+          7.9872,
+          927.0702,
+          66.9696,
+          524.9727,
+          66.9696
+        ],
+        "ignore": false,
+        "order": 0,
+        "anno_id": "box_id_10",
+        "attribute": {},
+        "text": "人民教育出版社"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "人民教育出版社",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        524.9727,
+        7.9872,
+        927.0702,
+        66.9696
+      ],
+      "differences": [
+        {
+          "reference": "人民教育出版社",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图清晰可读，但两个出版社标志、三个时代标签、笛卡儿姓名及 Descartes 年代未出现在任何可读文本响应。图像是否保留应另看。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-dm53hgru",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          320.1499057806996,
+          876.3300967522116,
+          520.2341846324874,
+          876.3300967522116,
+          520.2341846324874,
+          913.3827353695012,
+          320.1499057806996,
+          913.3827353695012
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": "box-dm53hgru",
+        "attribute": {},
+        "text": "12—13 世纪"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "12—13 世纪",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        320.1499057806996,
+        876.3300967522116,
+        520.2341846324874,
+        913.3827353695012
+      ],
+      "differences": [
+        {
+          "reference": "12—13 世纪",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图清晰可读，但两个出版社标志、三个时代标签、笛卡儿姓名及 Descartes 年代未出现在任何可读文本响应。图像是否保留应另看。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-mcqx33zy",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          767.3235404022921,
+          875.3099129037472,
+          973.5585819740652,
+          875.3099129037472,
+          973.5585819740652,
+          916.5569303894251,
+          767.3235404022921,
+          916.5569303894251
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": "box-mcqx33zy",
+        "attribute": {},
+        "text": "16—17 世纪"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "16—17 世纪",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        767.3235404022921,
+        875.3099129037472,
+        973.5585819740652,
+        916.5569303894251
+      ],
+      "differences": [
+        {
+          "reference": "16—17 世纪",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图清晰可读，但两个出版社标志、三个时代标签、笛卡儿姓名及 Descartes 年代未出现在任何可读文本响应。图像是否保留应另看。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-v03vc9wi",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          1177.9586738801602,
+          875.6975814732792,
+          1295.9926434578972,
+          875.6975814732792,
+          1295.9926434578972,
+          913.5575141017235,
+          1177.9586738801602,
+          913.5575141017235
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": "box-v03vc9wi",
+        "attribute": {},
+        "text": "19 世纪"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "19 世纪",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        1177.9586738801602,
+        875.6975814732792,
+        1295.9926434578972,
+        913.5575141017235
+      ],
+      "differences": [
+        {
+          "reference": "19 世纪",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图清晰可读，但两个出版社标志、三个时代标签、笛卡儿姓名及 Descartes 年代未出现在任何可读文本响应。图像是否保留应另看。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-7sy4rvg6",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          691.5274008573608,
+          707.531618987892,
+          789.9964135701708,
+          707.531618987892,
+          789.9964135701708,
+          741.5816520810607,
+          691.5274008573608,
+          741.5816520810607
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": "box-7sy4rvg6",
+        "attribute": {},
+        "text": "笛卡儿"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "笛卡儿",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        691.5274008573608,
+        707.531618987892,
+        789.9964135701708,
+        741.5816520810607
+      ],
+      "differences": [
+        {
+          "reference": "笛卡儿",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图清晰可读，但两个出版社标志、三个时代标签、笛卡儿姓名及 Descartes 年代未出现在任何可读文本响应。图像是否保留应另看。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-tmoi7cxn",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          575.8401242258429,
+          757.1624498594782,
+          912.278179889788,
+          757.1624498594782,
+          912.278179889788,
+          795.6971667348778,
+          575.8401242258429,
+          795.6971667348778
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": "box-tmoi7cxn",
+        "attribute": {},
+        "text": "（Descartes，1596-1650）"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "（Descartes，1596-1650）",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        575.8401242258429,
+        757.1624498594782,
+        912.278179889788,
+        795.6971667348778
+      ],
+      "differences": [
+        {
+          "reference": "（Descartes，1596-1650）",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图清晰可读，但两个出版社标志、三个时代标签、笛卡儿姓名及 Descartes 年代未出现在任何可读文本响应。图像是否保留应另看。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0004",
+      "kind": "extra",
+      "block_id": "b0004",
+      "bbox": [
+        158,
+        341,
+        507,
+        741
+      ],
+      "strict_exact": false,
+      "raw_parent": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+      "actual": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "extra b0004 原图完整存在，讲述斐波那契与《算盘书》（1202 年）；逐字正确。该段不在当前正文 GT 清单，不是模型凭空新增。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            158,
+            341,
+            507,
+            741
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+    "sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-07.json",
+    "sha256": "43bdfde3e918b838245e70022f9d090070a67688904d6e73b87c2439451ea1c5"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 15,
+  "unverified_units": []
+}

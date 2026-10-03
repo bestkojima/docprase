@@ -1,0 +1,1417 @@
+{
+  "page": "evaluation-candidate-12",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "20项正文全部核对；本页未发现新的字词、答案或选项关联错误，仍不改严格CER及内部顺序评分。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "1cb6e435a94a30730cc15063b74c8ca6340d2b68894daf3a4e107c450e6bc4e8",
+    "sheet-01.jpg": "2ad4611971d28bb9913f65918a533481f9441fbf42c3babf8db9a03a81838a89"
+  },
+  "items": [
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 1,
+        "order": 1,
+        "ignore": false,
+        "poly": [
+          148,
+          209.33333333333334,
+          484,
+          209.33333333333334,
+          484,
+          248,
+          148,
+          248
+        ],
+        "attribute": {},
+        "text": "考点：考查介词短语辨析。"
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "考点：考查介词短语辨析。",
+      "actual": "## 考点：考查介词短语辨析。",
+      "raw_parent": "## 考点：考查介词短语辨析。\n",
+      "bbox": [
+        148,
+        209.33333333333334,
+        484,
+        248
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图正文一致，差异为标题Markdown前缀及答案字母全半角编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            143,
+            212,
+            491,
+            249
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 考点：考查介词短语辨析。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 考点：考查介词短语辨析。\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 16,
+        "order": 2,
+        "ignore": false,
+        "poly": [
+          149.5351023634851,
+          345.9930318501433,
+          1064.8295105478126,
+          345.9930318501433,
+          1064.8295105478126,
+          382.60480817751636,
+          149.5351023634851,
+          382.60480817751636
+        ],
+        "attribute": {},
+        "text": "37．Please don't make so much noise. I ____ hear the speaker very well."
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "37．Please don't make so much noise. I ____ hear the speaker very well.",
+      "actual": "37. Please don't make so much noise. I ___ hear the speaker very well.",
+      "raw_parent": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+      "bbox": [
+        149.5351023634851,
+        345.9930318501433,
+        1064.8295105478126,
+        382.60480817751636
+      ],
+      "differences": [
+        {
+          "reference": "．",
+          "actual": ". "
+        },
+        {
+          "reference": "_",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图横线保留为占位符，4/3个下划线长度不能作为字词缺失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            141,
+            346,
+            1236,
+            448
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 3,
+        "order": 3,
+        "ignore": false,
+        "poly": [
+          150.40890237698196,
+          409.4307218163884,
+          1234.5692781836112,
+          409.4307218163884,
+          1234.5692781836112,
+          446.76405514972146,
+          150.40890237698196,
+          446.76405514972146
+        ],
+        "attribute": {},
+        "text": "A. needn't B. mustn't C. can't D. shouldn't"
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "A. needn't B. mustn't C. can't D. shouldn't",
+      "actual": " A. needn't B. mustn't C. can't D. shouldn't",
+      "raw_parent": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+      "bbox": [
+        150.40890237698196,
+        409.4307218163884,
+        1234.5692781836112,
+        446.76405514972146
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            141,
+            346,
+            1236,
+            448
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 4,
+        "order": 4,
+        "ignore": false,
+        "poly": [
+          157.33333333333334,
+          474.6666666666667,
+          290.6666666666667,
+          474.6666666666667,
+          290.6666666666667,
+          513.3333333333334,
+          157.33333333333334,
+          513.3333333333334
+        ],
+        "attribute": {},
+        "text": "【答案】Ｃ"
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "【答案】Ｃ",
+      "actual": "## 【答案】C",
+      "raw_parent": "## 【答案】C\n",
+      "bbox": [
+        157.33333333333334,
+        474.6666666666667,
+        290.6666666666667,
+        513.3333333333334
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "Ｃ",
+          "actual": "C"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图正文一致，差异为标题Markdown前缀及答案字母全半角编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            155,
+            476,
+            294,
+            513
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【答案】C\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【答案】C\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 5,
+        "order": 5,
+        "ignore": false,
+        "poly": [
+          157.33333333333334,
+          542.6666666666666,
+          258.6666666666667,
+          542.6666666666666,
+          258.6666666666667,
+          578.6666666666666,
+          157.33333333333334,
+          578.6666666666666
+        ],
+        "attribute": {},
+        "text": "【解析】"
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "【解析】",
+      "actual": "## 【解析】",
+      "raw_parent": "## 【解析】\n",
+      "bbox": [
+        157.33333333333334,
+        542.6666666666666,
+        258.6666666666667,
+        578.6666666666666
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图正文一致，差异为标题Markdown前缀及答案字母全半角编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            155,
+            541,
+            262,
+            580
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【解析】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【解析】\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:17",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 17,
+        "order": 6,
+        "ignore": false,
+        "poly": [
+          149.32864581587725,
+          601.046900855073,
+          1522.7831423012037,
+          601.046900855073,
+          1522.7831423012037,
+          788.8056013647188,
+          149.32864581587725,
+          788.8056013647188
+        ],
+        "attribute": {},
+        "text": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn’t 不必，不需要；B mustn't 千万别，一定不要，表示禁止的意思；C. can’t 不能；D. shouldn’t 不应该。结合句意，可知是不能听到演讲者讲话，故选C。"
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn’t 不必，不需要；B mustn't 千万别，一定不要，表示禁止的意思；C. can’t 不能；D. shouldn’t 不应该。结合句意，可知是不能听到演讲者讲话，故选C。",
+      "actual": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。",
+      "raw_parent": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+      "bbox": [
+        149.32864581587725,
+        601.046900855073,
+        1522.7831423012037,
+        788.8056013647188
+      ],
+      "differences": [
+        {
+          "reference": "’",
+          "actual": "'"
+        },
+        {
+          "reference": "",
+          "actual": "."
+        },
+        {
+          "reference": "’",
+          "actual": "'"
+        },
+        {
+          "reference": "’",
+          "actual": "'"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "reference_issue"
+        ],
+        "reason": "原图有 B. 和完整英文撇号；GT B 后句点缺失、直弯撇号及故选C空格差异，未见内容漏改。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            150,
+            609,
+            1526,
+            788
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 7,
+        "order": 7,
+        "ignore": false,
+        "poly": [
+          148,
+          828,
+          486.6666666666667,
+          828,
+          486.6666666666667,
+          866.6666666666666,
+          148,
+          866.6666666666666
+        ],
+        "attribute": {},
+        "text": "考点：考查情态动词辨析。"
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "考点：考查情态动词辨析。",
+      "actual": "## 考点：考查情态动词辨析。",
+      "raw_parent": "## 考点：考查情态动词辨析。\n",
+      "bbox": [
+        148,
+        828,
+        486.6666666666667,
+        866.6666666666666
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图正文一致，差异为标题Markdown前缀及答案字母全半角编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            144,
+            829,
+            491,
+            867
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 考点：考查情态动词辨析。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 考点：考查情态动词辨析。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:18",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 18,
+        "order": 8,
+        "ignore": false,
+        "poly": [
+          142.7801987036682,
+          959.6396825157192,
+          970.4900643623326,
+          959.6396825157192,
+          970.4900643623326,
+          1000.8062049347212,
+          142.7801987036682,
+          1000.8062049347212
+        ],
+        "attribute": {},
+        "text": "38. —Look at the stone bridge! Do you know ____it was built?"
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "38. —Look at the stone bridge! Do you know ____it was built?",
+      "actual": "38. —Look at the stone bridge! Do you know ___ it was built?",
+      "raw_parent": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+      "bbox": [
+        142.7801987036682,
+        959.6396825157192,
+        970.4900643623326,
+        1000.8062049347212
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图横线保留为占位符，4/3个下划线长度不能作为字词缺失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            140,
+            963,
+            1180,
+            1136
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:19",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 19,
+        "order": 9,
+        "ignore": false,
+        "poly": [
+          167.4376195905629,
+          1019.1997575049139,
+          516.9151184242212,
+          1019.1997575049139,
+          516.9151184242212,
+          1066.4974641139802,
+          167.4376195905629,
+          1066.4974641139802
+        ],
+        "attribute": {},
+        "text": "--In the 1860s. It's quite old."
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "--In the 1860s. It's quite old.",
+      "actual": " --In the 1860s. It's quite old.",
+      "raw_parent": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+      "bbox": [
+        167.4376195905629,
+        1019.1997575049139,
+        516.9151184242212,
+        1066.4974641139802
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            140,
+            963,
+            1180,
+            1136
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 9,
+        "order": 10,
+        "ignore": false,
+        "poly": [
+          150.66666666666666,
+          1096,
+          1172,
+          1096,
+          1172,
+          1132,
+          150.66666666666666,
+          1132
+        ],
+        "attribute": {},
+        "text": "A.when B.how C. where D. why"
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "A.when B.how C. where D. why",
+      "actual": " A. when B. how C. where D. why",
+      "raw_parent": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+      "bbox": [
+        150.66666666666666,
+        1096,
+        1172,
+        1132
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            140,
+            963,
+            1180,
+            1136
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:20",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 20,
+        "order": 11,
+        "ignore": false,
+        "poly": [
+          152.3947942578916,
+          1152.0676540102384,
+          304.4489801637636,
+          1152.0676540102384,
+          304.4489801637636,
+          1196.5713181778108,
+          152.3947942578916,
+          1196.5713181778108
+        ],
+        "attribute": {},
+        "text": "【答案】A"
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "【答案】A",
+      "actual": "## 【答案】A",
+      "raw_parent": "## 【答案】A\n",
+      "bbox": [
+        152.3947942578916,
+        1152.0676540102384,
+        304.4489801637636,
+        1196.5713181778108
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图正文一致，差异为标题Markdown前缀及答案字母全半角编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            154,
+            1161,
+            296,
+            1198
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【答案】A\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【答案】A\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 11,
+        "order": 12,
+        "ignore": false,
+        "poly": [
+          159.967228278543,
+          1229.2369508933941,
+          254.26894707711656,
+          1229.2369508933941,
+          254.26894707711656,
+          1264.4183604113855,
+          159.967228278543,
+          1264.4183604113855
+        ],
+        "attribute": {},
+        "text": "【解析】"
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "【解析】",
+      "actual": "## 【解析】",
+      "raw_parent": "## 【解析】\n",
+      "bbox": [
+        159.967228278543,
+        1229.2369508933941,
+        254.26894707711656,
+        1264.4183604113855
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图正文一致，差异为标题Markdown前缀及答案字母全半角编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            155,
+            1225,
+            262,
+            1265
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【解析】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【解析】\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:21",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 21,
+        "order": 13,
+        "ignore": false,
+        "poly": [
+          147.4340030343474,
+          1285.3106441623438,
+          1504.1655586350835,
+          1285.3106441623438,
+          1504.1655586350835,
+          1462.687723786791,
+          147.4340030343474,
+          1462.687723786791
+        ],
+        "attribute": {},
+        "text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，\n故选A。"
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，\n故选A。",
+      "actual": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。 A. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。",
+      "raw_parent": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+      "bbox": [
+        147.4340030343474,
+        1285.3106441623438,
+        1504.1655586350835,
+        1462.687723786791
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            138,
+            1295,
+            1503,
+            1528
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:22",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 22,
+        "order": 14,
+        "ignore": false,
+        "poly": [
+          148.78802654293096,
+          1485.7061234327123,
+          373.55592896780337,
+          1485.7061234327123,
+          373.55592896780337,
+          1538.513040267471,
+          148.78802654293096,
+          1538.513040267471
+        ],
+        "attribute": {},
+        "text": "考点：考查连词。"
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "考点：考查连词。",
+      "actual": " 考点：考查连词。",
+      "raw_parent": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+      "bbox": [
+        148.78802654293096,
+        1485.7061234327123,
+        373.55592896780337,
+        1538.513040267471
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            138,
+            1295,
+            1503,
+            1528
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 12,
+        "order": 15,
+        "ignore": false,
+        "poly": [
+          141.33333333333348,
+          1621.391763269087,
+          1225.3333333333337,
+          1621.391763269087,
+          1225.3333333333337,
+          1661.3917632690868,
+          141.33333333333348,
+          1661.3917632690868
+        ],
+        "attribute": {},
+        "text": "39. Don't hurry him. You will just have to be ____ and wait until he finishes the work."
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "39. Don't hurry him. You will just have to be ____ and wait until he finishes the work.",
+      "actual": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.",
+      "raw_parent": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+      "bbox": [
+        141.33333333333348,
+        1621.391763269087,
+        1225.3333333333337,
+        1661.3917632690868
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图横线保留为占位符，4/3个下划线长度不能作为字词缺失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            140,
+            1626,
+            1225,
+            1731
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 13,
+        "order": 16,
+        "ignore": false,
+        "poly": [
+          144.0000000000001,
+          1690.099735984921,
+          1209.3333333333335,
+          1690.099735984921,
+          1209.3333333333335,
+          1728.7664026515874,
+          144.0000000000001,
+          1728.7664026515874
+        ],
+        "attribute": {},
+        "text": "A. active B. careful C. patient D. famous"
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "A. active B. careful C. patient D. famous",
+      "actual": " A. active B. careful C. patient D. famous",
+      "raw_parent": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+      "bbox": [
+        144.0000000000001,
+        1690.099735984921,
+        1209.3333333333335,
+        1728.7664026515874
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            140,
+            1626,
+            1225,
+            1731
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:14",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 14,
+        "order": 17,
+        "ignore": false,
+        "poly": [
+          157.33333333333334,
+          1757.3333333333333,
+          290.6666666666667,
+          1757.3333333333333,
+          290.6666666666667,
+          1794.6666666666667,
+          157.33333333333334,
+          1794.6666666666667
+        ],
+        "attribute": {},
+        "text": "【答案】Ｃ"
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "【答案】Ｃ",
+      "actual": "## 【答案】C ## ",
+      "raw_parent": "## 【答案】C\n\n## 【解析】\n",
+      "bbox": [
+        157.33333333333334,
+        1757.3333333333333,
+        290.6666666666667,
+        1794.6666666666667
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "Ｃ",
+          "actual": "C ## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图正文一致，差异为标题Markdown前缀及答案字母全半角编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            151,
+            1757,
+            293,
+            1864
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【答案】C\n\n## 【解析】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【答案】C\n\n## 【解析】\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:23",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 23,
+        "order": 18,
+        "ignore": false,
+        "poly": [
+          160.42790545605925,
+          1820.5108276787325,
+          260.1917662477238,
+          1820.5108276787325,
+          260.1917662477238,
+          1862.3166360104779,
+          160.42790545605925,
+          1862.3166360104779
+        ],
+        "attribute": {},
+        "text": "【解析】"
+      },
+      "block_id": "b0012",
+      "strict_exact": true,
+      "expected": "【解析】",
+      "actual": "【解析】",
+      "raw_parent": "## 【答案】C\n\n## 【解析】\n",
+      "bbox": [
+        160.42790545605925,
+        1820.5108276787325,
+        260.1917662477238,
+        1862.3166360104779
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "解析标签与原图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            151,
+            1757,
+            293,
+            1864
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【答案】C\n\n## 【解析】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【答案】C\n\n## 【解析】\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:24",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 24,
+        "order": 19,
+        "ignore": false,
+        "poly": [
+          147.62365345378106,
+          1884.395553353197,
+          1502.9106692970445,
+          1884.395553353197,
+          1502.9106692970445,
+          2066.9570463549144,
+          147.62365345378106,
+          2066.9570463549144
+        ],
+        "attribute": {},
+        "text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔 细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选C。"
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔 细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选C。",
+      "actual": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。",
+      "raw_parent": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+      "bbox": [
+        147.62365345378106,
+        1884.395553353197,
+        1502.9106692970445,
+        2066.9570463549144
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            141,
+            1889,
+            1511,
+            2128
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:25",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 25,
+        "order": 20,
+        "ignore": false,
+        "poly": [
+          149.1707847504057,
+          2080.8812280245374,
+          474.06835704159903,
+          2080.8812280245374,
+          474.06835704159903,
+          2131.936560813154,
+          149.1707847504057,
+          2131.936560813154
+        ],
+        "attribute": {},
+        "text": "考点：考查形容词辨析。"
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "考点：考查形容词辨析。",
+      "actual": " 考点：考查形容词辨析。",
+      "raw_parent": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+      "bbox": [
+        149.1707847504057,
+        2080.8812280245374,
+        474.06835704159903,
+        2131.936560813154
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "alignment"
+        ],
+        "reason": "原图选项/下段文字完整；差异为父段拼接边界空格、行距及字间空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            141,
+            1889,
+            1511,
+            2128
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+    "sha256": "11485df0351fbc277beb14493273db2600a9ecc60fcf446fb078a8411e0b56b2"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/evaluation-candidate-12.json",
+    "sha256": "3a4859141bb172a189c38718a70bd6846f1963244be72a078aebe82ff1a6dbb6"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 20,
+  "unverified_units": []
+}

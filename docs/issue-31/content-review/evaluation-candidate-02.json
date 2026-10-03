@@ -1,0 +1,2840 @@
+{
+  "page": "evaluation-candidate-02",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "确认节号7.7缺失及页脚右括号缺失；独立公式漏匹配为任务/评分差异，非内容丢失。",
+  "viewed_sheets": {
+    "sheet-03.jpg": "de0c55f1e571660fa3feff7134b364cfd017a5e8f7f60f9731224b4a7cdf8cf1",
+    "sheet-02.jpg": "6ea1d9ba464f83dcc718b703ba3924932aaaec825eee0a335a7b48d960cf98d0",
+    "sheet-01.jpg": "a9f3e69f330b94755dd28b2e3d3c62ef2f1fd4de2280036525e2617cb6684c1a",
+    "sheet-04.jpg": "724a01c79627828166bb15e4266baf5014ec12320a40362aa5991b2baa681cb5"
+  },
+  "items": [
+    {
+      "id": "text:25",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          328.4973758616291,
+          214.4373172678795,
+          634.2418601800377,
+          214.4373172678795,
+          634.2418601800377,
+          247.6083028064379,
+          328.4973758616291,
+          247.6083028064379
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 25,
+        "text": "7.7 几何形式",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "7.7 几何形式",
+      "actual": "## 几何形式",
+      "raw_parent": "## 几何形式\n",
+      "bbox": [
+        328.4973758616291,
+        214.4373172678795,
+        634.2418601800377,
+        247.6083028064379
+      ],
+      "differences": [
+        {
+          "reference": "7.7",
+          "actual": "##"
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图标题有7.7，最终正文缺节号；需保留缺内容事实，不能按GT删节号。 原图节号7.7所在区域被保留为image块b0004，当前缺的是机器可读节号。 原图节号7.7所在区域被保留为image块b0004，当前缺的是机器可读节号。 原图节号7.7所在区域被保留为image块b0004，当前缺的是机器可读节号。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            433,
+            206,
+            638,
+            255
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 几何形式\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 几何形式\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:24",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          194.14253551750076,
+          338.8240297095275,
+          315.20167467943713,
+          338.8240297095275,
+          315.20167467943713,
+          370.41701797916085,
+          194.14253551750076,
+          370.41701797916085
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 24,
+        "text": "核心笔记",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "核心笔记",
+      "actual": "## 核心笔记",
+      "raw_parent": "## 核心笔记\n",
+      "bbox": [
+        194.14253551750076,
+        338.8240297095275,
+        315.20167467943713,
+        370.41701797916085
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            164,
+            337,
+            325,
+            373
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 核心笔记\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 核心笔记\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:8",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          164.50508770044064,
+          394.95514481428677,
+          792.8228673635118,
+          394.95514481428677,
+          792.8228673635118,
+          526.011986409245,
+          164.50508770044064,
+          526.011986409245
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 8,
+        "text": "（1）复数 $z=a+bi\\overset{一一对应}{\\rightarrow} $点 Z (a, $b)\\overset{一一对应}{\\rightarrow} $向量 $ \\overrightarrow{O Z}=( a, b )。 $",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "（1）复数 $z=a+bi\\overset{一一对应}{\\rightarrow} $点 Z (a, $b)\\overset{一一对应}{\\rightarrow} $向量 $ \\overrightarrow{O Z}=( a, b )。 $",
+      "actual": "(1) 复数 $z = a + bi$ $\\xrightarrow{一一对应}$ 点 $Z(a, b)$ $\\xrightarrow{一一对应}$ 向量 $\\overrightarrow{OZ} = (a, b)$。",
+      "raw_parent": "(1) 复数  $z = a + bi$  $\\xrightarrow{一一对应}$ 点  $Z(a, b)$  $\\xrightarrow{一一对应}$ 向量  $\\overrightarrow{OZ} = (a, b)$。\n",
+      "bbox": [
+        164.50508770044064,
+        394.95514481428677,
+        792.8228673635118,
+        526.011986409245
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ $"
+        },
+        {
+          "reference": "overset{一一对应}{\\",
+          "actual": "x"
+        },
+        {
+          "reference": "} $点 Z (a, $b)\\overset",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": "$ 点 $Z(a, b)$ $"
+        },
+        {
+          "reference": "",
+          "actual": "x"
+        },
+        {
+          "reference": "",
+          "actual": "{一一对应"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            155,
+            392,
+            791,
+            525
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 复数  $z = a + bi$  $\\xrightarrow{一一对应}$ 点  $Z(a, b)$  $\\xrightarrow{一一对应}$ 向量  $\\overrightarrow{OZ} = (a, b)$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 复数  $z = a + bi$  $\\xrightarrow{一一对应}$ 点  $Z(a, b)$  $\\xrightarrow{一一对应}$ 向量  $\\overrightarrow{OZ} = (a, b)$。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          160.19045917056548,
+          541.6525148300424,
+          790.6655530985743,
+          541.6525148300424,
+          790.6655530985743,
+          711.0016846276427,
+          160.19045917056548,
+          711.0016846276427
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 4,
+        "text": "（2）“ · i”的几何意义：逆时针旋转 $ 9 0^{\\circ}。 $例如， $3+ 2i\\overset{逆时针旋转9 0^{\\circ}}{\\rightarrow} \\left ( 3+2i \\right ) \\cdot $ i=-2+3i。",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "（2）“ · i”的几何意义：逆时针旋转 $ 9 0^{\\circ}。 $例如， $3+ 2i\\overset{逆时针旋转9 0^{\\circ}}{\\rightarrow} \\left ( 3+2i \\right ) \\cdot $ i=-2+3i。",
+      "actual": "(2) “·i”的几何意义：逆时针旋转 $90^{\\circ}$。 例如， $3 + 2i \\xrightarrow{\\text{逆时针旋转 } 90^{\\circ}} (3 + 2i) \\cdot$ $i = -2 + 3i$。",
+      "raw_parent": "(2) “·i”的几何意义：逆时针旋转  $90^{\\circ}$。\n\n例如， $3 + 2i \\xrightarrow{\\text{逆时针旋转 } 90^{\\circ}} (3 + 2i) \\cdot$\n\n $i = -2 + 3i$。\n",
+      "bbox": [
+        160.19045917056548,
+        541.6525148300424,
+        790.6655530985743,
+        711.0016846276427
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "xrightarr"
+        },
+        {
+          "reference": "v",
+          "actual": "w{\\t"
+        },
+        {
+          "reference": "rse",
+          "actual": "x"
+        },
+        {
+          "reference": "",
+          "actual": " } "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{\\rightarrow} \\left",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "3"
+        },
+        {
+          "reference": "3",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " \\right ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "i"
+        },
+        {
+          "reference": "i",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            158,
+            538,
+            789,
+            711
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) “·i”的几何意义：逆时针旋转  $90^{\\circ}$。\n\n例如， $3 + 2i \\xrightarrow{\\text{逆时针旋转 } 90^{\\circ}} (3 + 2i) \\cdot$\n\n $i = -2 + 3i$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) “·i”的几何意义：逆时针旋转  $90^{\\circ}$。\n\n例如， $3 + 2i \\xrightarrow{\\text{逆时针旋转 } 90^{\\circ}} (3 + 2i) \\cdot$\n\n $i = -2 + 3i$。\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          226.94713534194665,
+          1262.2011762694399,
+          785.7905704449697,
+          1262.2011762694399,
+          785.7905704449697,
+          1402.079353438939,
+          226.94713534194665,
+          1402.079353438939
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 0,
+        "text": "(3) “${\\div} i$”的几何意义：顺时针旋转 $ 9 0^{\\circ}。 $例如 ， $3+2i\\overset{顺时针旋转9 0^{\\circ}}{\\rightarrow}\\frac{ 3+2i}{i}= 2-3i$",
+        "attribute": {}
+      },
+      "block_id": "b0017",
+      "strict_exact": false,
+      "expected": "(3) “${\\div} i$”的几何意义：顺时针旋转 $ 9 0^{\\circ}。 $例如 ， $3+2i\\overset{顺时针旋转9 0^{\\circ}}{\\rightarrow}\\frac{ 3+2i}{i}= 2-3i$",
+      "actual": "（3）“÷i”的几何意义：顺时针旋转 $90^{\\circ}$。 例如， $3+2i\\xrightarrow{顺时针旋转90^{\\circ}}\\frac{3+2i}{i}=2-3i$。",
+      "raw_parent": "（3）“÷i”的几何意义：顺时针旋转 $90^{\\circ}$。\n\n例如， $3+2i\\xrightarrow{顺时针旋转90^{\\circ}}\\frac{3+2i}{i}=2-3i$。\n",
+      "bbox": [
+        226.94713534194665,
+        1262.2011762694399,
+        785.7905704449697,
+        1402.079353438939
+      ],
+      "differences": [
+        {
+          "reference": "(",
+          "actual": "（"
+        },
+        {
+          "reference": ") ",
+          "actual": "）"
+        },
+        {
+          "reference": "${\\d",
+          "actual": "÷"
+        },
+        {
+          "reference": "v} i$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "xrightarr"
+        },
+        {
+          "reference": "verset",
+          "actual": "w"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{\\rightarrow}",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0017",
+          "bbox": [
+            228,
+            1265,
+            788,
+            1408
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（3）“÷i”的几何意义：顺时针旋转 $90^{\\circ}$。\n\n例如， $3+2i\\xrightarrow{顺时针旋转90^{\\circ}}\\frac{3+2i}{i}=2-3i$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（3）“÷i”的几何意义：顺时针旋转 $90^{\\circ}$。\n\n例如， $3+2i\\xrightarrow{顺时针旋转90^{\\circ}}\\frac{3+2i}{i}=2-3i$。\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          892.85400390625,
+          192.0478515625,
+          1520.717529296875,
+          192.0478515625,
+          1520.717529296875,
+          308.2110595703125,
+          892.85400390625,
+          308.2110595703125
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 3,
+        "text": "(4)“ $ \\overline{z} $ ”的几何意义：与z关于x轴对称 。",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "(4)“ $ \\overline{z} $ ”的几何意义：与z关于x轴对称 。",
+      "actual": "（4）“ $\\overline{z}$”的几何意义：与 z 关于 x 轴对称。",
+      "raw_parent": "（4）“ $\\overline{z}$”的几何意义：与 z 关于 x 轴对称。\n",
+      "bbox": [
+        892.85400390625,
+        192.0478515625,
+        1520.717529296875,
+        308.2110595703125
+      ],
+      "differences": [
+        {
+          "reference": "(",
+          "actual": "（"
+        },
+        {
+          "reference": ")",
+          "actual": "）"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            884,
+            194,
+            1518,
+            302
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（4）“ $\\overline{z}$”的几何意义：与 z 关于 x 轴对称。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（4）“ $\\overline{z}$”的几何意义：与 z 关于 x 轴对称。\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:15",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          870.6004405765285,
+          387.556327773962,
+          1417.8080965807235,
+          387.556327773962,
+          1417.8080965807235,
+          427.8093429810936,
+          870.6004405765285,
+          427.8093429810936
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 15,
+        "text": "【834】（2019 - 新课标全国二 - 2 - ）",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "【834】（2019 - 新课标全国二 - 2 - ）",
+      "actual": "## 【834】(2019·新课标全国二·2·)",
+      "raw_parent": "## 【834】(2019·新课标全国二·2·)\n",
+      "bbox": [
+        870.6004405765285,
+        387.556327773962,
+        1417.8080965807235,
+        427.8093429810936
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ）",
+          "actual": "·)"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "reference_issue"
+        ],
+        "reason": "原图标题分隔符为居中点，GT用连字符；预测点号/标题前缀不同，编号与年份保留。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            868,
+            384,
+            1421,
+            427
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【834】(2019·新课标全国二·2·)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【834】(2019·新课标全国二·2·)\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:32",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          916.5508005360197,
+          436.03828816285136,
+          1541.6384374348788,
+          436.03828816285136,
+          1541.6384374348788,
+          661.012881853101,
+          916.5508005360197,
+          661.012881853101
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 32,
+        "text": "设 z = 3 + 2i ，则在复平面内 $ \\mathcal{\\overline{{z}}} $对应的点位于（    ）。\nA. 第一象限 B. 第二象限\nC. 第三象限 D. 第四象限",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              924.2711275193707,
+              443.5605228447538,
+              1536.8170111061563,
+              443.5605228447538,
+              1536.8170111061563,
+              541.5678642186394,
+              924.2711275193707,
+              541.5678642186394
+            ],
+            "ignore": false,
+            "order": 13,
+            "anno_id": 20,
+            "text": "设 z = 3 + 2i ，则在复平面内 $ \\mathcal{\\overline{{z}}} $对应的点位于（    ）。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  924.4878768132294,
+                  448.55939275460435,
+                  961.3333333333331,
+                  448.55939275460435,
+                  961.3333333333331,
+                  477.4048492747082,
+                  924.4878768132294,
+                  477.4048492747082
+                ],
+                "text": "设"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  965.0314631845226,
+                  444.30547900142847,
+                  1103.878946339491,
+                  444.30547900142847,
+                  1103.878946339491,
+                  480.302974634198,
+                  965.0314631845226,
+                  480.302974634198
+                ],
+                "text": "z = 3 + 2i"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1103.9999999999998,
+                  445.7496942051879,
+                  1325.333333333333,
+                  445.7496942051879,
+                  1325.333333333333,
+                  480.9169724614785,
+                  1103.9999999999998,
+                  480.9169724614785
+                ],
+                "text": "，则在复平面内"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  1325.3333333333333,
+                  445.3333333333333,
+                  1353.3333333333333,
+                  445.3333333333333,
+                  1353.3333333333333,
+                  480,
+                  1325.3333333333333,
+                  480
+                ],
+                "latex": "$ \\mathcal{\\overline{{z}}} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1356.0715159413746,
+                  445.74969420518767,
+                  1534.3933376775617,
+                  445.74969420518767,
+                  1534.3933376775617,
+                  482.3218217361866,
+                  1356.0715159413746,
+                  482.3218217361866
+                ],
+                "text": "对应的点位"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  925.3333333333331,
+                  505.33333333333326,
+                  1075.7011992877385,
+                  505.33333333333326,
+                  1075.7011992877385,
+                  536.3159741569278,
+                  925.3333333333331,
+                  536.3159741569278
+                ],
+                "text": "于（    ）。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              924.0037841796874,
+              554.3811645507812,
+              1424.7684137640497,
+              554.3811645507812,
+              1424.7684137640497,
+              601.6016583105849,
+              924.0037841796874,
+              601.6016583105849
+            ],
+            "ignore": false,
+            "order": 14,
+            "anno_id": 27,
+            "text": "A. 第一象限 B. 第二象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  929.3333333333331,
+                  561.0959866809483,
+                  1431.9161584004494,
+                  561.0959866809483,
+                  1431.9161584004494,
+                  594.5386844254018,
+                  929.3333333333331,
+                  594.5386844254018
+                ],
+                "text": "A. 第一象限 B. 第二象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              920.637478537811,
+              609.7507125281264,
+              1436.0855982585101,
+              609.7507125281264,
+              1436.0855982585101,
+              655.3151871995693,
+              920.637478537811,
+              655.3151871995693
+            ],
+            "ignore": false,
+            "order": 15,
+            "anno_id": 28,
+            "text": "C. 第三象限 D. 第四象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  926.6666666666665,
+                  617.0959866809485,
+                  1431.788176159185,
+                  617.0959866809485,
+                  1431.788176159185,
+                  650.9040133190514,
+                  926.6666666666665,
+                  650.9040133190514
+                ],
+                "text": "C. 第三象限 D. 第四象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "设 z = 3 + 2i ，则在复平面内 $ \\mathcal{\\overline{{z}}} $对应的点位于（    ）。\nA. 第一象限 B. 第二象限\nC. 第三象限 D. 第四象限",
+      "actual": "设 $z = 3 + 2i$，则在复平面内 $\\bar{z}$ 对应的点位于（）。 A. 第一象限 B. 第二象限 C. 第三象限 D. 第四象限",
+      "raw_parent": "设  $z = 3 + 2i$，则在复平面内  $\\bar{z}$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+      "bbox": [
+        916.5508005360197,
+        436.03828816285136,
+        1541.6384374348788,
+        661.012881853101
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "m",
+          "actual": "b"
+        },
+        {
+          "reference": "thcal{\\ove",
+          "actual": ""
+        },
+        {
+          "reference": "line{",
+          "actual": ""
+        },
+        {
+          "reference": "}}",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            870,
+            422,
+            1536,
+            661
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "设  $z = 3 + 2i$，则在复平面内  $\\bar{z}$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "设  $z = 3 + 2i$，则在复平面内  $\\bar{z}$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          863.4855415063564,
+          728.8846466878482,
+          1292.7295606451123,
+          728.8846466878482,
+          1292.7295606451123,
+          765.5066562572262,
+          863.4855415063564,
+          765.5066562572262
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 13,
+        "text": "【835】（2018 - 江西 - 1 - ）",
+        "attribute": {}
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "【835】（2018 - 江西 - 1 - ）",
+      "actual": "## 【835】(2018·江西·1·)",
+      "raw_parent": "## 【835】(2018·江西·1·)\n",
+      "bbox": [
+        863.4855415063564,
+        728.8846466878482,
+        1292.7295606451123,
+        765.5066562572262
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ）",
+          "actual": "·)"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "reference_issue"
+        ],
+        "reason": "原图标题分隔符为居中点，GT用连字符；预测点号/标题前缀不同，编号与年份保留。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            867,
+            726,
+            1286,
+            768
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【835】(2018·江西·1·)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【835】(2018·江西·1·)\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:31",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          915.1269107025371,
+          776.3479583651914,
+          1543.0623272683613,
+          776.3479583651914,
+          1543.0623272683613,
+          999.8986622219585,
+          915.1269107025371,
+          999.8986622219585
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 31,
+        "text": "在复平面内，复数 z = sin2 + icos2对应的点位于（    ）。\nA. 第一象限 B. 第二象限\nC. 第三象限 D. 第四象限",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              919.6960678221459,
+              783.391823721341,
+              1537.1601826546816,
+              783.391823721341,
+              1537.1601826546816,
+              881.3344074533984,
+              919.6960678221459,
+              881.3344074533984
+            ],
+            "ignore": false,
+            "order": 18,
+            "anno_id": 22,
+            "text": "在复平面内，复数 z = sin2 + icos2对应的点位于（    ）。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  927.9999999999999,
+                  788.1279822412646,
+                  1186.6666666666665,
+                  788.1279822412646,
+                  1186.6666666666665,
+                  821.2053510920687,
+                  927.9999999999999,
+                  821.2053510920687
+                ],
+                "text": "在复平面内，复数"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  1190.6715241480917,
+                  783.1604180620942,
+                  1417.4788878817328,
+                  783.1604180620942,
+                  1417.4788878817328,
+                  826.5058253534122,
+                  1190.6715241480917,
+                  826.5058253534122
+                ],
+                "text": "z = sin2 + icos2"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1424.4746933047697,
+                  790.0639911206318,
+                  1530.1733555317526,
+                  790.0639911206318,
+                  1530.1733555317526,
+                  821.388633210983,
+                  1424.4746933047697,
+                  821.388633210983
+                ],
+                "text": "对应的"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  926.6666666666664,
+                  847.0319955603162,
+                  1147.4305968136637,
+                  847.0319955603162,
+                  1147.4305968136637,
+                  878.4408652592474,
+                  926.6666666666664,
+                  878.4408652592474
+                ],
+                "text": "点位于（    ）。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              919.7770859612474,
+              900.5076911925233,
+              1430.882723858464,
+              900.5076911925233,
+              1430.882723858464,
+              936.6780105977483,
+              919.7770859612474,
+              936.6780105977483
+            ],
+            "ignore": false,
+            "order": 19,
+            "anno_id": 26,
+            "text": "A. 第一象限 B. 第二象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  928,
+                  901.4613155745977,
+                  1429.6148206274322,
+                  901.4613155745977,
+                  1429.6148206274322,
+                  934.9040133190514,
+                  928,
+                  934.9040133190514
+                ],
+                "text": "A. 第一象限 B. 第二象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              922.0074615351244,
+              953.4420012228542,
+              1430.3361320884105,
+              953.4420012228542,
+              1430.3361320884105,
+              993.3109165603666,
+              922.0074615351244,
+              993.3109165603666
+            ],
+            "ignore": false,
+            "order": 20,
+            "anno_id": 33,
+            "text": "C. 第三象限 D. 第四象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  926.6666666666666,
+                  958.0639911206322,
+                  1429.852167279817,
+                  958.0639911206322,
+                  1429.852167279817,
+                  992.602675546034,
+                  926.6666666666666,
+                  992.602675546034
+                ],
+                "text": "C. 第三象限 D. 第四象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "在复平面内，复数 z = sin2 + icos2对应的点位于（    ）。\nA. 第一象限 B. 第二象限\nC. 第三象限 D. 第四象限",
+      "actual": "在复平面内，复数 $z = \\sin 2 + i \\cos 2$ 对应的点位于（）。 A. 第一象限 B. 第二象限 C. 第三象限 D. 第四象限",
+      "raw_parent": "在复平面内，复数  $z = \\sin 2 + i \\cos 2$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+      "bbox": [
+        915.1269107025371,
+        776.3479583651914,
+        1543.0623272683613,
+        999.8986622219585
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "\\"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " \\"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            871,
+            778,
+            1538,
+            998
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "在复平面内，复数  $z = \\sin 2 + i \\cos 2$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "在复平面内，复数  $z = \\sin 2 + i \\cos 2$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:21",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          866.6752319335938,
+          1069.1561279296875,
+          1286.1151123046875,
+          1069.1561279296875,
+          1286.1151123046875,
+          1109.807373046875,
+          866.6752319335938,
+          1109.807373046875
+        ],
+        "ignore": false,
+        "order": 21,
+        "anno_id": 21,
+        "text": "【836】（2010 - 陕西 - 2 - ）",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "【836】（2010 - 陕西 - 2 - ）",
+      "actual": "## 【836】(2010·陕西·2·)",
+      "raw_parent": "## 【836】(2010·陕西·2·)\n",
+      "bbox": [
+        866.6752319335938,
+        1069.1561279296875,
+        1286.1151123046875,
+        1109.807373046875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ）",
+          "actual": "·)"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "reference_issue"
+        ],
+        "reason": "原图标题分隔符为居中点，GT用连字符；预测点号/标题前缀不同，编号与年份保留。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            866,
+            1067,
+            1287,
+            1111
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【836】(2010·陕西·2·)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【836】(2010·陕西·2·)\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:29",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          912.5391650409456,
+          1124.6661698459368,
+          1534.7790222728393,
+          1124.6661698459368,
+          1534.7790222728393,
+          1383.8141195397689,
+          912.5391650409456,
+          1383.8141195397689
+        ],
+        "ignore": false,
+        "order": 22,
+        "anno_id": 29,
+        "text": "复数 $ z=\\frac{\\mathrm{i}}{1+\\mathrm{i}} $在复平面内对应的点位于（    ）。\nC. 第三象限 D. 第四象限\nA. 第一象限 B. 第二象限",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              918.5363595744022,
+              1130.8297682359341,
+              1530.783203125,
+              1130.8297682359341,
+              1530.783203125,
+              1268.583320115586,
+              918.5363595744022,
+              1268.583320115586
+            ],
+            "ignore": false,
+            "order": 23,
+            "anno_id": 16,
+            "text": "复数 $ z=\\frac{\\mathrm{i}}{1+\\mathrm{i}} $在复平面内对应的点位于（    ）。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  920.1165493171276,
+                  1150.420745321179,
+                  996.8414906423579,
+                  1150.420745321179,
+                  996.8414906423579,
+                  1185.579254678821,
+                  920.1165493171276,
+                  1185.579254678821
+                ],
+                "text": "复数"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  1002.6666666666666,
+                  1129.3333333333333,
+                  1140,
+                  1129.3333333333333,
+                  1140,
+                  1204,
+                  1002.6666666666666,
+                  1204
+                ],
+                "latex": "$ z=\\frac{\\mathrm{i}}{1+\\mathrm{i}} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1141.6958039959484,
+                  1151.7540786545123,
+                  1532.12937202836,
+                  1151.7540786545123,
+                  1532.12937202836,
+                  1188.12937202836,
+                  1141.6958039959484,
+                  1188.12937202836
+                ],
+                "text": "在复平面内对应的点位"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  924,
+                  1229.3333333333333,
+                  1074.1187385915125,
+                  1229.3333333333333,
+                  1074.1187385915125,
+                  1264.4301277036561,
+                  924,
+                  1264.4301277036561
+                ],
+                "text": "于（    ）。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              921.7125210445278,
+              1337.2263738781771,
+              1431.4650814312965,
+              1337.2263738781771,
+              1431.4650814312965,
+              1381.3669587161373,
+              921.7125210445278,
+              1381.3669587161373
+            ],
+            "ignore": false,
+            "order": 24,
+            "anno_id": 34,
+            "text": "C. 第三象限 D. 第四象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  922.4293200142816,
+                  1341.4613155745978,
+                  1432.3908517052193,
+                  1341.4613155745978,
+                  1432.3908517052193,
+                  1374.9040133190515,
+                  922.4293200142816,
+                  1374.9040133190515
+                ],
+                "text": "C. 第三象限 D. 第四象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              916.6458543481303,
+              1279.7027613354246,
+              1432.344945861536,
+              1279.7027613354246,
+              1432.344945861536,
+              1324.7471712796364,
+              916.6458543481303,
+              1324.7471712796364
+            ],
+            "ignore": false,
+            "order": 25,
+            "anno_id": 18,
+            "text": "A. 第一象限 B. 第二象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  923.7626533476149,
+                  1285.0959866809483,
+                  1426.3454784147314,
+                  1285.0959866809483,
+                  1426.3454784147314,
+                  1320.8400221984193,
+                  923.7626533476149,
+                  1320.8400221984193
+                ],
+                "text": "A. 第一象限 B. 第二象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "复数 $ z=\\frac{\\mathrm{i}}{1+\\mathrm{i}} $在复平面内对应的点位于（    ）。\nC. 第三象限 D. 第四象限\nA. 第一象限 B. 第二象限",
+      "actual": "复数 $z = \\frac{i}{1 + i}$ 在复平面内对应的点位于（）。 A. 第一象限 B. 第二象限 C. 第三象限 D. 第四象限",
+      "raw_parent": "复数  $z = \\frac{i}{1 + i}$ 在复平面内对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+      "bbox": [
+        912.5391650409456,
+        1124.6661698459368,
+        1534.7790222728393,
+        1383.8141195397689
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "z"
+        },
+        {
+          "reference": "z",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": " "
+        },
+        {
+          "reference": "}",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " A. 第一象限 B. 第二象限"
+        },
+        {
+          "reference": " A. 第一象限 B. 第二象限",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图选项按A/B行、C/D行；GT文本把C/D排在A/B前，预测按原图顺序，不能将该CER归模型错序。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            892,
+            1125,
+            1536,
+            1384
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "复数  $z = \\frac{i}{1 + i}$ 在复平面内对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "复数  $z = \\frac{i}{1 + i}$ 在复平面内对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:14",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          860.2052379039824,
+          1451.2989960577959,
+          1283.0758581320974,
+          1451.2989960577959,
+          1283.0758581320974,
+          1495.2616744332076,
+          860.2052379039824,
+          1495.2616744332076
+        ],
+        "ignore": false,
+        "order": 26,
+        "anno_id": 14,
+        "text": "【837】（2018 - 北京 - 2 - ）",
+        "attribute": {}
+      },
+      "block_id": "b0019",
+      "strict_exact": false,
+      "expected": "【837】（2018 - 北京 - 2 - ）",
+      "actual": "【837】(2018·北京·2·) ",
+      "raw_parent": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+      "bbox": [
+        860.2052379039824,
+        1451.2989960577959,
+        1283.0758581320974,
+        1495.2616744332076
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": "",
+          "actual": "·2·)"
+        },
+        {
+          "reference": "- 2 - ）",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "reference_issue"
+        ],
+        "reason": "原图标题分隔符为居中点，GT用连字符；预测点号/标题前缀不同，编号与年份保留。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0019",
+          "bbox": [
+            864,
+            1450,
+            1534,
+            1764
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:35",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          910.4536319838949,
+          1513.0493841702892,
+          1534.3762681099047,
+          1513.0493841702892,
+          1534.3762681099047,
+          1767.0441674564308,
+          910.4536319838949,
+          1767.0441674564308
+        ],
+        "ignore": false,
+        "order": 27,
+        "anno_id": 35,
+        "text": "在复平面内，复数 $ \\frac{1}{1-\\mathrm{i}} $的共轭复数对应的点位于（    ）。\nA. 第一象限 B. 第二象限\nC. 第三象限 D. 第四象限",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              917.0259399414064,
+              1517.8288506354247,
+              1530.5839843750002,
+              1517.8288506354247,
+              1530.5839843750002,
+              1653.2658691406248,
+              917.0259399414064,
+              1653.2658691406248
+            ],
+            "ignore": false,
+            "order": 28,
+            "anno_id": 1,
+            "text": "在复平面内，复数 $ \\frac{1}{1-\\mathrm{i}} $的共轭复数对应的点位于（    ）。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  924.5309674897645,
+                  1531.7167724283527,
+                  1180.5427967076077,
+                  1531.7167724283527,
+                  1180.5427967076077,
+                  1568.0118292178438,
+                  924.5309674897645,
+                  1568.0118292178438
+                ],
+                "text": "在复平面内，复数"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  1182.6666666666665,
+                  1512,
+                  1248,
+                  1512,
+                  1248,
+                  1588,
+                  1182.6666666666665,
+                  1588
+                ],
+                "latex": "$ \\frac{1}{1-\\mathrm{i}} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1249.864300823098,
+                  1534.1238699590585,
+                  1525.8761300409412,
+                  1534.1238699590585,
+                  1525.8761300409412,
+                  1570.418926748549,
+                  1249.864300823098,
+                  1570.418926748549
+                ],
+                "text": "的共轭复数对应的"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  923.7741985925809,
+                  1612,
+                  1138.1187385915132,
+                  1612,
+                  1138.1187385915132,
+                  1643.7741985925807,
+                  923.7741985925809,
+                  1643.7741985925807
+                ],
+                "text": "点位于（    ）。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              916.5014038085939,
+              1659.04296875,
+              1432.4995626540112,
+              1659.04296875,
+              1432.4995626540112,
+              1708.2547351557862,
+              916.5014038085939,
+              1708.2547351557862
+            ],
+            "ignore": false,
+            "order": 29,
+            "anno_id": 10,
+            "text": "A. 第一象限 B. 第二象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  921.0959866809487,
+                  1668,
+                  1428.6803051232494,
+                  1668,
+                  1428.6803051232494,
+                  1701.5706799857178,
+                  921.0959866809487,
+                  1701.5706799857178
+                ],
+                "text": "A. 第一象限 B. 第二象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              918.2203038028907,
+              1720.444136542456,
+              1432.1150891597908,
+              1720.444136542456,
+              1432.1150891597908,
+              1761.8663862437672,
+              918.2203038028907,
+              1761.8663862437672
+            ],
+            "ignore": false,
+            "order": 30,
+            "anno_id": 30,
+            "text": "C. 第三象限 D. 第四象限",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  922.0639911206323,
+                  1723.7626533476148,
+                  1429.1215094925187,
+                  1723.7626533476148,
+                  1429.1215094925187,
+                  1757.570679985718,
+                  922.0639911206323,
+                  1757.570679985718
+                ],
+                "text": "C. 第三象限 D. 第四象限"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0019",
+      "strict_exact": false,
+      "expected": "在复平面内，复数 $ \\frac{1}{1-\\mathrm{i}} $的共轭复数对应的点位于（    ）。\nA. 第一象限 B. 第二象限\nC. 第三象限 D. 第四象限",
+      "actual": "在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。 A. 第一象限 B. 第二象限 C. 第三象限 D. 第四象限",
+      "raw_parent": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+      "bbox": [
+        910.4536319838949,
+        1513.0493841702892,
+        1534.3762681099047,
+        1767.0441674564308
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0019",
+          "bbox": [
+            864,
+            1450,
+            1534,
+            1764
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          864.7484130859375,
+          1779.02392578125,
+          1282.5751953125,
+          1779.02392578125,
+          1282.5751953125,
+          1819.7738037109375,
+          864.7484130859375,
+          1819.7738037109375
+        ],
+        "ignore": false,
+        "order": 31,
+        "anno_id": 2,
+        "text": "【838】（2013 - 四川 - 2 - ）",
+        "attribute": {}
+      },
+      "block_id": "b0020",
+      "strict_exact": false,
+      "expected": "【838】（2013 - 四川 - 2 - ）",
+      "actual": "## 【838】(2013·四川·2·)",
+      "raw_parent": "## 【838】(2013·四川·2·)\n",
+      "bbox": [
+        864.7484130859375,
+        1779.02392578125,
+        1282.5751953125,
+        1819.7738037109375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ",
+          "actual": "·"
+        },
+        {
+          "reference": " - ）",
+          "actual": "·)"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "reference_issue"
+        ],
+        "reason": "原图标题分隔符为居中点，GT用连字符；预测点号/标题前缀不同，编号与年份保留。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0020",
+          "bbox": [
+            864,
+            1775,
+            1285,
+            1820
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【838】(2013·四川·2·)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【838】(2013·四川·2·)\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          916.4493408203126,
+          1836.6275885609116,
+          1269.833754853205,
+          1836.6275885609116,
+          1269.833754853205,
+          1991.9713134765625,
+          916.4493408203126,
+          1991.9713134765625
+        ],
+        "ignore": false,
+        "order": 32,
+        "anno_id": 6,
+        "text": "如图所示，在复平面内，点A表示复数z，则图中表示z的共轭复数",
+        "attribute": {}
+      },
+      "block_id": "b0021",
+      "strict_exact": false,
+      "expected": "如图所示，在复平面内，点A表示复数z，则图中表示z的共轭复数",
+      "actual": "如图所示，在复平面内， 点 A 表示复数 z，则 图中表示 z 的共轭复数",
+      "raw_parent": "如图所示，在复平面内，\n\n点 A 表示复数 z，则\n\n图中表示 z 的共轭复数\n",
+      "bbox": [
+        916.4493408203126,
+        1836.6275885609116,
+        1269.833754853205,
+        1991.9713134765625
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0021",
+          "bbox": [
+            911,
+            1833,
+            1273,
+            1990
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "如图所示，在复平面内，\n\n点 A 表示复数 z，则\n\n图中表示 z 的共轭复数\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "如图所示，在复平面内，\n\n点 A 表示复数 z，则\n\n图中表示 z 的共轭复数\n",
+            "resource": "assets/p0001-b0021.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          75.10552341238923,
+          78.42380905308087,
+          129.74567867836143,
+          78.42380905308087,
+          129.74567867836143,
+          107.506472339808,
+          75.10552341238923,
+          107.506472339808
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 12,
+        "text": "156",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "156",
+      "actual": "## 156",
+      "raw_parent": "## 156\n",
+      "bbox": [
+        75.10552341238923,
+        78.42380905308087,
+        129.74567867836143,
+        107.506472339808
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            73,
+            79,
+            129,
+            111
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 156\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 156\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          203.00795510315058,
+          78.75772971399851,
+          742.244193353372,
+          78.75772971399851,
+          742.244193353372,
+          114.3463852368435,
+          203.00795510315058,
+          114.3463852368435
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 9,
+        "text": "2024新高考数学真题全刷：基础2000题",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "2024新高考数学真题全刷：基础2000题",
+      "actual": "## 2024 新高考数学真题全刷：基础2000题",
+      "raw_parent": "## 2024 新高考数学真题全刷：基础2000题\n",
+      "bbox": [
+        203.00795510315058,
+        78.75772971399851,
+        742.244193353372,
+        114.3463852368435
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、坐标、箭头方向和运算一致；差异为数学封装、箭头/共轭LaTeX、空格、括号及Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            197,
+            76,
+            743,
+            116
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 2024 新高考数学真题全刷：基础2000题\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 2024 新高考数学真题全刷：基础2000题\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:17",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          144.75794982910156,
+          2043.7169189453125,
+          1536.8905029296875,
+          2043.7169189453125,
+          1536.8905029296875,
+          2113.58642578125,
+          144.75794982910156,
+          2113.58642578125
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 17,
+        "text": "不想认命，就去拼命。我始终相信，付出就会有收获，或大或小，或迟或早，始终不会辜负你的努力。有一种落差是，你总是羡慕别人的成功，自己却不敢开始。（推荐人：@四叶草（湖南邵阳 ））",
+        "attribute": {}
+      },
+      "block_id": "b0024",
+      "strict_exact": false,
+      "expected": "不想认命，就去拼命。我始终相信，付出就会有收获，或大或小，或迟或早，始终不会辜负你的努力。有一种落差是，你总是羡慕别人的成功，自己却不敢开始。（推荐人：@四叶草（湖南邵阳 ））",
+      "actual": "不想认命，就去拼命。我始终相信，付出就会有收获，或大或小，或迟或早，始终不会辜负你的努力。有一种落差是，你总是羡慕别人的成功，自己却不敢开始。（推荐人：@四叶草(湖南邵阳）",
+      "raw_parent": "不想认命，就去拼命。我始终相信，付出就会有收获，或大或小，或迟或早，始终不会辜负你的努力。有一种落差是，你总是羡慕别人的成功，自己却不敢开始。（推荐人：@四叶草(湖南邵阳）\n",
+      "bbox": [
+        144.75794982910156,
+        2043.7169189453125,
+        1536.8905029296875,
+        2113.58642578125
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "）",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "transcription_error",
+          "representation"
+        ],
+        "reason": "页脚原图/GT两层括号有两个末尾右括号，响应仅一个；其余为全半角空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0024",
+          "bbox": [
+            141,
+            2044,
+            1531,
+            2110
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "不想认命，就去拼命。我始终相信，付出就会有收获，或大或小，或迟或早，始终不会辜负你的努力。有一种落差是，你总是羡慕别人的成功，自己却不敢开始。（推荐人：@四叶草(湖南邵阳）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "不想认命，就去拼命。我始终相信，付出就会有收获，或大或小，或迟或早，始终不会辜负你的努力。有一种落差是，你总是羡慕别人的成功，自己却不敢开始。（推荐人：@四叶草(湖南邵阳）\n",
+            "resource": "assets/p0001-b0024.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:23",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          240.93801486159046,
+          1188.4114207286793,
+          714.4698036546939,
+          1188.4114207286793,
+          714.4698036546939,
+          1250.749782797645,
+          240.93801486159046,
+          1250.749782797645
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 23,
+        "latex": "$$Z\\left(3,2\\right)\\xrightarrow{逆时针旋转90^{\\circ} }{Z}^\\prime\\left(-2,3\\right)$$",
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "$$Z\\left(3,2\\right)\\xrightarrow{逆时针旋转90^{\\circ} }{Z}^\\prime\\left(-2,3\\right)$$",
+      "actual": null,
+      "raw_parent": null,
+      "bbox": [
+        240.93801486159046,
+        1188.4114207286793,
+        714.4698036546939,
+        1250.749782797645
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "独立逆时针公式完整在text b0016，任务类型导致漏配；原图Z坐标及90度均正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            242,
+            1191,
+            709,
+            1250
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "$Z(3,2)\\xrightarrow{逆时针旋转90^{\\circ}}Z'(-2,3)$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$Z(3,2)\\xrightarrow{逆时针旋转90^{\\circ}}Z'(-2,3)$\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:11",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          240.6395231211783,
+          1879.390468075999,
+          707.7363766118372,
+          1879.390468075999,
+          707.7363766118372,
+          1938.461264536176,
+          240.6395231211783,
+          1938.461264536176
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 11,
+        "latex": "$$Z\\left(3,2\\right)\\xrightarrow{顺时针旋转90^{\\circ} }{Z}^\\prime\\left(2,-3\\right)$$",
+        "attribute": {}
+      },
+      "block_id": "b0023",
+      "strict_exact": false,
+      "expected": "$$Z\\left(3,2\\right)\\xrightarrow{顺时针旋转90^{\\circ} }{Z}^\\prime\\left(2,-3\\right)$$",
+      "actual": {
+        "format": "latex",
+        "text": "Z(3,2)\\xrightarrow{顺时针旋转90^{\\circ}}Z'(2,-3)",
+        "resource": "assets/p0001-b0023.png",
+        "display": false
+      },
+      "raw_parent": "$Z(3,2)\\xrightarrow{顺时针旋转90^{\\circ}}Z'(2,-3)$\n",
+      "bbox": [
+        240.6395231211783,
+        1879.390468075999,
+        707.7363766118372,
+        1938.461264536176
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "顺时针90度及(2,-3)完整；left/right与prime写法差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0023",
+          "bbox": [
+            241,
+            1881,
+            706,
+            1938
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$Z(3,2)\\xrightarrow{顺时针旋转90^{\\circ}}Z'(2,-3)$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "Z(3,2)\\xrightarrow{顺时针旋转90^{\\circ}}Z'(2,-3)",
+            "resource": "assets/p0001-b0023.png",
+            "display": false
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:32:21",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 32,
+        "block_id": "b0009",
+        "status": "ok",
+        "exact": false,
+        "reference": "$ \\mathcal{\\overline{{z}}} $",
+        "actual_range": null,
+        "observed_parent_formulas": [
+          {
+            "range": [
+              2,
+              14
+            ],
+            "latex": "z = 3 + 2i"
+          },
+          {
+            "range": [
+              22,
+              31
+            ],
+            "latex": "\\bar{z}"
+          }
+        ],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "分别核对共轭z、i/(1+i)、1/(1-i)均与对应裁图一致；字体/括号宏不同。",
+        "reviewed": true
+      },
+      "expected": "$ \\mathcal{\\overline{{z}}} $",
+      "parent_item_id": "text:32",
+      "bbox": [
+        916.5508005360197,
+        436.03828816285136,
+        1541.6384374348788,
+        661.012881853101
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            870,
+            422,
+            1536,
+            661
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "设  $z = 3 + 2i$，则在复平面内  $\\bar{z}$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "设  $z = 3 + 2i$，则在复平面内  $\\bar{z}$ 对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:29:22",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 29,
+        "block_id": "b0015",
+        "status": "ok",
+        "exact": false,
+        "reference": "$ z=\\frac{\\mathrm{i}}{1+\\mathrm{i}} $",
+        "actual_range": null,
+        "observed_parent_formulas": [
+          {
+            "range": [
+              3,
+              24
+            ],
+            "latex": "z = \\frac{i}{1 + i}"
+          }
+        ],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "分别核对共轭z、i/(1+i)、1/(1-i)均与对应裁图一致；字体/括号宏不同。",
+        "reviewed": true
+      },
+      "expected": "$ z=\\frac{\\mathrm{i}}{1+\\mathrm{i}} $",
+      "parent_item_id": "text:29",
+      "bbox": [
+        912.5391650409456,
+        1124.6661698459368,
+        1534.7790222728393,
+        1383.8141195397689
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            892,
+            1125,
+            1536,
+            1384
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "复数  $z = \\frac{i}{1 + i}$ 在复平面内对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "复数  $z = \\frac{i}{1 + i}$ 在复平面内对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:35:23",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 35,
+        "block_id": "b0019",
+        "status": "ok",
+        "exact": false,
+        "reference": "$ \\frac{1}{1-\\mathrm{i}} $",
+        "actual_range": null,
+        "observed_parent_formulas": [
+          {
+            "range": [
+              27,
+              42
+            ],
+            "latex": "\\frac{1}{1-i}"
+          }
+        ],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "分别核对共轭z、i/(1+i)、1/(1-i)均与对应裁图一致；字体/括号宏不同。",
+        "reviewed": true
+      },
+      "expected": "$ \\frac{1}{1-\\mathrm{i}} $",
+      "parent_item_id": "text:35",
+      "bbox": [
+        910.4536319838949,
+        1513.0493841702892,
+        1534.3762681099047,
+        1767.0441674564308
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0019",
+          "bbox": [
+            864,
+            1450,
+            1534,
+            1764
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【837】(2018·北京·2·)\n\n在复平面内，复数 $\\frac{1}{1-i}$的共轭复数对应的点位于（）。\n\nA. 第一象限\n\nB. 第二象限\n\nC. 第三象限\n\nD. 第四象限\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0016",
+      "kind": "extra",
+      "block_id": "b0016",
+      "bbox": [
+        242,
+        1191,
+        709,
+        1250
+      ],
+      "strict_exact": false,
+      "raw_parent": "$Z(3,2)\\xrightarrow{逆时针旋转90^{\\circ}}Z'(-2,3)$\n",
+      "actual": "$Z(3,2)\\xrightarrow{逆时针旋转90^{\\circ}}Z'(-2,3)$\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "独立逆时针公式完整在text b0016，任务类型导致漏配；原图Z坐标及90度均正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            242,
+            1191,
+            709,
+            1250
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "$Z(3,2)\\xrightarrow{逆时针旋转90^{\\circ}}Z'(-2,3)$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$Z(3,2)\\xrightarrow{逆时针旋转90^{\\circ}}Z'(-2,3)$\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1276.jpg",
+    "sha256": "13ae3c78d760f1fa096a104e531b0de549f04cc2a12b523392573b2f01f7b6b4"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/evaluation-candidate-02.json",
+    "sha256": "500a94e0391ad63f9a7dd90456a1faff67542c9766464582fabe18663b99acbd"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 25,
+  "unverified_units": []
+}

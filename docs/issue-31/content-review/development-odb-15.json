@@ -1,0 +1,1438 @@
+{
+  "page": "development-odb-15",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "四条独立公式数值/运算符正确；t=4 为 GT 错误，原图和模型均为 t=0。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "edba1781fbabbf6e2bac075c755c8e52bf8e10d108dcfc57d5f6bf53e2abd2ef",
+    "sheet-01.jpg": "2b7e28cd3ae5becdb4b6499f2bc98e47fa396118cd8d14da11b6bcadc7599f3e"
+  },
+  "items": [
+    {
+      "id": "text:10",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          674.5571289062499,
+          544.4449462890625,
+          822.8796997070311,
+          544.4449462890625,
+          822.8796997070311,
+          583.535400390625,
+          674.5571289062499,
+          583.535400390625
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 10,
+        "text": "图 3-2-5",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "图 3-2-5",
+      "actual": "## 图 3-2-5",
+      "raw_parent": "## 图 3-2-5\n",
+      "bbox": [
+        674.5571289062499,
+        544.4449462890625,
+        822.8796997070311,
+        583.535400390625
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            672,
+            547,
+            824,
+            582
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 图 3-2-5\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 图 3-2-5\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          89.73980712890625,
+          607.7184448242188,
+          1405.8509521484375,
+          607.7184448242188,
+          1405.8509521484375,
+          758.6175537109375,
+          89.73980712890625,
+          758.6175537109375
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 1,
+        "text": "例题2：两人分别乘坐静止在湖面上的甲、乙两条小船，两船在湖面上相距 20 m.有一列水波沿甲船到乙船的方向传播，使每条小船每分钟上下浮动30次，当甲船位于波峰时，乙船刚好在波谷，此时两船间还有两个波峰.这列水波的传播速度是多少？",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "例题2：两人分别乘坐静止在湖面上的甲、乙两条小船，两船在湖面上相距 20 m.有一列水波沿甲船到乙船的方向传播，使每条小船每分钟上下浮动30次，当甲船位于波峰时，乙船刚好在波谷，此时两船间还有两个波峰.这列水波的传播速度是多少？",
+      "actual": "例题 2：两人分别乘坐静止在湖面上的甲、乙两条小船，两船在湖面上相距 20 m. 有一列水波沿甲船到乙船的方向传播，使每条小船每分钟上下浮动 30 次. 当甲船位于波峰时，乙船刚好在波谷，此时两船间还有两个波峰. 这列水波的传播速度是多少？",
+      "raw_parent": "例题 2：两人分别乘坐静止在湖面上的甲、乙两条小船，两船在湖面上相距 20 m. 有一列水波沿甲船到乙船的方向传播，使每条小船每分钟上下浮动 30 次. 当甲船位于波峰时，乙船刚好在波谷，此时两船间还有两个波峰. 这列水波的传播速度是多少？\n",
+      "bbox": [
+        89.73980712890625,
+        607.7184448242188,
+        1405.8509521484375,
+        758.6175537109375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "，",
+          "actual": ". "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            85,
+            610,
+            1407,
+            759
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 2：两人分别乘坐静止在湖面上的甲、乙两条小船，两船在湖面上相距 20 m. 有一列水波沿甲船到乙船的方向传播，使每条小船每分钟上下浮动 30 次. 当甲船位于波峰时，乙船刚好在波谷，此时两船间还有两个波峰. 这列水波的传播速度是多少？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 2：两人分别乘坐静止在湖面上的甲、乙两条小船，两船在湖面上相距 20 m. 有一列水波沿甲船到乙船的方向传播，使每条小船每分钟上下浮动 30 次. 当甲船位于波峰时，乙船刚好在波谷，此时两船间还有两个波峰. 这列水波的传播速度是多少？\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          91.03386688232422,
+          767.8237915039062,
+          1408.14697265625,
+          767.8237915039062,
+          1408.14697265625,
+          916.9984741210938,
+          91.03386688232422,
+          916.9984741210938
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 3,
+        "text": "分析：甲、乙两船位于波的同一个传播方向上，一个周期的时间波传播的距离为一个波长.靠近波源的甲船先振动，远离波源的乙船后振动，波峰到相邻波谷之间的距离为半个波长，连续三个波峰之间的长度为两个波长，利用波长和周期的关系求出波的传播速度.",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "分析：甲、乙两船位于波的同一个传播方向上，一个周期的时间波传播的距离为一个波长.靠近波源的甲船先振动，远离波源的乙船后振动，波峰到相邻波谷之间的距离为半个波长，连续三个波峰之间的长度为两个波长，利用波长和周期的关系求出波的传播速度.",
+      "actual": "分析：甲、乙两船位于波的同一个传播方向上，一个周期的时间波传播的距离为一个波长。靠近波源的甲船先振动，远离波源的乙船后振动，波峰到相邻波谷之间的距离为半个波长，连续三个波峰之间的长度为两个波长。利用波长和周期的关系求出波的传播速度。",
+      "raw_parent": "分析：甲、乙两船位于波的同一个传播方向上，一个周期的时间波传播的距离为一个波长。靠近波源的甲船先振动，远离波源的乙船后振动，波峰到相邻波谷之间的距离为半个波长，连续三个波峰之间的长度为两个波长。利用波长和周期的关系求出波的传播速度。\n",
+      "bbox": [
+        91.03386688232422,
+        767.8237915039062,
+        1408.14697265625,
+        916.9984741210938
+      ],
+      "differences": [
+        {
+          "reference": ".",
+          "actual": "。"
+        },
+        {
+          "reference": "，",
+          "actual": "。"
+        },
+        {
+          "reference": ".",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            87,
+            769,
+            1409,
+            916
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "分析：甲、乙两船位于波的同一个传播方向上，一个周期的时间波传播的距离为一个波长。靠近波源的甲船先振动，远离波源的乙船后振动，波峰到相邻波谷之间的距离为半个波长，连续三个波峰之间的长度为两个波长。利用波长和周期的关系求出波的传播速度。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "分析：甲、乙两船位于波的同一个传播方向上，一个周期的时间波传播的距离为一个波长。靠近波源的甲船先振动，远离波源的乙船后振动，波峰到相邻波谷之间的距离为半个波长，连续三个波峰之间的长度为两个波长。利用波长和周期的关系求出波的传播速度。\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          158.20690917968744,
+          926.0696411132816,
+          1258.3656426813343,
+          926.0696411132816,
+          1258.3656426813343,
+          981.6243000047086,
+          158.20690917968744,
+          981.6243000047086
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 9,
+        "text": "解：小船每分钟上下浮动30次，即每分钟完成30次全振动，故水波的周期",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": true,
+      "expected": "解：小船每分钟上下浮动30次，即每分钟完成30次全振动，故水波的周期",
+      "actual": "解：小船每分钟上下浮动30次，即每分钟完成30次全振动，故水波的周期",
+      "raw_parent": "解：小船每分钟上下浮动30次，即每分钟完成30次全振动，故水波的周期\n",
+      "bbox": [
+        158.20690917968744,
+        926.0696411132816,
+        1258.3656426813343,
+        981.6243000047086
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致且已核对原图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            147,
+            926,
+            1263,
+            970
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "解：小船每分钟上下浮动30次，即每分钟完成30次全振动，故水波的周期\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "解：小船每分钟上下浮动30次，即每分钟完成30次全振动，故水波的周期\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          161.9691415443234,
+          1071.8160231010138,
+          1055.0435247291196,
+          1071.8160231010138,
+          1055.0435247291196,
+          1117.277954371733,
+          161.9691415443234,
+          1117.277954371733
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 16,
+        "text": "甲船在波峰，乙船在波谷，两船间还有两个波峰，则水波波长",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": true,
+      "expected": "甲船在波峰，乙船在波谷，两船间还有两个波峰，则水波波长",
+      "actual": "甲船在波峰，乙船在波谷，两船间还有两个波峰，则水波波长",
+      "raw_parent": "甲船在波峰，乙船在波谷，两船间还有两个波峰，则水波波长\n",
+      "bbox": [
+        161.9691415443234,
+        1071.8160231010138,
+        1055.0435247291196,
+        1117.277954371733
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致且已核对原图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            153,
+            1072,
+            1061,
+            1115
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "甲船在波峰，乙船在波谷，两船间还有两个波峰，则水波波长\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "甲船在波峰，乙船在波谷，两船间还有两个波峰，则水波波长\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:14",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          157.92808098692618,
+          1217.2942031673156,
+          297.3446702171319,
+          1217.2942031673156,
+          297.3446702171319,
+          1259.7253390199867,
+          157.92808098692618,
+          1259.7253390199867
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 14,
+        "text": "因此波速",
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "因此波速",
+      "actual": "## 因此波速",
+      "raw_parent": "## 因此波速\n",
+      "bbox": [
+        157.92808098692618,
+        1217.2942031673156,
+        297.3446702171319,
+        1259.7253390199867
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            153,
+            1218,
+            302,
+            1259
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 因此波速\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 因此波速\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:8",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          69.35875586730192,
+          1528.4846734451598,
+          117.40343686737195,
+          1528.4846734451598,
+          117.40343686737195,
+          1729.9623679615825,
+          69.35875586730192,
+          1729.9623679615825
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 8,
+        "text": "资料活页",
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "资料活页",
+      "actual": "## 资料活页",
+      "raw_parent": "## 资料活页\n",
+      "bbox": [
+        69.35875586730192,
+        1528.4846734451598,
+        117.40343686737195,
+        1729.9623679615825
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            70,
+            1524,
+            123,
+            1727
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 资料活页\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 资料活页\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          692.1382446289062,
+          1445.8387451171875,
+          882.7244873046875,
+          1445.8387451171875,
+          882.7244873046875,
+          1490.932373046875,
+          692.1382446289062,
+          1490.932373046875
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 6,
+        "text": "次 声 波",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "次 声 波",
+      "actual": "## 次声波",
+      "raw_parent": "## 次声波\n",
+      "bbox": [
+        692.1382446289062,
+        1445.8387451171875,
+        882.7244873046875,
+        1490.932373046875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            690,
+            1446,
+            883,
+            1488
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 次声波\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 次声波\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          204.65118408203125,
+          1550.232421875,
+          1373.216552734375,
+          1550.232421875,
+          1373.216552734375,
+          1755.67919921875,
+          204.65118408203125,
+          1755.67919921875
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 0,
+        "text": "次声波是指频率小于 20Hz的声波，次声波不容易衰减，不易被水和空气吸收，由于其波长往往很长，因而能绕开某些大型障碍物，某些次声波甚至能绕地球二至三周.某些频率的次声波由于和人体器官的振动频率相近，容易和人体器官产生共振，对人体有很强的伤害性，严重时可致人死亡",
+        "attribute": {}
+      },
+      "block_id": "b0016",
+      "strict_exact": false,
+      "expected": "次声波是指频率小于 20Hz的声波，次声波不容易衰减，不易被水和空气吸收，由于其波长往往很长，因而能绕开某些大型障碍物，某些次声波甚至能绕地球二至三周.某些频率的次声波由于和人体器官的振动频率相近，容易和人体器官产生共振，对人体有很强的伤害性，严重时可致人死亡",
+      "actual": "次声波是指频率小于 20 Hz 的声波。次声波不容易衰减，不易被水和空气吸收。由于其波长往往很长，因而能绕开某些大型障碍物，某些次声波甚至能绕地球二至三周。某些频率的次声波由于和人体器官的振动频率相近，容易和人体器官产生共振，对人体有很强的伤害性，严重时可致人死亡。",
+      "raw_parent": "次声波是指频率小于 20 Hz 的声波。次声波不容易衰减，不易被水和空气吸收。由于其波长往往很长，因而能绕开某些大型障碍物，某些次声波甚至能绕地球二至三周。某些频率的次声波由于和人体器官的振动频率相近，容易和人体器官产生共振，对人体有很强的伤害性，严重时可致人死亡。\n",
+      "bbox": [
+        204.65118408203125,
+        1550.232421875,
+        1373.216552734375,
+        1755.67919921875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "，",
+          "actual": "。"
+        },
+        {
+          "reference": "，",
+          "actual": "。"
+        },
+        {
+          "reference": ".",
+          "actual": "。"
+        },
+        {
+          "reference": "",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            203,
+            1552,
+            1370,
+            1752
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "次声波是指频率小于 20 Hz 的声波。次声波不容易衰减，不易被水和空气吸收。由于其波长往往很长，因而能绕开某些大型障碍物，某些次声波甚至能绕地球二至三周。某些频率的次声波由于和人体器官的振动频率相近，容易和人体器官产生共振，对人体有很强的伤害性，严重时可致人死亡。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "次声波是指频率小于 20 Hz 的声波。次声波不容易衰减，不易被水和空气吸收。由于其波长往往很长，因而能绕开某些大型障碍物，某些次声波甚至能绕地球二至三周。某些频率的次声波由于和人体器官的振动频率相近，容易和人体器官产生共振，对人体有很强的伤害性，严重时可致人死亡。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          206.43297822739746,
+          1762.2193366197055,
+          1374.0828857421875,
+          1762.2193366197055,
+          1374.0828857421875,
+          2018.126220703125,
+          206.43297822739746,
+          2018.126220703125
+        ],
+        "ignore": false,
+        "order": 18,
+        "anno_id": 5,
+        "text": "次声波来源广. 在自然界中，海上风暴、火山爆发、大陨石落地、海啸、电闪雷鸣、波浪击岸、水中漩涡、空中湍流、龙卷风、磁暴、极光、地震等都可能伴有次声波的发生. 在人类活动中，诸如核爆炸、导弹飞行、火炮发射、轮船航行、汽车争驰，甚至像鼓风机、搅拌机、扩音喇叭等在发声的同时也都能产生次声波.",
+        "attribute": {}
+      },
+      "block_id": "b0017",
+      "strict_exact": false,
+      "expected": "次声波来源广. 在自然界中，海上风暴、火山爆发、大陨石落地、海啸、电闪雷鸣、波浪击岸、水中漩涡、空中湍流、龙卷风、磁暴、极光、地震等都可能伴有次声波的发生. 在人类活动中，诸如核爆炸、导弹飞行、火炮发射、轮船航行、汽车争驰，甚至像鼓风机、搅拌机、扩音喇叭等在发声的同时也都能产生次声波.",
+      "actual": "次声波来源广．在自然界中，海上风暴、火山爆发、大陨石落地、海啸、电闪雷鸣、波浪击岸、水中漩涡、空中湍流、龙卷风、磁暴、极光、地震等都可能伴有次声波的发生．在人类活动中，诸如核爆炸、导弹飞行、火炮发射、轮船航行、汽车争驰，甚至像鼓风机、搅拌机、扩音喇叭等在发声的同时也都能产生次声波．",
+      "raw_parent": "次声波来源广．在自然界中，海上风暴、火山爆发、大陨石落地、海啸、电闪雷鸣、波浪击岸、水中漩涡、空中湍流、龙卷风、磁暴、极光、地震等都可能伴有次声波的发生．在人类活动中，诸如核爆炸、导弹飞行、火炮发射、轮船航行、汽车争驰，甚至像鼓风机、搅拌机、扩音喇叭等在发声的同时也都能产生次声波．\n",
+      "bbox": [
+        206.43297822739746,
+        1762.2193366197055,
+        1374.0828857421875,
+        2018.126220703125
+      ],
+      "differences": [
+        {
+          "reference": ". ",
+          "actual": "．"
+        },
+        {
+          "reference": ". ",
+          "actual": "．"
+        },
+        {
+          "reference": ".",
+          "actual": "．"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0017",
+          "bbox": [
+            204,
+            1764,
+            1372,
+            2017
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "次声波来源广．在自然界中，海上风暴、火山爆发、大陨石落地、海啸、电闪雷鸣、波浪击岸、水中漩涡、空中湍流、龙卷风、磁暴、极光、地震等都可能伴有次声波的发生．在人类活动中，诸如核爆炸、导弹飞行、火炮发射、轮船航行、汽车争驰，甚至像鼓风机、搅拌机、扩音喇叭等在发声的同时也都能产生次声波．\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "次声波来源广．在自然界中，海上风暴、火山爆发、大陨石落地、海啸、电闪雷鸣、波浪击岸、水中漩涡、空中湍流、龙卷风、磁暴、极光、地震等都可能伴有次声波的发生．在人类活动中，诸如核爆炸、导弹飞行、火炮发射、轮船航行、汽车争驰，甚至像鼓风机、搅拌机、扩音喇叭等在发声的同时也都能产生次声波．\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          1348.4532164626216,
+          2117.39501953125,
+          1418.1885986472307,
+          2117.39501953125,
+          1418.1885986472307,
+          2148.96044921875,
+          1348.4532164626216,
+          2148.96044921875
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 7,
+        "text": "73",
+        "attribute": {}
+      },
+      "block_id": "b0018",
+      "strict_exact": false,
+      "expected": "73",
+      "actual": "## 73",
+      "raw_parent": "## 73\n",
+      "bbox": [
+        1348.4532164626216,
+        2117.39501953125,
+        1418.1885986472307,
+        2148.96044921875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0018",
+          "bbox": [
+            1359,
+            2117,
+            1409,
+            2151
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 73\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 73\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:17",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          149.63244479702212,
+          190.97539089273403,
+          790.5277820029099,
+          190.97539089273403,
+          790.5277820029099,
+          296.66723881901,
+          149.63244479702212,
+          296.66723881901
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 17,
+        "text": "取 t=4时刻的波源的平衡位置为坐标原点，\n则其波的图像如图 3-2-5所示.",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              156.85676574707009,
+              195.8590334786311,
+              785.2241210937498,
+              195.8590334786311,
+              785.2241210937498,
+              240.71497744101066,
+              156.85676574707009,
+              240.71497744101066
+            ],
+            "ignore": false,
+            "order": 3,
+            "anno_id": 2,
+            "text": "取 t=4时刻的波源的平衡位置为坐标原点，",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  156.0022364105364,
+                  202.66800851298888,
+                  195.99999999999977,
+                  202.66800851298888,
+                  195.99999999999977,
+                  234.66666666666686,
+                  156.0022364105364,
+                  234.66666666666686
+                ],
+                "text": "取"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  198.58544932403288,
+                  206.61236218615375,
+                  264.2476539188897,
+                  206.61236218615375,
+                  264.2476539188897,
+                  235.33957669640358,
+                  198.58544932403288,
+                  235.33957669640358
+                ],
+                "text": "t=4"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  263.9999999999998,
+                  202.89148367469556,
+                  777.333333333333,
+                  202.89148367469556,
+                  777.333333333333,
+                  234.66666666666663,
+                  263.9999999999998,
+                  234.66666666666663
+                ],
+                "text": "时刻的波源的平衡位置为坐标原点，"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              158.79617116480668,
+              252.72660322947286,
+              632.4959444469873,
+              252.72660322947286,
+              632.4959444469873,
+              292.4844142930742,
+              158.79617116480668,
+              292.4844142930742
+            ],
+            "ignore": false,
+            "order": 4,
+            "anno_id": 11,
+            "text": "则其波的图像如图 3-2-5所示.",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  165.33333333333283,
+                  255.67055884537683,
+                  429.3569684138545,
+                  255.67055884537683,
+                  429.3569684138545,
+                  289.10851632530455,
+                  165.33333333333283,
+                  289.10851632530455
+                ],
+                "text": "则其波的图像如图"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  431.0345208924248,
+                  258.42771256499134,
+                  552.7811355705638,
+                  258.42771256499134,
+                  552.7811355705638,
+                  288.8643662345261,
+                  431.0345208924248,
+                  288.8643662345261
+                ],
+                "text": "3-2-5"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  556.2930571478179,
+                  253.745150461986,
+                  635.8966128989088,
+                  253.745150461986,
+                  635.8966128989088,
+                  292.3762878117801,
+                  556.2930571478179,
+                  292.3762878117801
+                ],
+                "text": "所示."
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "取 t=4时刻的波源的平衡位置为坐标原点，\n则其波的图像如图 3-2-5所示.",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        149.63244479702212,
+        190.97539089273403,
+        790.5277820029099,
+        296.66723881901
+      ],
+      "differences": [
+        {
+          "reference": "取 t=4时刻的波源的平衡位置为坐标原点， 则其波的图像如图 3-2-5所示.",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图 t=0，GT 写 t=4；模型 b0002 正确为 0，下一句在 b0003。GT 合并而预测拆分，内容完整。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            154,
+            200,
+            785,
+            241
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "取 t=0 时刻的波源的平衡位置为坐标原点，\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "取 t=0 时刻的波源的平衡位置为坐标原点，\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0003",
+          "bbox": [
+            152,
+            252,
+            638,
+            295
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "则其波的图像如图 3-2-5 所示.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "则其波的图像如图 3-2-5 所示.\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:13",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          157.34161710150374,
+          148.9684133805613,
+          369.70651034366864,
+          148.9684133805613,
+          369.70651034366864,
+          183.87771089982107,
+          157.34161710150374,
+          183.87771089982107
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 13,
+        "latex": "$$\n\\lambda=T v=8. 5 \\; \\mathrm{m}.\n$$",
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "$$\n\\lambda=T v=8. 5 \\; \\mathrm{m}.\n$$",
+      "actual": null,
+      "raw_parent": null,
+      "bbox": [
+        157.34161710150374,
+        148.9684133805613,
+        369.70651034366864,
+        183.87771089982107
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "λ=Tv=8.5m 在公式区域 b0001 完整。机器公式配对未命中而作为 extra_text，不能据此判缺失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            152,
+            149,
+            376,
+            187
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "$$ \\lambda=T v=8.5\\mathrm{~m}. $$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$$ \\lambda=T v=8.5\\mathrm{~m}. $$\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:18",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          158.7274155191071,
+          983.1839873414851,
+          352.76727855158924,
+          983.1839873414851,
+          352.76727855158924,
+          1057.960324802783,
+          158.7274155191071,
+          1057.960324802783
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 18,
+        "latex": "$$\nT=\\frac{6 0} {3 0} \\mathrm{~ s}=2 \\mathrm{~ s}.\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "$$\nT=\\frac{6 0} {3 0} \\mathrm{~ s}=2 \\mathrm{~ s}.\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "T=\\frac{60}{30}\\text{s}=2\\text{s}.",
+        "resource": "assets/p0001-b0009.png",
+        "display": true
+      },
+      "raw_parent": "$$ T=\\frac{60}{30}\\text{s}=2\\text{s}. $$\n",
+      "bbox": [
+        158.7274155191071,
+        983.1839873414851,
+        352.76727855158924,
+        1057.960324802783
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            154,
+            984,
+            353,
+            1054
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ T=\\frac{60}{30}\\text{s}=2\\text{s}. $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "T=\\frac{60}{30}\\text{s}=2\\text{s}.",
+            "resource": "assets/p0001-b0009.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:15",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          153.99473593294908,
+          1127.0574467606914,
+          390.6287152408541,
+          1127.0574467606914,
+          390.6287152408541,
+          1204.673391973684,
+          153.99473593294908,
+          1204.673391973684
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 15,
+        "latex": "$$\n\\lambda=\\frac{2 0} {2. 5} \\mathrm{~ m}=8 \\mathrm{~ m}.\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "$$\n\\lambda=\\frac{2 0} {2. 5} \\mathrm{~ m}=8 \\mathrm{~ m}.\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "\\lambda=\\frac{20}{2.5}\\mathrm{m}=8\\mathrm{m}.",
+        "resource": "assets/p0001-b0011.png",
+        "display": true
+      },
+      "raw_parent": "$$ \\lambda=\\frac{20}{2.5}\\mathrm{m}=8\\mathrm{m}. $$\n",
+      "bbox": [
+        153.99473593294908,
+        1127.0574467606914,
+        390.6287152408541,
+        1204.673391973684
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            154,
+            1129,
+            393,
+            1202
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ \\lambda=\\frac{20}{2.5}\\mathrm{m}=8\\mathrm{m}. $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "\\lambda=\\frac{20}{2.5}\\mathrm{m}=8\\mathrm{m}.",
+            "resource": "assets/p0001-b0011.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:12",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          158.72741551910715,
+          1278.5031935177508,
+          359.3930299722107,
+          1278.5031935177508,
+          359.3930299722107,
+          1345.7072436411954,
+          158.72741551910715,
+          1345.7072436411954
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 12,
+        "latex": "$$\nv=\\frac{\\lambda} {T}=4 \\; \\mathrm{~ m / s}.\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "$$\nv=\\frac{\\lambda} {T}=4 \\; \\mathrm{~ m / s}.\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "v=\\frac{\\lambda}{T}=4\\ m/s.",
+        "resource": "assets/p0001-b0013.png",
+        "display": true
+      },
+      "raw_parent": "$$ v=\\frac{\\lambda}{T}=4\\ m/s. $$\n",
+      "bbox": [
+        158.72741551910715,
+        1278.5031935177508,
+        359.3930299722107,
+        1345.7072436411954
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图全部字词和数值完整，差异为标题、空格/标点、单位字体。60/30=2s、20/2.5=8m、λ/T=4m/s 逐项一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            152,
+            1277,
+            361,
+            1346
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ v=\\frac{\\lambda}{T}=4\\ m/s. $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "v=\\frac{\\lambda}{T}=4\\ m/s.",
+            "resource": "assets/p0001-b0013.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0001",
+      "kind": "extra",
+      "block_id": "b0001",
+      "bbox": [
+        152,
+        149,
+        376,
+        187
+      ],
+      "strict_exact": false,
+      "raw_parent": "$$ \\lambda=T v=8.5\\mathrm{~m}. $$\n",
+      "actual": "$$ \\lambda=T v=8.5\\mathrm{~m}. $$\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "λ=Tv=8.5m 在公式区域 b0001 完整。机器公式配对未命中而作为 extra_text，不能据此判缺失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            152,
+            149,
+            376,
+            187
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "$$ \\lambda=T v=8.5\\mathrm{~m}. $$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$$ \\lambda=T v=8.5\\mathrm{~m}. $$\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0002",
+      "kind": "extra",
+      "block_id": "b0002",
+      "bbox": [
+        154,
+        200,
+        785,
+        241
+      ],
+      "strict_exact": false,
+      "raw_parent": "取 t=0 时刻的波源的平衡位置为坐标原点，\n",
+      "actual": "取 t=0 时刻的波源的平衡位置为坐标原点，\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图 t=0，GT 写 t=4；模型 b0002 正确为 0，下一句在 b0003。GT 合并而预测拆分，内容完整。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            154,
+            200,
+            785,
+            241
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "取 t=0 时刻的波源的平衡位置为坐标原点，\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "取 t=0 时刻的波源的平衡位置为坐标原点，\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0003",
+      "kind": "extra",
+      "block_id": "b0003",
+      "bbox": [
+        152,
+        252,
+        638,
+        295
+      ],
+      "strict_exact": false,
+      "raw_parent": "则其波的图像如图 3-2-5 所示.\n",
+      "actual": "则其波的图像如图 3-2-5 所示.\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图 t=0，GT 写 t=4；模型 b0002 正确为 0，下一句在 b0003。GT 合并而预测拆分，内容完整。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            152,
+            252,
+            638,
+            295
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "则其波的图像如图 3-2-5 所示.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "则其波的图像如图 3-2-5 所示.\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+    "sha256": "e3ad10fe4c1a2cd4add55374f33009bbc58527bfc84facdd2084eaf0733d46e8"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-15.json",
+    "sha256": "8e7ca76c02b2551c6a8dcf96374bd25de14a7dae983ec03c4f94ee16d42e977d"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 19,
+  "unverified_units": []
+}

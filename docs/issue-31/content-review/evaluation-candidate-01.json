@@ -1,0 +1,2418 @@
+{
+  "page": "evaluation-candidate-01",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "本页严格差异主要来自拆分与表示；确认GT C项1:4误写14，logo漏文本配对保留。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "fa70f6dc4724124f1faee19a0a789b1a578fee544a7185d1b2b0773e0f2ed116",
+    "sheet-01.jpg": "9f03dd3ede218c17e0a3da8c09de429ebb6903ce5ff7d8e0f5aec666b5adce68"
+  },
+  "items": [
+    {
+      "id": "text:15",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          174.16821401263732,
+          128.4168218708121,
+          1243.7414170354377,
+          128.4168218708121,
+          1243.7414170354377,
+          431.8596297623917,
+          174.16821401263732,
+          431.8596297623917
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 15,
+        "text": "（2）已知线段 a=2 ，线段 b=8 ，线段 c 是 a 和 b 的比例中项，则 c 等于（     ）\nA.2 B. 4 C. $ \\pm4 $ D. 8\n（2017 安徽合肥期末）",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              200.82298278808594,
+              147.4940185546875,
+              1209.1727294921875,
+              147.4940185546875,
+              1209.1727294921875,
+              262.9529113769531,
+              200.82298278808594,
+              262.9529113769531
+            ],
+            "ignore": false,
+            "order": 2,
+            "anno_id": 5,
+            "text": "（2）已知线段 a=2 ，线段 b=8 ，线段 c 是 a 和 b 的比例中项，则 c 等于（     ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  221.333333333333,
+                  149.59955122959764,
+                  461.3333333333331,
+                  149.59955122959764,
+                  461.3333333333331,
+                  205.0716031410949,
+                  221.333333333333,
+                  205.0716031410949
+                ],
+                "text": "（2）已知线段"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  466.2019186910856,
+                  163.61595233449475,
+                  531.3162211473477,
+                  163.61595233449475,
+                  531.3162211473477,
+                  205.3298023455377,
+                  466.2019186910856,
+                  205.3298023455377
+                ],
+                "text": "a=2"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  533.333333333333,
+                  165.59506352557173,
+                  643.9999999999998,
+                  165.59506352557173,
+                  643.9999999999998,
+                  212.26958367428335,
+                  533.333333333333,
+                  212.26958367428335
+                ],
+                "text": "，线段"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  648.3184833734439,
+                  166.66818526213206,
+                  714.4501968055852,
+                  166.66818526213206,
+                  714.4501968055852,
+                  209.3994462490541,
+                  648.3184833734439,
+                  209.3994462490541
+                ],
+                "text": "b=8"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  715.9999999999995,
+                  165.59506352557173,
+                  1204.2526994404823,
+                  165.59506352557173,
+                  1204.2526994404823,
+                  215.75114501079543,
+                  715.9999999999995,
+                  215.75114501079543
+                ],
+                "text": "，线段 c 是 a 和 b 的比例中项，"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  209.3333333333328,
+                  210.66666666666708,
+                  497.7499383550894,
+                  210.66666666666708,
+                  497.7499383550894,
+                  263.1606524966544,
+                  209.3333333333328,
+                  263.1606524966544
+                ],
+                "text": "则 c 等于（     ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              204.23110961914062,
+              272.080810546875,
+              1192.9747314453125,
+              272.080810546875,
+              1192.9747314453125,
+              330.5876159667969,
+              204.23110961914062,
+              330.5876159667969
+            ],
+            "ignore": false,
+            "order": 3,
+            "anno_id": 14,
+            "text": "A.2 B. 4 C. $ \\pm4 $ D. 8",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  203.99999999999932,
+                  275.29125767406947,
+                  285.6103209249527,
+                  275.29125767406947,
+                  285.6103209249527,
+                  325.5365158463618,
+                  203.99999999999932,
+                  325.5365158463618
+                ],
+                "text": "A.2"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  462.6452691770239,
+                  282.6767667044596,
+                  538.5047797077222,
+                  282.6767667044596,
+                  538.5047797077222,
+                  321.51683609617714,
+                  462.6452691770239,
+                  321.51683609617714
+                ],
+                "text": "B. 4"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  718.7469767286614,
+                  283.8905188729507,
+                  758.1939222046245,
+                  283.8905188729507,
+                  758.1939222046245,
+                  322.7305882646683,
+                  718.7469767286614,
+                  322.7305882646683
+                ],
+                "text": "C."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  762.2464250694685,
+                  290.9319199040299,
+                  811.855993181215,
+                  290.9319199040299,
+                  811.855993181215,
+                  326.69695737994005,
+                  762.2464250694685,
+                  326.69695737994005
+                ],
+                "latex": "$ \\pm4 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  969.3867995220887,
+                  291.1730318838978,
+                  1040.3913013788222,
+                  291.1730318838978,
+                  1040.3913013788222,
+                  328.19247302287863,
+                  969.3867995220887,
+                  328.19247302287863
+                ],
+                "text": "D. 8"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              904.8732393090662,
+              342.408623770688,
+              1213.4072926629715,
+              342.408623770688,
+              1213.4072926629715,
+              391.41764307600147,
+              904.8732393090662,
+              391.41764307600147
+            ],
+            "ignore": false,
+            "order": 4,
+            "anno_id": 13,
+            "text": "（2017 安徽合肥期末）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  910.0420756592642,
+                  346.04207565926447,
+                  1213.012934572827,
+                  346.04207565926447,
+                  1213.012934572827,
+                  383.0550102320917,
+                  910.0420756592642,
+                  383.0550102320917
+                ],
+                "text": "（2017 安徽合肥期末）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "（2）已知线段 a=2 ，线段 b=8 ，线段 c 是 a 和 b 的比例中项，则 c 等于（     ）\nA.2 B. 4 C. $ \\pm4 $ D. 8\n（2017 安徽合肥期末）",
+      "actual": "（2）已知线段 $a=2$，线段 $b=8$，线段 $c$ 是 $a$ 和 $b$ 的比例中项，则 $c$ 等于（） A. 2 B. 4 C. $\\pm 4$ D. 8",
+      "raw_parent": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+      "bbox": [
+        174.16821401263732,
+        128.4168218708121,
+        1243.7414170354377,
+        431.8596297623917
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " （2017 安徽合肥期末）",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "GT把题目和右下来源合成一项，来源另在b0002/b0004完整输出；式子、各选项和单位均与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            195,
+            144,
+            1211,
+            336
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0002",
+          "bbox": [
+            905,
+            341,
+            1214,
+            389
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2017 安徽合肥期末)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2017 安徽合肥期末)\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          172.91431811225908,
+          468.2226108733664,
+          1255.026480138844,
+          468.2226108733664,
+          1255.026480138844,
+          766.6498351634324,
+          172.91431811225908,
+          766.6498351634324
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 16,
+        "text": "（3）一本书的宽与长之比是黄金比，书的宽为 14cm ，则它的长为（    ） cm.\nA. $ 7\\sqrt{5}-7 $ B. $ 7\\sqrt{5}+7 $ C. $ 21-7\\sqrt{5} $ D. $ 7\\sqrt{5}-21 $\n（2018 陕西西安期中）",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              195.72059631347656,
+              486.4430236816406,
+              1241.8946533203125,
+              486.4430236816406,
+              1241.8946533203125,
+              599.7443237304688,
+              195.72059631347656,
+              599.7443237304688
+            ],
+            "ignore": false,
+            "order": 6,
+            "anno_id": 4,
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为 14cm ，则它的长为（    ） cm.",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  218.66666666666634,
+                  492.8608384493797,
+                  994.2267303326933,
+                  492.8608384493797,
+                  994.2267303326933,
+                  543.8421153602485,
+                  218.66666666666634,
+                  543.8421153602485
+                ],
+                "text": "（3）一本书的宽与长之比是黄金比，书的宽为"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  1003.0326217491087,
+                  497.97817113694396,
+                  1084.6020658247999,
+                  497.97817113694396,
+                  1084.6020658247999,
+                  542.2587264923192,
+                  1003.0326217491087,
+                  542.2587264923192
+                ],
+                "text": "14cm"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1088.0978991423294,
+                  497.97817113694396,
+                  1234.9228984785736,
+                  497.97817113694396,
+                  1234.9228984785736,
+                  541.0934487198093,
+                  1088.0978991423294,
+                  541.0934487198093
+                ],
+                "text": "，则它的"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  205.333333333333,
+                  548.7087423259317,
+                  422.73677433567406,
+                  548.7087423259317,
+                  422.73677433567406,
+                  599.4170697765591,
+                  205.333333333333,
+                  599.4170697765591
+                ],
+                "text": "长为（    ）"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  433.93478025739205,
+                  563.9541023140814,
+                  490.9832466079177,
+                  563.9541023140814,
+                  490.9832466079177,
+                  595.7695931634129,
+                  433.93478025739205,
+                  595.7695931634129
+                ],
+                "text": "cm."
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              199.41953306909073,
+              607.5341434628518,
+              1165.1199816533358,
+              607.5341434628518,
+              1165.1199816533358,
+              671.0231002901897,
+              199.41953306909073,
+              671.0231002901897
+            ],
+            "ignore": false,
+            "order": 7,
+            "anno_id": 8,
+            "text": "A. $ 7\\sqrt{5}-7 $ B. $ 7\\sqrt{5}+7 $ C. $ 21-7\\sqrt{5} $ D. $ 7\\sqrt{5}-21 $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  203.99999999999986,
+                  610.6666666666669,
+                  248.24406423794937,
+                  610.6666666666669,
+                  248.24406423794937,
+                  658.6666666666669,
+                  203.99999999999986,
+                  658.6666666666669
+                ],
+                "text": "A."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  249.07652622561042,
+                  613.7676581506457,
+                  373.6773019481364,
+                  613.7676581506457,
+                  373.6773019481364,
+                  659.916093603433,
+                  249.07652622561042,
+                  659.916093603433
+                ],
+                "latex": "$ 7\\sqrt{5}-7 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  462.66666666666663,
+                  613.3333333333333,
+                  504,
+                  613.3333333333333,
+                  504,
+                  662.6666666666666,
+                  462.66666666666663,
+                  662.6666666666666
+                ],
+                "text": "B."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  507.4611326589589,
+                  614.1277993256257,
+                  634.6666666666665,
+                  614.1277993256257,
+                  634.6666666666665,
+                  666.6666666666666,
+                  507.4611326589589,
+                  666.6666666666666
+                ],
+                "latex": "$ 7\\sqrt{5}+7 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  723.9999999999999,
+                  621.3333333333333,
+                  762.9119239378872,
+                  621.3333333333333,
+                  762.9119239378872,
+                  660,
+                  723.9999999999999,
+                  660
+                ],
+                "text": "C."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  770.553846842108,
+                  618.3825016959242,
+                  902.0768878825521,
+                  618.3825016959242,
+                  902.0768878825521,
+                  666.8383589213511,
+                  770.553846842108,
+                  666.8383589213511
+                ],
+                "latex": "$ 21-7\\sqrt{5} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  970.6666666666665,
+                  618.6666666666666,
+                  1018.8592957246366,
+                  618.6666666666666,
+                  1018.8592957246366,
+                  663.8421153602485,
+                  970.6666666666665,
+                  663.8421153602485
+                ],
+                "text": "D."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  1023.216530946119,
+                  617.2287908096047,
+                  1154.739571986563,
+                  617.2287908096047,
+                  1154.739571986563,
+                  665.6846480350314,
+                  1023.216530946119,
+                  665.6846480350314
+                ],
+                "latex": "$ 7\\sqrt{5}-21 $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              908.936471648288,
+              674.3646243337339,
+              1234.1781452199139,
+              674.3646243337339,
+              1234.1781452199139,
+              722.2598022911993,
+              908.936471648288,
+              722.2598022911993
+            ],
+            "ignore": false,
+            "order": 8,
+            "anno_id": 12,
+            "text": "（2018 陕西西安期中）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  914.2783231012415,
+                  680.7087423259312,
+                  1219.0550102320915,
+                  680.7087423259312,
+                  1219.0550102320915,
+                  716.388343565425,
+                  914.2783231012415,
+                  716.388343565425
+                ],
+                "text": "（2018 陕西西安期中）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "（3）一本书的宽与长之比是黄金比，书的宽为 14cm ，则它的长为（    ） cm.\nA. $ 7\\sqrt{5}-7 $ B. $ 7\\sqrt{5}+7 $ C. $ 21-7\\sqrt{5} $ D. $ 7\\sqrt{5}-21 $\n（2018 陕西西安期中）",
+      "actual": "（3）一本书的宽与长之比是黄金比，书的宽为 $14 \\, cm$，则它的长为（）cm. A. $7\\sqrt{5}-7$ B. $7\\sqrt{5}+7$ C. $21-7\\sqrt{5}$ D. $7\\sqrt{5}-21$",
+      "raw_parent": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+      "bbox": [
+        172.91431811225908,
+        468.2226108733664,
+        1255.026480138844,
+        766.6498351634324
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " \\, "
+        },
+        {
+          "reference": " ",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " （2018 陕西西安期中）",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "GT把题目和右下来源合成一项，来源另在b0002/b0004完整输出；式子、各选项和单位均与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0004",
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2018 陕西西安期中)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2018 陕西西安期中)\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          61.68585262591924,
+          833.9849824358864,
+          135.31863884294322,
+          833.9849824358864,
+          135.31863884294322,
+          874.2680343668206,
+          61.68585262591924,
+          874.2680343668206
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 11,
+        "text": "例3",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": true,
+      "expected": "例3",
+      "actual": "例3",
+      "raw_parent": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+      "bbox": [
+        61.68585262591924,
+        833.9849824358864,
+        135.31863884294322,
+        874.2680343668206
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "例3与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            36,
+            819,
+            1238,
+            1016
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          189.73813890162867,
+          824.0191650390627,
+          1236.5473285191965,
+          824.0191650390627,
+          1236.5473285191965,
+          1019.8377622337239,
+          189.73813890162867,
+          1019.8377622337239
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 1,
+        "text": "如图，在 $\\bigtriangleup$ ABC中，点 D,E分别在 AB,AC上，且 $ DE\\parallel BC， $ AD=1 ， BD=2 ，那么 $ \\frac{AE}{AC} $的值为（    ）",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "如图，在 $\\bigtriangleup$ ABC中，点 D,E分别在 AB,AC上，且 $ DE\\parallel BC， $ AD=1 ， BD=2 ，那么 $ \\frac{AE}{AC} $的值为（    ）",
+      "actual": " 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）",
+      "raw_parent": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+      "bbox": [
+        189.73813890162867,
+        824.0191650390627,
+        1236.5473285191965,
+        1019.8377622337239
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " $\\bigtriangleup$ ",
+          "actual": "△"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": ",",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": ",",
+          "actual": "，"
+        },
+        {
+          "reference": " $ ",
+          "actual": ""
+        },
+        {
+          "reference": "\\parallel ",
+          "actual": "∥"
+        },
+        {
+          "reference": " $ ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "三角形、DE平行BC、AD=1/BD=2和AE/AC均完整；Unicode/LaTeX及空白表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            36,
+            819,
+            1238,
+            1016
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:10",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          186.05731723328148,
+          1247.9056781587055,
+          1143.1687730314509,
+          1247.9056781587055,
+          1143.1687730314509,
+          1300.020647479653,
+          186.05731723328148,
+          1300.020647479653
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 10,
+        "text": "A 1:2    B.1:3    C.14    D.2:3",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "A 1:2    B.1:3    C.14    D.2:3",
+      "actual": "A. 1:2 B. 1:3 C. 1:4 D. 2:3",
+      "raw_parent": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+      "bbox": [
+        186.05731723328148,
+        1247.9056781587055,
+        1143.1687730314509,
+        1300.020647479653
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "."
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": ":"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图C项为1:4，GT误写14；预测1:4与图一致，A项GT还漏句点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            186,
+            1245,
+            1138,
+            1304
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          917.6713096235052,
+          1311.0449679129301,
+          1239.3810240855075,
+          1311.0449679129301,
+          1239.3810240855075,
+          1350.1311949036408,
+          917.6713096235052,
+          1350.1311949036408
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 0,
+        "text": "（2018 北京房山期中）",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "（2018 北京房山期中）",
+      "actual": "## (2018 北京房山期中)",
+      "raw_parent": "## (2018 北京房山期中)\n",
+      "bbox": [
+        917.6713096235052,
+        1311.0449679129301,
+        1239.3810240855075,
+        1350.1311949036408
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "## ("
+        },
+        {
+          "reference": "）",
+          "actual": ")"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "来源年份、标题和字词完整，只有括号编码与Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            921,
+            1305,
+            1240,
+            1352
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2018 北京房山期中)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2018 北京房山期中)\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          167.0384887279425,
+          1468.4042480000012,
+          738.1306428049959,
+          1468.4042480000012,
+          738.1306428049959,
+          1529.3553170474847,
+          167.0384887279425,
+          1529.3553170474847
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 3,
+        "text": "模块 2 相似三角形的性质",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "模块 2 相似三角形的性质",
+      "actual": "## 模块 2 相似三角形的性质",
+      "raw_parent": "## 模块 2 相似三角形的性质\n",
+      "bbox": [
+        167.0384887279425,
+        1468.4042480000012,
+        738.1306428049959,
+        1529.3553170474847
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "来源年份、标题和字词完整，只有括号编码与Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            58,
+            1461,
+            743,
+            1538
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 模块 2 相似三角形的性质\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 模块 2 相似三角形的性质\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          59.2826424822574,
+          1636.1528159182092,
+          238.36982356663538,
+          1636.1528159182092,
+          238.36982356663538,
+          1688.5130510657605,
+          59.2826424822574,
+          1688.5130510657605
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 7,
+        "text": "知识精讲",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "知识精讲",
+      "actual": "## 知识精讲",
+      "raw_parent": "## 知识精讲\n",
+      "bbox": [
+        59.2826424822574,
+        1636.1528159182092,
+        238.36982356663538,
+        1688.5130510657605
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "来源年份、标题和字词完整，只有括号编码与Markdown标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            59,
+            1631,
+            248,
+            1689
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 知识精讲\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 知识精讲\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          1411.397025844191,
+          217.85121030889343,
+          1569.1395499981263,
+          217.85121030889343,
+          1569.1395499981263,
+          273.59991128918386,
+          1411.397025844191,
+          273.59991128918386
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 2,
+        "text": "不二错",
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "不二错",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        1411.397025844191,
+        217.85121030889343,
+        1569.1395499981263,
+        273.59991128918386
+      ],
+      "differences": [
+        {
+          "reference": "不二错",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment"
+        ],
+        "reason": "不二错图标未输出为text，独立文本参考漏配；不得据此删除原分母，图片资源需另看任务归属。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "table:9",
+      "kind": "table",
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          25.84246634309701,
+          1742.922944981364,
+          1275.5047492392443,
+          1742.922944981364,
+          1275.5047492392443,
+          2107.9302115574965,
+          25.84246634309701,
+          2107.9302115574965
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 9,
+        "html": "<table border=\"1\"><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形：形状相同的图形叫做相似图形 .</td><td>两个正方形是相似图形 .</td></tr><tr><td>相似多边形：两个边数相同的多边形，如果它们的角分别相等，边成比例，则这两个多边形叫做相似多边形 .</td><td>放大后的图形和放大前的图形是相似多边形 .</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "<table border=\"1\"><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形：形状相同的图形叫做相似图形 .</td><td>两个正方形是相似图形 .</td></tr><tr><td>相似多边形：两个边数相同的多边形，如果它们的角分别相等，边成比例，则这两个多边形叫做相似多边形 .</td><td>放大后的图形和放大前的图形是相似多边形 .</td></tr></table>",
+      "actual": {
+        "format": "html",
+        "text": "<table><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>",
+        "resource": "assets/p0001-b0011.png",
+        "table": {
+          "rows": 3,
+          "columns": 2,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "定义",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "示例剖析",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似图形:形状相同的图形叫做相似图形.",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "两个正方形是相似图形.",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "放大后的图形和放大前的图形是相似多边形.",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "raw_parent": "<table border=1><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+      "bbox": [
+        25.84246634309701,
+        1742.922944981364,
+        1275.5047492392443,
+        2107.9302115574965
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "表格全部6格内容和位置与图一致；4格差异为标点全半角及句点空格。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            26,
+            1746,
+            1267,
+            2098
+          ],
+          "type": "table",
+          "status": "ok",
+          "raw_output": "<table border=1><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+          "final_content": {
+            "format": "html",
+            "text": "<table><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>",
+            "resource": "assets/p0001-b0011.png",
+            "table": {
+              "rows": 3,
+              "columns": 2,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "定义",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "示例剖析",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "相似图形:形状相同的图形叫做相似图形.",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "两个正方形是相似图形.",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "放大后的图形和放大前的图形是相似多边形.",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项",
+      "final_export_review": {
+        "structured": true,
+        "classification": [],
+        "reason": "最终结构化表格存在；逐格内容另列。",
+        "reviewed": true
+      },
+      "cell_reviews": [
+        {
+          "id": "table:9:r0:c0",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "定义",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "定义",
+              "column": 0
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "定义",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:9:r0:c1",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "示例剖析",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "示例剖析",
+              "column": 1
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "示例剖析",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:9:r1:c0",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "相似图形：形状相同的图形叫做相似图形 .",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似图形:形状相同的图形叫做相似图形.",
+              "column": 0
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似图形:形状相同的图形叫做相似图形.",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:9:r1:c1",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "两个正方形是相似图形 .",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "两个正方形是相似图形.",
+              "column": 1
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "两个正方形是相似图形.",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:9:r2:c0",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "相似多边形：两个边数相同的多边形，如果它们的角分别相等，边成比例，则这两个多边形叫做相似多边形 .",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.",
+              "column": 0
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 2,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:9:r2:c1",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "放大后的图形和放大前的图形是相似多边形 .",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "放大后的图形和放大前的图形是相似多边形.",
+              "column": 1
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 2,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "放大后的图形和放大前的图形是相似多边形.",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        }
+      ]
+    },
+    {
+      "id": "inline:15:10",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 15,
+        "block_id": "b0001",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ \\pm4 $",
+        "actual_range": [
+          72,
+          79
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              8,
+              13
+            ],
+            "latex": "a=2"
+          },
+          {
+            "range": [
+              17,
+              22
+            ],
+            "latex": "b=8"
+          },
+          {
+            "range": [
+              26,
+              29
+            ],
+            "latex": "c"
+          },
+          {
+            "range": [
+              32,
+              35
+            ],
+            "latex": "a"
+          },
+          {
+            "range": [
+              38,
+              41
+            ],
+            "latex": "b"
+          },
+          {
+            "range": [
+              50,
+              53
+            ],
+            "latex": "c"
+          },
+          {
+            "range": [
+              72,
+              79
+            ],
+            "latex": "\\pm 4"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐一核对±4、7√5−7、7√5+7、21−7√5、7√5−21均与原图对应选项一致。",
+        "reviewed": true
+      },
+      "expected": "$ \\pm4 $",
+      "parent_item_id": "text:15",
+      "bbox": [
+        174.16821401263732,
+        128.4168218708121,
+        1243.7414170354377,
+        431.8596297623917
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            195,
+            144,
+            1211,
+            336
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0002",
+          "bbox": [
+            905,
+            341,
+            1214,
+            389
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2017 安徽合肥期末)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2017 安徽合肥期末)\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:11",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0003",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ 7\\sqrt{5}-7 $",
+        "actual_range": [
+          47,
+          60
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              22,
+              32
+            ],
+            "latex": "14 \\, cm"
+          },
+          {
+            "range": [
+              47,
+              60
+            ],
+            "latex": "7\\sqrt{5}-7"
+          },
+          {
+            "range": [
+              64,
+              77
+            ],
+            "latex": "7\\sqrt{5}+7"
+          },
+          {
+            "range": [
+              81,
+              95
+            ],
+            "latex": "21-7\\sqrt{5}"
+          },
+          {
+            "range": [
+              99,
+              113
+            ],
+            "latex": "7\\sqrt{5}-21"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐一核对±4、7√5−7、7√5+7、21−7√5、7√5−21均与原图对应选项一致。",
+        "reviewed": true
+      },
+      "expected": "$ 7\\sqrt{5}-7 $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        172.91431811225908,
+        468.2226108733664,
+        1255.026480138844,
+        766.6498351634324
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0004",
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2018 陕西西安期中)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2018 陕西西安期中)\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:12",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0003",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ 7\\sqrt{5}+7 $",
+        "actual_range": [
+          64,
+          77
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              22,
+              32
+            ],
+            "latex": "14 \\, cm"
+          },
+          {
+            "range": [
+              47,
+              60
+            ],
+            "latex": "7\\sqrt{5}-7"
+          },
+          {
+            "range": [
+              64,
+              77
+            ],
+            "latex": "7\\sqrt{5}+7"
+          },
+          {
+            "range": [
+              81,
+              95
+            ],
+            "latex": "21-7\\sqrt{5}"
+          },
+          {
+            "range": [
+              99,
+              113
+            ],
+            "latex": "7\\sqrt{5}-21"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐一核对±4、7√5−7、7√5+7、21−7√5、7√5−21均与原图对应选项一致。",
+        "reviewed": true
+      },
+      "expected": "$ 7\\sqrt{5}+7 $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        172.91431811225908,
+        468.2226108733664,
+        1255.026480138844,
+        766.6498351634324
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0004",
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2018 陕西西安期中)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2018 陕西西安期中)\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:13",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0003",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ 21-7\\sqrt{5} $",
+        "actual_range": [
+          81,
+          95
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              22,
+              32
+            ],
+            "latex": "14 \\, cm"
+          },
+          {
+            "range": [
+              47,
+              60
+            ],
+            "latex": "7\\sqrt{5}-7"
+          },
+          {
+            "range": [
+              64,
+              77
+            ],
+            "latex": "7\\sqrt{5}+7"
+          },
+          {
+            "range": [
+              81,
+              95
+            ],
+            "latex": "21-7\\sqrt{5}"
+          },
+          {
+            "range": [
+              99,
+              113
+            ],
+            "latex": "7\\sqrt{5}-21"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐一核对±4、7√5−7、7√5+7、21−7√5、7√5−21均与原图对应选项一致。",
+        "reviewed": true
+      },
+      "expected": "$ 21-7\\sqrt{5} $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        172.91431811225908,
+        468.2226108733664,
+        1255.026480138844,
+        766.6498351634324
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0004",
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2018 陕西西安期中)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2018 陕西西安期中)\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:16:14",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 16,
+        "block_id": "b0003",
+        "status": "ok",
+        "exact": true,
+        "reference": "$ 7\\sqrt{5}-21 $",
+        "actual_range": [
+          99,
+          113
+        ],
+        "observed_parent_formulas": [
+          {
+            "range": [
+              22,
+              32
+            ],
+            "latex": "14 \\, cm"
+          },
+          {
+            "range": [
+              47,
+              60
+            ],
+            "latex": "7\\sqrt{5}-7"
+          },
+          {
+            "range": [
+              64,
+              77
+            ],
+            "latex": "7\\sqrt{5}+7"
+          },
+          {
+            "range": [
+              81,
+              95
+            ],
+            "latex": "21-7\\sqrt{5}"
+          },
+          {
+            "range": [
+              99,
+              113
+            ],
+            "latex": "7\\sqrt{5}-21"
+          }
+        ],
+        "classification": "strict_match"
+      },
+      "strict_exact": true,
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐一核对±4、7√5−7、7√5+7、21−7√5、7√5−21均与原图对应选项一致。",
+        "reviewed": true
+      },
+      "expected": "$ 7\\sqrt{5}-21 $",
+      "parent_item_id": "text:16",
+      "bbox": [
+        172.91431811225908,
+        468.2226108733664,
+        1255.026480138844,
+        766.6498351634324
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0004",
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2018 陕西西安期中)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2018 陕西西安期中)\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0002",
+      "kind": "extra",
+      "block_id": "b0002",
+      "bbox": [
+        905,
+        341,
+        1214,
+        389
+      ],
+      "strict_exact": false,
+      "raw_parent": "## (2017 安徽合肥期末)\n",
+      "actual": "## (2017 安徽合肥期末)\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "GT把题目和右下来源合成一项，来源另在b0002/b0004完整输出；式子、各选项和单位均与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            905,
+            341,
+            1214,
+            389
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2017 安徽合肥期末)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2017 安徽合肥期末)\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0004",
+      "kind": "extra",
+      "block_id": "b0004",
+      "bbox": [
+        910,
+        675,
+        1226,
+        721
+      ],
+      "strict_exact": false,
+      "raw_parent": "## (2018 陕西西安期中)\n",
+      "actual": "## (2018 陕西西安期中)\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "GT把题目和右下来源合成一项，来源另在b0002/b0004完整输出；式子、各选项和单位均与图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2018 陕西西安期中)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2018 陕西西安期中)\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+    "sha256": "d737d2e2ffac3874557a726d43ccc325ed36a3429bc72c71a7d0c2040d5641e2"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/evaluation-candidate-01.json",
+    "sha256": "7c37cf76e9091fe515dd99ec8af50dc0be5d4a84a5a8cb0163d7707e3ac0b9fe"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 17,
+  "unverified_units": []
+}

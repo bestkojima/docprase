@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>#31 内容差异逐项复核</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;margin:24px auto;padding:0 24px;max-width:1400px;color:#17232d;background:#f8fafc}
+header{position:sticky;top:0;background:#f8fafc;padding:12px 0;border-bottom:1px solid #bbb;z-index:1}h1{font-size:24px;margin:0}
+input,select{font:inherit;padding:6px;margin:6px 8px 6px 0;max-width:90%}details{border:1px solid #cbd5e1;border-radius:6px;margin:8px 0;padding:8px;background:white}
+summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;background:#f1f5f9;padding:12px;font-size:14px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tag{font-size:13px;padding:2px 6px;border-radius:4px;background:#e2e8f0;margin:0 5px}
+.transcription_error,.coverage_error,.structure_error{background:#ffe4e6}.unverified{background:#fef3c7}a{color:#1459ab}img{max-width:100%;height:auto}h2{margin-top:24px}
+@media(max-width:800px){.pair{display:block}header{position:static}}
+</style>
+<header><h1>#31 内容差异逐项复核</h1><p>Codex 逐项视觉与文本复核，非真人签署。表示差异不等于正确渲染；原始响应正确不等于最终可编辑。原评分与门槛未改变。</p>
+<input id="search" type="search" placeholder="搜索页名、项目、文字或裁决理由" aria-label="搜索核验记录">
+<select id="filter" aria-label="分类"><option value="all">全部项目</option><option value="transcription_error">真实转写错误</option><option value="representation">表示差异</option><option value="coverage_error">覆盖缺失</option><option value="structure_error">结构错误</option><option value="export_fallback">导出降级</option><option value="alignment">配对差异</option><option value="reference_issue">参考标注差异</option><option value="unverified">未核验</option><option value="strict_match">严格匹配</option></select><span id="count"></span></header>
+<p id="scope"></p><p><a href="README.md">方法与结论</a> · <a href="findings.md">分类索引</a> · <a href="summary.json">统计与SHA</a> · <a href="old-seven-unverified.json">旧七页84项未核验登记</a></p>
+<main id="pages"></main>
+<script id="data" type="application/json">REVIEW_DATA_PLACEHOLDER</script>
+<script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const labels={strict_match:'严格匹配',representation:'表示差异',transcription_error:'真实转写错误',coverage_error:'覆盖缺失',structure_error:'结构错误',export_fallback:'导出降级',alignment:'配对差异',reference_issue:'参考标注差异',unverified:'未核验'};
+function node(tag,text,parent){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(parent)parent.append(e);return e}
+function tags(classes,parent){for(const c of classes){const e=node('span',labels[c],parent);e.className='tag '+c}}
+function content(value){return typeof value==='string'?value:JSON.stringify(value,null,2)}
+function pair(expected,actual,parent){const p=node('div',undefined,parent);p.className='pair';for(const [title,value] of [['参考标注',expected],['原始响应对应内容',actual]]){const col=node('div',undefined,p);node('b',title,col);node('pre',content(value??'未配对／无参考'),col)}}
+document.getElementById('scope').textContent='完整GT集合32页：548项正文、263处行内公式、16个独立公式、16张表格（193个参考单元格）；另查看156个预测拆出块。999项中995项已有裁决，4项仍未核验。旧七页另外保留84个未核验预测项。计数有父子重叠，不能当作独立错误次数。';
+const units=[];
+for(const page of data.pages){
+ const section=node('section',undefined,document.getElementById('pages'));node('h2',page.page,section);
+ const link=node('a','逐项JSON',section);link.href=page.page+'.json';
+ const evidence=node('details',undefined,section);node('summary','原图对照图（已查看；行内公式在父段落中）',evidence);
+ evidence.addEventListener('toggle',()=>{if(!evidence.open||evidence.dataset.loaded)return;evidence.dataset.loaded='1';for(const sheet of Object.keys(page.viewed_sheets)){const a=node('a',sheet,evidence);a.href='../../../output/issue31-visual-review-20261003/'+page.page+'/'+sheet;const im=node('img',undefined,evidence);im.src=a.href;im.alt=page.page+' '+sheet;im.loading='lazy'}});
+ for(const item of page.items){
+  const d=node('details',undefined,section);const s=node('summary',item.id+' ',d);tags(item.review.classification,s);
+  node('p',item.review.reason,d);
+  const actual=item.kind==='inline'?item.evidence_blocks.map(b=>b.id+'\n'+b.raw_output).join('\n'):item.raw_parent;
+  pair(item.expected,actual,d);
+  if(item.evidence_blocks.length){const e=node('details',undefined,d);node('summary','冻结输出块：原始响应、最终内容、坐标、状态',e);node('pre',JSON.stringify(item.evidence_blocks,null,2),e)}
+  if(item.differences?.length){const e=node('details',undefined,d);node('summary','严格字符差异（算法定位，不是自动内容裁决）',e);node('pre',JSON.stringify(item.differences,null,2),e)}
+  if(item.cell_reviews){node('p',item.final_export_review.reason,d);for(const cell of item.cell_reviews){const c=node('details',undefined,d);const cs=node('summary',cell.id+' ',c);tags(cell.classification,cs);node('p',cell.reason,c);pair(cell.reference.text,cell.raw_model_cells.map(x=>x.text).join('\n'),c);node('pre',JSON.stringify({reference:cell.reference,raw_model_cells:cell.raw_model_cells,final_cells:cell.final_cells},null,2),c)}}
+  units.push({element:d,section,classes:item.review.classification,text:(page.page+' '+JSON.stringify(item)).toLowerCase()});
+ }
+}
+function filter(){let shown=0;const category=document.getElementById('filter').value;const search=document.getElementById('search').value.toLowerCase();const visible=new Set();for(const u of units){u.element.hidden=!(category==='all'||u.classes.includes(category))||!u.text.includes(search);if(!u.element.hidden){shown++;visible.add(u.section)}}for(const section of document.querySelectorAll('main>section'))section.hidden=!visible.has(section);document.getElementById('count').textContent=shown+' / '+units.length+' 项'}
+document.getElementById('filter').addEventListener('change',filter);document.getElementById('search').addEventListener('input',filter);filter();
+</script></html>

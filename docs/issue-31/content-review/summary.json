@@ -1,0 +1,109 @@
+{
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "scoring_unchanged": true,
+  "complete_quality_acceptance": false,
+  "inspected_reference_pages": 32,
+  "reference_units": 843,
+  "additional_prediction_units": 156,
+  "inspected_units": 999,
+  "adjudicated_units": 995,
+  "unverified": [
+    {
+      "page": "development-odb-01",
+      "id": "text:65",
+      "reason": "第一行“射入/射人”近形字符需更清晰原图确认；已查看整段与首行放大，不因符合常识而替原图改字。其余衰减指数 −KD、I_D/I_0、30%、ln2/3/5、选项均正确。"
+    },
+    {
+      "page": "evaluation-candidate-10",
+      "id": "text:1",
+      "reason": "GT鸟巢/响应乌巢；已放大原始裁片，低分辨率的鸟/乌内部点仍不足可靠确认，保留待真人核验，不能据常识纠字。"
+    },
+    {
+      "page": "evaluation-candidate-10",
+      "id": "text:22",
+      "reason": "6个种子/功能字串完整，但原图是两列待连线项目，响应串行文本未明确保留两列结构；关联保真未核验，不声明已经正确关联。"
+    },
+    {
+      "page": "evaluation-candidate-11",
+      "id": "text:8",
+      "reason": "拼音声调大多可核对为GT省略；酒冽/酒洌左部在原图小字下仍需精确辨别，保留整项未核验，不以课文常识替代原图。"
+    }
+  ],
+  "counts_by_kind": {
+    "text": 548,
+    "table": 16,
+    "inline": 263,
+    "extra": 156,
+    "independent_formula": 16
+  },
+  "classification_unit_counts": {
+    "representation": 856,
+    "alignment": 286,
+    "reference_issue": 151,
+    "coverage_error": 21,
+    "transcription_error": 30,
+    "unverified": 4,
+    "strict_match": 102,
+    "structure_error": 1,
+    "export_fallback": 3
+  },
+  "table_cells": 193,
+  "cell_classification_counts": {
+    "strict_match": 127,
+    "structure_error": 29,
+    "transcription_error": 13,
+    "representation": 52,
+    "coverage_error": 1
+  },
+  "count_note": "标签可以重叠；正文、行内公式、拆出块与表格单元格也有重叠，不是独立错误次数，不用于重算 CER 或门槛。",
+  "old_seven": {
+    "pages": 7,
+    "unverified_prediction_units": 84,
+    "full_reference_available": false
+  },
+  "validation": {
+    "reference_inventory": true,
+    "source_and_trace_sha256": true,
+    "viewed_sheet_sha256": true,
+    "raw_and_final_evidence": true,
+    "table_cell_inventory": true
+  },
+  "record_sha256": {
+    "development-odb-01.json": "f0216c7320e6d8ce61c23c9e8cb8ece7b1c3937d362973067ae7e365f7b19de4",
+    "development-odb-02.json": "d4a3434ad4b12f49ca56ec7cd7d2ab4e68b7ea9374ac7c694f2fa26c136a9731",
+    "development-odb-03.json": "fd424b83a41cafb788ee1bf2687aa0d0904be80444c9ffbbd5d00c92b8deacf9",
+    "development-odb-04.json": "30ec36da5ee0c789e8f19bc22b820f4ada6bed33f3410e3920c80b7ff9b41dd7",
+    "development-odb-05.json": "cd8abefc76176302d1213414f0b6e4979e4bffcbb809d06fe3b57c0baba49dfa",
+    "development-odb-06.json": "e7022508310f6fa4c62e574e8866d9d05d54d86c0e59ae18c38278fa3fb2fd70",
+    "development-odb-07.json": "58456cc3f14a542f4d0964f55120cbeccf7e9c40c3855c1b7b9ef8ddfcfc7841",
+    "development-odb-08.json": "60a0d0309ddef7879b40e11f1bb91bca03d31d2e026ea7708a585b978bec6371",
+    "development-odb-09.json": "cd77fd5ff25088eb0524bb87c3f2b352923f4f43139ca8ff9a49921565f464b2",
+    "development-odb-10.json": "1d0d0a49d85753636683731f83a6a1989f374f4b7bc32ae76fd1cf6e6f4587c5",
+    "development-odb-11.json": "16d9f33f4a3566e2c5370d7bcd359f54c4d0c04e1065a7f79327f3fad6b0730a",
+    "development-odb-12.json": "10261a9f60092ee8125ae99d7929f6267d234b4d264f659b585e353cfb2972aa",
+    "development-odb-13.json": "ce7cc59630fd29fbbb58c1e1ad3b4335109ff55642087d88df46e693286e739d",
+    "development-odb-14.json": "6581816b659f290775ed1793d6d42fc0966057872820874674dd0a1662c61478",
+    "development-odb-15.json": "481eb768a69a860ac56e4f016b687d1aaac1c21c8a12c4606a5419c048a08350",
+    "development-odb-16.json": "ad3fe8c17b150cc09a4fd3a8c851f024d6be0063f3e687dac5d27a965650e02f",
+    "development-odb-17.json": "f42cf800da7b71a591955d0ea9796f4ddc4ed418c3346def9731a1b485ee8689",
+    "development-odb-18.json": "f7342f6c18d892c2001e0ec85b922d0d82e2e93bd39764adc6e4e3a5d97bbb98",
+    "development-odb-19.json": "077e6b1a809c8549654dd35e2b4fb5f3b09c7248c7dd3a081d9834d724b7aeb9",
+    "development-odb-20.json": "4b3e22c987adc5175adb3ed3f20d58ff4c79cf56544cccc01132eb2fcf62f46b",
+    "evaluation-candidate-01.json": "80394634c07838d09ccb95c3471a1984cc74987447edda2194829056907c79c3",
+    "evaluation-candidate-02.json": "e064096f9aa49508c8c8cfd653ae6f7e1b9884a6c6914906750d11157fc47892",
+    "evaluation-candidate-03.json": "470e23029c5e7c80079d616695ee7cde0c8f2317397a05bf84bb87b20f1d9725",
+    "evaluation-candidate-04.json": "2d394c13b375825303ea20461281006325b42b6d8a193e36e094c9f83665c7f8",
+    "evaluation-candidate-05.json": "6df07fb8babf7916973e1c215c8eabadcc0ddcb9785bc1a9c7a0b2a2d4764214",
+    "evaluation-candidate-06.json": "1c18c92a898f0d3e5a471b8c08fa1e3e87b546dd24359f2d201da98bd533dbc3",
+    "evaluation-candidate-07.json": "4c6faa29178426f1cdd3fde9336850070eae7fc96b755f0556e4dbfa62c12bad",
+    "evaluation-candidate-08.json": "96ded3f5290c454dc7e30e30d94d9bed03ba71ffeab2e0b3ca1ff0432c1a8ab9",
+    "evaluation-candidate-09.json": "b2b1cf31a3d7970d332c4060da6ef01b53f53b712888f9c5532bf2e160c22143",
+    "evaluation-candidate-10.json": "d86b4ae4f3973d79dbb7ab0ce89c019c992e85875abf665297ba0eb13f1e597d",
+    "evaluation-candidate-11.json": "ab8adeafc38adb714218cb796af708ba3f97b733d86c30d28a34b4901000e9e2",
+    "evaluation-candidate-12.json": "8659975aa0c285ef3161670da5352f7910c0420f32557767f06c5f7609f7fbef",
+    "old-seven-unverified.json": "1b278d7fa79b74ba0491a0a2674d22cab60d320c6a1ce3649a1f227ea3999d7e"
+  }
+}

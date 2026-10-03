@@ -1,0 +1,2309 @@
+{
+  "page": "development-odb-05",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "十二段内容及两张评分表内容/结构正确。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "0aa6fef66be3c32fdf0a76f916ac95b0a79afcbc6cdf4e2275ac7a9936dd9f57",
+    "sheet-01.jpg": "4ebdfd887a6eeb61946ce9b3b6e74e43ff4b4a0f97ccfe652f1831df64895695"
+  },
+  "items": [
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          567.5678100585938,
+          260.294120454545,
+          1098.1471829656434,
+          260.294120454545,
+          1098.1471829656434,
+          299.11311174649364,
+          567.5678100585938,
+          299.11311174649364
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 0,
+        "text": "二、填空题(共4题，每题5分，共20分)",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "二、填空题(共4题，每题5分，共20分)",
+      "actual": "## 二、 填空题(共4题，每题5分，共20分)",
+      "raw_parent": "## 二、 填空题(共4题，每题5分，共20分)\n",
+      "bbox": [
+        567.5678100585938,
+        260.294120454545,
+        1098.1471829656434,
+        299.11311174649364
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            560,
+            258,
+            1103,
+            296
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 二、 填空题(共4题，每题5分，共20分)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 二、 填空题(共4题，每题5分，共20分)\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          250.4541224414327,
+          368.59073559372416,
+          1135.5834979473773,
+          368.59073559372416,
+          1135.5834979473773,
+          411.93469985819036,
+          250.4541224414327,
+          411.93469985819036
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 5,
+        "text": "\\t13．已知函数 $ f ( x ) \\!=\\! a x \\!-\\! \\operatorname{l o g}_{2} ( 2^{x} \\!+\\! 1 ) \\!+\\! \\operatorname{c o s} x ( a \\! \\in\\! \\mathbf{R} ) $为偶函数，则a=____.",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "\\t13．已知函数 $ f ( x ) \\!=\\! a x \\!-\\! \\operatorname{l o g}_{2} ( 2^{x} \\!+\\! 1 ) \\!+\\! \\operatorname{c o s} x ( a \\! \\in\\! \\mathbf{R} ) $为偶函数，则a=____.",
+      "actual": "13. 已知函数 $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则 $a=$ ___.",
+      "raw_parent": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+      "bbox": [
+        250.4541224414327,
+        368.59073559372416,
+        1135.5834979473773,
+        411.93469985819036
+      ],
+      "differences": [
+        {
+          "reference": "\\t",
+          "actual": ""
+        },
+        {
+          "reference": "．",
+          "actual": ". "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "x)=ax-\\log_2(2^x+1)+\\cos"
+        },
+        {
+          "reference": " ) \\!=\\! ",
+          "actual": "("
+        },
+        {
+          "reference": " x \\!-\\! \\operatorname{l o g}_{2} ( 2^{x} \\!+\\! 1 ) \\!+\\! \\operatorname{c o s} x ( a \\! ",
+          "actual": ""
+        },
+        {
+          "reference": "\\! ",
+          "actual": ""
+        },
+        {
+          "reference": "f",
+          "actual": "b"
+        },
+        {
+          "reference": "",
+          "actual": ")$"
+        },
+        {
+          "reference": ") $",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " $"
+        },
+        {
+          "reference": "_",
+          "actual": "$ "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            244,
+            369,
+            1123,
+            407
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          251.25348000539842,
+          426.42162508461894,
+          1351.962046195136,
+          426.42162508461894,
+          1351.962046195136,
+          472.0468506261625,
+          251.25348000539842,
+          472.0468506261625
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 13,
+        "text": "\\t14.  已知 $ S_{n} $是等比数列 $ \\left \\{ a_{n} \\right \\} $的前 n项和, 且 $ S_{3}, S_{9}, S_{6} $成等差数列 $ a_{2}+a_{5}=6, $ ,则 $ a_ {8}= $ ____.",
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "\\t14.  已知 $ S_{n} $是等比数列 $ \\left \\{ a_{n} \\right \\} $的前 n项和, 且 $ S_{3}, S_{9}, S_{6} $成等差数列 $ a_{2}+a_{5}=6, $ ,则 $ a_ {8}= $ ____.",
+      "actual": "14. 已知 $S_n$ 是等比数列 $\\{a_n\\}$ 的前 $n$ 项和, 且 $S_3, S_9, S_6$ 成等差数列, $a_2 + a_5 = 6$, 则 $a_8 =$ ___.",
+      "raw_parent": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+      "bbox": [
+        251.25348000539842,
+        426.42162508461894,
+        1351.962046195136,
+        472.0468506261625
+      ],
+      "differences": [
+        {
+          "reference": "\\t",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " \\left ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} \\right ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": ","
+        },
+        {
+          "reference": "",
+          "actual": "a_2 +"
+        },
+        {
+          "reference": "{2}+a_{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$ ,",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "8"
+        },
+        {
+          "reference": "{8}",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "_",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            243,
+            428,
+            1354,
+            466
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          245.55032681270546,
+          492.57820211985705,
+          1377.055920242985,
+          492.57820211985705,
+          1377.055920242985,
+          612.3444191664088,
+          245.55032681270546,
+          612.3444191664088
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 4,
+        "text": "\\t15.  若 $ f ( x ) {=} 2 \\operatorname{s i n} ( 2 x {+} \\varphi) ( \\varphi{>} 0 ) $的图象关于直线 $ x={\\frac{\\pi} {1 2}} $对称,且当 $ \\varphi $取最小值时, $ \\exists x_{0} \\in( 0, \\frac{\\pi} {2} ) $ ,使得 $ f ( x_{0} )=a $ ,则a的取值范围是____.",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "\\t15.  若 $ f ( x ) {=} 2 \\operatorname{s i n} ( 2 x {+} \\varphi) ( \\varphi{>} 0 ) $的图象关于直线 $ x={\\frac{\\pi} {1 2}} $对称,且当 $ \\varphi $取最小值时, $ \\exists x_{0} \\in( 0, \\frac{\\pi} {2} ) $ ,使得 $ f ( x_{0} )=a $ ,则a的取值范围是____.",
+      "actual": "15. 若 $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线 $x=\\frac{\\pi}{12}$ 对称，且当 $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得 $f(x_0)=a$，则 $a$ 的取值范围是 ___.",
+      "raw_parent": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+      "bbox": [
+        245.55032681270546,
+        492.57820211985705,
+        1377.055920242985,
+        612.3444191664088
+      ],
+      "differences": [
+        {
+          "reference": "\\t",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " {",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "operator",
+          "actual": "si"
+        },
+        {
+          "reference": "ame{s i n} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " {",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "0)$"
+        },
+        {
+          "reference": "0 ) $",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": ",",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": ",",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ,",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$，则"
+        },
+        {
+          "reference": "",
+          "actual": "a$"
+        },
+        {
+          "reference": ",则a",
+          "actual": ""
+        },
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            239,
+            492,
+            1370,
+            610
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          243.98123168945312,
+          627.7533569335938,
+          1398.8675537109375,
+          627.7533569335938,
+          1398.8675537109375,
+          722.7022705078125,
+          243.98123168945312,
+          722.7022705078125
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 6,
+        "text": "\\t16.  在四面体 PABC中, $ \\triangle A B C $为等边三角形, 边长为6, PA=6,PB=8,PC=10 ,则四面体 PABC的体积为____.",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "\\t16.  在四面体 PABC中, $ \\triangle A B C $为等边三角形, 边长为6, PA=6,PB=8,PC=10 ,则四面体 PABC的体积为____.",
+      "actual": "16. 在四面体 PABC 中, $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.",
+      "raw_parent": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+      "bbox": [
+        243.98123168945312,
+        627.7533569335938,
+        1398.8675537109375,
+        722.7022705078125
+      ],
+      "differences": [
+        {
+          "reference": "\\t",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "BC$"
+        },
+        {
+          "reference": "B C $",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": ","
+        },
+        {
+          "reference": ",",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            244,
+            629,
+            1396,
+            722
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          562.8676990889888,
+          848.3742872963096,
+          1112.7301265761632,
+          848.3742872963096,
+          1112.7301265761632,
+          881.0609573582949,
+          562.8676990889888,
+          881.0609573582949
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 1,
+        "text": "三、解答题（共7题，每题12分，共84分）",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "三、解答题（共7题，每题12分，共84分）",
+      "actual": "## 三、 解答题(共7题，每题12分，共84分)",
+      "raw_parent": "## 三、 解答题(共7题，每题12分，共84分)\n",
+      "bbox": [
+        562.8676990889888,
+        848.3742872963096,
+        1112.7301265761632,
+        881.0609573582949
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ")"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            559,
+            844,
+            1116,
+            882
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 三、 解答题(共7题，每题12分，共84分)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 三、 解答题(共7题，每题12分，共84分)\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          244.16741943359375,
+          951.593505859375,
+          1204.1610107421875,
+          951.593505859375,
+          1204.1610107421875,
+          994.1939086914062,
+          244.16741943359375,
+          994.1939086914062
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 9,
+        "text": "\\t17.  已知 $ \\triangle A B C $的内角 A,B,C的对边分别为 a,b,c,且 asin(A+B-C)=csin(B+C).",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "\\t17.  已知 $ \\triangle A B C $的内角 A,B,C的对边分别为 a,b,c,且 asin(A+B-C)=csin(B+C).",
+      "actual": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.",
+      "raw_parent": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+      "bbox": [
+        244.16741943359375,
+        951.593505859375,
+        1204.1610107421875,
+        994.1939086914062
+      ],
+      "differences": [
+        {
+          "reference": "\\t",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "\\"
+        },
+        {
+          "reference": "",
+          "actual": "\\"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            243,
+            954,
+            1200,
+            990
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          247.50598678407994,
+          1015.4372821030981,
+          446.0737379068754,
+          1015.4372821030981,
+          446.0737379068754,
+          1047.4643387358071,
+          247.50598678407994,
+          1047.4643387358071
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 7,
+        "text": "\\t\\t(1)求角C的值；",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "\\t\\t(1)求角C的值；",
+      "actual": "(1)求角 C 的值;",
+      "raw_parent": "(1)求角 C 的值;\n",
+      "bbox": [
+        247.50598678407994,
+        1015.4372821030981,
+        446.0737379068754,
+        1047.4643387358071
+      ],
+      "differences": [
+        {
+          "reference": "\\t\\t",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "；",
+          "actual": ";"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            245,
+            1013,
+            450,
+            1049
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1)求角 C 的值;\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1)求角 C 的值;\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:8",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          248.96551306020405,
+          1086.686767578125,
+          916.2687377929685,
+          1086.686767578125,
+          916.2687377929685,
+          1129.6708984375,
+          248.96551306020405,
+          1129.6708984375
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 8,
+        "text": "\\t\\t(2)若 2a+b=6 ,且 $ \\triangle A B C $的面积为 $ \\sqrt{3} $ ,求 $ \\bigtriangleup A B C $的周长.",
+        "attribute": {}
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "\\t\\t(2)若 2a+b=6 ,且 $ \\triangle A B C $的面积为 $ \\sqrt{3} $ ,求 $ \\bigtriangleup A B C $的周长.",
+      "actual": "(2)若 $2a+b=6$，且 $\\triangle ABC$ 的面积为 $\\sqrt{3}$，求 $\\triangle ABC$ 的周长.",
+      "raw_parent": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+      "bbox": [
+        248.96551306020405,
+        1086.686767578125,
+        916.2687377929685,
+        1129.6708984375
+      ],
+      "differences": [
+        {
+          "reference": "\\t\\t",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " ,",
+          "actual": "$，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "BC$"
+        },
+        {
+          "reference": "B C $",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ,",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "big",
+          "actual": ""
+        },
+        {
+          "reference": "up",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "BC$"
+        },
+        {
+          "reference": "B C $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            242,
+            1086,
+            917,
+            1128
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          244.27593994140642,
+          1918.8393554687502,
+          1401.7150878906252,
+          1918.8393554687502,
+          1401.7150878906252,
+          2013.8664742290207,
+          244.27593994140642,
+          2013.8664742290207
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 2,
+        "text": "\t18.如图，三棱柱 $ A B C \\mathrm{-} A_{1} B_{1} C_{1} $中，侧面 $ B B_{1} C_{1} C $是菱形，其对角线的交点为 O且 $ A B {=} A C_{1} {\\mathrm{,}} A B {\\bot} $ $ B_{1}C. $",
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "\t18.如图，三棱柱 $ A B C \\mathrm{-} A_{1} B_{1} C_{1} $中，侧面 $ B B_{1} C_{1} C $是菱形，其对角线的交点为 O且 $ A B {=} A C_{1} {\\mathrm{,}} A B {\\bot} $ $ B_{1}C. $",
+      "actual": "18. 如图, 三棱柱 $ABC-A_{1}B_{1}C_{1}$ 中, 侧面 $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为 $O$, 且 $AB=AC_{1}, AB \\perp B_{1}C$.",
+      "raw_parent": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+      "bbox": [
+        244.27593994140642,
+        1918.8393554687502,
+        1401.7150878906252,
+        2013.8664742290207
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "，",
+          "actual": ", "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "，",
+          "actual": ", "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "C$"
+        },
+        {
+          "reference": "C $",
+          "actual": ""
+        },
+        {
+          "reference": "，",
+          "actual": ", "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$, "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " {",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " {\\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "}}",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "bot} $ $",
+          "actual": "perp"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            242,
+            1923,
+            1402,
+            2013
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          245.2191619873047,
+          2030.18359375,
+          603.869873046875,
+          2030.18359375,
+          603.869873046875,
+          2074.025634765625,
+          245.2191619873047,
+          2074.025634765625
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 11,
+        "text": "\t/t（1）求证： AO $ \\bot $平面 $ B B_{1} C_{1} C; $",
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "\t/t（1）求证： AO $ \\bot $平面 $ B B_{1} C_{1} C; $",
+      "actual": "(1)求证: $AO \\perp$ 平面 $BB_{1}C_{1}C$;",
+      "raw_parent": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+      "bbox": [
+        245.2191619873047,
+        2030.18359375,
+        603.869873046875,
+        2074.025634765625
+      ],
+      "differences": [
+        {
+          "reference": "/t（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ")"
+        },
+        {
+          "reference": "：",
+          "actual": ":"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "\\perp"
+        },
+        {
+          "reference": "\\bot $",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            244,
+            2036,
+            597,
+            2071
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          247.36546325683594,
+          2082.843994140625,
+          1405.668212890625,
+          2082.843994140625,
+          1405.668212890625,
+          2133.572509765625,
+          247.36546325683594,
+          2133.572509765625
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 3,
+        "text": "\t/t(2)设 $ \\angle B_{1} B C=6 0^{\\circ} $ ,若直线 $ A_{1} B_{1} $与平面 $ B B_{1} C_{1} C $所成的角为 $ 4 5^{\\circ} $求二面角 $ A_{1} \\mathrm{-} B_{1} C_{1} \\mathrm{-} B $的余弦值.",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "\t/t(2)设 $ \\angle B_{1} B C=6 0^{\\circ} $ ,若直线 $ A_{1} B_{1} $与平面 $ B B_{1} C_{1} C $所成的角为 $ 4 5^{\\circ} $求二面角 $ A_{1} \\mathrm{-} B_{1} C_{1} \\mathrm{-} B $的余弦值.",
+      "actual": "(2)设 $\\angle B_1BC=60^\\circ$，若直线 $A_1B_1$ 与平面 $BB_1C_1C$ 所成的角为 $45^\\circ$，求二面角 $A_1-B_1C_1-B$ 的余弦值.",
+      "raw_parent": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+      "bbox": [
+        247.36546325683594,
+        2082.843994140625,
+        1405.668212890625,
+        2133.572509765625
+      ],
+      "differences": [
+        {
+          "reference": "/t",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": " ,",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "C$"
+        },
+        {
+          "reference": "C $",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "} ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "-B$"
+        },
+        {
+          "reference": "\\mathrm{-} B $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题看图核对函数、数列下标、角/指数、三角形标记、全部几何条件与角度 60°/45°、数学字体和答题线。差异为空格/宏/分隔/标点；GT 的 /t 排版噪声不是原图文字。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            241,
+            2093,
+            1408,
+            2129
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "table:10",
+      "kind": "table",
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          263.46160888671875,
+          198.04779052734375,
+          536.1398315429688,
+          198.04779052734375,
+          536.1398315429688,
+          353.3748474121094,
+          263.46160888671875,
+          353.3748474121094
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 10,
+        "html": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0001",
+      "strict_exact": true,
+      "expected": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+      "actual": {
+        "format": "html",
+        "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "resource": "assets/p0001-b0001.png",
+        "table": {
+          "rows": 2,
+          "columns": 2,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "raw_parent": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+      "bbox": [
+        263.46160888671875,
+        198.04779052734375,
+        536.1398315429688,
+        353.3748474121094
+      ],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "两张评分表各四格（两表头、两空格），逐格及 2×2 结构正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            265,
+            200,
+            536,
+            353
+          ],
+          "type": "table",
+          "status": "ok",
+          "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+          "final_content": {
+            "format": "html",
+            "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+            "resource": "assets/p0001-b0001.png",
+            "table": {
+              "rows": 2,
+              "columns": 2,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "评卷人",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "得分",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项",
+      "final_export_review": {
+        "structured": true,
+        "classification": [],
+        "reason": "最终结构化表格存在；逐格内容另列。",
+        "reviewed": true
+      },
+      "cell_reviews": [
+        {
+          "id": "table:10:r0:c0",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "评卷人",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "column": 0
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:10:r0:c1",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "得分",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "column": 1
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:10:r1:c0",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "column": 0
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:10:r1:c1",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "column": 1
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        }
+      ]
+    },
+    {
+      "id": "table:12",
+      "kind": "table",
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          265.7821867478338,
+          787.3591698472704,
+          533.0865108102912,
+          787.3591698472704,
+          533.0865108102912,
+          939.1705930240464,
+          265.7821867478338,
+          939.1705930240464
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 12,
+        "html": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0007",
+      "strict_exact": true,
+      "expected": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+      "actual": {
+        "format": "html",
+        "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "resource": "assets/p0001-b0007.png",
+        "table": {
+          "rows": 2,
+          "columns": 2,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "raw_parent": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+      "bbox": [
+        265.7821867478338,
+        787.3591698472704,
+        533.0865108102912,
+        939.1705930240464
+      ],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "两张评分表各四格（两表头、两空格），逐格及 2×2 结构正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            264,
+            785,
+            533,
+            940
+          ],
+          "type": "table",
+          "status": "ok",
+          "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+          "final_content": {
+            "format": "html",
+            "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+            "resource": "assets/p0001-b0007.png",
+            "table": {
+              "rows": 2,
+              "columns": 2,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "评卷人",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "得分",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项",
+      "final_export_review": {
+        "structured": true,
+        "classification": [],
+        "reason": "最终结构化表格存在；逐格内容另列。",
+        "reviewed": true
+      },
+      "cell_reviews": [
+        {
+          "id": "table:12:r0:c0",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "评卷人",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "column": 0
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:12:r0:c1",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "得分",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "column": 1
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:12:r1:c0",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "column": 0
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:12:r1:c1",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "column": 1
+            }
+          ],
+          "final_cells": [
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+    "sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-05.json",
+    "sha256": "250b49e19af64c839d8b2aef99221a0b157eecfb2261ad60da2600c6449d2fd4"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 14,
+  "unverified_units": []
+}

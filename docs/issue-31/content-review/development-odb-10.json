@@ -1,0 +1,2122 @@
+{
+  "page": "development-odb-10",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "添项配凑的八行公式及例题内容正确，未发现语义转写错误。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "538b3e42c8b111f7182b3ab520ad89a94430b30420107c3c7933e777bbb3b95a",
+    "sheet-01.jpg": "75090379cf889ee7b8798306b9db6e3a43833475615f581c5339be4a99002443"
+  },
+  "items": [
+    {
+      "id": "text:box_id_0",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          669.043,
+          205.1349645461786,
+          979.3148101807548,
+          205.1349645461786,
+          979.3148101807548,
+          251.91030000000003,
+          669.043,
+          251.91030000000003
+        ],
+        "ignore": false,
+        "order": 0,
+        "anno_id": "box_id_0",
+        "attribute": {},
+        "text": "### 1.1.6【添项配凑类型】"
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "### 1.1.6【添项配凑类型】",
+      "actual": "#### 1.1.6【添项配凑类型】",
+      "raw_parent": "#### 1.1.6【添项配凑类型】\n",
+      "bbox": [
+        669.043,
+        205.1349645461786,
+        979.3148101807548,
+        251.91030000000003
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "#"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            673,
+            214,
+            973,
+            250
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "#### 1.1.6【添项配凑类型】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "#### 1.1.6【添项配凑类型】\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_1",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          248.927,
+          279.9783,
+          409.0342,
+          279.9783,
+          409.0342,
+          313.89380000000006,
+          248.927,
+          313.89380000000006
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": "box_id_1",
+        "attribute": {},
+        "text": "#### ▲适用题型："
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "#### ▲适用题型：",
+      "actual": "## ▲适用题型：",
+      "raw_parent": "## ▲适用题型：\n",
+      "bbox": [
+        248.927,
+        279.9783,
+        409.0342,
+        313.89380000000006
+      ],
+      "differences": [
+        {
+          "reference": "##",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            245,
+            281,
+            415,
+            315
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## ▲适用题型：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## ▲适用题型：\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_2",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          248.927,
+          341.9618,
+          762.9902,
+          341.9618,
+          762.9902,
+          381.0231,
+          248.927,
+          381.0231
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": "box_id_2",
+        "attribute": {},
+        "text": "添项配凑后可以构造利用不等式的题型；"
+      },
+      "block_id": "b0003",
+      "strict_exact": true,
+      "expected": "添项配凑后可以构造利用不等式的题型；",
+      "actual": "添项配凑后可以构造利用不等式的题型；",
+      "raw_parent": "添项配凑后可以构造利用不等式的题型；\n",
+      "bbox": [
+        248.927,
+        341.9618,
+        762.9902,
+        381.0231
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致，已看原图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            241,
+            345,
+            766,
+            380
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "添项配凑后可以构造利用不等式的题型；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "添项配凑后可以构造利用不等式的题型；\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_3",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          248.927,
+          409.0911,
+          410.02660000000003,
+          409.0911,
+          410.02660000000003,
+          443.9422,
+          248.927,
+          443.9422
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": "box_id_3",
+        "attribute": {},
+        "text": "#### ▲方法原理："
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "#### ▲方法原理：",
+      "actual": "## ▲方法原理：",
+      "raw_parent": "## ▲方法原理：\n",
+      "bbox": [
+        248.927,
+        409.0911,
+        410.02660000000003,
+        443.9422
+      ],
+      "differences": [
+        {
+          "reference": "##",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            246,
+            411,
+            415,
+            444
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## ▲方法原理：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## ▲方法原理：\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_4",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          248.927,
+          462.8881,
+          500.0042,
+          462.8881,
+          500.0042,
+          501.0138,
+          248.927,
+          501.0138
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": "box_id_4",
+        "attribute": {},
+        "text": "常用添项配凑方法："
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "常用添项配凑方法：",
+      "actual": "## 常用添项配凑方法：",
+      "raw_parent": "## 常用添项配凑方法：\n",
+      "bbox": [
+        248.927,
+        462.8881,
+        500.0042,
+        501.0138
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            245,
+            465,
+            504,
+            500
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 常用添项配凑方法：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 常用添项配凑方法：\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_5",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          254.57462086033178,
+          519.9597000000001,
+          1018.5863864267722,
+          519.9597000000001,
+          1018.5863864267722,
+          703.61499812491,
+          254.57462086033178,
+          703.61499812491
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": "box_id_5",
+        "attribute": {},
+        "text": "（1）单变量观察分母：$\\left\\{\n\\begin{array}{l}\nx + \\frac{k}{x-a} = (x-a) + \\frac{k}{(x-a)} + a \\\\\nx + \\frac{k}{mx-a} = \\frac{(mx-a)}{m} + \\frac{k}{(mx-a)} + \\frac{a}{m}\n\\end{array}\n\\right.$"
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "（1）单变量观察分母：$\\left\\{\n\\begin{array}{l}\nx + \\frac{k}{x-a} = (x-a) + \\frac{k}{(x-a)} + a \\\\\nx + \\frac{k}{mx-a} = \\frac{(mx-a)}{m} + \\frac{k}{(mx-a)} + \\frac{a}{m}\n\\end{array}\n\\right.$",
+      "actual": "(1) 单变量观察分母: $$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$ (",
+      "raw_parent": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+      "bbox": [
+        254.57462086033178,
+        519.9597000000001,
+        1018.5863864267722,
+        703.61499812491
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "：",
+          "actual": ": "
+        },
+        {
+          "reference": "\\left\\{",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "c"
+        },
+        {
+          "reference": "rray",
+          "actual": "ses"
+        },
+        {
+          "reference": "{l} ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": "\\left"
+        },
+        {
+          "reference": "",
+          "actual": "\\right"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "\\left"
+        },
+        {
+          "reference": "",
+          "actual": "\\right"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "\\left"
+        },
+        {
+          "reference": "",
+          "actual": "\\right"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "\\left"
+        },
+        {
+          "reference": "",
+          "actual": "\\right"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "c"
+        },
+        {
+          "reference": "rray",
+          "actual": "ses"
+        },
+        {
+          "reference": "\\right.",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$ ("
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            250,
+            518,
+            1262,
+            1196
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-7tj2f543",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          245.19754364032548,
+          714.3832193908343,
+          1262.7111169822508,
+          714.3832193908343,
+          1262.7111169822508,
+          1193.6364445398947,
+          245.19754364032548,
+          1193.6364445398947
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": "box-7tj2f543",
+        "attribute": {},
+        "text": "（2）双变量观察分母：$\\begin{cases}\n2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b} \\\\\n \\\\\n\\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1 \\\\\n \\\\\n\\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b} \\\\\n \\\\\na+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b} & \n\\end{cases}$"
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "（2）双变量观察分母：$\\begin{cases}\n2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b} \\\\\n \\\\\n\\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1 \\\\\n \\\\\n\\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b} \\\\\n \\\\\na+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b} & \n\\end{cases}$",
+      "actual": "2) 双变量观察分母： $$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$",
+      "raw_parent": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+      "bbox": [
+        245.19754364032548,
+        714.3832193908343,
+        1262.7111169822508,
+        1193.6364445398947
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": ""
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " \\\\ ",
+          "actual": ""
+        },
+        {
+          "reference": " \\\\ ",
+          "actual": ""
+        },
+        {
+          "reference": " \\\\ ",
+          "actual": ""
+        },
+        {
+          "reference": " & ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            250,
+            518,
+            1262,
+            1196
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          240.9878,
+          1653.9069,
+          1373.9777999999997,
+          1653.9069,
+          1373.9777999999997,
+          1726.8836999999999,
+          240.9878,
+          1726.8836999999999
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": "box_id_6",
+        "attribute": {},
+        "text": "例题1．（重庆 • 高考真题）$f ( x ) = x + \\frac { 1 } { x - 2 } ( x > 2 )$，在$ x= a $处取最小值，则 $ a  =$（ ）"
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "例题1．（重庆 • 高考真题）$f ( x ) = x + \\frac { 1 } { x - 2 } ( x > 2 )$，在$ x= a $处取最小值，则 $ a  =$（ ）",
+      "actual": "例题 1. (重庆·高考真题) $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（） ",
+      "raw_parent": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+      "bbox": [
+        240.9878,
+        1653.9069,
+        1373.9777999999997,
+        1726.8836999999999
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "．（",
+          "actual": ". ("
+        },
+        {
+          "reference": " • ",
+          "actual": "·"
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "$",
+          "actual": "a=（）"
+        },
+        {
+          "reference": "a =$（ ）",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          245.94979999999998,
+          1746.9991,
+          378.6064460034182,
+          1746.9991,
+          378.6064460034182,
+          1801.03,
+          245.94979999999998,
+          1801.03
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": "box_id_7",
+        "attribute": {},
+        "text": "A. $1+\\sqrt{2}$"
+      },
+      "block_id": "b0009",
+      "strict_exact": true,
+      "expected": "A. $1+\\sqrt{2}$",
+      "actual": "A. $1+\\sqrt{2}$",
+      "raw_parent": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+      "bbox": [
+        245.94979999999998,
+        1746.9991,
+        378.6064460034182,
+        1801.03
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致，已看原图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-0rd1ae9i",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          536.9183133492659,
+          1745.338939460793,
+          659.2502099539922,
+          1745.338939460793,
+          659.2502099539922,
+          1795.7108710927625,
+          536.9183133492659,
+          1795.7108710927625
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": "box-0rd1ae9i",
+        "attribute": {},
+        "text": "B. $1 + \\sqrt  { 3 }$"
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "B. $1 + \\sqrt  { 3 }$",
+      "actual": " B. $1+\\sqrt{3}$",
+      "raw_parent": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+      "bbox": [
+        536.9183133492659,
+        1745.338939460793,
+        659.2502099539922,
+        1795.7108710927625
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-4rkui2mv",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          821.879676920843,
+          1762.6092909637766,
+          893.8396418935998,
+          1762.6092909637766,
+          893.8396418935998,
+          1800.0284902891942,
+          821.879676920843,
+          1800.0284902891942
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": "box-4rkui2mv",
+        "attribute": {},
+        "text": "C. 3"
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "C. 3",
+      "actual": " C. 3",
+      "raw_parent": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+      "bbox": [
+        821.879676920843,
+        1762.6092909637766,
+        893.8396418935998,
+        1800.0284902891942
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-7hifflu8",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          1112.5978452072054,
+          1764.0485391235018,
+          1175.9225717870986,
+          1764.0485391235018,
+          1175.9225717870986,
+          1794.271685574409,
+          1112.5978452072054,
+          1794.271685574409
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": "box-7hifflu8",
+        "attribute": {},
+        "text": "D. 4"
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "D. 4",
+      "actual": " D. 4",
+      "raw_parent": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+      "bbox": [
+        1112.5978452072054,
+        1764.0485391235018,
+        1175.9225717870986,
+        1794.271685574409
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_8",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          246.94219999999999,
+          1892.9527,
+          1216.0208,
+          1892.9527,
+          1216.0208,
+          1964.0583,
+          246.94219999999999,
+          1964.0583
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": "box_id_8",
+        "attribute": {},
+        "text": "例题2．（河南 • 高一阶段练习）若 $x > 1$，则$2 x + { \\frac { 6 } { x - 1 } }$的最小值为____."
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "例题2．（河南 • 高一阶段练习）若 $x > 1$，则$2 x + { \\frac { 6 } { x - 1 } }$的最小值为____.",
+      "actual": "例题 2.（河南·高一阶段练习）若 $x > 1$，则 $2x + \\frac{6}{x - 1}$ 的最小值为 ___.",
+      "raw_parent": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+      "bbox": [
+        246.94219999999999,
+        1892.9527,
+        1216.0208,
+        1964.0583
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "．",
+          "actual": "."
+        },
+        {
+          "reference": " • ",
+          "actual": "·"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " {",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " } ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            242,
+            1890,
+            1216,
+            1965
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_9",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          811.9486,
+          2172.931,
+          841.059,
+          2172.931,
+          841.059,
+          2197.9583,
+          811.9486,
+          2197.9583
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": "box_id_9",
+        "attribute": {},
+        "text": "17"
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "17",
+      "actual": "## 17",
+      "raw_parent": "## 17\n",
+      "bbox": [
+        811.9486,
+        2172.931,
+        841.059,
+        2197.9583
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            809,
+            2173,
+            845,
+            2200
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 17\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 17\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-10te5or0",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          249.2079963116655,
+          1209.9819430671018,
+          991.1342703352582,
+          1209.9819430671018,
+          991.1342703352582,
+          1324.3402882841658,
+          249.2079963116655,
+          1324.3402882841658
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": "box-10te5or0",
+        "attribute": {},
+        "text": "（3）平方添项：${ \\frac { a - 3 b } { a ^ { 2 } + 9 b ^ { 2 } } } = { \\frac { a - 3 b } { \\left( a - 3 b \\right) ^ { 2 } + 6 a b } } = { \\frac { 1 } { a - 3 b + { \\frac { 6 a b } { a - 3 b } } } }$"
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "（3）平方添项：${ \\frac { a - 3 b } { a ^ { 2 } + 9 b ^ { 2 } } } = { \\frac { a - 3 b } { \\left( a - 3 b \\right) ^ { 2 } + 6 a b } } = { \\frac { 1 } { a - 3 b + { \\frac { 6 a b } { a - 3 b } } } }$",
+      "actual": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$",
+      "raw_parent": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+      "bbox": [
+        249.2079963116655,
+        1209.9819430671018,
+        991.1342703352582,
+        1324.3402882841658
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "{ ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " } ",
+          "actual": ""
+        },
+        {
+          "reference": " { ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " } ",
+          "actual": ""
+        },
+        {
+          "reference": " { ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " { ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " } } ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            256,
+            1210,
+            992,
+            1321
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-av7da45c",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          249.20799631166557,
+          1333.93494192835,
+          1207.7144152891003,
+          1333.93494192835,
+          1207.7144152891003,
+          1503.7603991283395,
+          249.20799631166557,
+          1503.7603991283395
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": "box-av7da45c",
+        "attribute": {},
+        "text": "（4）同乘易化简的结构：$\\left\\{ \\begin{array} { l } { a + b = 1 + \\frac { 1 } { a } + \\frac { 1 } { b } } \\\\ {\\Rightarrow \\big ( a + b \\big ) ^ { 2 } = \\left( 1 + \\frac { 1 } { a } + \\frac { 1 } { b } \\right)  ( a + b ) =  ( a + b) + 2 + \\frac { b } { a } + \\frac { a } { b } } \\end{array} \\right.$"
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "（4）同乘易化简的结构：$\\left\\{ \\begin{array} { l } { a + b = 1 + \\frac { 1 } { a } + \\frac { 1 } { b } } \\\\ {\\Rightarrow \\big ( a + b \\big ) ^ { 2 } = \\left( 1 + \\frac { 1 } { a } + \\frac { 1 } { b } \\right)  ( a + b ) =  ( a + b) + 2 + \\frac { b } { a } + \\frac { a } { b } } \\end{array} \\right.$",
+      "actual": "(4) 同乘易化简的结构: $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$ ",
+      "raw_parent": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+      "bbox": [
+        249.20799631166557,
+        1333.93494192835,
+        1207.7144152891003,
+        1503.7603991283395
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "：",
+          "actual": ": "
+        },
+        {
+          "reference": "\\left\\{ ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "c"
+        },
+        {
+          "reference": "rray",
+          "actual": "ses"
+        },
+        {
+          "reference": "{ l } { ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " } ",
+          "actual": ""
+        },
+        {
+          "reference": "{",
+          "actual": ""
+        },
+        {
+          "reference": " \\",
+          "actual": "(a+"
+        },
+        {
+          "reference": "ig ( a + b \\big ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " { ",
+          "actual": ""
+        },
+        {
+          "reference": " } ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " b ) = ( a + ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": "=(a"
+        },
+        {
+          "reference": " ",
+          "actual": "b)+"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " } ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "c"
+        },
+        {
+          "reference": "rray",
+          "actual": "ses"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "\\right.$",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            242,
+            1343,
+            1410,
+            1631
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-6s09k9l9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          248.1724678220802,
+          1532.336726478713,
+          1405.2883049320585,
+          1532.336726478713,
+          1405.2883049320585,
+          1623.006228472807,
+          248.1724678220802,
+          1623.006228472807
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": "box-6s09k9l9",
+        "attribute": {},
+        "text": "以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习."
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习.",
+      "actual": "以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。",
+      "raw_parent": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+      "bbox": [
+        248.1724678220802,
+        1532.336726478713,
+        1405.2883049320585,
+        1623.006228472807
+      ],
+      "differences": [
+        {
+          "reference": ".",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐行看图核对所有分子、分母、±、指数、条件 x>2/x>1、选项和中文说明。公式 cases/array、大小括号、数学分隔、空格及标题层级不同，内容完整；原图自身可能不成立的式子仍按原图转写。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            242,
+            1343,
+            1410,
+            1631
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+    "sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-10.json",
+    "sha256": "5fc7b5507c45df4a7e2dabe75c617808ab27372c9f9c87c86f00779e6a4b199d"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 17,
+  "unverified_units": []
+}

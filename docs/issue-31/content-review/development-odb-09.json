@@ -1,0 +1,633 @@
+{
+  "page": "development-odb-09",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "四组独立恒等式内容正确；万能置换整行任务类型配对另记。",
+  "viewed_sheets": {
+    "sheet-01.jpg": "037996c1d0bb34fe36bc55aa2a489e7998ff37c23cdf8719ca2e7060a1d8ec3a"
+  },
+  "items": [
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          698.0430908203125,
+          201.1630859375,
+          956.6536254882812,
+          201.1630859375,
+          956.6536254882812,
+          253.31271362304688,
+          698.0430908203125,
+          253.31271362304688
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 3,
+        "text": "理科拓展专题",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "理科拓展专题",
+      "actual": "## 理科拓展专题",
+      "raw_parent": "## 理科拓展专题\n",
+      "bbox": [
+        698.0430908203125,
+        201.1630859375,
+        956.6536254882812,
+        253.31271362304688
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图标题内容一致，差异为 Markdown 标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            692,
+            202,
+            956,
+            251
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 理科拓展专题\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 理科拓展专题\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          315.40740966796875,
+          1287.77197265625,
+          567.087890625,
+          1287.77197265625,
+          567.087890625,
+          1330.8184814453125,
+          315.40740966796875,
+          1330.8184814453125
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 0,
+        "text": "1. 三角恒等变换",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "1. 三角恒等变换",
+      "actual": "### 1. 三角恒等变换",
+      "raw_parent": "### 1. 三角恒等变换\n",
+      "bbox": [
+        315.40740966796875,
+        1287.77197265625,
+        567.087890625,
+        1330.8184814453125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "### "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图标题内容一致，差异为 Markdown 标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            309,
+            1290,
+            566,
+            1330
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "### 1. 三角恒等变换\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "### 1. 三角恒等变换\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          319.6069641113281,
+          1529.1983642578125,
+          562.7801513671875,
+          1529.1983642578125,
+          562.7801513671875,
+          1571.44482421875,
+          319.6069641113281,
+          1571.44482421875
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 2,
+        "text": "(1) 积化和差公式",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "(1) 积化和差公式",
+      "actual": "## (1) 积化和差公式",
+      "raw_parent": "## (1) 积化和差公式\n",
+      "bbox": [
+        319.6069641113281,
+        1529.1983642578125,
+        562.7801513671875,
+        1571.44482421875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图标题内容一致，差异为 Markdown 标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            315,
+            1532,
+            566,
+            1568
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (1) 积化和差公式\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (1) 积化和差公式\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          318.92108154296875,
+          1810.0552978515625,
+          564.61279296875,
+          1810.0552978515625,
+          564.61279296875,
+          1851.6492919921875,
+          318.92108154296875,
+          1851.6492919921875
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 4,
+        "text": "\\t(2) 和差化积公式",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "\\t(2) 和差化积公式",
+      "actual": "## (2) 和差化积公式",
+      "raw_parent": "## (2) 和差化积公式\n",
+      "bbox": [
+        318.92108154296875,
+        1810.0552978515625,
+        564.61279296875,
+        1851.6492919921875
+      ],
+      "differences": [
+        {
+          "reference": "\\t",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图标题内容一致，差异为 Markdown 标题。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            317,
+            1812,
+            568,
+            1848
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2) 和差化积公式\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2) 和差化积公式\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          310.26080322265625,
+          1358.9283447265625,
+          1292.137451171875,
+          1358.9283447265625,
+          1292.137451171875,
+          1502.026611328125,
+          310.26080322265625,
+          1502.026611328125
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 1,
+        "text": "万能置换公式： $ \\operatorname{s i n} x=\\frac{2 \\operatorname{t a n} \\frac{x} {2}} {1+\\operatorname{t a n}^{2} \\frac{x} {2}}； $ $ \\operatorname{c o s} x={\\frac{1-\\operatorname{t a n}^{2} {\\frac{x} {2}}} {1+\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $ $ \\operatorname{t a n} x={\\frac{2 \\operatorname{t a n} {\\frac{x} {2}}} {1-\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $",
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "万能置换公式： $ \\operatorname{s i n} x=\\frac{2 \\operatorname{t a n} \\frac{x} {2}} {1+\\operatorname{t a n}^{2} \\frac{x} {2}}； $ $ \\operatorname{c o s} x={\\frac{1-\\operatorname{t a n}^{2} {\\frac{x} {2}}} {1+\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $ $ \\operatorname{t a n} x={\\frac{2 \\operatorname{t a n} {\\frac{x} {2}}} {1-\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        310.26080322265625,
+        1358.9283447265625,
+        1292.137451171875,
+        1502.026611328125
+      ],
+      "differences": [
+        {
+          "reference": "万能置换公式： $ \\operatorname{s i n} x=\\frac{2 \\operatorname{t a n} \\frac{x} {2}} {1+\\operatorname{t a n}^{2} \\frac{x} {2}}； $ $ \\operatorname{c o s} x={\\frac{1-\\operatorname{t a n}^{2} {\\frac{x} {2}}} {1+\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $ $ \\operatorname{t a n} x={\\frac{2 \\operatorname{t a n} {\\frac{x} {2}}} {1-\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "万能置换整行被识别为公式区域而非正文，须与 b0004 公式响应核对。三条 sin/cos/tan 分式在该响应中完整；不是内容缺失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            300,
+            1355,
+            1292,
+            1511
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n",
+            "resource": "assets/p0001-b0004.png",
+            "display": false
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:5",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          305.9783630371095,
+          1593.6657903013013,
+          1402.0595351283143,
+          1593.6657903013013,
+          1402.0595351283143,
+          1672.9411008727668,
+          305.9783630371095,
+          1672.9411008727668
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 5,
+        "latex": "$$\n\\operatorname{s i n} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )+\\operatorname{s i n} ( A-B ) ] \\, ; \\, \\operatorname{c o s} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )-\\operatorname{s i n} ( A-B ) ];\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "$$\n\\operatorname{s i n} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )+\\operatorname{s i n} ( A-B ) ] \\, ; \\, \\operatorname{c o s} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )-\\operatorname{s i n} ( A-B ) ];\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "\\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；}",
+        "resource": "assets/p0001-b0006.png",
+        "display": true
+      },
+      "raw_parent": "$$ \\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；} $$\n",
+      "bbox": [
+        305.9783630371095,
+        1593.6657903013013,
+        1402.0595351283143,
+        1672.9411008727668
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐符号看图核对两条/组共八条恒等式：A±B、分母 2、sin/cos 位置以及最后 -2 均正确。差异是 operatorname 与 sin/cos 宏、分号和 display/inline 分隔。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            303,
+            1590,
+            1402,
+            1672
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ \\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；} $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "\\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；}",
+            "resource": "assets/p0001-b0006.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:8",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          306.3105675080968,
+          1699.8991821404204,
+          1422.8356947219036,
+          1699.8991821404204,
+          1422.8356947219036,
+          1778.311633822611,
+          306.3105675080968,
+          1778.311633822611
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 8,
+        "latex": "$$\n\\operatorname{c o s} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{c o s} ( A+B )+\\operatorname{c o s} ( A-B ) ] \\; ; \\; \\operatorname{s i n} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{c o s} ( A-B )-\\operatorname{c o s} ( A+B ) ];\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "$$\n\\operatorname{c o s} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{c o s} ( A+B )+\\operatorname{c o s} ( A-B ) ] \\; ; \\; \\operatorname{s i n} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{c o s} ( A-B )-\\operatorname{c o s} ( A+B ) ];\n$$",
+      "actual": {
+        "format": "markdown",
+        "text": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+        "resource": "assets/p0001-b0007.png",
+        "display": false
+      },
+      "raw_parent": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+      "bbox": [
+        306.3105675080968,
+        1699.8991821404204,
+        1422.8356947219036,
+        1778.311633822611
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐符号看图核对两条/组共八条恒等式：A±B、分母 2、sin/cos 位置以及最后 -2 均正确。差异是 operatorname 与 sin/cos 宏、分号和 display/inline 分隔。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            302,
+            1697,
+            1424,
+            1780
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+            "resource": "assets/p0001-b0007.png",
+            "display": false
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:7",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          305.1359252929689,
+          1866.8802490234377,
+          1327.3210744658413,
+          1866.8802490234377,
+          1327.3210744658413,
+          1957.8119430961503,
+          305.1359252929689,
+          1957.8119430961503
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 7,
+        "latex": "$$\n\\operatorname{s i n} A+\\operatorname{s i n} B=2 \\operatorname{s i n} {\\frac{A+B} {2}} \\operatorname{c o s} {\\frac{A-B} {2}} ; ~ ~ \\operatorname{s i n} A-\\operatorname{s i n} B=2 \\operatorname{c o s} {\\frac{A+B} {2}} \\operatorname{s i n} {\\frac{A-B} {2}};\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "$$\n\\operatorname{s i n} A+\\operatorname{s i n} B=2 \\operatorname{s i n} {\\frac{A+B} {2}} \\operatorname{c o s} {\\frac{A-B} {2}} ; ~ ~ \\operatorname{s i n} A-\\operatorname{s i n} B=2 \\operatorname{c o s} {\\frac{A+B} {2}} \\operatorname{s i n} {\\frac{A-B} {2}};\n$$",
+      "actual": {
+        "format": "markdown",
+        "text": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+        "resource": "assets/p0001-b0009.png",
+        "display": false
+      },
+      "raw_parent": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+      "bbox": [
+        305.1359252929689,
+        1866.8802490234377,
+        1327.3210744658413,
+        1957.8119430961503
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐符号看图核对两条/组共八条恒等式：A±B、分母 2、sin/cos 位置以及最后 -2 均正确。差异是 operatorname 与 sin/cos 宏、分号和 display/inline 分隔。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            304,
+            1870,
+            1319,
+            1953
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+            "resource": "assets/p0001-b0009.png",
+            "display": false
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:9",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          310.90133047843636,
+          1964.5855300598957,
+          1352.4232430397124,
+          1964.5855300598957,
+          1352.4232430397124,
+          2061.7487854052188,
+          310.90133047843636,
+          2061.7487854052188
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 9,
+        "latex": "$$\n\\operatorname{c o s} A+\\operatorname{c o s} B=2 \\operatorname{c o s} \\frac{A+B} {2} \\operatorname{c o s} \\frac{A-B} {2} ; ~ ~ \\operatorname{c o s} A-\\operatorname{c o s} B=-2 \\operatorname{s i n} \\frac{A+B} {2} \\operatorname{s i n} \\frac{A-B} {2};\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "$$\n\\operatorname{c o s} A+\\operatorname{c o s} B=2 \\operatorname{c o s} \\frac{A+B} {2} \\operatorname{c o s} \\frac{A-B} {2} ; ~ ~ \\operatorname{c o s} A-\\operatorname{c o s} B=-2 \\operatorname{s i n} \\frac{A+B} {2} \\operatorname{s i n} \\frac{A-B} {2};\n$$",
+      "actual": {
+        "format": "markdown",
+        "text": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+        "resource": "assets/p0001-b0010.png",
+        "display": false
+      },
+      "raw_parent": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+      "bbox": [
+        310.90133047843636,
+        1964.5855300598957,
+        1352.4232430397124,
+        2061.7487854052188
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐符号看图核对两条/组共八条恒等式：A±B、分母 2、sin/cos 位置以及最后 -2 均正确。差异是 operatorname 与 sin/cos 宏、分号和 display/inline 分隔。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            305,
+            1975,
+            1353,
+            2057
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+            "resource": "assets/p0001-b0010.png",
+            "display": false
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+    "sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-09.json",
+    "sha256": "d1a8d0ba3aa3a2076cb4deb848c04ae76ed13608aa23425abf754d0bb60200f5"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 9,
+  "unverified_units": []
+}

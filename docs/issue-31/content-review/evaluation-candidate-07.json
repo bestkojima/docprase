@@ -1,0 +1,1617 @@
+{
+  "page": "evaluation-candidate-07",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "本页明确真实内容错误为b0006两处64→54；另核实两项GT正文漏内容，严格成绩不改。",
+  "viewed_sheets": {
+    "sheet-03.jpg": "254944a07512204bbb1db313087d505ff8a7e95a653e6d35f3a0d27508763f57",
+    "sheet-02.jpg": "a9452fd140acdfcbe1a228aa3529fe0671e47425877700244486ab7117e5aea0",
+    "sheet-01.jpg": "ecadc98c7922f031418fdbfec03632e879eee493a213edd7e906694b44d24192"
+  },
+  "items": [
+    {
+      "id": "text:18",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          61.13608169555664,
+          708.2027587890625,
+          450.457763671875,
+          708.2027587890625,
+          450.457763671875,
+          906.9505004882812,
+          61.13608169555664,
+          906.9505004882812
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 18,
+        "text": "对于等比数列的相关量已知几个量，就可以确定其他量？",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "对于等比数列的相关量已知几个量，就可以确定其他量？",
+      "actual": "对于等比数列的相关量 $a_{1}, a_{n}, q, n, S_{n}$，已知几个量，就可以确定其他量？",
+      "raw_parent": "对于等比数列的相关量  $a_{1}, a_{n}, q, n, S_{n}$，已知几个量，就可以确定其他量？\n",
+      "bbox": [
+        61.13608169555664,
+        708.2027587890625,
+        450.457763671875,
+        906.9505004882812
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " $a_{1}, a_{n}, q, n, S_{n}$，"
+        }
+      ],
+      "review": {
+        "classification": [
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "裁图存在 a1, an, q, n, Sn；GT只保留了句子，预测保留可见量，没有新增条件。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            56,
+            709,
+            449,
+            911
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "对于等比数列的相关量  $a_{1}, a_{n}, q, n, S_{n}$，已知几个量，就可以确定其他量？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "对于等比数列的相关量  $a_{1}, a_{n}, q, n, S_{n}$，已知几个量，就可以确定其他量？\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          672.4787036527454,
+          199.3988349457723,
+          1489.3368121465965,
+          199.3988349457723,
+          1489.3368121465965,
+          256.3889355383666,
+          672.4787036527454,
+          256.3889355383666
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 7,
+        "text": "因为 $ a_{n}\\!=\\!a_{1}q^{n-1} $ ，所以上面的公式还可以写成",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "因为 $ a_{n}\\!=\\!a_{1}q^{n-1} $ ，所以上面的公式还可以写成",
+      "actual": "因为 $a_n = a_1 q^{n-1}$，所以上面的公式还可以写成",
+      "raw_parent": "因为  $a_n = a_1 q^{n-1}$，所以上面的公式还可以写成\n",
+      "bbox": [
+        672.4787036527454,
+        199.3988349457723,
+        1489.3368121465965,
+        256.3889355383666
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "a_n ="
+        },
+        {
+          "reference": "{n}\\!=\\!a_{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            661,
+            203,
+            1491,
+            256
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "因为  $a_n = a_1 q^{n-1}$，所以上面的公式还可以写成\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "因为  $a_n = a_1 q^{n-1}$，所以上面的公式还可以写成\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          595.4777221679688,
+          452.5518493652344,
+          1660.1954345703125,
+          452.5518493652344,
+          1660.1954345703125,
+          565.8917236328125,
+          595.4777221679688,
+          565.8917236328125
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 9,
+        "text": "有了上述公式，就可以解决本节开头提出的问题，由 $ a_1 $ $ =1 $ , q=2, n=64 , 可得",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "有了上述公式，就可以解决本节开头提出的问题，由 $ a_1 $ $ =1 $ , q=2, n=64 , 可得",
+      "actual": "有了上述公式，就可以解决本节开头提出的问题。由 $a_{1}=1$， $q=2$， $n=64$，可得",
+      "raw_parent": "有了上述公式，就可以解决本节开头提出的问题。由  $a_{1}=1$， $q=2$， $n=64$，可得\n",
+      "bbox": [
+        595.4777221679688,
+        452.5518493652344,
+        1660.1954345703125,
+        565.8917236328125
+      ],
+      "differences": [
+        {
+          "reference": "，",
+          "actual": "。"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "{"
+        },
+        {
+          "reference": "",
+          "actual": "}=1$，"
+        },
+        {
+          "reference": " $ =1 $ , ",
+          "actual": ""
+        },
+        {
+          "reference": ",",
+          "actual": "$，"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " , ",
+          "actual": "$，"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            582,
+            452,
+            1665,
+            569
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "有了上述公式，就可以解决本节开头提出的问题。由  $a_{1}=1$， $q=2$， $n=64$，可得\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "有了上述公式，就可以解决本节开头提出的问题。由  $a_{1}=1$， $q=2$， $n=64$，可得\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:8",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          590.9603038158779,
+          871.95849609375,
+          1663.9926358380226,
+          871.95849609375,
+          1663.9926358380226,
+          1049.2303466796873,
+          590.9603038158779,
+          1049.2303466796873
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 8,
+        "text": "$ 2^{6 4}-1 $这个数很大，超过了 $ 1.84\\times10^{19} $ ，假定千粒麦子的质量为 40g ，那么麦粒的总质量超过了7000亿吨，因此，国王不能实现他的诺言.",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "$ 2^{6 4}-1 $这个数很大，超过了 $ 1.84\\times10^{19} $ ，假定千粒麦子的质量为 40g ，那么麦粒的总质量超过了7000亿吨，因此，国王不能实现他的诺言.",
+      "actual": "$2^{64}-1$ 这个数很大，超过了 $1.84 \\times 10^{19}$ 。假定千粒麦子的质量为 40 g，那么麦粒的总质量超过了 7 000 亿吨，因此，国王不能实现他的诺言。",
+      "raw_parent": "$2^{64}-1$ 这个数很大，超过了  $1.84 \\times 10^{19}$ 。假定千粒麦子的质量为 40 g，那么麦粒的总质量超过了 7 000 亿吨，因此，国王不能实现他的诺言。\n",
+      "bbox": [
+        590.9603038158779,
+        871.95849609375,
+        1663.9926358380226,
+        1049.2303466796873
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "，",
+          "actual": "。"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": ".",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            581,
+            866,
+            1665,
+            1052
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "$2^{64}-1$ 这个数很大，超过了  $1.84 \\times 10^{19}$ 。假定千粒麦子的质量为 40 g，那么麦粒的总质量超过了 7 000 亿吨，因此，国王不能实现他的诺言。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$2^{64}-1$ 这个数很大，超过了  $1.84 \\times 10^{19}$ 。假定千粒麦子的质量为 40 g，那么麦粒的总质量超过了 7 000 亿吨，因此，国王不能实现他的诺言。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:15",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          678.082780313259,
+          1148.2941649971185,
+          1313.3749393720473,
+          1148.2941649971185,
+          1313.3749393720473,
+          1199.0609261272332,
+          678.082780313259,
+          1199.0609261272332
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 15,
+        "text": "例1求下列等比数列前8项的和：",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "例1求下列等比数列前8项的和：",
+      "actual": "例 1 求下列等比数列前 8 项的和：",
+      "raw_parent": "例 1 求下列等比数列前 8 项的和：\n",
+      "bbox": [
+        678.082780313259,
+        1148.2941649971185,
+        1313.3749393720473,
+        1199.0609261272332
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            669,
+            1136,
+            1319,
+            1203
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "例 1 求下列等比数列前 8 项的和：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "例 1 求下列等比数列前 8 项的和：\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          670.0603084764152,
+          1234.5737534720274,
+          1053.2886691026524,
+          1234.5737534720274,
+          1053.2886691026524,
+          1328.1353649530424,
+          670.0603084764152,
+          1328.1353649530424
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 2,
+        "text": "\t(1) $ \\frac{1}{2},~\\frac{1}{4},~\\frac{1}{8},~\\cdots; $",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "\t(1) $ \\frac{1}{2},~\\frac{1}{4},~\\frac{1}{8},~\\cdots; $",
+      "actual": "(1) $\\frac{1}{2}$， $\\frac{1}{4}$， $\\frac{1}{8}$，……",
+      "raw_parent": "(1)  $\\frac{1}{2}$， $\\frac{1}{4}$， $\\frac{1}{8}$，……\n",
+      "bbox": [
+        670.0603084764152,
+        1234.5737534720274,
+        1053.2886691026524,
+        1328.1353649530424
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": ",~",
+          "actual": "$， $"
+        },
+        {
+          "reference": ",~",
+          "actual": "$， $"
+        },
+        {
+          "reference": ",~\\cdots; ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "，……"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            666,
+            1235,
+            1050,
+            1326
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1)  $\\frac{1}{2}$， $\\frac{1}{4}$， $\\frac{1}{8}$，……\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1)  $\\frac{1}{2}$， $\\frac{1}{4}$， $\\frac{1}{8}$，……\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          669.3118155845671,
+          1348.3446730329417,
+          1197.7477972293395,
+          1348.3446730329417,
+          1197.7477972293395,
+          1439.6608058384122,
+          669.3118155845671,
+          1439.6608058384122
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 16,
+        "text": "\t(2) $ a_{9}=\\frac{1}{243} $ , q＜0.",
+        "attribute": {}
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "\t(2) $ a_{9}=\\frac{1}{243} $ , q＜0.",
+      "actual": "(2) $a_{1}=27$, $a_{9}=\\frac{1}{243}$, $q<0$.",
+      "raw_parent": "(2)  $a_{1}=27$,  $a_{9}=\\frac{1}{243}$,  $q<0$.\n",
+      "bbox": [
+        669.3118155845671,
+        1348.3446730329417,
+        1197.7477972293395,
+        1439.6608058384122
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "a_{1}=27$,"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$,"
+        },
+        {
+          "reference": " , ",
+          "actual": ""
+        },
+        {
+          "reference": "＜",
+          "actual": "<"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        }
+      ],
+      "review": {
+        "classification": [
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图(2)明确写 a1=27；GT该行漏了这个条件，预测与图一致；数字/负号均保留。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            666,
+            1348,
+            1199,
+            1437
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2)  $a_{1}=27$,  $a_{9}=\\frac{1}{243}$,  $q<0$.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2)  $a_{1}=27$,  $a_{9}=\\frac{1}{243}$,  $q<0$.\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          669.8611450195312,
+          1459.2719211818949,
+          1492.8292071047488,
+          1459.2719211818949,
+          1492.8292071047488,
+          1544.4441267431662,
+          669.8611450195312,
+          1544.4441267431662
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 3,
+        "text": "解： ( 1 ) 因为 $ a_{1}=1 \\,, \\, \\, \\, q=\\frac{1} {2} $ , 所以当 n=8时，",
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "解： ( 1 ) 因为 $ a_{1}=1 \\,, \\, \\, \\, q=\\frac{1} {2} $ , 所以当 n=8时，",
+      "actual": "解：(1) 因为 $a_{1}=1$， $q=\\frac{1}{2}$，所以当 n=8 时，",
+      "raw_parent": "解：(1) 因为  $a_{1}=1$， $q=\\frac{1}{2}$，所以当 n=8 时，\n",
+      "bbox": [
+        669.8611450195312,
+        1459.2719211818949,
+        1492.8292071047488,
+        1544.4441267431662
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$，"
+        },
+        {
+          "reference": "\\,, \\, \\, \\, ",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " , ",
+          "actual": "，"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            663,
+            1460,
+            1496,
+            1543
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "解：(1) 因为  $a_{1}=1$， $q=\\frac{1}{2}$，所以当 n=8 时，\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "解：(1) 因为  $a_{1}=1$， $q=\\frac{1}{2}$，所以当 n=8 时，\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          665.9615986217206,
+          1767.4658112250033,
+          1233.9490699833586,
+          1767.4658112250033,
+          1233.9490699833586,
+          1860.8712478697225,
+          665.9615986217206,
+          1860.8712478697225
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 12,
+        "text": "( 2 )由 $ a_{1}=2 7 \\,, \\, \\, \\, a_{9}=\\frac{1} {2 4 3} \\,, $ , 可得",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "( 2 )由 $ a_{1}=2 7 \\,, \\, \\, \\, a_{9}=\\frac{1} {2 4 3} \\,, $ , 可得",
+      "actual": "(2) 由 $a_{1}=27$, $a_{9}=\\frac{1}{243}$, 可得",
+      "raw_parent": "(2) 由  $a_{1}=27$,  $a_{9}=\\frac{1}{243}$, 可得\n",
+      "bbox": [
+        665.9615986217206,
+        1767.4658112250033,
+        1233.9490699833586,
+        1860.8712478697225
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "2)"
+        },
+        {
+          "reference": "2 )",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " \\,",
+          "actual": "$"
+        },
+        {
+          "reference": "\\, \\, \\, ",
+          "actual": "$"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " \\,, ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            665,
+            1770,
+            1240,
+            1859
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) 由  $a_{1}=27$,  $a_{9}=\\frac{1}{243}$, 可得\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) 由  $a_{1}=27$,  $a_{9}=\\frac{1}{243}$, 可得\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          676.4074096679688,
+          1988.9407958984375,
+          978.7250366210938,
+          1988.9407958984375,
+          978.7250366210938,
+          2038.8228759765625,
+          676.4074096679688,
+          2038.8228759765625
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 11,
+        "text": "又由 q＜0 ，可得",
+        "attribute": {}
+      },
+      "block_id": "b0016",
+      "strict_exact": false,
+      "expected": "又由 q＜0 ，可得",
+      "actual": "## 又由 $q < 0$，可得",
+      "raw_parent": "## 又由  $q < 0$，可得\n",
+      "bbox": [
+        676.4074096679688,
+        1988.9407958984375,
+        978.7250366210938,
+        2038.8228759765625
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "＜",
+          "actual": " < "
+        },
+        {
+          "reference": " ",
+          "actual": "$"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            667,
+            1985,
+            980,
+            2040
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 又由  $q < 0$，可得\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 又由  $q < 0$，可得\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          673.6730346679688,
+          2162.190185546875,
+          966.9024658203125,
+          2162.190185546875,
+          966.9024658203125,
+          2209.9130859375,
+          673.6730346679688,
+          2209.9130859375
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 1,
+        "text": "于是当 n=8时，",
+        "attribute": {}
+      },
+      "block_id": "b0018",
+      "strict_exact": false,
+      "expected": "于是当 n=8时，",
+      "actual": "## 于是当 n=8 时，",
+      "raw_parent": "## 于是当 n=8 时，\n",
+      "bbox": [
+        673.6730346679688,
+        2162.190185546875,
+        966.9024658203125,
+        2209.9130859375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0018",
+          "bbox": [
+            667,
+            2159,
+            965,
+            2211
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 于是当 n=8 时，\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 于是当 n=8 时，\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          1383.4430101762953,
+          6.306545423979287,
+          1575.610341603348,
+          6.306545423979287,
+          1575.610341603348,
+          142.52941463138131,
+          1383.4430101762953,
+          142.52941463138131
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 5,
+        "text": "第二章",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "第二章",
+      "actual": "## 第二章",
+      "raw_parent": "## 第二章\n",
+      "bbox": [
+        1383.4430101762953,
+        6.306545423979287,
+        1575.610341603348,
+        142.52941463138131
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            1381,
+            60,
+            1574,
+            130
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第二章\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第二章\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:19",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          696.6929864125913,
+          76.8785782574023,
+          920.1301038974034,
+          76.8785782574023,
+          920.1301038974034,
+          123.42797773340499,
+          696.6929864125913,
+          123.42797773340499
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 19,
+        "text": "第二章数列",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "第二章数列",
+      "actual": "## 第二章 数列",
+      "raw_parent": "## 第二章 数列\n",
+      "bbox": [
+        696.6929864125913,
+        76.8785782574023,
+        920.1301038974034,
+        123.42797773340499
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            693,
+            76,
+            922,
+            124
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第二章 数列\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第二章 数列\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          1571.1490984096451,
+          2564.8224439329124,
+          1619.7728012085065,
+          2564.8224439329124,
+          1619.7728012085065,
+          2603.240053100273,
+          1571.1490984096451,
+          2603.240053100273
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 13,
+        "text": "63",
+        "attribute": {}
+      },
+      "block_id": "b0020",
+      "strict_exact": false,
+      "expected": "63",
+      "actual": "## 63",
+      "raw_parent": "## 63\n",
+      "bbox": [
+        1571.1490984096451,
+        2564.8224439329124,
+        1619.7728012085065,
+        2603.240053100273
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图文字、数值和数学结构一致；差异为LaTeX空距、分隔符、标题前缀、空格与标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0020",
+          "bbox": [
+            1570,
+            2562,
+            1622,
+            2604
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 63\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 63\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:14",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          925.1410350128203,
+          313.9406485762762,
+          1310.3743613296324,
+          313.9406485762762,
+          1310.3743613296324,
+          399.06913187425704,
+          925.1410350128203,
+          399.06913187425704
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 14,
+        "latex": "$$\nS_{n}=\\frac{a_{1}-a_{n} q} {1-q} \\ \\ ( q \\neq1 ).\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "$$\nS_{n}=\\frac{a_{1}-a_{n} q} {1-q} \\ \\ ( q \\neq1 ).\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "S_{n}=\\frac{a_{1}-a_{n}q}{1-q}\\quad(q\\neq1).",
+        "resource": "assets/p0001-b0004.png",
+        "display": true
+      },
+      "raw_parent": "$$ S_{n}=\\frac{a_{1}-a_{n}q}{1-q}\\quad(q\\neq1). $$\n",
+      "bbox": [
+        925.1410350128203,
+        313.9406485762762,
+        1310.3743613296324,
+        399.06913187425704
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图分子 an q、条件q不等1均保留；差异只在空距命令。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            921,
+            302,
+            1384,
+            407
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ S_{n}=\\frac{a_{1}-a_{n}q}{1-q}\\quad(q\\neq1). $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "S_{n}=\\frac{a_{1}-a_{n}q}{1-q}\\quad(q\\neq1).",
+            "resource": "assets/p0001-b0004.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:17",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          827.8607494811461,
+          579.0824789661384,
+          1150.3871262927403,
+          579.0824789661384,
+          1150.3871262927403,
+          853.7700151980224,
+          827.8607494811461,
+          853.7700151980224
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 17,
+        "latex": "$$\n\\begin{aligned} S_{n} & =\\frac{a_{1}\\left(1-q^{n}\\right)}{1-q} \\\\ & =\\frac{1 \\times\\left(1-2^{64}\\right)}{1-2} \\\\ & =2^{64}-1 .\\end{aligned}\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "$$\n\\begin{aligned} S_{n} & =\\frac{a_{1}\\left(1-q^{n}\\right)}{1-q} \\\\ & =\\frac{1 \\times\\left(1-2^{64}\\right)}{1-2} \\\\ & =2^{64}-1 .\\end{aligned}\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "\\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{54})}{1-2}\\\\&=2^{54}-1.\\end{aligned}",
+        "resource": "assets/p0001-b0006.png",
+        "display": true
+      },
+      "raw_parent": "$$ \\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{54})}{1-2}\\\\&=2^{54}-1.\\end{aligned} $$\n",
+      "bbox": [
+        827.8607494811461,
+        579.0824789661384,
+        1150.3871262927403,
+        853.7700151980224
+      ],
+      "review": {
+        "classification": [
+          "transcription_error",
+          "representation"
+        ],
+        "reason": "原图/GT两处指数64，原始响应均为54；另有括号尺寸LaTeX表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            826,
+            583,
+            1151,
+            851
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ \\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{54})}{1-2}\\\\&=2^{54}-1.\\end{aligned} $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "\\begin{aligned}S_{n}&=\\frac{a_{1}(1-q^{n})}{1-q}\\\\&=\\frac{1\\times(1-2^{54})}{1-2}\\\\&=2^{54}-1.\\end{aligned}",
+            "resource": "assets/p0001-b0006.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:10",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          901.3608059972925,
+          1562.1261836227945,
+          1341.1695016494664,
+          1562.1261836227945,
+          1341.1695016494664,
+          1748.8519807242437,
+          901.3608059972925,
+          1748.8519807242437
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 10,
+        "latex": "$$\n\\mathbf{S}_{n}\\!=\\!\\frac{\\frac{1}{2}\\Big[1\\!-\\!\\left(\\frac{1}{2}\\right)^{8}\\Big]}{1\\!-\\!\\frac{1}{2}}\\!=\\!\\frac{255}{256}.\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "$$\n\\mathbf{S}_{n}\\!=\\!\\frac{\\frac{1}{2}\\Big[1\\!-\\!\\left(\\frac{1}{2}\\right)^{8}\\Big]}{1\\!-\\!\\frac{1}{2}}\\!=\\!\\frac{255}{256}.\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "S_{n}=\\frac{\\frac{1}{2}\\left[1-\\left(\\frac{1}{2}\\right)^{8}\\right]}{1-\\frac{1}{2}}=\\frac{255}{256}.",
+        "resource": "assets/p0001-b0013.png",
+        "display": true
+      },
+      "raw_parent": "$$ S_{n}=\\frac{\\frac{1}{2}\\left[1-\\left(\\frac{1}{2}\\right)^{8}\\right]}{1-\\frac{1}{2}}=\\frac{255}{256}. $$\n",
+      "bbox": [
+        901.3608059972925,
+        1562.1261836227945,
+        1341.1695016494664,
+        1748.8519807242437
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图1/2、8次幂、255/256及分式完整；mathbf/Big/left和空距写法不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            891,
+            1563,
+            1346,
+            1748
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ S_{n}=\\frac{\\frac{1}{2}\\left[1-\\left(\\frac{1}{2}\\right)^{8}\\right]}{1-\\frac{1}{2}}=\\frac{255}{256}. $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "S_{n}=\\frac{\\frac{1}{2}\\left[1-\\left(\\frac{1}{2}\\right)^{8}\\right]}{1-\\frac{1}{2}}=\\frac{255}{256}.",
+            "resource": "assets/p0001-b0013.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:4",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          1003.5043843830009,
+          1884.1048448461092,
+          1243.92987129435,
+          1884.1048448461092,
+          1243.92987129435,
+          1968.5634468055996,
+          1003.5043843830009,
+          1968.5634468055996
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 4,
+        "latex": "$$\n{\\frac{1}{243}}{=}27\\cdot q^{8}.\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "$$\n{\\frac{1}{243}}{=}27\\cdot q^{8}.\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "\\frac{1}{243}=27\\cdot q^{8}.",
+        "resource": "assets/p0001-b0015.png",
+        "display": true
+      },
+      "raw_parent": "$$ \\frac{1}{243}=27\\cdot q^{8}. $$\n",
+      "bbox": [
+        1003.5043843830009,
+        1884.1048448461092,
+        1243.92987129435,
+        1968.5634468055996
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "1/243=27·q^8完整；等号外大括号为GT表示。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            993,
+            1878,
+            1241,
+            1968
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ \\frac{1}{243}=27\\cdot q^{8}. $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "\\frac{1}{243}=27\\cdot q^{8}.",
+            "resource": "assets/p0001-b0015.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:0",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          1042.404296875,
+          2058.17578125,
+          1200.113525390625,
+          2058.17578125,
+          1200.113525390625,
+          2139.50048828125,
+          1042.404296875,
+          2139.50048828125
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 0,
+        "latex": "$$\nq=-\\frac{1} {3}.\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0017",
+      "strict_exact": true,
+      "expected": "$$\nq=-\\frac{1} {3}.\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "q=-\\frac{1}{3}.",
+        "resource": "assets/p0001-b0017.png",
+        "display": true
+      },
+      "raw_parent": "$$ q=-\\frac{1}{3}. $$\n",
+      "bbox": [
+        1042.404296875,
+        2058.17578125,
+        1200.113525390625,
+        2139.50048828125
+      ],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "q=-1/3及句点与原图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0017",
+          "bbox": [
+            1035,
+            2055,
+            1199,
+            2143
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ q=-\\frac{1}{3}. $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "q=-\\frac{1}{3}.",
+            "resource": "assets/p0001-b0017.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "independent_formula:6",
+      "kind": "independent_formula",
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          858.6993257219422,
+          2228.30691885054,
+          1378.7499150336048,
+          2228.30691885054,
+          1378.7499150336048,
+          2411.685639048592,
+          858.6993257219422,
+          2411.685639048592
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 6,
+        "latex": "$$\nS_{8} \\!=\\! \\frac{2 7 \\Big[ 1 \\!-\\! \\Big( \\!-\\! \\frac{1} {3} \\Big)^{8} \\Big]} {1 \\!-\\! \\Big( \\!-\\! \\frac{1} {3} \\Big)} \\!=\\! \\frac{1 6 4 0} {8 1} \\!.\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0019",
+      "strict_exact": false,
+      "expected": "$$\nS_{8} \\!=\\! \\frac{2 7 \\Big[ 1 \\!-\\! \\Big( \\!-\\! \\frac{1} {3} \\Big)^{8} \\Big]} {1 \\!-\\! \\Big( \\!-\\! \\frac{1} {3} \\Big)} \\!=\\! \\frac{1 6 4 0} {8 1} \\!.\n$$",
+      "actual": {
+        "format": "latex",
+        "text": "S_{8}=\\frac{27\\left[1-\\left(-\\frac{1}{3}\\right)^{8}\\right]}{1-\\left(-\\frac{1}{3}\\right)}=\\frac{1\\ 640}{81}.",
+        "resource": "assets/p0001-b0019.png",
+        "display": true
+      },
+      "raw_parent": "$$ S_{8}=\\frac{27\\left[1-\\left(-\\frac{1}{3}\\right)^{8}\\right]}{1-\\left(-\\frac{1}{3}\\right)}=\\frac{1\\ 640}{81}. $$\n",
+      "bbox": [
+        858.6993257219422,
+        2228.30691885054,
+        1378.7499150336048,
+        2411.685639048592
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图1640按千位留空，预测1\\ 640保留相同数字；S8、符号和分母81一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0019",
+          "bbox": [
+            851,
+            2223,
+            1384,
+            2407
+          ],
+          "type": "formula",
+          "status": "ok",
+          "raw_output": "$$ S_{8}=\\frac{27\\left[1-\\left(-\\frac{1}{3}\\right)^{8}\\right]}{1-\\left(-\\frac{1}{3}\\right)}=\\frac{1\\ 640}{81}. $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "S_{8}=\\frac{27\\left[1-\\left(-\\frac{1}{3}\\right)^{8}\\right]}{1-\\left(-\\frac{1}{3}\\right)}=\\frac{1\\ 640}{81}.",
+            "resource": "assets/p0001-b0019.png",
+            "display": true
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_913.jpg",
+    "sha256": "ea3df293a181a05689c4a25b92626a3a743c8c4ae5122ae8df63c0ee9acc24c8"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/evaluation-candidate-07.json",
+    "sha256": "41c8551e33f7b6731e1849ec6304911b586c020e7afcd3b85b7ed4a21814e642"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 20,
+  "unverified_units": []
+}

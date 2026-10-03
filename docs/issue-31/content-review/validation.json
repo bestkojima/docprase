@@ -1,0 +1,68 @@
+{
+  "inventory": "passed",
+  "viewed_sheet_and_source_hashes": "passed",
+  "frozen_identity": "unchanged",
+  "negative_integrity_checks": [
+    {
+      "case": "candidate_sha",
+      "rejected": true
+    },
+    {
+      "case": "evaluation_sha",
+      "rejected": true
+    },
+    {
+      "case": "raw_parent",
+      "rejected": true
+    },
+    {
+      "case": "normalized_actual",
+      "rejected": true
+    },
+    {
+      "case": "table_actual",
+      "rejected": true
+    },
+    {
+      "case": "final_cells",
+      "rejected": true
+    },
+    {
+      "case": "inline_row",
+      "rejected": true
+    },
+    {
+      "case": "old_missing_item",
+      "rejected": true
+    },
+    {
+      "case": "inline_evidence_missing",
+      "rejected": true
+    }
+  ],
+  "ctest": {
+    "passed": 34,
+    "total": 34,
+    "log_sha256": "5e76ba858f086b0899491312d8fbf62aee868c7adc9fc77ded66495094fc180e"
+  },
+  "unittest": {
+    "passed": 55,
+    "total": 55,
+    "log_sha256": "d6772cc2d0c3c508ad5a855a79d08d443501dc848541bf81550032efae0f4193"
+  },
+  "contact_sheet_reproduction": {
+    "count": 107,
+    "all_sha256_equal": true
+  },
+  "browser_viewer": {
+    "loaded_units": 999,
+    "filters": {
+      "unverified": 4,
+      "transcription_error": 30,
+      "export_fallback": 3,
+      "structure_error": 1
+    },
+    "search_empty_results": true,
+    "passed": true
+  }
+}

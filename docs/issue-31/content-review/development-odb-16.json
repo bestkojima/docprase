@@ -1,0 +1,925 @@
+{
+  "page": "development-odb-16",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "GT 漏“反应”及连接符误标；未发现新增词数内容错误。",
+  "viewed_sheets": {
+    "sheet-01.jpg": "584daf183e88cd9ae4133016e1ca14d8795b7c8d1ee7db88b313e0439acdc9bc"
+  },
+  "items": [
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          228.6706085205078,
+          256.6298828125,
+          1301.120849609375,
+          256.6298828125,
+          1301.120849609375,
+          339.340087890625,
+          228.6706085205078,
+          339.340087890625
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 6,
+        "text": "量稀盐酸，观察到的现象可能是 ____,此时试管中一定发生的化学有（写化学方程式）____。",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "量稀盐酸，观察到的现象可能是 ____,此时试管中一定发生的化学有（写化学方程式）____。",
+      "actual": "量稀盐酸，观察到的现象可能是___，此时试管中一定发生的化学反应有（写化学方程式）___。",
+      "raw_parent": "量稀盐酸，观察到的现象可能是___，此时试管中一定发生的化学反应有（写化学方程式）___。\n",
+      "bbox": [
+        228.6706085205078,
+        256.6298828125,
+        1301.120849609375,
+        339.340087890625
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "_,",
+          "actual": "，"
+        },
+        {
+          "reference": "",
+          "actual": "反应"
+        },
+        {
+          "reference": "_",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图“化学反应有”四字，GT 漏“反应”；模型完整。下划线长度为表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            224,
+            259,
+            1304,
+            343
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "量稀盐酸，观察到的现象可能是___，此时试管中一定发生的化学反应有（写化学方程式）___。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "量稀盐酸，观察到的现象可能是___，此时试管中一定发生的化学反应有（写化学方程式）___。\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          188.0941925048828,
+          356.3510437011719,
+          587.0927734375,
+          356.3510437011719,
+          587.0927734375,
+          390.91534423828125,
+          188.0941925048828,
+          390.91534423828125
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 1,
+        "text": "10. 某同学做了以下两个实验：",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": true,
+      "expected": "10. 某同学做了以下两个实验：",
+      "actual": "10. 某同学做了以下两个实验：",
+      "raw_parent": "10. 某同学做了以下两个实验：\n",
+      "bbox": [
+        188.0941925048828,
+        356.3510437011719,
+        587.0927734375,
+        390.91534423828125
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致并看图确认。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            185,
+            355,
+            586,
+            394
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "10. 某同学做了以下两个实验：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "10. 某同学做了以下两个实验：\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          680.7965797523922,
+          792.0624488529562,
+          789.1990940698031,
+          792.0624488529562,
+          789.1990940698031,
+          825.6519603315904,
+          680.7965797523922,
+          825.6519603315904
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 12,
+        "text": "图 11-25",
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "图 11-25",
+      "actual": "## 图 11-25",
+      "raw_parent": "## 图 11-25\n",
+      "bbox": [
+        680.7965797523922,
+        792.0624488529562,
+        789.1990940698031,
+        825.6519603315904
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            674,
+            791,
+            791,
+            826
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 图 11-25\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 图 11-25\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          247.1365976461728,
+          862.5165405273444,
+          1307.3777308388642,
+          862.5165405273444,
+          1307.3777308388642,
+          957.391852936718,
+          247.1365976461728,
+          957.391852936718
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 3,
+        "text": "（1）实验一中澄清石灰水的现象是____，产生此现象的原因是____。",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "（1）实验一中澄清石灰水的现象是____，产生此现象的原因是____。",
+      "actual": "（1）实验一中澄清石灰水的现象是___，产生此现象的原因是___。",
+      "raw_parent": "（1）实验一中澄清石灰水的现象是___，产生此现象的原因是___。\n",
+      "bbox": [
+        247.1365976461728,
+        862.5165405273444,
+        1307.3777308388642,
+        957.391852936718
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": ""
+        },
+        {
+          "reference": "_",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            243,
+            866,
+            1305,
+            954
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（1）实验一中澄清石灰水的现象是___，产生此现象的原因是___。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（1）实验一中澄清石灰水的现象是___，产生此现象的原因是___。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          248.1087620985032,
+          960.539081531771,
+          1306.50264736997,
+          960.539081531771,
+          1306.50264736997,
+          1048.7969065758236,
+          248.1087620985032,
+          1048.7969065758236
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 13,
+        "text": "（2）实验二中澄清石灰水的现象是____，产生此现象的原因是____ ____。",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "（2）实验二中澄清石灰水的现象是____，产生此现象的原因是____ ____。",
+      "actual": "（2）实验二中澄清石灰水的现象是___，产生此现象的原因是___。",
+      "raw_parent": "（2）实验二中澄清石灰水的现象是___，产生此现象的原因是___。\n",
+      "bbox": [
+        248.1087620985032,
+        960.539081531771,
+        1306.50264736997,
+        1048.7969065758236
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": ""
+        },
+        {
+          "reference": "_ ____",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            244,
+            962,
+            1306,
+            1053
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "（2）实验二中澄清石灰水的现象是___，产生此现象的原因是___。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（2）实验二中澄清石灰水的现象是___，产生此现象的原因是___。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          192.4893798828125,
+          1116.7625732421875,
+          340.54351806640625,
+          1116.7625732421875,
+          340.54351806640625,
+          1154.234375,
+          192.4893798828125,
+          1154.234375
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 9,
+        "text": "三、计算题",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "三、计算题",
+      "actual": "## 三、 计算题",
+      "raw_parent": "## 三、 计算题\n",
+      "bbox": [
+        192.4893798828125,
+        1116.7625732421875,
+        340.54351806640625,
+        1154.234375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            183,
+            1116,
+            343,
+            1155
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 三、 计算题\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 三、 计算题\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          192.6434326171875,
+          1170.205322265625,
+          1303.7099609375,
+          1170.205322265625,
+          1303.7099609375,
+          1381.2445068359375,
+          192.6434326171875,
+          1381.2445068359375
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 0,
+        "text": "11. 我国卫生洁具清洗剂国家标准规定,卫生间专用型的清洗剂,盐酸含量不得高于 12% （指溶质的质量分数）,以保护瓷砖表面不被过分腐蚀.小刚同学对某种洁厕剂中盐酸含量进行测定: 10g该洁厕剂恰好与 20g溶质的质量分数为 10%的氢氧化钠溶液完全反应（假设该洁厕剂中的其他成分都不与氢氧化钠反应）.该洁厕剂是否符合国家标准?",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "11. 我国卫生洁具清洗剂国家标准规定,卫生间专用型的清洗剂,盐酸含量不得高于 12% （指溶质的质量分数）,以保护瓷砖表面不被过分腐蚀.小刚同学对某种洁厕剂中盐酸含量进行测定: 10g该洁厕剂恰好与 20g溶质的质量分数为 10%的氢氧化钠溶液完全反应（假设该洁厕剂中的其他成分都不与氢氧化钠反应）.该洁厕剂是否符合国家标准?",
+      "actual": "11. 我国卫生洁具清洗剂国家标准规定，卫生间专用型的清洗剂，盐酸含量不得高于12%（指溶质的质量分数），以保护瓷砖表面不被过分腐蚀。小刚同学对某种洁厕剂中盐酸含量进行测定：10 g 该洁厕剂恰好与 20 g 溶质的质量分数为 10% 的氢氧化钠溶液完全反应（假设该洁厕剂中的其他成分都不与氢氧化钠反应）。该洁厕剂是否符合国家标准？",
+      "raw_parent": "11. 我国卫生洁具清洗剂国家标准规定，卫生间专用型的清洗剂，盐酸含量不得高于12%（指溶质的质量分数），以保护瓷砖表面不被过分腐蚀。小刚同学对某种洁厕剂中盐酸含量进行测定：10 g 该洁厕剂恰好与 20 g 溶质的质量分数为 10% 的氢氧化钠溶液完全反应（假设该洁厕剂中的其他成分都不与氢氧化钠反应）。该洁厕剂是否符合国家标准？\n",
+      "bbox": [
+        192.6434326171875,
+        1170.205322265625,
+        1303.7099609375,
+        1381.2445068359375
+      ],
+      "differences": [
+        {
+          "reference": ",",
+          "actual": "，"
+        },
+        {
+          "reference": ",",
+          "actual": "，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": ",",
+          "actual": "，"
+        },
+        {
+          "reference": ".",
+          "actual": "。"
+        },
+        {
+          "reference": ": ",
+          "actual": "："
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": ".",
+          "actual": "。"
+        },
+        {
+          "reference": "?",
+          "actual": "？"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            183,
+            1168,
+            1306,
+            1384
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "11. 我国卫生洁具清洗剂国家标准规定，卫生间专用型的清洗剂，盐酸含量不得高于12%（指溶质的质量分数），以保护瓷砖表面不被过分腐蚀。小刚同学对某种洁厕剂中盐酸含量进行测定：10 g 该洁厕剂恰好与 20 g 溶质的质量分数为 10% 的氢氧化钠溶液完全反应（假设该洁厕剂中的其他成分都不与氢氧化钠反应）。该洁厕剂是否符合国家标准？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "11. 我国卫生洁具清洗剂国家标准规定，卫生间专用型的清洗剂，盐酸含量不得高于12%（指溶质的质量分数），以保护瓷砖表面不被过分腐蚀。小刚同学对某种洁厕剂中盐酸含量进行测定：10 g 该洁厕剂恰好与 20 g 溶质的质量分数为 10% 的氢氧化钠溶液完全反应（假设该洁厕剂中的其他成分都不与氢氧化钠反应）。该洁厕剂是否符合国家标准？\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:10",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          186.75291442871094,
+          1448.3458251953125,
+          341.3199768066406,
+          1448.3458251953125,
+          341.3199768066406,
+          1485.9061279296875,
+          186.75291442871094,
+          1485.9061279296875
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 10,
+        "text": "四、简答题",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "四、简答题",
+      "actual": "## 四、 简答题",
+      "raw_parent": "## 四、 简答题\n",
+      "bbox": [
+        186.75291442871094,
+        1448.3458251953125,
+        341.3199768066406,
+        1485.9061279296875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            185,
+            1447,
+            342,
+            1486
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 四、 简答题\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 四、 简答题\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          191.55650329589844,
+          1499.56982421875,
+          1305.087890625,
+          1499.56982421875,
+          1305.087890625,
+          1629.84130859375,
+          191.55650329589844,
+          1629.84130859375
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 2,
+        "text": "12. 酸、碱、氧化物、金属单质之间存在着复杂的关系，构成了物质转化的关系网。回顾下图中列出的各物质的化学性质，用“→”表示转化，箭号上标出反应条件：用 “一”表示两种物质发生反应，画出物质之间的联系，并写出有关的化学方程式。",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "12. 酸、碱、氧化物、金属单质之间存在着复杂的关系，构成了物质转化的关系网。回顾下图中列出的各物质的化学性质，用“→”表示转化，箭号上标出反应条件：用 “一”表示两种物质发生反应，画出物质之间的联系，并写出有关的化学方程式。",
+      "actual": "12. 酸、碱、氧化物、金属单质之间存在着复杂的关系，构成了物质转化的关系网。回顾下图中列出的各物质的化学性质，用 “→” 表示转化，箭号上标出反应条件；用 “—” 表示两种物质发生反应，画出物质之间的联系，并写出有关的化学方程式。",
+      "raw_parent": "12. 酸、碱、氧化物、金属单质之间存在着复杂的关系，构成了物质转化的关系网。回顾下图中列出的各物质的化学性质，用 “→” 表示转化，箭号上标出反应条件；用 “—” 表示两种物质发生反应，画出物质之间的联系，并写出有关的化学方程式。\n",
+      "bbox": [
+        191.55650329589844,
+        1499.56982421875,
+        1305.087890625,
+        1629.84130859375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "：",
+          "actual": "；"
+        },
+        {
+          "reference": "一",
+          "actual": "—"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图反应条件后为分号且连接符是横线“—”；GT 分号写冒号、横线写汉字“一”，预测依原图，箭号及所有文字正确。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            184,
+            1499,
+            1305,
+            1625
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "12. 酸、碱、氧化物、金属单质之间存在着复杂的关系，构成了物质转化的关系网。回顾下图中列出的各物质的化学性质，用 “→” 表示转化，箭号上标出反应条件；用 “—” 表示两种物质发生反应，画出物质之间的联系，并写出有关的化学方程式。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "12. 酸、碱、氧化物、金属单质之间存在着复杂的关系，构成了物质转化的关系网。回顾下图中列出的各物质的化学性质，用 “→” 表示转化，箭号上标出反应条件；用 “—” 表示两种物质发生反应，画出物质之间的联系，并写出有关的化学方程式。\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          720.69957743045,
+          1835.136443858096,
+          824.0043962889144,
+          1835.136443858096,
+          824.0043962889144,
+          1862.412089661155,
+          720.69957743045,
+          1862.412089661155
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 5,
+        "text": "图 11-26",
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "图 11-26",
+      "actual": "## 图 11-26",
+      "raw_parent": "## 图 11-26\n",
+      "bbox": [
+        720.69957743045,
+        1835.136443858096,
+        824.0043962889144,
+        1862.412089661155
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            715,
+            1833,
+            832,
+            1868
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 图 11-26\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 图 11-26\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          169.69995249159186,
+          1985.5161515928157,
+          204.4245814375724,
+          1985.5161515928157,
+          204.4245814375724,
+          2015.5056038643445,
+          169.69995249159186,
+          2015.5056038643445
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 4,
+        "text": "70",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "70",
+      "actual": "## 70",
+      "raw_parent": "## 70\n",
+      "bbox": [
+        169.69995249159186,
+        1985.5161515928157,
+        204.4245814375724,
+        2015.5056038643445
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            168,
+            1985,
+            208,
+            2018
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 70\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 70\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          232.04644537187514,
+          1986.3053477052244,
+          373.70714754922767,
+          1986.3053477052244,
+          373.70714754922767,
+          2013.532613583323,
+          232.04644537187514,
+          2013.532613583323
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 11,
+        "text": "第11章 酸与碱",
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "第11章 酸与碱",
+      "actual": "## 第11章 酸与碱",
+      "raw_parent": "## 第11章 酸与碱\n",
+      "bbox": [
+        232.04644537187514,
+        1986.3053477052244,
+        373.70714754922767,
+        2013.532613583323
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图字词与数字 12%、10g、20g、10%、70、11-25/26 一致。标题 Markdown、全角标点、箭号/横线及跨行答题线表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            228,
+            1984,
+            378,
+            2014
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第11章 酸与碱\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第11章 酸与碱\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2100.jpg",
+    "sha256": "ab32173c0081e0e06cae09870e78c534bdae131140346d334b2a09281ab101f2"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-16.json",
+    "sha256": "ab854f3b29e5e91b5f2b315da93ddd1d0e683b87cf0945efb25656dd663bbf34"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 12,
+  "unverified_units": []
+}

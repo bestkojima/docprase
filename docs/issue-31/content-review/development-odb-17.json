@@ -1,0 +1,3687 @@
+{
+  "page": "development-odb-17",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "两张化学表原始响应内容逐格正确；说明拆分配对及公式分隔问题另记。",
+  "viewed_sheets": {
+    "sheet-03.jpg": "72452e1697ea51350ac191f7dbdae4bd8a12ae5ee95b377a6cd4c53af4cc2487",
+    "sheet-06.jpg": "eb3f14ed5ef07a32a2888584bc23fe8b42fdbecddf30d1d79744fd8386ea0cb2",
+    "sheet-05.jpg": "2dda36d063ae11457836f837df531d7a540b1bf3c4c4a7131528ad9818c3c73f",
+    "sheet-02.jpg": "93d6b3bb27cbd1ee0be7acbe771c25d108a0e60082c8cf04bfc471d7b3116b59",
+    "sheet-01.jpg": "a756e98afb4339a138e60f38e182394e9ae111c957aef6429e4dc65cd49c1f30",
+    "sheet-04.jpg": "ad9cac08c2fcad0fa86195cb8ade547bc60ff593c556e18b2bd34cdf13cafef2"
+  },
+  "items": [
+    {
+      "id": "text:18",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          174.30088806152344,
+          454.7938232421875,
+          4377.7001953125,
+          454.7938232421875,
+          4377.7001953125,
+          1105.4583740234375,
+          174.30088806152344,
+          1105.4583740234375
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 18,
+        "text": "素呈 +3价，在进行有关氧化还原反应的计算时，可将Fe元素的化合价看作 $ +\\frac{8}{3} $价。 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $可以用 $ \\mathrm{Fe}0\\cdot\\mathrm{Fe}_{2}\\mathrm{O}_{3} $来表示，但 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $是化合物，是一种纯净物，不能将 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $看成是由 FeO和 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $组成的混合物。",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "素呈 +3价，在进行有关氧化还原反应的计算时，可将Fe元素的化合价看作 $ +\\frac{8}{3} $价。 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $可以用 $ \\mathrm{Fe}0\\cdot\\mathrm{Fe}_{2}\\mathrm{O}_{3} $来表示，但 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $是化合物，是一种纯净物，不能将 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $看成是由 FeO和 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $组成的混合物。",
+      "actual": "素呈+3价，在进行有关氧化还原反应的计算时，可将 Fe 元素的化合价看作+ $\\frac{8}{3}$价。 Fe $_{3}$O $_{4}$ 可以用 FeO·Fe $_{2}$O $_{3}$ 来表示，但 Fe $_{3}$O $_{4}$ 是化合物，是一种纯净物，不能将 Fe $_{3}$O $_{4}$ 看成是由 FeO 和 Fe $_{2}$O $_{3}$ 组成的混合物。",
+      "raw_parent": "素呈+3价，在进行有关氧化还原反应的计算时，可将 Fe 元素的化合价看作+ $\\frac{8}{3}$价。\n\nFe $_{3}$O $_{4}$ 可以用 FeO·Fe $_{2}$O $_{3}$ 来表示，但 Fe $_{3}$O $_{4}$ 是化合物，是一种纯净物，不能将 Fe $_{3}$O $_{4}$ 看成是由 FeO 和 Fe $_{2}$O $_{3}$ 组成的混合物。\n",
+      "bbox": [
+        174.30088806152344,
+        454.7938232421875,
+        4377.7001953125,
+        1105.4583740234375
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "+"
+        },
+        {
+          "reference": " +",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "$ \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": "$"
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "$ \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "}0\\cdot\\mathrm{",
+          "actual": "O·"
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": "$"
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "$ \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": "$"
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "$ \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": "$"
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "$ \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "\\mathrm{",
+          "actual": "$"
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            140,
+            409,
+            4354,
+            1114
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "素呈+3价，在进行有关氧化还原反应的计算时，可将 Fe 元素的化合价看作+ $\\frac{8}{3}$价。\n\nFe $_{3}$O $_{4}$ 可以用 FeO·Fe $_{2}$O $_{3}$ 来表示，但 Fe $_{3}$O $_{4}$ 是化合物，是一种纯净物，不能将 Fe $_{3}$O $_{4}$ 看成是由 FeO 和 Fe $_{2}$O $_{3}$ 组成的混合物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "素呈+3价，在进行有关氧化还原反应的计算时，可将 Fe 元素的化合价看作+ $\\frac{8}{3}$价。\n\nFe $_{3}$O $_{4}$ 可以用 FeO·Fe $_{2}$O $_{3}$ 来表示，但 Fe $_{3}$O $_{4}$ 是化合物，是一种纯净物，不能将 Fe $_{3}$O $_{4}$ 看成是由 FeO 和 Fe $_{2}$O $_{3}$ 组成的混合物。\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          552.5837729479052,
+          1136.292724609375,
+          3079.8212890625,
+          1136.292724609375,
+          3079.8212890625,
+          1288.4024658203125,
+          552.5837729479052,
+          1288.4024658203125
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 7,
+        "text": "问题3金属阳离子被还原一定得到金属单质吗？",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "问题3金属阳离子被还原一定得到金属单质吗？",
+      "actual": "## 问题 3 金属阳离子被还原一定得到金属单质吗？",
+      "raw_parent": "## 问题 3 金属阳离子被还原一定得到金属单质吗？\n",
+      "bbox": [
+        552.5837729479052,
+        1136.292724609375,
+        3079.8212890625,
+        1288.4024658203125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            532,
+            1141,
+            3089,
+            1281
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 问题 3 金属阳离子被还原一定得到金属单质吗？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 问题 3 金属阳离子被还原一定得到金属单质吗？\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          198.4562225341797,
+          1321.2823486328125,
+          4365.62255859375,
+          1321.2823486328125,
+          4365.62255859375,
+          1672.00830078125,
+          198.4562225341797,
+          1672.00830078125
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 1,
+        "text": "不一定，存在多种价态的金属可能从较高价态被还原到较低价态，但仍为化合态，如铁粉与氯化铁溶液的反应： $ \\mathrm{F e+2 F e^{3+}=3 F e^{2+}}。 $",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "不一定，存在多种价态的金属可能从较高价态被还原到较低价态，但仍为化合态，如铁粉与氯化铁溶液的反应： $ \\mathrm{F e+2 F e^{3+}=3 F e^{2+}}。 $",
+      "actual": "不一定,存在多种价态的金属可能从较高价态被还原到较低价态,但仍为化合态,如铁粉与氯化铁溶液的反应: $Fe+2Fe^{3+}=3Fe^{2+}$。",
+      "raw_parent": "不一定,存在多种价态的金属可能从较高价态被还原到较低价态,但仍为化合态,如铁粉与氯化铁溶液的反应: $Fe+2Fe^{3+}=3Fe^{2+}$。\n",
+      "bbox": [
+        198.4562225341797,
+        1321.2823486328125,
+        4365.62255859375,
+        1672.00830078125
+      ],
+      "differences": [
+        {
+          "reference": "，",
+          "actual": ","
+        },
+        {
+          "reference": "，",
+          "actual": ","
+        },
+        {
+          "reference": "，",
+          "actual": ","
+        },
+        {
+          "reference": "：",
+          "actual": ":"
+        },
+        {
+          "reference": " \\mathrm{",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": "$"
+        },
+        {
+          "reference": " $",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            155,
+            1319,
+            4342,
+            1675
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "不一定,存在多种价态的金属可能从较高价态被还原到较低价态,但仍为化合态,如铁粉与氯化铁溶液的反应: $Fe+2Fe^{3+}=3Fe^{2+}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "不一定,存在多种价态的金属可能从较高价态被还原到较低价态,但仍为化合态,如铁粉与氯化铁溶液的反应: $Fe+2Fe^{3+}=3Fe^{2+}$。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:26",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          4715.586443673658,
+          460.738800842701,
+          5144.512132980988,
+          460.738800842701,
+          5144.512132980988,
+          594.6073280787467,
+          4715.586443673658,
+          594.6073280787467
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 26,
+        "text": "印象笔记",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "印象笔记",
+      "actual": "## 印象笔记",
+      "raw_parent": "## 印象笔记\n",
+      "bbox": [
+        4715.586443673658,
+        460.738800842701,
+        5144.512132980988,
+        594.6073280787467
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            4709,
+            460,
+            5164,
+            595
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 印象笔记\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 印象笔记\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          4411.09521484375,
+          660.862548828125,
+          5349.33203125,
+          660.862548828125,
+          5349.33203125,
+          1748.308837890625,
+          4411.09521484375,
+          1748.308837890625
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 2,
+        "text": "四氧化三铁是一种常用的磁性材料，特制的纯净四氧化三铁用来作录音磁带和电讯器材的原材料。激光打印机的墨粉中也含有四氧化三铁。",
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": true,
+      "expected": "四氧化三铁是一种常用的磁性材料，特制的纯净四氧化三铁用来作录音磁带和电讯器材的原材料。激光打印机的墨粉中也含有四氧化三铁。",
+      "actual": "四氧化三铁是一种常用的磁性材料，特制的纯净四氧化三铁用来作录音磁带和电讯器材的原材料。激光打印机的墨粉中也含有四氧化三铁。",
+      "raw_parent": "四氧化三铁是一种常用的磁性材料，特制的纯净四氧化三铁用来作录音磁带和电讯器材的原材料。激光打印机的墨粉中也含有四氧化三铁。\n",
+      "bbox": [
+        4411.09521484375,
+        660.862548828125,
+        5349.33203125,
+        1748.308837890625
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致并看原图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            4407,
+            673,
+            5364,
+            1752
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "四氧化三铁是一种常用的磁性材料，特制的纯净四氧化三铁用来作录音磁带和电讯器材的原材料。激光打印机的墨粉中也含有四氧化三铁。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "四氧化三铁是一种常用的磁性材料，特制的纯净四氧化三铁用来作录音磁带和电讯器材的原材料。激光打印机的墨粉中也含有四氧化三铁。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          1933.431640625,
+          1925.4244384765625,
+          2824.943359375,
+          1925.4244384765625,
+          2824.943359375,
+          2119.922607421875,
+          1933.431640625,
+          2119.922607421875
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 4,
+        "text": "应试拓展注意",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "应试拓展注意",
+      "actual": "## 应试拓展注意",
+      "raw_parent": "## 应试拓展注意\n",
+      "bbox": [
+        1933.431640625,
+        1925.4244384765625,
+        2824.943359375,
+        2119.922607421875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            1931,
+            1948,
+            2811,
+            2109
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 应试拓展注意\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 应试拓展注意\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          416.7426818020845,
+          2334.1677704422086,
+          2076.365966796874,
+          2334.1677704422086,
+          2076.365966796874,
+          2453.692010247297,
+          416.7426818020845,
+          2453.692010247297
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 12,
+        "text": "拓展1铁的氧化物和氢氧化物",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "拓展1铁的氧化物和氢氧化物",
+      "actual": "## 拓展1 铁的氧化物和氢氧化物",
+      "raw_parent": "## 拓展1 铁的氧化物和氢氧化物\n",
+      "bbox": [
+        416.7426818020845,
+        2334.1677704422086,
+        2076.365966796874,
+        2453.692010247297
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            373,
+            2320,
+            2077,
+            2478
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 拓展1 铁的氧化物和氢氧化物\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 拓展1 铁的氧化物和氢氧化物\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:19",
+      "kind": "text",
+      "reference": {
+        "category_type": "table_caption",
+        "poly": [
+          562.1649802232959,
+          2542.650146484375,
+          1402.166259765625,
+          2542.650146484375,
+          1402.166259765625,
+          2690.33642578125,
+          562.1649802232959,
+          2690.33642578125
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 19,
+        "text": "铁的氧化物比较",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "铁的氧化物比较",
+      "actual": "## 铁的氧化物比较",
+      "raw_parent": "## 铁的氧化物比较\n",
+      "bbox": [
+        562.1649802232959,
+        2542.650146484375,
+        1402.166259765625,
+        2690.33642578125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            547,
+            2546,
+            1410,
+            2688
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 铁的氧化物比较\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 铁的氧化物比较\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          4407.59521484375,
+          2706.3427734375,
+          5350.0927734375,
+          2706.3427734375,
+          5350.0927734375,
+          3183.521484375,
+          4407.59521484375,
+          3183.521484375
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 13,
+        "text": "故宫红墙（显红色主要是因为含有 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3}) $",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "故宫红墙（显红色主要是因为含有 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3}) $",
+      "actual": "## 故宫红墙(显红色 ## 主要是因为含有 $$ \\mathrm{Fe}_{2}\\mathrm{O}_{3}) $$",
+      "raw_parent": "## 故宫红墙(显红色\n\n## 主要是因为含有\n\n$$ \\mathrm{Fe}_{2}\\mathrm{O}_{3}) $$\n",
+      "bbox": [
+        4407.59521484375,
+        2706.3427734375,
+        5350.0927734375,
+        3183.521484375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "",
+          "actual": " ## "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            4406,
+            2718,
+            5348,
+            3190
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 故宫红墙(显红色\n\n## 主要是因为含有\n\n$$ \\mathrm{Fe}_{2}\\mathrm{O}_{3}) $$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 故宫红墙(显红色\n\n## 主要是因为含有\n\n$$ \\mathrm{Fe}_{2}\\mathrm{O}_{3}) $$\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "table_caption",
+        "poly": [
+          556.9849643159014,
+          5510.691894531251,
+          1533.7749023437502,
+          5510.691894531251,
+          1533.7749023437502,
+          5641.752929687501,
+          556.9849643159014,
+          5641.752929687501
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 3,
+        "text": "铁的氢氧化物比较",
+        "attribute": {}
+      },
+      "block_id": "b0017",
+      "strict_exact": false,
+      "expected": "铁的氢氧化物比较",
+      "actual": "## 铁的氢氧化物比较",
+      "raw_parent": "## 铁的氢氧化物比较\n",
+      "bbox": [
+        556.9849643159014,
+        5510.691894531251,
+        1533.7749023437502,
+        5641.752929687501
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0017",
+          "bbox": [
+            554,
+            5506,
+            1540,
+            5645
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 铁的氢氧化物比较\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 铁的氢氧化物比较\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "table_footnote",
+        "poly": [
+          4424.79443359375,
+          6413.5986328125,
+          5353.29443359375,
+          6413.5986328125,
+          5353.29443359375,
+          7498.2529296875,
+          4424.79443359375,
+          7498.2529296875
+        ],
+        "ignore": false,
+        "order": 19,
+        "anno_id": 11,
+        "text": "$ \\mathrm Fe {(OH)}_{2} $为白色絮状沉淀，在空气中迅速被氧化：白色→灰绿色→红褐色，此知识点常作为元素存在的检验方法和物质推断的重要突破口。",
+        "attribute": {}
+      },
+      "block_id": "b0019",
+      "strict_exact": false,
+      "expected": "$ \\mathrm Fe {(OH)}_{2} $为白色絮状沉淀，在空气中迅速被氧化：白色→灰绿色→红褐色，此知识点常作为元素存在的检验方法和物质推断的重要突破口。",
+      "actual": "Fe(OH) $_{2}$ 为白色絮状沉淀, 在空气中迅速被氧化: 白色→灰绿色→红褐色, 此知识点常作为元素存在的检验方法和物质推断的重要突破口。",
+      "raw_parent": "Fe(OH) $_{2}$ 为白色絮状沉淀, 在空气中迅速被氧化: 白色→灰绿色→红褐色, 此知识点常作为元素存在的检验方法和物质推断的重要突破口。\n",
+      "bbox": [
+        4424.79443359375,
+        6413.5986328125,
+        5353.29443359375,
+        7498.2529296875
+      ],
+      "differences": [
+        {
+          "reference": "$ \\mathrm ",
+          "actual": ""
+        },
+        {
+          "reference": " {",
+          "actual": ""
+        },
+        {
+          "reference": "}",
+          "actual": " $"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "，",
+          "actual": ", "
+        },
+        {
+          "reference": "：",
+          "actual": ": "
+        },
+        {
+          "reference": "，",
+          "actual": ", "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0019",
+          "bbox": [
+            4415,
+            6405,
+            5371,
+            7505
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "Fe(OH) $_{2}$ 为白色絮状沉淀, 在空气中迅速被氧化: 白色→灰绿色→红褐色, 此知识点常作为元素存在的检验方法和物质推断的重要突破口。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "Fe(OH) $_{2}$ 为白色絮状沉淀, 在空气中迅速被氧化: 白色→灰绿色→红褐色, 此知识点常作为元素存在的检验方法和物质推断的重要突破口。\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:25",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          2237.5107421875,
+          230.6381072998047,
+          3257.748779296875,
+          230.6381072998047,
+          3257.748779296875,
+          361.2222900390625,
+          2237.5107421875,
+          361.2222900390625
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 25,
+        "text": "第三章  铁  金属材料",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "第三章  铁  金属材料",
+      "actual": "## 第三章 铁 金属材料",
+      "raw_parent": "## 第三章 铁 金属材料\n",
+      "bbox": [
+        2237.5107421875,
+        230.6381072998047,
+        3257.748779296875,
+        361.2222900390625
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            2243,
+            234,
+            3260,
+            359
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第三章 铁 金属材料\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第三章 铁 金属材料\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:10",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          2708.033273394376,
+          7760.035694838851,
+          2847.365012362124,
+          7760.035694838851,
+          2847.365012362124,
+          7874.212453472052,
+          2708.033273394376,
+          7874.212453472052
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 10,
+        "text": "37",
+        "attribute": {}
+      },
+      "block_id": "b0020",
+      "strict_exact": false,
+      "expected": "37",
+      "actual": "## 37",
+      "raw_parent": "## 37\n",
+      "bbox": [
+        2708.033273394376,
+        7760.035694838851,
+        2847.365012362124,
+        7874.212453472052
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0020",
+          "bbox": [
+            2685,
+            7762,
+            2845,
+            7881
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 37\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 37\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          1403.1871337890625,
+          7962.85791015625,
+          4154.447265625,
+          7962.85791015625,
+          4154.447265625,
+          8125,
+          1403.1871337890625,
+          8125
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 0,
+        "text": "关注微信公众号 “ 初高教辅站 ” 获取更多初高中教辅资料",
+        "attribute": {}
+      },
+      "block_id": "b0022",
+      "strict_exact": false,
+      "expected": "关注微信公众号 “ 初高教辅站 ” 获取更多初高中教辅资料",
+      "actual": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料",
+      "raw_parent": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+      "bbox": [
+        1403.1871337890625,
+        7962.85791015625,
+        4154.447265625,
+        8125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "字词、+8/3 价、Fe3O4/FeO·Fe2O3、Fe+2Fe³⁺=3Fe²⁺、白/灰绿/红褐以及全部标题/页脚完整；差异为数学字体/分隔、标题、空格和标点。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0022",
+          "bbox": [
+            1395,
+            7986,
+            4157,
+            8115
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+            "resource": "assets/p0001-b0022.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:28",
+      "kind": "text",
+      "reference": {
+        "category_type": "table_footnote",
+        "poly": [
+          183.37153210849206,
+          4684.322591231557,
+          4415.217264983286,
+          4684.322591231557,
+          4415.217264983286,
+          5488.733127936386,
+          183.37153210849206,
+          5488.733127936386
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 28,
+        "text": "【说明】（1）FeO不稳定，易被氧化为 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4}。 $\n(2) FeO、 $ \\mathrm{Fe}_{3}0_{4} $遇氧化性酸（如 $ \\mathrm{HNO}_{3} $ ) 发生氧化还原反应， +2价的铁均被氧化为 +3价。\n(3) FeO、 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $均为碱性氧化物， $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $是复杂的氧化物，不属于碱性氧化物。",
+        "merge_list": [
+          {
+            "category_type": "table_footnote",
+            "poly": [
+              436.1585388183594,
+              4712.2841796875,
+              2598.376220703125,
+              4712.2841796875,
+              2598.376220703125,
+              4860.12158203125,
+              436.1585388183594,
+              4860.12158203125
+            ],
+            "ignore": false,
+            "order": 13,
+            "anno_id": 22,
+            "text": "【说明】（1）FeO不稳定，易被氧化为 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4}\\circ  $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  437.0997397183548,
+                  4716.577430735584,
+                  2243.4776910172295,
+                  4716.577430735584,
+                  2243.4776910172295,
+                  4851.188975649437,
+                  437.0997397183548,
+                  4851.188975649437
+                ],
+                "text": "【说明】（1）FeO不稳定，易被氧化为"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  2248,
+                  4718.666666666666,
+                  2600.819831098913,
+                  4718.666666666666,
+                  2600.819831098913,
+                  4862.666666666666,
+                  2248,
+                  4862.666666666666
+                ],
+                "latex": "$ \\mathrm{Fe}_{3}\\mathrm{O}_{4}\\circ  $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "table_footnote",
+            "poly": [
+              206.915544934581,
+              4918.43115234375,
+              4363.236328125,
+              4918.43115234375,
+              4363.236328125,
+              5245.48583984375,
+              206.915544934581,
+              5245.48583984375
+            ],
+            "ignore": false,
+            "order": 14,
+            "anno_id": 16,
+            "text": "(2) FeO、 $ \\mathrm{Fe}_{3}0_{4} $遇氧化性酸（如 $ \\mathrm{HNO}_{3} $ ) 发生氧化还原反应， +2价的铁均被氧化为 +3价。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  433.44450151971864,
+                  4907.885210056271,
+                  621.8030557093164,
+                  4907.885210056271,
+                  621.8030557093164,
+                  5060.3659444002315,
+                  433.44450151971864,
+                  5060.3659444002315
+                ],
+                "text": "(2)"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  623.9168572618894,
+                  4922.200460174681,
+                  885.9443117061876,
+                  4922.200460174681,
+                  885.9443117061876,
+                  5053.5222502646775,
+                  623.9168572618894,
+                  5053.5222502646775
+                ],
+                "text": "FeO、"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  889.9538167650674,
+                  4912,
+                  1170.666666666667,
+                  4912,
+                  1170.666666666667,
+                  5055.880536020797,
+                  889.9538167650674,
+                  5055.880536020797
+                ],
+                "latex": "$ \\mathrm{Fe}_{3}0_{4} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1188.8046327517006,
+                  4918.767774031292,
+                  1991.5218531006803,
+                  4918.767774031292,
+                  1991.5218531006803,
+                  5056.8551864340125,
+                  1188.8046327517006,
+                  5056.8551864340125
+                ],
+                "text": "遇氧化性酸（如"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  1986.6666666666665,
+                  4914.666666666666,
+                  2288,
+                  4914.666666666666,
+                  2288,
+                  5058.666666666666,
+                  1986.6666666666665,
+                  5058.666666666666
+                ],
+                "latex": "$ \\mathrm{HNO}_{3} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  2279.408185330462,
+                  4915.001750326874,
+                  3355.0731016702557,
+                  4915.001750326874,
+                  3355.0731016702557,
+                  5058.1105276688195,
+                  2279.408185330462,
+                  5058.1105276688195
+                ],
+                "text": ") 发生氧化还原反应，"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  3359.110276174949,
+                  4918.057295715571,
+                  3502.545924613869,
+                  4918.057295715571,
+                  3502.545924613869,
+                  5047.384519717875,
+                  3359.110276174949,
+                  5047.384519717875
+                ],
+                "text": "+2"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  3507.629240668102,
+                  4912.5204633261565,
+                  4356.627490341227,
+                  4912.5204633261565,
+                  4356.627490341227,
+                  5053.147953667383,
+                  3507.629240668102,
+                  5053.147953667383
+                ],
+                "text": "价的铁均被氧化"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  194.0814792108852,
+                  5112.162958421768,
+                  313.6259270612248,
+                  5112.162958421768,
+                  313.6259270612248,
+                  5252,
+                  194.0814792108852,
+                  5252
+                ],
+                "text": "为"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  315.5853987337853,
+                  5111.94801412452,
+                  458.99534948453476,
+                  5111.94801412452,
+                  458.99534948453476,
+                  5238.04986737087,
+                  315.5853987337853,
+                  5238.04986737087
+                ],
+                "text": "+3"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  462.6666666666668,
+                  5112.16295842177,
+                  658.6666666666669,
+                  5112.16295842177,
+                  658.6666666666669,
+                  5252,
+                  462.6666666666668,
+                  5252
+                ],
+                "text": "价。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "table_footnote",
+            "poly": [
+              435.0817565917969,
+              5301.97802734375,
+              4287.44140625,
+              5301.97802734375,
+              4287.44140625,
+              5463.2861328125,
+              435.0817565917969,
+              5463.2861328125
+            ],
+            "ignore": false,
+            "order": 15,
+            "anno_id": 21,
+            "text": "(3) FeO、 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $均为碱性氧化物， $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $是复杂的氧化物，不属于碱性氧化物。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  430.4546831992487,
+                  5311.510683319695,
+                  615.8234190683769,
+                  5311.510683319695,
+                  615.8234190683769,
+                  5452.032144381776,
+                  430.4546831992487,
+                  5452.032144381776
+                ],
+                "text": "(3)"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  627.7826923502565,
+                  5317.490319960634,
+                  887.8968862311295,
+                  5317.490319960634,
+                  887.8968862311295,
+                  5434.093234458958,
+                  627.7826923502565,
+                  5434.093234458958
+                ],
+                "text": "FeO、"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  885.4341722338282,
+                  5308.210500919349,
+                  1176.0000000000007,
+                  5308.210500919349,
+                  1176.0000000000007,
+                  5457.543834252681,
+                  885.4341722338282,
+                  5457.543834252681
+                ],
+                "latex": "$ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1177.3333333333335,
+                  5311.854227787935,
+                  2080.130521943794,
+                  5311.854227787935,
+                  2080.130521943794,
+                  5446.928072540047,
+                  1177.3333333333335,
+                  5446.928072540047
+                ],
+                "text": "均为碱性氧化物，"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  2072,
+                  5305.333333333333,
+                  2369.333333333333,
+                  5305.333333333333,
+                  2369.333333333333,
+                  5450.666666666666,
+                  2072,
+                  5450.666666666666
+                ],
+                "latex": "$ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  2385.112208439723,
+                  5310.072610969258,
+                  4292.3349793262505,
+                  5310.072610969258,
+                  4292.3349793262505,
+                  5444.037951477547,
+                  2385.112208439723,
+                  5444.037951477547
+                ],
+                "text": "是复杂的氧化物，不属于碱性氧化物。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "【说明】（1）FeO不稳定，易被氧化为 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4}。 $\n(2) FeO、 $ \\mathrm{Fe}_{3}0_{4} $遇氧化性酸（如 $ \\mathrm{HNO}_{3} $ ) 发生氧化还原反应， +2价的铁均被氧化为 +3价。\n(3) FeO、 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $均为碱性氧化物， $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $是复杂的氧化物，不属于碱性氧化物。",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        183.37153210849206,
+        4684.322591231557,
+        4415.217264983286,
+        5488.733127936386
+      ],
+      "differences": [
+        {
+          "reference": "【说明】（1）FeO不稳定，易被氧化为 $ \\mathrm{Fe}_{3}\\mathrm{O}_{4}。 $ (2) FeO、 $ \\mathrm{Fe}_{3}0_{4} $遇氧化性酸（如 $ \\mathrm{HNO}_{3} $ ) 发生氧化还原反应， +2价的铁均被氧化为 +3价。 (3) FeO、 $ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $均为碱性氧化物， $ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $是复杂的氧化物，不属于碱性氧化物。",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            413,
+            4713,
+            2614,
+            4862
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0015",
+          "bbox": [
+            173,
+            4914,
+            4357,
+            5258
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0016",
+          "bbox": [
+            423,
+            5307,
+            4306,
+            5456
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "table:17",
+      "kind": "table",
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          183.77397155761685,
+          2724.7739257812505,
+          4375.788582053643,
+          2724.7739257812505,
+          4375.788582053643,
+          4670.704605513536,
+          183.77397155761685,
+          4670.704605513536
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 17,
+        "html": "<table border=\"1\"><tr><td>名称</td><td>氧化亚铁</td><td>氧化铁（俗称铁红）</td><td>四氧化三铁（俗称磁性氧化铁）</td></tr><tr><td>化学式</td><td>FeO</td><td>$Fe_{2}O_{3}$</td><td>$Fe_{3}O_{4}$</td></tr><tr><td>颜色、状态</td><td>黑色粉末</td><td>红棕色粉末</td><td>黑色晶体</td></tr><tr><td>铁的价态</td><td>+2价</td><td>+3价</td><td>+2、+3价</td></tr><tr><td>水溶性</td><td colspan=\"3\">均不溶于水</td></tr><tr><td>与非氧化性酸反应</td><td>$FeO + 2H^{+} = Fe^{2+} + H_{2}O$</td><td>$Fe_{2}O_{3} + 6H^{+} = 2Fe^{3+} + 3H_{2}O$</td><td>$Fe_{3}O_{4} + 8H^{+} = Fe^{2+} + 2Fe^{3+} + 4H_{2}O$</td></tr><tr><td>与$H_{2}$、CO、Al等反应</td><td>$FeO + H_{2} \\overset{\\Delta}{=} Fe + H_{2}O$</td><td>$Fe_{2}O_{3} + 3CO \\overset{高温}{=} 2Fe + 3CO_{2}$</td><td>$3Fe_{3}O_{4} + 8Al \\overset{高温}{=} 9Fe + 4Al_{2}O_{3}$</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "<table border=\"1\"><tr><td>名称</td><td>氧化亚铁</td><td>氧化铁（俗称铁红）</td><td>四氧化三铁（俗称磁性氧化铁）</td></tr><tr><td>化学式</td><td>FeO</td><td>$Fe_{2}O_{3}$</td><td>$Fe_{3}O_{4}$</td></tr><tr><td>颜色、状态</td><td>黑色粉末</td><td>红棕色粉末</td><td>黑色晶体</td></tr><tr><td>铁的价态</td><td>+2价</td><td>+3价</td><td>+2、+3价</td></tr><tr><td>水溶性</td><td colspan=\"3\">均不溶于水</td></tr><tr><td>与非氧化性酸反应</td><td>$FeO + 2H^{+} = Fe^{2+} + H_{2}O$</td><td>$Fe_{2}O_{3} + 6H^{+} = 2Fe^{3+} + 3H_{2}O$</td><td>$Fe_{3}O_{4} + 8H^{+} = Fe^{2+} + 2Fe^{3+} + 4H_{2}O$</td></tr><tr><td>与$H_{2}$、CO、Al等反应</td><td>$FeO + H_{2} \\overset{\\Delta}{=} Fe + H_{2}O$</td><td>$Fe_{2}O_{3} + 3CO \\overset{高温}{=} 2Fe + 3CO_{2}$</td><td>$3Fe_{3}O_{4} + 8Al \\overset{高温}{=} 9Fe + 4Al_{2}O_{3}$</td></tr></table>",
+      "actual": {
+        "format": "markdown",
+        "text": "",
+        "resource": "assets/p0001-b0011.png",
+        "table": null
+      },
+      "raw_parent": "<table border=1><tr><td>名称</td><td>氧化亚铁</td><td>氧化铁(俗称铁红)</td><td>四氧化三铁(俗称磁性氧化铁)</td></tr><tr><td>化学式</td><td>$FeO$</td><td>$Fe_{2}O_{3}$</td><td>$Fe_{3}O_{4}$</td></tr><tr><td>颜色、状态</td><td>黑色粉末</td><td>红棕色粉末</td><td>黑色晶体</td></tr><tr><td>铁的价态</td><td>+2价</td><td>+3价</td><td>+2、+3价</td></tr><tr><td>水溶性</td><td colspan=\"3\">均不溶于水</td></tr><tr><td>与非氧化性酸反应</td><td>$FeO+2H^{+}=Fe^{2+}+H_{2}O$</td><td>$Fe_{2}O_{3}+6H^{+}=2Fe^{3+}+3H_{2}O$</td><td>$Fe_{3}O_{4}+8H^{+}=Fe^{2+}+2Fe^{3+}+4H_{2}O$</td></tr><tr><td>与$H_{2}$、CO、Al等反应</td><td>$FeO+H_{2}\\xlongequal{\\triangle}Fe+H_{2}O$</td><td>$Fe_{2}O_{3}+3CO\\xlongequal{高温}2Fe+3CO_{2}$</td><td>$3Fe_{3}O_{4}+8Al\\xlongequal{高温}9Fe+4Al_{2}O_{3}$</td></tr></table>\n",
+      "bbox": [
+        183.77397155761685,
+        2724.7739257812505,
+        4375.788582053643,
+        4670.704605513536
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "export_fallback"
+        ],
+        "reason": "逐格核对七行四列氧化物表（合并水溶性格）及七行三列氢氧化物表，全部名称、颜色/状态、价态、化学式、系数、离子电荷、↓、加热/高温条件正确。差异为 mathrm、分隔、括号和等号上的三角宏/长等号。这里只裁定原始识别内容；最终结构化表另作导出检查。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            193,
+            2727,
+            4327,
+            4647
+          ],
+          "type": "table",
+          "status": "partial",
+          "raw_output": "<table border=1><tr><td>名称</td><td>氧化亚铁</td><td>氧化铁(俗称铁红)</td><td>四氧化三铁(俗称磁性氧化铁)</td></tr><tr><td>化学式</td><td>$FeO$</td><td>$Fe_{2}O_{3}$</td><td>$Fe_{3}O_{4}$</td></tr><tr><td>颜色、状态</td><td>黑色粉末</td><td>红棕色粉末</td><td>黑色晶体</td></tr><tr><td>铁的价态</td><td>+2价</td><td>+3价</td><td>+2、+3价</td></tr><tr><td>水溶性</td><td colspan=\"3\">均不溶于水</td></tr><tr><td>与非氧化性酸反应</td><td>$FeO+2H^{+}=Fe^{2+}+H_{2}O$</td><td>$Fe_{2}O_{3}+6H^{+}=2Fe^{3+}+3H_{2}O$</td><td>$Fe_{3}O_{4}+8H^{+}=Fe^{2+}+2Fe^{3+}+4H_{2}O$</td></tr><tr><td>与$H_{2}$、CO、Al等反应</td><td>$FeO+H_{2}\\xlongequal{\\triangle}Fe+H_{2}O$</td><td>$Fe_{2}O_{3}+3CO\\xlongequal{高温}2Fe+3CO_{2}$</td><td>$3Fe_{3}O_{4}+8Al\\xlongequal{高温}9Fe+4Al_{2}O_{3}$</td></tr></table>\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "",
+            "resource": "assets/p0001-b0011.png",
+            "table": null
+          },
+          "error": "invalid_table_formula_syntax"
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项",
+      "final_export_review": {
+        "structured": false,
+        "classification": [
+          "export_fallback"
+        ],
+        "reason": "最终 table=null、text 为空，只保留 PNG 图片；原始响应内容裁决不能当作最终可编辑表格通过。",
+        "reviewed": true
+      },
+      "cell_reviews": [
+        {
+          "id": "table:17:r0:c0",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "名称",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "名称",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r0:c1",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "氧化亚铁",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "氧化亚铁",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r0:c2",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "氧化铁（俗称铁红）",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "氧化铁(俗称铁红)",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r0:c3",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "四氧化三铁（俗称磁性氧化铁）",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "四氧化三铁(俗称磁性氧化铁)",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r1:c0",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "化学式",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "化学式",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r1:c1",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "FeO",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$FeO$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r1:c2",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe_{2}O_{3}$",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$Fe_{2}O_{3}$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r1:c3",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe_{3}O_{4}$",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$Fe_{3}O_{4}$",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r2:c0",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "颜色、状态",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "颜色、状态",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r2:c1",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "黑色粉末",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "黑色粉末",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r2:c2",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "红棕色粉末",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "红棕色粉末",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r2:c3",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "黑色晶体",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "黑色晶体",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r3:c0",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "铁的价态",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "铁的价态",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r3:c1",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "+2价",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "+2价",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r3:c2",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "+3价",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "+3价",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r3:c3",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "+2、+3价",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "+2、+3价",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r4:c0",
+          "reference": {
+            "row": 4,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "水溶性",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "水溶性",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r4:c1",
+          "reference": {
+            "row": 4,
+            "rowspan": 1,
+            "colspan": 3,
+            "header": false,
+            "text": "均不溶于水",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 4,
+              "rowspan": 1,
+              "colspan": 3,
+              "header": false,
+              "text": "均不溶于水",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r5:c0",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "与非氧化性酸反应",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "与非氧化性酸反应",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r5:c1",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$FeO + 2H^{+} = Fe^{2+} + H_{2}O$",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$FeO+2H^{+}=Fe^{2+}+H_{2}O$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r5:c2",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe_{2}O_{3} + 6H^{+} = 2Fe^{3+} + 3H_{2}O$",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$Fe_{2}O_{3}+6H^{+}=2Fe^{3+}+3H_{2}O$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r5:c3",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe_{3}O_{4} + 8H^{+} = Fe^{2+} + 2Fe^{3+} + 4H_{2}O$",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$Fe_{3}O_{4}+8H^{+}=Fe^{2+}+2Fe^{3+}+4H_{2}O$",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r6:c0",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "与$H_{2}$、CO、Al等反应",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "与$H_{2}$、CO、Al等反应",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:17:r6:c1",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$FeO + H_{2} \\overset{\\Delta}{=} Fe + H_{2}O$",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$FeO+H_{2}\\xlongequal{\\triangle}Fe+H_{2}O$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r6:c2",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe_{2}O_{3} + 3CO \\overset{高温}{=} 2Fe + 3CO_{2}$",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$Fe_{2}O_{3}+3CO\\xlongequal{高温}2Fe+3CO_{2}$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:17:r6:c3",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$3Fe_{3}O_{4} + 8Al \\overset{高温}{=} 9Fe + 4Al_{2}O_{3}$",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$3Fe_{3}O_{4}+8Al\\xlongequal{高温}9Fe+4Al_{2}O_{3}$",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        }
+      ]
+    },
+    {
+      "id": "table:5",
+      "kind": "table",
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          202.69680786132812,
+          5684.74462890625,
+          4356.7763671875,
+          5684.74462890625,
+          4356.7763671875,
+          7682.46826171875,
+          202.69680786132812,
+          7682.46826171875
+        ],
+        "ignore": false,
+        "order": 18,
+        "anno_id": 5,
+        "html": "<table border=\"1\"><tr><td>名称</td><td>氢氧化亚铁</td><td>氢氧化铁</td></tr><tr><td>化学式</td><td>$Fe(OH)_{2}$</td><td>$Fe(OH)_{3}$</td></tr><tr><td>颜色、状态</td><td>白色固体</td><td>红褐色固体</td></tr><tr><td>水溶性</td><td>不溶</td><td>不溶</td></tr><tr><td>与酸反应</td><td>$Fe(OH)_{2} + 2H^{+} = Fe^{2+} + 2H_{2}O$</td><td>$Fe(OH)_{3} + 3H^{+} = Fe^{3+} + 3H_{2}O$</td></tr><tr><td>稳定性</td><td>不稳定，在空气中会迅速由白色变为灰绿色，最后变为红褐色：$4Fe(OH)_{2} + O_{2} + 2H_{2}O = 4Fe(OH)_{3}$</td><td>常温下稳定，加热分解 $2Fe(OH)_{3} \\overset{\\Delta}{=} Fe_{2}O_{3} + 3H_{2}O$</td></tr><tr><td>制备</td><td>$Fe^{2+} + 2OH^{-} = Fe(OH)_{2} \\downarrow$ （必须在非氧化性环境中制备）</td><td>$Fe^{3+} + 3OH^{-} = Fe(OH)_{3} \\downarrow$</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0018",
+      "strict_exact": false,
+      "expected": "<table border=\"1\"><tr><td>名称</td><td>氢氧化亚铁</td><td>氢氧化铁</td></tr><tr><td>化学式</td><td>$Fe(OH)_{2}$</td><td>$Fe(OH)_{3}$</td></tr><tr><td>颜色、状态</td><td>白色固体</td><td>红褐色固体</td></tr><tr><td>水溶性</td><td>不溶</td><td>不溶</td></tr><tr><td>与酸反应</td><td>$Fe(OH)_{2} + 2H^{+} = Fe^{2+} + 2H_{2}O$</td><td>$Fe(OH)_{3} + 3H^{+} = Fe^{3+} + 3H_{2}O$</td></tr><tr><td>稳定性</td><td>不稳定，在空气中会迅速由白色变为灰绿色，最后变为红褐色：$4Fe(OH)_{2} + O_{2} + 2H_{2}O = 4Fe(OH)_{3}$</td><td>常温下稳定，加热分解 $2Fe(OH)_{3} \\overset{\\Delta}{=} Fe_{2}O_{3} + 3H_{2}O$</td></tr><tr><td>制备</td><td>$Fe^{2+} + 2OH^{-} = Fe(OH)_{2} \\downarrow$ （必须在非氧化性环境中制备）</td><td>$Fe^{3+} + 3OH^{-} = Fe(OH)_{3} \\downarrow$</td></tr></table>",
+      "actual": {
+        "format": "markdown",
+        "text": "",
+        "resource": "assets/p0001-b0018.png",
+        "table": null
+      },
+      "raw_parent": "<table border=1><tr><td>名称</td><td>氢氧化亚铁</td><td>氢氧化铁</td></tr><tr><td>化学式</td><td>$\\mathrm{Fe(OH)}_{2}$</td><td>$\\mathrm{Fe(OH)}_{3}$</td></tr><tr><td>颜色、状态</td><td>白色固体</td><td>红褐色固体</td></tr><tr><td>水溶性</td><td>不溶</td><td>不溶</td></tr><tr><td>与酸反应</td><td>$\\mathrm{Fe(OH)}_{2} + 2\\mathrm{H}^{+} = \\mathrm{Fe}^{2+} + 2\\mathrm{H}_{2}\\mathrm{O}$</td><td>$\\mathrm{Fe(OH)}_{3} + 3\\mathrm{H}^{+} = \\mathrm{Fe}^{3+} + 3\\mathrm{H}_{2}\\mathrm{O}$</td></tr><tr><td>稳定性</td><td>不稳定,在空气中会迅速由白色变为灰绿色,最后变为红褐色:$4\\mathrm{Fe(OH)}_{2} + \\mathrm{O}_{2} + 2\\mathrm{H}_{2}\\mathrm{O} = 4\\mathrm{Fe(OH)}_{3}$</td><td>常温下稳定,加热分解$2\\mathrm{Fe(OH)}_{3} \\xlongequal{\\Delta} \\mathrm{Fe}_{2}\\mathrm{O}_{3} + 3\\mathrm{H}_{2}\\mathrm{O}$</td></tr><tr><td>制备</td><td>$\\mathrm{Fe}^{2+} + 2\\mathrm{OH}^{-} = \\mathrm{Fe(OH)}_{2} \\downarrow$(必须在非氧化性环境中制备)</td><td>$\\mathrm{Fe}^{3+} + 3\\mathrm{OH}^{-} = \\mathrm{Fe(OH)}_{3} \\downarrow$</td></tr></table>\n",
+      "bbox": [
+        202.69680786132812,
+        5684.74462890625,
+        4356.7763671875,
+        7682.46826171875
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "export_fallback"
+        ],
+        "reason": "逐格核对七行四列氧化物表（合并水溶性格）及七行三列氢氧化物表，全部名称、颜色/状态、价态、化学式、系数、离子电荷、↓、加热/高温条件正确。差异为 mathrm、分隔、括号和等号上的三角宏/长等号。这里只裁定原始识别内容；最终结构化表另作导出检查。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0018",
+          "bbox": [
+            182,
+            5696,
+            4359,
+            7658
+          ],
+          "type": "table",
+          "status": "partial",
+          "raw_output": "<table border=1><tr><td>名称</td><td>氢氧化亚铁</td><td>氢氧化铁</td></tr><tr><td>化学式</td><td>$\\mathrm{Fe(OH)}_{2}$</td><td>$\\mathrm{Fe(OH)}_{3}$</td></tr><tr><td>颜色、状态</td><td>白色固体</td><td>红褐色固体</td></tr><tr><td>水溶性</td><td>不溶</td><td>不溶</td></tr><tr><td>与酸反应</td><td>$\\mathrm{Fe(OH)}_{2} + 2\\mathrm{H}^{+} = \\mathrm{Fe}^{2+} + 2\\mathrm{H}_{2}\\mathrm{O}$</td><td>$\\mathrm{Fe(OH)}_{3} + 3\\mathrm{H}^{+} = \\mathrm{Fe}^{3+} + 3\\mathrm{H}_{2}\\mathrm{O}$</td></tr><tr><td>稳定性</td><td>不稳定,在空气中会迅速由白色变为灰绿色,最后变为红褐色:$4\\mathrm{Fe(OH)}_{2} + \\mathrm{O}_{2} + 2\\mathrm{H}_{2}\\mathrm{O} = 4\\mathrm{Fe(OH)}_{3}$</td><td>常温下稳定,加热分解$2\\mathrm{Fe(OH)}_{3} \\xlongequal{\\Delta} \\mathrm{Fe}_{2}\\mathrm{O}_{3} + 3\\mathrm{H}_{2}\\mathrm{O}$</td></tr><tr><td>制备</td><td>$\\mathrm{Fe}^{2+} + 2\\mathrm{OH}^{-} = \\mathrm{Fe(OH)}_{2} \\downarrow$(必须在非氧化性环境中制备)</td><td>$\\mathrm{Fe}^{3+} + 3\\mathrm{OH}^{-} = \\mathrm{Fe(OH)}_{3} \\downarrow$</td></tr></table>\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "",
+            "resource": "assets/p0001-b0018.png",
+            "table": null
+          },
+          "error": "invalid_table_formula_syntax"
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项",
+      "final_export_review": {
+        "structured": false,
+        "classification": [
+          "export_fallback"
+        ],
+        "reason": "最终 table=null、text 为空，只保留 PNG 图片；原始响应内容裁决不能当作最终可编辑表格通过。",
+        "reviewed": true
+      },
+      "cell_reviews": [
+        {
+          "id": "table:5:r0:c0",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "名称",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "名称",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r0:c1",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "氢氧化亚铁",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "氢氧化亚铁",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r0:c2",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "氢氧化铁",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "氢氧化铁",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r1:c0",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "化学式",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "化学式",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r1:c1",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe(OH)_{2}$",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$\\mathrm{Fe(OH)}_{2}$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:5:r1:c2",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe(OH)_{3}$",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$\\mathrm{Fe(OH)}_{3}$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:5:r2:c0",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "颜色、状态",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "颜色、状态",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r2:c1",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "白色固体",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "白色固体",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r2:c2",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "红褐色固体",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "红褐色固体",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r3:c0",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "水溶性",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "水溶性",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r3:c1",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "不溶",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "不溶",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r3:c2",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "不溶",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "不溶",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r4:c0",
+          "reference": {
+            "row": 4,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "与酸反应",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "与酸反应",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r4:c1",
+          "reference": {
+            "row": 4,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe(OH)_{2} + 2H^{+} = Fe^{2+} + 2H_{2}O$",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$\\mathrm{Fe(OH)}_{2} + 2\\mathrm{H}^{+} = \\mathrm{Fe}^{2+} + 2\\mathrm{H}_{2}\\mathrm{O}$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:5:r4:c2",
+          "reference": {
+            "row": 4,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe(OH)_{3} + 3H^{+} = Fe^{3+} + 3H_{2}O$",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$\\mathrm{Fe(OH)}_{3} + 3\\mathrm{H}^{+} = \\mathrm{Fe}^{3+} + 3\\mathrm{H}_{2}\\mathrm{O}$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:5:r5:c0",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "稳定性",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "稳定性",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r5:c1",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "不稳定，在空气中会迅速由白色变为灰绿色，最后变为红褐色：$4Fe(OH)_{2} + O_{2} + 2H_{2}O = 4Fe(OH)_{3}$",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "不稳定,在空气中会迅速由白色变为灰绿色,最后变为红褐色:$4\\mathrm{Fe(OH)}_{2} + \\mathrm{O}_{2} + 2\\mathrm{H}_{2}\\mathrm{O} = 4\\mathrm{Fe(OH)}_{3}$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:5:r5:c2",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "常温下稳定，加热分解 $2Fe(OH)_{3} \\overset{\\Delta}{=} Fe_{2}O_{3} + 3H_{2}O$",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "常温下稳定,加热分解$2\\mathrm{Fe(OH)}_{3} \\xlongequal{\\Delta} \\mathrm{Fe}_{2}\\mathrm{O}_{3} + 3\\mathrm{H}_{2}\\mathrm{O}$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:5:r6:c0",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "制备",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "制备",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。"
+        },
+        {
+          "id": "table:5:r6:c1",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe^{2+} + 2OH^{-} = Fe(OH)_{2} \\downarrow$ （必须在非氧化性环境中制备）",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$\\mathrm{Fe}^{2+} + 2\\mathrm{OH}^{-} = \\mathrm{Fe(OH)}_{2} \\downarrow$(必须在非氧化性环境中制备)",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        },
+        {
+          "id": "table:5:r6:c2",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "$Fe^{3+} + 3OH^{-} = Fe(OH)_{3} \\downarrow$",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "$\\mathrm{Fe}^{3+} + 3\\mathrm{OH}^{-} = \\mathrm{Fe(OH)}_{3} \\downarrow$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "representation"
+          ],
+          "reason": "已对照原图核对该格的文字、数字、符号与位置。 原始响应差异仅为空格、全半角标点、温度单位 ℃/°C 或已逐符号核对的等价 LaTeX 写法；没有据字符串不等推断错字。"
+        }
+      ]
+    },
+    {
+      "id": "inline:28:17",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 28,
+        "block_id": null,
+        "status": "missing",
+        "exact": false,
+        "reference": "$ \\mathrm{Fe}_{3}\\mathrm{O}_{4}\\circ  $",
+        "actual_range": null,
+        "observed_parent_formulas": [],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "expected": "$ \\mathrm{Fe}_{3}\\mathrm{O}_{4}\\circ  $",
+      "parent_item_id": "text:28",
+      "bbox": [
+        183.37153210849206,
+        4684.322591231557,
+        4415.217264983286,
+        5488.733127936386
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            413,
+            4713,
+            2614,
+            4862
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0015",
+          "bbox": [
+            173,
+            4914,
+            4357,
+            5258
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0016",
+          "bbox": [
+            423,
+            5307,
+            4306,
+            5456
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:28:18",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 28,
+        "block_id": null,
+        "status": "missing",
+        "exact": false,
+        "reference": "$ \\mathrm{Fe}_{3}0_{4} $",
+        "actual_range": null,
+        "observed_parent_formulas": [],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "expected": "$ \\mathrm{Fe}_{3}0_{4} $",
+      "parent_item_id": "text:28",
+      "bbox": [
+        183.37153210849206,
+        4684.322591231557,
+        4415.217264983286,
+        5488.733127936386
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            413,
+            4713,
+            2614,
+            4862
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0015",
+          "bbox": [
+            173,
+            4914,
+            4357,
+            5258
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0016",
+          "bbox": [
+            423,
+            5307,
+            4306,
+            5456
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:28:19",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 28,
+        "block_id": null,
+        "status": "missing",
+        "exact": false,
+        "reference": "$ \\mathrm{HNO}_{3} $",
+        "actual_range": null,
+        "observed_parent_formulas": [],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "expected": "$ \\mathrm{HNO}_{3} $",
+      "parent_item_id": "text:28",
+      "bbox": [
+        183.37153210849206,
+        4684.322591231557,
+        4415.217264983286,
+        5488.733127936386
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            413,
+            4713,
+            2614,
+            4862
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0015",
+          "bbox": [
+            173,
+            4914,
+            4357,
+            5258
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0016",
+          "bbox": [
+            423,
+            5307,
+            4306,
+            5456
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:28:20",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 28,
+        "block_id": null,
+        "status": "missing",
+        "exact": false,
+        "reference": "$ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $",
+        "actual_range": null,
+        "observed_parent_formulas": [],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "expected": "$ \\mathrm{Fe}_{2}\\mathrm{O}_{3} $",
+      "parent_item_id": "text:28",
+      "bbox": [
+        183.37153210849206,
+        4684.322591231557,
+        4415.217264983286,
+        5488.733127936386
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            413,
+            4713,
+            2614,
+            4862
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0015",
+          "bbox": [
+            173,
+            4914,
+            4357,
+            5258
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0016",
+          "bbox": [
+            423,
+            5307,
+            4306,
+            5456
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "inline:28:21",
+      "kind": "inline",
+      "row": {
+        "parent_annotation_id": 28,
+        "block_id": null,
+        "status": "missing",
+        "exact": false,
+        "reference": "$ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $",
+        "actual_range": null,
+        "observed_parent_formulas": [],
+        "classification": "unreviewed_content_or_representation_difference"
+      },
+      "strict_exact": false,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "expected": "$ \\mathrm{Fe}_{3}\\mathrm{O}_{4} $",
+      "parent_item_id": "text:28",
+      "bbox": [
+        183.37153210849206,
+        4684.322591231557,
+        4415.217264983286,
+        5488.733127936386
+      ],
+      "bbox_scope": "parent_reference_region",
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            413,
+            4713,
+            2614,
+            4862
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0015",
+          "bbox": [
+            173,
+            4914,
+            4357,
+            5258
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0016",
+          "bbox": [
+            423,
+            5307,
+            4306,
+            5456
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0013",
+      "kind": "extra",
+      "block_id": "b0013",
+      "bbox": [
+        413,
+        4713,
+        2614,
+        4862
+      ],
+      "strict_exact": false,
+      "raw_parent": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+      "actual": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            413,
+            4713,
+            2614,
+            4862
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "【说明】(1)FeO 不稳定,易被氧化为  $Fe_{3}O_{4}$。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0015",
+      "kind": "extra",
+      "block_id": "b0015",
+      "bbox": [
+        173,
+        4914,
+        4357,
+        5258
+      ],
+      "strict_exact": false,
+      "raw_parent": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+      "actual": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            173,
+            4914,
+            4357,
+            5258
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) FeO、Fe_{3}O_{4} 遇氧化性酸(如 HNO_{3})发生氧化还原反应,+2 价的铁均被氧化为+3 价。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0016",
+      "kind": "extra",
+      "block_id": "b0016",
+      "bbox": [
+        423,
+        5307,
+        4306,
+        5456
+      ],
+      "strict_exact": false,
+      "raw_parent": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+      "actual": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "GT 合并说明三项，预测 b0013/b0015/b0016 拆分；每项内容及化学式正确。GT Fe3“0”4 写数字零，原图与模型 O 为氧元素。b0015 化学下标未加数学分隔记录为表示/渲染问题，不假称渲染通过。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            423,
+            5307,
+            4306,
+            5456
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) $FeO$、 $Fe_{2}O_{3}$ 均为碱性氧化物， $Fe_{3}O_{4}$ 是复杂的氧化物，不属于碱性氧化物。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_952.jpg",
+    "sha256": "3563a859d407026c160f6917d5a625407a7565d83429f13ff85220b2ed356136"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-17.json",
+    "sha256": "d25f5e0a527405ab8280040e0aafa697bc55617665c6d033851d9c46c8e8c28f"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 25,
+  "unverified_units": []
+}

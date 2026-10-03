@@ -1,0 +1,2920 @@
+{
+  "review_method": "未进行本轮整页逐项视觉裁决",
+  "human_signed_off": false,
+  "scoring_unchanged": true,
+  "jobs": [
+    {
+      "job": "old-seven-en_jee",
+      "pages": 1,
+      "source": {
+        "path": "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346.jpg",
+        "sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade"
+      },
+      "trace": {
+        "path": "docs/issue-31/evidence/pages/old-seven-en_jee.json",
+        "sha256": "7289768da0fdfa1ce28af5cf8ab7df81d110e6c0b4d2399e2b1af0ce95d34943"
+      },
+      "previous_subset_quality": {
+        "anchors": [
+          {
+            "anchor": "JEE (Advanced) 2023",
+            "locations": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Q.12",
+            "locations": [
+              [
+                0,
+                2,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Q.13",
+            "locations": [
+              [
+                0,
+                6,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Time (h)",
+            "locations": [],
+            "found": false,
+            "unique": false
+          }
+        ],
+        "pair_correct": 3,
+        "pair_decidable": 3,
+        "wrong_pairs": [],
+        "missing": [
+          "Time (h)"
+        ]
+      },
+      "all_content_verified": false,
+      "items": [
+        {
+          "id": "p0001-b0001",
+          "kind": "text",
+          "bbox": [
+            55,
+            26,
+            137,
+            35
+          ],
+          "raw_output": "JEE (Advanced) 2023\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "JEE (Advanced) 2023\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0002",
+          "kind": "text",
+          "bbox": [
+            551,
+            27,
+            583,
+            36
+          ],
+          "raw_output": "## Paper 1\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## Paper 1\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0003",
+          "kind": "text",
+          "bbox": [
+            65,
+            41,
+            562,
+            64
+          ],
+          "raw_output": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0005",
+          "kind": "text",
+          "bbox": [
+            102,
+            194,
+            433,
+            208
+          ],
+          "raw_output": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0006",
+          "kind": "text",
+          "bbox": [
+            102,
+            218,
+            569,
+            242
+          ],
+          "raw_output": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0007",
+          "kind": "text",
+          "bbox": [
+            65,
+            279,
+            544,
+            303
+          ],
+          "raw_output": "Q.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "Q.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0009",
+          "kind": "text",
+          "bbox": [
+            176,
+            314,
+            346,
+            329
+          ],
+          "raw_output": "(I) LiAlH_{4} (excess), then H_{2}O\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(I) LiAlH_{4} (excess), then H_{2}O\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0010",
+          "kind": "text",
+          "bbox": [
+            178,
+            331,
+            313,
+            342
+          ],
+          "raw_output": "(ii) Acetophenone (excess)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(ii) Acetophenone (excess)\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0011",
+          "kind": "text",
+          "bbox": [
+            563,
+            605,
+            584,
+            614
+          ],
+          "raw_output": "## 211\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 211\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        }
+      ]
+    },
+    {
+      "job": "old-seven-en_two_column",
+      "pages": 1,
+      "source": {
+        "path": "/home/dr/project/docprase/tests/fixtures/issue15/printed_science_2col.png",
+        "sha256": "b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9"
+      },
+      "trace": {
+        "path": "docs/issue-31/evidence/pages/old-seven-en_two_column.json",
+        "sha256": "bcdb0ace9af7b47d94d89b4e737447d1b48556e75cc56b2e19d5e2aee7aba158"
+      },
+      "previous_subset_quality": {
+        "anchors": [
+          {
+            "anchor": "Printed Science Practice - Form A",
+            "locations": [
+              [
+                0,
+                0,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Section 1: Measurement",
+            "locations": [
+              [
+                0,
+                1,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "1. Measure the length of a pencil.",
+            "locations": [
+              [
+                0,
+                2,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Record the answer in centimeters.",
+            "locations": [
+              [
+                0,
+                2,
+                36
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "2. A meter has one hundred",
+            "locations": [
+              [
+                0,
+                3,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "centimeters. Convert 2 m to cm.",
+            "locations": [
+              [
+                0,
+                3,
+                27
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "3. Explain why repeated readings",
+            "locations": [
+              [
+                0,
+                4,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "can reduce random error.",
+            "locations": [
+              [
+                0,
+                4,
+                33
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "4. The chart shows two readings.",
+            "locations": [
+              [
+                0,
+                5,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Which reading is larger?",
+            "locations": [
+              [
+                0,
+                5,
+                34
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Figure 1. Recorded readings.",
+            "locations": [
+              [
+                0,
+                7,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "5. Write the result as a sentence.",
+            "locations": [
+              [
+                0,
+                8,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Include the unit in your answer.",
+            "locations": [
+              [
+                0,
+                8,
+                36
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "Section 2: Short answer",
+            "locations": [
+              [
+                0,
+                9,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "6. State one reason to check a measurement twice.",
+            "locations": [
+              [
+                0,
+                10,
+                0
+              ]
+            ],
+            "found": true,
+            "unique": true
+          },
+          {
+            "anchor": "End of practice page.",
+            "locations": [
+              [
+                0,
+                11,
+                3
+              ]
+            ],
+            "found": true,
+            "unique": true
+          }
+        ],
+        "pair_correct": 120,
+        "pair_decidable": 120,
+        "wrong_pairs": [],
+        "missing": []
+      },
+      "all_content_verified": false,
+      "items": [
+        {
+          "id": "p0001-b0001",
+          "kind": "text",
+          "bbox": [
+            73,
+            60,
+            763,
+            103
+          ],
+          "raw_output": "## Printed Science Practice - Form A\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## Printed Science Practice - Form A\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0002",
+          "kind": "text",
+          "bbox": [
+            71,
+            171,
+            579,
+            213
+          ],
+          "raw_output": "## Section 1: Measurement\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## Section 1: Measurement\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0003",
+          "kind": "text",
+          "bbox": [
+            71,
+            268,
+            513,
+            349
+          ],
+          "raw_output": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0006",
+          "kind": "text",
+          "bbox": [
+            70,
+            429,
+            491,
+            510
+          ],
+          "raw_output": "2. A meter has one hundred centimeters. Convert 2 m to cm.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2. A meter has one hundred centimeters. Convert 2 m to cm.\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0007",
+          "kind": "text",
+          "bbox": [
+            71,
+            609,
+            503,
+            689
+          ],
+          "raw_output": "3. Explain why repeated readings can reduce random error.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3. Explain why repeated readings can reduce random error.\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0004",
+          "kind": "text",
+          "bbox": [
+            633,
+            269,
+            1057,
+            351
+          ],
+          "raw_output": "4. The chart shows two readings.\n\nWhich reading is larger?\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "4. The chart shows two readings.\n\nWhich reading is larger?\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0008",
+          "kind": "text",
+          "bbox": [
+            714,
+            658,
+            1038,
+            691
+          ],
+          "raw_output": "Figure 1. Recorded readings.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "Figure 1. Recorded readings.\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0009",
+          "kind": "text",
+          "bbox": [
+            633,
+            739,
+            1057,
+            820
+          ],
+          "raw_output": "5. Write the result as a sentence.\n\nInclude the unit in your answer.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "5. Write the result as a sentence.\n\nInclude the unit in your answer.\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0010",
+          "kind": "text",
+          "bbox": [
+            71,
+            951,
+            572,
+            994
+          ],
+          "raw_output": "## Section 2: Short answer\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## Section 2: Short answer\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0011",
+          "kind": "text",
+          "bbox": [
+            70,
+            1044,
+            728,
+            1079
+          ],
+          "raw_output": "6. State one reason to check a measurement twice.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "6. State one reason to check a measurement twice.\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0012",
+          "kind": "text",
+          "bbox": [
+            71,
+            1149,
+            349,
+            1184
+          ],
+          "raw_output": "## End of practice page.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## End of practice page.\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        }
+      ]
+    },
+    {
+      "job": "old-seven-zh_formula",
+      "pages": 1,
+      "source": {
+        "path": "/home/dr/project/docprase/tests/fixtures/ovis/formula_book_page.png",
+        "sha256": "861030411176ef8eb8cbf9607461d252b8db557808ab91e87a4e9bed4c69bb84"
+      },
+      "trace": {
+        "path": "docs/issue-31/evidence/pages/old-seven-zh_formula.json",
+        "sha256": "de286053042ae8fb794b5664d1b6e10da4e266ba3e13d6f49dfe32be0758bfea"
+      },
+      "previous_subset_quality": {
+        "independent": [
+          {
+            "reference_y": 2015.9841000000001,
+            "matched": true,
+            "overlap_over_reference": 0.9454335001038933,
+            "block_id": "b0023",
+            "status": "ok",
+            "format": "markdown",
+            "exact_ignoring_whitespace": false,
+            "actual": "$I_1 = \\int_0^{\\frac{\\pi}{4}} \\ln(1 + 2\\sin x) \\cot x \\, dx, I_2 = \\int_0^{\\frac{\\pi}{4}} 2\\cos x \\cot x \\, dx, I_3 = \\int_0^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx$，则\n",
+            "reference": "I_1 = \\int_{0}^{\\frac{\\pi}{4}} \\ln (1 + 2 \\sin x) \\cot x \\, dx,\nI_2 = \\int_{0}^{\\frac{\\pi}{4}} 2 \\cos x \\cot x \\, dx,\nI_3 = \\int_{0}^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx,\\text{则}",
+            "raw": "$I_1 = \\int_0^{\\frac{\\pi}{4}} \\ln(1 + 2\\sin x) \\cot x \\, dx, I_2 = \\int_0^{\\frac{\\pi}{4}} 2\\cos x \\cot x \\, dx, I_3 = \\int_0^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx$，则\n"
+          },
+          {
+            "reference_y": 381.3225751738316,
+            "matched": true,
+            "overlap_over_reference": 1.0,
+            "block_id": "b0005",
+            "status": "ok",
+            "format": "latex",
+            "exact_ignoring_whitespace": false,
+            "actual": "e^{\\alpha}x\\left[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x\\right]",
+            "reference": "e ^ { \\alpha } x \\left[ \\left( A _ { 1 } + A _ { 2 } x + \\cdots + A _ { k } x ^ { k - 1 } \\right) \\cos \\beta x + \\left( B _ { 1 } + B _ { 2 } x + \\cdots + B _ { k } x ^ { k - 1 } \\right) \\sin \\beta x \\right]",
+            "raw": "e^{\\alpha}x\\left[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x\\right]"
+          },
+          {
+            "reference_y": 627.0360717759277,
+            "matched": true,
+            "overlap_over_reference": 0.9917675653614552,
+            "block_id": "b0009",
+            "status": "ok",
+            "format": "latex",
+            "exact_ignoring_whitespace": false,
+            "actual": "e^{\\alpha}x[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x]",
+            "reference": "e ^ { \\alpha } x [ ( A _{ 1 } + A  _{ 2 } x ~ + \\cdot \\cdot \\cdot + A  _{ k } x ^ { k - 1 } ) \\mathrm { c o s } ~ \\beta x + ( B  _{ 1 } + B  _{ 2 } x + \\cdot \\cdot \\cdot + B _ { k } x ^ { k - 1 } ) \\sin \\beta x ]",
+            "raw": "e^{\\alpha}x[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x]"
+          }
+        ],
+        "ownership_count": 15
+      },
+      "all_content_verified": false,
+      "items": [
+        {
+          "id": "p0001-b0002",
+          "kind": "text",
+          "bbox": [
+            232,
+            146,
+            268,
+            170
+          ],
+          "raw_output": "## 26\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 26\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0001",
+          "kind": "text",
+          "bbox": [
+            1363,
+            142,
+            1422,
+            173
+          ],
+          "raw_output": "## 目录\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 目录\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0003",
+          "kind": "text",
+          "bbox": [
+            228,
+            233,
+            523,
+            276
+          ],
+          "raw_output": "### 16.4 高阶K重根\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "### 16.4 高阶K重根\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0004",
+          "kind": "text",
+          "bbox": [
+            274,
+            316,
+            658,
+            353
+          ],
+          "raw_output": "k重复数根：通解中的2k项\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "k重复数根：通解中的2k项\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0005",
+          "kind": "formula",
+          "bbox": [
+            273,
+            378,
+            1302,
+            419
+          ],
+          "raw_output": "$$ e^{\\alpha}x\\left[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x\\right] $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "e^{\\alpha}x\\left[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x\\right]",
+            "resource": "assets/p0001-b0005.png",
+            "display": true
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0006",
+          "kind": "text",
+          "bbox": [
+            274,
+            441,
+            733,
+            477
+          ],
+          "raw_output": "若 $\\lambda_{1,2}=\\alpha\\pm\\beta i,\\beta>0$ 为特征方程\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "若 $\\lambda_{1,2}=\\alpha\\pm\\beta i,\\beta>0$ 为特征方程\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0007",
+          "kind": "formula",
+          "bbox": [
+            275,
+            503,
+            933,
+            542
+          ],
+          "raw_output": "$r^{n}+a_{1}r^{n-1}+\\cdots+a_{n-1}r+a_{n}=0$ 的 k 重复数根，\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$r^{n}+a_{1}r^{n-1}+\\cdots+a_{n-1}r+a_{n}=0$ 的 k 重复数根，\n",
+            "resource": "assets/p0001-b0007.png",
+            "display": false
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0008",
+          "kind": "text",
+          "bbox": [
+            275,
+            565,
+            735,
+            603
+          ],
+          "raw_output": "## 则对应的齐次方程通解中的 2k 项\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 则对应的齐次方程通解中的 2k 项\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0009",
+          "kind": "formula",
+          "bbox": [
+            274,
+            626,
+            1293,
+            668
+          ],
+          "raw_output": "$$ e^{\\alpha}x[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x] $$\n",
+          "final_content": {
+            "format": "latex",
+            "text": "e^{\\alpha}x[(A_{1}+A_{2}x+\\cdots+A_{k}x^{k-1})\\cos\\beta x+(B_{1}+B_{2}x+\\cdots+B_{k}x^{k-1})\\sin\\beta x]",
+            "resource": "assets/p0001-b0009.png",
+            "display": true
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0010",
+          "kind": "text",
+          "bbox": [
+            275,
+            690,
+            1109,
+            726
+          ],
+          "raw_output": "求高阶齐次方程的通解：将n个特征根对应的项相加得到通解\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "求高阶齐次方程的通解：将n个特征根对应的项相加得到通解\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0011",
+          "kind": "text",
+          "bbox": [
+            228,
+            750,
+            1422,
+            849
+          ],
+          "raw_output": "求n阶常系数线性齐次微分方程 $y^{(n)}+a_{1}(x)y^{(n-1)}+\\cdots+a_{n-1}(x)y'+a_{n}(x)y=0$的通解：\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "求n阶常系数线性齐次微分方程 $y^{(n)}+a_{1}(x)y^{(n-1)}+\\cdots+a_{n-1}(x)y'+a_{n}(x)y=0$的通解：\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0012",
+          "kind": "text",
+          "bbox": [
+            275,
+            875,
+            1357,
+            914
+          ],
+          "raw_output": "1 写出特征方程  $r^n + a_1 r^{n-1} + \\cdots + a_{n-1} r + a_n = 0$，求出其特征根  $r_i (i = 1, 2, \\ldots, n)$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1 写出特征方程  $r^n + a_1 r^{n-1} + \\cdots + a_{n-1} r + a_n = 0$，求出其特征根  $r_i (i = 1, 2, \\ldots, n)$\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0013",
+          "kind": "text",
+          "bbox": [
+            274,
+            938,
+            1086,
+            974
+          ],
+          "raw_output": "2 对每一个根，判断对应形式：单重实根  $r$，对应一项  $Ce^{\\alpha}x$；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2 对每一个根，判断对应形式：单重实根  $r$，对应一项  $Ce^{\\alpha}x$；\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0014",
+          "kind": "text",
+          "bbox": [
+            276,
+            999,
+            974,
+            1037
+          ],
+          "raw_output": "❤️k重实根r,对应k项 $(C_1+C_2x+\\cdots+C_kx^{k-1})e^{\\alpha x};$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "❤️k重实根r,对应k项 $(C_1+C_2x+\\cdots+C_kx^{k-1})e^{\\alpha x};$\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0015",
+          "kind": "text",
+          "bbox": [
+            275,
+            1062,
+            1259,
+            1100
+          ],
+          "raw_output": "❤️单重复数根  $r_1$.  $2 = \\alpha \\pm \\beta i$,  $\\beta > 0$, 对应两项  $e^\\alpha x (C_1 \\cos \\beta x + C_2 \\sin \\beta x)$;\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "❤️单重复数根  $r_1$.  $2 = \\alpha \\pm \\beta i$,  $\\beta > 0$, 对应两项  $e^\\alpha x (C_1 \\cos \\beta x + C_2 \\sin \\beta x)$;\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0016",
+          "kind": "text",
+          "bbox": [
+            229,
+            1123,
+            1420,
+            1226
+          ],
+          "raw_output": "♡k重复数根 $r_1$.  $2 = \\alpha \\pm \\beta i$,  $\\beta > 0$, 对应2k项 $e^\\alpha x \\left[(A_1 + A_2 x + \\cdots + A_k x^{k-1}) \\cos \\beta x + (B_1 + B_2 x + \\cdots + B_k x^{k-1}) \\sin \\beta x\\right]$.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "♡k重复数根 $r_1$.  $2 = \\alpha \\pm \\beta i$,  $\\beta > 0$, 对应2k项 $e^\\alpha x \\left[(A_1 + A_2 x + \\cdots + A_k x^{k-1}) \\cos \\beta x + (B_1 + B_2 x + \\cdots + B_k x^{k-1}) \\sin \\beta x\\right]$.\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0017",
+          "kind": "text",
+          "bbox": [
+            230,
+            1279,
+            386,
+            1316
+          ],
+          "raw_output": "### 例 1. K重\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "### 例 1. K重\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0018",
+          "kind": "text",
+          "bbox": [
+            228,
+            1342,
+            1420,
+            1442
+          ],
+          "raw_output": "已知以  $y=(C_1x+C_2)\\cos 2x+(C_3x+C_4)\\sin 2x$， $(C_1,C_2,C_3,C_4$ 为任意常数) 为通解的微分方程是  $y'''''' + ay'''' + by'' + cy' + dy = 0$，求  $a + b + c + d$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "已知以  $y=(C_1x+C_2)\\cos 2x+(C_3x+C_4)\\sin 2x$， $(C_1,C_2,C_3,C_4$ 为任意常数) 为通解的微分方程是  $y'''''' + ay'''' + by'' + cy' + dy = 0$，求  $a + b + c + d$。\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0019",
+          "kind": "text",
+          "bbox": [
+            272,
+            1496,
+            1213,
+            1535
+          ],
+          "raw_output": "3 将 n 个根对应的所有项相加便得通解，其中  $C, C_i, A_i, B_i$ 为任意常数。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3 将 n 个根对应的所有项相加便得通解，其中  $C, C_i, A_i, B_i$ 为任意常数。\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0020",
+          "kind": "text",
+          "bbox": [
+            231,
+            1703,
+            546,
+            1754
+          ],
+          "raw_output": "## 17 定积分应用\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 17 定积分应用\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0021",
+          "kind": "text",
+          "bbox": [
+            230,
+            1837,
+            878,
+            1880
+          ],
+          "raw_output": "17.1 旋转体体积，非y轴， $V = V_{1} - V_{2}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "17.1 旋转体体积，非y轴， $V = V_{1} - V_{2}$\n",
+            "resource": "assets/p0001-b0021.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0022",
+          "kind": "text",
+          "bbox": [
+            229,
+            1961,
+            525,
+            2003
+          ],
+          "raw_output": "### 17.2 积分比大小\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "### 17.2 积分比大小\n",
+            "resource": "assets/p0001-b0022.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0023",
+          "kind": "formula",
+          "bbox": [
+            270,
+            2021,
+            1212,
+            2108
+          ],
+          "raw_output": "$I_1 = \\int_0^{\\frac{\\pi}{4}} \\ln(1 + 2\\sin x) \\cot x \\, dx, I_2 = \\int_0^{\\frac{\\pi}{4}} 2\\cos x \\cot x \\, dx, I_3 = \\int_0^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx$，则\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$I_1 = \\int_0^{\\frac{\\pi}{4}} \\ln(1 + 2\\sin x) \\cot x \\, dx, I_2 = \\int_0^{\\frac{\\pi}{4}} 2\\cos x \\cot x \\, dx, I_3 = \\int_0^{\\frac{\\pi}{4}} \\frac{\\cos x}{1 + x} \\, dx$，则\n",
+            "resource": "assets/p0001-b0023.png",
+            "display": false
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        }
+      ]
+    },
+    {
+      "job": "old-seven-zh_merged_table",
+      "pages": 1,
+      "source": {
+        "path": "/home/dr/project/docprase/tests/fixtures/ovis/merged_table_book_page.png",
+        "sha256": "c9830bd637f0795420feff161f469cbb69fddcb6af6c30b68498caaaa65988fc"
+      },
+      "trace": {
+        "path": "docs/issue-31/evidence/pages/old-seven-zh_merged_table.json",
+        "sha256": "22d83b8ba202ddc3c1cbe84b340ce14e1fd9233d74a25cc1fb3ecc7ac2b78ba7"
+      },
+      "previous_subset_quality": {
+        "tables": [
+          {
+            "annotation_id": "box_id_2",
+            "matched": true,
+            "block_id": "b0007",
+            "status": "ok",
+            "rows": 10,
+            "columns": 4,
+            "reference_rows": 10,
+            "reference_columns": 4,
+            "structure_exact": true,
+            "cell_exact": 7,
+            "cell_count": 26,
+            "cell_differences": [
+              {
+                "index": 1,
+                "exact": false,
+                "actual": "单桥静力触探比贯入阻力($p_s$)",
+                "reference": "单桥静力触探比贯入阻力($(p_{s})$"
+              },
+              {
+                "index": 2,
+                "exact": false,
+                "actual": "桩间极限侧阻力(kPa)",
+                "reference": "桩间极限侧阻力($kPa$)"
+              },
+              {
+                "index": 3,
+                "exact": false,
+                "actual": "地表以下6m范围内的浅层土",
+                "reference": "地表以下6m 范围内的浅层土"
+              },
+              {
+                "index": 4,
+                "exact": false,
+                "actual": "---",
+                "reference": "--"
+              },
+              {
+                "index": 7,
+                "exact": false,
+                "actual": "位于粉土及砂性土以上",
+                "reference": "位于粉土及\n砂性土以上"
+              },
+              {
+                "index": 8,
+                "exact": false,
+                "actual": "$p_s \\leqslant 1000\\text{kPa}$",
+                "reference": "$p_{s}\\leqslant 1000kPa$"
+              },
+              {
+                "index": 9,
+                "exact": false,
+                "actual": "$q_{sik} = \\frac{p_s}{20}$",
+                "reference": "$q_{si\\rm{k}}=\\frac {p_{s}}{20}$"
+              },
+              {
+                "index": 10,
+                "exact": false,
+                "actual": "$1000\\text{kPa} < p_s \\leqslant 4000\\text{kPa}$",
+                "reference": "$1000kPa<p_s\\leqslant4000kPa$"
+              },
+              {
+                "index": 11,
+                "exact": false,
+                "actual": "$q_{sik} = 0.025p_s + 25$",
+                "reference": "$q_{si\\rm{k}}=0.025p_{s}+25$"
+              },
+              {
+                "index": 12,
+                "exact": false,
+                "actual": "$p_s > 4000\\text{kPa}$",
+                "reference": "$p_{s}>4000kPa$"
+              },
+              {
+                "index": 15,
+                "exact": false,
+                "actual": "$p_s \\leqslant 600\\text{kPa}$",
+                "reference": "$p_{s}\\leqslant 600kPa$"
+              },
+              {
+                "index": 16,
+                "exact": false,
+                "actual": "$q_{sik} = \\frac{p_s}{20}$",
+                "reference": "$q_{sik}=\\frac {p_{s}}{20}$"
+              },
+              {
+                "index": 17,
+                "exact": false,
+                "actual": "$600\\text{kPa} < p_s \\leqslant 5000\\text{kPa}$",
+                "reference": "$600kPa<p_s\\leqslant5000kPa$"
+              },
+              {
+                "index": 18,
+                "exact": false,
+                "actual": "$q_{sik} = 0.016p_s + 20.45$",
+                "reference": "$q_{si\\rm{k}}=0.016p_{s}+20.45$"
+              },
+              {
+                "index": 19,
+                "exact": false,
+                "actual": "$p_s \\geqslant 5000\\text{kPa}$",
+                "reference": "$p_{s}\\geqslant 5000kPa$"
+              },
+              {
+                "index": 22,
+                "exact": false,
+                "actual": "$p_s \\leqslant 5000\\text{kPa}$",
+                "reference": "$p_{s}\\leqslant 5000kPa$"
+              },
+              {
+                "index": 23,
+                "exact": false,
+                "actual": "$q_{sik} = \\frac{p_s}{50}$",
+                "reference": "$q_{si\\rm{k}}=\\frac {p_{s}}{50}$"
+              },
+              {
+                "index": 24,
+                "exact": false,
+                "actual": "$p_s > 5000\\text{kPa}$",
+                "reference": "$p_{s}>5000kPa$"
+              },
+              {
+                "index": 25,
+                "exact": false,
+                "actual": "$q_{sik} = 100$",
+                "reference": "$q_{si\\rm{k}}=100$"
+              }
+            ]
+          },
+          {
+            "annotation_id": "box_id_4",
+            "matched": true,
+            "block_id": "b0009",
+            "status": "ok",
+            "rows": 2,
+            "columns": 4,
+            "reference_rows": 2,
+            "reference_columns": 4,
+            "structure_exact": true,
+            "cell_exact": 6,
+            "cell_count": 8,
+            "cell_differences": [
+              {
+                "index": 0,
+                "exact": false,
+                "actual": "$p_s/p_{s1}$",
+                "reference": "$p_{\\mathrm {s}}/p_{\\mathrm {s}1}$"
+              },
+              {
+                "index": 4,
+                "exact": false,
+                "actual": "$\\varphi_s$",
+                "reference": "$\\varphi _{s}$"
+              }
+            ]
+          }
+        ]
+      },
+      "all_content_verified": false,
+      "items": [
+        {
+          "id": "p0001-b0001",
+          "kind": "text",
+          "bbox": [
+            350,
+            121,
+            610,
+            158
+          ],
+          "raw_output": "按表 E.0.2-4 计算；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "按表 E.0.2-4 计算；\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0002",
+          "kind": "text",
+          "bbox": [
+            250,
+            166,
+            998,
+            246
+          ],
+          "raw_output": "$p_{sbl}$——桩端全断面以上8倍桩径范围内的比贯入阻力平均值（kPa）；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$p_{sbl}$——桩端全断面以上8倍桩径范围内的比贯入阻力平均值（kPa）；\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0003",
+          "kind": "text",
+          "bbox": [
+            249,
+            254,
+            1000,
+            425
+          ],
+          "raw_output": "$p_{sb2}$——桩端全断面以下 4 倍桩径范围内的比贯入阻力平均值（kPa），当桩端持力层为密实的砂土层，其比贯入阻力平均值（ $p_{s}$）超过 20MPa 时，应乘以表 E.0.2-5 中系数（C）后，再计算  $p_{sk2}$ 及  $p_{sk1}$ 值；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$p_{sb2}$——桩端全断面以下 4 倍桩径范围内的比贯入阻力平均值（kPa），当桩端持力层为密实的砂土层，其比贯入阻力平均值（ $p_{s}$）超过 20MPa 时，应乘以表 E.0.2-5 中系数（C）后，再计算  $p_{sk2}$ 及  $p_{sk1}$ 值；\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0004",
+          "kind": "text",
+          "bbox": [
+            279,
+            432,
+            755,
+            468
+          ],
+          "raw_output": "$\\beta$——折减系数，按表 E.0.2-6 取值；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$\\beta$——折减系数，按表 E.0.2-6 取值；\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0005",
+          "kind": "text",
+          "bbox": [
+            262,
+            476,
+            571,
+            513
+          ],
+          "raw_output": "$A_{p}$ ——桩端面积  $(m^{2})$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "$A_{p}$ ——桩端面积  $(m^{2})$。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0006",
+          "kind": "text",
+          "bbox": [
+            405,
+            536,
+            772,
+            569
+          ],
+          "raw_output": "表 E.0.2-1 桩间极限侧阻力  $q_{sik}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "表 E.0.2-1 桩间极限侧阻力  $q_{sik}$\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0007",
+          "kind": "table",
+          "bbox": [
+            177,
+            574,
+            999,
+            1140
+          ],
+          "raw_output": "<table border=1><tr><td colspan=\"2\">土的类别</td><td>单桥静力触探比贯入阻力($p_s$)</td><td>桩间极限侧阻力(kPa)</td></tr><tr><td colspan=\"2\">地表以下6m范围内的浅层土</td><td>---</td><td>15</td></tr><tr><td rowspan=\"6\">黏性土</td><td rowspan=\"3\">位于粉土及砂性土以上</td><td>$p_s \\leqslant 1000\\text{kPa}$</td><td>$q_{sik} = \\frac{p_s}{20}$</td></tr><tr><td>$1000\\text{kPa} &lt; p_s \\leqslant 4000\\text{kPa}$</td><td>$q_{sik} = 0.025p_s + 25$</td></tr><tr><td>$p_s &gt; 4000\\text{kPa}$</td><td>125</td></tr><tr><td rowspan=\"3\">位于粉土及砂性土以下</td><td>$p_s \\leqslant 600\\text{kPa}$</td><td>$q_{sik} = \\frac{p_s}{20}$</td></tr><tr><td>$600\\text{kPa} &lt; p_s \\leqslant 5000\\text{kPa}$</td><td>$q_{sik} = 0.016p_s + 20.45$</td></tr><tr><td>$p_s \\geqslant 5000\\text{kPa}$</td><td>100</td></tr><tr><td rowspan=\"2\" colspan=\"2\">粉土及砂性土</td><td>$p_s \\leqslant 5000\\text{kPa}$</td><td>$q_{sik} = \\frac{p_s}{50}$</td></tr><tr><td>$p_s &gt; 5000\\text{kPa}$</td><td>$q_{sik} = 100$</td></tr></table>\n",
+          "final_content": {
+            "format": "html",
+            "text": "<table><tr><td colspan=\"2\">土的类别</td><td>单桥静力触探比贯入阻力($p_s$)</td><td>桩间极限侧阻力(kPa)</td></tr><tr><td colspan=\"2\">地表以下6m范围内的浅层土</td><td>---</td><td>15</td></tr><tr><td rowspan=\"6\">黏性土</td><td rowspan=\"3\">位于粉土及砂性土以上</td><td>$p_s \\leqslant 1000\\text{kPa}$</td><td>$q_{sik} = \\frac{p_s}{20}$</td></tr><tr><td>$1000\\text{kPa} &lt; p_s \\leqslant 4000\\text{kPa}$</td><td>$q_{sik} = 0.025p_s + 25$</td></tr><tr><td>$p_s &gt; 4000\\text{kPa}$</td><td>125</td></tr><tr><td rowspan=\"3\">位于粉土及砂性土以下</td><td>$p_s \\leqslant 600\\text{kPa}$</td><td>$q_{sik} = \\frac{p_s}{20}$</td></tr><tr><td>$600\\text{kPa} &lt; p_s \\leqslant 5000\\text{kPa}$</td><td>$q_{sik} = 0.016p_s + 20.45$</td></tr><tr><td>$p_s \\geqslant 5000\\text{kPa}$</td><td>100</td></tr><tr><td rowspan=\"2\" colspan=\"2\">粉土及砂性土</td><td>$p_s \\leqslant 5000\\text{kPa}$</td><td>$q_{sik} = \\frac{p_s}{50}$</td></tr><tr><td>$p_s &gt; 5000\\text{kPa}$</td><td>$q_{sik} = 100$</td></tr></table>",
+            "resource": "assets/p0001-b0007.png",
+            "table": {
+              "rows": 10,
+              "columns": 4,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 2,
+                  "header": false,
+                  "text": "土的类别",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "单桥静力触探比贯入阻力($p_s$)",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "桩间极限侧阻力(kPa)",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 2,
+                  "header": false,
+                  "text": "地表以下6m范围内的浅层土",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "---",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "15",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 0,
+                  "rowspan": 6,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "黏性土",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 1,
+                  "rowspan": 3,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "位于粉土及砂性土以上",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$p_s \\leqslant 1000\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$q_{sik} = \\frac{p_s}{20}$",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$1000\\text{kPa} < p_s \\leqslant 4000\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$q_{sik} = 0.025p_s + 25$",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$p_s > 4000\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "125",
+                  "bbox": null
+                },
+                {
+                  "row": 5,
+                  "column": 1,
+                  "rowspan": 3,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "位于粉土及砂性土以下",
+                  "bbox": null
+                },
+                {
+                  "row": 5,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$p_s \\leqslant 600\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 5,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$q_{sik} = \\frac{p_s}{20}$",
+                  "bbox": null
+                },
+                {
+                  "row": 6,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$600\\text{kPa} < p_s \\leqslant 5000\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 6,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$q_{sik} = 0.016p_s + 20.45$",
+                  "bbox": null
+                },
+                {
+                  "row": 7,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$p_s \\geqslant 5000\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 7,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "100",
+                  "bbox": null
+                },
+                {
+                  "row": 8,
+                  "column": 0,
+                  "rowspan": 2,
+                  "colspan": 2,
+                  "header": false,
+                  "text": "粉土及砂性土",
+                  "bbox": null
+                },
+                {
+                  "row": 8,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$p_s \\leqslant 5000\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 8,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$q_{sik} = \\frac{p_s}{50}$",
+                  "bbox": null
+                },
+                {
+                  "row": 9,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$p_s > 5000\\text{kPa}$",
+                  "bbox": null
+                },
+                {
+                  "row": 9,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$q_{sik} = 100$",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0008",
+          "kind": "text",
+          "bbox": [
+            475,
+            1167,
+            708,
+            1197
+          ],
+          "raw_output": "表 E.0.2-2 系数  $\\varphi_{s}$\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "表 E.0.2-2 系数  $\\varphi_{s}$\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0009",
+          "kind": "table",
+          "bbox": [
+            179,
+            1207,
+            999,
+            1322
+          ],
+          "raw_output": "<table border=1><tr><td>$p_s/p_{s1}$</td><td>$\\leqslant 5$</td><td>7.5</td><td>$\\geqslant 10$</td></tr><tr><td>$\\varphi_s$</td><td>1.00</td><td>0.50</td><td>0.33</td></tr></table>\n",
+          "final_content": {
+            "format": "html",
+            "text": "<table><tr><td>$p_s/p_{s1}$</td><td>$\\leqslant 5$</td><td>7.5</td><td>$\\geqslant 10$</td></tr><tr><td>$\\varphi_s$</td><td>1.00</td><td>0.50</td><td>0.33</td></tr></table>",
+            "resource": "assets/p0001-b0009.png",
+            "table": {
+              "rows": 2,
+              "columns": 4,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$p_s/p_{s1}$",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$\\leqslant 5$",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "7.5",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$\\geqslant 10$",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "$\\varphi_s$",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "1.00",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "0.50",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "0.33",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0010",
+          "kind": "text",
+          "bbox": [
+            201,
+            1332,
+            1004,
+            1400
+          ],
+          "raw_output": "注：1  $p_{s}$ 为桩端穿越的中密—密实砂土、粉土的单桥静力触探比贯入阻力平均值； $p_{s1}$ 为砂土、粉土的下卧软土层的比贯入阻力平均值；\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "注：1  $p_{s}$ 为桩端穿越的中密—密实砂土、粉土的单桥静力触探比贯入阻力平均值； $p_{s1}$ 为砂土、粉土的下卧软土层的比贯入阻力平均值；\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0011",
+          "kind": "text",
+          "bbox": [
+            244,
+            1408,
+            908,
+            1439
+          ],
+          "raw_output": "2 单桥探头的圆锥底面积为  $15 \\, cm^2$，底部带  $7 \\, cm$ 高滑套，锥角  $60^\\circ$。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2 单桥探头的圆锥底面积为  $15 \\, cm^2$，底部带  $7 \\, cm$ 高滑套，锥角  $60^\\circ$。\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0012",
+          "kind": "text",
+          "bbox": [
+            202,
+            1464,
+            239,
+            1492
+          ],
+          "raw_output": "## 60\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 60\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        }
+      ]
+    },
+    {
+      "job": "old-seven-zh_pdf",
+      "pages": 2,
+      "source": {
+        "path": "/home/dr/project/docprase/tests/fixtures/pdf/printed_textbook_2p.pdf",
+        "sha256": "13c682d9d850a23be468cfaec94b136ff67493f8792dac807425561a02cff1d7"
+      },
+      "trace": {
+        "path": "docs/issue-31/evidence/pages/old-seven-zh_pdf.json",
+        "sha256": "e12b9565655ba0643f8dc0c8535519de94b4337a791f3d20428247b4146b62ac"
+      },
+      "previous_subset_quality": {
+        "lines": [
+          {
+            "exact": false,
+            "edit_distance": 3,
+            "reference_chars": 9,
+            "cer": 0.3333333333333333,
+            "actual": "## 第一章 分数的意义\n",
+            "reference": "第一章 分数的意义",
+            "page": "p0001",
+            "line": 1
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 27,
+            "cer": 0.0,
+            "actual": "分数表示把一个整体平均分成若干份后取其中的一份或几份。\n",
+            "reference": "分数表示把一个整体平均分成若干份后取其中的一份或几份。",
+            "page": "p0001",
+            "line": 2
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 27,
+            "cer": 0.0,
+            "actual": "例如，把一张纸平均分成四份，取其中的一份就是四分之一。\n",
+            "reference": "例如，把一张纸平均分成四份，取其中的一份就是四分之一。",
+            "page": "p0001",
+            "line": 3
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 22,
+            "cer": 0.0,
+            "actual": "分母说明平均分成的份数，分子说明所取的份数。\n",
+            "reference": "分母说明平均分成的份数，分子说明所取的份数。",
+            "page": "p0001",
+            "line": 4
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 24,
+            "cer": 0.0,
+            "actual": "观察一张图，先找出整体，再数一数阴影部分占几份。\n",
+            "reference": "观察一张图，先找出整体，再数一数阴影部分占几份。",
+            "page": "p0001",
+            "line": 5
+          },
+          {
+            "exact": false,
+            "edit_distance": 3,
+            "reference_chars": 9,
+            "cer": 0.3333333333333333,
+            "actual": "## 第二章 小数与长度\n",
+            "reference": "第二章 小数与长度",
+            "page": "p0002",
+            "line": 1
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 32,
+            "cer": 0.0,
+            "actual": "测量一支铅笔的长度时，可以先读出整厘米，再读出不足一厘米的部分。\n",
+            "reference": "测量一支铅笔的长度时，可以先读出整厘米，再读出不足一厘米的部分。",
+            "page": "p0002",
+            "line": 2
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 28,
+            "cer": 0.0,
+            "actual": "十个一毫米合成一厘米，因此一点五厘米也可以写成十五毫米。\n",
+            "reference": "十个一毫米合成一厘米，因此一点五厘米也可以写成十五毫米。",
+            "page": "p0002",
+            "line": 3
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 23,
+            "cer": 0.0,
+            "actual": "比较两个长度时，应先统一单位，再比较数值大小。\n",
+            "reference": "比较两个长度时，应先统一单位，再比较数值大小。",
+            "page": "p0002",
+            "line": 4
+          },
+          {
+            "exact": true,
+            "edit_distance": 0,
+            "reference_chars": 24,
+            "cer": 0.0,
+            "actual": "请写出三件教室物品的长度，并说明选择了什么单位。\n",
+            "reference": "请写出三件教室物品的长度，并说明选择了什么单位。",
+            "page": "p0002",
+            "line": 5
+          }
+        ],
+        "exact_lines": 8,
+        "reference_lines": 10,
+        "total_edit_distance": 6,
+        "total_reference_chars": 225
+      },
+      "all_content_verified": false,
+      "items": [
+        {
+          "id": "p0001-p0001-b0001",
+          "kind": "text",
+          "bbox": [
+            170,
+            205,
+            641,
+            267
+          ],
+          "raw_output": "## 第一章 分数的意义\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0001-b0001.png",
+            "text": "## 第一章 分数的意义\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-p0001-b0002",
+          "kind": "text",
+          "bbox": [
+            170,
+            386,
+            1209,
+            434
+          ],
+          "raw_output": "分数表示把一个整体平均分成若干份后取其中的一份或几份。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0001-b0002.png",
+            "text": "分数表示把一个整体平均分成若干份后取其中的一份或几份。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-p0001-b0003",
+          "kind": "text",
+          "bbox": [
+            171,
+            501,
+            1209,
+            549
+          ],
+          "raw_output": "例如，把一张纸平均分成四份，取其中的一份就是四分之一。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0001-b0003.png",
+            "text": "例如，把一张纸平均分成四份，取其中的一份就是四分之一。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-p0001-b0004",
+          "kind": "text",
+          "bbox": [
+            171,
+            619,
+            1014,
+            666
+          ],
+          "raw_output": "分母说明平均分成的份数，分子说明所取的份数。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0001-b0004.png",
+            "text": "分母说明平均分成的份数，分子说明所取的份数。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-p0001-b0005",
+          "kind": "text",
+          "bbox": [
+            171,
+            735,
+            1093,
+            783
+          ],
+          "raw_output": "观察一张图，先找出整体，再数一数阴影部分占几份。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0001-b0005.png",
+            "text": "观察一张图，先找出整体，再数一数阴影部分占几份。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0002-p0002-b0001",
+          "kind": "text",
+          "bbox": [
+            170,
+            205,
+            645,
+            267
+          ],
+          "raw_output": "## 第二章 小数与长度\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0002-b0001.png",
+            "text": "## 第二章 小数与长度\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0002-p0002-b0002",
+          "kind": "text",
+          "bbox": [
+            167,
+            385,
+            1403,
+            434
+          ],
+          "raw_output": "测量一支铅笔的长度时，可以先读出整厘米，再读出不足一厘米的部分。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0002-b0002.png",
+            "text": "测量一支铅笔的长度时，可以先读出整厘米，再读出不足一厘米的部分。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0002-p0002-b0003",
+          "kind": "text",
+          "bbox": [
+            172,
+            501,
+            1249,
+            548
+          ],
+          "raw_output": "十个一毫米合成一厘米，因此一点五厘米也可以写成十五毫米。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0002-b0003.png",
+            "text": "十个一毫米合成一厘米，因此一点五厘米也可以写成十五毫米。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0002-p0002-b0004",
+          "kind": "text",
+          "bbox": [
+            171,
+            619,
+            1053,
+            666
+          ],
+          "raw_output": "比较两个长度时，应先统一单位，再比较数值大小。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0002-b0004.png",
+            "text": "比较两个长度时，应先统一单位，再比较数值大小。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0002-p0002-b0005",
+          "kind": "text",
+          "bbox": [
+            171,
+            735,
+            1093,
+            783
+          ],
+          "raw_output": "请写出三件教室物品的长度，并说明选择了什么单位。\n",
+          "final_content": {
+            "format": "markdown",
+            "resource": "assets/p0002-b0005.png",
+            "text": "请写出三件教室物品的长度，并说明选择了什么单位。\n"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        }
+      ]
+    },
+    {
+      "job": "old-seven-zh_text_table",
+      "pages": 1,
+      "source": {
+        "path": "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+        "sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6"
+      },
+      "trace": {
+        "path": "docs/issue-31/evidence/pages/old-seven-zh_text_table.json",
+        "sha256": "b525569b4e969e148eb92b7da6d774284dcd4040b1a2d1aa0ee7798a8a962759"
+      },
+      "previous_subset_quality": {
+        "text_excerpt": {
+          "exact": true,
+          "edit_distance": 0,
+          "reference_chars": 63,
+          "cer": 0.0,
+          "actual": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+          "reference": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n"
+        },
+        "tables": [
+          {
+            "annotation_id": 10,
+            "matched": true,
+            "block_id": "b0013",
+            "status": "ok",
+            "rows": 5,
+            "columns": 3,
+            "reference_rows": 5,
+            "reference_columns": 3,
+            "structure_exact": true,
+            "cell_exact": 14,
+            "cell_count": 15,
+            "cell_differences": [
+              {
+                "index": 0,
+                "exact": false,
+                "actual": "序号",
+                "reference": "序 号"
+              }
+            ]
+          }
+        ]
+      },
+      "all_content_verified": false,
+      "items": [
+        {
+          "id": "p0001-b0001",
+          "kind": "text",
+          "bbox": [
+            773,
+            54,
+            1187,
+            86
+          ],
+          "raw_output": "## 第一节 水利水电工程项目成本构成\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第一节 水利水电工程项目成本构成\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0002",
+          "kind": "text",
+          "bbox": [
+            151,
+            132,
+            319,
+            165
+          ],
+          "raw_output": "### 1. 基础单价\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "### 1. 基础单价\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0003",
+          "kind": "text",
+          "bbox": [
+            90,
+            176,
+            1242,
+            255
+          ],
+          "raw_output": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0004",
+          "kind": "text",
+          "bbox": [
+            91,
+            263,
+            1243,
+            342
+          ],
+          "raw_output": "（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0005",
+          "kind": "text",
+          "bbox": [
+            150,
+            350,
+            718,
+            384
+          ],
+          "raw_output": "1）基本工资，由技能工资和岗位工资构成。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1）基本工资，由技能工资和岗位工资构成。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0006",
+          "kind": "text",
+          "bbox": [
+            92,
+            393,
+            1242,
+            473
+          ],
+          "raw_output": "技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0007",
+          "kind": "text",
+          "bbox": [
+            92,
+            481,
+            1241,
+            560
+          ],
+          "raw_output": "岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0008",
+          "kind": "text",
+          "bbox": [
+            91,
+            569,
+            1243,
+            779
+          ],
+          "raw_output": "2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0012",
+          "kind": "text",
+          "bbox": [
+            143,
+            844,
+            249,
+            874
+          ],
+          "raw_output": "## 表 11-1\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 表 11-1\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0011",
+          "kind": "text",
+          "bbox": [
+            1042,
+            843,
+            1214,
+            874
+          ],
+          "raw_output": "## 单位：元/工时\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 单位：元/工时\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0009",
+          "kind": "text",
+          "bbox": [
+            146,
+            786,
+            900,
+            822
+          ],
+          "raw_output": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0010",
+          "kind": "text",
+          "bbox": [
+            487,
+            843,
+            848,
+            874
+          ],
+          "raw_output": "## 一 般地区人工预算单价计算标准\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 一 般地区人工预算单价计算标准\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0013",
+          "kind": "table",
+          "bbox": [
+            94,
+            883,
+            1239,
+            1111
+          ],
+          "raw_output": "<table border=1><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>\n",
+          "final_content": {
+            "format": "html",
+            "text": "<table><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>",
+            "resource": "assets/p0001-b0013.png",
+            "table": {
+              "rows": 5,
+              "columns": 3,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "序号",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "定额人等级",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "一般地区",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "1",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "高级熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "10.26",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "2",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "7.61",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "3",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "半熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "5.95",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "4",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "普工",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "4.90",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0014",
+          "kind": "text",
+          "bbox": [
+            91,
+            1137,
+            1242,
+            1261
+          ],
+          "raw_output": "（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0015",
+          "kind": "text",
+          "bbox": [
+            89,
+            1268,
+            1242,
+            1522
+          ],
+          "raw_output": "1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0016",
+          "kind": "text",
+          "bbox": [
+            91,
+            1530,
+            1242,
+            1652
+          ],
+          "raw_output": "2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0017",
+          "kind": "text",
+          "bbox": [
+            92,
+            1660,
+            1244,
+            1740
+          ],
+          "raw_output": "3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0018",
+          "kind": "formula",
+          "bbox": [
+            381,
+            1747,
+            953,
+            1783
+          ],
+          "raw_output": "## 运输保险费=材料原价×材料运输保险费率\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 运输保险费=材料原价×材料运输保险费率\n",
+            "resource": "assets/p0001-b0018.png",
+            "display": true
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        },
+        {
+          "id": "p0001-b0019",
+          "kind": "text",
+          "bbox": [
+            1151,
+            1811,
+            1203,
+            1839
+          ],
+          "raw_output": "## 383\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 383\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "classification": [
+            "unverified"
+          ],
+          "reviewed": false,
+          "reason": "无整页逐项参考标注；本轮尚未作逐字视觉裁决，已有回归子集结果不等于本项正确。"
+        }
+      ]
+    }
+  ],
+  "reason": "旧七页不在32页完整GT集合，保留未核验项与原有子集差异；不计入32页内容核验分母。"
+}

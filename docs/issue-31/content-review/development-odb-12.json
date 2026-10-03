@@ -1,0 +1,1273 @@
+{
+  "page": "development-odb-12",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "三道探索题正确；“二轮复习”图形标题未转为文本。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "7664b8358ec61bda657a5fbf3d7e6ac411dee70c54aa4d43fe3b5ff1c942d5d0",
+    "sheet-01.jpg": "aa99e723d465855c908bb51dbee253e21fbb700bcc6f14a5ab35f4c8a4c3fcc1"
+  },
+  "items": [
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          469.4896545410156,
+          235.18092346191406,
+          1176.86962890625,
+          235.18092346191406,
+          1176.86962890625,
+          378.3006896972656,
+          469.4896545410156,
+          378.3006896972656
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 12,
+        "text": "函数图象上点的存在性问题中的距离与面积（常考知识点精析）",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "函数图象上点的存在性问题中的距离与面积（常考知识点精析）",
+      "actual": "函数图象上点的存在性问题中的距离 与面积（常考知识点精析）",
+      "raw_parent": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+      "bbox": [
+        469.4896545410156,
+        235.18092346191406,
+        1176.86962890625,
+        378.3006896972656
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            470,
+            235,
+            1181,
+            378
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          153.12791442871094,
+          479.2221374511719,
+          863.0964965820312,
+          479.2221374511719,
+          863.0964965820312,
+          527.0764770507812,
+          153.12791442871094,
+          527.0764770507812
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 3,
+        "text": "板块一探索抛物线上的点存在性之距离",
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "板块一探索抛物线上的点存在性之距离",
+      "actual": "## 板块一 探索抛物线上的点存在性之距离",
+      "raw_parent": "## 板块一 探索抛物线上的点存在性之距离\n",
+      "bbox": [
+        153.12791442871094,
+        479.2221374511719,
+        863.0964965820312,
+        527.0764770507812
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            149,
+            480,
+            863,
+            528
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 板块一 探索抛物线上的点存在性之距离\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 板块一 探索抛物线上的点存在性之距离\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          154.03196716308594,
+          548.0751342773438,
+          487.1822814941406,
+          548.0751342773438,
+          487.1822814941406,
+          589.1617431640625,
+          154.03196716308594,
+          589.1617431640625
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 5,
+        "text": "一、二次函数与线段定值",
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "一、二次函数与线段定值",
+      "actual": "## 一、 二次函数与线段定值",
+      "raw_parent": "## 一、 二次函数与线段定值\n",
+      "bbox": [
+        154.03196716308594,
+        548.0751342773438,
+        487.1822814941406,
+        589.1617431640625
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            149,
+            550,
+            489,
+            588
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 一、 二次函数与线段定值\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 一、 二次函数与线段定值\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          154.70852661132812,
+          592.3170166015625,
+          571.5342407226562,
+          592.3170166015625,
+          571.5342407226562,
+          632.001220703125,
+          154.70852661132812,
+          632.001220703125
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 0,
+        "text": "探索：用距离来刻画动点的位置",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "探索：用距离来刻画动点的位置",
+      "actual": "## 探索：用距离来刻画动点的位置",
+      "raw_parent": "## 探索：用距离来刻画动点的位置\n",
+      "bbox": [
+        154.70852661132812,
+        592.3170166015625,
+        571.5342407226562,
+        632.001220703125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            149,
+            594,
+            572,
+            631
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 探索：用距离来刻画动点的位置\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 探索：用距离来刻画动点的位置\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          163.91468811035156,
+          635.8688354492188,
+          295.53265380859375,
+          635.8688354492188,
+          295.53265380859375,
+          675.2927856445312,
+          163.91468811035156,
+          675.2927856445312
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 6,
+        "text": "【探索1】",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "【探索1】",
+      "actual": "## 【探索1】",
+      "raw_parent": "## 【探索1】\n",
+      "bbox": [
+        163.91468811035156,
+        635.8688354492188,
+        295.53265380859375,
+        675.2927856445312
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            161,
+            637,
+            292,
+            674
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【探索1】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【探索1】\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          152.15003967285156,
+          697.2713423421584,
+          1501.46533203125,
+          697.2713423421584,
+          1501.46533203125,
+          850.3565063476562,
+          152.15003967285156,
+          850.3565063476562
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 2,
+        "text": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 设抛物线的对称轴与 x轴交于点 M , 问在对称轴上是否存在点 P , 使 $ \\Delta CMP $为等腰三角形？若存在，请求出所有符合条件的点 P的坐标；若不存在，请说明理由。",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 设抛物线的对称轴与 x轴交于点 M , 问在对称轴上是否存在点 P , 使 $ \\Delta CMP $为等腰三角形？若存在，请求出所有符合条件的点 P的坐标；若不存在，请说明理由。",
+      "actual": "抛物线 $y = -x^2 - 2x + 3$ 与 $x$ 轴交于点 $A$、 $B$（点 $A$ 在点 $B$ 右侧），与 $y$ 轴交于点 $C$，设抛物线的对称轴与 $x$ 轴交于点 $M$，问在对称轴上是否存在点 $P$，使 $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点 $P$ 的坐标；若不存在，请说明理由。",
+      "raw_parent": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+      "bbox": [
+        152.15003967285156,
+        697.2713423421584,
+        1501.46533203125,
+        850.3565063476562
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "y"
+        },
+        {
+          "reference": "y",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "{2}-",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "- 2"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ 与"
+        },
+        {
+          "reference": "与",
+          "actual": "x$"
+        },
+        {
+          "reference": "x",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " $"
+        },
+        {
+          "reference": " (",
+          "actual": "$（"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "), ",
+          "actual": "），"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " , ",
+          "actual": "$，"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " , ",
+          "actual": "$，"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " , ",
+          "actual": "$，"
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "D",
+          "actual": "triangl"
+        },
+        {
+          "reference": "lta",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "$",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            145,
+            700,
+            1508,
+            852
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          166.73291015625,
+          1157.4300537109375,
+          290.3219909667969,
+          1157.4300537109375,
+          290.3219909667969,
+          1193.3046875,
+          166.73291015625,
+          1193.3046875
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 7,
+        "text": "【探索2】",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "【探索2】",
+      "actual": "## 【探索2】",
+      "raw_parent": "## 【探索2】\n",
+      "bbox": [
+        166.73291015625,
+        1157.4300537109375,
+        290.3219909667969,
+        1193.3046875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            161,
+            1157,
+            291,
+            1194
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【探索2】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【探索2】\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:14",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          150.38337651687885,
+          1218.326171875,
+          1496.12841796875,
+          1218.326171875,
+          1496.12841796875,
+          1364.531999171369,
+          150.38337651687885,
+          1364.531999171369
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 14,
+        "text": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 点 P为抛物线上一动点，若点 P到直线 y=x的距离为 $ \\frac{\\sqrt{2} }{2} $ ，求点 P的坐标。",
+        "attribute": {}
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 点 P为抛物线上一动点，若点 P到直线 y=x的距离为 $ \\frac{\\sqrt{2} }{2} $ ，求点 P的坐标。",
+      "actual": "抛物线 $y = -x^2 - 2x + 3$ 与 $x$ 轴交于点 $A$、 $B$（点 $A$ 在点 $B$ 右侧），与 $y$ 轴交于点 $C$，点 $P$ 为抛物线上一动点，若点 $P$ 到直线 $y = x$ 的距离为 $\\frac{\\sqrt{2}}{2}$，求点 $P$ 的坐标。",
+      "raw_parent": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+      "bbox": [
+        150.38337651687885,
+        1218.326171875,
+        1496.12841796875,
+        1364.531999171369
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "y"
+        },
+        {
+          "reference": "y",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "{2}-",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "- 2"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ 与"
+        },
+        {
+          "reference": "与",
+          "actual": "x$"
+        },
+        {
+          "reference": "x",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " $"
+        },
+        {
+          "reference": " (",
+          "actual": "$（"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "), ",
+          "actual": "），"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": " , ",
+          "actual": "$，"
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": " ",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": "$"
+        },
+        {
+          "reference": "",
+          "actual": "$ "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            147,
+            1220,
+            1499,
+            1366
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          163.5574496549223,
+          1677.5085984224706,
+          289.92863975850673,
+          1677.5085984224706,
+          289.92863975850673,
+          1715.2747012120476,
+          163.5574496549223,
+          1715.2747012120476
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 9,
+        "text": "【探索3】",
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "【探索3】",
+      "actual": "## 【探索3】",
+      "raw_parent": "## 【探索3】\n",
+      "bbox": [
+        163.5574496549223,
+        1677.5085984224706,
+        289.92863975850673,
+        1715.2747012120476
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            161,
+            1677,
+            291,
+            1714
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【探索3】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【探索3】\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          150.80534775447754,
+          1739.0909848013139,
+          1495.375,
+          1739.0909848013139,
+          1495.375,
+          1847.2773437500002,
+          150.80534775447754,
+          1847.2773437500002
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 4,
+        "text": "抛物线 $ y=-x^{2}-2 x+3 $与x轴交于点A、B(点A在点B右侧)，与y轴交于点C，点P为抛物线上一动点，若点P到对称轴和y轴的距离相等，求P点坐标。",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "抛物线 $ y=-x^{2}-2 x+3 $与x轴交于点A、B(点A在点B右侧)，与y轴交于点C，点P为抛物线上一动点，若点P到对称轴和y轴的距离相等，求P点坐标。",
+      "actual": "抛物线 $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。",
+      "raw_parent": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+      "bbox": [
+        150.80534775447754,
+        1739.0909848013139,
+        1495.375,
+        1847.2773437500002
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "y"
+        },
+        {
+          "reference": "y",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": "x + 3$ 与"
+        },
+        {
+          "reference": "+3",
+          "actual": ""
+        },
+        {
+          "reference": "$与x",
+          "actual": ""
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "(",
+          "actual": "（"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": ")",
+          "actual": "）"
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            148,
+            1739,
+            1496,
+            1846
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:15",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          1250.1227287260294,
+          59.20524311635563,
+          1501.0170634119786,
+          59.20524311635563,
+          1501.0170634119786,
+          121.70120954182153,
+          1250.1227287260294,
+          121.70120954182153
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 15,
+        "text": "学而思网校",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "学而思网校",
+      "actual": "## ",
+      "raw_parent": "## xueersi 学而思网校\n",
+      "bbox": [
+        1250.1227287260294,
+        59.20524311635563,
+        1501.0170634119786,
+        121.70120954182153
+      ],
+      "differences": [
+        {
+          "reference": "学而思网校",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            1029,
+            61,
+            1497,
+            120
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## xueersi 学而思网校\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## xueersi 学而思网校\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          1033.654122727431,
+          63.618326825496524,
+          1237.7398881405038,
+          63.618326825496524,
+          1237.7398881405038,
+          113.72867101174188,
+          1033.654122727431,
+          113.72867101174188
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 16,
+        "text": "xueersi",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "xueersi",
+      "actual": "xueersi 学而思网校",
+      "raw_parent": "## xueersi 学而思网校\n",
+      "bbox": [
+        1033.654122727431,
+        63.618326825496524,
+        1237.7398881405038,
+        113.72867101174188
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " 学而思网校"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐项核对标题、三道探索题及品牌文字。y=-x²-2x+3、CMP、距离 √2/2、y=x 和所有条件完整；差异为题图数学分隔、triangle/Delta、空格、标题及换行。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            1029,
+            61,
+            1497,
+            120
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## xueersi 学而思网校\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## xueersi 学而思网校\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          100.94787094218265,
+          18.636903397872175,
+          497.93395703237917,
+          18.636903397872175,
+          497.93395703237917,
+          104.44478862128949,
+          100.94787094218265,
+          104.44478862128949
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 13,
+        "text": "二轮复习",
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "二轮复习",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        100.94787094218265,
+        18.636903397872175,
+        497.93395703237917,
+        104.44478862128949
+      ],
+      "differences": [
+        {
+          "reference": "二轮复习",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图四个圆形字“二轮复习”未进入机器可读文本，图形资源保留应另看，不能等同视觉丢失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+    "sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-12.json",
+    "sha256": "76fe3979e434a39272374738a3a73bc7ea15590cbf83ce861be3657b15a943f7"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 13,
+  "unverified_units": []
+}

@@ -1,0 +1,1923 @@
+{
+  "page": "development-odb-08",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "正文与所有选项正确；两处出版社书法标志缺机器可读文本。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "2d3ebe3b19afa26c823cca46180e0aa0f3006d199c5899bf93512673acf5f303",
+    "sheet-01.jpg": "a7f279d8619c607297087436a1919507ce93ae6f77a019ea655667b511d416e9"
+  },
+  "items": [
+    {
+      "id": "text:box_id_1",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          220.97250000000003,
+          165.0688,
+          432.26472034039466,
+          165.0688,
+          432.26472034039466,
+          218.881257710102,
+          220.97250000000003,
+          218.881257710102
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": "box_id_1",
+        "attribute": {},
+        "text": "## 综合运用▸"
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "## 综合运用▸",
+      "actual": "## 综合运用",
+      "raw_parent": "## 综合运用\n",
+      "bbox": [
+        220.97250000000003,
+        165.0688,
+        432.26472034039466,
+        218.881257710102
+      ],
+      "differences": [
+        {
+          "reference": "▸",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            216,
+            165,
+            383,
+            209
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 综合运用\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 综合运用\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_2",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          217.92960000000002,
+          229.9904,
+          1290.0447,
+          229.9904,
+          1290.0447,
+          374.9888,
+          217.92960000000002,
+          374.9888
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": "box_id_2",
+        "attribute": {},
+        "text": "7. “横看成岭侧成峰，远近高低各不同．不识庐山真面目，只缘身在此山中.”这是宋代诗人苏轼的著名诗句．你能说出“横看成岭侧成峰”中蕴含的数学道理吗？"
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "7. “横看成岭侧成峰，远近高低各不同．不识庐山真面目，只缘身在此山中.”这是宋代诗人苏轼的著名诗句．你能说出“横看成岭侧成峰”中蕴含的数学道理吗？",
+      "actual": "7. “横看成岭侧成峰，远近高低各不同. 不识庐山真面目，只缘身在此山中.” 这是宋代诗人苏轼的著名诗句. 你能说出 “横看成岭侧成峰” 中蕴含的数学道理吗?",
+      "raw_parent": "7. “横看成岭侧成峰，远近高低各不同. 不识庐山真面目，只缘身在此山中.” 这是宋代诗人苏轼的著名诗句. 你能说出 “横看成岭侧成峰” 中蕴含的数学道理吗?\n",
+      "bbox": [
+        217.92960000000002,
+        229.9904,
+        1290.0447,
+        374.9888
+      ],
+      "differences": [
+        {
+          "reference": "．",
+          "actual": ". "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "．",
+          "actual": ". "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "？",
+          "actual": "?"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            215,
+            230,
+            1299,
+            377
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "7. “横看成岭侧成峰，远近高低各不同. 不识庐山真面目，只缘身在此山中.” 这是宋代诗人苏轼的著名诗句. 你能说出 “横看成岭侧成峰” 中蕴含的数学道理吗?\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "7. “横看成岭侧成峰，远近高低各不同. 不识庐山真面目，只缘身在此山中.” 这是宋代诗人苏轼的著名诗句. 你能说出 “横看成岭侧成峰” 中蕴含的数学道理吗?\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_3",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          220.9725,
+          389.9392,
+          855.0549,
+          389.9392,
+          855.0549,
+          533.9136,
+          220.9725,
+          533.9136
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": "box_id_3",
+        "attribute": {},
+        "text": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有“的”字一面的相对面上的字是（）."
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有“的”字一面的相对面上的字是（）.",
+      "actual": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有 “的” 字一面的相对面上的字是（）.",
+      "raw_parent": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有 “的” 字一面的相对面上的字是（）.\n\n(A) 我 (B) 中 (C) 国 (D) 梦\n",
+      "bbox": [
+        220.9725,
+        389.9392,
+        855.0549,
+        533.9136
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            216,
+            390,
+            854,
+            590
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有 “的” 字一面的相对面上的字是（）.\n\n(A) 我 (B) 中 (C) 国 (D) 梦\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有 “的” 字一面的相对面上的字是（）.\n\n(A) 我 (B) 中 (C) 国 (D) 梦\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_4",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          257.0526,
+          550.0928,
+          835.0587,
+          550.0928,
+          835.0587,
+          587.9808,
+          257.0526,
+          587.9808
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": "box_id_4",
+        "attribute": {},
+        "text": "（A）我 （B）中 （C）国 （D）梦"
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "（A）我 （B）中 （C）国 （D）梦",
+      "actual": " (A) 我 (B) 中 (C) 国 (D) 梦",
+      "raw_parent": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有 “的” 字一面的相对面上的字是（）.\n\n(A) 我 (B) 中 (C) 国 (D) 梦\n",
+      "bbox": [
+        257.0526,
+        550.0928,
+        835.0587,
+        587.9808
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": " ("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "）",
+          "actual": ") "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            216,
+            390,
+            854,
+            590
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有 “的” 字一面的相对面上的字是（）.\n\n(A) 我 (B) 中 (C) 国 (D) 梦\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "8. 如图是一个正方体的展开图，把展开图折叠成正方体后，有 “的” 字一面的相对面上的字是（）.\n\n(A) 我 (B) 中 (C) 国 (D) 梦\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_5",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          218.9439,
+          603.9552,
+          740.0043000000001,
+          603.9552,
+          740.0043000000001,
+          642.048,
+          218.9439,
+          642.048
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": "box_id_5",
+        "attribute": {},
+        "text": "9. 如图，下列图形能折叠成什么图形？"
+      },
+      "block_id": "b0007",
+      "strict_exact": true,
+      "expected": "9. 如图，下列图形能折叠成什么图形？",
+      "actual": "9. 如图，下列图形能折叠成什么图形？",
+      "raw_parent": "9. 如图，下列图形能折叠成什么图形？\n",
+      "bbox": [
+        218.9439,
+        603.9552,
+        740.0043000000001,
+        642.048
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致且已逐句看图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            216,
+            603,
+            741,
+            643
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "9. 如图，下列图形能折叠成什么图形？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "9. 如图，下列图形能折叠成什么图形？\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_7",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          1026.0368999999998,
+          583.0656,
+          1147.0284,
+          583.0656,
+          1147.0284,
+          618.0864,
+          1026.0368999999998,
+          618.0864
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": "box_id_7",
+        "attribute": {},
+        "text": "（第8题）"
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "（第8题）",
+      "actual": "## (第8题)",
+      "raw_parent": "## (第8题)\n",
+      "bbox": [
+        1026.0368999999998,
+        583.0656,
+        1147.0284,
+        618.0864
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "## ("
+        },
+        {
+          "reference": "）",
+          "actual": ")"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            1026,
+            581,
+            1147,
+            619
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (第8题)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (第8题)\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_9",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          695.9547,
+          830.0544,
+          815.9319,
+          830.0544,
+          815.9319,
+          865.0752,
+          695.9547,
+          865.0752
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": "box_id_9",
+        "attribute": {},
+        "text": "（第9题）"
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "（第9题）",
+      "actual": "## (第9题)",
+      "raw_parent": "## (第9题)\n",
+      "bbox": [
+        695.9547,
+        830.0544,
+        815.9319,
+        865.0752
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "## ("
+        },
+        {
+          "reference": "）",
+          "actual": ")"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            695,
+            830,
+            815,
+            865
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (第9题)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (第9题)\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_10",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          220.97250000000003,
+          884.9407999999999,
+          438.1827597095837,
+          884.9407999999999,
+          438.1827597095837,
+          934.9651311120905,
+          220.97250000000003,
+          934.9651311120905
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": "box_id_10",
+        "attribute": {},
+        "text": "## 拓广探索▸"
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "## 拓广探索▸",
+      "actual": "## 拓广探索",
+      "raw_parent": "## 拓广探索\n",
+      "bbox": [
+        220.97250000000003,
+        884.9407999999999,
+        438.1827597095837,
+        934.9651311120905
+      ],
+      "differences": [
+        {
+          "reference": "▸",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            217,
+            885,
+            383,
+            930
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 拓广探索\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 拓广探索\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_11",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          223.0011,
+          951.0912,
+          1050.9596999999999,
+          951.0912,
+          1050.9596999999999,
+          991.0272,
+          223.0011,
+          991.0272
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": "box_id_11",
+        "attribute": {},
+        "text": "10. 你能把一张正方形纸片折叠成一个三棱锥吗？动手试一试."
+      },
+      "block_id": "b0014",
+      "strict_exact": true,
+      "expected": "10. 你能把一张正方形纸片折叠成一个三棱锥吗？动手试一试.",
+      "actual": "10. 你能把一张正方形纸片折叠成一个三棱锥吗？动手试一试.",
+      "raw_parent": "10. 你能把一张正方形纸片折叠成一个三棱锥吗？动手试一试.\n",
+      "bbox": [
+        223.0011,
+        951.0912,
+        1050.9596999999999,
+        991.0272
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致且已逐句看图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            216,
+            951,
+            1050,
+            990
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "10. 你能把一张正方形纸片折叠成一个三棱锥吗？动手试一试.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "10. 你能把一张正方形纸片折叠成一个三棱锥吗？动手试一试.\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_12",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          220.9725,
+          1004.9536,
+          935.0396999999999,
+          1004.9536,
+          935.0396999999999,
+          1043.0464,
+          220.9725,
+          1043.0464
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": "box_id_12",
+        "attribute": {},
+        "text": "11. 如图，左面的图形可能是右面哪些图形的展开图？"
+      },
+      "block_id": "b0015",
+      "strict_exact": true,
+      "expected": "11. 如图，左面的图形可能是右面哪些图形的展开图？",
+      "actual": "11. 如图，左面的图形可能是右面哪些图形的展开图？",
+      "raw_parent": "11. 如图，左面的图形可能是右面哪些图形的展开图？\n",
+      "bbox": [
+        220.9725,
+        1004.9536,
+        935.0396999999999,
+        1043.0464
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致且已逐句看图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            217,
+            1005,
+            939,
+            1043
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "11. 如图，左面的图形可能是右面哪些图形的展开图？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "11. 如图，左面的图形可能是右面哪些图形的展开图？\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_13",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          277.75750159910183,
+          1126.2851380474222,
+          319.3799020582744,
+          1126.2851380474222,
+          319.3799020582744,
+          1155.8235861153441,
+          277.75750159910183,
+          1155.8235861153441
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": "box_id_13",
+        "attribute": {},
+        "text": "(1)"
+      },
+      "block_id": "b0020",
+      "strict_exact": false,
+      "expected": "(1)",
+      "actual": "## (1)",
+      "raw_parent": "## (1)\n",
+      "bbox": [
+        277.75750159910183,
+        1126.2851380474222,
+        319.3799020582744,
+        1155.8235861153441
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0020",
+          "bbox": [
+            274,
+            1123,
+            324,
+            1159
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (1)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (1)\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_14",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          629.0109,
+          1622.016,
+          764.0577,
+          1622.016,
+          764.0577,
+          1658.0608,
+          629.0109,
+          1658.0608
+        ],
+        "ignore": false,
+        "order": 40,
+        "anno_id": "box_id_14",
+        "attribute": {},
+        "text": "（第11题）"
+      },
+      "block_id": "b0040",
+      "strict_exact": false,
+      "expected": "（第11题）",
+      "actual": "## (第 11 题)",
+      "raw_parent": "## (第 11 题)\n",
+      "bbox": [
+        629.0109,
+        1622.016,
+        764.0577,
+        1658.0608
+      ],
+      "differences": [
+        {
+          "reference": "（",
+          "actual": "## ("
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "）",
+          "actual": ")"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0040",
+          "bbox": [
+            628,
+            1623,
+            764,
+            1658
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (第 11 题)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (第 11 题)\n",
+            "resource": "assets/p0001-b0040.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_15",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          220.9725,
+          1677.9264,
+          1292.9427,
+          1677.9264,
+          1292.9427,
+          1770.0864,
+          220.9725,
+          1770.0864
+        ],
+        "ignore": false,
+        "order": 41,
+        "anno_id": "box_id_15",
+        "attribute": {},
+        "text": "12. 通过查阅图书或网络搜索等，收集能够反映几何知识实际应用的图片等材料，并和同学交流."
+      },
+      "block_id": "b0041",
+      "strict_exact": true,
+      "expected": "12. 通过查阅图书或网络搜索等，收集能够反映几何知识实际应用的图片等材料，并和同学交流.",
+      "actual": "12. 通过查阅图书或网络搜索等，收集能够反映几何知识实际应用的图片等材料，并和同学交流.",
+      "raw_parent": "12. 通过查阅图书或网络搜索等，收集能够反映几何知识实际应用的图片等材料，并和同学交流.\n",
+      "bbox": [
+        220.9725,
+        1677.9264,
+        1292.9427,
+        1770.0864
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致且已逐句看图。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0041",
+          "bbox": [
+            217,
+            1678,
+            1295,
+            1771
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "12. 通过查阅图书或网络搜索等，收集能够反映几何知识实际应用的图片等材料，并和同学交流.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "12. 通过查阅图书或网络搜索等，收集能够反映几何知识实际应用的图片等材料，并和同学交流.\n",
+            "resource": "assets/p0001-b0041.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_16",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          1008.0692999999999,
+          1927.4782824366403,
+          1264.938562510673,
+          1927.4782824366403,
+          1264.938562510673,
+          1956.0448,
+          1008.0692999999999,
+          1956.0448
+        ],
+        "ignore": false,
+        "order": 42,
+        "anno_id": "box_id_16",
+        "attribute": {},
+        "text": "第六章几何图形初步"
+      },
+      "block_id": "b0042",
+      "strict_exact": false,
+      "expected": "第六章几何图形初步",
+      "actual": "## 第六章 几何图形初步",
+      "raw_parent": "## 第六章 几何图形初步\n",
+      "bbox": [
+        1008.0692999999999,
+        1927.4782824366403,
+        1264.938562510673,
+        1956.0448
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0042",
+          "bbox": [
+            1006,
+            1922,
+            1260,
+            1957
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第六章 几何图形初步\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第六章 几何图形初步\n",
+            "resource": "assets/p0001-b0042.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-vn6dkm6w",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          1274.7033501208143,
+          1926.2576526646867,
+          1316.2036974639136,
+          1926.2576526646867,
+          1316.2036974639136,
+          1951.8902514619926,
+          1274.7033501208143,
+          1951.8902514619926
+        ],
+        "ignore": false,
+        "order": 43,
+        "anno_id": "box-vn6dkm6w",
+        "attribute": {},
+        "text": "159"
+      },
+      "block_id": "b0043",
+      "strict_exact": false,
+      "expected": "159",
+      "actual": "## 159",
+      "raw_parent": "## 159\n",
+      "bbox": [
+        1274.7033501208143,
+        1926.2576526646867,
+        1316.2036974639136,
+        1951.8902514619926
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0043",
+          "bbox": [
+            1270,
+            1923,
+            1320,
+            1956
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 159\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 159\n",
+            "resource": "assets/p0001-b0043.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-ug0haj9k",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          689.9535186510236,
+          1188.0473852288098,
+          738.2892173212218,
+          1188.0473852288098,
+          738.2892173212218,
+          1212.215234563909,
+          689.9535186510236,
+          1212.215234563909
+        ],
+        "ignore": false,
+        "order": 19,
+        "anno_id": "box-ug0haj9k",
+        "attribute": {},
+        "text": "(A)"
+      },
+      "block_id": "b0021",
+      "strict_exact": false,
+      "expected": "(A)",
+      "actual": "## (A)",
+      "raw_parent": "## (A)\n",
+      "bbox": [
+        689.9535186510236,
+        1188.0473852288098,
+        738.2892173212218,
+        1212.215234563909
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0021",
+          "bbox": [
+            686,
+            1183,
+            741,
+            1216
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (A)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (A)\n",
+            "resource": "assets/p0001-b0021.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-sxdjkzn1",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          861.813711683997,
+          1188.0473852288098,
+          907.4640937614064,
+          1188.0473852288098,
+          907.4640937614064,
+          1212.215234563909,
+          861.813711683997,
+          1212.215234563909
+        ],
+        "ignore": false,
+        "order": 21,
+        "anno_id": "box-sxdjkzn1",
+        "attribute": {},
+        "text": "(B)"
+      },
+      "block_id": "b0022",
+      "strict_exact": false,
+      "expected": "(B)",
+      "actual": "## (B)",
+      "raw_parent": "## (B)\n",
+      "bbox": [
+        861.813711683997,
+        1188.0473852288098,
+        907.4640937614064,
+        1212.215234563909
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0022",
+          "bbox": [
+            859,
+            1184,
+            908,
+            1214
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (B)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (B)\n",
+            "resource": "assets/p0001-b0022.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-ldi7ig2g",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          1035.0165974661193,
+          1185.3620686360211,
+          1076.6390391071,
+          1185.3620686360211,
+          1076.6390391071,
+          1213.5578928603034,
+          1035.0165974661193,
+          1213.5578928603034
+        ],
+        "ignore": false,
+        "order": 23,
+        "anno_id": "box-ldi7ig2g",
+        "attribute": {},
+        "text": "(C)"
+      },
+      "block_id": "b0023",
+      "strict_exact": false,
+      "expected": "(C)",
+      "actual": "## (C)",
+      "raw_parent": "## (C)\n",
+      "bbox": [
+        1035.0165974661193,
+        1185.3620686360211,
+        1076.6390391071,
+        1213.5578928603034
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0023",
+          "bbox": [
+            1030,
+            1184,
+            1081,
+            1215
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (C)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (C)\n",
+            "resource": "assets/p0001-b0023.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-dk3riamq",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          279.100159491753,
+          1322.3131804154948,
+          319.3799020582744,
+          1322.3131804154948,
+          319.3799020582744,
+          1351.8516629361714,
+          279.100159491753,
+          1351.8516629361714
+        ],
+        "ignore": false,
+        "order": 25,
+        "anno_id": "box-dk3riamq",
+        "attribute": {},
+        "text": "(2)"
+      },
+      "block_id": "b0028",
+      "strict_exact": false,
+      "expected": "(2)",
+      "actual": "## (2)",
+      "raw_parent": "## (2)\n",
+      "bbox": [
+        279.100159491753,
+        1322.3131804154948,
+        319.3799020582744,
+        1351.8516629361714
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0028",
+          "bbox": [
+            275,
+            1317,
+            324,
+            1354
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (2)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (2)\n",
+            "resource": "assets/p0001-b0028.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-waz6wbj2",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          691.2961769474181,
+          1377.3622050204194,
+          738.2892173212218,
+          1377.3622050204194,
+          738.2892173212218,
+          1408.243311384736,
+          691.2961769474181,
+          1408.243311384736
+        ],
+        "ignore": false,
+        "order": 27,
+        "anno_id": "box-waz6wbj2",
+        "attribute": {},
+        "text": "(A)"
+      },
+      "block_id": "b0030",
+      "strict_exact": false,
+      "expected": "(A)",
+      "actual": "## (A)",
+      "raw_parent": "## (A)\n",
+      "bbox": [
+        691.2961769474181,
+        1377.3622050204194,
+        738.2892173212218,
+        1408.243311384736
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0030",
+          "bbox": [
+            687,
+            1379,
+            741,
+            1410
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (A)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (A)\n",
+            "resource": "assets/p0001-b0030.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-at7lkvcj",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          861.813711683997,
+          1380.0475216132081,
+          904.7787771686176,
+          1380.0475216132081,
+          904.7787771686176,
+          1408.243311384736,
+          861.813711683997,
+          1408.243311384736
+        ],
+        "ignore": false,
+        "order": 29,
+        "anno_id": "box-at7lkvcj",
+        "attribute": {},
+        "text": "(B)"
+      },
+      "block_id": "b0031",
+      "strict_exact": false,
+      "expected": "(B)",
+      "actual": "## (B)",
+      "raw_parent": "## (B)\n",
+      "bbox": [
+        861.813711683997,
+        1380.0475216132081,
+        904.7787771686176,
+        1408.243311384736
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0031",
+          "bbox": [
+            859,
+            1379,
+            907,
+            1409
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (B)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (B)\n",
+            "resource": "assets/p0001-b0031.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-a7j84i4i",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          1035.0165974661193,
+          1380.0475216132081,
+          1075.296346357951,
+          1380.0475216132081,
+          1075.296346357951,
+          1408.243311384736,
+          1035.0165974661193,
+          1408.243311384736
+        ],
+        "ignore": false,
+        "order": 31,
+        "anno_id": "box-a7j84i4i",
+        "attribute": {},
+        "text": "(C)"
+      },
+      "block_id": "b0029",
+      "strict_exact": false,
+      "expected": "(C)",
+      "actual": "## (C)",
+      "raw_parent": "## (C)\n",
+      "bbox": [
+        1035.0165974661193,
+        1380.0475216132081,
+        1075.296346357951,
+        1408.243311384736
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0029",
+          "bbox": [
+            1031,
+            1378,
+            1081,
+            1409
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (C)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (C)\n",
+            "resource": "assets/p0001-b0029.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-sis3nz60",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          277.75750159910183,
+          1515.6559750962874,
+          320.7225603546688,
+          1515.6559750962874,
+          320.7225603546688,
+          1545.194457616964,
+          277.75750159910183,
+          1545.194457616964
+        ],
+        "ignore": false,
+        "order": 33,
+        "anno_id": "box-sis3nz60",
+        "attribute": {},
+        "text": "(3)"
+      },
+      "block_id": "b0036",
+      "strict_exact": false,
+      "expected": "(3)",
+      "actual": "## (3)",
+      "raw_parent": "## (3)\n",
+      "bbox": [
+        277.75750159910183,
+        1515.6559750962874,
+        320.7225603546688,
+        1545.194457616964
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0036",
+          "bbox": [
+            275,
+            1512,
+            324,
+            1546
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (3)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (3)\n",
+            "resource": "assets/p0001-b0036.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-y2welj2p",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          689.9535186510236,
+          1573.3902473884918,
+          738.2892173212218,
+          1573.3902473884918,
+          738.2892173212218,
+          1606.956670345597,
+          689.9535186510236,
+          1606.956670345597
+        ],
+        "ignore": false,
+        "order": 35,
+        "anno_id": "box-y2welj2p",
+        "attribute": {},
+        "text": "(A)"
+      },
+      "block_id": "b0037",
+      "strict_exact": false,
+      "expected": "(A)",
+      "actual": "## (A)",
+      "raw_parent": "## (A)\n",
+      "bbox": [
+        689.9535186510236,
+        1573.3902473884918,
+        738.2892173212218,
+        1606.956670345597
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0037",
+          "bbox": [
+            688,
+            1573,
+            741,
+            1603
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (A)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (A)\n",
+            "resource": "assets/p0001-b0037.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-wn2olkx6",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          863.1564044331459,
+          1574.7328712321316,
+          903.4361533249777,
+          1574.7328712321316,
+          903.4361533249777,
+          1601.5860371600195,
+          863.1564044331459,
+          1601.5860371600195
+        ],
+        "ignore": false,
+        "order": 37,
+        "anno_id": "box-wn2olkx6",
+        "attribute": {},
+        "text": "(B)"
+      },
+      "block_id": "b0038",
+      "strict_exact": false,
+      "expected": "(B)",
+      "actual": "## (B)",
+      "raw_parent": "## (B)\n",
+      "bbox": [
+        863.1564044331459,
+        1574.7328712321316,
+        903.4361533249777,
+        1601.5860371600195
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0038",
+          "bbox": [
+            860,
+            1573,
+            907,
+            1602
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (B)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (B)\n",
+            "resource": "assets/p0001-b0038.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box-dhrk0qmz",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          1036.3592902152682,
+          1574.7328712321316,
+          1077.9816629507397,
+          1574.7328712321316,
+          1077.9816629507397,
+          1601.5860371600195,
+          1036.3592902152682,
+          1601.5860371600195
+        ],
+        "ignore": false,
+        "order": 39,
+        "anno_id": "box-dhrk0qmz",
+        "attribute": {},
+        "text": "(C)"
+      },
+      "block_id": "b0039",
+      "strict_exact": false,
+      "expected": "(C)",
+      "actual": "## (C)",
+      "raw_parent": "## (C)\n",
+      "bbox": [
+        1036.3592902152682,
+        1574.7328712321316,
+        1077.9816629507397,
+        1601.5860371600195
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "原图中文、题号及选项均正确；标题层级、装饰三角、空格/标点、选项括号和标题/内容合并表示不同。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0039",
+          "bbox": [
+            1030,
+            1573,
+            1081,
+            1602
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## (C)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## (C)\n",
+            "resource": "assets/p0001-b0039.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_0",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          525.987,
+          6.9632,
+          927.9395999999999,
+          6.9632,
+          927.9395999999999,
+          66.9696,
+          525.987,
+          66.9696
+        ],
+        "ignore": false,
+        "order": 0,
+        "anno_id": "box_id_0",
+        "attribute": {},
+        "text": "人民教育出版社"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "人民教育出版社",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        525.987,
+        6.9632,
+        927.9395999999999,
+        66.9696
+      ],
+      "differences": [
+        {
+          "reference": "人民教育出版社",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图两处书法“人民教育出版社”不在任何机器可读文本中；作为标志图像留存与文本转写应分别评价，不能由正文 missing 推断整页视觉丢失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:box_id_17",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          525.987,
+          1975.9104,
+          927.0702,
+          1975.9104,
+          927.0702,
+          2034.0736,
+          525.987,
+          2034.0736
+        ],
+        "ignore": false,
+        "order": 44,
+        "anno_id": "box_id_17",
+        "attribute": {},
+        "text": "人民教育出版社"
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "人民教育出版社",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        525.987,
+        1975.9104,
+        927.0702,
+        2034.0736
+      ],
+      "differences": [
+        {
+          "reference": "人民教育出版社",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图两处书法“人民教育出版社”不在任何机器可读文本中；作为标志图像留存与文本转写应分别评价，不能由正文 missing 推断整页视觉丢失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-a70b2ec9-379a-4e83-9f64-852c343ec8cd.png",
+    "sha256": "a71e8e0dfca42615eaa1683f28834e1b4b741ff907c1ab6279301abe07fed212"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-08.json",
+    "sha256": "2a35cfa25806346a1cf1baf8635ee676ba2cc07a5cfc0b9a0bafc0e6a7b83471"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 28,
+  "unverified_units": []
+}

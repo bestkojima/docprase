@@ -1,0 +1,1578 @@
+{
+  "page": "evaluation-candidate-11",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "确认琅琊→琅珡错字及朝暮也后的句号丢失；酒冽/洌保留未核验。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "904881f8bce392b842cc119d2bdc174dd3a223cc791bf447270784085f42dc41",
+    "sheet-01.jpg": "97967a1c66994c71d36a3f410a853f3481f974d7535458e1d7547c3720619fe2"
+  },
+  "items": [
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          871.1306037603456,
+          305.790785132879,
+          1078.2851109508051,
+          305.790785132879,
+          1078.2851109508051,
+          360.34830880878224,
+          871.1306037603456,
+          360.34830880878224
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 5,
+        "text": "醉翁亭记",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "醉翁亭记",
+      "actual": "## 醉翁亭记",
+      "raw_parent": "## 醉翁亭记\n",
+      "bbox": [
+        871.1306037603456,
+        305.790785132879,
+        1078.2851109508051,
+        360.34830880878224
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            866,
+            303,
+            1083,
+            362
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 醉翁亭记\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 醉翁亭记\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          258.34619140625,
+          462.58990478515625,
+          419.7391357421875,
+          462.58990478515625,
+          419.7391357421875,
+          498.62091064453125,
+          258.34619140625,
+          498.62091064453125
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 9,
+        "text": "【教学目标】",
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "【教学目标】",
+      "actual": "## 【教学目标】",
+      "raw_parent": "## 【教学目标】\n",
+      "bbox": [
+        258.34619140625,
+        462.58990478515625,
+        419.7391357421875,
+        498.62091064453125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            252,
+            461,
+            424,
+            500
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【教学目标】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【教学目标】\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          258.457763671875,
+          593.3093872070312,
+          421.50628662109375,
+          593.3093872070312,
+          421.50628662109375,
+          630.5917358398438,
+          258.457763671875,
+          630.5917358398438
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 6,
+        "text": "【走进作者】",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "【走进作者】",
+      "actual": "## 【走进作者】",
+      "raw_parent": "## 【走进作者】\n",
+      "bbox": [
+        258.457763671875,
+        593.3093872070312,
+        421.50628662109375,
+        630.5917358398438
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            253,
+            593,
+            423,
+            630
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【走进作者】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【走进作者】\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:15",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          245.51077270507812,
+          638.7095336914062,
+          1412.4879150390625,
+          638.7095336914062,
+          1412.4879150390625,
+          761.2579956054688,
+          245.51077270507812,
+          761.2579956054688
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 15,
+        "text": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人， “唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人， “唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。",
+      "actual": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。",
+      "raw_parent": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+      "bbox": [
+        245.51077270507812,
+        638.7095336914062,
+        1412.4879150390625,
+        761.2579956054688
+      ],
+      "differences": [
+        {
+          "reference": " ",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            237,
+            635,
+            1412,
+            763
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:17",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          256.91998291015625,
+          982.010498046875,
+          421.09552001953125,
+          982.010498046875,
+          421.09552001953125,
+          1019.6253662109375,
+          256.91998291015625,
+          1019.6253662109375
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 17,
+        "text": "【文体简介】",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "【文体简介】",
+      "actual": "## 【文体简介】",
+      "raw_parent": "## 【文体简介】\n",
+      "bbox": [
+        256.91998291015625,
+        982.010498046875,
+        421.09552001953125,
+        1019.6253662109375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            251,
+            982,
+            424,
+            1021
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【文体简介】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【文体简介】\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:20",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          248.74105834960938,
+          1028.83251953125,
+          1410.8045654296875,
+          1028.83251953125,
+          1410.8045654296875,
+          1107.162353515625,
+          248.74105834960938,
+          1107.162353515625
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 20,
+        "text": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)",
+        "attribute": {}
+      },
+      "block_id": "b0011",
+      "strict_exact": true,
+      "expected": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)",
+      "actual": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)",
+      "raw_parent": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+      "bbox": [
+        248.74105834960938,
+        1028.83251953125,
+        1410.8045654296875,
+        1107.162353515625
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "文体简介与原图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            238,
+            1026,
+            1406,
+            1111
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          259.0052490234375,
+          1329.915771484375,
+          414.7269592285156,
+          1329.915771484375,
+          414.7269592285156,
+          1365.4432373046875,
+          259.0052490234375,
+          1365.4432373046875
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 16,
+        "text": "【诵读欣赏】",
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "【诵读欣赏】",
+      "actual": "## 【诵读欣赏】",
+      "raw_parent": "## 【诵读欣赏】\n",
+      "bbox": [
+        259.0052490234375,
+        1329.915771484375,
+        414.7269592285156,
+        1365.4432373046875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            253,
+            1328,
+            423,
+            1367
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【诵读欣赏】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【诵读欣赏】\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          258.63043212890625,
+          1375.018310546875,
+          415.6075439453125,
+          1375.018310546875,
+          415.6075439453125,
+          1409.251220703125,
+          258.63043212890625,
+          1409.251220703125
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 11,
+        "text": "【课文分析】",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "【课文分析】",
+      "actual": "## 【课文分析】",
+      "raw_parent": "## 【课文分析】\n",
+      "bbox": [
+        258.63043212890625,
+        1375.018310546875,
+        415.6075439453125,
+        1409.251220703125
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            254,
+            1373,
+            424,
+            1413
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 【课文分析】\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 【课文分析】\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          764.06298828125,
+          1418.3514404296875,
+          888.7140502929688,
+          1418.3514404296875,
+          888.7140502929688,
+          1452.4652099609375,
+          764.06298828125,
+          1452.4652099609375
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 13,
+        "text": "醉翁亭记",
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "醉翁亭记",
+      "actual": "## 醉翁亭记",
+      "raw_parent": "## 醉翁亭记\n",
+      "bbox": [
+        764.06298828125,
+        1418.3514404296875,
+        888.7140502929688,
+        1452.4652099609375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            761,
+            1416,
+            894,
+            1455
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 醉翁亭记\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 醉翁亭记\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          731.498046875,
+          1460.222900390625,
+          919.4901123046875,
+          1460.222900390625,
+          919.4901123046875,
+          1495.93896484375,
+          731.498046875,
+          1495.93896484375
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 3,
+        "text": "欧阳修(北宋)",
+        "attribute": {}
+      },
+      "block_id": "b0016",
+      "strict_exact": false,
+      "expected": "欧阳修(北宋)",
+      "actual": "## 欧阳修(北宋)",
+      "raw_parent": "## 欧阳修(北宋)\n",
+      "bbox": [
+        731.498046875,
+        1460.222900390625,
+        919.4901123046875,
+        1495.93896484375
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            728,
+            1460,
+            928,
+            1498
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 欧阳修(北宋)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 欧阳修(北宋)\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          245.3372039794922,
+          1503.9395751953125,
+          1405.6075439453125,
+          1503.9395751953125,
+          1405.6075439453125,
+          1623.8330078125,
+          245.3372039794922,
+          1623.8330078125
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 7,
+        "text": "环滁(chu)皆山也。其西南诸峰，林壑(he)尤美，望之蔚然而深秀者，琅琊(lang ya)也。山行六七里，渐闻水声潺（chan)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。",
+        "attribute": {}
+      },
+      "block_id": "b0017",
+      "strict_exact": false,
+      "expected": "环滁(chu)皆山也。其西南诸峰，林壑(he)尤美，望之蔚然而深秀者，琅琊(lang ya)也。山行六七里，渐闻水声潺（chan)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。",
+      "actual": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。",
+      "raw_parent": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+      "bbox": [
+        245.3372039794922,
+        1503.9395751953125,
+        1405.6075439453125,
+        1623.8330078125
+      ],
+      "differences": [
+        {
+          "reference": "u",
+          "actual": "ú"
+        },
+        {
+          "reference": "e",
+          "actual": "è"
+        },
+        {
+          "reference": "琊",
+          "actual": "珡"
+        },
+        {
+          "reference": "a",
+          "actual": "á"
+        },
+        {
+          "reference": "a",
+          "actual": "á"
+        },
+        {
+          "reference": "（",
+          "actual": "("
+        },
+        {
+          "reference": "a",
+          "actual": "á"
+        }
+      ],
+      "review": {
+        "classification": [
+          "transcription_error",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "原图琅琊，响应琅珡；原图各拼音带声调，GT多处省声调，后者是参考表示缺口。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0017",
+          "bbox": [
+            237,
+            1502,
+            1408,
+            1628
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:19",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          243.4394989013672,
+          1634.2374267578125,
+          1404.8209228515625,
+          1634.2374267578125,
+          1404.8209228515625,
+          1757.4278564453125,
+          243.4394989013672,
+          1757.4278564453125
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 19,
+        "text": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhe)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
+        "attribute": {}
+      },
+      "block_id": "b0018",
+      "strict_exact": false,
+      "expected": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhe)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
+      "actual": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
+      "raw_parent": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+      "bbox": [
+        243.4394989013672,
+        1634.2374267578125,
+        1404.8209228515625,
+        1757.4278564453125
+      ],
+      "differences": [
+        {
+          "reference": "e",
+          "actual": "é"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation",
+          "reference_issue"
+        ],
+        "reason": "原图zhé带声调，GT zhe省声调；中文正文未改。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0018",
+          "bbox": [
+            237,
+            1633,
+            1411,
+            1759
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          243.59799194335938,
+          1764.242919921875,
+          1404.14599609375,
+          1764.242919921875,
+          1404.14599609375,
+          1889.4305419921875,
+          243.59799194335938,
+          1889.4305419921875
+        ],
+        "ignore": false,
+        "order": 18,
+        "anno_id": 1,
+        "text": "若夫(fui)日出而林霏(fei)开，云归而岩穴(xue)暝(ming)，晦(hui)明变化者，山间之朝暮也。野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。",
+        "attribute": {}
+      },
+      "block_id": "b0019",
+      "strict_exact": false,
+      "expected": "若夫(fui)日出而林霏(fei)开，云归而岩穴(xue)暝(ming)，晦(hui)明变化者，山间之朝暮也。野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。",
+      "actual": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。",
+      "raw_parent": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+      "bbox": [
+        243.59799194335938,
+        1764.242919921875,
+        1404.14599609375,
+        1889.4305419921875
+      ],
+      "differences": [
+        {
+          "reference": "ui",
+          "actual": "ú"
+        },
+        {
+          "reference": "e",
+          "actual": "ē"
+        },
+        {
+          "reference": "e",
+          "actual": "é"
+        },
+        {
+          "reference": "i",
+          "actual": "í"
+        },
+        {
+          "reference": "i",
+          "actual": "ì"
+        },
+        {
+          "reference": "。",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "transcription_error",
+          "reference_issue",
+          "representation"
+        ],
+        "reason": "朝暮也与野芳之间原图有句号，原始响应漏掉；另GT省略拼音声调且将原图fú写成fui，模型fú正确。这些GT差异与真实漏句号分开记录。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0019",
+          "bbox": [
+            238,
+            1763,
+            1409,
+            1888
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:8",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          245.82650756835938,
+          1894.7568359375,
+          1407.30908203125,
+          1894.7568359375,
+          1407.30908203125,
+          2065.60498046875,
+          245.82650756835938,
+          2065.60498046875
+        ],
+        "ignore": false,
+        "order": 19,
+        "anno_id": 8,
+        "text": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yu)偻(lu)提携(xié)，往来而不绝者，滁(chu)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒冽(lie)，山肴(yao)野蔌(su)，杂然而前陈者，太守宴也。宴酣(han)之乐，非丝非竹，射者中，弈(yi)者胜，觥(gong)筹(chou)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tui)然乎其间者，太守醉也。",
+        "attribute": {}
+      },
+      "block_id": "b0020",
+      "strict_exact": false,
+      "expected": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yu)偻(lu)提携(xié)，往来而不绝者，滁(chu)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒冽(lie)，山肴(yao)野蔌(su)，杂然而前陈者，太守宴也。宴酣(han)之乐，非丝非竹，射者中，弈(yi)者胜，觥(gong)筹(chou)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tui)然乎其间者，太守醉也。",
+      "actual": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。",
+      "raw_parent": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+      "bbox": [
+        245.82650756835938,
+        1894.7568359375,
+        1407.30908203125,
+        2065.60498046875
+      ],
+      "differences": [
+        {
+          "reference": "u",
+          "actual": "ǔ"
+        },
+        {
+          "reference": "u",
+          "actual": "ǚ"
+        },
+        {
+          "reference": "u",
+          "actual": "ú"
+        },
+        {
+          "reference": "冽",
+          "actual": "洌"
+        },
+        {
+          "reference": "e",
+          "actual": "è"
+        },
+        {
+          "reference": "a",
+          "actual": "á"
+        },
+        {
+          "reference": "u",
+          "actual": "ù"
+        },
+        {
+          "reference": "a",
+          "actual": "ā"
+        },
+        {
+          "reference": "i",
+          "actual": "ì"
+        },
+        {
+          "reference": "o",
+          "actual": "ō"
+        },
+        {
+          "reference": "o",
+          "actual": "ó"
+        },
+        {
+          "reference": "i",
+          "actual": "í"
+        }
+      ],
+      "review": {
+        "classification": [
+          "unverified"
+        ],
+        "reason": "拼音声调大多可核对为GT省略；酒冽/酒洌左部在原图小字下仍需精确辨别，保留整项未核验，不以课文常识替代原图。",
+        "reviewed": false
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0020",
+          "bbox": [
+            237,
+            1893,
+            1409,
+            2066
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:21",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          41.121063232421875,
+          12.9873628616333,
+          721.44091796875,
+          12.9873628616333,
+          721.44091796875,
+          62.44557189941406,
+          41.121063232421875,
+          62.44557189941406
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 21,
+        "text": "课程联系 QQ：768765780（专业录制）",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "课程联系 QQ：768765780（专业录制）",
+      "actual": "## 课程联系 QQ: 768765780（专业录制）",
+      "raw_parent": "## 课程联系 QQ: 768765780（专业录制）\n",
+      "bbox": [
+        41.121063232421875,
+        12.9873628616333,
+        721.44091796875,
+        62.44557189941406
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "：",
+          "actual": ": "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            41,
+            17,
+            716,
+            66
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 课程联系 QQ: 768765780（专业录制）\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 课程联系 QQ: 768765780（专业录制）\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:22",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          1113.5680380731249,
+          44.50077312912072,
+          1428.330934517107,
+          44.50077312912072,
+          1428.330934517107,
+          113.2724984025956,
+          1113.5680380731249,
+          113.2724984025956
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 22,
+        "text": "学而思网校",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "学而思网校",
+      "actual": "## 学而思网校",
+      "raw_parent": "## 学而思网校 学习有意思 xueersi.com\n",
+      "bbox": [
+        1113.5680380731249,
+        44.50077312912072,
+        1428.330934517107,
+        113.2724984025956
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            1110,
+            43,
+            1598,
+            115
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 学而思网校 学习有意思 xueersi.com\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 学而思网校 学习有意思 xueersi.com\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          1432.6979961809445,
+          50.44210262856882,
+          1604.2589111328123,
+          50.44210262856882,
+          1604.2589111328123,
+          116.5080808443206,
+          1432.6979961809445,
+          116.5080808443206
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 12,
+        "text": "学习有意思 xueersi.com",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "学习有意思 xueersi.com",
+      "actual": " 学习有意思 xueersi.com",
+      "raw_parent": "## 学而思网校 学习有意思 xueersi.com\n",
+      "bbox": [
+        1432.6979961809445,
+        50.44210262856882,
+        1604.2589111328123,
+        116.5080808443206
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            1110,
+            43,
+            1598,
+            115
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 学而思网校 学习有意思 xueersi.com\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 学而思网校 学习有意思 xueersi.com\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          1531.5228029882942,
+          2234.472147417271,
+          1558.2060855818333,
+          2234.472147417271,
+          1558.2060855818333,
+          2288.5534847442805,
+          1531.5228029882942,
+          2288.5534847442805
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 0,
+        "text": "1",
+        "attribute": {}
+      },
+      "block_id": "b0021",
+      "strict_exact": false,
+      "expected": "1",
+      "actual": "## 1",
+      "raw_parent": "## 1\n",
+      "bbox": [
+        1531.5228029882942,
+        2234.472147417271,
+        1558.2060855818333,
+        2288.5534847442805
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、欧阳修生平、页眉页脚和网址逐项与图一致，差异为Markdown/字间空格及标点编码。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0021",
+          "bbox": [
+            1523,
+            2231,
+            1563,
+            2292
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 1\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 1\n",
+            "resource": "assets/p0001-b0021.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:23",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          236.70181408265665,
+          499.7353222176838,
+          1124.0226872235673,
+          499.7353222176838,
+          1124.0226872235673,
+          591.8615330902371,
+          236.70181408265665,
+          591.8615330902371
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 23,
+        "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n2. 感受作者与民同乐的心境。",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              248.8329620361322,
+              508.63095092773506,
+              1100.8601066311714,
+              508.63095092773506,
+              1100.8601066311714,
+              544.6063669307704,
+              248.8329620361322,
+              544.6063669307704
+            ],
+            "ignore": false,
+            "order": 4,
+            "anno_id": 18,
+            "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  251.9999999999996,
+                  511.077695424118,
+                  1094.1610476238886,
+                  511.077695424118,
+                  1094.1610476238886,
+                  540.0644190495557,
+                  251.9999999999996,
+                  540.0644190495557
+                ],
+                "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              247.87892647370901,
+              553.1739865402888,
+              630.9608984621764,
+              553.1739865402888,
+              630.9608984621764,
+              587.6660414894417,
+              247.87892647370901,
+              587.6660414894417
+            ],
+            "ignore": false,
+            "order": 5,
+            "anno_id": 24,
+            "text": "2. 感受作者与民同乐的心境。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  249.333333333333,
+                  555.5388477120591,
+                  624.5775836292928,
+                  555.5388477120591,
+                  624.5775836292928,
+                  583.0660842212122,
+                  249.333333333333,
+                  583.0660842212122
+                ],
+                "text": "2. 感受作者与民同乐的心境。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n2. 感受作者与民同乐的心境。",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        236.70181408265665,
+        499.7353222176838,
+        1124.0226872235673,
+        591.8615330902371
+      ],
+      "differences": [
+        {
+          "reference": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。 2. 感受作者与民同乐的心境。",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment"
+        ],
+        "reason": "教学目标两条完整在b0005/b0006，GT一块被拆成两Region，非内容漏失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            240,
+            506,
+            1102,
+            546
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0006",
+          "bbox": [
+            239,
+            550,
+            635,
+            588
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "2. 感受作者与民同乐的心境。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2. 感受作者与民同乐的心境。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0006",
+      "kind": "extra",
+      "block_id": "b0006",
+      "bbox": [
+        239,
+        550,
+        635,
+        588
+      ],
+      "strict_exact": false,
+      "raw_parent": "2. 感受作者与民同乐的心境。\n",
+      "actual": "2. 感受作者与民同乐的心境。\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment"
+        ],
+        "reason": "教学目标两条完整在b0005/b0006，GT一块被拆成两Region，非内容漏失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            239,
+            550,
+            635,
+            588
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "2. 感受作者与民同乐的心境。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2. 感受作者与民同乐的心境。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0005",
+      "kind": "extra",
+      "block_id": "b0005",
+      "bbox": [
+        240,
+        506,
+        1102,
+        546
+      ],
+      "strict_exact": false,
+      "raw_parent": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+      "actual": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment"
+        ],
+        "reason": "教学目标两条完整在b0005/b0006，GT一块被拆成两Region，非内容漏失。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            240,
+            506,
+            1102,
+            546
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+    "sha256": "fb1caf6806c48824ce998c5b9d0bac600e298d2c778ce1d5b92087c883b5117b"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/evaluation-candidate-11.json",
+    "sha256": "c23266e5f0b2ced4d490d0419b5e06a438a90dc694da679fceea9cc4a48b9d6c"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 20,
+  "unverified_units": [
+    "text:8"
+  ]
+}

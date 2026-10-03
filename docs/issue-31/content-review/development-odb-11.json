@@ -1,0 +1,1594 @@
+{
+  "page": "development-odb-11",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "大表确认多处汉字、公式、复制内容及合并单元格错误，绝非仅 HTML 表示问题。",
+  "viewed_sheets": {
+    "sheet-03.jpg": "dc4025e26206cff31b25644c5552ceccef844762d2fa3c6f022e42a02ec7e8bb",
+    "sheet-02.jpg": "5af98dbc51f29665ed6a061d28ee0b068cc89f4d85a15aa57cc576a6db1292a4",
+    "sheet-01.jpg": "2e609c322500598990b3897384e697e599390a55b535bf6839d22ffcddd13d31",
+    "sheet-04.jpg": "aabef88f9248c8c06b3940bf5a6f9b5eafb6fa5f8878648a2ed96be8cb8d25cd"
+  },
+  "items": [
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          2167.876915424859,
+          459.29476431702096,
+          3511.1597080905854,
+          459.29476431702096,
+          3511.1597080905854,
+          776.3786853325355,
+          2167.876915424859,
+          776.3786853325355
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 0,
+        "text": "全书大归纳",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "全书大归纳",
+      "actual": "## 全书大归纳",
+      "raw_parent": "## 全书大归纳\n",
+      "bbox": [
+        2167.876915424859,
+        459.29476431702096,
+        3511.1597080905854,
+        776.3786853325355
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "六处标题/页码/页脚文字完整。标题等级和“一 元”空格为表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            2170,
+            475,
+            3499,
+            763
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 全书大归纳\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 全书大归纳\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          2327.9411449183453,
+          1248.0708898487374,
+          3492.503909375327,
+          1248.0708898487374,
+          3492.503909375327,
+          1472.9122156597386,
+          2327.9411449183453,
+          1472.9122156597386
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 5,
+        "text": "核心知识归纳",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "核心知识归纳",
+      "actual": "## 核心知识归纳",
+      "raw_parent": "## 核心知识归纳\n",
+      "bbox": [
+        2327.9411449183453,
+        1248.0708898487374,
+        3492.503909375327,
+        1472.9122156597386
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "六处标题/页码/页脚文字完整。标题等级和“一 元”空格为表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            1982,
+            1259,
+            3501,
+            1496
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 核心知识归纳\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 核心知识归纳\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "table_caption",
+        "poly": [
+          769.7759954110653,
+          1635.3878531745663,
+          1628.7851632530962,
+          1635.3878531745663,
+          1628.7851632530962,
+          1796.8123947824647,
+          769.7759954110653,
+          1796.8123947824647
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 6,
+        "text": "一元一次方程",
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "一元一次方程",
+      "actual": "## 一 元一次方程",
+      "raw_parent": "## 一 元一次方程\n",
+      "bbox": [
+        769.7759954110653,
+        1635.3878531745663,
+        1628.7851632530962,
+        1796.8123947824647
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "六处标题/页码/页脚文字完整。标题等级和“一 元”空格为表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            751,
+            1638,
+            1606,
+            1796
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 一 元一次方程\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 一 元一次方程\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          200.3053812237766,
+          5332.322375328111,
+          329.4710774525265,
+          5332.322375328111,
+          329.4710774525265,
+          5916.242252160871,
+          200.3053812237766,
+          5916.242252160871
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 3,
+        "text": "全书大归纳",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "全书大归纳",
+      "actual": "## 全书大归纳",
+      "raw_parent": "## 全书大归纳\n",
+      "bbox": [
+        200.3053812237766,
+        5332.322375328111,
+        329.4710774525265,
+        5916.242252160871
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "六处标题/页码/页脚文字完整。标题等级和“一 元”空格为表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            182,
+            5308,
+            346,
+            5924
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 全书大归纳\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 全书大归纳\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          370.6490343236778,
+          7730.072177366819,
+          532.0787134497086,
+          7730.072177366819,
+          532.0787134497086,
+          7828.0503044377165,
+          370.6490343236778,
+          7828.0503044377165
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 7,
+        "text": "284",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "284",
+      "actual": "## 284",
+      "raw_parent": "## 284\n",
+      "bbox": [
+        370.6490343236778,
+        7730.072177366819,
+        532.0787134497086,
+        7828.0503044377165
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "六处标题/页码/页脚文字完整。标题等级和“一 元”空格为表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            345,
+            7703,
+            545,
+            7847
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 284\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 284\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          1392.4135130415307,
+          8017.422408886837,
+          4142.395882576086,
+          8017.422408886837,
+          4142.395882576086,
+          8175,
+          1392.4135130415307,
+          8175
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 1,
+        "text": "关注微信公众号“初高教辅站”获取更多初高中教辅资料",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "关注微信公众号“初高教辅站”获取更多初高中教辅资料",
+      "actual": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料",
+      "raw_parent": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+      "bbox": [
+        1392.4135130415307,
+        8017.422408886837,
+        4142.395882576086,
+        8175
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "六处标题/页码/页脚文字完整。标题等级和“一 元”空格为表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            1389,
+            8035,
+            4167,
+            8173
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "header",
+        "poly": [
+          728.9524847776602,
+          423.5744836856052,
+          1015.0026343923888,
+          423.5744836856052,
+          1015.0026343923888,
+          709.7768828329909,
+          728.9524847776602,
+          709.7768828329909
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 4,
+        "text": "附",
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "附",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        728.9524847776602,
+        423.5744836856052,
+        1015.0026343923888,
+        709.7768828329909
+      ],
+      "differences": [
+        {
+          "reference": "附",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "coverage_error"
+        ],
+        "reason": "原图边栏“附”未在文本输出中，是否保留为图像另评。",
+        "reviewed": true
+      },
+      "evidence_blocks": [],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "table:2",
+      "kind": "table",
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          502.7744311311984,
+          1837.1685301844395,
+          5312.723809233351,
+          1837.1685301844395,
+          5312.723809233351,
+          7596.565568266244,
+          502.7744311311984,
+          7596.565568266244
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 2,
+        "html": "<table border=\"1\"><tr><td>知识点</td><td colspan=\"4\">内容</td></tr><tr><td>方程的解的概念</td><td colspan=\"4\">使方程左、右两边的值相等的未知数的值就是该方程的解. 提示：将方程的解代入方程，等式成立</td></tr><tr><td>等式的基本性质</td><td colspan=\"4\">(1)等式两边都加上(或都减去)同一个数或同一个整式, 所得结果仍是等式. 如果 a=b, 那么a+c=b+c, a-c=b-c；\n(2)等式两边都乘以(或都除以)同一个数(除数不能为0), 所得结果仍是等式, 如果a=b, 那么ac=bc, $\\frac{a}{c} = \\frac{b}{c}$ ($c \\ne 0$)</td></tr><tr><td>方程的变形规则</td><td colspan=\"4\">(1)方程两边都加上(或都减去)同一个数或同一个整式, 方程的解不变;\n(2)方程两边都乘以(或都除以)同一个不等于0的数, 方程的解不变</td></tr><tr><td>移项</td><td colspan=\"4\">将方程中的某些项改变符号后，从方程的一边移到另一边的变形. 注意：移项后要改变符号</td></tr><tr><td>一元一次方程的定义</td><td colspan=\"4\">只含有一个未知数, 并且含有未知数的式子都是整式, 未知数的次数都是1, 像这样的方程叫做一元一次方程. 提示：一般式为ax = b (a,b为常数，且 $a \\ne 0$)</td></tr><tr><td>解一元一次方程的步骤</td><td colspan=\"4\">(1)去分母；(2)去括号；(3)移项；(4)合并同类项；(5)将未知数的系数化为1.\n提示：应根据方程特点，灵活选择解题步骤</td></tr><tr><td rowspan=\"8\">列一元一次方程解应用题的几种常见题型及特点</td><td colspan=\"2\">类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td colspan=\"2\">和、差、倍、分问题</td><td></td><td>明确“倍数”关系及“多、少”关系等</td></tr><tr><td colspan=\"2\">等积变形问题</td><td>长方体体积 = 长×宽×高；\n圆柱体体积 = $\\pi r^{2}h$ (其中h为高,r为底面半径)</td><td>变形前后体积相等</td></tr><tr><td rowspan=\"3\">行程问题</td><td>相遇问题</td><td rowspan=\"3\">路程 = 速度×时间；\n时间 = 路程÷速度；\n速度 = 路程÷时间</td><td>快行的距离 + 慢行的距离 = 总距离 (相向而行)</td></tr><tr><td>追及问题</td><td>快行的距离 - 慢行的距离 = 距离差 (同向而行)</td></tr><tr><td>水流问题</td><td>静水速度 + 水流速度 = 顺水速度\n静水速度 - 水流速度 = 逆水速度\n（顺水路程 = 逆水路程）</td></tr><tr><td colspan=\"2\">调配问题</td><td colspan=\"2\">从调配后的数量关系中找等量关系. 注意：调配对象流动的方向和数量</td></tr><tr><td colspan=\"2\">比例分配问题</td><td colspan=\"2\">全部数量 = 各份的数量之和. 提示：可把一份数量设为x</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "<table border=\"1\"><tr><td>知识点</td><td colspan=\"4\">内容</td></tr><tr><td>方程的解的概念</td><td colspan=\"4\">使方程左、右两边的值相等的未知数的值就是该方程的解. 提示：将方程的解代入方程，等式成立</td></tr><tr><td>等式的基本性质</td><td colspan=\"4\">(1)等式两边都加上(或都减去)同一个数或同一个整式, 所得结果仍是等式. 如果 a=b, 那么a+c=b+c, a-c=b-c；\n(2)等式两边都乘以(或都除以)同一个数(除数不能为0), 所得结果仍是等式, 如果a=b, 那么ac=bc, $\\frac{a}{c} = \\frac{b}{c}$ ($c \\ne 0$)</td></tr><tr><td>方程的变形规则</td><td colspan=\"4\">(1)方程两边都加上(或都减去)同一个数或同一个整式, 方程的解不变;\n(2)方程两边都乘以(或都除以)同一个不等于0的数, 方程的解不变</td></tr><tr><td>移项</td><td colspan=\"4\">将方程中的某些项改变符号后，从方程的一边移到另一边的变形. 注意：移项后要改变符号</td></tr><tr><td>一元一次方程的定义</td><td colspan=\"4\">只含有一个未知数, 并且含有未知数的式子都是整式, 未知数的次数都是1, 像这样的方程叫做一元一次方程. 提示：一般式为ax = b (a,b为常数，且 $a \\ne 0$)</td></tr><tr><td>解一元一次方程的步骤</td><td colspan=\"4\">(1)去分母；(2)去括号；(3)移项；(4)合并同类项；(5)将未知数的系数化为1.\n提示：应根据方程特点，灵活选择解题步骤</td></tr><tr><td rowspan=\"8\">列一元一次方程解应用题的几种常见题型及特点</td><td colspan=\"2\">类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td colspan=\"2\">和、差、倍、分问题</td><td></td><td>明确“倍数”关系及“多、少”关系等</td></tr><tr><td colspan=\"2\">等积变形问题</td><td>长方体体积 = 长×宽×高；\n圆柱体体积 = $\\pi r^{2}h$ (其中h为高,r为底面半径)</td><td>变形前后体积相等</td></tr><tr><td rowspan=\"3\">行程问题</td><td>相遇问题</td><td rowspan=\"3\">路程 = 速度×时间；\n时间 = 路程÷速度；\n速度 = 路程÷时间</td><td>快行的距离 + 慢行的距离 = 总距离 (相向而行)</td></tr><tr><td>追及问题</td><td>快行的距离 - 慢行的距离 = 距离差 (同向而行)</td></tr><tr><td>水流问题</td><td>静水速度 + 水流速度 = 顺水速度\n静水速度 - 水流速度 = 逆水速度\n（顺水路程 = 逆水路程）</td></tr><tr><td colspan=\"2\">调配问题</td><td colspan=\"2\">从调配后的数量关系中找等量关系. 注意：调配对象流动的方向和数量</td></tr><tr><td colspan=\"2\">比例分配问题</td><td colspan=\"2\">全部数量 = 各份的数量之和. 提示：可把一份数量设为x</td></tr></table>",
+      "actual": {
+        "format": "markdown",
+        "text": "",
+        "resource": "assets/p0001-b0005.png",
+        "table": null
+      },
+      "raw_parent": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>明确“倍数”关系及“多”、“少”关系等</td></tr><tr><td>等变形问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>变形前后体积相等</td></tr><tr><td>相遇问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离+慢行的距离=总距离(相向而行)</td></tr><tr><td>追及问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离-慢行的距离=距离乘(同向而行)</td></tr><tr><td>水流问题</td><td>静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td><td>静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td></tr><tr><td>调配问题</td><td>从调配后的数量关系中找等量关系</td><td>注意:调配对象流动的方向和数量</td></tr><tr><td>比例分配问题</td><td>全部数量=各份的数量之和</td><td>提示:可把一份数量设为$x$</td></tr></table>\n",
+      "bbox": [
+        502.7744311311984,
+        1837.1685301844395,
+        5312.723809233351,
+        7596.565568266244
+      ],
+      "review": {
+        "classification": [
+          "transcription_error",
+          "structure_error",
+          "representation",
+          "export_fallback"
+        ],
+        "reason": "逐格查看整表及三份放大裁片：解定义漏“该”；等式基本性质 a+c/a-c 被读 ac，两条乘除性质融合并错读 bc 与 a/c=b/c；“都除以”漏都；“移项后”读“移项法”；“式子”读“式了”，“一般式为”读“写为”；长题型标题漏“及”，“和、差、倍、分”读“和差、倍、同”，“等积变形”漏积；长方体/圆柱体及 πr²h 严重错写且复制至原空格；“行程问题”合并格缺失；距离“差”读“乘”；顺水公式 + 读 -，水流行错误填入数量公式列；rowspan/colspan 结构缺失/错误。所有精确 cell 内容、结构和表示差异另列单元格明细，不将整表严格差异一律认作格式。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            450,
+            1841,
+            5319,
+            7579
+          ],
+          "type": "table",
+          "status": "partial",
+          "raw_output": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>明确“倍数”关系及“多”、“少”关系等</td></tr><tr><td>等变形问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>变形前后体积相等</td></tr><tr><td>相遇问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离+慢行的距离=总距离(相向而行)</td></tr><tr><td>追及问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离-慢行的距离=距离乘(同向而行)</td></tr><tr><td>水流问题</td><td>静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td><td>静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td></tr><tr><td>调配问题</td><td>从调配后的数量关系中找等量关系</td><td>注意:调配对象流动的方向和数量</td></tr><tr><td>比例分配问题</td><td>全部数量=各份的数量之和</td><td>提示:可把一份数量设为$x$</td></tr></table>\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "",
+            "resource": "assets/p0001-b0005.png",
+            "table": null
+          },
+          "error": "invalid_table_structure"
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项",
+      "final_export_review": {
+        "structured": false,
+        "classification": [
+          "export_fallback"
+        ],
+        "reason": "最终 table=null、text 为空，只保留 PNG 图片；原始响应内容裁决不能当作最终可编辑表格通过。",
+        "reviewed": true
+      },
+      "cell_reviews": [
+        {
+          "id": "table:2:r0:c0",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "知识点",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "知识点",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "知识点文字正确。"
+        },
+        {
+          "id": "table:2:r0:c1",
+          "reference": {
+            "row": 0,
+            "rowspan": 1,
+            "colspan": 4,
+            "header": false,
+            "text": "内容",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "内容",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "内容文字正确，colspan 4→1。"
+        },
+        {
+          "id": "table:2:r1:c0",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "方程的解的概念",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "方程的解的概念",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "方程的解的概念正确。"
+        },
+        {
+          "id": "table:2:r1:c1",
+          "reference": {
+            "row": 1,
+            "rowspan": 1,
+            "colspan": 4,
+            "header": false,
+            "text": "使方程左、右两边的值相等的未知数的值就是该方程的解. 提示：将方程的解代入方程，等式成立",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "漏“该”；标点表示不同；colspan 4→1。"
+        },
+        {
+          "id": "table:2:r2:c0",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "等式的基本性质",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "等式的基本性质",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "等式的基本性质正确。"
+        },
+        {
+          "id": "table:2:r2:c1",
+          "reference": {
+            "row": 2,
+            "rowspan": 1,
+            "colspan": 4,
+            "header": false,
+            "text": "(1)等式两边都加上(或都减去)同一个数或同一个整式, 所得结果仍是等式. 如果 a=b, 那么a+c=b+c, a-c=b-c；\n(2)等式两边都乘以(或都除以)同一个数(除数不能为0), 所得结果仍是等式, 如果a=b, 那么ac=bc, $\\frac{a}{c} = \\frac{b}{c}$ ($c \\ne 0$)",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "a+c、a−c 的左侧均成 ac；ac=bc 和 a/c=b/c 被串成 ac=b·a/c=b·b/c；“或都除以”漏都；colspan 4→1。"
+        },
+        {
+          "id": "table:2:r3:c0",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "方程的变形规则",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "方程的变形规则",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "方程的变形规则正确。"
+        },
+        {
+          "id": "table:2:r3:c1",
+          "reference": {
+            "row": 3,
+            "rowspan": 1,
+            "colspan": 4,
+            "header": false,
+            "text": "(1)方程两边都加上(或都减去)同一个数或同一个整式, 方程的解不变;\n(2)方程两边都乘以(或都除以)同一个不等于0的数, 方程的解不变",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "“或都除以”漏都；两条规则其余内容正确；colspan 4→1。"
+        },
+        {
+          "id": "table:2:r4:c0",
+          "reference": {
+            "row": 4,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "移项",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "移项",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "移项正确。"
+        },
+        {
+          "id": "table:2:r4:c1",
+          "reference": {
+            "row": 4,
+            "rowspan": 1,
+            "colspan": 4,
+            "header": false,
+            "text": "将方程中的某些项改变符号后，从方程的一边移到另一边的变形. 注意：移项后要改变符号",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "“移项后”→“移项法”；colspan 4→1。"
+        },
+        {
+          "id": "table:2:r5:c0",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "一元一次方程的定义",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "一元一次方程的定义",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "一元一次方程的定义正确。"
+        },
+        {
+          "id": "table:2:r5:c1",
+          "reference": {
+            "row": 5,
+            "rowspan": 1,
+            "colspan": 4,
+            "header": false,
+            "text": "只含有一个未知数, 并且含有未知数的式子都是整式, 未知数的次数都是1, 像这样的方程叫做一元一次方程. 提示：一般式为ax = b (a,b为常数，且 $a \\ne 0$)",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "“式子”→“式了”；“一般式为”多写；ax=b、a≠0正确；colspan 4→1。"
+        },
+        {
+          "id": "table:2:r6:c0",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "解一元一次方程的步骤",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "解一元一次方程的步骤",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "strict_match"
+          ],
+          "reason": "解方程步骤标题正确。"
+        },
+        {
+          "id": "table:2:r6:c1",
+          "reference": {
+            "row": 6,
+            "rowspan": 1,
+            "colspan": 4,
+            "header": false,
+            "text": "(1)去分母；(2)去括号；(3)移项；(4)合并同类项；(5)将未知数的系数化为1.\n提示：应根据方程特点，灵活选择解题步骤",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error",
+            "representation"
+          ],
+          "reason": "五步骤与提示内容正确；colspan 4→1。"
+        },
+        {
+          "id": "table:2:r7:c0",
+          "reference": {
+            "row": 7,
+            "rowspan": 8,
+            "colspan": 1,
+            "header": false,
+            "text": "列一元一次方程解应用题的几种常见题型及特点",
+            "column": 0
+          },
+          "raw_model_cells": [
+            {
+              "row": 7,
+              "rowspan": 7,
+              "colspan": 1,
+              "header": false,
+              "text": "列一元一次方程解应用题的几种常见题型特点",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error"
+          ],
+          "reason": "题型“及特点”漏及；rowspan 8→7。"
+        },
+        {
+          "id": "table:2:r7:c1",
+          "reference": {
+            "row": 7,
+            "rowspan": 1,
+            "colspan": 2,
+            "header": false,
+            "text": "类型",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 7,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "类型",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "类型正确，colspan 2→1。"
+        },
+        {
+          "id": "table:2:r7:c3",
+          "reference": {
+            "row": 7,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "题中涉及的数量关系及公式",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 7,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "题中涉及的数量关系及公式",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "数量关系及公式文字正确，因缺列左移。"
+        },
+        {
+          "id": "table:2:r7:c4",
+          "reference": {
+            "row": 7,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "等量关系",
+            "column": 4
+          },
+          "raw_model_cells": [
+            {
+              "row": 7,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "等量关系",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "等量关系正确，因缺列左移。"
+        },
+        {
+          "id": "table:2:r8:c1",
+          "reference": {
+            "row": 8,
+            "rowspan": 1,
+            "colspan": 2,
+            "header": false,
+            "text": "和、差、倍、分问题",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 8,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "和差、倍、同问题",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "“分问题”→“同问题”，顿号缺失；colspan 2→1。"
+        },
+        {
+          "id": "table:2:r8:c3",
+          "reference": {
+            "row": 8,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 8,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error"
+          ],
+          "reason": "原图空白格被填入下一行的错误体积公式，是多写与结构错位。"
+        },
+        {
+          "id": "table:2:r8:c4",
+          "reference": {
+            "row": 8,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "明确“倍数”关系及“多、少”关系等",
+            "column": 4
+          },
+          "raw_model_cells": [
+            {
+              "row": 8,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "明确“倍数”关系及“多”、“少”关系等",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error",
+            "representation"
+          ],
+          "reason": "倍数和多少关系正确，标点表示不同；左移一列。"
+        },
+        {
+          "id": "table:2:r9:c1",
+          "reference": {
+            "row": 9,
+            "rowspan": 1,
+            "colspan": 2,
+            "header": false,
+            "text": "等积变形问题",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 9,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "等变形问题",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error"
+          ],
+          "reason": "等积变形漏积，colspan 2→1。"
+        },
+        {
+          "id": "table:2:r9:c3",
+          "reference": {
+            "row": 9,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "长方体体积 = 长×宽×高；\n圆柱体体积 = $\\pi r^{2}h$ (其中h为高,r为底面半径)",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 9,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "长方体/圆柱体字词、等号旁多余 x 以及 πr²h 真错误；左移一列。"
+        },
+        {
+          "id": "table:2:r9:c4",
+          "reference": {
+            "row": 9,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "变形前后体积相等",
+            "column": 4
+          },
+          "raw_model_cells": [
+            {
+              "row": 9,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "变形前后体积相等",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "变形前后体积相等正确，左移一列。"
+        },
+        {
+          "id": "table:2:r10:c1",
+          "reference": {
+            "row": 10,
+            "rowspan": 3,
+            "colspan": 1,
+            "header": false,
+            "text": "行程问题",
+            "column": 1
+          },
+          "raw_model_cells": [],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "coverage_error",
+            "structure_error"
+          ],
+          "reason": "行程问题整个合并格未转写，rowspan 3 丢失。"
+        },
+        {
+          "id": "table:2:r10:c2",
+          "reference": {
+            "row": 10,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "相遇问题",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 10,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相遇问题",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "相遇问题正确，左移一列。"
+        },
+        {
+          "id": "table:2:r10:c3",
+          "reference": {
+            "row": 10,
+            "rowspan": 3,
+            "colspan": 1,
+            "header": false,
+            "text": "路程 = 速度×时间；\n时间 = 路程÷速度；\n速度 = 路程÷时间",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 10,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间",
+              "column": 2
+            },
+            {
+              "row": 11,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间",
+              "column": 2
+            },
+            {
+              "row": 12,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "静水速度-水流速度=逆水速度(顺水路程=逆水路程)",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error",
+            "transcription_error",
+            "representation"
+          ],
+          "reason": "首行三条路程/速度/时间公式正确；rowspan 3 丢失并重复，第三行多写水流公式。"
+        },
+        {
+          "id": "table:2:r10:c4",
+          "reference": {
+            "row": 10,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "快行的距离 + 慢行的距离 = 总距离 (相向而行)",
+            "column": 4
+          },
+          "raw_model_cells": [
+            {
+              "row": 10,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "快行的距离+慢行的距离=总距离(相向而行)",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error",
+            "representation"
+          ],
+          "reason": "相遇等量关系及相向而行正确，左移一列。"
+        },
+        {
+          "id": "table:2:r11:c2",
+          "reference": {
+            "row": 11,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "追及问题",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 11,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "追及问题",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "追及问题正确，左移一列。"
+        },
+        {
+          "id": "table:2:r11:c4",
+          "reference": {
+            "row": 11,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "快行的距离 - 慢行的距离 = 距离差 (同向而行)",
+            "column": 4
+          },
+          "raw_model_cells": [
+            {
+              "row": 11,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "快行的距离-慢行的距离=距离乘(同向而行)",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "距离差→距离乘；减号及同向而行正确，左移一列。"
+        },
+        {
+          "id": "table:2:r12:c2",
+          "reference": {
+            "row": 12,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "水流问题",
+            "column": 2
+          },
+          "raw_model_cells": [
+            {
+              "row": 12,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "水流问题",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "水流问题正确，左移一列。"
+        },
+        {
+          "id": "table:2:r12:c4",
+          "reference": {
+            "row": 12,
+            "rowspan": 1,
+            "colspan": 1,
+            "header": false,
+            "text": "静水速度 + 水流速度 = 顺水速度\n静水速度 - 水流速度 = 逆水速度\n（顺水路程 = 逆水路程）",
+            "column": 4
+          },
+          "raw_model_cells": [
+            {
+              "row": 12,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "transcription_error",
+            "structure_error",
+            "representation"
+          ],
+          "reason": "顺水关系中的 +→−，逆水与路程条件正确；左移一列。"
+        },
+        {
+          "id": "table:2:r13:c1",
+          "reference": {
+            "row": 13,
+            "rowspan": 1,
+            "colspan": 2,
+            "header": false,
+            "text": "调配问题",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 13,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "调配问题",
+              "column": 1
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "调配问题正确，colspan 2→1。"
+        },
+        {
+          "id": "table:2:r13:c3",
+          "reference": {
+            "row": 13,
+            "rowspan": 1,
+            "colspan": 2,
+            "header": false,
+            "text": "从调配后的数量关系中找等量关系. 注意：调配对象流动的方向和数量",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 13,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "从调配后的数量关系中找等量关系",
+              "column": 2
+            },
+            {
+              "row": 13,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "注意:调配对象流动的方向和数量",
+              "column": 3
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error",
+            "representation"
+          ],
+          "reason": "数量关系、方向和数量正确；一个 colspan 2 合并格拆成两格。"
+        },
+        {
+          "id": "table:2:r14:c1",
+          "reference": {
+            "row": 14,
+            "rowspan": 1,
+            "colspan": 2,
+            "header": false,
+            "text": "比例分配问题",
+            "column": 1
+          },
+          "raw_model_cells": [
+            {
+              "row": 14,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "比例分配问题",
+              "column": 0
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error"
+          ],
+          "reason": "比例分配问题正确，因 rowspan/colspan 错误左移，colspan 2→1。"
+        },
+        {
+          "id": "table:2:r14:c3",
+          "reference": {
+            "row": 14,
+            "rowspan": 1,
+            "colspan": 2,
+            "header": false,
+            "text": "全部数量 = 各份的数量之和. 提示：可把一份数量设为x",
+            "column": 3
+          },
+          "raw_model_cells": [
+            {
+              "row": 14,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "全部数量=各份的数量之和",
+              "column": 1
+            },
+            {
+              "row": 14,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "提示:可把一份数量设为$x$",
+              "column": 2
+            }
+          ],
+          "final_cells": [],
+          "reviewed": true,
+          "classification": [
+            "structure_error",
+            "representation"
+          ],
+          "reason": "数量之和和设 x 内容正确，一个 colspan 2 合并格拆成两格且左移。"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+    "sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-11.json",
+    "sha256": "76d8f3667181be4bcd52fcf23e68f8d59f9a9bf84a8fe5f8346932b905e870e5"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {
+    "output/issue31-visual-review-20261003/development-odb-11/table-detail-3.png": "e71c3926493568e1613ab8e3bf339ab82fb25c33529d57a40bb087974bfb100f",
+    "output/issue31-visual-review-20261003/development-odb-11/table-detail-1.png": "2a41752ebd6c16f71f42daea13c2eefe7523cdf12a9aafa0c450767c25e49e0b",
+    "output/issue31-visual-review-20261003/development-odb-11/table-detail-2.png": "7623686332243af08b8ce38d580de78bb89592c1ad86252bb32d28432f372a59"
+  },
+  "reviewed_units": 8,
+  "unverified_units": []
+}

@@ -1,0 +1,1997 @@
+{
+  "page": "development-odb-20",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "十道选择题内容逐项相同；主要为题干/选项合并、答题线及标题表示差异。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "e8f04fe96f9aec169b573b313cb02cec2bd5791ca4fd774bcea656f69fb21ff3",
+    "sheet-01.jpg": "b717ea5367830ccc0537af884a6f6d56f8a9cc2c3b3566cd3948e4fc389f0fde"
+  },
+  "items": [
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "anno_id": 1,
+        "order": 1,
+        "ignore": false,
+        "poly": [
+          348,
+          141.33333333333334,
+          1306.6666666666667,
+          141.33333333333334,
+          1306.6666666666667,
+          197.33333333333334,
+          348,
+          197.33333333333334
+        ],
+        "attribute": {},
+        "text": "2018年广西北部湾经济区初中学业水平统一考试"
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "2018年广西北部湾经济区初中学业水平统一考试",
+      "actual": "## 2018 年广西北部湾经济区初中学业水平统一考试",
+      "raw_parent": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+      "bbox": [
+        348,
+        141.33333333333334,
+        1306.6666666666667,
+        197.33333333333334
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            345,
+            142,
+            1306,
+            283
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "anno_id": 2,
+        "order": 2,
+        "ignore": false,
+        "poly": [
+          778.6666666666666,
+          228,
+          874.6666666666666,
+          228,
+          874.6666666666666,
+          282.6666666666667,
+          778.6666666666666,
+          282.6666666666667
+        ],
+        "attribute": {},
+        "text": "英语"
+      },
+      "block_id": "b0001",
+      "strict_exact": false,
+      "expected": "英语",
+      "actual": " 英语",
+      "raw_parent": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+      "bbox": [
+        778.6666666666666,
+        228,
+        874.6666666666666,
+        282.6666666666667
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            345,
+            142,
+            1306,
+            283
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:3",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "anno_id": 3,
+        "order": 3,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          310.6666666666667,
+          270.6666666666667,
+          310.6666666666667,
+          270.6666666666667,
+          350.6666666666667,
+          146.66666666666666,
+          350.6666666666667
+        ],
+        "attribute": {},
+        "text": "笔试部分"
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "笔试部分",
+      "actual": "## 笔试部分",
+      "raw_parent": "## 笔试部分\n",
+      "bbox": [
+        146.66666666666666,
+        310.6666666666667,
+        270.6666666666667,
+        350.6666666666667
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            142,
+            312,
+            274,
+            351
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 笔试部分\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 笔试部分\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "anno_id": 4,
+        "order": 4,
+        "ignore": false,
+        "poly": [
+          149.33333333333334,
+          374.6666666666667,
+          332,
+          374.6666666666667,
+          332,
+          417.3333333333333,
+          149.33333333333334,
+          417.3333333333333
+        ],
+        "attribute": {},
+        "text": "二.单项选择"
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "二.单项选择",
+      "actual": "### 二. 单项选择",
+      "raw_parent": "### 二. 单项选择\n",
+      "bbox": [
+        149.33333333333334,
+        374.6666666666667,
+        332,
+        417.3333333333333
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "### "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            143,
+            373,
+            334,
+            419
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "### 二. 单项选择\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "### 二. 单项选择\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:5",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "anno_id": 5,
+        "order": 5,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          438.6666666666667,
+          1501.3333333333333,
+          438.6666666666667,
+          1501.3333333333333,
+          548,
+          146.66666666666666,
+          548
+        ],
+        "attribute": {},
+        "text": "从下列每小题所给的A、B、C、D四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。"
+      },
+      "block_id": "b0004",
+      "strict_exact": false,
+      "expected": "从下列每小题所给的A、B、C、D四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。",
+      "actual": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。",
+      "raw_parent": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+      "bbox": [
+        146.66666666666666,
+        438.6666666666667,
+        1501.3333333333333,
+        548
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0004",
+          "bbox": [
+            140,
+            439,
+            1504,
+            551
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:6",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 6,
+        "order": 6,
+        "ignore": false,
+        "poly": [
+          143.99999999999986,
+          574.6666666666669,
+          487.73925311698645,
+          574.6666666666669,
+          487.73925311698645,
+          615.8394517868583,
+          143.99999999999986,
+          615.8394517868583
+        ],
+        "attribute": {},
+        "text": "1. ——Happy New Year!"
+      },
+      "block_id": "b0005",
+      "strict_exact": true,
+      "expected": "1. ——Happy New Year!",
+      "actual": "1. ——Happy New Year!",
+      "raw_parent": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+      "bbox": [
+        143.99999999999986,
+        574.6666666666669,
+        487.73925311698645,
+        615.8394517868583
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致，已看图核对英文单词、选项和对话。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            137,
+            574,
+            1404,
+            744
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:29",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 29,
+        "order": 7,
+        "ignore": false,
+        "poly": [
+          148.0213361138277,
+          633.2180908693531,
+          535.3550038931465,
+          633.2180908693531,
+          535.3550038931465,
+          679.5695312153595,
+          148.0213361138277,
+          679.5695312153595
+        ],
+        "attribute": {},
+        "text": "——.____."
+      },
+      "block_id": "b0005",
+      "strict_exact": false,
+      "expected": "——.____.",
+      "actual": " ___. ",
+      "raw_parent": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+      "bbox": [
+        148.0213361138277,
+        633.2180908693531,
+        535.3550038931465,
+        679.5695312153595
+      ],
+      "differences": [
+        {
+          "reference": "——._",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            137,
+            574,
+            1404,
+            744
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 7,
+        "order": 8,
+        "ignore": false,
+        "poly": [
+          147.88256033264975,
+          707.3920531670087,
+          1402.6666666666667,
+          707.3920531670087,
+          1402.6666666666667,
+          742.6666666666664,
+          147.88256033264975,
+          742.6666666666664
+        ],
+        "attribute": {},
+        "text": "A. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome."
+      },
+      "block_id": "b0005",
+      "strict_exact": true,
+      "expected": "A. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.",
+      "actual": "A. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.",
+      "raw_parent": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+      "bbox": [
+        147.88256033264975,
+        707.3920531670087,
+        1402.6666666666667,
+        742.6666666666664
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致，已看图核对英文单词、选项和对话。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0005",
+          "bbox": [
+            137,
+            574,
+            1404,
+            744
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:8",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 8,
+        "order": 9,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          770.6666666666666,
+          953.3333333333334,
+          770.6666666666666,
+          953.3333333333334,
+          808,
+          146.66666666666666,
+          808
+        ],
+        "attribute": {},
+        "text": "2. My uncle works in a hospital. He is a/an____."
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "2. My uncle works in a hospital. He is a/an____.",
+      "actual": "2. My uncle works in a hospital. He is a/an _____.",
+      "raw_parent": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+      "bbox": [
+        146.66666666666666,
+        770.6666666666666,
+        953.3333333333334,
+        808
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " _"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            139,
+            770,
+            1285,
+            874
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 9,
+        "order": 10,
+        "ignore": false,
+        "poly": [
+          148.872189110577,
+          837.3333333333336,
+          1284.8721891105774,
+          837.3333333333336,
+          1284.8721891105774,
+          872,
+          148.872189110577,
+          872
+        ],
+        "attribute": {},
+        "text": "A. singer B. farmer C. actor D. doctor"
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "A. singer B. farmer C. actor D. doctor",
+      "actual": " A. singer B. farmer C. actor D. doctor",
+      "raw_parent": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+      "bbox": [
+        148.872189110577,
+        837.3333333333336,
+        1284.8721891105774,
+        872
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            139,
+            770,
+            1285,
+            874
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:10",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 10,
+        "order": 11,
+        "ignore": false,
+        "poly": [
+          148,
+          900,
+          1013.3333333333334,
+          900,
+          1013.3333333333334,
+          937.3333333333334,
+          148,
+          937.3333333333334
+        ],
+        "attribute": {},
+        "text": "3. The strawberries____delicious. You can have a try."
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "3. The strawberries____delicious. You can have a try.",
+      "actual": "3. The strawberries ___ delicious. You can have a try.",
+      "raw_parent": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+      "bbox": [
+        148,
+        900,
+        1013.3333333333334,
+        937.3333333333334
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            140,
+            898,
+            1278,
+            1004
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 11,
+        "order": 12,
+        "ignore": false,
+        "poly": [
+          148,
+          966.6666666666666,
+          1274.6666666666667,
+          966.6666666666666,
+          1274.6666666666667,
+          1001.3333333333334,
+          148,
+          1001.3333333333334
+        ],
+        "attribute": {},
+        "text": "A. eat B. drink C. taste D. sound"
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "A. eat B. drink C. taste D. sound",
+      "actual": " A. eat B. drink C. taste D. sound",
+      "raw_parent": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+      "bbox": [
+        148,
+        966.6666666666666,
+        1274.6666666666667,
+        1001.3333333333334
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            140,
+            898,
+            1278,
+            1004
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:12",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 12,
+        "order": 13,
+        "ignore": false,
+        "poly": [
+          145.33333333333334,
+          1029.3333333333333,
+          1222.6666666666667,
+          1029.3333333333333,
+          1222.6666666666667,
+          1068,
+          145.33333333333334,
+          1068
+        ],
+        "attribute": {},
+        "text": "4. Tony always works hard. Of all the students, he did ____ in this exam."
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "4. Tony always works hard. Of all the students, he did ____ in this exam.",
+      "actual": "4. Tony always works hard. Of all the students, he did ___ in this exam.",
+      "raw_parent": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+      "bbox": [
+        145.33333333333334,
+        1029.3333333333333,
+        1222.6666666666667,
+        1068
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            140,
+            1030,
+            1258,
+            1135
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:13",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 13,
+        "order": 14,
+        "ignore": false,
+        "poly": [
+          148,
+          1097.3333333333333,
+          1250.6666666666667,
+          1097.3333333333333,
+          1250.6666666666667,
+          1132,
+          148,
+          1132
+        ],
+        "attribute": {},
+        "text": "A. good B. well C. better D. best"
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "A. good B. well C. better D. best",
+      "actual": " A. good B. well C. better D. best",
+      "raw_parent": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+      "bbox": [
+        148,
+        1097.3333333333333,
+        1250.6666666666667,
+        1132
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            140,
+            1030,
+            1258,
+            1135
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:14",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 14,
+        "order": 15,
+        "ignore": false,
+        "poly": [
+          144,
+          1161.3333333333333,
+          1076,
+          1161.3333333333333,
+          1076,
+          1197.3333333333333,
+          144,
+          1197.3333333333333
+        ],
+        "attribute": {},
+        "text": "5. Don't worried. This girl is old enough to look after____."
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "5. Don't worried. This girl is old enough to look after____.",
+      "actual": "5. Don't worried. This girl is old enough to look after _____.",
+      "raw_parent": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+      "bbox": [
+        144,
+        1161.3333333333333,
+        1076,
+        1197.3333333333333
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " _"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            140,
+            1160,
+            1252,
+            1264
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:15",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 15,
+        "order": 16,
+        "ignore": false,
+        "poly": [
+          145.33333333333337,
+          1226.666666666667,
+          1244,
+          1226.666666666667,
+          1244,
+          1261.3333333333333,
+          145.33333333333337,
+          1261.3333333333333
+        ],
+        "attribute": {},
+        "text": "A. herself B. her C. hers D. she"
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "A. herself B. her C. hers D. she",
+      "actual": " A. herself B. her C. hers D. she",
+      "raw_parent": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+      "bbox": [
+        145.33333333333337,
+        1226.666666666667,
+        1244,
+        1261.3333333333333
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            140,
+            1160,
+            1252,
+            1264
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 16,
+        "order": 17,
+        "ignore": false,
+        "poly": [
+          144,
+          1290.6666666666667,
+          925.3333333333334,
+          1290.6666666666667,
+          925.3333333333334,
+          1328,
+          144,
+          1328
+        ],
+        "attribute": {},
+        "text": "6. ____ the map and tell me where Shanghai is."
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "6. ____ the map and tell me where Shanghai is.",
+      "actual": "6. ___ the map and tell me where Shanghai is.",
+      "raw_parent": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+      "bbox": [
+        144,
+        1290.6666666666667,
+        925.3333333333334,
+        1328
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            140,
+            1289,
+            1318,
+            1394
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:17",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 17,
+        "order": 18,
+        "ignore": false,
+        "poly": [
+          150.66666666666666,
+          1356,
+          1320,
+          1356,
+          1320,
+          1392,
+          150.66666666666666,
+          1392
+        ],
+        "attribute": {},
+        "text": "A. Look around B. Look like C. Look at D. Look out"
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "A. Look around B. Look like C. Look at D. Look out",
+      "actual": " A. Look around B. Look like C. Look at D. Look out",
+      "raw_parent": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+      "bbox": [
+        150.66666666666666,
+        1356,
+        1320,
+        1392
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            140,
+            1289,
+            1318,
+            1394
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:18",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 18,
+        "order": 19,
+        "ignore": false,
+        "poly": [
+          142.6666666666668,
+          1420.4356771191533,
+          487.66064177510157,
+          1420.4356771191533,
+          487.66064177510157,
+          1470.8753963818353,
+          142.6666666666668,
+          1470.8753963818353
+        ],
+        "attribute": {},
+        "text": "7. ——Is this your camera?"
+      },
+      "block_id": "b0011",
+      "strict_exact": true,
+      "expected": "7. ——Is this your camera?",
+      "actual": "7. ——Is this your camera?",
+      "raw_parent": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+      "bbox": [
+        142.6666666666668,
+        1420.4356771191533,
+        487.66064177510157,
+        1470.8753963818353
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "严格一致，已看图核对英文单词、选项和对话。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            137,
+            1419,
+            1354,
+            1590
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:28",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 28,
+        "order": 20,
+        "ignore": false,
+        "poly": [
+          144.82794678956154,
+          1475.6767935596422,
+          767.0848049358814,
+          1475.6767935596422,
+          767.0848049358814,
+          1527.0726402501934,
+          144.82794678956154,
+          1527.0726402501934
+        ],
+        "attribute": {},
+        "text": "——Yes, I____it for two weeks."
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "——Yes, I____it for two weeks.",
+      "actual": " ——Yes, I ___ it for two weeks.",
+      "raw_parent": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+      "bbox": [
+        144.82794678956154,
+        1475.6767935596422,
+        767.0848049358814,
+        1527.0726402501934
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            137,
+            1419,
+            1354,
+            1590
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:19",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 19,
+        "order": 21,
+        "ignore": false,
+        "poly": [
+          152,
+          1552,
+          1348,
+          1552,
+          1348,
+          1586.6666666666667,
+          152,
+          1586.6666666666667
+        ],
+        "attribute": {},
+        "text": "A. bought B. had C. have had D. have bought"
+      },
+      "block_id": "b0011",
+      "strict_exact": false,
+      "expected": "A. bought B. had C. have had D. have bought",
+      "actual": " A. bought B. had C. have had D. have bought",
+      "raw_parent": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+      "bbox": [
+        152,
+        1552,
+        1348,
+        1586.6666666666667
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            137,
+            1419,
+            1354,
+            1590
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:20",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 20,
+        "order": 22,
+        "ignore": false,
+        "poly": [
+          145.33333333333334,
+          1616,
+          789.3333333333334,
+          1616,
+          789.3333333333334,
+          1652,
+          145.33333333333334,
+          1652
+        ],
+        "attribute": {},
+        "text": "8. The woman in a hat is___aunt."
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "8. The woman in a hat is___aunt.",
+      "actual": "8. The woman in a hat is ___ aunt.",
+      "raw_parent": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+      "bbox": [
+        145.33333333333334,
+        1616,
+        789.3333333333334,
+        1652
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            138,
+            1614,
+            1393,
+            1719
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:21",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 21,
+        "order": 23,
+        "ignore": false,
+        "poly": [
+          144,
+          1681.3333333333333,
+          1386.6666666666667,
+          1681.3333333333333,
+          1386.6666666666667,
+          1717.3333333333333,
+          144,
+          1717.3333333333333
+        ],
+        "attribute": {},
+        "text": "A. Jack and John B. Jack's and John C. Jack's and John's D. Jack and John's"
+      },
+      "block_id": "b0012",
+      "strict_exact": false,
+      "expected": "A. Jack and John B. Jack's and John C. Jack's and John's D. Jack and John's",
+      "actual": " A. Jack and John B. Jack's and John C. Jack's and John's D. Jack and John's",
+      "raw_parent": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+      "bbox": [
+        144,
+        1681.3333333333333,
+        1386.6666666666667,
+        1717.3333333333333
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            138,
+            1614,
+            1393,
+            1719
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:22",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 22,
+        "order": 24,
+        "ignore": false,
+        "poly": [
+          144,
+          1745.3333333333333,
+          1084,
+          1745.3333333333333,
+          1084,
+          1782.6666666666667,
+          144,
+          1782.6666666666667
+        ],
+        "attribute": {},
+        "text": "9. Our teacher often tells us ____in the river. It's dangerous."
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "9. Our teacher often tells us ____in the river. It's dangerous.",
+      "actual": "9. Our teacher often tells us ___ in the river. It's dangerous.",
+      "raw_parent": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+      "bbox": [
+        144,
+        1745.3333333333333,
+        1084,
+        1782.6666666666667
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            139,
+            1744,
+            1332,
+            1849
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:23",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 23,
+        "order": 25,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          1812,
+          1326.6666666666667,
+          1812,
+          1326.6666666666667,
+          1846.6666666666667,
+          146.66666666666666,
+          1846.6666666666667
+        ],
+        "attribute": {},
+        "text": "A. not swim B. not to swim C. to swim D. swimming"
+      },
+      "block_id": "b0013",
+      "strict_exact": false,
+      "expected": "A. not swim B. not to swim C. to swim D. swimming",
+      "actual": " A. not swim B. not to swim C. to swim D. swimming",
+      "raw_parent": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+      "bbox": [
+        146.66666666666666,
+        1812,
+        1326.6666666666667,
+        1846.6666666666667
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            139,
+            1744,
+            1332,
+            1849
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:24",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 24,
+        "order": 26,
+        "ignore": false,
+        "poly": [
+          148.00000000000017,
+          1874.5348604599665,
+          1009.3333333333336,
+          1874.5348604599665,
+          1009.3333333333336,
+          1911.8681937932995,
+          148.00000000000017,
+          1911.8681937932995
+        ],
+        "attribute": {},
+        "text": "10. As soon as she ____in Nanning, she will call you."
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "10. As soon as she ____in Nanning, she will call you.",
+      "actual": "10. As soon as she ___ in Nanning, she will call you.",
+      "raw_parent": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+      "bbox": [
+        148.00000000000017,
+        1874.5348604599665,
+        1009.3333333333336,
+        1911.8681937932995
+      ],
+      "differences": [
+        {
+          "reference": "_",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            139,
+            1874,
+            1301,
+            1979
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:25",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "anno_id": 25,
+        "order": 27,
+        "ignore": false,
+        "poly": [
+          144,
+          1940,
+          1293.3333333333333,
+          1940,
+          1293.3333333333333,
+          1977.3333333333333,
+          144,
+          1977.3333333333333
+        ],
+        "attribute": {},
+        "text": "A. arrives B. arrive C. will arrive D. arrived"
+      },
+      "block_id": "b0014",
+      "strict_exact": false,
+      "expected": "A. arrives B. arrive C. will arrive D. arrived",
+      "actual": " A. arrives B. arrive C. will arrive D. arrived",
+      "raw_parent": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+      "bbox": [
+        144,
+        1940,
+        1293.3333333333333,
+        1977.3333333333333
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            139,
+            1874,
+            1301,
+            1979
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:26",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "anno_id": 26,
+        "order": 28,
+        "ignore": false,
+        "poly": [
+          148,
+          2001.3333333333333,
+          356,
+          2001.3333333333333,
+          356,
+          2044,
+          148,
+          2044
+        ],
+        "attribute": {},
+        "text": "三．完形填空"
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "三．完形填空",
+      "actual": "### 三. 完形填空",
+      "raw_parent": "### 三. 完形填空\n",
+      "bbox": [
+        148,
+        2001.3333333333333,
+        356,
+        2044
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "### "
+        },
+        {
+          "reference": "．",
+          "actual": ". "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            142,
+            2000,
+            361,
+            2043
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "### 三. 完形填空\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "### 三. 完形填空\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:27",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "anno_id": 27,
+        "order": 29,
+        "ignore": false,
+        "poly": [
+          145.33333333333334,
+          2065.3333333333335,
+          1477.3333333333333,
+          2065.3333333333335,
+          1477.3333333333333,
+          2110.6666666666665,
+          145.33333333333334,
+          2110.6666666666665
+        ],
+        "attribute": {},
+        "text": "阅读下面短文，掌握其大意，然后从各题所给的A、B、C、D四个选项中选出最佳选项，"
+      },
+      "block_id": "b0016",
+      "strict_exact": false,
+      "expected": "阅读下面短文，掌握其大意，然后从各题所给的A、B、C、D四个选项中选出最佳选项，",
+      "actual": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，",
+      "raw_parent": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+      "bbox": [
+        145.33333333333334,
+        2065.3333333333335,
+        1477.3333333333333,
+        2110.6666666666665
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "逐题对照原图，所有中文、英文单词和 A–D 选项一致，包括原图本身的“Don’t worried”。标题层级、直/弯引号、空格、答题线长度及换行不同。题 1 回答空白的前导对话横线改为下划线形式，记录为答题占位/对话排版差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            137,
+            2065,
+            1483,
+            2110
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+    "sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/development-odb-20.json",
+    "sha256": "0c91f67103faea844c343e881aa2617c5aa192e8aafe8f82da1e25124ea7d5f4"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {},
+  "reviewed_units": 29,
+  "unverified_units": []
+}

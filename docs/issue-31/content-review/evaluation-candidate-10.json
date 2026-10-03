@@ -1,0 +1,1482 @@
+{
+  "page": "evaluation-candidate-10",
+  "review_method": "Codex 逐项视觉与文本复核，非真人签署",
+  "human_signed_off": false,
+  "frozen_candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "scoring_unchanged": true,
+  "summary": "正文无明确新增错字；鸟/乌读法及两列连线题结构保真保留未核验。",
+  "viewed_sheets": {
+    "sheet-02.jpg": "9158b23d6e226b8620d8ec604ec8e95ff3151df496b807ad2b587b3ea9d0fb02",
+    "sheet-01.jpg": "3d9a80ef8cccb2286eb0ab5ba417e981a7d82351bddaf362b6cdb7ba80d79565"
+  },
+  "items": [
+    {
+      "id": "text:10",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          537.835205078125,
+          182.87208557128906,
+          1289.219970703125,
+          182.87208557128906,
+          1289.219970703125,
+          488.1962585449219,
+          537.835205078125,
+          488.1962585449219
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 10,
+        "text": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？",
+        "attribute": {}
+      },
+      "block_id": "b0001",
+      "strict_exact": true,
+      "expected": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？",
+      "actual": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？",
+      "raw_parent": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+      "bbox": [
+        537.835205078125,
+        182.87208557128906,
+        1289.219970703125,
+        488.1962585449219
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "正文长段、种子结构连接题要求及被子植物特点题与原图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0001",
+          "bbox": [
+            532,
+            181,
+            1292,
+            491
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:16",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          204.46333385908315,
+          530.9536027459378,
+          322.0103869216447,
+          530.9536027459378,
+          322.0103869216447,
+          570.9019472929327,
+          204.46333385908315,
+          570.9019472929327
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 16,
+        "text": "技能训练",
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "strict_exact": false,
+      "expected": "技能训练",
+      "actual": "## 技能训练",
+      "raw_parent": "## 技能训练\n",
+      "bbox": [
+        204.46333385908315,
+        530.9536027459378,
+        322.0103869216447,
+        570.9019472929327
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0002",
+          "bbox": [
+            202,
+            534,
+            329,
+            572
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 技能训练\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 技能训练\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:0",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          674.7479248046875,
+          600.1179809570312,
+          752.3592529296875,
+          600.1179809570312,
+          752.3592529296875,
+          641.0017700195312,
+          674.7479248046875,
+          641.0017700195312
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 0,
+        "text": "比较",
+        "attribute": {}
+      },
+      "block_id": "b0003",
+      "strict_exact": false,
+      "expected": "比较",
+      "actual": "## 比较",
+      "raw_parent": "## 比较\n",
+      "bbox": [
+        674.7479248046875,
+        600.1179809570312,
+        752.3592529296875,
+        641.0017700195312
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0003",
+          "bbox": [
+            674,
+            598,
+            754,
+            644
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 比较\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 比较\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:9",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          531.6842754638591,
+          703.6046691088824,
+          893.240879237444,
+          703.6046691088824,
+          893.240879237444,
+          956.1990087315239,
+          531.6842754638591,
+          956.1990087315239
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 9,
+        "text": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "strict_exact": false,
+      "expected": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别",
+      "actual": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。",
+      "raw_parent": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+      "bbox": [
+        531.6842754638591,
+        703.6046691088824,
+        893.240879237444,
+        956.1990087315239
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0006",
+          "bbox": [
+            526,
+            701,
+            897,
+            961
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:17",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          253.90084838867188,
+          1046.35107421875,
+          424.2879943847656,
+          1046.35107421875,
+          424.2879943847656,
+          1117.1453857421875,
+          253.90084838867188,
+          1117.1453857421875
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 17,
+        "text": "白网纹草 (双子叶植物)",
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "strict_exact": false,
+      "expected": "白网纹草 (双子叶植物)",
+      "actual": "## 白网纹草 (双子叶植物)",
+      "raw_parent": "## 白网纹草\n\n(双子叶植物)\n",
+      "bbox": [
+        253.90084838867188,
+        1046.35107421875,
+        424.2879943847656,
+        1117.1453857421875
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0008",
+          "bbox": [
+            247,
+            1045,
+            426,
+            1121
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 白网纹草\n\n(双子叶植物)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 白网纹草\n\n(双子叶植物)\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:1",
+      "kind": "text",
+      "reference": {
+        "category_type": "figure_caption",
+        "poly": [
+          1007.9392308787543,
+          1045.965697412773,
+          1187.3026261042185,
+          1045.965697412773,
+          1187.3026261042185,
+          1119.4935488716587,
+          1007.9392308787543,
+          1119.4935488716587
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 1,
+        "text": "银线鸟巢凤梨 (单子叶植物)",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "strict_exact": false,
+      "expected": "银线鸟巢凤梨 (单子叶植物)",
+      "actual": "## 银线乌巢凤梨 ## (单子叶植物)",
+      "raw_parent": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+      "bbox": [
+        1007.9392308787543,
+        1045.965697412773,
+        1187.3026261042185,
+        1119.4935488716587
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "鸟",
+          "actual": "乌"
+        },
+        {
+          "reference": "",
+          "actual": " ##"
+        }
+      ],
+      "review": {
+        "classification": [
+          "unverified"
+        ],
+        "reason": "GT鸟巢/响应乌巢；已放大原始裁片，低分辨率的鸟/乌内部点仍不足可靠确认，保留待真人核验，不能据常识纠字。",
+        "reviewed": false
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0007",
+          "bbox": [
+            1012,
+            1044,
+            1188,
+            1120
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:18",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          728.66259620321,
+          1252.2419102038664,
+          794.28759620321,
+          1252.2419102038664,
+          794.28759620321,
+          1291.705592636299,
+          728.66259620321,
+          1291.705592636299
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 18,
+        "text": "练习",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "strict_exact": false,
+      "expected": "练习",
+      "actual": "## 练习",
+      "raw_parent": "## 练习\n",
+      "bbox": [
+        728.66259620321,
+        1252.2419102038664,
+        794.28759620321,
+        1291.705592636299
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0009",
+          "bbox": [
+            721,
+            1252,
+            799,
+            1291
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 练习\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 练习\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:7",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          144.72113037109375,
+          1331.6688232421875,
+          1061.730224609375,
+          1331.6688232421875,
+          1061.730224609375,
+          1373.4390869140625,
+          144.72113037109375,
+          1373.4390869140625
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 7,
+        "text": "1. 判断下列说法是否正确。正确的画 $“\\surd” $错误的画 $“\\times” $",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "strict_exact": false,
+      "expected": "1. 判断下列说法是否正确。正确的画 $“\\surd” $错误的画 $“\\times” $",
+      "actual": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。",
+      "raw_parent": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+      "bbox": [
+        144.72113037109375,
+        1331.6688232421875,
+        1061.730224609375,
+        1373.4390869140625
+      ],
+      "differences": [
+        {
+          "reference": " $",
+          "actual": ""
+        },
+        {
+          "reference": "\\surd",
+          "actual": "√"
+        },
+        {
+          "reference": " $",
+          "actual": "，"
+        },
+        {
+          "reference": " $",
+          "actual": ""
+        },
+        {
+          "reference": "\\times",
+          "actual": "×"
+        },
+        {
+          "reference": " $",
+          "actual": "。"
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0010",
+          "bbox": [
+            141,
+            1331,
+            1078,
+            1375
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:11",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          143.4394989013672,
+          1542.0078125,
+          842.8079833984375,
+          1542.0078125,
+          842.8079833984375,
+          1579.8057861328125,
+          143.4394989013672,
+          1579.8057861328125
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 11,
+        "text": "2. 将种子的结构与其相应的功能用线连接起来。",
+        "attribute": {}
+      },
+      "block_id": "b0014",
+      "strict_exact": true,
+      "expected": "2. 将种子的结构与其相应的功能用线连接起来。",
+      "actual": "2. 将种子的结构与其相应的功能用线连接起来。",
+      "raw_parent": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+      "bbox": [
+        143.4394989013672,
+        1542.0078125,
+        842.8079833984375,
+        1579.8057861328125
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "正文长段、种子结构连接题要求及被子植物特点题与原图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0014",
+          "bbox": [
+            139,
+            1540,
+            848,
+            1583
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:22",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          242.54065119024338,
+          1590.878985278303,
+          918.1353085486971,
+          1590.878985278303,
+          918.1353085486971,
+          1735.9278850338037,
+          242.54065119024338,
+          1735.9278850338037
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 22,
+        "text": "种皮储藏养料\n胚保护胚\n胚乳能发育成新植株",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              246.0102440499592,
+              1593.3295717592064,
+              793.3264298700683,
+              1593.3295717592064,
+              793.3264298700683,
+              1632.0446885284498,
+              246.0102440499592,
+              1632.0446885284498
+            ],
+            "ignore": false,
+            "order": 17,
+            "anno_id": 6,
+            "text": "种皮储藏养料",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  254.66666666666666,
+                  1594.6666666666665,
+                  324,
+                  1594.6666666666665,
+                  324,
+                  1632,
+                  254.66666666666666,
+                  1632
+                ],
+                "text": "种皮"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  653.3333333333333,
+                  1596,
+                  788,
+                  1596,
+                  788,
+                  1629.3333333333333,
+                  653.3333333333333,
+                  1629.3333333333333
+                ],
+                "text": "储藏养料"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              286.6115558357202,
+              1648.6418214641214,
+              760.7148057048236,
+              1648.6418214641214,
+              760.7148057048236,
+              1680.732286011799,
+              286.6115558357202,
+              1680.732286011799
+            ],
+            "ignore": false,
+            "order": 18,
+            "anno_id": 21,
+            "text": "胚保护胚",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  290.66666666666663,
+                  1648,
+                  325.3333333333333,
+                  1648,
+                  325.3333333333333,
+                  1682.6666666666665,
+                  290.66666666666663,
+                  1682.6666666666665
+                ],
+                "text": "胚"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  652,
+                  1648,
+                  754.6666666666666,
+                  1648,
+                  754.6666666666666,
+                  1681.3333333333333,
+                  652,
+                  1681.3333333333333
+                ],
+                "text": "保护胚"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              254.09321842740724,
+              1699.9865647404056,
+              889.6016426815595,
+              1699.9865647404056,
+              889.6016426815595,
+              1733.7885207306254,
+              254.09321842740724,
+              1733.7885207306254
+            ],
+            "ignore": false,
+            "order": 19,
+            "anno_id": 23,
+            "text": "胚乳能发育成新植株",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  256.42858149657513,
+                  1701.3333333333335,
+                  325.3333333333335,
+                  1701.3333333333335,
+                  325.3333333333335,
+                  1733.1190425850457,
+                  256.42858149657513,
+                  1733.1190425850457
+                ],
+                "text": "胚乳"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  656.0000000000001,
+                  1702.6666666666665,
+                  889.3519094640257,
+                  1702.6666666666665,
+                  889.3519094640257,
+                  1733.3426213986793,
+                  656.0000000000001,
+                  1733.3426213986793
+                ],
+                "text": "能发育成新植株"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "strict_exact": false,
+      "expected": "种皮储藏养料\n胚保护胚\n胚乳能发育成新植株",
+      "actual": "种皮 储藏养料 胚 保护胚 胚乳 能发育成新植株",
+      "raw_parent": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+      "bbox": [
+        242.54065119024338,
+        1590.878985278303,
+        918.1353085486971,
+        1735.9278850338037
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "unverified"
+        ],
+        "reason": "6个种子/功能字串完整，但原图是两列待连线项目，响应串行文本未明确保留两列结构；关联保真未核验，不声明已经正确关联。",
+        "reviewed": false
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0015",
+          "bbox": [
+            245,
+            1591,
+            901,
+            1739
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:2",
+      "kind": "text",
+      "reference": {
+        "category_type": "title",
+        "poly": [
+          145.8543701171875,
+          1751.2899169921875,
+          1183.08642578125,
+          1751.2899169921875,
+          1183.08642578125,
+          1791.0689697265625,
+          145.8543701171875,
+          1791.0689697265625
+        ],
+        "ignore": false,
+        "order": 20,
+        "anno_id": 2,
+        "text": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？",
+        "attribute": {}
+      },
+      "block_id": "b0016",
+      "strict_exact": true,
+      "expected": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？",
+      "actual": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？",
+      "raw_parent": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+      "bbox": [
+        145.8543701171875,
+        1751.2899169921875,
+        1183.08642578125,
+        1791.0689697265625
+      ],
+      "differences": [],
+      "review": {
+        "classification": [
+          "strict_match"
+        ],
+        "reason": "正文长段、种子结构连接题要求及被子植物特点题与原图一致。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0016",
+          "bbox": [
+            139,
+            1749,
+            1183,
+            1792
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:4",
+      "kind": "text",
+      "reference": {
+        "category_type": "page_number",
+        "poly": [
+          143.8163484699266,
+          1926.0346916127262,
+          190.54850564715193,
+          1926.0346916127262,
+          190.54850564715193,
+          1962.2415881644504,
+          143.8163484699266,
+          1962.2415881644504
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 4,
+        "text": "86",
+        "attribute": {}
+      },
+      "block_id": "b0018",
+      "strict_exact": false,
+      "expected": "86",
+      "actual": "## 86",
+      "raw_parent": "## 86\n",
+      "bbox": [
+        143.8163484699266,
+        1926.0346916127262,
+        190.54850564715193,
+        1962.2415881644504
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0018",
+          "bbox": [
+            145,
+            1928,
+            186,
+            1959
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 86\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 86\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:14",
+      "kind": "text",
+      "reference": {
+        "category_type": "footer",
+        "poly": [
+          208.71975501212677,
+          1926.2120361328125,
+          568.5632934570312,
+          1926.2120361328125,
+          568.5632934570312,
+          1961.5273235844152,
+          208.71975501212677,
+          1961.5273235844152
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 14,
+        "text": "第三单元生物圈中的绿色植物",
+        "attribute": {}
+      },
+      "block_id": "b0017",
+      "strict_exact": false,
+      "expected": "第三单元生物圈中的绿色植物",
+      "actual": "## 第三单元 生物圈中的绿色植物",
+      "raw_parent": "## 第三单元 生物圈中的绿色植物\n",
+      "bbox": [
+        208.71975501212677,
+        1926.2120361328125,
+        568.5632934570312,
+        1961.5273235844152
+      ],
+      "differences": [
+        {
+          "reference": "",
+          "actual": "## "
+        },
+        {
+          "reference": "",
+          "actual": " "
+        }
+      ],
+      "review": {
+        "classification": [
+          "representation"
+        ],
+        "reason": "标题、图注、勾叉字形、页码和文字都保留；仅Markdown、字符封装及句点表示差异。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0017",
+          "bbox": [
+            208,
+            1924,
+            568,
+            1961
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "## 第三单元 生物圈中的绿色植物\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "## 第三单元 生物圈中的绿色植物\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "text:20",
+      "kind": "text",
+      "reference": {
+        "category_type": "text_block",
+        "poly": [
+          139.54809359099963,
+          1379.3976680383564,
+          1283.089949581628,
+          1379.3976680383564,
+          1283.089949581628,
+          1533.4041349016188,
+          139.54809359099963,
+          1533.4041349016188
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 20,
+        "text": "\\t(1) 松的球果不是果实。 (    )\n\\t(2) 裸子植物和被子植物的种子中都有胚。 (    )\n\\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。 (    )",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              186.47363281249997,
+              1387.5429687499998,
+              1272.7240581452656,
+              1387.5429687499998,
+              1272.7240581452656,
+              1421.7042236328123,
+              186.47363281249997,
+              1421.7042236328123
+            ],
+            "ignore": false,
+            "order": 12,
+            "anno_id": 19,
+            "text": "\\t(1) 松的球果不是果实。 (    )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  186.66666666666666,
+                  1388,
+                  540,
+                  1388,
+                  540,
+                  1421.3333333333333,
+                  186.66666666666666,
+                  1421.3333333333333
+                ],
+                "text": "\\t(1) 松的球果不是果实。"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1213.409405216239,
+                  1385.7560712712766,
+                  1272.0302688324402,
+                  1385.7560712712766,
+                  1272.0302688324402,
+                  1421.644210274504,
+                  1213.409405216239,
+                  1421.644210274504
+                ],
+                "text": "(    )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              187.64752197265625,
+              1435.22705078125,
+              1279.253662109375,
+              1435.22705078125,
+              1279.253662109375,
+              1478.366943359375,
+              187.64752197265625,
+              1478.366943359375
+            ],
+            "ignore": false,
+            "order": 13,
+            "anno_id": 3,
+            "text": "\\t(2) 裸子植物和被子植物的种子中都有胚。 (    )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  188,
+                  1440,
+                  802.6666666666666,
+                  1440,
+                  802.6666666666666,
+                  1472,
+                  188,
+                  1472
+                ],
+                "text": "\\t(2) 裸子植物和被子植物的种子中都有胚。"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1214.1187055517075,
+                  1442.0383506131125,
+                  1270.2745749327669,
+                  1442.0383506131125,
+                  1270.2745749327669,
+                  1475.1788286633507,
+                  1214.1187055517075,
+                  1475.1788286633507
+                ],
+                "text": "(    )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              173.39012145996094,
+              1486.6986083984375,
+              1272.421630859375,
+              1486.6986083984375,
+              1272.421630859375,
+              1529.5263671875,
+              173.39012145996094,
+              1529.5263671875
+            ],
+            "ignore": false,
+            "order": 14,
+            "anno_id": 8,
+            "text": "\\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。 (    )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  188,
+                  1493.3333333333333,
+                  1040,
+                  1493.3333333333333,
+                  1040,
+                  1526.6666666666665,
+                  188,
+                  1526.6666666666665
+                ],
+                "text": "\\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1213.2408586018705,
+                  1491.7490676884702,
+                  1270.7556350612774,
+                  1491.7490676884702,
+                  1270.7556350612774,
+                  1524.6788624707476,
+                  1213.2408586018705,
+                  1524.6788624707476
+                ],
+                "text": "(    )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      "block_id": null,
+      "strict_exact": false,
+      "expected": "\\t(1) 松的球果不是果实。 (    )\n\\t(2) 裸子植物和被子植物的种子中都有胚。 (    )\n\\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。 (    )",
+      "actual": "",
+      "raw_parent": null,
+      "bbox": [
+        139.54809359099963,
+        1379.3976680383564,
+        1283.089949581628,
+        1533.4041349016188
+      ],
+      "differences": [
+        {
+          "reference": "\\t(1) 松的球果不是果实。 ( ) \\t(2) 裸子植物和被子植物的种子中都有胚。 ( ) \\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。 ( )",
+          "actual": ""
+        }
+      ],
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "3条判断分别b0011/b0012/b0013完整输出；GT大块一对多漏配，括号及空格区别，不是实际漏掉三句话。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            177,
+            1383,
+            1278,
+            1428
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 松的球果不是果实。\n\n( )\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 松的球果不是果实。\n\n( )\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0012",
+          "bbox": [
+            179,
+            1435,
+            1278,
+            1479
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        },
+        {
+          "id": "b0013",
+          "bbox": [
+            181,
+            1487,
+            1277,
+            1532
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0011",
+      "kind": "extra",
+      "block_id": "b0011",
+      "bbox": [
+        177,
+        1383,
+        1278,
+        1428
+      ],
+      "strict_exact": false,
+      "raw_parent": "(1) 松的球果不是果实。\n\n( )\n",
+      "actual": "(1) 松的球果不是果实。\n\n( )\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "3条判断分别b0011/b0012/b0013完整输出；GT大块一对多漏配，括号及空格区别，不是实际漏掉三句话。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0011",
+          "bbox": [
+            177,
+            1383,
+            1278,
+            1428
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(1) 松的球果不是果实。\n\n( )\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(1) 松的球果不是果实。\n\n( )\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0012",
+      "kind": "extra",
+      "block_id": "b0012",
+      "bbox": [
+        179,
+        1435,
+        1278,
+        1479
+      ],
+      "strict_exact": false,
+      "raw_parent": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+      "actual": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "3条判断分别b0011/b0012/b0013完整输出；GT大块一对多漏配，括号及空格区别，不是实际漏掉三句话。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0012",
+          "bbox": [
+            179,
+            1435,
+            1278,
+            1479
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    },
+    {
+      "id": "extra:b0013",
+      "kind": "extra",
+      "block_id": "b0013",
+      "bbox": [
+        181,
+        1487,
+        1277,
+        1532
+      ],
+      "strict_exact": false,
+      "raw_parent": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+      "actual": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+      "reference": null,
+      "review": {
+        "classification": [
+          "alignment",
+          "representation"
+        ],
+        "reason": "3条判断分别b0011/b0012/b0013完整输出；GT大块一对多漏配，括号及空格区别，不是实际漏掉三句话。",
+        "reviewed": true
+      },
+      "evidence_blocks": [
+        {
+          "id": "b0013",
+          "bbox": [
+            181,
+            1487,
+            1277,
+            1532
+          ],
+          "type": "text",
+          "status": "ok",
+          "raw_output": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+          "final_content": {
+            "format": "markdown",
+            "text": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "error": null
+        }
+      ],
+      "evidence_scope": "冻结机器配对及已手工选定的补充块；包含相邻内容，不代表整个块均属于此项"
+    }
+  ],
+  "schema_version": 1,
+  "frozen_evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "source": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+    "sha256": "190bc1e05bb282d5df78d0621938af245147b68531119a934743cbfdc1895c1f"
+  },
+  "trace": {
+    "path": "docs/issue-31/evidence/pages/evaluation-candidate-10.json",
+    "sha256": "9646e90e9efc31285dbcba2332ac5d3d6344ce1dbbb1c22f6ec8e888bdbe6237"
+  },
+  "all_reference_units_inspected": true,
+  "all_content_verified": false,
+  "detail_images": {
+    "output/issue31-visual-review-20261003/evaluation-candidate-10/bird-detail.png": "4b7b9ec4a42335c68edec2bf988201303d3b602eb2c6a6e4b48b6c02c6753324"
+  },
+  "reviewed_units": 15,
+  "unverified_units": [
+    "text:1",
+    "text:22"
+  ]
+}
