@@ -13,6 +13,7 @@ struct RecognitionAttempt {
 struct RegionRecognition {
     std::vector<RecognitionAttempt> attempts;
     bool reset_failed = false, backend_unavailable = false;
+    std::optional<Box> input_crop_bbox;
 };
 RegionRecognition recognize_region(IInferenceEngine& backend, const Image& crop, Box source_box,
     const std::string& type, const std::string& request_id, const ExecutionPlan& plan,

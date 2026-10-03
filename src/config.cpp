@@ -371,8 +371,13 @@ std::shared_ptr<const ExecutionPlan> build_plan(const std::string& text, bool fi
     if (threads != 1) throw ConfigError("unsupported_parameter", "threads: only 1 is implemented");
     plan->threads = 1;
     object(config.at("execution"), {"max_page_pixels", "max_output_bytes", "max_new_tokens", "generation_timeout_ms",
-                                   "layout_preprocess", "layout_score_threshold", "markdown_ignore_labels", "show_formula_number", "layout_candidate_reviews"});
+                                   "layout_preprocess", "layout_score_threshold", "markdown_ignore_labels", "show_formula_number", "layout_candidate_reviews", "formula_crop_margin"});
     const auto& execution = config.at("execution").object;
+    if (execution.count("formula_crop_margin")) {
+        if (!plan->uses_doclayout() || plan->layout_only)
+            throw ConfigError("unsupported_parameter", "formula_crop_margin requires region recognition");
+        plan->formula_crop_margin = boolean(execution.at("formula_crop_margin"));
+    }
     if (execution.count("layout_candidate_reviews")) {
         if (!plan->uses_doclayout()) throw ConfigError("invalid_layout_parameter", "layout_candidate_reviews");
         plan->collect_candidate_reviews = true;

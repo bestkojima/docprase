@@ -521,8 +521,8 @@ ReexportDocument validate_and_render_document(const std::string& json) {
     const auto version = string_field(document, "schema_version", "document");
     require(version == "1.0" || version == "1.1" || version == "1.2" || version == "1.3" ||
             version == "1.4" || version == "1.5" || version == "1.6" || version == "1.7" ||
-            version == "1.8" || version == "1.9" || version == "1.10" || (version == "1.11" || version == "1.12"), "不支持 schema_version " + version);
-    const bool has_label_policy = version == "1.10" || (version == "1.11" || version == "1.12");
+            version == "1.8" || version == "1.9" || version == "1.10" || version == "1.11" || version == "1.12" || version == "1.13", "不支持 schema_version " + version);
+    const bool has_label_policy = version == "1.10" || version == "1.11" || version == "1.12" || version == "1.13";
     const bool has_region_mapping = version == "1.9" || has_label_policy;
     const bool has_structure_plan = version == "1.8" || has_region_mapping;
     const bool has_recognition_evidence = version == "1.7" || has_structure_plan;
@@ -662,7 +662,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 require(format == "resource", where + " 图片/未知块 format 无效");
             if (type == "text") require(format == "markdown", where + " 文本 format 无效");
             if (type == "formula" && block.at("status") == "ok")
-                require((format == "latex" || ((version == "1.11" || version == "1.12") && format == "markdown")) &&
+                require((format == "latex" || ((version == "1.11" || version == "1.12" || version == "1.13") && format == "markdown")) &&
                         field(content, "display", where).is_boolean(),
                         where + " 公式格式无效");
             if (type == "table" && content.contains("table") && content.at("table").is_object())
@@ -709,6 +709,17 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                 const auto& value = field(provenance, name, where);
                 require(value.is_null() || value.is_string(), where + " provenance base64 字段无效");
             }
+            const Json* input_bbox = &block.at("bbox");
+            if (has_recognition_evidence && provenance.at("recognition").contains("input_crop_bbox")) {
+                require(version == "1.13" && type == "formula", where + " 去边输入只能用于新版公式识别");
+                input_bbox = &provenance.at("recognition").at("input_crop_bbox");
+                const auto& original = block.at("bbox");
+                for (int axis = 0; axis < 2; ++axis)
+                    require((*input_bbox)[axis].get<int>() >= original[axis].get<int>() &&
+                            (*input_bbox)[axis + 2].get<int>() <= original[axis + 2].get<int>() &&
+                            (*input_bbox)[axis + 2].get<int>() - (*input_bbox)[axis].get<int>() > 2,
+                            where + " 去边输入超出原裁图或尺寸无效");
+            }
             if (provenance.contains("visual")) {
                 const auto& visual = provenance.at("visual");
                 const auto evidence = string_field(visual, "evidence", where);
@@ -719,6 +730,10 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                         where + " 原裁图资源不一致");
                 require(field(visual, "source_bbox", where) == block.at("bbox"),
                         where + " 原裁图定位不一致");
+                if (input_bbox != &block.at("bbox"))
+                    require(visual.contains("input_crop_bbox") && visual.at("input_crop_bbox") == *input_bbox,
+                            where + " 实际输入定位与识别记录不一致");
+                else require(!visual.contains("input_crop_bbox"), where + " 实际输入缺少识别记录");
                 const auto& canvas = field(visual, "canvas_size", where);
                 const auto& size = field(visual, "content_size", where);
                 const auto& offset = field(visual, "pad_offset", where);
@@ -740,7 +755,7 @@ ReexportDocument validate_and_render_document(const std::string& json) {
                         scale_value.is_number() && scale_value.get<double>() >= 0,
                         where + " 视觉比例与回映结构无效");
                 const double scale = scale_value.get<double>();
-                const auto& bbox = block.at("bbox");
+                const auto& bbox = *input_bbox;
                 for (int axis = 0; axis < 2; ++axis) {
                     require(rounding[axis].is_number() &&
                             std::abs(rounding[axis].get<double>()) <= .500001 &&
@@ -935,7 +950,8 @@ RevalidatedDocument revalidate_formula_document(const std::string& json) {
             const auto parsed = formula ? parse_formula_region(output.text) : ParsedFormulaRegion{};
             const auto parsed_table = table ? parse_table(output.text) : ParsedTable{};
             const bool can_store_mixed = document.at("schema_version") == "1.10" ||
-                                         document.at("schema_version") == "1.11";
+                                         document.at("schema_version") == "1.11" ||
+                                         document.at("schema_version") == "1.13";
             const bool valid = completion.state == "ok" &&
                 (inline_formula ? valid_text_math_content(output.text) : table ? valid_table_math_content(parsed_table) :
                     parsed.valid && (parsed.format == "latex" || can_store_mixed));
@@ -949,7 +965,8 @@ RevalidatedDocument revalidate_formula_document(const std::string& json) {
                 if (formula) {
                     content["format"] = parsed.format;
                     content["display"] = parsed.display;
-                    if (parsed.format == "markdown") document["schema_version"] = "1.11";
+                    if (parsed.format == "markdown" && document.at("schema_version") != "1.13")
+                        document["schema_version"] = "1.11";
                 } else if (table) {
                     content["format"] = "html";
                     Json cells = Json::array();
