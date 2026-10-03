@@ -33,8 +33,6 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.11-pdf.schema.json"
   "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.12-image.schema.json"
   "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.12-pdf.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.13-image.schema.json"
-  "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.13-pdf.schema.json"
 )
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.0.schema.json" DOCUMENT_SCHEMA_1_0)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.1.schema.json" DOCUMENT_SCHEMA_1_1)
@@ -57,14 +55,12 @@ file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.11-imag
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.11-pdf.schema.json" DOCUMENT_SCHEMA_1_11_PDF)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.12-image.schema.json" DOCUMENT_SCHEMA_1_12_IMAGE)
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.12-pdf.schema.json" DOCUMENT_SCHEMA_1_12_PDF)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.13-image.schema.json" DOCUMENT_SCHEMA_1_13_IMAGE)
-file(READ "${CMAKE_CURRENT_SOURCE_DIR}/schemas/document-ir/document-ir-1.13-pdf.schema.json" DOCUMENT_SCHEMA_1_13_PDF)
 function(dococr_split_schema input output)
   # 每行独立为一个短原始字面量，保留原始换行并避开 MSVC C2026。
   string(REPLACE "\n" "\n)SCHEMA\"\nR\"SCHEMA(" split "${${input}}")
   set(${output} "R\"SCHEMA(${split})SCHEMA\"" PARENT_SCOPE)
 endfunction()
-foreach(version IN ITEMS 1_0 1_1 1_2 1_3 1_4 1_5_IMAGE 1_5_PDF 1_6_IMAGE 1_6_PDF 1_7_IMAGE 1_7_PDF 1_8_IMAGE 1_8_PDF 1_9_IMAGE 1_9_PDF 1_10_IMAGE 1_10_PDF 1_11_IMAGE 1_11_PDF 1_12_IMAGE 1_12_PDF 1_13_IMAGE 1_13_PDF)
+foreach(version IN ITEMS 1_0 1_1 1_2 1_3 1_4 1_5_IMAGE 1_5_PDF 1_6_IMAGE 1_6_PDF 1_7_IMAGE 1_7_PDF 1_8_IMAGE 1_8_PDF 1_9_IMAGE 1_9_PDF 1_10_IMAGE 1_10_PDF 1_11_IMAGE 1_11_PDF 1_12_IMAGE 1_12_PDF)
   dococr_split_schema(DOCUMENT_SCHEMA_${version} DOCUMENT_SCHEMA_${version}_LITERALS)
 endforeach()
 configure_file(src/document_schemas.hpp.in "${CMAKE_CURRENT_BINARY_DIR}/generated/document_schemas.hpp" @ONLY)
@@ -245,9 +241,6 @@ if(DOCOCR_BUILD_TESTS)
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME issue26_region_mapping COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue26_region_mapping.py
-    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
-  add_test(NAME issue31_formula_margin COMMAND ${Python3_EXECUTABLE}
-    ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue31_formula_margin.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME issue31_input_planning COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue31_input_planning.py

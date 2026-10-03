@@ -26,7 +26,6 @@ struct ExecutionPlan {
     double layout_score_threshold = 0.5;
     LabelExportPolicy label_export;
     bool collect_candidate_reviews = false;
-    bool formula_crop_margin = false;
     std::vector<LayoutCandidateReview> layout_candidate_reviews;
     bool uses_doclayout() const {
         return layout_only || backend == "mnn:pp-doclayout-v3+ovisocr2" ||

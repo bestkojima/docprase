@@ -21,6 +21,4 @@ inline constexpr const char* document_schema_1_11_image = @DOCUMENT_SCHEMA_1_11_
 inline constexpr const char* document_schema_1_11_pdf = @DOCUMENT_SCHEMA_1_11_PDF_LITERALS@;
 inline constexpr const char* document_schema_1_12_image = @DOCUMENT_SCHEMA_1_12_IMAGE_LITERALS@;
 inline constexpr const char* document_schema_1_12_pdf = @DOCUMENT_SCHEMA_1_12_PDF_LITERALS@;
-inline constexpr const char* document_schema_1_13_image = @DOCUMENT_SCHEMA_1_13_IMAGE_LITERALS@;
-inline constexpr const char* document_schema_1_13_pdf = @DOCUMENT_SCHEMA_1_13_PDF_LITERALS@;
 }

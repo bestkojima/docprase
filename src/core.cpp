@@ -237,16 +237,11 @@ std::string recognition_json(const RegionRecognition& recognition) {
         budget += attempt.generation_timeout_ms;
         generation_ms += output.generation_elapsed_ms;
     }
-    Json result{{"policy", "targeted-retry-v1"}, {"max_attempts", 2},
+    return Json{{"policy", "targeted-retry-v1"}, {"max_attempts", 2},
         {"max_total_generation_budget_ms", 240000}, {"configured_generation_budget_ms", budget},
         {"generation_elapsed_ms", generation_ms},
         {"selected_attempt", attempts.empty() ? Json(nullptr) : Json(attempts.size())},
-        {"attempts", attempts}};
-    if (recognition.input_crop_bbox) {
-        const auto& box = *recognition.input_crop_bbox;
-        result["input_crop_bbox"] = {box.x0, box.y0, box.x1, box.y1};
-    }
-    return result.dump();
+        {"attempts", attempts}}.dump();
 }
 
 struct ReadingOrderEvidence {
@@ -1334,10 +1329,7 @@ std::string serialize(const Image& image, const std::string& state,
     const bool mixed_formula = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
         return b.type == "formula" && b.status == "ok" && b.format_override == "markdown";
     });
-    const bool cropped_formula = std::any_of(blocks.begin(), blocks.end(), [](const Block& b) {
-        return b.recognition.input_crop_bbox.has_value();
-    });
-    out << "{\"schema_version\":" << json_quote(cropped_formula ? "1.13" : !candidate_reviews.empty() ? "1.12" : label_export ? (mixed_formula ? "1.11" : "1.10") : structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
+    out << "{\"schema_version\":" << json_quote(!candidate_reviews.empty() ? "1.12" : label_export ? (mixed_formula ? "1.11" : "1.10") : structure ? "1.9" : structured_tables ? "1.7" : has_visual ? "1.5" : order_evidence ? "1.3" :
         has_table ? "1.2" : ownership.empty() ? "1.0" : "1.1")
         << ",\"document_id\":" << json_quote(document_id(image))
         << ",\"status\":" << json_quote(state);
@@ -1451,26 +1443,23 @@ std::string serialize(const Image& image, const std::string& state,
             << ",\"text_base64\":" << (b.text_base64.empty() ? "null" : json_quote(b.text_base64));
         if (has_visual && !b.visual.visual_evidence.empty()) {
             const auto& transform = b.visual.visual_transform;
-            const Box input_box = b.recognition.input_crop_bbox.value_or(b.box);
             const double inverse_x = transform.content_width > 0 ?
-                double(input_box.x1 - input_box.x0) / transform.content_width : 0;
+                double(b.box.x1 - b.box.x0) / transform.content_width : 0;
             const double inverse_y = transform.content_height > 0 ?
-                double(input_box.y1 - input_box.y0) / transform.content_height : 0;
+                double(b.box.y1 - b.box.y0) / transform.content_height : 0;
             out << std::setprecision(17);
             out << ",\"visual\":{\"evidence\":" << json_quote(b.visual.visual_evidence)
                 << ",\"token_count\":" << b.visual.visual_tokens
                 << ",\"source_crop\":" << json_quote(b.resource)
-                << ",\"source_bbox\":" << box_json(b.box);
-            if (b.recognition.input_crop_bbox) out << ",\"input_crop_bbox\":" << box_json(input_box);
-            out
+                << ",\"source_bbox\":" << box_json(b.box)
                 << ",\"canvas_size\":[" << transform.canvas_width << ',' << transform.canvas_height << ']'
                 << ",\"content_size\":[" << transform.content_width << ',' << transform.content_height << ']'
                 << ",\"pad_offset\":[" << transform.pad_x << ',' << transform.pad_y << ']'
                 << ",\"scale\":" << transform.scale
                 << ",\"rounding_error\":[" << transform.rounding_error_x << ',' << transform.rounding_error_y << ']'
                 << ",\"canvas_to_page_affine\":[" << inverse_x << ",0,"
-                << input_box.x0 - transform.pad_x * inverse_x << ",0," << inverse_y << ','
-                << input_box.y0 - transform.pad_y * inverse_y << ']'
+                << b.box.x0 - transform.pad_x * inverse_x << ",0," << inverse_y << ','
+                << b.box.y0 - transform.pad_y * inverse_y << ']'
                 << ",\"stop_reason\":" << json_quote(b.visual.stop_reason) << '}';
             out << std::setprecision(9);
         }
