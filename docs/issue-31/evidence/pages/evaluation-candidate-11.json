@@ -1,0 +1,6167 @@
+{
+  "key": "evaluation/candidate-11",
+  "input": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+    "sha256": "fb1caf6806c48824ce998c5b9d0bac600e298d2c778ce1d5b92087c883b5117b"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/evaluation/candidate-11/job"
+    ],
+    "input_sha256": "fb1caf6806c48824ce998c5b9d0bac600e298d2c778ce1d5b92087c883b5117b",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 70.45282281399705,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "2a0bf4d8fc435b5e7311415433f99573aab976b93964d7bcd7ee86f443fa00d6",
+      "job/assets/p0001-b0002.png": "12f2b6df224379262ce85d87e4d5409964f339a9d2b2f2e561f96b1edb154185",
+      "job/assets/p0001-b0003.png": "d236e9a37e313b5b2c8649477b0bef9885da2caf78516ef3a8dc2fe9dcba2b22",
+      "job/assets/p0001-b0004.png": "bf1232dc96a8eb7bf13d4bfeaab395b0ee6a2ec765a18572d638fd7b6dbc5f59",
+      "job/assets/p0001-b0005.png": "129086366b2e0b687de76559db5df6c9ea594848e477fa861e361b195f7bebaa",
+      "job/assets/p0001-b0006.png": "b7be4090225cf1bc3db6b3c26562380bd9ff639648212f0863fdaeb352dc9d6d",
+      "job/assets/p0001-b0007.png": "e2ff6b2c8f6e62456b37fb841854ad727c76c4dc93f95815369fac8598025353",
+      "job/assets/p0001-b0008.png": "d13b7ffa6753bbf8c91c1818955f4657bd21ade84a6d6ba976f491c4e51cc9e5",
+      "job/assets/p0001-b0009.png": "1486a23a28b92ed76ac8db19930c16747f2cff78d722435d660991da33e8241b",
+      "job/assets/p0001-b0010.png": "2edb25a3bef782354bf95138af70985cd3ab1d8cde2bd2a53304104427cead93",
+      "job/assets/p0001-b0011.png": "540664ce2eeb7d59ab7e8b149aafd8f62101b63cbef627e2cd65ec9ee1fe8ba0",
+      "job/assets/p0001-b0012.png": "d258841377d665e52e350df032ada12b94c07e432edcb0d90933342a96fe5f3d",
+      "job/assets/p0001-b0013.png": "f8f3f51f6e53d5674c85533d084be40c8bcda0b713c8e1070d53974d4ef81d3a",
+      "job/assets/p0001-b0014.png": "a7dcdc2c72e676a04339aeb0304b6a722373def62b90e296c43b4a3bce7ebad1",
+      "job/assets/p0001-b0015.png": "76fd2c523d85d83b1ad922f676dffc283f92b4b5a43f40eb925e1795ca016ef7",
+      "job/assets/p0001-b0016.png": "dff2ecd8aa525c9a53a8c9f70868451531758ff09d39cfae080293a786ec1585",
+      "job/assets/p0001-b0017.png": "c4e19fbdb783d5f7d34d565cdfe525a0309aa2dee24049d7e0ab77b911286dad",
+      "job/assets/p0001-b0018.png": "a1c883c73c5c63665d6307bdaa83336cf8634e89becdb038791ffe6f85ce7a2f",
+      "job/assets/p0001-b0019.png": "fc137c1abd152b461c4693734c6ed377d5338850c5e112b505838bc6f5e6f169",
+      "job/assets/p0001-b0020.png": "84d95485996b9dd4ad936828e0b85d5548435b8dcdb7036b0a49482ab4d3fd89",
+      "job/assets/p0001-b0021.png": "cc2bfe0570a35027496ba8be1b3df4e3ca9d90f920e4b9ae9f90601528f56fbc",
+      "job/assets/p0001-fetch_name_0.f32": "4f6649c72658fc9e85bb9492cc7bc58b6f561c41061fe0efae62b0e4f3b07976",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "5420025be8fe0f5ed1ef0f472b4d34380e278d9514770317c4519945fefb5faa",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "3f78a3a5136dc1de7af37ba9327790a0a855aad8889bca7bc99aa3e298aa0b3d",
+      "job/assets/p0001-layout-overlay.png": "4ba5fb3fc8f8ef67a983ba3bc967e57519afd7c7d7ffade68703f9a0ac22881f",
+      "job/assets/p0001-mask-c0.png": "0bd1a3f1151d15b4fe216319ca79851bfed62e42442d14e341c09cfad81d9f2d",
+      "job/assets/p0001-mask-c1.png": "e1d022f16bdfb2289c9d3701cc244bd0af4c11e13784bbdc11290904aff0fe59",
+      "job/assets/p0001-mask-c10.png": "1613a77a2e8ab99d825d5bab7d8186d88fce5f1b60d09fd08ae26a345f8dce92",
+      "job/assets/p0001-mask-c11.png": "341f3eb65c2b53e02686bf002439fcabb9b2c0c5746fefc3932f593dc9749850",
+      "job/assets/p0001-mask-c12.png": "7180eb661838eb8775b56cb009775df1f3f917f745abad050cb4241b85703443",
+      "job/assets/p0001-mask-c13.png": "181e4643f908dc45ad81009d94567535dcdc2221b23c20c25350741b2f89c2f9",
+      "job/assets/p0001-mask-c14.png": "aff0cc9f852beb1a439ba0e8e9dcfa0a33ff0fbe524d3737cfbadf5f0e0270ad",
+      "job/assets/p0001-mask-c15.png": "b3ab40d725526bb4512f030fc0ff9d1accf68dd2df6ab390afbce43f71fade80",
+      "job/assets/p0001-mask-c16.png": "a74fc3ca28859eb58cc62624ae8280225499db5dfaf4ede56e1ada6e1e2269e5",
+      "job/assets/p0001-mask-c17.png": "939122151a8b18fcec7b8ea12299c26631263e9468f59d5c2663e6907f9c05c4",
+      "job/assets/p0001-mask-c18.png": "bf9abf960af2f27903f1a1e4321e2fc19ec26fc845b079eddc057525eecfeeda",
+      "job/assets/p0001-mask-c19.png": "95421e73958ab2180c5545d4c1431aa6252dac259c89fd2d8197c6dba35b96e1",
+      "job/assets/p0001-mask-c2.png": "3955732493de23a60456299442651c25997530ec2d1814b89317a0bc628fff8a",
+      "job/assets/p0001-mask-c20.png": "d36a035e43da547c09f494e0832e6cfc99751bdcb9fb8794d0c189cd76524d39",
+      "job/assets/p0001-mask-c3.png": "6bffe70c2991a16ce36b1963cab0e9777ecdc4129c26b9f9adcdb4ed181763cf",
+      "job/assets/p0001-mask-c4.png": "1d98fed2e354a86ff4c2e4ac23651f7555f350527553348d49c169366da1e439",
+      "job/assets/p0001-mask-c5.png": "1b71c0bec61bcb23eea65ce8b3ad47feb1dbfef70e276eb62e77025b13623095",
+      "job/assets/p0001-mask-c6.png": "52ae43c35061969ed23038a5a117aa34e1146a5376db69219b7449ef626171de",
+      "job/assets/p0001-mask-c7.png": "8f2dbfa2161c926bbc61a1cf3ba2bf4b066f286f4c50c8022e76906f06514ab1",
+      "job/assets/p0001-mask-c8.png": "fbb270fb37bab58c0d55e65ac59bcfb9006f02ce2a48bb836fe169f67736bc4a",
+      "job/assets/p0001-mask-c9.png": "72353a4ce88ae014fceb2394ce91d2d5f6d4a871066ccc3b618b62d1ed35064b",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "e9e516c1bec7b34db28745f066205c7e49fc8d51c9e5b44336e7640dee8c9da8",
+      "job/document.md": "3af1f695360181b2c6f498366b8e4d3b203542a02cac2f08b39957a328732cf8",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "07f4df8f310950e0e4e5c2f59e6f9b1b779080f01fddbcc24239bf097c5e7944",
+      "job/job-status.json": "a7866906e4b44aae6088880bc34ecdbc44214d31f09f9468986ef026f9cb4dbf",
+      "job/run-manifest.json": "b06f9cbc18e7fc797e7f4a8f2d83d392847fdc2da2dcb6a025275378c1c8fd88",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "6f8677d0b2ddac1594e5a898ee470465694d349e2a6786e08da65f25ff23f704",
+      "time.txt": "b3c912d55dc156a61bef3cc5aa752c6a2af7f82af8202ce2739d99e666918da9"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "poly": [
+          871.1306037603456,
+          305.790785132879,
+          1078.2851109508051,
+          305.790785132879,
+          1078.2851109508051,
+          360.34830880878224,
+          871.1306037603456,
+          360.34830880878224
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 5,
+        "text": "醉翁亭记",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          258.34619140625,
+          462.58990478515625,
+          419.7391357421875,
+          462.58990478515625,
+          419.7391357421875,
+          498.62091064453125,
+          258.34619140625,
+          498.62091064453125
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 9,
+        "text": "【教学目标】",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          236.70181408265665,
+          499.7353222176838,
+          1124.0226872235673,
+          499.7353222176838,
+          1124.0226872235673,
+          591.8615330902371,
+          236.70181408265665,
+          591.8615330902371
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 23,
+        "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n2. 感受作者与民同乐的心境。",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              248.8329620361322,
+              508.63095092773506,
+              1100.8601066311714,
+              508.63095092773506,
+              1100.8601066311714,
+              544.6063669307704,
+              248.8329620361322,
+              544.6063669307704
+            ],
+            "ignore": false,
+            "order": 4,
+            "anno_id": 18,
+            "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  251.9999999999996,
+                  511.077695424118,
+                  1094.1610476238886,
+                  511.077695424118,
+                  1094.1610476238886,
+                  540.0644190495557,
+                  251.9999999999996,
+                  540.0644190495557
+                ],
+                "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              247.87892647370901,
+              553.1739865402888,
+              630.9608984621764,
+              553.1739865402888,
+              630.9608984621764,
+              587.6660414894417,
+              247.87892647370901,
+              587.6660414894417
+            ],
+            "ignore": false,
+            "order": 5,
+            "anno_id": 24,
+            "text": "2. 感受作者与民同乐的心境。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  249.333333333333,
+                  555.5388477120591,
+                  624.5775836292928,
+                  555.5388477120591,
+                  624.5775836292928,
+                  583.0660842212122,
+                  249.333333333333,
+                  583.0660842212122
+                ],
+                "text": "2. 感受作者与民同乐的心境。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          258.457763671875,
+          593.3093872070312,
+          421.50628662109375,
+          593.3093872070312,
+          421.50628662109375,
+          630.5917358398438,
+          258.457763671875,
+          630.5917358398438
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 6,
+        "text": "【走进作者】",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          245.51077270507812,
+          638.7095336914062,
+          1412.4879150390625,
+          638.7095336914062,
+          1412.4879150390625,
+          761.2579956054688,
+          245.51077270507812,
+          761.2579956054688
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 15,
+        "text": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人， “唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          1259.2235107421875,
+          778.149169921875,
+          1400.2410888671875,
+          778.149169921875,
+          1400.2410888671875,
+          966.0354614257812,
+          1259.2235107421875,
+          966.0354614257812
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 4,
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          256.91998291015625,
+          982.010498046875,
+          421.09552001953125,
+          982.010498046875,
+          421.09552001953125,
+          1019.6253662109375,
+          256.91998291015625,
+          1019.6253662109375
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 17,
+        "text": "【文体简介】",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          248.74105834960938,
+          1028.83251953125,
+          1410.8045654296875,
+          1028.83251953125,
+          1410.8045654296875,
+          1107.162353515625,
+          248.74105834960938,
+          1107.162353515625
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 20,
+        "text": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          1146.539306640625,
+          1124.3609619140625,
+          1400.3709716796875,
+          1124.3609619140625,
+          1400.3709716796875,
+          1311.77099609375,
+          1146.539306640625,
+          1311.77099609375
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 2,
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          259.0052490234375,
+          1329.915771484375,
+          414.7269592285156,
+          1329.915771484375,
+          414.7269592285156,
+          1365.4432373046875,
+          259.0052490234375,
+          1365.4432373046875
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 16,
+        "text": "【诵读欣赏】",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          258.63043212890625,
+          1375.018310546875,
+          415.6075439453125,
+          1375.018310546875,
+          415.6075439453125,
+          1409.251220703125,
+          258.63043212890625,
+          1409.251220703125
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 11,
+        "text": "【课文分析】",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          764.06298828125,
+          1418.3514404296875,
+          888.7140502929688,
+          1418.3514404296875,
+          888.7140502929688,
+          1452.4652099609375,
+          764.06298828125,
+          1452.4652099609375
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 13,
+        "text": "醉翁亭记",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          731.498046875,
+          1460.222900390625,
+          919.4901123046875,
+          1460.222900390625,
+          919.4901123046875,
+          1495.93896484375,
+          731.498046875,
+          1495.93896484375
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 3,
+        "text": "欧阳修(北宋)",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          245.3372039794922,
+          1503.9395751953125,
+          1405.6075439453125,
+          1503.9395751953125,
+          1405.6075439453125,
+          1623.8330078125,
+          245.3372039794922,
+          1623.8330078125
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 7,
+        "text": "环滁(chu)皆山也。其西南诸峰，林壑(he)尤美，望之蔚然而深秀者，琅琊(lang ya)也。山行六七里，渐闻水声潺（chan)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          243.4394989013672,
+          1634.2374267578125,
+          1404.8209228515625,
+          1634.2374267578125,
+          1404.8209228515625,
+          1757.4278564453125,
+          243.4394989013672,
+          1757.4278564453125
+        ],
+        "ignore": false,
+        "order": 17,
+        "anno_id": 19,
+        "text": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhe)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          243.59799194335938,
+          1764.242919921875,
+          1404.14599609375,
+          1764.242919921875,
+          1404.14599609375,
+          1889.4305419921875,
+          243.59799194335938,
+          1889.4305419921875
+        ],
+        "ignore": false,
+        "order": 18,
+        "anno_id": 1,
+        "text": "若夫(fui)日出而林霏(fei)开，云归而岩穴(xue)暝(ming)，晦(hui)明变化者，山间之朝暮也。野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          245.82650756835938,
+          1894.7568359375,
+          1407.30908203125,
+          1894.7568359375,
+          1407.30908203125,
+          2065.60498046875,
+          245.82650756835938,
+          2065.60498046875
+        ],
+        "ignore": false,
+        "order": 19,
+        "anno_id": 8,
+        "text": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yu)偻(lu)提携(xié)，往来而不绝者，滁(chu)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒冽(lie)，山肴(yao)野蔌(su)，杂然而前陈者，太守宴也。宴酣(han)之乐，非丝非竹，射者中，弈(yi)者胜，觥(gong)筹(chou)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tui)然乎其间者，太守醉也。",
+        "attribute": {}
+      },
+      {
+        "category_type": "abandon",
+        "poly": [
+          783.6619262695312,
+          0,
+          842.1129760742188,
+          0,
+          842.1129760742188,
+          58.88119125366211,
+          783.6619262695312,
+          58.88119125366211
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 14,
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          41.121063232421875,
+          12.9873628616333,
+          721.44091796875,
+          12.9873628616333,
+          721.44091796875,
+          62.44557189941406,
+          41.121063232421875,
+          62.44557189941406
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 21,
+        "text": "课程联系 QQ：768765780（专业录制）",
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          1113.5680380731249,
+          44.50077312912072,
+          1428.330934517107,
+          44.50077312912072,
+          1428.330934517107,
+          113.2724984025956,
+          1113.5680380731249,
+          113.2724984025956
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 22,
+        "text": "学而思网校",
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          1432.6979961809445,
+          50.44210262856882,
+          1604.2589111328123,
+          50.44210262856882,
+          1604.2589111328123,
+          116.5080808443206,
+          1432.6979961809445,
+          116.5080808443206
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 12,
+        "text": "学习有意思 xueersi.com",
+        "attribute": {}
+      },
+      {
+        "category_type": "abandon",
+        "poly": [
+          308.0520935058594,
+          201.1269989013672,
+          523.9520263671875,
+          201.1269989013672,
+          523.9520263671875,
+          434.5771484375,
+          308.0520935058594,
+          434.5771484375
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 10,
+        "attribute": {}
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          1531.5228029882942,
+          2234.472147417271,
+          1558.2060855818333,
+          2234.472147417271,
+          1558.2060855818333,
+          2288.5534847442805,
+          1531.5228029882942,
+          2288.5534847442805
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 0,
+        "text": "1",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": [
+        {
+          "source_anno_id": 4,
+          "target_anno_id": 15,
+          "relation_type": "parent_son"
+        }
+      ]
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "colorful_textbook",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [
+          "colorful_backgroud"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 1932,
+      "height": 2339,
+      "width": 1654,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_918.jpg",
+      "sample_id": 561
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1654,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0004",
+        "b0006",
+        "b0007",
+        "b0002",
+        "b0003",
+        "b0005",
+        "b0008",
+        "b0010",
+        "b0009",
+        "b0011",
+        "b0013",
+        "b0014",
+        "b0012",
+        "b0015",
+        "b0016",
+        "b0017",
+        "b0018",
+        "b0019",
+        "b0020",
+        "b0021"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_column_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0004",
+          "b0006",
+          "b0007",
+          "b0002",
+          "b0003",
+          "b0005",
+          "b0008",
+          "b0010",
+          "b0009",
+          "b0011",
+          "b0013",
+          "b0014",
+          "b0012",
+          "b0015",
+          "b0016",
+          "b0017",
+          "b0018",
+          "b0019",
+          "b0020",
+          "b0021"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0004",
+          "r0006",
+          "r0007",
+          "r0002",
+          "r0003",
+          "r0005",
+          "r0008",
+          "r0010",
+          "r0011",
+          "r0013",
+          "r0014",
+          "r0015",
+          "r0016",
+          "r0017",
+          "r0018",
+          "r0019",
+          "r0020",
+          "r0021"
+        ],
+        "region_order": [
+          "r0001",
+          "r0004",
+          "r0006",
+          "r0007",
+          "r0002",
+          "r0003",
+          "r0005",
+          "r0008",
+          "r0010",
+          "r0009",
+          "r0011",
+          "r0013",
+          "r0014",
+          "r0012",
+          "r0015",
+          "r0016",
+          "r0017",
+          "r0018",
+          "r0019",
+          "r0020",
+          "r0021"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            41,
+            17,
+            716,
+            66
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.838362992,
+          "candidate_rank": 3,
+          "original_class_id": 12,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 267,
+          "model_label": "header",
+          "original_bbox": [
+            41.273956,
+            17.507889,
+            715.307861,
+            65.564514
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            252,
+            461,
+            424,
+            500
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.837218165,
+          "candidate_rank": 147,
+          "original_class_id": 17,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 59,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            252.532822,
+            461.088135,
+            423.257568,
+            499.794708
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            239,
+            550,
+            635,
+            588
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.810857773,
+          "candidate_rank": 151,
+          "original_class_id": 22,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 102,
+          "model_label": "text",
+          "original_bbox": [
+            239.694336,
+            550.626587,
+            634.850098,
+            587.349426
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            253,
+            593,
+            423,
+            630
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.749703705,
+          "candidate_rank": 154,
+          "original_class_id": 17,
+          "candidate_id": 16,
+          "mask_row": 16,
+          "mask_nonzero": 44,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            253.36319,
+            593.318665,
+            422.270874,
+            629.449951
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "header",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1110,
+            43,
+            1598,
+            115
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.799103796,
+          "candidate_rank": 74,
+          "original_class_id": 12,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 253,
+          "model_label": "header",
+          "original_bbox": [
+            1110.384766,
+            43.03035,
+            1597.295776,
+            114.598824
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            866,
+            303,
+            1083,
+            362
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.671026826,
+          "candidate_rank": 131,
+          "original_class_id": 17,
+          "candidate_id": 18,
+          "mask_row": 18,
+          "mask_nonzero": 95,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            866.709229,
+            303.302368,
+            1082.236084,
+            361.566376
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            240,
+            506,
+            1102,
+            546
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.81179595,
+          "candidate_rank": 150,
+          "original_class_id": 22,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 296,
+          "model_label": "text",
+          "original_bbox": [
+            240.157181,
+            506.316162,
+            1101.156738,
+            545.511047
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            237,
+            635,
+            1412,
+            763
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.931440473,
+          "candidate_rank": 158,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1100,
+          "model_label": "text",
+          "original_bbox": [
+            237.215927,
+            635.643066,
+            1411.227905,
+            762.655823
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            251,
+            982,
+            424,
+            1021
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.821744382,
+          "candidate_rank": 174,
+          "original_class_id": 17,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 45,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            251.953873,
+            982.305847,
+            423.040344,
+            1020.323608
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1256,
+            776,
+            1398,
+            967
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.910916388,
+          "candidate_rank": 169,
+          "original_class_id": 14,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 203,
+          "model_label": "image",
+          "original_bbox": [
+            1256.173828,
+            776.333191,
+            1397.419922,
+            966.529907
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            238,
+            1026,
+            1406,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.912255168,
+          "candidate_rank": 175,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 695,
+          "model_label": "text",
+          "original_bbox": [
+            238.248627,
+            1026.185791,
+            1405.11731,
+            1110.560547
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            253,
+            1328,
+            423,
+            1367
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.794201791,
+          "candidate_rank": 194,
+          "original_class_id": 17,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 43,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            253.360336,
+            1328.8302,
+            422.573486,
+            1366.533081
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            254,
+            1373,
+            424,
+            1413
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.740476787,
+          "candidate_rank": 198,
+          "original_class_id": 17,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 47,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            254.564896,
+            1373.966553,
+            423.801849,
+            1412.17749
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1143,
+            1120,
+            1402,
+            1315
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.948089957,
+          "candidate_rank": 189,
+          "original_class_id": 14,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 352,
+          "model_label": "image",
+          "original_bbox": [
+            1143.404907,
+            1120.820435,
+            1401.051392,
+            1314.710205
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0015",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            761,
+            1416,
+            894,
+            1455
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.782477558,
+          "candidate_rank": 201,
+          "original_class_id": 17,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 36,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            761.770813,
+            1416.742188,
+            893.486328,
+            1454.085449
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0016",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            728,
+            1460,
+            928,
+            1498
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.537287652,
+          "candidate_rank": 207,
+          "original_class_id": 17,
+          "candidate_id": 20,
+          "mask_row": 20,
+          "mask_nonzero": 53,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            728.526428,
+            1460.415405,
+            927.721985,
+            1497.237793
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0017",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            237,
+            1502,
+            1408,
+            1628
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.927483082,
+          "candidate_rank": 211,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 1037,
+          "model_label": "text",
+          "original_bbox": [
+            237.770706,
+            1502.851562,
+            1407.910034,
+            1627.837646
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0018",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            237,
+            1633,
+            1411,
+            1759
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.939110041,
+          "candidate_rank": 226,
+          "original_class_id": 22,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 1000,
+          "model_label": "text",
+          "original_bbox": [
+            237.433609,
+            1633.023193,
+            1410.066406,
+            1758.037842
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0019",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            238,
+            1763,
+            1409,
+            1888
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.94822669,
+          "candidate_rank": 235,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 1000,
+          "model_label": "text",
+          "original_bbox": [
+            238.71553,
+            1763.841919,
+            1408.189331,
+            1887.949463
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0020",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            237,
+            1893,
+            1409,
+            2066
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.948456764,
+          "candidate_rank": 247,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 1500,
+          "model_label": "text",
+          "original_bbox": [
+            237.245926,
+            1893.379517,
+            1408.767456,
+            2065.366699
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0021",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1523,
+            2231,
+            1563,
+            2292
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.627113819,
+          "candidate_rank": 290,
+          "original_class_id": 16,
+          "candidate_id": 19,
+          "mask_row": 19,
+          "mask_nonzero": 19,
+          "model_label": "number",
+          "original_bbox": [
+            1523.62207,
+            2231.024414,
+            1562.20813,
+            2291.22168
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            41,
+            17,
+            716,
+            66
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            252,
+            461,
+            424,
+            500
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            239,
+            550,
+            635,
+            588
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            253,
+            593,
+            423,
+            630
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            1110,
+            43,
+            1598,
+            115
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            866,
+            303,
+            1083,
+            362
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            240,
+            506,
+            1102,
+            546
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            237,
+            635,
+            1412,
+            763
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            251,
+            982,
+            424,
+            1021
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            1256,
+            776,
+            1398,
+            967
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            238,
+            1026,
+            1406,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            253,
+            1328,
+            423,
+            1367
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014"
+          ],
+          "bbox": [
+            254,
+            1373,
+            424,
+            1413
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            1143,
+            1120,
+            1402,
+            1315
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0015",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0015"
+          ],
+          "bbox": [
+            761,
+            1416,
+            894,
+            1455
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0016",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0016"
+          ],
+          "bbox": [
+            728,
+            1460,
+            928,
+            1498
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0017",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0017"
+          ],
+          "bbox": [
+            237,
+            1502,
+            1408,
+            1628
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0018",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0018"
+          ],
+          "bbox": [
+            237,
+            1633,
+            1411,
+            1759
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0019",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0019"
+          ],
+          "bbox": [
+            238,
+            1763,
+            1409,
+            1888
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0020",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0020"
+          ],
+          "bbox": [
+            237,
+            1893,
+            1409,
+            2066
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0021",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0021"
+          ],
+          "bbox": [
+            1523,
+            2231,
+            1563,
+            2292
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            41,
+            17,
+            716,
+            66
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 课程联系 QQ: 768765780（专业录制）\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "## 课程联系 QQ: 768765780（专业录制）\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 90,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                41,
+                17,
+                716,
+                66
+              ],
+              "canvas_size": [
+                960,
+                96
+              ],
+              "content_size": [
+                960,
+                70
+              ],
+              "pad_offset": [
+                0,
+                13
+              ],
+              "scale": 1.4222222222222223,
+              "rounding_error": [
+                0,
+                0.3111111111111029
+              ],
+              "canvas_to_page_affine": [
+                0.703125,
+                0,
+                41,
+                0,
+                0.7,
+                7.9
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2759,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2339,
+                    "raw_output": "## 课程联系 QQ: 768765780（专业录制）\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 课程联系 QQ: 768765780（专业录制）\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      960,
+                      96
+                    ],
+                    "content_size": [
+                      960,
+                      70
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      13
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3111111111111029
+                    ],
+                    "scale": 1.4222222222222223,
+                    "token_count": 90
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2339,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 课程联系 QQ: 768765780（专业录制）\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            252,
+            461,
+            424,
+            500
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【教学目标】\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "## 【教学目标】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 68,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                252,
+                461,
+                424,
+                500
+              ],
+              "canvas_size": [
+                544,
+                128
+              ],
+              "content_size": [
+                544,
+                123
+              ],
+              "pad_offset": [
+                0,
+                2
+              ],
+              "scale": 3.1627906976744184,
+              "rounding_error": [
+                0,
+                -0.3488372093023173
+              ],
+              "canvas_to_page_affine": [
+                0.3161764705882353,
+                0,
+                252,
+                0,
+                0.3170731707317073,
+                460.3658536585366
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1751,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1453,
+                    "raw_output": "## 【教学目标】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【教学目标】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      544,
+                      128
+                    ],
+                    "content_size": [
+                      544,
+                      123
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3488372093023173
+                    ],
+                    "scale": 3.1627906976744184,
+                    "token_count": 68
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1453,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【教学目标】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            239,
+            550,
+            635,
+            588
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "2. 感受作者与民同乐的心境。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "2. 感受作者与民同乐的心境。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                239,
+                550,
+                635,
+                588
+              ],
+              "canvas_size": [
+                832,
+                96
+              ],
+              "content_size": [
+                832,
+                80
+              ],
+              "pad_offset": [
+                0,
+                8
+              ],
+              "scale": 2.101010101010101,
+              "rounding_error": [
+                -1.1368683772161603e-13,
+                0.161616161616152
+              ],
+              "canvas_to_page_affine": [
+                0.47596153846153844,
+                0,
+                239,
+                0,
+                0.475,
+                546.2
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2145,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1778,
+                    "raw_output": "2. 感受作者与民同乐的心境。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "2. 感受作者与民同乐的心境。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      832,
+                      96
+                    ],
+                    "content_size": [
+                      832,
+                      80
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      8
+                    ],
+                    "rounding_error": [
+                      -1.1368683772161603e-13,
+                      0.161616161616152
+                    ],
+                    "scale": 2.101010101010101,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1778,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "2. 感受作者与民同乐的心境。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            253,
+            593,
+            423,
+            630
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【走进作者】\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "## 【走进作者】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                253,
+                593,
+                423,
+                630
+              ],
+              "canvas_size": [
+                576,
+                128
+              ],
+              "content_size": [
+                576,
+                125
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 3.388235294117647,
+              "rounding_error": [
+                0,
+                -0.36470588235293633
+              ],
+              "canvas_to_page_affine": [
+                0.2951388888888889,
+                0,
+                253,
+                0,
+                0.296,
+                592.704
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2003,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1649,
+                    "raw_output": "## 【走进作者】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【走进作者】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      576,
+                      128
+                    ],
+                    "content_size": [
+                      576,
+                      125
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.36470588235293633
+                    ],
+                    "scale": 3.388235294117647,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1649,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【走进作者】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            1110,
+            43,
+            1598,
+            115
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 学而思网校 学习有意思 xueersi.com\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## 学而思网校 学习有意思 xueersi.com\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                1110,
+                43,
+                1598,
+                115
+              ],
+              "canvas_size": [
+                672,
+                128
+              ],
+              "content_size": [
+                672,
+                99
+              ],
+              "pad_offset": [
+                0,
+                14
+              ],
+              "scale": 1.3770491803278688,
+              "rounding_error": [
+                0,
+                -0.14754098360656087
+              ],
+              "canvas_to_page_affine": [
+                0.7261904761904762,
+                0,
+                1110,
+                0,
+                0.7272727272727273,
+                32.81818181818182
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2263,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1834,
+                    "raw_output": "## 学而思网校 学习有意思 xueersi.com\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 学而思网校 学习有意思 xueersi.com\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      672,
+                      128
+                    ],
+                    "content_size": [
+                      672,
+                      99
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      14
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.14754098360656087
+                    ],
+                    "scale": 1.3770491803278688,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1834,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 学而思网校 学习有意思 xueersi.com\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            866,
+            303,
+            1083,
+            362
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 醉翁亭记\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "## 醉翁亭记\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                866,
+                303,
+                1083,
+                362
+              ],
+              "canvas_size": [
+                512,
+                160
+              ],
+              "content_size": [
+                512,
+                139
+              ],
+              "pad_offset": [
+                0,
+                10
+              ],
+              "scale": 2.359447004608295,
+              "rounding_error": [
+                0,
+                -0.20737327188939503
+              ],
+              "canvas_to_page_affine": [
+                0.423828125,
+                0,
+                866,
+                0,
+                0.4244604316546763,
+                298.75539568345323
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2047,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1662,
+                    "raw_output": "## 醉翁亭记\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 醉翁亭记\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      512,
+                      160
+                    ],
+                    "content_size": [
+                      512,
+                      139
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      10
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.20737327188939503
+                    ],
+                    "scale": 2.359447004608295,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1662,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 醉翁亭记\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            240,
+            506,
+            1102,
+            546
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                240,
+                506,
+                1102,
+                546
+              ],
+              "canvas_size": [
+                1216,
+                64
+              ],
+              "content_size": [
+                1216,
+                56
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 1.4106728538283062,
+              "rounding_error": [
+                0,
+                -0.4269141531322447
+              ],
+              "canvas_to_page_affine": [
+                0.7088815789473685,
+                0,
+                240,
+                0,
+                0.7142857142857143,
+                503.14285714285717
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2133,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1796,
+                    "raw_output": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1216,
+                      64
+                    ],
+                    "content_size": [
+                      1216,
+                      56
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4269141531322447
+                    ],
+                    "scale": 1.4106728538283062,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1796,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            237,
+            635,
+            1412,
+            763
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 148,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                237,
+                635,
+                1412,
+                763
+              ],
+              "canvas_size": [
+                1184,
+                128
+              ],
+              "content_size": [
+                1175,
+                128
+              ],
+              "pad_offset": [
+                4,
+                0
+              ],
+              "scale": 1,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1,
+                0,
+                233,
+                0,
+                1,
+                635
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3673,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2952,
+                    "raw_output": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      128
+                    ],
+                    "content_size": [
+                      1175,
+                      128
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      4,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 1.0,
+                    "token_count": 148
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2952,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            251,
+            982,
+            424,
+            1021
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【文体简介】\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "## 【文体简介】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 68,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                251,
+                982,
+                424,
+                1021
+              ],
+              "canvas_size": [
+                544,
+                128
+              ],
+              "content_size": [
+                544,
+                123
+              ],
+              "pad_offset": [
+                0,
+                2
+              ],
+              "scale": 3.1445086705202314,
+              "rounding_error": [
+                0,
+                0.36416184971096754
+              ],
+              "canvas_to_page_affine": [
+                0.3180147058823529,
+                0,
+                251,
+                0,
+                0.3170731707317073,
+                981.3658536585366
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1747,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1456,
+                    "raw_output": "## 【文体简介】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【文体简介】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      544,
+                      128
+                    ],
+                    "content_size": [
+                      544,
+                      123
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.36416184971096754
+                    ],
+                    "scale": 3.1445086705202314,
+                    "token_count": 68
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1456,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【文体简介】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            1256,
+            776,
+            1398,
+            967
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            238,
+            1026,
+            1406,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 108,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                238,
+                1026,
+                1406,
+                1111
+              ],
+              "canvas_size": [
+                1152,
+                96
+              ],
+              "content_size": [
+                1152,
+                84
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 0.9863013698630136,
+              "rounding_error": [
+                0,
+                0.16438356164384516
+              ],
+              "canvas_to_page_affine": [
+                1.0138888888888888,
+                0,
+                238,
+                0,
+                1.0119047619047619,
+                1019.9285714285714
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2502,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1989,
+                    "raw_output": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      96
+                    ],
+                    "content_size": [
+                      1152,
+                      84
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.16438356164384516
+                    ],
+                    "scale": 0.9863013698630136,
+                    "token_count": 108
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1989,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            253,
+            1328,
+            423,
+            1367
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【诵读欣赏】\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "## 【诵读欣赏】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 68,
+              "source_crop": "assets/p0001-b0013.png",
+              "source_bbox": [
+                253,
+                1328,
+                423,
+                1367
+              ],
+              "canvas_size": [
+                544,
+                128
+              ],
+              "content_size": [
+                544,
+                125
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 3.2,
+              "rounding_error": [
+                0,
+                0.19999999999998863
+              ],
+              "canvas_to_page_affine": [
+                0.3125,
+                0,
+                253,
+                0,
+                0.312,
+                1327.688
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1753,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1457,
+                    "raw_output": "## 【诵读欣赏】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【诵读欣赏】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      544,
+                      128
+                    ],
+                    "content_size": [
+                      544,
+                      125
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.19999999999998863
+                    ],
+                    "scale": 3.2,
+                    "token_count": 68
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1457,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【诵读欣赏】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 10,
+          "id": "b0014",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0014"
+          ],
+          "bbox": [
+            254,
+            1373,
+            424,
+            1413
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【课文分析】\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0014",
+            "raw_output": "## 【课文分析】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 68,
+              "source_crop": "assets/p0001-b0014.png",
+              "source_bbox": [
+                254,
+                1373,
+                424,
+                1413
+              ],
+              "canvas_size": [
+                544,
+                128
+              ],
+              "content_size": [
+                544,
+                128
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 3.2,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.3125,
+                0,
+                254,
+                0,
+                0.3125,
+                1373
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1372,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1080,
+                    "raw_output": "## 【课文分析】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【课文分析】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      544,
+                      128
+                    ],
+                    "content_size": [
+                      544,
+                      128
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 3.2,
+                    "token_count": 68
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1080,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【课文分析】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            1143,
+            1120,
+            1402,
+            1315
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 11,
+          "id": "b0015",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0015"
+          ],
+          "bbox": [
+            761,
+            1416,
+            894,
+            1455
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 醉翁亭记\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0015",
+            "raw_output": "## 醉翁亭记\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0015.png",
+              "source_bbox": [
+                761,
+                1416,
+                894,
+                1455
+              ],
+              "canvas_size": [
+                480,
+                160
+              ],
+              "content_size": [
+                480,
+                141
+              ],
+              "pad_offset": [
+                0,
+                9
+              ],
+              "scale": 3.6090225563909772,
+              "rounding_error": [
+                0,
+                0.24812030075187863
+              ],
+              "canvas_to_page_affine": [
+                0.27708333333333335,
+                0,
+                761,
+                0,
+                0.2765957446808511,
+                1413.5106382978724
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1840,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1516,
+                    "raw_output": "## 醉翁亭记\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 醉翁亭记\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      160
+                    ],
+                    "content_size": [
+                      480,
+                      141
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      9
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.24812030075187863
+                    ],
+                    "scale": 3.6090225563909772,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1516,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 醉翁亭记\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 12,
+          "id": "b0016",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0016"
+          ],
+          "bbox": [
+            728,
+            1460,
+            928,
+            1498
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 欧阳修(北宋)\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0016",
+            "raw_output": "## 欧阳修(北宋)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0016.png",
+              "source_bbox": [
+                728,
+                1460,
+                928,
+                1498
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                116
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 3.04,
+              "rounding_error": [
+                0,
+                0.480000000000004
+              ],
+              "canvas_to_page_affine": [
+                0.32894736842105265,
+                0,
+                728,
+                0,
+                0.3275862068965517,
+                1458.0344827586207
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1866,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1539,
+                    "raw_output": "## 欧阳修(北宋)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 欧阳修(北宋)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      116
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.480000000000004
+                    ],
+                    "scale": 3.04,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1539,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 欧阳修(北宋)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 13,
+          "id": "b0017",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0017"
+          ],
+          "bbox": [
+            237,
+            1502,
+            1408,
+            1628
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0017",
+            "raw_output": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 148,
+              "source_crop": "assets/p0001-b0017.png",
+              "source_bbox": [
+                237,
+                1502,
+                1408,
+                1628
+              ],
+              "canvas_size": [
+                1184,
+                128
+              ],
+              "content_size": [
+                1184,
+                127
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 1.0111016225448335,
+              "rounding_error": [
+                0,
+                -0.3988044406490161
+              ],
+              "canvas_to_page_affine": [
+                0.9890202702702703,
+                0,
+                237,
+                0,
+                0.9921259842519685,
+                1502
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3899,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3172,
+                    "raw_output": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      128
+                    ],
+                    "content_size": [
+                      1184,
+                      127
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3988044406490161
+                    ],
+                    "scale": 1.0111016225448335,
+                    "token_count": 148
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3172,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 14,
+          "id": "b0018",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0018"
+          ],
+          "bbox": [
+            237,
+            1633,
+            1411,
+            1759
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0018",
+            "raw_output": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 148,
+              "source_crop": "assets/p0001-b0018.png",
+              "source_bbox": [
+                237,
+                1633,
+                1411,
+                1759
+              ],
+              "canvas_size": [
+                1184,
+                128
+              ],
+              "content_size": [
+                1184,
+                127
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 1.008517887563884,
+              "rounding_error": [
+                2.2737367544323206e-13,
+                -0.07325383304939237
+              ],
+              "canvas_to_page_affine": [
+                0.9915540540540541,
+                0,
+                237,
+                0,
+                0.9921259842519685,
+                1633
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3269,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2548,
+                    "raw_output": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      128
+                    ],
+                    "content_size": [
+                      1184,
+                      127
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      2.2737367544323206e-13,
+                      -0.07325383304939237
+                    ],
+                    "scale": 1.008517887563884,
+                    "token_count": 148
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2548,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 15,
+          "id": "b0019",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0019"
+          ],
+          "bbox": [
+            238,
+            1763,
+            1409,
+            1888
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0019",
+            "raw_output": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 148,
+              "source_crop": "assets/p0001-b0019.png",
+              "source_bbox": [
+                238,
+                1763,
+                1409,
+                1888
+              ],
+              "canvas_size": [
+                1184,
+                128
+              ],
+              "content_size": [
+                1184,
+                126
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 1.0111016225448335,
+              "rounding_error": [
+                0,
+                -0.38770281810418794
+              ],
+              "canvas_to_page_affine": [
+                0.9890202702702703,
+                0,
+                238,
+                0,
+                0.9920634920634921,
+                1762.0079365079366
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3618,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2892,
+                    "raw_output": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      128
+                    ],
+                    "content_size": [
+                      1184,
+                      126
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.38770281810418794
+                    ],
+                    "scale": 1.0111016225448335,
+                    "token_count": 148
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2892,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 16,
+          "id": "b0020",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0020"
+          ],
+          "bbox": [
+            237,
+            1893,
+            1409,
+            2066
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+            "resource": "assets/p0001-b0020.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0020",
+            "raw_output": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 185,
+              "source_crop": "assets/p0001-b0020.png",
+              "source_bbox": [
+                237,
+                1893,
+                1409,
+                2066
+              ],
+              "canvas_size": [
+                1184,
+                160
+              ],
+              "content_size": [
+                1084,
+                160
+              ],
+              "pad_offset": [
+                50,
+                0
+              ],
+              "scale": 0.9248554913294798,
+              "rounding_error": [
+                0.06936416184976224,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.081180811808118,
+                0,
+                182.9409594095941,
+                0,
+                1.08125,
+                1893
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5423,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4461,
+                    "raw_output": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      160
+                    ],
+                    "content_size": [
+                      1084,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      50,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.06936416184976224,
+                      0.0
+                    ],
+                    "scale": 0.9248554913294798,
+                    "token_count": 185
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4461,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0021",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0021"
+          ],
+          "bbox": [
+            1523,
+            2231,
+            1563,
+            2292
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 1\n",
+            "resource": "assets/p0001-b0021.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0021",
+            "raw_output": "## 1\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0021.png",
+              "source_bbox": [
+                1523,
+                2231,
+                1563,
+                2292
+              ],
+              "canvas_size": [
+                224,
+                320
+              ],
+              "content_size": [
+                210,
+                320
+              ],
+              "pad_offset": [
+                7,
+                0
+              ],
+              "scale": 5.245901639344262,
+              "rounding_error": [
+                0.16393442622953103,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.19047619047619047,
+                0,
+                1521.6666666666667,
+                0,
+                0.190625,
+                2231
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1748,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1452,
+                    "raw_output": "## 1\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 1\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      224,
+                      320
+                    ],
+                    "content_size": [
+                      210,
+                      320
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      7,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.16393442622953103,
+                      0.0
+                    ],
+                    "scale": 5.245901639344262,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1452,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 1\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0004",
+          "target_block_id": "b0005",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0007",
+          "target_block_id": "b0008",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0010",
+          "target_block_id": "b0011",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0015",
+          "target_block_id": "b0017",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0016",
+          "target_block_id": "b0017",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 675,
+      "height": 49,
+      "bbox": [
+        41,
+        17,
+        716,
+        66
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 172,
+      "height": 39,
+      "bbox": [
+        252,
+        461,
+        424,
+        500
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 396,
+      "height": 38,
+      "bbox": [
+        239,
+        550,
+        635,
+        588
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 170,
+      "height": 37,
+      "bbox": [
+        253,
+        593,
+        423,
+        630
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 488,
+      "height": 72,
+      "bbox": [
+        1110,
+        43,
+        1598,
+        115
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 217,
+      "height": 59,
+      "bbox": [
+        866,
+        303,
+        1083,
+        362
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 862,
+      "height": 40,
+      "bbox": [
+        240,
+        506,
+        1102,
+        546
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 1175,
+      "height": 128,
+      "bbox": [
+        237,
+        635,
+        1412,
+        763
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 173,
+      "height": 39,
+      "bbox": [
+        251,
+        982,
+        424,
+        1021
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 142,
+      "height": 191,
+      "bbox": [
+        1256,
+        776,
+        1398,
+        967
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1168,
+      "height": 85,
+      "bbox": [
+        238,
+        1026,
+        1406,
+        1111
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 170,
+      "height": 39,
+      "bbox": [
+        253,
+        1328,
+        423,
+        1367
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0014",
+      "path": "assets/p0001-b0014.png",
+      "media_type": "image/png",
+      "source_block_id": "b0014",
+      "width": 170,
+      "height": 40,
+      "bbox": [
+        254,
+        1373,
+        424,
+        1413
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 259,
+      "height": 195,
+      "bbox": [
+        1143,
+        1120,
+        1402,
+        1315
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0015",
+      "path": "assets/p0001-b0015.png",
+      "media_type": "image/png",
+      "source_block_id": "b0015",
+      "width": 133,
+      "height": 39,
+      "bbox": [
+        761,
+        1416,
+        894,
+        1455
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0016",
+      "path": "assets/p0001-b0016.png",
+      "media_type": "image/png",
+      "source_block_id": "b0016",
+      "width": 200,
+      "height": 38,
+      "bbox": [
+        728,
+        1460,
+        928,
+        1498
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0017",
+      "path": "assets/p0001-b0017.png",
+      "media_type": "image/png",
+      "source_block_id": "b0017",
+      "width": 1171,
+      "height": 126,
+      "bbox": [
+        237,
+        1502,
+        1408,
+        1628
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0018",
+      "path": "assets/p0001-b0018.png",
+      "media_type": "image/png",
+      "source_block_id": "b0018",
+      "width": 1174,
+      "height": 126,
+      "bbox": [
+        237,
+        1633,
+        1411,
+        1759
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0019",
+      "path": "assets/p0001-b0019.png",
+      "media_type": "image/png",
+      "source_block_id": "b0019",
+      "width": 1171,
+      "height": 125,
+      "bbox": [
+        238,
+        1763,
+        1409,
+        1888
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0020",
+      "path": "assets/p0001-b0020.png",
+      "media_type": "image/png",
+      "source_block_id": "b0020",
+      "width": 1172,
+      "height": 173,
+      "bbox": [
+        237,
+        1893,
+        1409,
+        2066
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0021",
+      "path": "assets/p0001-b0021.png",
+      "media_type": "image/png",
+      "source_block_id": "b0021",
+      "width": 40,
+      "height": 61,
+      "bbox": [
+        1523,
+        2231,
+        1563,
+        2292
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## 【教学目标】\n\n\n2. 感受作者与民同乐的心境。\n\n\n## 【走进作者】\n\n\n## 醉翁亭记\n\n\n1. 掌握初二必背文言文《醉翁亭记》中的重点实词、虚词和句式。\n\n\n欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n\n\n## 【文体简介】\n\n\n![插图](assets/p0001-b0009.png)\n\n记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n\n\n## 【诵读欣赏】\n\n\n## 【课文分析】\n\n\n![插图](assets/p0001-b0012.png)\n\n## 醉翁亭记\n\n\n## 欧阳修(北宋)\n\n\n环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n\n\n作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n\n\n若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n\n\n至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n\n",
+  "quality": {
+    "text": {
+      "denominator": 19,
+      "matched": 18,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 1,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 2,
+      "rows": [
+        {
+          "annotation_id": 5,
+          "category": "title",
+          "order": 1,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 9,
+          "category": "title",
+          "order": 2,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 6,
+          "category": "title",
+          "order": 6,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 15,
+          "category": "text_block",
+          "order": 7,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 98,
+          "reference_range": [
+            0,
+            98
+          ],
+          "actual_range": [
+            0,
+            97
+          ],
+          "raw_range": [
+            0,
+            97
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 17,
+          "category": "title",
+          "order": 9,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 20,
+          "category": "text_block",
+          "order": 10,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 47,
+          "reference_range": [
+            0,
+            47
+          ],
+          "actual_range": [
+            0,
+            47
+          ],
+          "raw_range": [
+            0,
+            47
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 16,
+          "category": "title",
+          "order": 12,
+          "block_id": "b0013",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 11,
+          "category": "title",
+          "order": 13,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 12,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 13,
+          "category": "title",
+          "order": 14,
+          "block_id": "b0015",
+          "status": "ok",
+          "reading_order_position": 14,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "title",
+          "order": 15,
+          "block_id": "b0016",
+          "status": "ok",
+          "reading_order_position": 15,
+          "reference_chars": 7,
+          "reference_range": [
+            0,
+            7
+          ],
+          "actual_range": [
+            0,
+            10
+          ],
+          "raw_range": [
+            0,
+            10
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "text_block",
+          "order": 16,
+          "block_id": "b0017",
+          "status": "ok",
+          "reading_order_position": 16,
+          "reference_chars": 100,
+          "reference_range": [
+            0,
+            100
+          ],
+          "actual_range": [
+            0,
+            100
+          ],
+          "raw_range": [
+            0,
+            100
+          ],
+          "edit_distance": 7,
+          "raw_edit_distance": 7,
+          "exact": false
+        },
+        {
+          "annotation_id": 19,
+          "category": "text_block",
+          "order": 17,
+          "block_id": "b0018",
+          "status": "ok",
+          "reading_order_position": 17,
+          "reference_chars": 88,
+          "reference_range": [
+            0,
+            88
+          ],
+          "actual_range": [
+            0,
+            88
+          ],
+          "raw_range": [
+            0,
+            88
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 1,
+          "category": "text_block",
+          "order": 18,
+          "block_id": "b0019",
+          "status": "ok",
+          "reading_order_position": 18,
+          "reference_chars": 110,
+          "reference_range": [
+            0,
+            110
+          ],
+          "actual_range": [
+            0,
+            108
+          ],
+          "raw_range": [
+            0,
+            108
+          ],
+          "edit_distance": 7,
+          "raw_edit_distance": 7,
+          "exact": false
+        },
+        {
+          "annotation_id": 8,
+          "category": "text_block",
+          "order": 19,
+          "block_id": "b0020",
+          "status": "ok",
+          "reading_order_position": 19,
+          "reference_chars": 188,
+          "reference_range": [
+            0,
+            188
+          ],
+          "actual_range": [
+            0,
+            188
+          ],
+          "raw_range": [
+            0,
+            188
+          ],
+          "edit_distance": 12,
+          "raw_edit_distance": 12,
+          "exact": false
+        },
+        {
+          "annotation_id": 21,
+          "category": "header",
+          "order": null,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 23,
+          "reference_range": [
+            0,
+            23
+          ],
+          "actual_range": [
+            0,
+            27
+          ],
+          "raw_range": [
+            0,
+            27
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 22,
+          "category": "header",
+          "order": null,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 12,
+          "category": "header",
+          "order": null,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 17,
+          "reference_range": [
+            5,
+            22
+          ],
+          "actual_range": [
+            8,
+            26
+          ],
+          "raw_range": [
+            8,
+            26
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 0,
+          "category": "page_number",
+          "order": null,
+          "block_id": "b0021",
+          "status": "ok",
+          "reading_order_position": 20,
+          "reference_chars": 1,
+          "reference_range": [
+            0,
+            1
+          ],
+          "actual_range": [
+            0,
+            4
+          ],
+          "raw_range": [
+            0,
+            4
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 23,
+          "category": "text_block",
+          "order": 3,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 47,
+          "edit_distance": 47,
+          "raw_edit_distance": 47,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0006",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 15
+        },
+        {
+          "block_id": "b0005",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 31
+        }
+      ],
+      "reference_chars": 769,
+      "edit_distance": 157,
+      "raw_edit_distance": 111
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 2,
+      "matched": 2,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 2,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 4,
+          "category": "figure",
+          "order": 8,
+          "block_id": "b0009",
+          "coverage": 0.9841,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 9
+        },
+        {
+          "annotation_id": 2,
+          "category": "figure",
+          "order": 11,
+          "block_id": "b0012",
+          "coverage": 1.0,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 13
+        }
+      ],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 136,
+      "evaluable": 120,
+      "correct": 115,
+      "missing_pairs": 16,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 21
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "unresolved_annotation_ids": [
+      5,
+      9,
+      6,
+      15,
+      17,
+      16,
+      11,
+      13,
+      3,
+      7,
+      19,
+      1,
+      8,
+      21,
+      22,
+      12,
+      0,
+      23
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 23,
+    "parent_reference_count": 23
+  },
+  "alignment": [
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        5
+      ],
+      "expected": "醉翁亭记",
+      "actual": "## 醉翁亭记",
+      "raw_output": "## 醉翁亭记\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        866,
+        303,
+        1083,
+        362
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 醉翁亭记\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        9
+      ],
+      "expected": "【教学目标】",
+      "actual": "## 【教学目标】",
+      "raw_output": "## 【教学目标】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        252,
+        461,
+        424,
+        500
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【教学目标】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        6
+      ],
+      "expected": "【走进作者】",
+      "actual": "## 【走进作者】",
+      "raw_output": "## 【走进作者】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        253,
+        593,
+        423,
+        630
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【走进作者】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        15
+      ],
+      "expected": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人， “唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。",
+      "actual": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。",
+      "raw_output": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        237,
+        635,
+        1412,
+        763
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "欧阳修(1007年～1072年)，字永叔，自号醉翁，北宋文学家，政治家，史学家和诗人，“唐宋八大家”之一。因家中有一万卷书、一千卷金石遗文、一张琴、一局棋、一壶酒、一老翁，晚年又号“六一居士”。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        17
+      ],
+      "expected": "【文体简介】",
+      "actual": "## 【文体简介】",
+      "raw_output": "## 【文体简介】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        251,
+        982,
+        424,
+        1021
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【文体简介】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        20
+      ],
+      "expected": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)",
+      "actual": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)",
+      "raw_output": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+      "edit_distance": 0,
+      "raw_edit_distance": 0,
+      "bbox": [
+        238,
+        1026,
+        1406,
+        1111
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和抱负(阐述作者的某些观念)\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011"
+      ]
+    },
+    {
+      "block_id": "b0013",
+      "source_region_ids": [
+        "r0013"
+      ],
+      "annotation_ids": [
+        16
+      ],
+      "expected": "【诵读欣赏】",
+      "actual": "## 【诵读欣赏】",
+      "raw_output": "## 【诵读欣赏】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        253,
+        1328,
+        423,
+        1367
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【诵读欣赏】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0013"
+      ]
+    },
+    {
+      "block_id": "b0014",
+      "source_region_ids": [
+        "r0014"
+      ],
+      "annotation_ids": [
+        11
+      ],
+      "expected": "【课文分析】",
+      "actual": "## 【课文分析】",
+      "raw_output": "## 【课文分析】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        254,
+        1373,
+        424,
+        1413
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【课文分析】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0014"
+      ]
+    },
+    {
+      "block_id": "b0015",
+      "source_region_ids": [
+        "r0015"
+      ],
+      "annotation_ids": [
+        13
+      ],
+      "expected": "醉翁亭记",
+      "actual": "## 醉翁亭记",
+      "raw_output": "## 醉翁亭记\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        761,
+        1416,
+        894,
+        1455
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 醉翁亭记\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0015"
+      ]
+    },
+    {
+      "block_id": "b0016",
+      "source_region_ids": [
+        "r0016"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "欧阳修(北宋)",
+      "actual": "## 欧阳修(北宋)",
+      "raw_output": "## 欧阳修(北宋)\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        728,
+        1460,
+        928,
+        1498
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 欧阳修(北宋)\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0016"
+      ]
+    },
+    {
+      "block_id": "b0017",
+      "source_region_ids": [
+        "r0017"
+      ],
+      "annotation_ids": [
+        7
+      ],
+      "expected": "环滁(chu)皆山也。其西南诸峰，林壑(he)尤美，望之蔚然而深秀者，琅琊(lang ya)也。山行六七里，渐闻水声潺（chan)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。",
+      "actual": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。",
+      "raw_output": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+      "edit_distance": 7,
+      "raw_edit_distance": 7,
+      "bbox": [
+        237,
+        1502,
+        1408,
+        1628
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "环滁(chú)皆山也。其西南诸峰，林壑(hè)尤美，望之蔚然而深秀者，琅珡(láng yá)也。山行六七里，渐闻水声潺(chán)潺而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0017"
+      ]
+    },
+    {
+      "block_id": "b0018",
+      "source_region_ids": [
+        "r0018"
+      ],
+      "annotation_ids": [
+        19
+      ],
+      "expected": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhe)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
+      "actual": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
+      "raw_output": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        237,
+        1633,
+        1411,
+        1759
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄(zhé)醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0018"
+      ]
+    },
+    {
+      "block_id": "b0019",
+      "source_region_ids": [
+        "r0019"
+      ],
+      "annotation_ids": [
+        1
+      ],
+      "expected": "若夫(fui)日出而林霏(fei)开，云归而岩穴(xue)暝(ming)，晦(hui)明变化者，山间之朝暮也。野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。",
+      "actual": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。",
+      "raw_output": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+      "edit_distance": 7,
+      "raw_edit_distance": 7,
+      "bbox": [
+        238,
+        1763,
+        1409,
+        1888
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "若夫(fú)日出而林霏(fēi)开，云归而岩穴(xué)暝(míng)，晦(huì)明变化者，山间之朝暮也野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0019"
+      ]
+    },
+    {
+      "block_id": "b0020",
+      "source_region_ids": [
+        "r0020"
+      ],
+      "annotation_ids": [
+        8
+      ],
+      "expected": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yu)偻(lu)提携(xié)，往来而不绝者，滁(chu)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒冽(lie)，山肴(yao)野蔌(su)，杂然而前陈者，太守宴也。宴酣(han)之乐，非丝非竹，射者中，弈(yi)者胜，觥(gong)筹(chou)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tui)然乎其间者，太守醉也。",
+      "actual": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。",
+      "raw_output": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+      "edit_distance": 12,
+      "raw_edit_distance": 12,
+      "bbox": [
+        237,
+        1893,
+        1409,
+        2066
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "至于负者歌于途，行者休于树，前者呼，后者应，伛(yǔ)偻(lǚ)提携(xié)，往来而不绝者，滁(chú)人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌(liè)，山肴(yáo)野蔌(sù)，杂然而前陈者，太守宴也。宴酣(hān)之乐，非丝非竹，射者中，弈(yì)者胜，觥(gōng)筹(chóu)交错，起坐而喧哗者，众宾欢也。苍颜白发，颓(tuí)然乎其间者，太守醉也。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0020"
+      ]
+    },
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        21
+      ],
+      "expected": "课程联系 QQ：768765780（专业录制）",
+      "actual": "## 课程联系 QQ: 768765780（专业录制）",
+      "raw_output": "## 课程联系 QQ: 768765780（专业录制）\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        41,
+        17,
+        716,
+        66
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 课程联系 QQ: 768765780（专业录制）\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        22,
+        12
+      ],
+      "expected": "学而思网校学习有意思 xueersi.com",
+      "actual": "## 学而思网校 学习有意思 xueersi.com",
+      "raw_output": "## 学而思网校 学习有意思 xueersi.com\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        1110,
+        43,
+        1598,
+        115
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 学而思网校 学习有意思 xueersi.com\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0021",
+      "source_region_ids": [
+        "r0021"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "1",
+      "actual": "## 1",
+      "raw_output": "## 1\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        1523,
+        2231,
+        1563,
+        2292
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 1\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0021"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "figure",
+      "annotation_id": 4,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          1259.2235107421875,
+          778.149169921875,
+          1400.2410888671875,
+          778.149169921875,
+          1400.2410888671875,
+          966.0354614257812,
+          1259.2235107421875,
+          966.0354614257812
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 4,
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0009.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 2,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          1146.539306640625,
+          1124.3609619140625,
+          1400.3709716796875,
+          1124.3609619140625,
+          1400.3709716796875,
+          1311.77099609375,
+          1146.539306640625,
+          1311.77099609375
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 2,
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "source_region_ids": [
+        "r0012"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0012.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

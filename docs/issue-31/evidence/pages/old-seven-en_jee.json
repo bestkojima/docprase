@@ -1,0 +1,2729 @@
+{
+  "key": "old-seven/en_jee",
+  "input": {
+    "path": "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346.jpg",
+    "sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/layout/exam-jee-346.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/old-seven/en_jee/job"
+    ],
+    "input_sha256": "e8d587b83baade2dbdb3ad3333cfe8bc9a7d9cbf489de4db961058b23343dade",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 39.627249158977065,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "21b5f675d7679ef3cd00e6dc9f4bf8c75b0bebeac361470609630e01846b7ee9",
+      "job/assets/p0001-b0002.png": "7feedf512d04f5b9dba02a95063733a210cd04db17b0a0fa86c02cb36bb81ac4",
+      "job/assets/p0001-b0003.png": "398af3d087ac80a26143426d52b62af2a7ebd036cb1103d4bb415d188cdb379f",
+      "job/assets/p0001-b0004.png": "ef9a5ff5f5b1750323fdbd7f1021ca4dec82f8a9b989272f93b34ac913a9c0ea",
+      "job/assets/p0001-b0005.png": "d00574bf33016c0ed60fd037183cc11179ff5b15ca6c100e6d5d511259994d43",
+      "job/assets/p0001-b0006.png": "68545f5d115851d04a764fed3aabd4de9bb760a7b2bc805a2b5549444cf22179",
+      "job/assets/p0001-b0007.png": "885dcb67762f69fbd31d86b4a966ad0027f1c230a161aecbb144812a879f1e9c",
+      "job/assets/p0001-b0008.png": "affed23ccc18e45179103bee438168ce27f15bfd7d4839d198ea50391eeb7c32",
+      "job/assets/p0001-b0009.png": "506e5cbbe9434656e67adf57e29e046b4e7f19593f4f84cd4f91042d9c16ae99",
+      "job/assets/p0001-b0010.png": "c5b1a510f191974b4420b033770682009808c62509ef619bdb0d2ff12425192c",
+      "job/assets/p0001-b0011.png": "6a67d501d5f35a6446a610f60764f5f62f7691835387bd276e89bd57fc5aae1b",
+      "job/assets/p0001-fetch_name_0.f32": "7d9c057a3399c1c0aa666518ab1388d88c9120eb4a7696ac0fd0ec42e2a603ab",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "5165eaa1cdc47089dec39c69a0cd1d05a1afe5f5a54ad9dccfdee00a6bdf775b",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "76970aed31fdb62d2ccb23e03019679d059056a60b9377257d1d787260263550",
+      "job/assets/p0001-layout-overlay.png": "1331524c053a12fd5dc89332e0b02e556744e351dad2bee60617b852bb6963a9",
+      "job/assets/p0001-mask-c0.png": "8e56cdc3f53d9093ac861006461ea1dd96df54501a241f3b435026e5ffda22e7",
+      "job/assets/p0001-mask-c1.png": "d2c24e0eaae2bcdd7ff1ebe3ecfaa99528e3d669d8a363713d842d5f07c47293",
+      "job/assets/p0001-mask-c10.png": "8e7493b1ceaca3e5b05b6067ac1ee6ac39a9539fb05efff44f0a23b7fab9055b",
+      "job/assets/p0001-mask-c11.png": "2cab0adbff4b410a1245087dfc8bb09d83071dd72b9389b915c8dddd4ac4a97a",
+      "job/assets/p0001-mask-c12.png": "f4f638962b947aa32b1b2277f9524aa593c0a620f6c2a88d6cc2daf6b065f97f",
+      "job/assets/p0001-mask-c13.png": "d612cf00dd26813754e2ff7c789e16c28ea129bc537e7786080cfa1a7ce60de8",
+      "job/assets/p0001-mask-c14.png": "4f06b9e73ffd7deb436f91c75bd908d6f3027467a55d47406fbb14c887552225",
+      "job/assets/p0001-mask-c15.png": "d1c2aa49ab669149d64141ec1757de0cbec860f5bcd3cc4929e9315322456ee1",
+      "job/assets/p0001-mask-c16.png": "cfc2dca994eea12b63afe16dd692466cbb172b43c62a18bdc06258eb60e59897",
+      "job/assets/p0001-mask-c17.png": "5ee9915261a5dedc03dce2dd807dcef29b8f645fc8f2bcecd61325931068bd8e",
+      "job/assets/p0001-mask-c19.png": "2da35d3098464185ff6ac92527f462f3ec4bb7744e30167523911e63b676b752",
+      "job/assets/p0001-mask-c2.png": "1f8e27661bb08c599caa8137f9d24e21a6e275788f5348cd71a544f54157da52",
+      "job/assets/p0001-mask-c20.png": "3c1469fd61eb80115cc438ed4a9f37450ae25d094e012f12f3b46cfd42055a04",
+      "job/assets/p0001-mask-c21.png": "c7eafdf4cd0724084d011b1159fa20ef0b880ab26b148d00f9e9e7291dcc605d",
+      "job/assets/p0001-mask-c22.png": "4689daf9bdb48d14d1fd2d618d479f30409e7d1c0b551b5db3b7539fea62ac7c",
+      "job/assets/p0001-mask-c24.png": "6edb16d53a99de5ff2d205bd8bb27eed5333458cf1ceb627319b67ed6394e924",
+      "job/assets/p0001-mask-c3.png": "b6f968fbc5be7460f63455031e97c5fdc3fb7331cf9592022362982dc4a9c541",
+      "job/assets/p0001-mask-c4.png": "219db207e5fecfb79e6a4cec35bdb23611c73cbd17e779059a73bcaa345c52aa",
+      "job/assets/p0001-mask-c5.png": "ba58daf1019fcd941ed2396e38029d0e171e09c440ab4b9fc3c5be8b260df4cc",
+      "job/assets/p0001-mask-c6.png": "d7f67adbfcc2a1b032a6393a61bac6ad80f57bc62cf9a8d83a17ab4dc2ecc78d",
+      "job/assets/p0001-mask-c7.png": "36923968b58e9c5cdcd3622bab63b48a1c12c8f5584eccb36bb93bb5fa43131d",
+      "job/assets/p0001-mask-c8.png": "34b72e2a85de3209a404cc852bd54ffa6cf2b688e1259756b3b7f8fd5e1d37e6",
+      "job/assets/p0001-mask-c9.png": "bdfb95547ab93fe5868f3f42a79c48c8dede4c057d53a02d021406b90e471884",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "8f6343d9eb001ba97d2fc818e39cb6a197fd65c4e07dddc66935e5e92f1ec179",
+      "job/document.md": "003b98072c1ad9af1378c42f6a1e241fc119d33982146cea79804b8b66c10d3c",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "89f6579e929592d0f372f04f3b32a5c8d72c4d89627de072e0b02eb9f4c5c238",
+      "job/job-status.json": "f56841a54fdcd3b17832b2666f37eafe153d0488e6308f4987859e5e128ecea1",
+      "job/run-manifest.json": "2531e6ddff362f1a581ccf268608807a9c0d7f22108131ccf7b946de4f758cad",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "c76f1ab035e04b8e5f5effedf83fb92e42b5dd290ee0e7222deb3fb1c4a6490d",
+      "time.txt": "0a9a85ea40b203ab9efb8c279f10c38b317b91100d135c261507984d3211973e"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": null,
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        640,
+        640
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011"
+      ],
+      "reading_order_evidence": {
+        "source": "model",
+        "reason": "unique_rank"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            55,
+            26,
+            137,
+            35
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.805990696,
+          "candidate_rank": 0,
+          "original_class_id": 12,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 78,
+          "model_label": "header",
+          "original_bbox": [
+            55.770813,
+            26.411097,
+            136.331985,
+            34.617214
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            551,
+            27,
+            583,
+            36
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.465526909,
+          "candidate_rank": 22,
+          "original_class_id": 16,
+          "candidate_id": 20,
+          "mask_row": 20,
+          "mask_nonzero": 30,
+          "model_label": "number",
+          "original_bbox": [
+            551.905334,
+            27.10461,
+            582.093445,
+            35.010197
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            65,
+            41,
+            562,
+            64
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.88285327,
+          "candidate_rank": 26,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 1081,
+          "model_label": "text",
+          "original_bbox": [
+            65.294189,
+            41.057289,
+            561.316589,
+            63.256142
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "chart",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            229,
+            76,
+            455,
+            179
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.685040772,
+          "candidate_rank": 72,
+          "original_class_id": 3,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 2220,
+          "model_label": "chart",
+          "original_bbox": [
+            229.552979,
+            76.482162,
+            454.762268,
+            178.516403
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            102,
+            195,
+            433,
+            208
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.797161281,
+          "candidate_rank": 107,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 424,
+          "model_label": "text",
+          "original_bbox": [
+            102.718262,
+            195.020279,
+            432.586517,
+            207.208221
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            102,
+            218,
+            569,
+            242
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.8814587,
+          "candidate_rank": 145,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 1122,
+          "model_label": "text",
+          "original_bbox": [
+            102.274323,
+            218.395111,
+            568.07074,
+            241.889114
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            65,
+            279,
+            544,
+            303
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.873927772,
+          "candidate_rank": 170,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 1142,
+          "model_label": "text",
+          "original_bbox": [
+            65.116524,
+            279.900208,
+            543.65564,
+            302.594299
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            104,
+            312,
+            162,
+            345
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.663304925,
+          "candidate_rank": 214,
+          "original_class_id": 14,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 195,
+          "model_label": "image",
+          "original_bbox": [
+            104.036949,
+            312.557159,
+            161.599014,
+            344.375427
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            176,
+            314,
+            346,
+            329
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.407005191,
+          "candidate_rank": 222,
+          "original_class_id": 22,
+          "candidate_id": 22,
+          "mask_row": 22,
+          "mask_nonzero": 234,
+          "model_label": "text",
+          "original_bbox": [
+            176.997482,
+            314.838715,
+            345.536194,
+            328.671112
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            178,
+            331,
+            313,
+            342
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.523641646,
+          "candidate_rank": 269,
+          "original_class_id": 22,
+          "candidate_id": 16,
+          "mask_row": 16,
+          "mask_nonzero": 155,
+          "model_label": "text",
+          "original_bbox": [
+            178.655502,
+            331.268188,
+            312.410889,
+            341.282837
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            563,
+            605,
+            584,
+            614
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.722054482,
+          "candidate_rank": 292,
+          "original_class_id": 16,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 18,
+          "model_label": "number",
+          "original_bbox": [
+            563.74054,
+            605.04187,
+            583.203918,
+            613.107666
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0041",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            371,
+            41,
+            439,
+            52
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.511301696,
+          "candidate_rank": 47,
+          "original_class_id": 15,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 63,
+          "model_label": "formula",
+          "original_bbox": [
+            371.970673,
+            41.7102966,
+            438.62262,
+            51.3239746
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0033",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            308,
+            52,
+            322,
+            63
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.69823277,
+          "candidate_rank": 54,
+          "original_class_id": 15,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 17,
+          "model_label": "formula",
+          "original_bbox": [
+            308.742218,
+            52.8825874,
+            321.962708,
+            62.7662125
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0032",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            343,
+            53,
+            358,
+            63
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.703779757,
+          "candidate_rank": 59,
+          "original_class_id": 15,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 19,
+          "model_label": "formula",
+          "original_bbox": [
+            343.044891,
+            53.0386162,
+            357.581238,
+            62.6784058
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0027",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            184,
+            194,
+            284,
+            207
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.810920477,
+          "candidate_rank": 134,
+          "original_class_id": 15,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 125,
+          "model_label": "formula",
+          "original_bbox": [
+            184.547638,
+            194.765991,
+            283.23526,
+            206.554596
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0030",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            105,
+            196,
+            162,
+            207
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.771429956,
+          "candidate_rank": 119,
+          "original_class_id": 15,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 69,
+          "model_label": "formula",
+          "original_bbox": [
+            105.373123,
+            196.185028,
+            161.559204,
+            206.291473
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0048",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            410,
+            197,
+            431,
+            206
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.373827815,
+          "candidate_rank": 142,
+          "original_class_id": 15,
+          "candidate_id": 24,
+          "mask_row": 24,
+          "mask_nonzero": 14,
+          "model_label": "formula",
+          "original_bbox": [
+            410.124329,
+            197.666458,
+            430.419983,
+            205.904495
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0045",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            105,
+            218,
+            133,
+            231
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.440601557,
+          "candidate_rank": 151,
+          "original_class_id": 15,
+          "candidate_id": 21,
+          "mask_row": 21,
+          "mask_nonzero": 33,
+          "model_label": "formula",
+          "original_bbox": [
+            105.32402,
+            218.857956,
+            132.089615,
+            230.339844
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0038",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            153,
+            219,
+            177,
+            230
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.65421164,
+          "candidate_rank": 156,
+          "original_class_id": 15,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 28,
+          "model_label": "formula",
+          "original_bbox": [
+            153.141876,
+            219.248001,
+            176.145081,
+            229.607269
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0039",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            516,
+            220,
+            530,
+            230
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.627809465,
+          "candidate_rank": 161,
+          "original_class_id": 15,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 15,
+          "model_label": "formula",
+          "original_bbox": [
+            516.242554,
+            220.348755,
+            529.915771,
+            229.140137
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0035",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            550,
+            220,
+            567,
+            230
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.683234334,
+          "candidate_rank": 164,
+          "original_class_id": 15,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 15,
+          "model_label": "formula",
+          "original_bbox": [
+            550.447693,
+            220.118484,
+            566.417542,
+            229.321213
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0036",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            202,
+            280,
+            220,
+            291
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.674087107,
+          "candidate_rank": 182,
+          "original_class_id": 15,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 18,
+          "model_label": "formula",
+          "original_bbox": [
+            202.532135,
+            280.722809,
+            219.280304,
+            290.526794
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0043",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            294,
+            316,
+            320,
+            328
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.471672505,
+          "candidate_rank": 246,
+          "original_class_id": 15,
+          "candidate_id": 19,
+          "mask_row": 19,
+          "mask_nonzero": 25,
+          "model_label": "formula",
+          "original_bbox": [
+            294.894867,
+            316.431335,
+            319.227081,
+            327.148499
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            55,
+            26,
+            137,
+            35
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            551,
+            27,
+            583,
+            36
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003",
+            "l0041",
+            "l0033",
+            "l0032"
+          ],
+          "bbox": [
+            65,
+            41,
+            562,
+            64
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            229,
+            76,
+            455,
+            179
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005",
+            "l0027",
+            "l0030",
+            "l0048"
+          ],
+          "bbox": [
+            102,
+            194,
+            433,
+            208
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006",
+            "l0045",
+            "l0038",
+            "l0039",
+            "l0035"
+          ],
+          "bbox": [
+            102,
+            218,
+            569,
+            242
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007",
+            "l0036"
+          ],
+          "bbox": [
+            65,
+            279,
+            544,
+            303
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            104,
+            312,
+            162,
+            345
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009",
+            "l0043"
+          ],
+          "bbox": [
+            176,
+            314,
+            346,
+            329
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            178,
+            331,
+            313,
+            342
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            563,
+            605,
+            584,
+            614
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            55,
+            26,
+            137,
+            35
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "JEE (Advanced) 2023\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "JEE (Advanced) 2023\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 65,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                55,
+                26,
+                137,
+                35
+              ],
+              "canvas_size": [
+                416,
+                160
+              ],
+              "content_size": [
+                416,
+                46
+              ],
+              "pad_offset": [
+                0,
+                57
+              ],
+              "scale": 5.073170731707317,
+              "rounding_error": [
+                0,
+                0.3414634146341484
+              ],
+              "canvas_to_page_affine": [
+                0.1971153846153846,
+                0,
+                55,
+                0,
+                0.1956521739130435,
+                14.847826086956522
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2305,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2036,
+                    "raw_output": "JEE (Advanced) 2023\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "JEE (Advanced) 2023\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      416,
+                      160
+                    ],
+                    "content_size": [
+                      416,
+                      46
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      57
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3414634146341484
+                    ],
+                    "scale": 5.073170731707317,
+                    "token_count": 65
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2036,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "JEE (Advanced) 2023\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            551,
+            27,
+            583,
+            36
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## Paper 1\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## Paper 1\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 64,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                551,
+                27,
+                583,
+                36
+              ],
+              "canvas_size": [
+                256,
+                256
+              ],
+              "content_size": [
+                256,
+                72
+              ],
+              "pad_offset": [
+                0,
+                92
+              ],
+              "scale": 8,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.125,
+                0,
+                551,
+                0,
+                0.125,
+                15.5
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1716,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1436,
+                    "raw_output": "## Paper 1\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## Paper 1\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      256,
+                      256
+                    ],
+                    "content_size": [
+                      256,
+                      72
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      92
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 8.0,
+                    "token_count": 64
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1436,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## Paper 1\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            65,
+            41,
+            562,
+            64
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 96,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                65,
+                41,
+                562,
+                64
+              ],
+              "canvas_size": [
+                1024,
+                96
+              ],
+              "content_size": [
+                1024,
+                47
+              ],
+              "pad_offset": [
+                0,
+                24
+              ],
+              "scale": 2.0603621730382295,
+              "rounding_error": [
+                0,
+                -0.38832997987928053
+              ],
+              "canvas_to_page_affine": [
+                0.4853515625,
+                0,
+                65,
+                0,
+                0.48936170212765956,
+                29.25531914893617
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3100,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2634,
+                    "raw_output": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      96
+                    ],
+                    "content_size": [
+                      1024,
+                      47
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      24
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.38832997987928053
+                    ],
+                    "scale": 2.0603621730382295,
+                    "token_count": 96
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2634,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            229,
+            76,
+            455,
+            179
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            102,
+            194,
+            433,
+            208
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                102,
+                194,
+                433,
+                208
+              ],
+              "canvas_size": [
+                832,
+                96
+              ],
+              "content_size": [
+                832,
+                35
+              ],
+              "pad_offset": [
+                0,
+                30
+              ],
+              "scale": 2.513595166163142,
+              "rounding_error": [
+                0,
+                -0.19033232628398622
+              ],
+              "canvas_to_page_affine": [
+                0.39783653846153844,
+                0,
+                102,
+                0,
+                0.4,
+                182
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2600,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2251,
+                    "raw_output": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      832,
+                      96
+                    ],
+                    "content_size": [
+                      832,
+                      35
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      30
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.19033232628398622
+                    ],
+                    "scale": 2.513595166163142,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2251,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "If  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            102,
+            218,
+            569,
+            242
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 93,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                102,
+                218,
+                569,
+                242
+              ],
+              "canvas_size": [
+                992,
+                96
+              ],
+              "content_size": [
+                992,
+                51
+              ],
+              "pad_offset": [
+                0,
+                22
+              ],
+              "scale": 2.1241970021413277,
+              "rounding_error": [
+                0,
+                0.019271948608135858
+              ],
+              "canvas_to_page_affine": [
+                0.47076612903225806,
+                0,
+                102,
+                0,
+                0.47058823529411764,
+                207.64705882352942
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2678,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2274,
+                    "raw_output": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      96
+                    ],
+                    "content_size": [
+                      992,
+                      51
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      22
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.019271948608135858
+                    ],
+                    "scale": 2.1241970021413277,
+                    "token_count": 93
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2274,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            65,
+            279,
+            544,
+            303
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "Q.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "Q.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 93,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                65,
+                279,
+                544,
+                303
+              ],
+              "canvas_size": [
+                992,
+                96
+              ],
+              "content_size": [
+                992,
+                50
+              ],
+              "pad_offset": [
+                0,
+                23
+              ],
+              "scale": 2.0709812108559498,
+              "rounding_error": [
+                1.1368683772161603e-13,
+                0.2964509394572019
+              ],
+              "canvas_to_page_affine": [
+                0.48286290322580644,
+                0,
+                65,
+                0,
+                0.48,
+                267.96
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2124,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1724,
+                    "raw_output": "Q.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "Q.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      96
+                    ],
+                    "content_size": [
+                      992,
+                      50
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      23
+                    ],
+                    "rounding_error": [
+                      1.1368683772161603e-13,
+                      0.2964509394572019
+                    ],
+                    "scale": 2.0709812108559498,
+                    "token_count": 93
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1724,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "Q.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            104,
+            312,
+            162,
+            345
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            176,
+            314,
+            346,
+            329
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(I) LiAlH_{4} (excess), then H_{2}O\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "(I) LiAlH_{4} (excess), then H_{2}O\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                176,
+                314,
+                346,
+                329
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                54
+              ],
+              "pad_offset": [
+                0,
+                37
+              ],
+              "scale": 3.5764705882352943,
+              "rounding_error": [
+                0,
+                0.352941176470587
+              ],
+              "canvas_to_page_affine": [
+                0.27960526315789475,
+                0,
+                176,
+                0,
+                0.2777777777777778,
+                303.72222222222223
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2042,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1717,
+                    "raw_output": "(I) LiAlH_{4} (excess), then H_{2}O\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(I) LiAlH_{4} (excess), then H_{2}O\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      54
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      37
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.352941176470587
+                    ],
+                    "scale": 3.5764705882352943,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1717,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(I) LiAlH_{4} (excess), then H_{2}O\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            178,
+            331,
+            313,
+            342
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(ii) Acetophenone (excess)\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "(ii) Acetophenone (excess)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 68,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                178,
+                331,
+                313,
+                342
+              ],
+              "canvas_size": [
+                544,
+                128
+              ],
+              "content_size": [
+                544,
+                44
+              ],
+              "pad_offset": [
+                0,
+                42
+              ],
+              "scale": 4.029629629629629,
+              "rounding_error": [
+                0,
+                -0.3259259259259224
+              ],
+              "canvas_to_page_affine": [
+                0.24816176470588236,
+                0,
+                178,
+                0,
+                0.25,
+                320.5
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1827,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1543,
+                    "raw_output": "(ii) Acetophenone (excess)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(ii) Acetophenone (excess)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      544,
+                      128
+                    ],
+                    "content_size": [
+                      544,
+                      44
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      42
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3259259259259224
+                    ],
+                    "scale": 4.029629629629629,
+                    "token_count": 68
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1543,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(ii) Acetophenone (excess)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            563,
+            605,
+            584,
+            614
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 211\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "## 211\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 64,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                563,
+                605,
+                584,
+                614
+              ],
+              "canvas_size": [
+                256,
+                256
+              ],
+              "content_size": [
+                256,
+                110
+              ],
+              "pad_offset": [
+                0,
+                73
+              ],
+              "scale": 12.19047619047619,
+              "rounding_error": [
+                0,
+                0.2857142857142918
+              ],
+              "canvas_to_page_affine": [
+                0.08203125,
+                0,
+                563,
+                0,
+                0.08181818181818182,
+                599.0272727272727
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1723,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1447,
+                    "raw_output": "## 211\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 211\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      256,
+                      256
+                    ],
+                    "content_size": [
+                      256,
+                      110
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      73
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.2857142857142918
+                    ],
+                    "scale": 12.19047619047619,
+                    "token_count": 64
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1447,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 211\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0041",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0033",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0032",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0027",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0030",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0048",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0045",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0038",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0039",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0035",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0036",
+          "owner_block_id": "b0007"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0043",
+          "owner_block_id": "b0009"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 82,
+      "height": 9,
+      "bbox": [
+        55,
+        26,
+        137,
+        35
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 32,
+      "height": 9,
+      "bbox": [
+        551,
+        27,
+        583,
+        36
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 497,
+      "height": 23,
+      "bbox": [
+        65,
+        41,
+        562,
+        64
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 226,
+      "height": 103,
+      "bbox": [
+        229,
+        76,
+        455,
+        179
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 331,
+      "height": 14,
+      "bbox": [
+        102,
+        194,
+        433,
+        208
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 467,
+      "height": 24,
+      "bbox": [
+        102,
+        218,
+        569,
+        242
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 479,
+      "height": 24,
+      "bbox": [
+        65,
+        279,
+        544,
+        303
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 58,
+      "height": 33,
+      "bbox": [
+        104,
+        312,
+        162,
+        345
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 170,
+      "height": 15,
+      "bbox": [
+        176,
+        314,
+        346,
+        329
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 135,
+      "height": 11,
+      "bbox": [
+        178,
+        331,
+        313,
+        342
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 21,
+      "height": 9,
+      "bbox": [
+        563,
+        605,
+        584,
+        614
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "Q.12 In a one-litre flask, 6 moles of A undergoes the reaction  $A(g) \\rightleftharpoons P(g)$. The progress of product formation at two temperatures (in Kelvin),  $T_1$ and  $T_2$, is shown in the figure:\n\n\n![插图](assets/p0001-b0004.png)\n\nIf  $T_1 = 2T_2$ and  $(\\Delta G_2^\\ominus - \\Delta G_1^\\ominus) = RT_2 \\ln x$, then the value of  $x$ is ___.\n\n\n$[\\Delta G_1^\\ominus$ and  $\\Delta G_2^\\ominus$ are standard Gibb's free energy change for the reaction at temperatures  $T_1$ and  $T_2$, respectively.]\n\n\nQ.13 The total number of  $sp^{2}$ hybridised carbon atoms in the major product P (a non-heterocyclic compound) of the following reaction is ___.\n\n\n![插图](assets/p0001-b0008.png)\n\n(I) LiAlH_{4} (excess), then H_{2}O\n\n\n(ii) Acetophenone (excess)\n\n",
+  "quality": {
+    "anchors": [
+      {
+        "anchor": "JEE (Advanced) 2023",
+        "locations": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Q.12",
+        "locations": [
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Q.13",
+        "locations": [
+          [
+            0,
+            6,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Time (h)",
+        "locations": [],
+        "found": false,
+        "unique": false
+      }
+    ],
+    "pair_correct": 3,
+    "pair_decidable": 3,
+    "wrong_pairs": [],
+    "missing": [
+      "Time (h)"
+    ]
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "旧回归仅核验已有参考子集，不声明整页逐字正确"
+    ]
+  },
+  "reference_plan": null,
+  "alignment": [],
+  "non_text_evidence": [],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

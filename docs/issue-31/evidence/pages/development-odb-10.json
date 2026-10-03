@@ -1,0 +1,4170 @@
+{
+  "key": "development/odb-10",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+    "sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-10/job"
+    ],
+    "input_sha256": "b5e4af2572323d5174d7e4ff33ae010d6e6929cd7c1a3c48b4f85a4d1330dd79",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 59.78705409602844,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "df0d51516c0e2a270aca00d793dd52f5bac78fc413f261288e2b21bc8855d6b3",
+      "job/assets/p0001-b0002.png": "9ded7cb109df8bf2980bba7c6d4083b9b64692734ec877090d2d457984aab05d",
+      "job/assets/p0001-b0003.png": "dbae4e5d8613be11af26e22e4826a3a500c1713e282649cd82c776167d996f90",
+      "job/assets/p0001-b0004.png": "0c0058291331ddcf4c2334c5dbf7bb321c51cb98ed4489d144d2544f1b3a8a65",
+      "job/assets/p0001-b0005.png": "806adbdb8f2282ce6d1a77592279680439d2554fd87f0ef3b5ac25ae23643cfb",
+      "job/assets/p0001-b0006.png": "c694ced86691917d69b12bb09a93ffc06e93a58f7fadda3df95b303386a66b2c",
+      "job/assets/p0001-b0007.png": "25f204c8a996f672c042c2f0cae1d0190c62f05c387ba1b6924fdd52b85d3eaa",
+      "job/assets/p0001-b0008.png": "cad7a5dcc3500c3ffa951fd4be4b99bbdf99e27797981970aec79893194459d8",
+      "job/assets/p0001-b0009.png": "0cbb51f716b1e21617f9694859531d0ba7c67d4cf59717cc629cb34d8cffdf16",
+      "job/assets/p0001-b0010.png": "aab44ea72c2515d39024f94f678dd1eedc791dbe6ad6ccdb21f849ed8309fb5b",
+      "job/assets/p0001-b0011.png": "2dd316ee22f1e48da7ab17d3180687a27b78c09bdcc3f88d1b3c2e04f70ad997",
+      "job/assets/p0001-fetch_name_0.f32": "d86ba2750663b59324be5fc1a6c5d28e63ef3e66736663d2b6e8b9c843572474",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "72273790e19ab4766265b879a1d01efdd4924362367b06f8a8fbdf748d59841b",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "006ed6e7aa7264bce1f170d55b9c883318472b3d5023e0323d12260d6497ffaf",
+      "job/assets/p0001-layout-overlay.png": "0a69cba9ce6ec556712ad7199cf051cd7a2fa92a60b31d21e767d8ecded107e6",
+      "job/assets/p0001-mask-c0.png": "e0742a4b2125bc256ed33ca25337294ef6481d90fdb1d8a6ea772726ba592dfb",
+      "job/assets/p0001-mask-c1.png": "8a49c65fe733ef19837e13c4d719e2fabe78218a53ff582dfbf279fd8234e92c",
+      "job/assets/p0001-mask-c10.png": "86ab8872c2487de243d991e4e8ae0b96b99ba7a3b8c526b1a94d0fd4485b856e",
+      "job/assets/p0001-mask-c11.png": "7338f8e62093cb0b09b420cbc1c8cd0707b8ebc04e1cff0d327c7e3cf5ed3947",
+      "job/assets/p0001-mask-c12.png": "0affbc494362a934cfba60b1fe85532045474bf12ab5ac398fbe5610e5e07bf8",
+      "job/assets/p0001-mask-c13.png": "8989c4047166ed5029431e22cabe0772508d1b520e4f984bc41ee5dddfbfb41a",
+      "job/assets/p0001-mask-c14.png": "7c877cf5f25b1d27cc1541ab9a49b3f59366256c0ed0f56f85a0b1c1437cc986",
+      "job/assets/p0001-mask-c15.png": "656c0a560ad3efd2a4be3f95446a9c7e299b90cf86bb586a91d33f6de451d2bf",
+      "job/assets/p0001-mask-c16.png": "ab8a6769f94290701b491acf4801a22e865984f0ba9ad8d1c6dac3b9dcf9d367",
+      "job/assets/p0001-mask-c17.png": "bb3aa8b896256d39a4b7be98e922ae297adb69b126547571ad6fb62fb4a95e3b",
+      "job/assets/p0001-mask-c19.png": "1c52feaa84d736a66952ee53ef84cb2b5812470d3e634063ad15fd16046226ef",
+      "job/assets/p0001-mask-c2.png": "c437482daa00fae4c26392efa174cc4de7a09b50eca49dae5e26d65e14a48380",
+      "job/assets/p0001-mask-c23.png": "45a57839f8daa62363a5f760f2df5247b4d485d6178ac8b3b5af7b1b9d8f8f60",
+      "job/assets/p0001-mask-c25.png": "89dfce102cbe050d04cbc2c701f816afa2e8236a8654df5576e4b8dfadbffb1c",
+      "job/assets/p0001-mask-c29.png": "66536d0ffcc10fe504d0c1d30d72a3bcc175a7cd68f8b308a721b90c36eb2d45",
+      "job/assets/p0001-mask-c3.png": "5e74a0d0008e44249ff60c817c1f60c8b12ab59c1b63429724921cf414d6e963",
+      "job/assets/p0001-mask-c30.png": "2722c39aafa4e726e52c76161add4c0cfa3c0402ef4ec1de2093a6de9d76a2d1",
+      "job/assets/p0001-mask-c4.png": "24dc8e942fa78af807cc05816c1571b76c6140498fc2d276ccd74ded1ca78728",
+      "job/assets/p0001-mask-c5.png": "644f85f2ac0829f9ef2476edd32255a079049f9620de1d1dc6c41e1890a2760d",
+      "job/assets/p0001-mask-c6.png": "daab14f07be5f5f73a710293f0e568cbb60a3a3482bdd27cef3dbf7d868bef09",
+      "job/assets/p0001-mask-c7.png": "24cac6951ffb28314865714089fc8415346ac634b4c001e1b4fc13541c3590a6",
+      "job/assets/p0001-mask-c8.png": "bb6d82afadd015441314bbf83c5d40f3f31c43dc433582fd77a56050077eb07c",
+      "job/assets/p0001-mask-c9.png": "1d3cfe5bc232ee013b3596900703ca91c6034d1fe038a66377116957255943e3",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "299f148f34a26657725df86432ed9ef9ef8146175ad1c31028987d22a3a6ebd4",
+      "job/document.md": "5eda945a0d867b7f552f3c09fdf9c25b3461dafc7ead0855733a25f5db90b590",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "45db43ea1f0b877aa73220d5e9af7b75ec45d8bac6040cdb643ef625d2f309f0",
+      "job/job-status.json": "09f91b23f9b7c1eb4fb0848be884560f3466ccc8818eceebef45983fcb0fefad",
+      "job/run-manifest.json": "c1584081569d59a990ecd972436a1905be7f167e1a542d741b002c3efd709c07",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "cb861e1a4743e6473eb8d7f7fcef5b196026be7277bb962c88bddade38b76455",
+      "time.txt": "ba679997f86f2bf8bc291bda2ca62e8c00e2128c834cf4cd3c6e97e1d74b3405"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "poly": [
+          669.043,
+          205.1349645461786,
+          979.3148101807548,
+          205.1349645461786,
+          979.3148101807548,
+          251.91030000000003,
+          669.043,
+          251.91030000000003
+        ],
+        "ignore": false,
+        "order": 0,
+        "anno_id": "box_id_0",
+        "attribute": {},
+        "text": "### 1.1.6【添项配凑类型】"
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          248.927,
+          279.9783,
+          409.0342,
+          279.9783,
+          409.0342,
+          313.89380000000006,
+          248.927,
+          313.89380000000006
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": "box_id_1",
+        "attribute": {},
+        "text": "#### ▲适用题型："
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          248.927,
+          341.9618,
+          762.9902,
+          341.9618,
+          762.9902,
+          381.0231,
+          248.927,
+          381.0231
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": "box_id_2",
+        "attribute": {},
+        "text": "添项配凑后可以构造利用不等式的题型；"
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          248.927,
+          409.0911,
+          410.02660000000003,
+          409.0911,
+          410.02660000000003,
+          443.9422,
+          248.927,
+          443.9422
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": "box_id_3",
+        "attribute": {},
+        "text": "#### ▲方法原理："
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          248.927,
+          462.8881,
+          500.0042,
+          462.8881,
+          500.0042,
+          501.0138,
+          248.927,
+          501.0138
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": "box_id_4",
+        "attribute": {},
+        "text": "常用添项配凑方法："
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          254.57462086033178,
+          519.9597000000001,
+          1018.5863864267722,
+          519.9597000000001,
+          1018.5863864267722,
+          703.61499812491,
+          254.57462086033178,
+          703.61499812491
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": "box_id_5",
+        "attribute": {},
+        "text": "（1）单变量观察分母：$\\left\\{\n\\begin{array}{l}\nx + \\frac{k}{x-a} = (x-a) + \\frac{k}{(x-a)} + a \\\\\nx + \\frac{k}{mx-a} = \\frac{(mx-a)}{m} + \\frac{k}{(mx-a)} + \\frac{a}{m}\n\\end{array}\n\\right.$"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          240.9878,
+          1653.9069,
+          1373.9777999999997,
+          1653.9069,
+          1373.9777999999997,
+          1726.8836999999999,
+          240.9878,
+          1726.8836999999999
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": "box_id_6",
+        "attribute": {},
+        "text": "例题1．（重庆 • 高考真题）$f ( x ) = x + \\frac { 1 } { x - 2 } ( x > 2 )$，在$ x= a $处取最小值，则 $ a  =$（ ）"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          245.94979999999998,
+          1746.9991,
+          378.6064460034182,
+          1746.9991,
+          378.6064460034182,
+          1801.03,
+          245.94979999999998,
+          1801.03
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": "box_id_7",
+        "attribute": {},
+        "text": "A. $1+\\sqrt{2}$"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          246.94219999999999,
+          1892.9527,
+          1216.0208,
+          1892.9527,
+          1216.0208,
+          1964.0583,
+          246.94219999999999,
+          1964.0583
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": "box_id_8",
+        "attribute": {},
+        "text": "例题2．（河南 • 高一阶段练习）若 $x > 1$，则$2 x + { \\frac { 6 } { x - 1 } }$的最小值为____."
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          811.9486,
+          2172.931,
+          841.059,
+          2172.931,
+          841.059,
+          2197.9583,
+          811.9486,
+          2197.9583
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": "box_id_9",
+        "attribute": {},
+        "text": "17"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          245.19754364032548,
+          714.3832193908343,
+          1262.7111169822508,
+          714.3832193908343,
+          1262.7111169822508,
+          1193.6364445398947,
+          245.19754364032548,
+          1193.6364445398947
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": "box-7tj2f543",
+        "attribute": {},
+        "text": "（2）双变量观察分母：$\\begin{cases}\n2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b} \\\\\n \\\\\n\\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1 \\\\\n \\\\\n\\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b} \\\\\n \\\\\na+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b} & \n\\end{cases}$"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          249.2079963116655,
+          1209.9819430671018,
+          991.1342703352582,
+          1209.9819430671018,
+          991.1342703352582,
+          1324.3402882841658,
+          249.2079963116655,
+          1324.3402882841658
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": "box-10te5or0",
+        "attribute": {},
+        "text": "（3）平方添项：${ \\frac { a - 3 b } { a ^ { 2 } + 9 b ^ { 2 } } } = { \\frac { a - 3 b } { \\left( a - 3 b \\right) ^ { 2 } + 6 a b } } = { \\frac { 1 } { a - 3 b + { \\frac { 6 a b } { a - 3 b } } } }$"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          249.20799631166557,
+          1333.93494192835,
+          1207.7144152891003,
+          1333.93494192835,
+          1207.7144152891003,
+          1503.7603991283395,
+          249.20799631166557,
+          1503.7603991283395
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": "box-av7da45c",
+        "attribute": {},
+        "text": "（4）同乘易化简的结构：$\\left\\{ \\begin{array} { l } { a + b = 1 + \\frac { 1 } { a } + \\frac { 1 } { b } } \\\\ {\\Rightarrow \\big ( a + b \\big ) ^ { 2 } = \\left( 1 + \\frac { 1 } { a } + \\frac { 1 } { b } \\right)  ( a + b ) =  ( a + b) + 2 + \\frac { b } { a } + \\frac { a } { b } } \\end{array} \\right.$"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          248.1724678220802,
+          1532.336726478713,
+          1405.2883049320585,
+          1532.336726478713,
+          1405.2883049320585,
+          1623.006228472807,
+          248.1724678220802,
+          1623.006228472807
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": "box-6s09k9l9",
+        "attribute": {},
+        "text": "以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习."
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          536.9183133492659,
+          1745.338939460793,
+          659.2502099539922,
+          1745.338939460793,
+          659.2502099539922,
+          1795.7108710927625,
+          536.9183133492659,
+          1795.7108710927625
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": "box-0rd1ae9i",
+        "attribute": {},
+        "text": "B. $1 + \\sqrt  { 3 }$"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          821.879676920843,
+          1762.6092909637766,
+          893.8396418935998,
+          1762.6092909637766,
+          893.8396418935998,
+          1800.0284902891942,
+          821.879676920843,
+          1800.0284902891942
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": "box-4rkui2mv",
+        "attribute": {},
+        "text": "C. 3"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1112.5978452072054,
+          1764.0485391235018,
+          1175.9225717870986,
+          1764.0485391235018,
+          1175.9225717870986,
+          1794.271685574409,
+          1112.5978452072054,
+          1794.271685574409
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": "box-7hifflu8",
+        "attribute": {},
+        "text": "D. 4"
+      }
+    ],
+    "page_info": {
+      "page_no": 0,
+      "height": 2339,
+      "width": 1654,
+      "image_path": "page-9bcba6da-bdb0-4403-97cb-8874898ac8ab.png",
+      "page_attribute": {
+        "data_source": "colorful_textbook",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [],
+        "subset": "equation_hard"
+      }
+    },
+    "extra": {
+      "relation": []
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1654,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011"
+      ],
+      "reading_order_evidence": {
+        "source": "model",
+        "reason": "unique_rank"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            673,
+            214,
+            973,
+            250
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.65185523,
+          "candidate_rank": 1,
+          "original_class_id": 12,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 78,
+          "model_label": "header",
+          "original_bbox": [
+            673.476501,
+            214.107498,
+            972.36145,
+            249.629807
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            245,
+            281,
+            415,
+            315
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.755082726,
+          "candidate_rank": 10,
+          "original_class_id": 22,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 45,
+          "model_label": "text",
+          "original_bbox": [
+            245.756058,
+            281.152374,
+            414.905914,
+            314.269257
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            241,
+            345,
+            766,
+            380
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.823939741,
+          "candidate_rank": 12,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 145,
+          "model_label": "text",
+          "original_bbox": [
+            241.766525,
+            345.185333,
+            765.747925,
+            379.929077
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            246,
+            411,
+            415,
+            444
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.762335002,
+          "candidate_rank": 16,
+          "original_class_id": 22,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 45,
+          "model_label": "text",
+          "original_bbox": [
+            246.003311,
+            411.917236,
+            414.554565,
+            443.862549
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            245,
+            465,
+            504,
+            500
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.772505224,
+          "candidate_rank": 17,
+          "original_class_id": 22,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 66,
+          "model_label": "text",
+          "original_bbox": [
+            245.456192,
+            465.139282,
+            503.192505,
+            499.178101
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            250,
+            518,
+            1262,
+            1196
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.316877514,
+          "candidate_rank": 37,
+          "original_class_id": 22,
+          "candidate_id": 29,
+          "mask_row": 29,
+          "mask_nonzero": 4860,
+          "model_label": "text",
+          "original_bbox": [
+            250.000824,
+            518.336975,
+            1261.752686,
+            1195.335083
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            256,
+            1210,
+            992,
+            1321
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.815317512,
+          "candidate_rank": 176,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 583,
+          "model_label": "text",
+          "original_bbox": [
+            256.53244,
+            1210.162598,
+            991.497803,
+            1320.666992
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            242,
+            1346,
+            1410,
+            1631
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.499312282,
+          "candidate_rank": 201,
+          "original_class_id": 22,
+          "candidate_id": 19,
+          "mask_row": 19,
+          "mask_nonzero": 2211,
+          "model_label": "text",
+          "original_bbox": [
+            242.957169,
+            1346.592285,
+            1409.008179,
+            1630.818115
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.819989145,
+          "candidate_rank": 244,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 1277,
+          "model_label": "text",
+          "original_bbox": [
+            241.486282,
+            1650.444214,
+            1376.547974,
+            1799.674438
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            242,
+            1890,
+            1216,
+            1965
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.769823551,
+          "candidate_rank": 281,
+          "original_class_id": 22,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 549,
+          "model_label": "text",
+          "original_bbox": [
+            242.757507,
+            1890.379639,
+            1215.319946,
+            1964.921631
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            809,
+            2173,
+            845,
+            2200
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.706645846,
+          "candidate_rank": 297,
+          "original_class_id": 16,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 8,
+          "model_label": "number",
+          "original_bbox": [
+            809.84198,
+            2173.781738,
+            844.231079,
+            2199.790039
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0040",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            558,
+            525,
+            950,
+            605
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.643923759,
+          "candidate_rank": 57,
+          "original_class_id": 15,
+          "candidate_id": 16,
+          "mask_row": 16,
+          "mask_nonzero": 238,
+          "model_label": "formula",
+          "original_bbox": [
+            558.514465,
+            525.368652,
+            949.5849,
+            604.752197
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0038",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            558,
+            612,
+            1018,
+            701
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.699253917,
+          "candidate_rank": 84,
+          "original_class_id": 15,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 290,
+          "model_label": "formula",
+          "original_bbox": [
+            558.81012,
+            612.276917,
+            1017.86877,
+            700.096252
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "display_formula",
+          "id": "l0049",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            564,
+            732,
+            1229,
+            810
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.391982228,
+          "candidate_rank": 109,
+          "original_class_id": 5,
+          "candidate_id": 25,
+          "mask_row": 25,
+          "mask_nonzero": 387,
+          "model_label": "formula",
+          "original_bbox": [
+            564.221619,
+            732.937256,
+            1228.8468,
+            809.76178
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0041",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            565,
+            858,
+            1121,
+            934
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.562240958,
+          "candidate_rank": 123,
+          "original_class_id": 15,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 329,
+          "model_label": "formula",
+          "original_bbox": [
+            565.303223,
+            858.27179,
+            1120.57996,
+            933.013184
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0047",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            564,
+            942,
+            1262,
+            1189
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.420082361,
+          "candidate_rank": 162,
+          "original_class_id": 15,
+          "candidate_id": 23,
+          "mask_row": 23,
+          "mask_nonzero": 1281,
+          "model_label": "formula",
+          "original_bbox": [
+            564.660217,
+            942.054138,
+            1261.99854,
+            1188.13855
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0024",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            467,
+            1211,
+            988,
+            1321
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.88318491,
+          "candidate_rank": 192,
+          "original_class_id": 15,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 408,
+          "model_label": "formula",
+          "original_bbox": [
+            467.823853,
+            1211.49353,
+            987.821594,
+            1320.21655
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0027",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            571,
+            1343,
+            1203,
+            1502
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.835879385,
+          "candidate_rank": 213,
+          "original_class_id": 15,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 685,
+          "model_label": "formula",
+          "original_bbox": [
+            571.102539,
+            1343.77368,
+            1202.15454,
+            1501.39539
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0054",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            691,
+            1534,
+            734,
+            1567
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.314414144,
+          "candidate_rank": 230,
+          "original_class_id": 15,
+          "candidate_id": 30,
+          "mask_row": 30,
+          "mask_nonzero": 12,
+          "model_label": "formula",
+          "original_bbox": [
+            691.137695,
+            1534.09583,
+            733.151611,
+            1566.59253
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0025",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            608,
+            1655,
+            907,
+            1727
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.880918205,
+          "candidate_rank": 252,
+          "original_class_id": 15,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 171,
+          "model_label": "formula",
+          "original_bbox": [
+            608.125305,
+            1655.48132,
+            906.49231,
+            1726.31409
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0032",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            577,
+            1748,
+            661,
+            1793
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.79985112,
+          "candidate_rank": 274,
+          "original_class_id": 15,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 29,
+          "model_label": "formula",
+          "original_bbox": [
+            577.522644,
+            1748.89685,
+            660.646362,
+            1792.92334
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0031",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            290,
+            1749,
+            372,
+            1794
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.814493597,
+          "candidate_rank": 268,
+          "original_class_id": 15,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 26,
+          "model_label": "formula",
+          "original_bbox": [
+            290.329407,
+            1749.31226,
+            371.751923,
+            1793.11975
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0026",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            822,
+            1895,
+            937,
+            1962
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.855029225,
+          "candidate_rank": 296,
+          "original_class_id": 15,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 55,
+          "model_label": "formula",
+          "original_bbox": [
+            822.331238,
+            1895.1925,
+            936.145752,
+            1961.59839
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            673,
+            214,
+            973,
+            250
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            245,
+            281,
+            415,
+            315
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            241,
+            345,
+            766,
+            380
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            246,
+            411,
+            415,
+            444
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            245,
+            465,
+            504,
+            500
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006",
+            "l0040",
+            "l0038",
+            "l0049",
+            "l0041",
+            "l0047"
+          ],
+          "bbox": [
+            250,
+            518,
+            1262,
+            1196
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007",
+            "l0024"
+          ],
+          "bbox": [
+            256,
+            1210,
+            992,
+            1321
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008",
+            "l0027",
+            "l0054"
+          ],
+          "bbox": [
+            242,
+            1343,
+            1410,
+            1631
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009",
+            "l0025",
+            "l0032",
+            "l0031"
+          ],
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010",
+            "l0026"
+          ],
+          "bbox": [
+            242,
+            1890,
+            1216,
+            1965
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            809,
+            2173,
+            845,
+            2200
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            673,
+            214,
+            973,
+            250
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "#### 1.1.6【添项配凑类型】\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "#### 1.1.6【添项配凑类型】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                673,
+                214,
+                973,
+                250
+              ],
+              "canvas_size": [
+                768,
+                96
+              ],
+              "content_size": [
+                768,
+                92
+              ],
+              "pad_offset": [
+                0,
+                2
+              ],
+              "scale": 2.56,
+              "rounding_error": [
+                0,
+                -0.1599999999999966
+              ],
+              "canvas_to_page_affine": [
+                0.390625,
+                0,
+                673,
+                0,
+                0.391304347826087,
+                213.2173913043478
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2455,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2125,
+                    "raw_output": "#### 1.1.6【添项配凑类型】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "#### 1.1.6【添项配凑类型】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      768,
+                      96
+                    ],
+                    "content_size": [
+                      768,
+                      92
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.1599999999999966
+                    ],
+                    "scale": 2.56,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2125,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "#### 1.1.6【添项配凑类型】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            245,
+            281,
+            415,
+            315
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## ▲适用题型：\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## ▲适用题型：\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                245,
+                281,
+                415,
+                315
+              ],
+              "canvas_size": [
+                576,
+                128
+              ],
+              "content_size": [
+                576,
+                115
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 3.388235294117647,
+              "rounding_error": [
+                0,
+                -0.20000000000000284
+              ],
+              "canvas_to_page_affine": [
+                0.2951388888888889,
+                0,
+                245,
+                0,
+                0.2956521739130435,
+                279.2260869565217
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1428,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1096,
+                    "raw_output": "## ▲适用题型：\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## ▲适用题型：\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      576,
+                      128
+                    ],
+                    "content_size": [
+                      576,
+                      115
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.20000000000000284
+                    ],
+                    "scale": 3.388235294117647,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1096,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## ▲适用题型：\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            241,
+            345,
+            766,
+            380
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "添项配凑后可以构造利用不等式的题型；\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "添项配凑后可以构造利用不等式的题型；\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 93,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                241,
+                345,
+                766,
+                380
+              ],
+              "canvas_size": [
+                992,
+                96
+              ],
+              "content_size": [
+                992,
+                66
+              ],
+              "pad_offset": [
+                0,
+                15
+              ],
+              "scale": 1.8895238095238096,
+              "rounding_error": [
+                0,
+                -0.13333333333333997
+              ],
+              "canvas_to_page_affine": [
+                0.5292338709677419,
+                0,
+                241,
+                0,
+                0.5303030303030303,
+                337.04545454545456
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2095,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1687,
+                    "raw_output": "添项配凑后可以构造利用不等式的题型；\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "添项配凑后可以构造利用不等式的题型；\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      96
+                    ],
+                    "content_size": [
+                      992,
+                      66
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      15
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.13333333333333997
+                    ],
+                    "scale": 1.8895238095238096,
+                    "token_count": 93
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1687,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "添项配凑后可以构造利用不等式的题型；\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            246,
+            411,
+            415,
+            444
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## ▲方法原理：\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "## ▲方法原理：\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                246,
+                411,
+                415,
+                444
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                119
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 3.5976331360946747,
+              "rounding_error": [
+                0,
+                0.2781065088757373
+              ],
+              "canvas_to_page_affine": [
+                0.2779605263157895,
+                0,
+                246,
+                0,
+                0.2773109243697479,
+                409.890756302521
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1837,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1511,
+                    "raw_output": "## ▲方法原理：\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## ▲方法原理：\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      119
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.2781065088757373
+                    ],
+                    "scale": 3.5976331360946747,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1511,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## ▲方法原理：\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            245,
+            465,
+            504,
+            500
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 常用添项配凑方法：\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "## 常用添项配凑方法：\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                245,
+                465,
+                504,
+                500
+              ],
+              "canvas_size": [
+                704,
+                96
+              ],
+              "content_size": [
+                704,
+                95
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 2.718146718146718,
+              "rounding_error": [
+                0,
+                -0.13513513513512976
+              ],
+              "canvas_to_page_affine": [
+                0.3678977272727273,
+                0,
+                245,
+                0,
+                0.3684210526315789,
+                465
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1801,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1514,
+                    "raw_output": "## 常用添项配凑方法：\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 常用添项配凑方法：\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      704,
+                      96
+                    ],
+                    "content_size": [
+                      704,
+                      95
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.13513513513512976
+                    ],
+                    "scale": 2.718146718146718,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1514,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 常用添项配凑方法：\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            250,
+            518,
+            1262,
+            1196
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 294,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                250,
+                518,
+                1262,
+                1196
+              ],
+              "canvas_size": [
+                672,
+                448
+              ],
+              "content_size": [
+                669,
+                448
+              ],
+              "pad_offset": [
+                1,
+                0
+              ],
+              "scale": 0.6607669616519174,
+              "rounding_error": [
+                0.3038348082595803,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.5127055306427504,
+                0,
+                248.48729446935724,
+                0,
+                1.5133928571428572,
+                518
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 9684,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 7725,
+                    "raw_output": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      672,
+                      448
+                    ],
+                    "content_size": [
+                      669,
+                      448
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      1,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.3038348082595803,
+                      0.0
+                    ],
+                    "scale": 0.6607669616519174,
+                    "token_count": 294
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 7725,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+              "nonempty_lines": 4,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            256,
+            1210,
+            992,
+            1321
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 69,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                256,
+                1210,
+                992,
+                1321
+              ],
+              "canvas_size": [
+                736,
+                96
+              ],
+              "content_size": [
+                637,
+                96
+              ],
+              "pad_offset": [
+                49,
+                0
+              ],
+              "scale": 0.8648648648648649,
+              "rounding_error": [
+                0.4594594594593673,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1554160125588697,
+                0,
+                199.3846153846154,
+                0,
+                1.15625,
+                1210
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2778,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2494,
+                    "raw_output": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      736,
+                      96
+                    ],
+                    "content_size": [
+                      637,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      49,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.4594594594593673,
+                      0.0
+                    ],
+                    "scale": 0.8648648648648649,
+                    "token_count": 69
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2494,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            242,
+            1343,
+            1410,
+            1631
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 306,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                242,
+                1343,
+                1410,
+                1631
+              ],
+              "canvas_size": [
+                1088,
+                288
+              ],
+              "content_size": [
+                1088,
+                268
+              ],
+              "pad_offset": [
+                0,
+                10
+              ],
+              "scale": 0.9315068493150684,
+              "rounding_error": [
+                0,
+                -0.27397260273971824
+              ],
+              "canvas_to_page_affine": [
+                1.0735294117647058,
+                0,
+                242,
+                0,
+                1.0746268656716418,
+                1332.2537313432836
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 6726,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4641,
+                    "raw_output": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1088,
+                      288
+                    ],
+                    "content_size": [
+                      1088,
+                      268
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      10
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.27397260273971824
+                    ],
+                    "scale": 0.9315068493150684,
+                    "token_count": 306
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4641,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            241,
+            1650,
+            1377,
+            1800
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 180,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                241,
+                1650,
+                1377,
+                1800
+              ],
+              "canvas_size": [
+                1152,
+                160
+              ],
+              "content_size": [
+                1152,
+                152
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 1.0140845070422535,
+              "rounding_error": [
+                0,
+                -0.11267605633801736
+              ],
+              "canvas_to_page_affine": [
+                0.9861111111111112,
+                0,
+                241,
+                0,
+                0.9868421052631579,
+                1646.0526315789473
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4529,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3492,
+                    "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      160
+                    ],
+                    "content_size": [
+                      1152,
+                      152
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.11267605633801736
+                    ],
+                    "scale": 1.0140845070422535,
+                    "token_count": 180
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3492,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            242,
+            1890,
+            1216,
+            1965
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 87,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                242,
+                1890,
+                1216,
+                1965
+              ],
+              "canvas_size": [
+                928,
+                96
+              ],
+              "content_size": [
+                928,
+                71
+              ],
+              "pad_offset": [
+                0,
+                12
+              ],
+              "scale": 0.9527720739219713,
+              "rounding_error": [
+                0,
+                -0.4579055441478488
+              ],
+              "canvas_to_page_affine": [
+                1.0495689655172413,
+                0,
+                242,
+                0,
+                1.056338028169014,
+                1877.3239436619717
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2600,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2192,
+                    "raw_output": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      928,
+                      96
+                    ],
+                    "content_size": [
+                      928,
+                      71
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      12
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4579055441478488
+                    ],
+                    "scale": 0.9527720739219713,
+                    "token_count": 87
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2192,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            809,
+            2173,
+            845,
+            2200
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 17\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "## 17\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                809,
+                2173,
+                845,
+                2200
+              ],
+              "canvas_size": [
+                288,
+                256
+              ],
+              "content_size": [
+                288,
+                216
+              ],
+              "pad_offset": [
+                0,
+                20
+              ],
+              "scale": 8,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.125,
+                0,
+                809,
+                0,
+                0.125,
+                2170.5
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1787,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1469,
+                    "raw_output": "## 17\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 17\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      288,
+                      256
+                    ],
+                    "content_size": [
+                      288,
+                      216
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      20
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 8.0,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1469,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 17\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0040",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0038",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0049",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0041",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0047",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0024",
+          "owner_block_id": "b0007"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0027",
+          "owner_block_id": "b0008"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0054",
+          "owner_block_id": "b0008"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0025",
+          "owner_block_id": "b0009"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0032",
+          "owner_block_id": "b0009"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0031",
+          "owner_block_id": "b0009"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0026",
+          "owner_block_id": "b0010"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 300,
+      "height": 36,
+      "bbox": [
+        673,
+        214,
+        973,
+        250
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 170,
+      "height": 34,
+      "bbox": [
+        245,
+        281,
+        415,
+        315
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 525,
+      "height": 35,
+      "bbox": [
+        241,
+        345,
+        766,
+        380
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 169,
+      "height": 33,
+      "bbox": [
+        246,
+        411,
+        415,
+        444
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 259,
+      "height": 35,
+      "bbox": [
+        245,
+        465,
+        504,
+        500
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 1012,
+      "height": 678,
+      "bbox": [
+        250,
+        518,
+        1262,
+        1196
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 736,
+      "height": 111,
+      "bbox": [
+        256,
+        1210,
+        992,
+        1321
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 1168,
+      "height": 288,
+      "bbox": [
+        242,
+        1343,
+        1410,
+        1631
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 1136,
+      "height": 150,
+      "bbox": [
+        241,
+        1650,
+        1377,
+        1800
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 974,
+      "height": 75,
+      "bbox": [
+        242,
+        1890,
+        1216,
+        1965
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 36,
+      "height": 27,
+      "bbox": [
+        809,
+        2173,
+        845,
+        2200
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## ▲适用题型：\n\n\n添项配凑后可以构造利用不等式的题型；\n\n\n## ▲方法原理：\n\n\n## 常用添项配凑方法：\n\n\n(1) 单变量观察分母:\n\n$$\\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases}$$\n\n(2) 双变量观察分母：\n\n$$\\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases}$$\n\n\n(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n\n\n(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n\n\n例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x&gt;2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n\n\n例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n\n",
+  "quality": {
+    "text": {
+      "denominator": 17,
+      "matched": 17,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 2,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": "box_id_0",
+          "category": "title",
+          "order": 0,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 17,
+          "reference_range": [
+            0,
+            17
+          ],
+          "actual_range": [
+            0,
+            18
+          ],
+          "raw_range": [
+            0,
+            18
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_1",
+          "category": "title",
+          "order": 1,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 11,
+          "reference_range": [
+            0,
+            11
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_2",
+          "category": "text_block",
+          "order": 2,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 18,
+          "reference_range": [
+            0,
+            18
+          ],
+          "actual_range": [
+            0,
+            18
+          ],
+          "raw_range": [
+            0,
+            18
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": "box_id_3",
+          "category": "title",
+          "order": 3,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 11,
+          "reference_range": [
+            0,
+            11
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_4",
+          "category": "text_block",
+          "order": 4,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 9,
+          "reference_range": [
+            0,
+            9
+          ],
+          "actual_range": [
+            0,
+            12
+          ],
+          "raw_range": [
+            0,
+            12
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_5",
+          "category": "text_block",
+          "order": 5,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 179,
+          "reference_range": [
+            0,
+            179
+          ],
+          "actual_range": [
+            0,
+            192
+          ],
+          "raw_range": [
+            0,
+            192
+          ],
+          "edit_distance": 95,
+          "raw_edit_distance": 95,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-7tj2f543",
+          "category": "text_block",
+          "order": 6,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 389,
+          "reference_range": [
+            179,
+            568
+          ],
+          "actual_range": [
+            192,
+            570
+          ],
+          "raw_range": [
+            192,
+            570
+          ],
+          "edit_distance": 24,
+          "raw_edit_distance": 24,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_6",
+          "category": "text_block",
+          "order": 10,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 89,
+          "reference_range": [
+            0,
+            89
+          ],
+          "actual_range": [
+            0,
+            64
+          ],
+          "raw_range": [
+            0,
+            64
+          ],
+          "edit_distance": 39,
+          "raw_edit_distance": 39,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_7",
+          "category": "text_block",
+          "order": 11,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 15,
+          "reference_range": [
+            89,
+            104
+          ],
+          "actual_range": [
+            64,
+            79
+          ],
+          "raw_range": [
+            64,
+            79
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": "box-0rd1ae9i",
+          "category": "text_block",
+          "order": 12,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 20,
+          "reference_range": [
+            104,
+            124
+          ],
+          "actual_range": [
+            79,
+            95
+          ],
+          "raw_range": [
+            79,
+            95
+          ],
+          "edit_distance": 6,
+          "raw_edit_distance": 6,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-4rkui2mv",
+          "category": "text_block",
+          "order": 13,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 4,
+          "reference_range": [
+            124,
+            128
+          ],
+          "actual_range": [
+            95,
+            100
+          ],
+          "raw_range": [
+            95,
+            100
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-7hifflu8",
+          "category": "text_block",
+          "order": 14,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 4,
+          "reference_range": [
+            128,
+            132
+          ],
+          "actual_range": [
+            100,
+            105
+          ],
+          "raw_range": [
+            100,
+            105
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_8",
+          "category": "text_block",
+          "order": 15,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 71,
+          "reference_range": [
+            0,
+            71
+          ],
+          "actual_range": [
+            0,
+            61
+          ],
+          "raw_range": [
+            0,
+            61
+          ],
+          "edit_distance": 19,
+          "raw_edit_distance": 19,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_9",
+          "category": "page_number",
+          "order": 16,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 2,
+          "reference_range": [
+            0,
+            2
+          ],
+          "actual_range": [
+            0,
+            5
+          ],
+          "raw_range": [
+            0,
+            5
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-10te5or0",
+          "category": "text_block",
+          "order": 7,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 190,
+          "reference_range": [
+            0,
+            190
+          ],
+          "actual_range": [
+            0,
+            108
+          ],
+          "raw_range": [
+            0,
+            108
+          ],
+          "edit_distance": 88,
+          "raw_edit_distance": 88,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-av7da45c",
+          "category": "text_block",
+          "order": 8,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 285,
+          "reference_range": [
+            0,
+            285
+          ],
+          "actual_range": [
+            0,
+            170
+          ],
+          "raw_range": [
+            0,
+            170
+          ],
+          "edit_distance": 133,
+          "raw_edit_distance": 133,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-6s09k9l9",
+          "category": "text_block",
+          "order": 9,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 53,
+          "reference_range": [
+            285,
+            338
+          ],
+          "actual_range": [
+            170,
+            223
+          ],
+          "raw_range": [
+            170,
+            223
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 1367,
+      "edit_distance": 418,
+      "raw_edit_distance": 418
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 136,
+      "evaluable": 127,
+      "correct": 127,
+      "missing_pairs": 9,
+      "unresolved_internal_pairs": [
+        [
+          "box_id_5",
+          "box-7tj2f543"
+        ],
+        [
+          "box-av7da45c",
+          "box-6s09k9l9"
+        ],
+        [
+          "box_id_6",
+          "box_id_7"
+        ],
+        [
+          "box_id_6",
+          "box-0rd1ae9i"
+        ],
+        [
+          "box_id_6",
+          "box-4rkui2mv"
+        ],
+        [
+          "box_id_6",
+          "box-7hifflu8"
+        ],
+        [
+          "box_id_7",
+          "box-0rd1ae9i"
+        ],
+        [
+          "box-0rd1ae9i",
+          "box-4rkui2mv"
+        ],
+        [
+          "box-0rd1ae9i",
+          "box-7hifflu8"
+        ]
+      ]
+    },
+    "block_statuses": {
+      "ok": 11
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [
+      {
+        "block_id": "b0006",
+        "status": "ok",
+        "signals": [
+          "repeated_16_character_fragment"
+        ]
+      }
+    ],
+    "quality_claim_blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      "box_id_0",
+      "box_id_1",
+      "box_id_3",
+      "box_id_4",
+      "box_id_5",
+      "box-7tj2f543",
+      "box_id_6",
+      "box-0rd1ae9i",
+      "box-4rkui2mv",
+      "box-7hifflu8",
+      "box_id_8",
+      "box_id_9",
+      "box-10te5or0",
+      "box-av7da45c",
+      "box-6s09k9l9"
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 17,
+    "parent_reference_count": 17
+  },
+  "alignment": [
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        "box_id_0"
+      ],
+      "expected": "### 1.1.6【添项配凑类型】",
+      "actual": "#### 1.1.6【添项配凑类型】",
+      "raw_output": "#### 1.1.6【添项配凑类型】\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        673,
+        214,
+        973,
+        250
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "#### 1.1.6【添项配凑类型】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        "box_id_1"
+      ],
+      "expected": "#### ▲适用题型：",
+      "actual": "## ▲适用题型：",
+      "raw_output": "## ▲适用题型：\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        245,
+        281,
+        415,
+        315
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## ▲适用题型：\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        "box_id_2"
+      ],
+      "expected": "添项配凑后可以构造利用不等式的题型；",
+      "actual": "添项配凑后可以构造利用不等式的题型；",
+      "raw_output": "添项配凑后可以构造利用不等式的题型；\n",
+      "edit_distance": 0,
+      "raw_edit_distance": 0,
+      "bbox": [
+        241,
+        345,
+        766,
+        380
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "添项配凑后可以构造利用不等式的题型；\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        "box_id_3"
+      ],
+      "expected": "#### ▲方法原理：",
+      "actual": "## ▲方法原理：",
+      "raw_output": "## ▲方法原理：\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        246,
+        411,
+        415,
+        444
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## ▲方法原理：\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        "box_id_4"
+      ],
+      "expected": "常用添项配凑方法：",
+      "actual": "## 常用添项配凑方法：",
+      "raw_output": "## 常用添项配凑方法：\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        245,
+        465,
+        504,
+        500
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 常用添项配凑方法：\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        "box_id_5",
+        "box-7tj2f543"
+      ],
+      "expected": "（1）单变量观察分母：$\\left\\{ \\begin{array}{l} x + \\frac{k}{x-a} = (x-a) + \\frac{k}{(x-a)} + a \\\\ x + \\frac{k}{mx-a} = \\frac{(mx-a)}{m} + \\frac{k}{(mx-a)} + \\frac{a}{m} \\end{array} \\right.$（2）双变量观察分母：$\\begin{cases} 2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b} \\\\ \\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1 \\\\ \\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b} \\\\ \\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b} & \\end{cases}$",
+      "actual": "(1) 单变量观察分母: $$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$ (2) 双变量观察分母： $$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$",
+      "raw_output": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+      "edit_distance": 119,
+      "raw_edit_distance": 119,
+      "bbox": [
+        250,
+        518,
+        1262,
+        1196
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(1) 单变量观察分母:\n\n$$ \\begin{cases}x+\\frac{k}{x-a}=\\left(x-a\\right)+\\frac{k}{\\left(x-a\\right)}+a\\\\x+\\frac{k}{mx-a}=\\frac{\\left(mx-a\\right)}{m}+\\frac{k}{\\left(mx-a\\right)}+\\frac{a}{m}\\end{cases} $$\n\n(2) 双变量观察分母：\n\n$$ \\begin{cases}2a+3b+\\frac{1}{a+b}+\\frac{1}{a+2b}=a+b+\\frac{1}{a+b}+a+2b+\\frac{1}{a+2b}\\\\ \\frac{a}{b}+\\frac{b}{a+b}=\\frac{a+b-b}{b}+\\frac{b}{a+b}=\\frac{a+b}{b}+\\frac{b}{a+b}-1\\\\ \\frac{3b+2a}{b}+\\frac{b}{a+b}=\\frac{b+2b+2a}{b}+\\frac{b}{a+b}=1+\\frac{2\\left(a+b\\right)}{b}+\\frac{b}{a+b}\\\\ a+\\frac{1}{a-b}+\\frac{1}{a+b}=a-b+\\frac{1}{a-b}+a+b+\\frac{1}{a+b}\\end{cases} $$\n",
+        "nonempty_lines": 4,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006",
+        "l0040",
+        "l0038",
+        "l0049",
+        "l0041",
+        "l0047"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        "box_id_6",
+        "box_id_7",
+        "box-0rd1ae9i",
+        "box-4rkui2mv",
+        "box-7hifflu8"
+      ],
+      "expected": "例题1．（重庆 • 高考真题）$f ( x ) = x + \\frac { 1 } { x - 2 } ( x > 2 )$，在$ x= a $处取最小值，则 $ a =$（ ）A. $1+\\sqrt{2}$B. $1 + \\sqrt { 3 }$C. 3D. 4",
+      "actual": "例题 1. (重庆·高考真题) $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（） A. $1+\\sqrt{2}$ B. $1+\\sqrt{3}$ C. 3 D. 4",
+      "raw_output": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+      "edit_distance": 47,
+      "raw_edit_distance": 47,
+      "bbox": [
+        241,
+        1650,
+        1377,
+        1800
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "例题 1. (重庆·高考真题)  $f(x)=x+\\frac{1}{x-2}$ (x>2)，在 x=a 处取最小值，则 a=（）\n\nA.  $1+\\sqrt{2}$\n\nB.  $1+\\sqrt{3}$\n\nC. 3\n\nD. 4\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009",
+        "l0025",
+        "l0032",
+        "l0031"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        "box_id_8"
+      ],
+      "expected": "例题2．（河南 • 高一阶段练习）若 $x > 1$，则$2 x + { \\frac { 6 } { x - 1 } }$的最小值为____.",
+      "actual": "例题 2.（河南·高一阶段练习）若 $x > 1$，则 $2x + \\frac{6}{x - 1}$ 的最小值为 ___.",
+      "raw_output": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+      "edit_distance": 19,
+      "raw_edit_distance": 19,
+      "bbox": [
+        242,
+        1890,
+        1216,
+        1965
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "例题 2.（河南·高一阶段练习）若  $x > 1$，则  $2x + \\frac{6}{x - 1}$ 的最小值为 ___.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010",
+        "l0026"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        "box_id_9"
+      ],
+      "expected": "17",
+      "actual": "## 17",
+      "raw_output": "## 17\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        809,
+        2173,
+        845,
+        2200
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 17\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        "box-10te5or0"
+      ],
+      "expected": "（3）平方添项：${ \\frac { a - 3 b } { a ^ { 2 } + 9 b ^ { 2 } } } = { \\frac { a - 3 b } { \\left( a - 3 b \\right) ^ { 2 } + 6 a b } } = { \\frac { 1 } { a - 3 b + { \\frac { 6 a b } { a - 3 b } } } }$",
+      "actual": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$",
+      "raw_output": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+      "edit_distance": 88,
+      "raw_edit_distance": 88,
+      "bbox": [
+        256,
+        1210,
+        992,
+        1321
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(3) 平方添项： $\\frac{a-3b}{a^{2}+9b^{2}}=\\frac{a-3b}{\\left(a-3b\\right)^{2}+6ab}=\\frac{1}{a-3b+\\frac{6ab}{a-3b}}$\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007",
+        "l0024"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        "box-av7da45c",
+        "box-6s09k9l9"
+      ],
+      "expected": "（4）同乘易化简的结构：$\\left\\{ \\begin{array} { l } { a + b = 1 + \\frac { 1 } { a } + \\frac { 1 } { b } } \\\\ {\\Rightarrow \\big ( a + b \\big ) ^ { 2 } = \\left( 1 + \\frac { 1 } { a } + \\frac { 1 } { b } \\right) ( a + b ) = ( a + b) + 2 + \\frac { b } { a } + \\frac { a } { b } } \\end{array} \\right.$以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习.",
+      "actual": "(4) 同乘易化简的结构: $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$ 以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。",
+      "raw_output": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+      "edit_distance": 134,
+      "raw_edit_distance": 134,
+      "bbox": [
+        242,
+        1343,
+        1410,
+        1631
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(4) 同乘易化简的结构:  $\\begin{cases} a+b=1+\\frac{1}{a}+\\frac{1}{b} \\\\ \\Rightarrow(a+b)^2=\\left(1+\\frac{1}{a}+\\frac{1}{b}\\right)(a+b)=(a+b)+2+\\frac{b}{a}+\\frac{a}{b} \\end{cases}$\n\n以上只是列举一部分配凑变形的方式，核心在于朝基本不等式方向构造，多观察题干条件，合理配凑，当然还得多练习。\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008",
+        "l0027",
+        "l0054"
+      ]
+    }
+  ],
+  "non_text_evidence": [],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

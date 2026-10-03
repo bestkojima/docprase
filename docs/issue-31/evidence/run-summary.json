@@ -1,0 +1,9 @@
+{
+  "completed": 38,
+  "expected": 38,
+  "expected_pages": 39,
+  "candidate_and_materials_intact": true,
+  "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "failed": [],
+  "completed_at_utc": "2026-10-02T19:30:23.456378+00:00"
+}

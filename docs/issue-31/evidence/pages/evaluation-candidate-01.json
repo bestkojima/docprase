@@ -1,0 +1,4368 @@
+{
+  "key": "evaluation/candidate-01",
+  "input": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+    "sha256": "d737d2e2ffac3874557a726d43ccc325ed36a3429bc72c71a7d0c2040d5641e2"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/evaluation/candidate-01/job"
+    ],
+    "input_sha256": "d737d2e2ffac3874557a726d43ccc325ed36a3429bc72c71a7d0c2040d5641e2",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 55.44080290501006,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "162192b596881efe85e665655c5fac4ea9370b53fb144e028fd1ad7506dd7b94",
+      "job/assets/p0001-b0002.png": "fd25397a567f536372348f8fa249fa1625543156efa28f007655788aa1e879e5",
+      "job/assets/p0001-b0003.png": "ffb734128202ef0152200109c054801cdcb9eb696a30ce3a2a3d9bc4a217c8dc",
+      "job/assets/p0001-b0004.png": "dfd7433c3a7a935186f40c0015447f99e035ba67e5533466b2526cc947d3b955",
+      "job/assets/p0001-b0005.png": "0cd9b404334ed6da0ae84b0515e0218fde11c7cb1c7f23a627a8e08cfc9daa3d",
+      "job/assets/p0001-b0006.png": "50dd3003416707f203196b251884e23b89cc04d42e0aa3b540f49a6f061062b3",
+      "job/assets/p0001-b0007.png": "e04ee217c7e1d01318431be9c2f3b897073dce1b827cf8273311b5eb5b9af18b",
+      "job/assets/p0001-b0008.png": "68d8bbfd11c79963da08e1dba0553df8448d3955d6b254d370818585ec400b5f",
+      "job/assets/p0001-b0009.png": "01f7992628305d899cf3d69185ad6f460d4e01cf308fbcb29ca7527b0a9a4ca1",
+      "job/assets/p0001-b0010.png": "6d54917a45eec1d3de4f40bf7d91bf3dd7c3e0711f682c9d040ce0a2f307a6a9",
+      "job/assets/p0001-b0011.png": "70c1e2de3f5912d6db1e15cb1858f0a9cadb745d31e461551299d609a838ead4",
+      "job/assets/p0001-fetch_name_0.f32": "2eebe64701c164827b9404c5c4734f3f750f5505200b8dad86c517ae170e04e8",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "021b40ee24db5b2cc471e24c1de157a56853b59b54834420b1fedf636b4cb98e",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "558b86fa99811e5ac51284021aa7875a1a1a386855a30aa822ec97f4ddc19c35",
+      "job/assets/p0001-layout-overlay.png": "702a0a52f742cd0f44ca784fefa3070e55af88f1b882c8dcd2c40f7216a658d8",
+      "job/assets/p0001-mask-c0.png": "b06614f8ffa751a505ac06711d8139140c9a12ccd120da0cbe2c013470d26d4f",
+      "job/assets/p0001-mask-c1.png": "7f2640be0b0c583418903fe571d62ff597eab42cc1a5641272eca29a957145b3",
+      "job/assets/p0001-mask-c10.png": "ce82676f4ea07a401dd7ca4f9d15beac9b7c26d1df5c3ddf03d72d26d74d6755",
+      "job/assets/p0001-mask-c11.png": "7830bce2e0ef63b521106b2f5a9caf0ffaa5aa99eefeb1753ac298f82709b4e7",
+      "job/assets/p0001-mask-c12.png": "dcd444fdfb9095a89f1c187be018cac62974a66b0de9f482349c40679161b42b",
+      "job/assets/p0001-mask-c13.png": "a11eba4bb36e115c930892e9485609ca44316ec59af9b37a01c3d5dcb0e53a6c",
+      "job/assets/p0001-mask-c14.png": "6f358a812508134beeef48ef3223093b93335dcba5ae8f8d7ac88b9fde0a71c8",
+      "job/assets/p0001-mask-c15.png": "427c16228b0e23ed84992d05faefb12ef7e6f702516140c35bf3bd9cc97d8798",
+      "job/assets/p0001-mask-c2.png": "dbfb09809457058237bf80d4d7549de26d1480c4d50d8bd98d09c949a6485ee0",
+      "job/assets/p0001-mask-c3.png": "9b7810c8e9c8a040a842e65713648eaeae045aff0b3350c0e6cc468afed3c7a7",
+      "job/assets/p0001-mask-c4.png": "b8388155b2aedf00fd4f3467d1ae9ac1dd11951344a417ef1c13cae624386414",
+      "job/assets/p0001-mask-c5.png": "17f2401900a428a0b2483204748aaf0421196af53843b939e4aab7ed4157bd65",
+      "job/assets/p0001-mask-c6.png": "5a28e40b6b9538b99af7bdc98e5cbe16d9ab0d727f419c6d5e07e95e43fe06bf",
+      "job/assets/p0001-mask-c7.png": "7043d0b2f0aa8a369b9a16c31404eda2af0e00ea53c9ec04bd12805cb701d3cc",
+      "job/assets/p0001-mask-c8.png": "bd90e7002d2769585f5388ae66fbdf7f5d4ee114146319520d0925ab4b385f6e",
+      "job/assets/p0001-mask-c9.png": "bc000e8f2a666b9a91be82e28871c2eac5e849debf759aab66d1e16cf89a91c6",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "69fc88be9aaae1d5ce5845eda30b271d8e572ab36051c2562b50610c445c16fd",
+      "job/document.md": "dfd89f24e46bc79ed41bb18977a25877ca361997f7e6efab8c78d922ae606045",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "b6e561981c150eb5a9d46105a868c101e3749d791c9981199e670fd026dab12f",
+      "job/job-status.json": "433d379c0d4bbb1430d943a1d8710568f4d79a3e598a94c054f6fd20390c4b1c",
+      "job/run-manifest.json": "9fe8bbe2e6dcaaebb1234f7757c7b2904c780e871bd5b297c12d2663b7e89dbe",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "a284b28c65822db68fac3f023181b503aa7cc14b5f087a6bbf3a4aee432658df",
+      "time.txt": "60fdfe5b397b264dcdf76941e4c44a99a7769808437ec1e56452376ed159d66c"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "text_block",
+        "poly": [
+          174.16821401263732,
+          128.4168218708121,
+          1243.7414170354377,
+          128.4168218708121,
+          1243.7414170354377,
+          431.8596297623917,
+          174.16821401263732,
+          431.8596297623917
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 15,
+        "text": "（2）已知线段 a=2 ，线段 b=8 ，线段 c 是 a 和 b 的比例中项，则 c 等于（     ）\nA.2 B. 4 C. $ \\pm4 $ D. 8\n（2017 安徽合肥期末）",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              200.82298278808594,
+              147.4940185546875,
+              1209.1727294921875,
+              147.4940185546875,
+              1209.1727294921875,
+              262.9529113769531,
+              200.82298278808594,
+              262.9529113769531
+            ],
+            "ignore": false,
+            "order": 2,
+            "anno_id": 5,
+            "text": "（2）已知线段 a=2 ，线段 b=8 ，线段 c 是 a 和 b 的比例中项，则 c 等于（     ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  221.333333333333,
+                  149.59955122959764,
+                  461.3333333333331,
+                  149.59955122959764,
+                  461.3333333333331,
+                  205.0716031410949,
+                  221.333333333333,
+                  205.0716031410949
+                ],
+                "text": "（2）已知线段"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  466.2019186910856,
+                  163.61595233449475,
+                  531.3162211473477,
+                  163.61595233449475,
+                  531.3162211473477,
+                  205.3298023455377,
+                  466.2019186910856,
+                  205.3298023455377
+                ],
+                "text": "a=2"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  533.333333333333,
+                  165.59506352557173,
+                  643.9999999999998,
+                  165.59506352557173,
+                  643.9999999999998,
+                  212.26958367428335,
+                  533.333333333333,
+                  212.26958367428335
+                ],
+                "text": "，线段"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  648.3184833734439,
+                  166.66818526213206,
+                  714.4501968055852,
+                  166.66818526213206,
+                  714.4501968055852,
+                  209.3994462490541,
+                  648.3184833734439,
+                  209.3994462490541
+                ],
+                "text": "b=8"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  715.9999999999995,
+                  165.59506352557173,
+                  1204.2526994404823,
+                  165.59506352557173,
+                  1204.2526994404823,
+                  215.75114501079543,
+                  715.9999999999995,
+                  215.75114501079543
+                ],
+                "text": "，线段 c 是 a 和 b 的比例中项，"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  209.3333333333328,
+                  210.66666666666708,
+                  497.7499383550894,
+                  210.66666666666708,
+                  497.7499383550894,
+                  263.1606524966544,
+                  209.3333333333328,
+                  263.1606524966544
+                ],
+                "text": "则 c 等于（     ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              204.23110961914062,
+              272.080810546875,
+              1192.9747314453125,
+              272.080810546875,
+              1192.9747314453125,
+              330.5876159667969,
+              204.23110961914062,
+              330.5876159667969
+            ],
+            "ignore": false,
+            "order": 3,
+            "anno_id": 14,
+            "text": "A.2 B. 4 C. $ \\pm4 $ D. 8",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  203.99999999999932,
+                  275.29125767406947,
+                  285.6103209249527,
+                  275.29125767406947,
+                  285.6103209249527,
+                  325.5365158463618,
+                  203.99999999999932,
+                  325.5365158463618
+                ],
+                "text": "A.2"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  462.6452691770239,
+                  282.6767667044596,
+                  538.5047797077222,
+                  282.6767667044596,
+                  538.5047797077222,
+                  321.51683609617714,
+                  462.6452691770239,
+                  321.51683609617714
+                ],
+                "text": "B. 4"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  718.7469767286614,
+                  283.8905188729507,
+                  758.1939222046245,
+                  283.8905188729507,
+                  758.1939222046245,
+                  322.7305882646683,
+                  718.7469767286614,
+                  322.7305882646683
+                ],
+                "text": "C."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  762.2464250694685,
+                  290.9319199040299,
+                  811.855993181215,
+                  290.9319199040299,
+                  811.855993181215,
+                  326.69695737994005,
+                  762.2464250694685,
+                  326.69695737994005
+                ],
+                "latex": "$ \\pm4 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  969.3867995220887,
+                  291.1730318838978,
+                  1040.3913013788222,
+                  291.1730318838978,
+                  1040.3913013788222,
+                  328.19247302287863,
+                  969.3867995220887,
+                  328.19247302287863
+                ],
+                "text": "D. 8"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              904.8732393090662,
+              342.408623770688,
+              1213.4072926629715,
+              342.408623770688,
+              1213.4072926629715,
+              391.41764307600147,
+              904.8732393090662,
+              391.41764307600147
+            ],
+            "ignore": false,
+            "order": 4,
+            "anno_id": 13,
+            "text": "（2017 安徽合肥期末）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  910.0420756592642,
+                  346.04207565926447,
+                  1213.012934572827,
+                  346.04207565926447,
+                  1213.012934572827,
+                  383.0550102320917,
+                  910.0420756592642,
+                  383.0550102320917
+                ],
+                "text": "（2017 安徽合肥期末）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          172.91431811225908,
+          468.2226108733664,
+          1255.026480138844,
+          468.2226108733664,
+          1255.026480138844,
+          766.6498351634324,
+          172.91431811225908,
+          766.6498351634324
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 16,
+        "text": "（3）一本书的宽与长之比是黄金比，书的宽为 14cm ，则它的长为（    ） cm.\nA. $ 7\\sqrt{5}-7 $ B. $ 7\\sqrt{5}+7 $ C. $ 21-7\\sqrt{5} $ D. $ 7\\sqrt{5}-21 $\n（2018 陕西西安期中）",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              195.72059631347656,
+              486.4430236816406,
+              1241.8946533203125,
+              486.4430236816406,
+              1241.8946533203125,
+              599.7443237304688,
+              195.72059631347656,
+              599.7443237304688
+            ],
+            "ignore": false,
+            "order": 6,
+            "anno_id": 4,
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为 14cm ，则它的长为（    ） cm.",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  218.66666666666634,
+                  492.8608384493797,
+                  994.2267303326933,
+                  492.8608384493797,
+                  994.2267303326933,
+                  543.8421153602485,
+                  218.66666666666634,
+                  543.8421153602485
+                ],
+                "text": "（3）一本书的宽与长之比是黄金比，书的宽为"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  1003.0326217491087,
+                  497.97817113694396,
+                  1084.6020658247999,
+                  497.97817113694396,
+                  1084.6020658247999,
+                  542.2587264923192,
+                  1003.0326217491087,
+                  542.2587264923192
+                ],
+                "text": "14cm"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1088.0978991423294,
+                  497.97817113694396,
+                  1234.9228984785736,
+                  497.97817113694396,
+                  1234.9228984785736,
+                  541.0934487198093,
+                  1088.0978991423294,
+                  541.0934487198093
+                ],
+                "text": "，则它的"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  205.333333333333,
+                  548.7087423259317,
+                  422.73677433567406,
+                  548.7087423259317,
+                  422.73677433567406,
+                  599.4170697765591,
+                  205.333333333333,
+                  599.4170697765591
+                ],
+                "text": "长为（    ）"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  433.93478025739205,
+                  563.9541023140814,
+                  490.9832466079177,
+                  563.9541023140814,
+                  490.9832466079177,
+                  595.7695931634129,
+                  433.93478025739205,
+                  595.7695931634129
+                ],
+                "text": "cm."
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              199.41953306909073,
+              607.5341434628518,
+              1165.1199816533358,
+              607.5341434628518,
+              1165.1199816533358,
+              671.0231002901897,
+              199.41953306909073,
+              671.0231002901897
+            ],
+            "ignore": false,
+            "order": 7,
+            "anno_id": 8,
+            "text": "A. $ 7\\sqrt{5}-7 $ B. $ 7\\sqrt{5}+7 $ C. $ 21-7\\sqrt{5} $ D. $ 7\\sqrt{5}-21 $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  203.99999999999986,
+                  610.6666666666669,
+                  248.24406423794937,
+                  610.6666666666669,
+                  248.24406423794937,
+                  658.6666666666669,
+                  203.99999999999986,
+                  658.6666666666669
+                ],
+                "text": "A."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  249.07652622561042,
+                  613.7676581506457,
+                  373.6773019481364,
+                  613.7676581506457,
+                  373.6773019481364,
+                  659.916093603433,
+                  249.07652622561042,
+                  659.916093603433
+                ],
+                "latex": "$ 7\\sqrt{5}-7 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  462.66666666666663,
+                  613.3333333333333,
+                  504,
+                  613.3333333333333,
+                  504,
+                  662.6666666666666,
+                  462.66666666666663,
+                  662.6666666666666
+                ],
+                "text": "B."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  507.4611326589589,
+                  614.1277993256257,
+                  634.6666666666665,
+                  614.1277993256257,
+                  634.6666666666665,
+                  666.6666666666666,
+                  507.4611326589589,
+                  666.6666666666666
+                ],
+                "latex": "$ 7\\sqrt{5}+7 $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  723.9999999999999,
+                  621.3333333333333,
+                  762.9119239378872,
+                  621.3333333333333,
+                  762.9119239378872,
+                  660,
+                  723.9999999999999,
+                  660
+                ],
+                "text": "C."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  770.553846842108,
+                  618.3825016959242,
+                  902.0768878825521,
+                  618.3825016959242,
+                  902.0768878825521,
+                  666.8383589213511,
+                  770.553846842108,
+                  666.8383589213511
+                ],
+                "latex": "$ 21-7\\sqrt{5} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  970.6666666666665,
+                  618.6666666666666,
+                  1018.8592957246366,
+                  618.6666666666666,
+                  1018.8592957246366,
+                  663.8421153602485,
+                  970.6666666666665,
+                  663.8421153602485
+                ],
+                "text": "D."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  1023.216530946119,
+                  617.2287908096047,
+                  1154.739571986563,
+                  617.2287908096047,
+                  1154.739571986563,
+                  665.6846480350314,
+                  1023.216530946119,
+                  665.6846480350314
+                ],
+                "latex": "$ 7\\sqrt{5}-21 $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              908.936471648288,
+              674.3646243337339,
+              1234.1781452199139,
+              674.3646243337339,
+              1234.1781452199139,
+              722.2598022911993,
+              908.936471648288,
+              722.2598022911993
+            ],
+            "ignore": false,
+            "order": 8,
+            "anno_id": 12,
+            "text": "（2018 陕西西安期中）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  914.2783231012415,
+                  680.7087423259312,
+                  1219.0550102320915,
+                  680.7087423259312,
+                  1219.0550102320915,
+                  716.388343565425,
+                  914.2783231012415,
+                  716.388343565425
+                ],
+                "text": "（2018 陕西西安期中）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          61.68585262591924,
+          833.9849824358864,
+          135.31863884294322,
+          833.9849824358864,
+          135.31863884294322,
+          874.2680343668206,
+          61.68585262591924,
+          874.2680343668206
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 11,
+        "text": "例3",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          189.73813890162867,
+          824.0191650390627,
+          1236.5473285191965,
+          824.0191650390627,
+          1236.5473285191965,
+          1019.8377622337239,
+          189.73813890162867,
+          1019.8377622337239
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 1,
+        "text": "如图，在 $\\bigtriangleup$ ABC中，点 D,E分别在 AB,AC上，且 $ DE\\parallel BC， $ AD=1 ， BD=2 ，那么 $ \\frac{AE}{AC} $的值为（    ）",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          591.9899291992188,
+          1024.6456298828125,
+          878.6182861328125,
+          1024.6456298828125,
+          878.6182861328125,
+          1227.8702392578125,
+          591.9899291992188,
+          1227.8702392578125
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 6,
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          186.05731723328148,
+          1247.9056781587055,
+          1143.1687730314509,
+          1247.9056781587055,
+          1143.1687730314509,
+          1300.020647479653,
+          186.05731723328148,
+          1300.020647479653
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 10,
+        "text": "A 1:2    B.1:3    C.14    D.2:3",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          917.6713096235052,
+          1311.0449679129301,
+          1239.3810240855075,
+          1311.0449679129301,
+          1239.3810240855075,
+          1350.1311949036408,
+          917.6713096235052,
+          1350.1311949036408
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 0,
+        "text": "（2018 北京房山期中）",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          167.0384887279425,
+          1468.4042480000012,
+          738.1306428049959,
+          1468.4042480000012,
+          738.1306428049959,
+          1529.3553170474847,
+          167.0384887279425,
+          1529.3553170474847
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 3,
+        "text": "模块 2 相似三角形的性质",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          59.2826424822574,
+          1636.1528159182092,
+          238.36982356663538,
+          1636.1528159182092,
+          238.36982356663538,
+          1688.5130510657605,
+          59.2826424822574,
+          1688.5130510657605
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 7,
+        "text": "知识精讲",
+        "attribute": {}
+      },
+      {
+        "category_type": "table",
+        "poly": [
+          25.84246634309701,
+          1742.922944981364,
+          1275.5047492392443,
+          1742.922944981364,
+          1275.5047492392443,
+          2107.9302115574965,
+          25.84246634309701,
+          2107.9302115574965
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 9,
+        "html": "<table border=\"1\"><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形：形状相同的图形叫做相似图形 .</td><td>两个正方形是相似图形 .</td></tr><tr><td>相似多边形：两个边数相同的多边形，如果它们的角分别相等，边成比例，则这两个多边形叫做相似多边形 .</td><td>放大后的图形和放大前的图形是相似多边形 .</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          1411.397025844191,
+          217.85121030889343,
+          1569.1395499981263,
+          217.85121030889343,
+          1569.1395499981263,
+          273.59991128918386,
+          1411.397025844191,
+          273.59991128918386
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 2,
+        "text": "不二错",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": []
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [
+          "table_full_line",
+          "table_horizontal",
+          "fuzzy_scan"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 1974,
+      "height": 2339,
+      "width": 1653,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_1141.jpg",
+      "sample_id": 401
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1653,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011"
+      ],
+      "reading_order_evidence": {
+        "source": "model",
+        "reason": "unique_rank"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "text",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            195,
+            144,
+            1211,
+            336
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.854921281,
+          "candidate_rank": 1,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 1269,
+          "model_label": "text",
+          "original_bbox": [
+            195.766388,
+            144.921387,
+            1210.016357,
+            335.920441
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            905,
+            341,
+            1214,
+            389
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.462852836,
+          "candidate_rank": 59,
+          "original_class_id": 22,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 106,
+          "model_label": "text",
+          "original_bbox": [
+            905.672546,
+            341.37323,
+            1213.995972,
+            388.314575
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.843685687,
+          "candidate_rank": 64,
+          "original_class_id": 22,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 1399,
+          "model_label": "text",
+          "original_bbox": [
+            193.83223,
+            483.006805,
+            1233.932251,
+            679.164673
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.456704736,
+          "candidate_rank": 92,
+          "original_class_id": 22,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 108,
+          "model_label": "text",
+          "original_bbox": [
+            910.205688,
+            675.445618,
+            1225.426514,
+            720.641724
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            36,
+            819,
+            1238,
+            1016
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.82348305,
+          "candidate_rank": 101,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1599,
+          "model_label": "text",
+          "original_bbox": [
+            36.423298,
+            819.046448,
+            1237.674561,
+            1015.467346
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            590,
+            1026,
+            873,
+            1229
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.911265016,
+          "candidate_rank": 154,
+          "original_class_id": 14,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 408,
+          "model_label": "image",
+          "original_bbox": [
+            590.832642,
+            1026.135742,
+            872.546082,
+            1228.729004
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            186,
+            1245,
+            1138,
+            1304
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.735230863,
+          "candidate_rank": 160,
+          "original_class_id": 22,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 381,
+          "model_label": "text",
+          "original_bbox": [
+            186.782761,
+            1245.856445,
+            1137.769409,
+            1303.042725
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            921,
+            1305,
+            1240,
+            1352
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.422507018,
+          "candidate_rank": 199,
+          "original_class_id": 22,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 113,
+          "model_label": "text",
+          "original_bbox": [
+            921.220154,
+            1305.166382,
+            1239.151123,
+            1351.754517
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            58,
+            1461,
+            743,
+            1538
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.619011939,
+          "candidate_rank": 202,
+          "original_class_id": 17,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 367,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            58.263813,
+            1461.038452,
+            742.44342,
+            1537.898193
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            59,
+            1631,
+            248,
+            1689
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.73692286,
+          "candidate_rank": 214,
+          "original_class_id": 17,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 88,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            59.160542,
+            1631.494263,
+            247.313187,
+            1688.441528
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "table",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            26,
+            1746,
+            1267,
+            2098
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.926135778,
+          "candidate_rank": 229,
+          "original_class_id": 21,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 3013,
+          "model_label": "table",
+          "original_bbox": [
+            26.567219,
+            1746.171143,
+            1266.834229,
+            2097.251709
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0028",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            248,
+            612,
+            375,
+            660
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.725635111,
+          "candidate_rank": 77,
+          "original_class_id": 15,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 45,
+          "model_label": "formula",
+          "original_bbox": [
+            248.361465,
+            612.235657,
+            374.980072,
+            659.768677
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0024",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            506,
+            612,
+            635,
+            664
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.762214482,
+          "candidate_rank": 80,
+          "original_class_id": 15,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 57,
+          "model_label": "formula",
+          "original_bbox": [
+            506.175354,
+            612.29187,
+            634.372253,
+            663.92572
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0023",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            763,
+            616,
+            904,
+            667
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.762432694,
+          "candidate_rank": 85,
+          "original_class_id": 15,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 50,
+          "model_label": "formula",
+          "original_bbox": [
+            763.722412,
+            616.787781,
+            903.296509,
+            666.171875
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0025",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            1020,
+            616,
+            1158,
+            666
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.747591615,
+          "candidate_rank": 89,
+          "original_class_id": 15,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 48,
+          "model_label": "formula",
+          "original_bbox": [
+            1020.15399,
+            616.167297,
+            1157.65015,
+            665.1474
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0022",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            564,
+            915,
+            626,
+            1005
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.770206511,
+          "candidate_rank": 140,
+          "original_class_id": 15,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 47,
+          "model_label": "formula",
+          "original_bbox": [
+            564.327209,
+            915.849792,
+            625.518494,
+            1004.98755
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            195,
+            144,
+            1211,
+            336
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            905,
+            341,
+            1214,
+            389
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003",
+            "l0028",
+            "l0024",
+            "l0023",
+            "l0025"
+          ],
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005",
+            "l0022"
+          ],
+          "bbox": [
+            36,
+            819,
+            1238,
+            1016
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            590,
+            1026,
+            873,
+            1229
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            186,
+            1245,
+            1138,
+            1304
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            921,
+            1305,
+            1240,
+            1352
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            58,
+            1461,
+            743,
+            1538
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            59,
+            1631,
+            248,
+            1689
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            26,
+            1746,
+            1267,
+            2098
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "table"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": 1,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            195,
+            144,
+            1211,
+            336
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 192,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                195,
+                144,
+                1211,
+                336
+              ],
+              "canvas_size": [
+                1024,
+                192
+              ],
+              "content_size": [
+                1016,
+                192
+              ],
+              "pad_offset": [
+                4,
+                0
+              ],
+              "scale": 1,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1,
+                0,
+                191,
+                0,
+                1,
+                144
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5355,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4128,
+                    "raw_output": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      192
+                    ],
+                    "content_size": [
+                      1016,
+                      192
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      4,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 1.0,
+                    "token_count": 192
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4128,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            905,
+            341,
+            1214,
+            389
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## (2017 安徽合肥期末)\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## (2017 安徽合肥期末)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                905,
+                341,
+                1214,
+                389
+              ],
+              "canvas_size": [
+                672,
+                128
+              ],
+              "content_size": [
+                672,
+                104
+              ],
+              "pad_offset": [
+                0,
+                12
+              ],
+              "scale": 2.174757281553398,
+              "rounding_error": [
+                0,
+                -0.38834951456310307
+              ],
+              "canvas_to_page_affine": [
+                0.45982142857142855,
+                0,
+                905,
+                0,
+                0.46153846153846156,
+                335.46153846153845
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2269,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1839,
+                    "raw_output": "## (2017 安徽合肥期末)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## (2017 安徽合肥期末)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      672,
+                      128
+                    ],
+                    "content_size": [
+                      672,
+                      104
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      12
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.38834951456310307
+                    ],
+                    "scale": 2.174757281553398,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1839,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## (2017 安徽合肥期末)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            193,
+            483,
+            1234,
+            680
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 198,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                193,
+                483,
+                1234,
+                680
+              ],
+              "canvas_size": [
+                1056,
+                192
+              ],
+              "content_size": [
+                1015,
+                192
+              ],
+              "pad_offset": [
+                20,
+                0
+              ],
+              "scale": 0.9746192893401016,
+              "rounding_error": [
+                0.42131979695432165,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.025615763546798,
+                0,
+                172.48768472906403,
+                0,
+                1.0260416666666667,
+                483
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4870,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3627,
+                    "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      192
+                    ],
+                    "content_size": [
+                      1015,
+                      192
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      20,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.42131979695432165,
+                      0.0
+                    ],
+                    "scale": 0.9746192893401016,
+                    "token_count": 198
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3627,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            910,
+            675,
+            1226,
+            721
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## (2018 陕西西安期中)\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "## (2018 陕西西安期中)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                910,
+                675,
+                1226,
+                721
+              ],
+              "canvas_size": [
+                672,
+                128
+              ],
+              "content_size": [
+                672,
+                98
+              ],
+              "pad_offset": [
+                0,
+                15
+              ],
+              "scale": 2.1265822784810124,
+              "rounding_error": [
+                1.1368683772161603e-13,
+                0.17721518987342222
+              ],
+              "canvas_to_page_affine": [
+                0.47023809523809523,
+                0,
+                910,
+                0,
+                0.46938775510204084,
+                667.9591836734694
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2035,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1646,
+                    "raw_output": "## (2018 陕西西安期中)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## (2018 陕西西安期中)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      672,
+                      128
+                    ],
+                    "content_size": [
+                      672,
+                      98
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      15
+                    ],
+                    "rounding_error": [
+                      1.1368683772161603e-13,
+                      0.17721518987342222
+                    ],
+                    "scale": 2.1265822784810124,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1646,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## (2018 陕西西安期中)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            36,
+            819,
+            1238,
+            1016
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 228,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                36,
+                819,
+                1238,
+                1016
+              ],
+              "canvas_size": [
+                1216,
+                192
+              ],
+              "content_size": [
+                1171,
+                192
+              ],
+              "pad_offset": [
+                22,
+                0
+              ],
+              "scale": 0.9746192893401016,
+              "rounding_error": [
+                -0.49238578680206047,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.026473099914603,
+                0,
+                13.417591801878736,
+                0,
+                1.0260416666666667,
+                819
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4331,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2941,
+                    "raw_output": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1216,
+                      192
+                    ],
+                    "content_size": [
+                      1171,
+                      192
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      22,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.49238578680206047,
+                      0.0
+                    ],
+                    "scale": 0.9746192893401016,
+                    "token_count": 228
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2941,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            590,
+            1026,
+            873,
+            1229
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            186,
+            1245,
+            1138,
+            1304
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                186,
+                1245,
+                1138,
+                1304
+              ],
+              "canvas_size": [
+                1056,
+                64
+              ],
+              "content_size": [
+                1033,
+                64
+              ],
+              "pad_offset": [
+                11,
+                0
+              ],
+              "scale": 1.0847457627118644,
+              "rounding_error": [
+                0.32203389830510787,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.9215876089060987,
+                0,
+                175.8625363020329,
+                0,
+                0.921875,
+                1245
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2078,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1784,
+                    "raw_output": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      64
+                    ],
+                    "content_size": [
+                      1033,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      11,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.32203389830510787,
+                      0.0
+                    ],
+                    "scale": 1.0847457627118644,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1784,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+              "nonempty_lines": 4,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            921,
+            1305,
+            1240,
+            1352
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## (2018 北京房山期中)\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "## (2018 北京房山期中)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                921,
+                1305,
+                1240,
+                1352
+              ],
+              "canvas_size": [
+                672,
+                128
+              ],
+              "content_size": [
+                672,
+                99
+              ],
+              "pad_offset": [
+                0,
+                14
+              ],
+              "scale": 2.1065830721003134,
+              "rounding_error": [
+                0,
+                -0.00940438871472793
+              ],
+              "canvas_to_page_affine": [
+                0.47470238095238093,
+                0,
+                921,
+                0,
+                0.47474747474747475,
+                1298.3535353535353
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2037,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1657,
+                    "raw_output": "## (2018 北京房山期中)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## (2018 北京房山期中)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      672,
+                      128
+                    ],
+                    "content_size": [
+                      672,
+                      99
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      14
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.00940438871472793
+                    ],
+                    "scale": 2.1065830721003134,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1657,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## (2018 北京房山期中)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            58,
+            1461,
+            743,
+            1538
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 模块 2 相似三角形的性质\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "## 模块 2 相似三角形的性质\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                58,
+                1461,
+                743,
+                1538
+              ],
+              "canvas_size": [
+                768,
+                96
+              ],
+              "content_size": [
+                768,
+                86
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 1.121167883211679,
+              "rounding_error": [
+                -1.1368683772161603e-13,
+                -0.3299270072992755
+              ],
+              "canvas_to_page_affine": [
+                0.8919270833333334,
+                0,
+                58,
+                0,
+                0.8953488372093024,
+                1456.5232558139535
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1874,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1545,
+                    "raw_output": "## 模块 2 相似三角形的性质\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 模块 2 相似三角形的性质\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      768,
+                      96
+                    ],
+                    "content_size": [
+                      768,
+                      86
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      -1.1368683772161603e-13,
+                      -0.3299270072992755
+                    ],
+                    "scale": 1.121167883211679,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1545,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 模块 2 相似三角形的性质\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            59,
+            1631,
+            248,
+            1689
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 知识精讲\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "## 知识精讲\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                59,
+                1631,
+                248,
+                1689
+              ],
+              "canvas_size": [
+                480,
+                160
+              ],
+              "content_size": [
+                480,
+                147
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 2.5396825396825395,
+              "rounding_error": [
+                0,
+                -0.30158730158728986
+              ],
+              "canvas_to_page_affine": [
+                0.39375,
+                0,
+                59,
+                0,
+                0.3945578231292517,
+                1628.6326530612246
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1809,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1487,
+                    "raw_output": "## 知识精讲\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 知识精讲\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      160
+                    ],
+                    "content_size": [
+                      480,
+                      147
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.30158730158728986
+                    ],
+                    "scale": 2.5396825396825395,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1487,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 知识精讲\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            26,
+            1746,
+            1267,
+            2098
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "html",
+            "text": "<table><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>",
+            "resource": "assets/p0001-b0011.png",
+            "table": {
+              "rows": 3,
+              "columns": 2,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "定义",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "示例剖析",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "相似图形:形状相同的图形叫做相似图形.",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "两个正方形是相似图形.",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "放大后的图形和放大前的图形是相似多边形.",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "<table border=1><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 288,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                26,
+                1746,
+                1267,
+                2098
+              ],
+              "canvas_size": [
+                1024,
+                288
+              ],
+              "content_size": [
+                1015,
+                288
+              ],
+              "pad_offset": [
+                4,
+                0
+              ],
+              "scale": 0.8181818181818182,
+              "rounding_error": [
+                -0.36363636363637397,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.2226600985221674,
+                0,
+                21.10935960591133,
+                0,
+                1.2222222222222223,
+                1746
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 6203,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4218,
+                    "raw_output": "<table border=1><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "<table border=1><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      288
+                    ],
+                    "content_size": [
+                      1015,
+                      288
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      4,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.36363636363637397,
+                      0.0
+                    ],
+                    "scale": 0.8181818181818182,
+                    "token_count": 288
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4218,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "<table border=1><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0028",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0024",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0023",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0025",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0022",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0010",
+          "target_block_id": "b0011",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 1016,
+      "height": 192,
+      "bbox": [
+        195,
+        144,
+        1211,
+        336
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 309,
+      "height": 48,
+      "bbox": [
+        905,
+        341,
+        1214,
+        389
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 1041,
+      "height": 197,
+      "bbox": [
+        193,
+        483,
+        1234,
+        680
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 316,
+      "height": 46,
+      "bbox": [
+        910,
+        675,
+        1226,
+        721
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 1202,
+      "height": 197,
+      "bbox": [
+        36,
+        819,
+        1238,
+        1016
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 283,
+      "height": 203,
+      "bbox": [
+        590,
+        1026,
+        873,
+        1229
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 952,
+      "height": 59,
+      "bbox": [
+        186,
+        1245,
+        1138,
+        1304
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 319,
+      "height": 47,
+      "bbox": [
+        921,
+        1305,
+        1240,
+        1352
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 685,
+      "height": 77,
+      "bbox": [
+        58,
+        1461,
+        743,
+        1538
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 189,
+      "height": 58,
+      "bbox": [
+        59,
+        1631,
+        248,
+        1689
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1241,
+      "height": 352,
+      "bbox": [
+        26,
+        1746,
+        1267,
+        2098
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n\n\n## (2017 安徽合肥期末)\n\n\n（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n\n\n## (2018 陕西西安期中)\n\n\n例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n\n\n![插图](assets/p0001-b0006.png)\n\nA. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n\n\n## (2018 北京房山期中)\n\n\n## 模块 2 相似三角形的性质\n\n\n## 知识精讲\n\n\n<table><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+  "quality": {
+    "text": {
+      "denominator": 9,
+      "matched": 8,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 1,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 2,
+      "rows": [
+        {
+          "annotation_id": 15,
+          "category": "text_block",
+          "order": 1,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 89,
+          "reference_range": [
+            0,
+            89
+          ],
+          "actual_range": [
+            0,
+            84
+          ],
+          "raw_range": [
+            0,
+            84
+          ],
+          "edit_distance": 31,
+          "raw_edit_distance": 31,
+          "exact": false
+        },
+        {
+          "annotation_id": 16,
+          "category": "text_block",
+          "order": 5,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 132,
+          "reference_range": [
+            0,
+            132
+          ],
+          "actual_range": [
+            0,
+            113
+          ],
+          "raw_range": [
+            0,
+            113
+          ],
+          "edit_distance": 30,
+          "raw_edit_distance": 30,
+          "exact": false
+        },
+        {
+          "annotation_id": 11,
+          "category": "title",
+          "order": 9,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 2,
+          "reference_range": [
+            0,
+            2
+          ],
+          "actual_range": [
+            0,
+            2
+          ],
+          "raw_range": [
+            0,
+            2
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 1,
+          "category": "text_block",
+          "order": 10,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 104,
+          "reference_range": [
+            2,
+            106
+          ],
+          "actual_range": [
+            2,
+            67
+          ],
+          "raw_range": [
+            2,
+            67
+          ],
+          "edit_distance": 45,
+          "raw_edit_distance": 45,
+          "exact": false
+        },
+        {
+          "annotation_id": 10,
+          "category": "text_block",
+          "order": 12,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 22,
+          "reference_range": [
+            0,
+            22
+          ],
+          "actual_range": [
+            0,
+            27
+          ],
+          "raw_range": [
+            0,
+            27
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 0,
+          "category": "text_block",
+          "order": 13,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 13,
+          "reference_range": [
+            0,
+            13
+          ],
+          "actual_range": [
+            0,
+            16
+          ],
+          "raw_range": [
+            0,
+            16
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "title",
+          "order": 14,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 13,
+          "reference_range": [
+            0,
+            13
+          ],
+          "actual_range": [
+            0,
+            16
+          ],
+          "raw_range": [
+            0,
+            16
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "title",
+          "order": 15,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "header",
+          "order": null,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 3,
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0002",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 16
+        },
+        {
+          "block_id": "b0004",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 16
+        }
+      ],
+      "reference_chars": 382,
+      "edit_distance": 157,
+      "raw_edit_distance": 125
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 1,
+      "matched": 1,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 9,
+          "category": "table",
+          "order": 16,
+          "block_id": "b0011",
+          "coverage": 0.9577,
+          "status": "ok",
+          "structure_exact": true,
+          "cell_exact": 2,
+          "cell_denominator": 6,
+          "exact": false,
+          "reading_order_position": 10
+        }
+      ],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 1,
+      "matched": 1,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 1,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 6,
+          "category": "figure",
+          "order": 11,
+          "block_id": "b0006",
+          "coverage": 0.9739,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 5
+        }
+      ],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 5,
+      "matched": 5,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 5,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "parent_annotation_id": 15,
+          "block_id": "b0001",
+          "status": "ok",
+          "exact": true,
+          "reference": "$ \\pm4 $",
+          "actual_range": [
+            72,
+            79
+          ]
+        },
+        {
+          "parent_annotation_id": 16,
+          "block_id": "b0003",
+          "status": "ok",
+          "exact": true,
+          "reference": "$ 7\\sqrt{5}-7 $",
+          "actual_range": [
+            47,
+            60
+          ]
+        },
+        {
+          "parent_annotation_id": 16,
+          "block_id": "b0003",
+          "status": "ok",
+          "exact": true,
+          "reference": "$ 7\\sqrt{5}+7 $",
+          "actual_range": [
+            64,
+            77
+          ]
+        },
+        {
+          "parent_annotation_id": 16,
+          "block_id": "b0003",
+          "status": "ok",
+          "exact": true,
+          "reference": "$ 21-7\\sqrt{5} $",
+          "actual_range": [
+            81,
+            95
+          ]
+        },
+        {
+          "parent_annotation_id": 16,
+          "block_id": "b0003",
+          "status": "ok",
+          "exact": true,
+          "reference": "$ 7\\sqrt{5}-21 $",
+          "actual_range": [
+            99,
+            113
+          ]
+        }
+      ],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 45,
+      "evaluable": 44,
+      "correct": 44,
+      "missing_pairs": 1,
+      "unresolved_internal_pairs": [
+        [
+          11,
+          1
+        ]
+      ]
+    },
+    "block_statuses": {
+      "ok": 11
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "table:inexact_or_missing",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "table:inexact_or_missing",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "unresolved_annotation_ids": [
+      15,
+      16,
+      1,
+      10,
+      0,
+      3,
+      7,
+      2
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 11,
+    "parent_reference_count": 11
+  },
+  "alignment": [
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        15
+      ],
+      "expected": "（2）已知线段 a=2 ，线段 b=8 ，线段 c 是 a 和 b 的比例中项，则 c 等于（ ） A.2 B. 4 C. $ \\pm4 $ D. 8 （2017 安徽合肥期末）",
+      "actual": "（2）已知线段 $a=2$，线段 $b=8$，线段 $c$ 是 $a$ 和 $b$ 的比例中项，则 $c$ 等于（） A. 2 B. 4 C. $\\pm 4$ D. 8",
+      "raw_output": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+      "edit_distance": 31,
+      "raw_edit_distance": 31,
+      "bbox": [
+        195,
+        144,
+        1211,
+        336
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "（2）已知线段  $a=2$，线段  $b=8$，线段  $c$ 是  $a$ 和  $b$ 的比例中项，则  $c$ 等于（）\n\nA. 2\n\nB. 4\n\nC.  $\\pm 4$\n\nD. 8\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        16
+      ],
+      "expected": "（3）一本书的宽与长之比是黄金比，书的宽为 14cm ，则它的长为（ ） cm. A. $ 7\\sqrt{5}-7 $ B. $ 7\\sqrt{5}+7 $ C. $ 21-7\\sqrt{5} $ D. $ 7\\sqrt{5}-21 $ （2018 陕西西安期中）",
+      "actual": "（3）一本书的宽与长之比是黄金比，书的宽为 $14 \\, cm$，则它的长为（）cm. A. $7\\sqrt{5}-7$ B. $7\\sqrt{5}+7$ C. $21-7\\sqrt{5}$ D. $7\\sqrt{5}-21$",
+      "raw_output": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+      "edit_distance": 30,
+      "raw_edit_distance": 30,
+      "bbox": [
+        193,
+        483,
+        1234,
+        680
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "（3）一本书的宽与长之比是黄金比，书的宽为  $14 \\, cm$，则它的长为（）cm.\n\nA.  $7\\sqrt{5}-7$ B.  $7\\sqrt{5}+7$ C.  $21-7\\sqrt{5}$ D.  $7\\sqrt{5}-21$\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003",
+        "l0028",
+        "l0024",
+        "l0023",
+        "l0025"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        11,
+        1
+      ],
+      "expected": "例3如图，在 $\\bigtriangleup$ ABC中，点 D,E分别在 AB,AC上，且 $ DE\\parallel BC， $ AD=1 ， BD=2 ，那么 $ \\frac{AE}{AC} $的值为（ ）",
+      "actual": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）",
+      "raw_output": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+      "edit_distance": 45,
+      "raw_edit_distance": 45,
+      "bbox": [
+        36,
+        819,
+        1238,
+        1016
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "例3 如图，在△ABC中，点D，E分别在AB，AC上，且DE∥BC，AD=1，BD=2，那么 $\\frac{AE}{AC}$的值为（）\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005",
+        "l0022"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        10
+      ],
+      "expected": "A 1:2 B.1:3 C.14 D.2:3",
+      "actual": "A. 1:2 B. 1:3 C. 1:4 D. 2:3",
+      "raw_output": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        186,
+        1245,
+        1138,
+        1304
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "A. 1:2\n\nB. 1:3\n\nC. 1:4\n\nD. 2:3\n",
+        "nonempty_lines": 4,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "（2018 北京房山期中）",
+      "actual": "## (2018 北京房山期中)",
+      "raw_output": "## (2018 北京房山期中)\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        921,
+        1305,
+        1240,
+        1352
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## (2018 北京房山期中)\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "模块 2 相似三角形的性质",
+      "actual": "## 模块 2 相似三角形的性质",
+      "raw_output": "## 模块 2 相似三角形的性质\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        58,
+        1461,
+        743,
+        1538
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 模块 2 相似三角形的性质\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        7
+      ],
+      "expected": "知识精讲",
+      "actual": "## 知识精讲",
+      "raw_output": "## 知识精讲\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        59,
+        1631,
+        248,
+        1689
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 知识精讲\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "table",
+      "annotation_id": 9,
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          25.84246634309701,
+          1742.922944981364,
+          1275.5047492392443,
+          1742.922944981364,
+          1275.5047492392443,
+          2107.9302115574965,
+          25.84246634309701,
+          2107.9302115574965
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 9,
+        "html": "<table border=\"1\"><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形：形状相同的图形叫做相似图形 .</td><td>两个正方形是相似图形 .</td></tr><tr><td>相似多边形：两个边数相同的多边形，如果它们的角分别相等，边成比例，则这两个多边形叫做相似多边形 .</td><td>放大后的图形和放大前的图形是相似多边形 .</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "raw_output": "<table border=1><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>\n",
+      "content": {
+        "format": "html",
+        "text": "<table><tr><td>定义</td><td>示例剖析</td></tr><tr><td>相似图形:形状相同的图形叫做相似图形.</td><td>两个正方形是相似图形.</td></tr><tr><td>相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.</td><td>放大后的图形和放大前的图形是相似多边形.</td></tr></table>",
+        "resource": "assets/p0001-b0011.png",
+        "table": {
+          "rows": 3,
+          "columns": 2,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "定义",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "示例剖析",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似图形:形状相同的图形叫做相似图形.",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "两个正方形是相似图形.",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "相似多边形:两个边数相同的多边形,如果它们的角分别相等,边成比例,则这两个多边形叫做相似多边形.",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "放大后的图形和放大前的图形是相似多边形.",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "error": null,
+      "status": "ok",
+      "exact": false
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 6,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          591.9899291992188,
+          1024.6456298828125,
+          878.6182861328125,
+          1024.6456298828125,
+          878.6182861328125,
+          1227.8702392578125,
+          591.9899291992188,
+          1227.8702392578125
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 6,
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0006.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [
+    {
+      "parent_annotation_id": 15,
+      "block_id": "b0001",
+      "status": "ok",
+      "exact": true,
+      "reference": "$ \\pm4 $",
+      "actual_range": [
+        72,
+        79
+      ],
+      "observed_parent_formulas": [
+        {
+          "range": [
+            8,
+            13
+          ],
+          "latex": "a=2"
+        },
+        {
+          "range": [
+            17,
+            22
+          ],
+          "latex": "b=8"
+        },
+        {
+          "range": [
+            26,
+            29
+          ],
+          "latex": "c"
+        },
+        {
+          "range": [
+            32,
+            35
+          ],
+          "latex": "a"
+        },
+        {
+          "range": [
+            38,
+            41
+          ],
+          "latex": "b"
+        },
+        {
+          "range": [
+            50,
+            53
+          ],
+          "latex": "c"
+        },
+        {
+          "range": [
+            72,
+            79
+          ],
+          "latex": "\\pm 4"
+        }
+      ],
+      "classification": "strict_match"
+    },
+    {
+      "parent_annotation_id": 16,
+      "block_id": "b0003",
+      "status": "ok",
+      "exact": true,
+      "reference": "$ 7\\sqrt{5}-7 $",
+      "actual_range": [
+        47,
+        60
+      ],
+      "observed_parent_formulas": [
+        {
+          "range": [
+            22,
+            32
+          ],
+          "latex": "14 \\, cm"
+        },
+        {
+          "range": [
+            47,
+            60
+          ],
+          "latex": "7\\sqrt{5}-7"
+        },
+        {
+          "range": [
+            64,
+            77
+          ],
+          "latex": "7\\sqrt{5}+7"
+        },
+        {
+          "range": [
+            81,
+            95
+          ],
+          "latex": "21-7\\sqrt{5}"
+        },
+        {
+          "range": [
+            99,
+            113
+          ],
+          "latex": "7\\sqrt{5}-21"
+        }
+      ],
+      "classification": "strict_match"
+    },
+    {
+      "parent_annotation_id": 16,
+      "block_id": "b0003",
+      "status": "ok",
+      "exact": true,
+      "reference": "$ 7\\sqrt{5}+7 $",
+      "actual_range": [
+        64,
+        77
+      ],
+      "observed_parent_formulas": [
+        {
+          "range": [
+            22,
+            32
+          ],
+          "latex": "14 \\, cm"
+        },
+        {
+          "range": [
+            47,
+            60
+          ],
+          "latex": "7\\sqrt{5}-7"
+        },
+        {
+          "range": [
+            64,
+            77
+          ],
+          "latex": "7\\sqrt{5}+7"
+        },
+        {
+          "range": [
+            81,
+            95
+          ],
+          "latex": "21-7\\sqrt{5}"
+        },
+        {
+          "range": [
+            99,
+            113
+          ],
+          "latex": "7\\sqrt{5}-21"
+        }
+      ],
+      "classification": "strict_match"
+    },
+    {
+      "parent_annotation_id": 16,
+      "block_id": "b0003",
+      "status": "ok",
+      "exact": true,
+      "reference": "$ 21-7\\sqrt{5} $",
+      "actual_range": [
+        81,
+        95
+      ],
+      "observed_parent_formulas": [
+        {
+          "range": [
+            22,
+            32
+          ],
+          "latex": "14 \\, cm"
+        },
+        {
+          "range": [
+            47,
+            60
+          ],
+          "latex": "7\\sqrt{5}-7"
+        },
+        {
+          "range": [
+            64,
+            77
+          ],
+          "latex": "7\\sqrt{5}+7"
+        },
+        {
+          "range": [
+            81,
+            95
+          ],
+          "latex": "21-7\\sqrt{5}"
+        },
+        {
+          "range": [
+            99,
+            113
+          ],
+          "latex": "7\\sqrt{5}-21"
+        }
+      ],
+      "classification": "strict_match"
+    },
+    {
+      "parent_annotation_id": 16,
+      "block_id": "b0003",
+      "status": "ok",
+      "exact": true,
+      "reference": "$ 7\\sqrt{5}-21 $",
+      "actual_range": [
+        99,
+        113
+      ],
+      "observed_parent_formulas": [
+        {
+          "range": [
+            22,
+            32
+          ],
+          "latex": "14 \\, cm"
+        },
+        {
+          "range": [
+            47,
+            60
+          ],
+          "latex": "7\\sqrt{5}-7"
+        },
+        {
+          "range": [
+            64,
+            77
+          ],
+          "latex": "7\\sqrt{5}+7"
+        },
+        {
+          "range": [
+            81,
+            95
+          ],
+          "latex": "21-7\\sqrt{5}"
+        },
+        {
+          "range": [
+            99,
+            113
+          ],
+          "latex": "7\\sqrt{5}-21"
+        }
+      ],
+      "classification": "strict_match"
+    }
+  ],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

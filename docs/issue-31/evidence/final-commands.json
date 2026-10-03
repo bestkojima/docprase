@@ -1,0 +1,32 @@
+[
+  {
+    "command": [
+      "python3.12",
+      "scripts/issue31_run.py",
+      "--cli",
+      "build/issue31/dococr_cli",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "python3.12",
+      "scripts/issue31_suite.py",
+      "verify-exports",
+      "--run",
+      "/home/dr/project/docprase/output/issue31-final-20261003"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "python3.12",
+      "tests/issue27_real.py",
+      "/home/dr/project/docprase/output/issue31-final-20261003",
+      "--safety"
+    ],
+    "returncode": 0
+  }
+]

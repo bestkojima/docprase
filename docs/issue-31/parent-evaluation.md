@@ -19,18 +19,18 @@
 
 对数列页六个公式只改变去边处理，保持 Ovis、提示词和 65536–313600 像素预算。`b0006` 原始转写的 `2^{54}` 恢复为 `2^{64}`；其他五项没有观察到新数值/字母错误，`b0017` 出现标题标记及分隔符、句点变化。完整前后原始响应、命令、裁图 SHA 见 `evidence/margin-probe.json`，实验程序见 `evidence/margin-probe.py`。
 
-**去边仍为诊断实验，未进入生产。** 尚未覆盖其他公式/淡色符号，也未建立去边后视觉坐标与原始资源之间的生产追溯契约。不能将该单页实验当作全量改善，更不能按标准答案选择实验输出。此前统一提高公式预算产生退化的历史证据继续保留。
+**最终生产没有启用去边。** 后续建立过可追溯实际输入坐标的生产候选，但旧公式页实跑出现 `α→a` 与指数因子缺失，已完整撤回。不能将该单页实验当作全量改善，更不能按标准答案选择实验输出。完整生产对照及否决依据见 [诊断](diagnosis.md)。此前统一提高公式预算产生退化的历史证据继续保留。
 
 ## 全量运行
 
 ```bash
-python3.12 scripts/issue31_run.py --cli build/issue31/dococr_cli --out output/issue31-full-20261003
-python3.12 scripts/issue31_suite.py verify-exports --run output/issue31-full-20261003
-python3.12 scripts/issue31_suite.py report --run output/issue31-full-20261003
+python3.12 scripts/issue31_run.py --cli build/issue31/dococr_cli --out output/issue31-new-run
+python3.12 scripts/issue31_suite.py verify-exports --run output/issue31-new-run
+python3.12 scripts/issue31_suite.py report --run output/issue31-new-run
 ```
 
 复用已验证的串行运行器，每次启动 38 个全新公共 CLI 作业、共 39 页（20 页开发集、旧 7 页，其中一项为 2 页 PDF，以及 12 页全集）。冻结实际模型、二进制、动态库、源码、配置、输入、GT、评分工具、Schema 和数学渲染器。旧版本评分工具保留；仅给共用运行器添加可选冻结函数，默认仍为 #27。
 
 新验收使用当前生产 Schema 路径，并分别对首次导出和生产 JSON 重导出的 Markdown 调用实际 KaTeX。资源尺寸、SHA、字节等价与内容质量分别记录。自动化和真实取消/超时/重试隔离的凭据必须绑定本次候选及评测 SHA，旧凭据不能复用。报告退出码 2 表示有效报告但条件未通过；冻结或输入非法为 1。
 
-本轮材料及六公式实验均为已曝光开发资料，不声明独立泛化质量。完整质量结果及尚未满足项在新跑结束后追加；工程通过不代表 #31 产品质量达标。
+本轮材料及六公式实验均为已曝光开发资料，不声明独立泛化质量。成功完整新跑目录为 `output/issue31-final-20261003`，38 作业/39 页工程通过，开发集及评测全集各仅 2/8 项质量指标通过。完整结果及尚未满足项见 [results.md](results.md)；工程通过不代表 #31 产品质量达标。

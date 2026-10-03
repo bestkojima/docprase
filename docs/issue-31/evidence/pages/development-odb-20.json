@@ -1,0 +1,5482 @@
+{
+  "key": "development/odb-20",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+    "sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-20/job"
+    ],
+    "input_sha256": "fd348e3efe10dfe25ccab55bb180051a2e0e925d6c3f841b39a69b53ddf4637b",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 67.83815073501319,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "faad7ca2dd1eccc5d688094fc9e29bc0d68ca39b26d9147e52293456ebf67e01",
+      "job/assets/p0001-b0002.png": "1434f34ce23cb0f3db41b34ad47ffa6601f00b7d4a99d2ea0ef088d59816a9a7",
+      "job/assets/p0001-b0003.png": "c0e29b5a77fc417d4beff92d48c9c7ab255a806bb4070bb93ab3c3646d973cda",
+      "job/assets/p0001-b0004.png": "cbb2f972b65b7a4e1cf204e1d6020d4252ff29554ca54e7d0d2ced6351cfdbc6",
+      "job/assets/p0001-b0005.png": "9c41740258c54c06ef6842929050295ce198ff96e27a86d18a031095984d18a1",
+      "job/assets/p0001-b0006.png": "be50a67c2d11cffe85ccc80a4e7efaf41d680574ccfdf08e8a62b10a077a39f5",
+      "job/assets/p0001-b0007.png": "e2931bfcd98fd8d9d8de23a6c05c70de272e9904a366c77c593596ae84ccc168",
+      "job/assets/p0001-b0008.png": "54be0e75d4c2e67469728710715f0fcbd40250dfe1a5f5fc302712e6eb4a6128",
+      "job/assets/p0001-b0009.png": "b849ff4a7082648769c0e77783dc7ade43e5bfb93e05a54d1d58a580323fadce",
+      "job/assets/p0001-b0010.png": "ea04ef4159f249cc0f4b7359f412030bc34d58bd6210906dc7fdb8b9d11579f7",
+      "job/assets/p0001-b0011.png": "270527656e757dc54a66fb434cb4590797953913449d3c8d6dd18cdb95297722",
+      "job/assets/p0001-b0012.png": "c8b90012959140702dd27cdb3f1db34dc11ec14554e27832e12d5747d65445b5",
+      "job/assets/p0001-b0013.png": "10b3c46dd51854904b78e7bef9a014742c2fd3607427d73c51444bfba84ec33b",
+      "job/assets/p0001-b0014.png": "c648f5f126c9d7089e9d76d5af225f8c3fad229e56b456dd4978db91caf9a5f9",
+      "job/assets/p0001-b0015.png": "119d5fd59616aadb515fd5184f49210db90e0251c6c68ce2a18c85fb76f97461",
+      "job/assets/p0001-b0016.png": "51db2298ae723372a40cc2d120ff075f74e017b6843ba5a4b17d8b4ae9954615",
+      "job/assets/p0001-fetch_name_0.f32": "e0db323331445b0a9cc99719a60233ab607316d74f55fb0f5883b7430b7065d1",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "d235d5e5ec521285c17b3f1a1937667f5d348d52247021ec1f24ee71a691611d",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "623f7cd4d0888e67445e4977e73ea134156e0698f3bda324a72b34fc7f970e3e",
+      "job/assets/p0001-layout-overlay.png": "f5ac0a39e51107f373cf86f3e128573d219bae8ce2864800815c772356cb1aa2",
+      "job/assets/p0001-mask-c0.png": "7e1a8b986e01cf01b9bfb26c70989f03a5ab674e902715e53f7a76026a3654bf",
+      "job/assets/p0001-mask-c1.png": "d2a2492a56f43c3a29ea71b67c6fbd4affe5f98a1a5444b046767f3674fb9b1b",
+      "job/assets/p0001-mask-c10.png": "b8e7dde1e72ccaf606de8b365d59ddc2ce3a31d417cde65abc25021bbba69f59",
+      "job/assets/p0001-mask-c11.png": "97090e4ac32c1c5eeff811326b0e3de52510e3f7d2fd4f2845b72ccc19ce31ca",
+      "job/assets/p0001-mask-c12.png": "c9e988fc2841026d28f0bacda4baa40fa2189996aaec8163c8f18ea3f19b0328",
+      "job/assets/p0001-mask-c13.png": "59a4d483765b6cf9f19cb1726f3dbbe2f64bac8b0ec86427f4b9c3abe60e5f1a",
+      "job/assets/p0001-mask-c14.png": "772f98094c8ea39b12f8a4f79f845759913e89d0665fdfcd45106766ee8e90a8",
+      "job/assets/p0001-mask-c15.png": "6181be14fc568b5afebb832022575e484a179ca93f8f0021db398cbef588ac9f",
+      "job/assets/p0001-mask-c2.png": "84da6b2b47e50e7fce062a369f26e8ebc3419209a12432f7c20b91d478cf9d2c",
+      "job/assets/p0001-mask-c3.png": "be5dd8bbfcc94e90e4aeb0e608393812c78f7b529bba5e39bd7ce9f5ff245e9d",
+      "job/assets/p0001-mask-c4.png": "7fb88d60e747ae1ee9f16a7c656b63a39e203df7e4b42f31c2c56af2119cba71",
+      "job/assets/p0001-mask-c5.png": "e4610e9b3e8998a9913668a2c39de378bcc256798dbc0ef3b93982ce8c966488",
+      "job/assets/p0001-mask-c6.png": "d2a5e87a93b6efe5e182b9491a8a9b39dd0c6e32c62bc2c8a61ece5146ead952",
+      "job/assets/p0001-mask-c7.png": "7d5567716ab5ba911a4985d51fd9d44aa2f08e87adbc03904fc07162b60175c4",
+      "job/assets/p0001-mask-c8.png": "25967653d3ed6461537f74d8ffb1c24fc95876eacf79a4ec26b6d2e5da101119",
+      "job/assets/p0001-mask-c9.png": "9e6d01a007090a4a57c336eff865ade1c03e7ca06688b76111ee6e391f5cfcf4",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "52c606c710268c512701ec0e48553ade537839a29d8fba059da544a53cc16315",
+      "job/document.md": "9af6ab32a5f4f8b9678bfd8d1c8f3e113a6be1479ee28e04c084c382676b12f2",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "95a101baed23b4d2e098d3071d7735cd2368020f1a70b95d9cbb5c983c62d7f0",
+      "job/job-status.json": "6f80f47f068a3d54e45dc6b3047f541b84d8e417669d9184fd77ced68326d5f7",
+      "job/run-manifest.json": "9faeff33fcc6987e19b7d33817fb979d25e914856b09bcf3eaea73d5676f44c4",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "af89c0056fa881bb4a72171c66829dcc83f12b0445b63205ed7c157b6270e29f",
+      "time.txt": "754052dafe326f4b49dcdfb016e859b5b571ad99191417ca18105dd5477e0a98"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "page_info": {
+      "image_path": "exam_paper_2018年广西北海、钦州、南宁、来宾、崇左、防城港、北部湾经济区中考英语试题（空白卷）_page_001.png",
+      "page_no": 1,
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "en_ch_mixed",
+        "layout": "single_column",
+        "special_issue": [
+          "None"
+        ],
+        "subset": "v1.5"
+      },
+      "width": 1654,
+      "height": 2339,
+      "sample_id": 1279
+    },
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "anno_id": 1,
+        "order": 1,
+        "ignore": false,
+        "poly": [
+          348,
+          141.33333333333334,
+          1306.6666666666667,
+          141.33333333333334,
+          1306.6666666666667,
+          197.33333333333334,
+          348,
+          197.33333333333334
+        ],
+        "attribute": {},
+        "text": "2018年广西北部湾经济区初中学业水平统一考试"
+      },
+      {
+        "category_type": "title",
+        "anno_id": 2,
+        "order": 2,
+        "ignore": false,
+        "poly": [
+          778.6666666666666,
+          228,
+          874.6666666666666,
+          228,
+          874.6666666666666,
+          282.6666666666667,
+          778.6666666666666,
+          282.6666666666667
+        ],
+        "attribute": {},
+        "text": "英语"
+      },
+      {
+        "category_type": "title",
+        "anno_id": 3,
+        "order": 3,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          310.6666666666667,
+          270.6666666666667,
+          310.6666666666667,
+          270.6666666666667,
+          350.6666666666667,
+          146.66666666666666,
+          350.6666666666667
+        ],
+        "attribute": {},
+        "text": "笔试部分"
+      },
+      {
+        "category_type": "title",
+        "anno_id": 4,
+        "order": 4,
+        "ignore": false,
+        "poly": [
+          149.33333333333334,
+          374.6666666666667,
+          332,
+          374.6666666666667,
+          332,
+          417.3333333333333,
+          149.33333333333334,
+          417.3333333333333
+        ],
+        "attribute": {},
+        "text": "二.单项选择"
+      },
+      {
+        "category_type": "title",
+        "anno_id": 5,
+        "order": 5,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          438.6666666666667,
+          1501.3333333333333,
+          438.6666666666667,
+          1501.3333333333333,
+          548,
+          146.66666666666666,
+          548
+        ],
+        "attribute": {},
+        "text": "从下列每小题所给的A、B、C、D四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 6,
+        "order": 6,
+        "ignore": false,
+        "poly": [
+          143.99999999999986,
+          574.6666666666669,
+          487.73925311698645,
+          574.6666666666669,
+          487.73925311698645,
+          615.8394517868583,
+          143.99999999999986,
+          615.8394517868583
+        ],
+        "attribute": {},
+        "text": "1. ——Happy New Year!"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 29,
+        "order": 7,
+        "ignore": false,
+        "poly": [
+          148.0213361138277,
+          633.2180908693531,
+          535.3550038931465,
+          633.2180908693531,
+          535.3550038931465,
+          679.5695312153595,
+          148.0213361138277,
+          679.5695312153595
+        ],
+        "attribute": {},
+        "text": "——.____."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 7,
+        "order": 8,
+        "ignore": false,
+        "poly": [
+          147.88256033264975,
+          707.3920531670087,
+          1402.6666666666667,
+          707.3920531670087,
+          1402.6666666666667,
+          742.6666666666664,
+          147.88256033264975,
+          742.6666666666664
+        ],
+        "attribute": {},
+        "text": "A. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 8,
+        "order": 9,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          770.6666666666666,
+          953.3333333333334,
+          770.6666666666666,
+          953.3333333333334,
+          808,
+          146.66666666666666,
+          808
+        ],
+        "attribute": {},
+        "text": "2. My uncle works in a hospital. He is a/an____."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 9,
+        "order": 10,
+        "ignore": false,
+        "poly": [
+          148.872189110577,
+          837.3333333333336,
+          1284.8721891105774,
+          837.3333333333336,
+          1284.8721891105774,
+          872,
+          148.872189110577,
+          872
+        ],
+        "attribute": {},
+        "text": "A. singer B. farmer C. actor D. doctor"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 10,
+        "order": 11,
+        "ignore": false,
+        "poly": [
+          148,
+          900,
+          1013.3333333333334,
+          900,
+          1013.3333333333334,
+          937.3333333333334,
+          148,
+          937.3333333333334
+        ],
+        "attribute": {},
+        "text": "3. The strawberries____delicious. You can have a try."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 11,
+        "order": 12,
+        "ignore": false,
+        "poly": [
+          148,
+          966.6666666666666,
+          1274.6666666666667,
+          966.6666666666666,
+          1274.6666666666667,
+          1001.3333333333334,
+          148,
+          1001.3333333333334
+        ],
+        "attribute": {},
+        "text": "A. eat B. drink C. taste D. sound"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 12,
+        "order": 13,
+        "ignore": false,
+        "poly": [
+          145.33333333333334,
+          1029.3333333333333,
+          1222.6666666666667,
+          1029.3333333333333,
+          1222.6666666666667,
+          1068,
+          145.33333333333334,
+          1068
+        ],
+        "attribute": {},
+        "text": "4. Tony always works hard. Of all the students, he did ____ in this exam."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 13,
+        "order": 14,
+        "ignore": false,
+        "poly": [
+          148,
+          1097.3333333333333,
+          1250.6666666666667,
+          1097.3333333333333,
+          1250.6666666666667,
+          1132,
+          148,
+          1132
+        ],
+        "attribute": {},
+        "text": "A. good B. well C. better D. best"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 14,
+        "order": 15,
+        "ignore": false,
+        "poly": [
+          144,
+          1161.3333333333333,
+          1076,
+          1161.3333333333333,
+          1076,
+          1197.3333333333333,
+          144,
+          1197.3333333333333
+        ],
+        "attribute": {},
+        "text": "5. Don't worried. This girl is old enough to look after____."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 15,
+        "order": 16,
+        "ignore": false,
+        "poly": [
+          145.33333333333337,
+          1226.666666666667,
+          1244,
+          1226.666666666667,
+          1244,
+          1261.3333333333333,
+          145.33333333333337,
+          1261.3333333333333
+        ],
+        "attribute": {},
+        "text": "A. herself B. her C. hers D. she"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 16,
+        "order": 17,
+        "ignore": false,
+        "poly": [
+          144,
+          1290.6666666666667,
+          925.3333333333334,
+          1290.6666666666667,
+          925.3333333333334,
+          1328,
+          144,
+          1328
+        ],
+        "attribute": {},
+        "text": "6. ____ the map and tell me where Shanghai is."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 17,
+        "order": 18,
+        "ignore": false,
+        "poly": [
+          150.66666666666666,
+          1356,
+          1320,
+          1356,
+          1320,
+          1392,
+          150.66666666666666,
+          1392
+        ],
+        "attribute": {},
+        "text": "A. Look around B. Look like C. Look at D. Look out"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 18,
+        "order": 19,
+        "ignore": false,
+        "poly": [
+          142.6666666666668,
+          1420.4356771191533,
+          487.66064177510157,
+          1420.4356771191533,
+          487.66064177510157,
+          1470.8753963818353,
+          142.6666666666668,
+          1470.8753963818353
+        ],
+        "attribute": {},
+        "text": "7. ——Is this your camera?"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 28,
+        "order": 20,
+        "ignore": false,
+        "poly": [
+          144.82794678956154,
+          1475.6767935596422,
+          767.0848049358814,
+          1475.6767935596422,
+          767.0848049358814,
+          1527.0726402501934,
+          144.82794678956154,
+          1527.0726402501934
+        ],
+        "attribute": {},
+        "text": "——Yes, I____it for two weeks."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 19,
+        "order": 21,
+        "ignore": false,
+        "poly": [
+          152,
+          1552,
+          1348,
+          1552,
+          1348,
+          1586.6666666666667,
+          152,
+          1586.6666666666667
+        ],
+        "attribute": {},
+        "text": "A. bought B. had C. have had D. have bought"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 20,
+        "order": 22,
+        "ignore": false,
+        "poly": [
+          145.33333333333334,
+          1616,
+          789.3333333333334,
+          1616,
+          789.3333333333334,
+          1652,
+          145.33333333333334,
+          1652
+        ],
+        "attribute": {},
+        "text": "8. The woman in a hat is___aunt."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 21,
+        "order": 23,
+        "ignore": false,
+        "poly": [
+          144,
+          1681.3333333333333,
+          1386.6666666666667,
+          1681.3333333333333,
+          1386.6666666666667,
+          1717.3333333333333,
+          144,
+          1717.3333333333333
+        ],
+        "attribute": {},
+        "text": "A. Jack and John B. Jack's and John C. Jack's and John's D. Jack and John's"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 22,
+        "order": 24,
+        "ignore": false,
+        "poly": [
+          144,
+          1745.3333333333333,
+          1084,
+          1745.3333333333333,
+          1084,
+          1782.6666666666667,
+          144,
+          1782.6666666666667
+        ],
+        "attribute": {},
+        "text": "9. Our teacher often tells us ____in the river. It's dangerous."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 23,
+        "order": 25,
+        "ignore": false,
+        "poly": [
+          146.66666666666666,
+          1812,
+          1326.6666666666667,
+          1812,
+          1326.6666666666667,
+          1846.6666666666667,
+          146.66666666666666,
+          1846.6666666666667
+        ],
+        "attribute": {},
+        "text": "A. not swim B. not to swim C. to swim D. swimming"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 24,
+        "order": 26,
+        "ignore": false,
+        "poly": [
+          148.00000000000017,
+          1874.5348604599665,
+          1009.3333333333336,
+          1874.5348604599665,
+          1009.3333333333336,
+          1911.8681937932995,
+          148.00000000000017,
+          1911.8681937932995
+        ],
+        "attribute": {},
+        "text": "10. As soon as she ____in Nanning, she will call you."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 25,
+        "order": 27,
+        "ignore": false,
+        "poly": [
+          144,
+          1940,
+          1293.3333333333333,
+          1940,
+          1293.3333333333333,
+          1977.3333333333333,
+          144,
+          1977.3333333333333
+        ],
+        "attribute": {},
+        "text": "A. arrives B. arrive C. will arrive D. arrived"
+      },
+      {
+        "category_type": "title",
+        "anno_id": 26,
+        "order": 28,
+        "ignore": false,
+        "poly": [
+          148,
+          2001.3333333333333,
+          356,
+          2001.3333333333333,
+          356,
+          2044,
+          148,
+          2044
+        ],
+        "attribute": {},
+        "text": "三．完形填空"
+      },
+      {
+        "category_type": "title",
+        "anno_id": 27,
+        "order": 29,
+        "ignore": false,
+        "poly": [
+          145.33333333333334,
+          2065.3333333333335,
+          1477.3333333333333,
+          2065.3333333333335,
+          1477.3333333333333,
+          2110.6666666666665,
+          145.33333333333334,
+          2110.6666666666665
+        ],
+        "attribute": {},
+        "text": "阅读下面短文，掌握其大意，然后从各题所给的A、B、C、D四个选项中选出最佳选项，"
+      }
+    ],
+    "extra": {
+      "relation": []
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1654,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011",
+        "b0012",
+        "b0013",
+        "b0014",
+        "b0015",
+        "b0016"
+      ],
+      "reading_order_evidence": {
+        "source": "model",
+        "reason": "unique_rank"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011",
+          "b0012",
+          "b0013",
+          "b0014",
+          "b0015",
+          "b0016"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013",
+          "r0014",
+          "r0015",
+          "r0016"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013",
+          "r0014",
+          "r0015",
+          "r0016"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "doc_title",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            345,
+            142,
+            1306,
+            283
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.901615977,
+          "candidate_rank": 16,
+          "original_class_id": 6,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 1031,
+          "model_label": "doc_title",
+          "original_bbox": [
+            345.67572,
+            142.047546,
+            1305.257935,
+            282.315002
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            142,
+            312,
+            274,
+            351
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.410746157,
+          "candidate_rank": 25,
+          "original_class_id": 17,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 36,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            142.134918,
+            312.214386,
+            273.666962,
+            350.436401
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            143,
+            373,
+            334,
+            419
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.601673067,
+          "candidate_rank": 29,
+          "original_class_id": 17,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 68,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            143.885178,
+            373.919159,
+            333.874359,
+            418.316742
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            140,
+            439,
+            1504,
+            551
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.396775097,
+          "candidate_rank": 36,
+          "original_class_id": 22,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 1053,
+          "model_label": "text",
+          "original_bbox": [
+            140.030838,
+            439.94397,
+            1503.366577,
+            550.044739
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            137,
+            574,
+            1404,
+            744
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.831791401,
+          "candidate_rank": 74,
+          "original_class_id": 22,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 1587,
+          "model_label": "text",
+          "original_bbox": [
+            137.180588,
+            574.393005,
+            1403.990601,
+            743.434082
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            139,
+            770,
+            1285,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.909258902,
+          "candidate_rank": 97,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 903,
+          "model_label": "text",
+          "original_bbox": [
+            139.288544,
+            770.57196,
+            1284.499023,
+            873.953186
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            140,
+            898,
+            1278,
+            1004
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.915609062,
+          "candidate_rank": 121,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 888,
+          "model_label": "text",
+          "original_bbox": [
+            140.322418,
+            898.835876,
+            1277.773071,
+            1003.971558
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            140,
+            1030,
+            1258,
+            1135
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.917710483,
+          "candidate_rank": 155,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 864,
+          "model_label": "text",
+          "original_bbox": [
+            140.314926,
+            1030.405396,
+            1257.190308,
+            1134.2677
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            140,
+            1160,
+            1252,
+            1264
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.923841178,
+          "candidate_rank": 183,
+          "original_class_id": 22,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 855,
+          "model_label": "text",
+          "original_bbox": [
+            140.433624,
+            1160.928589,
+            1251.303833,
+            1263.931152
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            140,
+            1289,
+            1318,
+            1394
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.923320413,
+          "candidate_rank": 202,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 902,
+          "model_label": "text",
+          "original_bbox": [
+            140.620499,
+            1289.926025,
+            1317.459229,
+            1393.84082
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            137,
+            1419,
+            1354,
+            1590
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.92942816,
+          "candidate_rank": 232,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 1491,
+          "model_label": "text",
+          "original_bbox": [
+            137.362259,
+            1419.523315,
+            1353.887451,
+            1589.874512
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            138,
+            1614,
+            1393,
+            1719
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.923975885,
+          "candidate_rank": 256,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 962,
+          "model_label": "text",
+          "original_bbox": [
+            138.479599,
+            1614.920044,
+            1392.230591,
+            1718.835449
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            139,
+            1744,
+            1332,
+            1849
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.925209105,
+          "candidate_rank": 274,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 918,
+          "model_label": "text",
+          "original_bbox": [
+            139.977646,
+            1744.303589,
+            1331.552246,
+            1848.681152
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            139,
+            1874,
+            1301,
+            1979
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.911335886,
+          "candidate_rank": 279,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 893,
+          "model_label": "text",
+          "original_bbox": [
+            139.600281,
+            1874.553101,
+            1300.293091,
+            1978.294434
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0015",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            142,
+            2000,
+            361,
+            2043
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.838149548,
+          "candidate_rank": 289,
+          "original_class_id": 17,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 76,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            142.188919,
+            2000.649658,
+            360.211395,
+            2042.707764
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0016",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            137,
+            2065,
+            1483,
+            2110
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.648678839,
+          "candidate_rank": 297,
+          "original_class_id": 22,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 351,
+          "model_label": "text",
+          "original_bbox": [
+            137.782074,
+            2065.799316,
+            1482.333862,
+            2109.290283
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            345,
+            142,
+            1306,
+            283
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            142,
+            312,
+            274,
+            351
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            143,
+            373,
+            334,
+            419
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            140,
+            439,
+            1504,
+            551
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            137,
+            574,
+            1404,
+            744
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            139,
+            770,
+            1285,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            140,
+            898,
+            1278,
+            1004
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            140,
+            1030,
+            1258,
+            1135
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            140,
+            1160,
+            1252,
+            1264
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            140,
+            1289,
+            1318,
+            1394
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            137,
+            1419,
+            1354,
+            1590
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            138,
+            1614,
+            1393,
+            1719
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            139,
+            1744,
+            1332,
+            1849
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014"
+          ],
+          "bbox": [
+            139,
+            1874,
+            1301,
+            1979
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0015",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0015"
+          ],
+          "bbox": [
+            142,
+            2000,
+            361,
+            2043
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0016",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0016"
+          ],
+          "bbox": [
+            137,
+            2065,
+            1483,
+            2110
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": 1,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            345,
+            142,
+            1306,
+            283
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 120,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                345,
+                142,
+                1306,
+                283
+              ],
+              "canvas_size": [
+                960,
+                128
+              ],
+              "content_size": [
+                872,
+                128
+              ],
+              "pad_offset": [
+                44,
+                0
+              ],
+              "scale": 0.9078014184397163,
+              "rounding_error": [
+                -0.39716312056737024,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1020642201834863,
+                0,
+                296.5091743119266,
+                0,
+                1.1015625,
+                142
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3126,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2533,
+                    "raw_output": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      960,
+                      128
+                    ],
+                    "content_size": [
+                      872,
+                      128
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      44,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.39716312056737024,
+                      0.0
+                    ],
+                    "scale": 0.9078014184397163,
+                    "token_count": 120
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2533,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            142,
+            312,
+            274,
+            351
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 笔试部分\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## 笔试部分\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                142,
+                312,
+                274,
+                351
+              ],
+              "canvas_size": [
+                480,
+                160
+              ],
+              "content_size": [
+                480,
+                142
+              ],
+              "pad_offset": [
+                0,
+                9
+              ],
+              "scale": 3.6363636363636362,
+              "rounding_error": [
+                0,
+                0.18181818181818699
+              ],
+              "canvas_to_page_affine": [
+                0.275,
+                0,
+                142,
+                0,
+                0.2746478873239437,
+                309.5281690140845
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1805,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1486,
+                    "raw_output": "## 笔试部分\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 笔试部分\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      160
+                    ],
+                    "content_size": [
+                      480,
+                      142
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      9
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.18181818181818699
+                    ],
+                    "scale": 3.6363636363636362,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1486,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 笔试部分\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            143,
+            373,
+            334,
+            419
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "### 二. 单项选择\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "### 二. 单项选择\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 68,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                143,
+                373,
+                334,
+                419
+              ],
+              "canvas_size": [
+                544,
+                128
+              ],
+              "content_size": [
+                531,
+                128
+              ],
+              "pad_offset": [
+                6,
+                0
+              ],
+              "scale": 2.782608695652174,
+              "rounding_error": [
+                -0.47826086956524705,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.35969868173258,
+                0,
+                140.8418079096045,
+                0,
+                0.359375,
+                373
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1781,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1498,
+                    "raw_output": "### 二. 单项选择\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "### 二. 单项选择\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      544,
+                      128
+                    ],
+                    "content_size": [
+                      531,
+                      128
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      6,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.47826086956524705,
+                      0.0
+                    ],
+                    "scale": 2.782608695652174,
+                    "token_count": 68
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1498,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "### 二. 单项选择\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            140,
+            439,
+            1504,
+            551
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 172,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                140,
+                439,
+                1504,
+                551
+              ],
+              "canvas_size": [
+                1376,
+                128
+              ],
+              "content_size": [
+                1376,
+                113
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 1.0087976539589443,
+              "rounding_error": [
+                0,
+                0.014662756598241344
+              ],
+              "canvas_to_page_affine": [
+                0.9912790697674418,
+                0,
+                140,
+                0,
+                0.9911504424778761,
+                432.0619469026549
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3358,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2478,
+                    "raw_output": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1376,
+                      128
+                    ],
+                    "content_size": [
+                      1376,
+                      113
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.014662756598241344
+                    ],
+                    "scale": 1.0087976539589443,
+                    "token_count": 172
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2478,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            137,
+            574,
+            1404,
+            744
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 200,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                137,
+                574,
+                1404,
+                744
+              ],
+              "canvas_size": [
+                1280,
+                160
+              ],
+              "content_size": [
+                1192,
+                160
+              ],
+              "pad_offset": [
+                44,
+                0
+              ],
+              "scale": 0.9411764705882353,
+              "rounding_error": [
+                -0.4705882352941444,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0629194630872483,
+                0,
+                90.23154362416108,
+                0,
+                1.0625,
+                574
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3730,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2652,
+                    "raw_output": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1280,
+                      160
+                    ],
+                    "content_size": [
+                      1192,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      44,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4705882352941444,
+                      0.0
+                    ],
+                    "scale": 0.9411764705882353,
+                    "token_count": 200
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2652,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+              "nonempty_lines": 3,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            139,
+            770,
+            1285,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 108,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                139,
+                770,
+                1285,
+                874
+              ],
+              "canvas_size": [
+                1152,
+                96
+              ],
+              "content_size": [
+                1058,
+                96
+              ],
+              "pad_offset": [
+                47,
+                0
+              ],
+              "scale": 0.9230769230769231,
+              "rounding_error": [
+                0.15384615384618883,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0831758034026464,
+                0,
+                88.09073724007561,
+                0,
+                1.0833333333333333,
+                770
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2600,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2091,
+                    "raw_output": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      96
+                    ],
+                    "content_size": [
+                      1058,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      47,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.15384615384618883,
+                      0.0
+                    ],
+                    "scale": 0.9230769230769231,
+                    "token_count": 108
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2091,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            140,
+            898,
+            1278,
+            1004
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 108,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                140,
+                898,
+                1278,
+                1004
+              ],
+              "canvas_size": [
+                1152,
+                96
+              ],
+              "content_size": [
+                1031,
+                96
+              ],
+              "pad_offset": [
+                60,
+                0
+              ],
+              "scale": 0.9056603773584906,
+              "rounding_error": [
+                0.35849056603774443,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1037827352085354,
+                0,
+                73.77303588748788,
+                0,
+                1.1041666666666667,
+                898
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2169,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1664,
+                    "raw_output": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      96
+                    ],
+                    "content_size": [
+                      1031,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      60,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.35849056603774443,
+                      0.0
+                    ],
+                    "scale": 0.9056603773584906,
+                    "token_count": 108
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1664,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            140,
+            1030,
+            1258,
+            1135
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 105,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                140,
+                1030,
+                1258,
+                1135
+              ],
+              "canvas_size": [
+                1120,
+                96
+              ],
+              "content_size": [
+                1022,
+                96
+              ],
+              "pad_offset": [
+                49,
+                0
+              ],
+              "scale": 0.9142857142857143,
+              "rounding_error": [
+                -0.17142857142857792,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0939334637964775,
+                0,
+                86.3972602739726,
+                0,
+                1.09375,
+                1030
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2609,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2139,
+                    "raw_output": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      96
+                    ],
+                    "content_size": [
+                      1022,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      49,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.17142857142857792,
+                      0.0
+                    ],
+                    "scale": 0.9142857142857143,
+                    "token_count": 105
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2139,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            140,
+            1160,
+            1252,
+            1264
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 105,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                140,
+                1160,
+                1252,
+                1264
+              ],
+              "canvas_size": [
+                1120,
+                96
+              ],
+              "content_size": [
+                1026,
+                96
+              ],
+              "pad_offset": [
+                47,
+                0
+              ],
+              "scale": 0.9230769230769231,
+              "rounding_error": [
+                -0.4615384615385665,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0838206627680311,
+                0,
+                89.06042884990254,
+                0,
+                1.0833333333333333,
+                1160
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2163,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1703,
+                    "raw_output": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      96
+                    ],
+                    "content_size": [
+                      1026,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      47,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4615384615385665,
+                      0.0
+                    ],
+                    "scale": 0.9230769230769231,
+                    "token_count": 105
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1703,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 10,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            140,
+            1289,
+            1318,
+            1394
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 111,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                140,
+                1289,
+                1318,
+                1394
+              ],
+              "canvas_size": [
+                1184,
+                96
+              ],
+              "content_size": [
+                1077,
+                96
+              ],
+              "pad_offset": [
+                53,
+                0
+              ],
+              "scale": 0.9142857142857143,
+              "rounding_error": [
+                -0.02857142857146755,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0937790157845868,
+                0,
+                82.02971216341689,
+                0,
+                1.09375,
+                1289
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2600,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2107,
+                    "raw_output": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      96
+                    ],
+                    "content_size": [
+                      1077,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      53,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.02857142857146755,
+                      0.0
+                    ],
+                    "scale": 0.9142857142857143,
+                    "token_count": 111
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2107,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 11,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            137,
+            1419,
+            1354,
+            1590
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 190,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                137,
+                1419,
+                1354,
+                1590
+              ],
+              "canvas_size": [
+                1216,
+                160
+              ],
+              "content_size": [
+                1139,
+                160
+              ],
+              "pad_offset": [
+                38,
+                0
+              ],
+              "scale": 0.935672514619883,
+              "rounding_error": [
+                0.28654970760248943,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0684811237928007,
+                0,
+                96.39771729587358,
+                0,
+                1.06875,
+                1419
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3557,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2599,
+                    "raw_output": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1216,
+                      160
+                    ],
+                    "content_size": [
+                      1139,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      38,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.28654970760248943,
+                      0.0
+                    ],
+                    "scale": 0.935672514619883,
+                    "token_count": 190
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2599,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+              "nonempty_lines": 6,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 12,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            138,
+            1614,
+            1393,
+            1719
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 117,
+              "source_crop": "assets/p0001-b0012.png",
+              "source_bbox": [
+                138,
+                1614,
+                1393,
+                1719
+              ],
+              "canvas_size": [
+                1248,
+                96
+              ],
+              "content_size": [
+                1147,
+                96
+              ],
+              "pad_offset": [
+                50,
+                0
+              ],
+              "scale": 0.9142857142857143,
+              "rounding_error": [
+                -0.4285714285713311,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.094158674803836,
+                0,
+                83.2920662598082,
+                0,
+                1.09375,
+                1614
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2767,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2244,
+                    "raw_output": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1248,
+                      96
+                    ],
+                    "content_size": [
+                      1147,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      50,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4285714285713311,
+                      0.0
+                    ],
+                    "scale": 0.9142857142857143,
+                    "token_count": 117
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2244,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 13,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            139,
+            1744,
+            1332,
+            1849
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 111,
+              "source_crop": "assets/p0001-b0013.png",
+              "source_bbox": [
+                139,
+                1744,
+                1332,
+                1849
+              ],
+              "canvas_size": [
+                1184,
+                96
+              ],
+              "content_size": [
+                1091,
+                96
+              ],
+              "pad_offset": [
+                46,
+                0
+              ],
+              "scale": 0.9142857142857143,
+              "rounding_error": [
+                0.2571428571429806,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0934922089825847,
+                0,
+                88.6993583868011,
+                0,
+                1.09375,
+                1744
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2695,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2204,
+                    "raw_output": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      96
+                    ],
+                    "content_size": [
+                      1091,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      46,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.2571428571429806,
+                      0.0
+                    ],
+                    "scale": 0.9142857142857143,
+                    "token_count": 111
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2204,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 14,
+          "id": "b0014",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0014"
+          ],
+          "bbox": [
+            139,
+            1874,
+            1301,
+            1979
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0014",
+            "raw_output": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 108,
+              "source_crop": "assets/p0001-b0014.png",
+              "source_bbox": [
+                139,
+                1874,
+                1301,
+                1979
+              ],
+              "canvas_size": [
+                1152,
+                96
+              ],
+              "content_size": [
+                1062,
+                96
+              ],
+              "pad_offset": [
+                45,
+                0
+              ],
+              "scale": 0.9142857142857143,
+              "rounding_error": [
+                -0.3999999999998636,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0941619585687383,
+                0,
+                89.76271186440678,
+                0,
+                1.09375,
+                1874
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2639,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2127,
+                    "raw_output": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      96
+                    ],
+                    "content_size": [
+                      1062,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      45,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.3999999999998636,
+                      0.0
+                    ],
+                    "scale": 0.9142857142857143,
+                    "token_count": 108
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2127,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 15,
+          "id": "b0015",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0015"
+          ],
+          "bbox": [
+            142,
+            2000,
+            361,
+            2043
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "### 三. 完形填空\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0015",
+            "raw_output": "### 三. 完形填空\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0015.png",
+              "source_bbox": [
+                142,
+                2000,
+                361,
+                2043
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                119
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 2.776255707762557,
+              "rounding_error": [
+                0,
+                -0.37899543378995304
+              ],
+              "canvas_to_page_affine": [
+                0.36019736842105265,
+                0,
+                142,
+                0,
+                0.36134453781512604,
+                1998.5546218487395
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1878,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1557,
+                    "raw_output": "### 三. 完形填空\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "### 三. 完形填空\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      119
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.37899543378995304
+                    ],
+                    "scale": 2.776255707762557,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1557,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "### 三. 完形填空\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 16,
+          "id": "b0016",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0016"
+          ],
+          "bbox": [
+            137,
+            2065,
+            1483,
+            2110
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0016",
+            "raw_output": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 88,
+              "source_crop": "assets/p0001-b0016.png",
+              "source_bbox": [
+                137,
+                2065,
+                1483,
+                2110
+              ],
+              "canvas_size": [
+                1408,
+                64
+              ],
+              "content_size": [
+                1408,
+                47
+              ],
+              "pad_offset": [
+                0,
+                8
+              ],
+              "scale": 1.0460624071322437,
+              "rounding_error": [
+                0,
+                -0.07280832095096912
+              ],
+              "canvas_to_page_affine": [
+                0.9559659090909091,
+                0,
+                137,
+                0,
+                0.9574468085106383,
+                2057.340425531915
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2303,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1918,
+                    "raw_output": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1408,
+                      64
+                    ],
+                    "content_size": [
+                      1408,
+                      47
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      8
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.07280832095096912
+                    ],
+                    "scale": 1.0460624071322437,
+                    "token_count": 88
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1918,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0003",
+          "target_block_id": "b0004",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0015",
+          "target_block_id": "b0016",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 961,
+      "height": 141,
+      "bbox": [
+        345,
+        142,
+        1306,
+        283
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 132,
+      "height": 39,
+      "bbox": [
+        142,
+        312,
+        274,
+        351
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 191,
+      "height": 46,
+      "bbox": [
+        143,
+        373,
+        334,
+        419
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 1364,
+      "height": 112,
+      "bbox": [
+        140,
+        439,
+        1504,
+        551
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 1267,
+      "height": 170,
+      "bbox": [
+        137,
+        574,
+        1404,
+        744
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 1146,
+      "height": 104,
+      "bbox": [
+        139,
+        770,
+        1285,
+        874
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 1138,
+      "height": 106,
+      "bbox": [
+        140,
+        898,
+        1278,
+        1004
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 1118,
+      "height": 105,
+      "bbox": [
+        140,
+        1030,
+        1258,
+        1135
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 1112,
+      "height": 104,
+      "bbox": [
+        140,
+        1160,
+        1252,
+        1264
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 1178,
+      "height": 105,
+      "bbox": [
+        140,
+        1289,
+        1318,
+        1394
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1217,
+      "height": 171,
+      "bbox": [
+        137,
+        1419,
+        1354,
+        1590
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 1255,
+      "height": 105,
+      "bbox": [
+        138,
+        1614,
+        1393,
+        1719
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 1193,
+      "height": 105,
+      "bbox": [
+        139,
+        1744,
+        1332,
+        1849
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0014",
+      "path": "assets/p0001-b0014.png",
+      "media_type": "image/png",
+      "source_block_id": "b0014",
+      "width": 1162,
+      "height": 105,
+      "bbox": [
+        139,
+        1874,
+        1301,
+        1979
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0015",
+      "path": "assets/p0001-b0015.png",
+      "media_type": "image/png",
+      "source_block_id": "b0015",
+      "width": 219,
+      "height": 43,
+      "bbox": [
+        142,
+        2000,
+        361,
+        2043
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0016",
+      "path": "assets/p0001-b0016.png",
+      "media_type": "image/png",
+      "source_block_id": "b0016",
+      "width": 1346,
+      "height": 45,
+      "bbox": [
+        137,
+        2065,
+        1483,
+        2110
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n\n\n## 笔试部分\n\n\n### 二. 单项选择\n\n\n从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n\n\n1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n\n\n2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n\n\n3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n\n\n4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n\n\n5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n\n\n6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n\n\n7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n\n\n8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n\n\n9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n\n\n10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n\n\n### 三. 完形填空\n\n\n阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n\n",
+  "quality": {
+    "text": {
+      "denominator": 29,
+      "matched": 29,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 3,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 1,
+          "category": "title",
+          "order": 1,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 23,
+          "reference_range": [
+            0,
+            23
+          ],
+          "actual_range": [
+            0,
+            27
+          ],
+          "raw_range": [
+            0,
+            27
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "title",
+          "order": 2,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 2,
+          "reference_range": [
+            23,
+            25
+          ],
+          "actual_range": [
+            27,
+            30
+          ],
+          "raw_range": [
+            27,
+            30
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "title",
+          "order": 3,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 4,
+          "category": "title",
+          "order": 4,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            11
+          ],
+          "raw_range": [
+            0,
+            11
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 5,
+          "category": "title",
+          "order": 5,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 56,
+          "reference_range": [
+            0,
+            56
+          ],
+          "actual_range": [
+            0,
+            58
+          ],
+          "raw_range": [
+            0,
+            58
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 6,
+          "category": "text_block",
+          "order": 6,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 20,
+          "reference_range": [
+            0,
+            20
+          ],
+          "actual_range": [
+            0,
+            20
+          ],
+          "raw_range": [
+            0,
+            20
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 29,
+          "category": "text_block",
+          "order": 7,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 8,
+          "reference_range": [
+            20,
+            28
+          ],
+          "actual_range": [
+            20,
+            26
+          ],
+          "raw_range": [
+            20,
+            26
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "text_block",
+          "order": 8,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 74,
+          "reference_range": [
+            28,
+            102
+          ],
+          "actual_range": [
+            26,
+            100
+          ],
+          "raw_range": [
+            26,
+            100
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 8,
+          "category": "text_block",
+          "order": 9,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 48,
+          "reference_range": [
+            0,
+            48
+          ],
+          "actual_range": [
+            0,
+            50
+          ],
+          "raw_range": [
+            0,
+            50
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 9,
+          "category": "text_block",
+          "order": 10,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 38,
+          "reference_range": [
+            48,
+            86
+          ],
+          "actual_range": [
+            50,
+            89
+          ],
+          "raw_range": [
+            50,
+            89
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 10,
+          "category": "text_block",
+          "order": 11,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 53,
+          "reference_range": [
+            0,
+            53
+          ],
+          "actual_range": [
+            0,
+            54
+          ],
+          "raw_range": [
+            0,
+            54
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 11,
+          "category": "text_block",
+          "order": 12,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 33,
+          "reference_range": [
+            53,
+            86
+          ],
+          "actual_range": [
+            54,
+            88
+          ],
+          "raw_range": [
+            54,
+            88
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 12,
+          "category": "text_block",
+          "order": 13,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 73,
+          "reference_range": [
+            0,
+            73
+          ],
+          "actual_range": [
+            0,
+            72
+          ],
+          "raw_range": [
+            0,
+            72
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 13,
+          "category": "text_block",
+          "order": 14,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 33,
+          "reference_range": [
+            73,
+            106
+          ],
+          "actual_range": [
+            72,
+            106
+          ],
+          "raw_range": [
+            72,
+            106
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 14,
+          "category": "text_block",
+          "order": 15,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 60,
+          "reference_range": [
+            0,
+            60
+          ],
+          "actual_range": [
+            0,
+            62
+          ],
+          "raw_range": [
+            0,
+            62
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 15,
+          "category": "text_block",
+          "order": 16,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 32,
+          "reference_range": [
+            60,
+            92
+          ],
+          "actual_range": [
+            62,
+            95
+          ],
+          "raw_range": [
+            62,
+            95
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 16,
+          "category": "text_block",
+          "order": 17,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 46,
+          "reference_range": [
+            0,
+            46
+          ],
+          "actual_range": [
+            0,
+            45
+          ],
+          "raw_range": [
+            0,
+            45
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 17,
+          "category": "text_block",
+          "order": 18,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 50,
+          "reference_range": [
+            46,
+            96
+          ],
+          "actual_range": [
+            45,
+            96
+          ],
+          "raw_range": [
+            45,
+            96
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 18,
+          "category": "text_block",
+          "order": 19,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 25,
+          "reference_range": [
+            0,
+            25
+          ],
+          "actual_range": [
+            0,
+            25
+          ],
+          "raw_range": [
+            0,
+            25
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 28,
+          "category": "text_block",
+          "order": 20,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 29,
+          "reference_range": [
+            25,
+            54
+          ],
+          "actual_range": [
+            25,
+            56
+          ],
+          "raw_range": [
+            25,
+            56
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 19,
+          "category": "text_block",
+          "order": 21,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 43,
+          "reference_range": [
+            54,
+            97
+          ],
+          "actual_range": [
+            56,
+            100
+          ],
+          "raw_range": [
+            56,
+            100
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 20,
+          "category": "text_block",
+          "order": 22,
+          "block_id": "b0012",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 32,
+          "reference_range": [
+            0,
+            32
+          ],
+          "actual_range": [
+            0,
+            34
+          ],
+          "raw_range": [
+            0,
+            34
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 21,
+          "category": "text_block",
+          "order": 23,
+          "block_id": "b0012",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 75,
+          "reference_range": [
+            32,
+            107
+          ],
+          "actual_range": [
+            34,
+            110
+          ],
+          "raw_range": [
+            34,
+            110
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 22,
+          "category": "text_block",
+          "order": 24,
+          "block_id": "b0013",
+          "status": "ok",
+          "reading_order_position": 12,
+          "reference_chars": 63,
+          "reference_range": [
+            0,
+            63
+          ],
+          "actual_range": [
+            0,
+            63
+          ],
+          "raw_range": [
+            0,
+            63
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 23,
+          "category": "text_block",
+          "order": 25,
+          "block_id": "b0013",
+          "status": "ok",
+          "reading_order_position": 12,
+          "reference_chars": 49,
+          "reference_range": [
+            63,
+            112
+          ],
+          "actual_range": [
+            63,
+            113
+          ],
+          "raw_range": [
+            63,
+            113
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 24,
+          "category": "text_block",
+          "order": 26,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 13,
+          "reference_chars": 53,
+          "reference_range": [
+            0,
+            53
+          ],
+          "actual_range": [
+            0,
+            53
+          ],
+          "raw_range": [
+            0,
+            53
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 25,
+          "category": "text_block",
+          "order": 27,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 13,
+          "reference_chars": 46,
+          "reference_range": [
+            53,
+            99
+          ],
+          "actual_range": [
+            53,
+            100
+          ],
+          "raw_range": [
+            53,
+            100
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 26,
+          "category": "title",
+          "order": 28,
+          "block_id": "b0015",
+          "status": "ok",
+          "reading_order_position": 14,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            11
+          ],
+          "raw_range": [
+            0,
+            11
+          ],
+          "edit_distance": 6,
+          "raw_edit_distance": 6,
+          "exact": false
+        },
+        {
+          "annotation_id": 27,
+          "category": "title",
+          "order": 29,
+          "block_id": "b0016",
+          "status": "ok",
+          "reading_order_position": 15,
+          "reference_chars": 40,
+          "reference_range": [
+            0,
+            40
+          ],
+          "actual_range": [
+            0,
+            42
+          ],
+          "raw_range": [
+            0,
+            42
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 1120,
+      "edit_distance": 52,
+      "raw_edit_distance": 52
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 406,
+      "evaluable": 393,
+      "correct": 393,
+      "missing_pairs": 13,
+      "unresolved_internal_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          29
+        ],
+        [
+          29,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          28
+        ],
+        [
+          28,
+          19
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          24,
+          25
+        ]
+      ]
+    },
+    "block_statuses": {
+      "ok": 16
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      29,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      28,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 29,
+    "parent_reference_count": 29
+  },
+  "alignment": [
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        1,
+        2
+      ],
+      "expected": "2018年广西北部湾经济区初中学业水平统一考试英语",
+      "actual": "## 2018 年广西北部湾经济区初中学业水平统一考试 英语",
+      "raw_output": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        345,
+        142,
+        1306,
+        283
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 2018 年广西北部湾经济区初中学业水平统一考试\n\n英语\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "笔试部分",
+      "actual": "## 笔试部分",
+      "raw_output": "## 笔试部分\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        142,
+        312,
+        274,
+        351
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 笔试部分\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "二.单项选择",
+      "actual": "### 二. 单项选择",
+      "raw_output": "### 二. 单项选择\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        143,
+        373,
+        334,
+        419
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "### 二. 单项选择\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        5
+      ],
+      "expected": "从下列每小题所给的A、B、C、D四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。",
+      "actual": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。",
+      "raw_output": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        140,
+        439,
+        1504,
+        551
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "从下列每小题所给的 A、B、C、D 四个选项中，选出可以填入空白处的最佳选项，并在答题卡上将选定答案的字母标号涂黑。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        6,
+        29,
+        7
+      ],
+      "expected": "1. ——Happy New Year!——.____.A. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.",
+      "actual": "1. ——Happy New Year! ___. A. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.",
+      "raw_output": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        137,
+        574,
+        1404,
+        744
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "1. ——Happy New Year!\n\n___.\n\nA. That's OK. B. The same to you. C. It doesn't matter. D. You're welcome.\n",
+        "nonempty_lines": 3,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        8,
+        9
+      ],
+      "expected": "2. My uncle works in a hospital. He is a/an____.A. singer B. farmer C. actor D. doctor",
+      "actual": "2. My uncle works in a hospital. He is a/an _____. A. singer B. farmer C. actor D. doctor",
+      "raw_output": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        139,
+        770,
+        1285,
+        874
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "2. My uncle works in a hospital. He is a/an _____.\n\nA. singer\n\nB. farmer\n\nC. actor\n\nD. doctor\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        10,
+        11
+      ],
+      "expected": "3. The strawberries____delicious. You can have a try.A. eat B. drink C. taste D. sound",
+      "actual": "3. The strawberries ___ delicious. You can have a try. A. eat B. drink C. taste D. sound",
+      "raw_output": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        140,
+        898,
+        1278,
+        1004
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "3. The strawberries ___ delicious. You can have a try.\n\nA. eat\n\nB. drink\n\nC. taste\n\nD. sound\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        12,
+        13
+      ],
+      "expected": "4. Tony always works hard. Of all the students, he did ____ in this exam.A. good B. well C. better D. best",
+      "actual": "4. Tony always works hard. Of all the students, he did ___ in this exam. A. good B. well C. better D. best",
+      "raw_output": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        140,
+        1030,
+        1258,
+        1135
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "4. Tony always works hard. Of all the students, he did ___ in this exam.\n\nA. good\n\nB. well\n\nC. better\n\nD. best\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        14,
+        15
+      ],
+      "expected": "5. Don't worried. This girl is old enough to look after____.A. herself B. her C. hers D. she",
+      "actual": "5. Don't worried. This girl is old enough to look after _____. A. herself B. her C. hers D. she",
+      "raw_output": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        140,
+        1160,
+        1252,
+        1264
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "5. Don't worried. This girl is old enough to look after _____.\n\nA. herself\n\nB. her\n\nC. hers\n\nD. she\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        16,
+        17
+      ],
+      "expected": "6. ____ the map and tell me where Shanghai is.A. Look around B. Look like C. Look at D. Look out",
+      "actual": "6. ___ the map and tell me where Shanghai is. A. Look around B. Look like C. Look at D. Look out",
+      "raw_output": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        140,
+        1289,
+        1318,
+        1394
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "6. ___ the map and tell me where Shanghai is.\n\nA. Look around\n\nB. Look like\n\nC. Look at\n\nD. Look out\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        18,
+        28,
+        19
+      ],
+      "expected": "7. ——Is this your camera?——Yes, I____it for two weeks.A. bought B. had C. have had D. have bought",
+      "actual": "7. ——Is this your camera? ——Yes, I ___ it for two weeks. A. bought B. had C. have had D. have bought",
+      "raw_output": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        137,
+        1419,
+        1354,
+        1590
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "7. ——Is this your camera?\n\n——Yes, I ___ it for two weeks.\n\nA. bought\n\nB. had\n\nC. have had\n\nD. have bought\n",
+        "nonempty_lines": 6,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011"
+      ]
+    },
+    {
+      "block_id": "b0012",
+      "source_region_ids": [
+        "r0012"
+      ],
+      "annotation_ids": [
+        20,
+        21
+      ],
+      "expected": "8. The woman in a hat is___aunt.A. Jack and John B. Jack's and John C. Jack's and John's D. Jack and John's",
+      "actual": "8. The woman in a hat is ___ aunt. A. Jack and John B. Jack's and John C. Jack's and John's D. Jack and John's",
+      "raw_output": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        138,
+        1614,
+        1393,
+        1719
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "8. The woman in a hat is ___ aunt.\n\nA. Jack and John\n\nB. Jack's and John\n\nC. Jack's and John's\n\nD. Jack and John's\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0012"
+      ]
+    },
+    {
+      "block_id": "b0013",
+      "source_region_ids": [
+        "r0013"
+      ],
+      "annotation_ids": [
+        22,
+        23
+      ],
+      "expected": "9. Our teacher often tells us ____in the river. It's dangerous.A. not swim B. not to swim C. to swim D. swimming",
+      "actual": "9. Our teacher often tells us ___ in the river. It's dangerous. A. not swim B. not to swim C. to swim D. swimming",
+      "raw_output": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        139,
+        1744,
+        1332,
+        1849
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "9. Our teacher often tells us ___ in the river. It's dangerous.\n\nA. not swim\n\nB. not to swim\n\nC. to swim\n\nD. swimming\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0013"
+      ]
+    },
+    {
+      "block_id": "b0014",
+      "source_region_ids": [
+        "r0014"
+      ],
+      "annotation_ids": [
+        24,
+        25
+      ],
+      "expected": "10. As soon as she ____in Nanning, she will call you.A. arrives B. arrive C. will arrive D. arrived",
+      "actual": "10. As soon as she ___ in Nanning, she will call you. A. arrives B. arrive C. will arrive D. arrived",
+      "raw_output": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        139,
+        1874,
+        1301,
+        1979
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "10. As soon as she ___ in Nanning, she will call you.\n\nA. arrives\n\nB. arrive\n\nC. will arrive\n\nD. arrived\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0014"
+      ]
+    },
+    {
+      "block_id": "b0015",
+      "source_region_ids": [
+        "r0015"
+      ],
+      "annotation_ids": [
+        26
+      ],
+      "expected": "三．完形填空",
+      "actual": "### 三. 完形填空",
+      "raw_output": "### 三. 完形填空\n",
+      "edit_distance": 6,
+      "raw_edit_distance": 6,
+      "bbox": [
+        142,
+        2000,
+        361,
+        2043
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "### 三. 完形填空\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0015"
+      ]
+    },
+    {
+      "block_id": "b0016",
+      "source_region_ids": [
+        "r0016"
+      ],
+      "annotation_ids": [
+        27
+      ],
+      "expected": "阅读下面短文，掌握其大意，然后从各题所给的A、B、C、D四个选项中选出最佳选项，",
+      "actual": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，",
+      "raw_output": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        137,
+        2065,
+        1483,
+        2110
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "阅读下面短文，掌握其大意，然后从各题所给的 A、B、C、D 四个选项中选出最佳选项，\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0016"
+      ]
+    }
+  ],
+  "non_text_evidence": [],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

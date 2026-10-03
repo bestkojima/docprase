@@ -1,0 +1,5602 @@
+{
+  "key": "development/odb-05",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+    "sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-05/job"
+    ],
+    "input_sha256": "f611527619b47490a8ff9387a9e79c87a761ffc747ab8ca967af4693e4ab02c0",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 73.2382944309793,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "8587d57ae323e03d0307b5f5b6d0263c5f8fba0d40ea95a3d6319f136d3c893f",
+      "job/assets/p0001-b0002.png": "379ab5d8b3b9b7faa0b90f8704bb27c96b35b1425664b93eeab856ff2563891a",
+      "job/assets/p0001-b0003.png": "4363a7fdda68f2d40db2fa10a7ef080c2e713cbc0f7e9c4a3d7113c6007ceac1",
+      "job/assets/p0001-b0004.png": "0d237e482d1981cbea226961fa5dcefcb375eb6e4d62865e81113391b094de1f",
+      "job/assets/p0001-b0005.png": "c690d75d262fbab9f025a74e0354c54e14240160d0d073ea52592c701f7b0a40",
+      "job/assets/p0001-b0006.png": "9ad36003c6134509f4a585f806e5977d6a8dbe1c1d86356b226b1e25b54ceb91",
+      "job/assets/p0001-b0007.png": "3eb1c0f8bc58e1c84f219ab687b3b6cf5b19be0e2bcd94a37b36ec1bf8efce3b",
+      "job/assets/p0001-b0008.png": "0fe653ed8ee8432a67607cb0ffaaa69fe1692ccd40bcae42ee5d5e4a202f1b9f",
+      "job/assets/p0001-b0009.png": "68764bc3a80ed3959fc016b5608fe9c2258f7e94f34342abe1ecdaa98a945b9f",
+      "job/assets/p0001-b0010.png": "d3bec91f196160fa7a52bf7de1abff0550c655bedeee327106f7f350f7d294e3",
+      "job/assets/p0001-b0011.png": "8ae7b31771e4dddf4d21aabba39be2ab8be527dc7ba53788d0c07a23799d07a4",
+      "job/assets/p0001-b0012.png": "f425344b3c741e2e71d65034e89858a678401d540bfa69f164da5ad2d70b54c2",
+      "job/assets/p0001-b0013.png": "2edc676f290b9fe720c552d78174016f6c659db05cc72b5345208022b007402a",
+      "job/assets/p0001-b0014.png": "89fc88a58005403ed6298f1482016a50e30f5c2f65ccb5ce2207a98bed905b4c",
+      "job/assets/p0001-fetch_name_0.f32": "80b01818c9bac79d26d183cde596401802d3bf70f72d3c9bb2daa8b229d24c0a",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "a8792b84ad6662a686f83b4e4d6111908fd4cc6594a016cb72ea49875b623073",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "402b0355d64fd05bfebe8966286a99480009d14d955edc4d6ef52e90d065abbb",
+      "job/assets/p0001-layout-overlay.png": "7bc0037f7c60c079fd052f8f3e606a89dbec808a628fbaab705c36176f5a641b",
+      "job/assets/p0001-mask-c0.png": "f62f3e051c9ef0851016e9fbcb0a923eb1cf986318ce56ffb08d706e30e0776e",
+      "job/assets/p0001-mask-c1.png": "8b5a90c9e2ba72575d6095f186f4f64da18bfc63c5a8e7e86fa8bea3ebed6b47",
+      "job/assets/p0001-mask-c10.png": "2803d0991745d85d0609ff0aeaf504f6023b5a5a4b12a9c9ebbf6fe4bde7add9",
+      "job/assets/p0001-mask-c11.png": "78ff1febebf335f689371f03618723343f884f18696124728068f38e96b84470",
+      "job/assets/p0001-mask-c12.png": "c4d7afe51e8953bae68e2494b4e486e7612b58e6b97f98ad273d75727e9882e2",
+      "job/assets/p0001-mask-c13.png": "11ceb97d669dba92268421f05e8fb1f263364a61f67f8a55df13c42a6fdfc41e",
+      "job/assets/p0001-mask-c14.png": "f5a81036f0588e8cec18506e3672f48379f9a7d097511486e5eefaadeffc067f",
+      "job/assets/p0001-mask-c15.png": "b4f61ecb2ffaf429e635be8f2d01d80f66c5b7709e08de13fba1ba1890e91353",
+      "job/assets/p0001-mask-c16.png": "9a957c9e2ea6879f541b6c91d81d9e3a3a3b1346086e3c2e305d235acdb9d10d",
+      "job/assets/p0001-mask-c17.png": "cf0331e90bf74c878834bbecc3f4c4bca98fb3d491bbbbe630c0a7fc3777ecd3",
+      "job/assets/p0001-mask-c18.png": "0cc347f977ca496cffcbbc92c3bc83f92cd32e52224bb95604128f53c2382f15",
+      "job/assets/p0001-mask-c19.png": "6bf4974aff3872fab519057ae6ce43ca530f6d72f11219deec3016874fe4a3df",
+      "job/assets/p0001-mask-c2.png": "1c6222aab841abe2c7a31325774c5aae2c662d3a4db44ed9a27f7ce4d5b484db",
+      "job/assets/p0001-mask-c20.png": "697ca860c848b8be50e6de52655a261f296a916e2b5e9b9607bf74d13aaa2e83",
+      "job/assets/p0001-mask-c21.png": "88cefff4851a2e284f5e9dd6e199c5102e502ec0ff7dc88c0fd3d7846ce4f886",
+      "job/assets/p0001-mask-c22.png": "09c673c023f7991523aac955b2f7b6329d56a252f635db475cd079ae6b0748a8",
+      "job/assets/p0001-mask-c23.png": "5e0a4d9705f7ed9f0be4334205cb432558e387de3e8b2338d690dc2289bb3442",
+      "job/assets/p0001-mask-c24.png": "a2276b3a454bbf87d50a5ffa731efa6b6087e0f953b4ea9bb74222ba02915ca6",
+      "job/assets/p0001-mask-c25.png": "9681b48c879a4e386a9eb87d9d3f7261e0e7fddf777199828c433a7f462898d6",
+      "job/assets/p0001-mask-c26.png": "535886f5ea096c0106e95052b1362bb188b31f668e7c75d8cf5d32085bfb652b",
+      "job/assets/p0001-mask-c27.png": "6381069e9f553efc494ce240d22f429f1fdf0727d2fa820c9ea399adf7fa93f5",
+      "job/assets/p0001-mask-c28.png": "9ef805ac806169f71affa9eedd3eabe91dde2651b769eb63804b7dabd350a037",
+      "job/assets/p0001-mask-c29.png": "14edaab52566ad8047d1e41a28dc12953252fa898d79829387fa3748caa80b09",
+      "job/assets/p0001-mask-c3.png": "63e1bb41b224e43a6cbd7c8ac01f1deb5afea78c412c05db4d08fded9538f26f",
+      "job/assets/p0001-mask-c30.png": "0ca1bf7951719effb2bfb2823a1dcf2cc4f927e50a5fa92ca6a0793db94fc01f",
+      "job/assets/p0001-mask-c31.png": "a14572abe630355221c117711066ec18e5a0a03fa6e494d66eecf7e8cb08a041",
+      "job/assets/p0001-mask-c32.png": "ad94725e1a455d4ffec71b58f2a1b818785db7b33e804652979e6bc35db63df0",
+      "job/assets/p0001-mask-c33.png": "7f79e864201590ed42d6f0bcdcaeb8c845b2486cf018180e6e6186f8e09babf0",
+      "job/assets/p0001-mask-c34.png": "77f7f06d3ba5ca18aef8bb2ba4a6aebe710aa2ceaa3e4a21db8bb62a3969fd78",
+      "job/assets/p0001-mask-c35.png": "0b9086b11dc935921ddd820222df21d4286d046e7de6d17852afe4bc54527151",
+      "job/assets/p0001-mask-c36.png": "141e5e74f31ee45e7d7de6466106952c6ba71e70ee07c2d4c18c01599b2d3791",
+      "job/assets/p0001-mask-c37.png": "a0dd1b335af22d4e05b988e0886e1da0cd39c1bc498448650f9a2a1b740a60c3",
+      "job/assets/p0001-mask-c38.png": "780b096f6b46c7fad5297f4d4157f811c22e8b889b3cefd304a091fe2a53b1ac",
+      "job/assets/p0001-mask-c39.png": "08b111afdeaa87c939ea722d2be467b22cc687c84ac518f2b6f70e9f8e035f19",
+      "job/assets/p0001-mask-c4.png": "06c43bd977cd192f6132ceadbb798b66eae7c254155ef700806bfea50c3beef9",
+      "job/assets/p0001-mask-c40.png": "a3d108c554c00d5e4f65e310625cca24c5b340b637ca47f358ccb332e08f4fd0",
+      "job/assets/p0001-mask-c41.png": "a8cf9b4eba1d3c7a595db0bbfec952dc95d812fd19e42c380eb7bea7e2f834af",
+      "job/assets/p0001-mask-c42.png": "400a87d04dbb4d7f6a56a244721dfe3b1adfde79e92945286067de80a2e09557",
+      "job/assets/p0001-mask-c43.png": "4e9c23043f880113a709c22fc4d42a99b93ba1edcaff95e354347faef467f464",
+      "job/assets/p0001-mask-c5.png": "bcc20149b28800dc47596d920e966933dd09fd7491631c0203ba732a97e6a4ba",
+      "job/assets/p0001-mask-c6.png": "56a46d215714c8dd53602c72e3d8c1b66eaf118944fce5973dd26eba24b9acfd",
+      "job/assets/p0001-mask-c7.png": "913cfa8daad1a65615c328a2cb7e6e5c8559359f8d4b419c54cc2e161fb3ded4",
+      "job/assets/p0001-mask-c8.png": "c1eba23b4aabc222b8400c5185e8a8fcc8be957dfcc04b9aa18f6ebfdb08da96",
+      "job/assets/p0001-mask-c9.png": "59c8ecb11934d71430431aa87e30764fee5ccabacf597fb561b2b9907f1a145f",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "287d34befc3b999d7f6be760aea1f65a9313a94ad9325273624f748548643aec",
+      "job/document.md": "12fac86b676dc5ce36b19e7caac69fa8707caccc484f7a900a298b2a24cd6962",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "69ed22b7cbf2eb63e175e660f940ad468720ee001cfff8273a481711ba6e12a2",
+      "job/job-status.json": "ec929442235603b8aa667ccbc8f85d503a39e48020f89c89f2172f79fda6c8e9",
+      "job/run-manifest.json": "cb3da125df9e85aa0df4dcfa1ae4291794a4d7321487c63bbfea2af96332b6c4",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "a146f6c5c284e16cd4e9eb534da9f3af6f9347a9ea392f3a62d8b0792f140f1d",
+      "time.txt": "073160adf30faa3e9d180420dcc8d46bd19fcf1ae1a45e37175df98b0ff6e452"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "table",
+        "poly": [
+          263.46160888671875,
+          198.04779052734375,
+          536.1398315429688,
+          198.04779052734375,
+          536.1398315429688,
+          353.3748474121094,
+          263.46160888671875,
+          353.3748474121094
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 10,
+        "html": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          567.5678100585938,
+          260.294120454545,
+          1098.1471829656434,
+          260.294120454545,
+          1098.1471829656434,
+          299.11311174649364,
+          567.5678100585938,
+          299.11311174649364
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 0,
+        "text": "二、填空题(共4题，每题5分，共20分)",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          250.4541224414327,
+          368.59073559372416,
+          1135.5834979473773,
+          368.59073559372416,
+          1135.5834979473773,
+          411.93469985819036,
+          250.4541224414327,
+          411.93469985819036
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 5,
+        "text": "\\t13．已知函数 $ f ( x ) \\!=\\! a x \\!-\\! \\operatorname{l o g}_{2} ( 2^{x} \\!+\\! 1 ) \\!+\\! \\operatorname{c o s} x ( a \\! \\in\\! \\mathbf{R} ) $为偶函数，则a=____.",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          251.25348000539842,
+          426.42162508461894,
+          1351.962046195136,
+          426.42162508461894,
+          1351.962046195136,
+          472.0468506261625,
+          251.25348000539842,
+          472.0468506261625
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 13,
+        "text": "\\t14.  已知 $ S_{n} $是等比数列 $ \\left \\{ a_{n} \\right \\} $的前 n项和, 且 $ S_{3}, S_{9}, S_{6} $成等差数列 $ a_{2}+a_{5}=6, $ ,则 $ a_ {8}= $ ____.",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          245.55032681270546,
+          492.57820211985705,
+          1377.055920242985,
+          492.57820211985705,
+          1377.055920242985,
+          612.3444191664088,
+          245.55032681270546,
+          612.3444191664088
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 4,
+        "text": "\\t15.  若 $ f ( x ) {=} 2 \\operatorname{s i n} ( 2 x {+} \\varphi) ( \\varphi{>} 0 ) $的图象关于直线 $ x={\\frac{\\pi} {1 2}} $对称,且当 $ \\varphi $取最小值时, $ \\exists x_{0} \\in( 0, \\frac{\\pi} {2} ) $ ,使得 $ f ( x_{0} )=a $ ,则a的取值范围是____.",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          243.98123168945312,
+          627.7533569335938,
+          1398.8675537109375,
+          627.7533569335938,
+          1398.8675537109375,
+          722.7022705078125,
+          243.98123168945312,
+          722.7022705078125
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 6,
+        "text": "\\t16.  在四面体 PABC中, $ \\triangle A B C $为等边三角形, 边长为6, PA=6,PB=8,PC=10 ,则四面体 PABC的体积为____.",
+        "attribute": {}
+      },
+      {
+        "category_type": "table",
+        "poly": [
+          265.7821867478338,
+          787.3591698472704,
+          533.0865108102912,
+          787.3591698472704,
+          533.0865108102912,
+          939.1705930240464,
+          265.7821867478338,
+          939.1705930240464
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 12,
+        "html": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          562.8676990889888,
+          848.3742872963096,
+          1112.7301265761632,
+          848.3742872963096,
+          1112.7301265761632,
+          881.0609573582949,
+          562.8676990889888,
+          881.0609573582949
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 1,
+        "text": "三、解答题（共7题，每题12分，共84分）",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          244.16741943359375,
+          951.593505859375,
+          1204.1610107421875,
+          951.593505859375,
+          1204.1610107421875,
+          994.1939086914062,
+          244.16741943359375,
+          994.1939086914062
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 9,
+        "text": "\\t17.  已知 $ \\triangle A B C $的内角 A,B,C的对边分别为 a,b,c,且 asin(A+B-C)=csin(B+C).",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          247.50598678407994,
+          1015.4372821030981,
+          446.0737379068754,
+          1015.4372821030981,
+          446.0737379068754,
+          1047.4643387358071,
+          247.50598678407994,
+          1047.4643387358071
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 7,
+        "text": "\\t\\t(1)求角C的值；",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          248.96551306020405,
+          1086.686767578125,
+          916.2687377929685,
+          1086.686767578125,
+          916.2687377929685,
+          1129.6708984375,
+          248.96551306020405,
+          1129.6708984375
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 8,
+        "text": "\\t\\t(2)若 2a+b=6 ,且 $ \\triangle A B C $的面积为 $ \\sqrt{3} $ ,求 $ \\bigtriangleup A B C $的周长.",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          244.27593994140642,
+          1918.8393554687502,
+          1401.7150878906252,
+          1918.8393554687502,
+          1401.7150878906252,
+          2013.8664742290207,
+          244.27593994140642,
+          2013.8664742290207
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 2,
+        "text": "\t18.如图，三棱柱 $ A B C \\mathrm{-} A_{1} B_{1} C_{1} $中，侧面 $ B B_{1} C_{1} C $是菱形，其对角线的交点为 O且 $ A B {=} A C_{1} {\\mathrm{,}} A B {\\bot} $ $ B_{1}C. $",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          245.2191619873047,
+          2030.18359375,
+          603.869873046875,
+          2030.18359375,
+          603.869873046875,
+          2074.025634765625,
+          245.2191619873047,
+          2074.025634765625
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 11,
+        "text": "\t/t（1）求证： AO $ \\bot $平面 $ B B_{1} C_{1} C; $",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          247.36546325683594,
+          2082.843994140625,
+          1405.668212890625,
+          2082.843994140625,
+          1405.668212890625,
+          2133.572509765625,
+          247.36546325683594,
+          2133.572509765625
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 3,
+        "text": "\t/t(2)设 $ \\angle B_{1} B C=6 0^{\\circ} $ ,若直线 $ A_{1} B_{1} $与平面 $ B B_{1} C_{1} C $所成的角为 $ 4 5^{\\circ} $求二面角 $ A_{1} \\mathrm{-} B_{1} C_{1} \\mathrm{-} B $的余弦值.",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": [
+        {
+          "source_anno_id": 7,
+          "target_anno_id": 8,
+          "relation_type": "truncated"
+        },
+        {
+          "source_anno_id": 11,
+          "target_anno_id": 3,
+          "relation_type": "truncated"
+        }
+      ]
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [
+          "table_full_line",
+          "table_horizontal"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 2367,
+      "height": 2339,
+      "width": 1654,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_3146.jpg",
+      "sample_id": 504
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1654,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011",
+        "b0012",
+        "b0013",
+        "b0014"
+      ],
+      "reading_order_evidence": {
+        "source": "model",
+        "reason": "unique_rank"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011",
+          "b0012",
+          "b0013",
+          "b0014"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013",
+          "r0014"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013",
+          "r0014"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "table",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            265,
+            200,
+            536,
+            353
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.945513606,
+          "candidate_rank": 9,
+          "original_class_id": 21,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 299,
+          "model_label": "table",
+          "original_bbox": [
+            265.648834,
+            200.696213,
+            535.004944,
+            352.160217
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            560,
+            258,
+            1103,
+            296
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.84795332,
+          "candidate_rank": 21,
+          "original_class_id": 17,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 141,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            560.422852,
+            258.483337,
+            1102.571899,
+            295.914856
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            244,
+            369,
+            1123,
+            407
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.854806542,
+          "candidate_rank": 28,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 229,
+          "model_label": "text",
+          "original_bbox": [
+            244.987183,
+            369.572235,
+            1122.343262,
+            406.21344
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            243,
+            428,
+            1354,
+            466
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.830170095,
+          "candidate_rank": 63,
+          "original_class_id": 22,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 326,
+          "model_label": "text",
+          "original_bbox": [
+            243.722656,
+            428.439484,
+            1353.367676,
+            465.440857
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            239,
+            493,
+            1370,
+            610
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.882663667,
+          "candidate_rank": 88,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 935,
+          "model_label": "text",
+          "original_bbox": [
+            239.469513,
+            493.291901,
+            1369.483643,
+            609.432434
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            244,
+            629,
+            1396,
+            722
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.921577573,
+          "candidate_rank": 151,
+          "original_class_id": 22,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 791,
+          "model_label": "text",
+          "original_bbox": [
+            244.456299,
+            629.520264,
+            1395.740356,
+            721.300781
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "table",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            264,
+            785,
+            533,
+            940
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.942740321,
+          "candidate_rank": 165,
+          "original_class_id": 21,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 299,
+          "model_label": "table",
+          "original_bbox": [
+            264.391815,
+            785.712952,
+            532.968018,
+            939.003235
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            559,
+            844,
+            1116,
+            882
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.866649389,
+          "candidate_rank": 170,
+          "original_class_id": 17,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 144,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            559.133972,
+            844.525269,
+            1115.931519,
+            881.183899
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            243,
+            954,
+            1200,
+            990
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.838256776,
+          "candidate_rank": 177,
+          "original_class_id": 22,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 246,
+          "model_label": "text",
+          "original_bbox": [
+            243.536484,
+            954.692078,
+            1199.291382,
+            989.189514
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            245,
+            1013,
+            450,
+            1049
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.825518548,
+          "candidate_rank": 202,
+          "original_class_id": 22,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 54,
+          "model_label": "text",
+          "original_bbox": [
+            245.08168,
+            1013.414001,
+            449.583252,
+            1048.862305
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            242,
+            1088,
+            917,
+            1128
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.832899511,
+          "candidate_rank": 214,
+          "original_class_id": 22,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 181,
+          "model_label": "text",
+          "original_bbox": [
+            242.430557,
+            1088.364746,
+            916.598267,
+            1127.402832
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            242,
+            1923,
+            1402,
+            2013
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.933546901,
+          "candidate_rank": 233,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 801,
+          "model_label": "text",
+          "original_bbox": [
+            242.742386,
+            1923.071777,
+            1401.680054,
+            2012.80188
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            244,
+            2036,
+            597,
+            2071
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.871409059,
+          "candidate_rank": 258,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 90,
+          "model_label": "text",
+          "original_bbox": [
+            244.492462,
+            2036.153442,
+            596.272766,
+            2070.206787
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            241,
+            2093,
+            1408,
+            2129
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.856758237,
+          "candidate_rank": 271,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 300,
+          "model_label": "text",
+          "original_bbox": [
+            241.399857,
+            2093.287842,
+            1407.368164,
+            2128.999023
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0070",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            425,
+            372,
+            800,
+            405
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.762215257,
+          "candidate_rank": 45,
+          "original_class_id": 15,
+          "candidate_id": 25,
+          "mask_row": 25,
+          "mask_nonzero": 96,
+          "model_label": "formula",
+          "original_bbox": [
+            425.037537,
+            372.535065,
+            799.570984,
+            404.195404
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0086",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            963,
+            376,
+            1000,
+            405
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.365593523,
+          "candidate_rank": 51,
+          "original_class_id": 15,
+          "candidate_id": 41,
+          "mask_row": 41,
+          "mask_nonzero": 11,
+          "model_label": "formula",
+          "original_bbox": [
+            963.118652,
+            376.963043,
+            999.205444,
+            404.805756
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0075",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            781,
+            431,
+            881,
+            462
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.698221505,
+          "candidate_rank": 79,
+          "original_class_id": 15,
+          "candidate_id": 30,
+          "mask_row": 30,
+          "mask_nonzero": 27,
+          "model_label": "formula",
+          "original_bbox": [
+            781.716919,
+            431.25531,
+            880.446289,
+            461.316284
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0083",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            1034,
+            431,
+            1141,
+            462
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.429604203,
+          "candidate_rank": 83,
+          "original_class_id": 15,
+          "candidate_id": 38,
+          "mask_row": 38,
+          "mask_nonzero": 27,
+          "model_label": "formula",
+          "original_bbox": [
+            1034.40918,
+            431.250946,
+            1140.89575,
+            461.957886
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0080",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            546,
+            433,
+            592,
+            464
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.449909419,
+          "candidate_rank": 75,
+          "original_class_id": 15,
+          "candidate_id": 35,
+          "mask_row": 35,
+          "mask_nonzero": 12,
+          "model_label": "formula",
+          "original_bbox": [
+            546.627319,
+            433.207306,
+            591.270569,
+            463.678131
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0082",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            1179,
+            433,
+            1227,
+            463
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.442266256,
+          "candidate_rank": 87,
+          "original_class_id": 15,
+          "candidate_id": 37,
+          "mask_row": 37,
+          "mask_nonzero": 12,
+          "model_label": "formula",
+          "original_bbox": [
+            1179.76587,
+            433.884705,
+            1226.08826,
+            462.936981
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0066",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            800,
+            492,
+            868,
+            548
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.785427511,
+          "candidate_rank": 113,
+          "original_class_id": 15,
+          "candidate_id": 21,
+          "mask_row": 21,
+          "mask_nonzero": 30,
+          "model_label": "formula",
+          "original_bbox": [
+            800.486938,
+            492.034241,
+            867.950195,
+            547.549438
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0063",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            1173,
+            492,
+            1302,
+            548
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.812268674,
+          "candidate_rank": 124,
+          "original_class_id": 15,
+          "candidate_id": 18,
+          "mask_row": 18,
+          "mask_nonzero": 57,
+          "model_label": "formula",
+          "original_bbox": [
+            1173.66309,
+            492.246399,
+            1301.7168,
+            547.255798
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0069",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            339,
+            501,
+            591,
+            535
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.766308963,
+          "candidate_rank": 104,
+          "original_class_id": 15,
+          "candidate_id": 24,
+          "mask_row": 24,
+          "mask_nonzero": 66,
+          "model_label": "formula",
+          "original_bbox": [
+            339.27243,
+            501.670685,
+            590.14325,
+            534.969116
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0088",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            988,
+            505,
+            1017,
+            535
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.318578333,
+          "candidate_rank": 116,
+          "original_class_id": 15,
+          "candidate_id": 43,
+          "mask_row": 43,
+          "mask_nonzero": 6,
+          "model_label": "formula",
+          "original_bbox": [
+            988.846008,
+            505.55014,
+            1016.47656,
+            534.791626
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0079",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            244,
+            576,
+            339,
+            609
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.485128939,
+          "candidate_rank": 140,
+          "original_class_id": 15,
+          "candidate_id": 34,
+          "mask_row": 34,
+          "mask_nonzero": 24,
+          "model_label": "formula",
+          "original_bbox": [
+            244.345673,
+            576.519043,
+            338.46463,
+            608.985535
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0067",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            538,
+            632,
+            626,
+            663
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.779495537,
+          "candidate_rank": 157,
+          "original_class_id": 15,
+          "candidate_id": 22,
+          "mask_row": 22,
+          "mask_nonzero": 24,
+          "model_label": "formula",
+          "original_bbox": [
+            538.689331,
+            632.673401,
+            625.05658,
+            662.542114
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0076",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            904,
+            633,
+            1155,
+            663
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.67705512,
+          "candidate_rank": 161,
+          "original_class_id": 15,
+          "candidate_id": 31,
+          "mask_row": 31,
+          "mask_nonzero": 66,
+          "model_label": "formula",
+          "original_bbox": [
+            904.097107,
+            633.227722,
+            1154.6217,
+            662.176575
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0087",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            359,
+            956,
+            445,
+            987
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.350381523,
+          "candidate_rank": 181,
+          "original_class_id": 15,
+          "candidate_id": 42,
+          "mask_row": 42,
+          "mask_nonzero": 15,
+          "model_label": "formula",
+          "original_bbox": [
+            359.200592,
+            956.160095,
+            444.91156,
+            986.301575
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0064",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            901,
+            957,
+            1190,
+            988
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.806922793,
+          "candidate_rank": 192,
+          "original_class_id": 15,
+          "candidate_id": 19,
+          "mask_row": 19,
+          "mask_nonzero": 57,
+          "model_label": "formula",
+          "original_bbox": [
+            901.71637,
+            957.584167,
+            1189.41711,
+            987.150452
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0085",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            801,
+            958,
+            863,
+            988
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.377714127,
+          "candidate_rank": 189,
+          "original_class_id": 15,
+          "candidate_id": 40,
+          "mask_row": 40,
+          "mask_nonzero": 13,
+          "model_label": "formula",
+          "original_bbox": [
+            801.718262,
+            958.287903,
+            862.847534,
+            987.161865
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0072",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            659,
+            1086,
+            698,
+            1123
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.74576807,
+          "candidate_rank": 222,
+          "original_class_id": 15,
+          "candidate_id": 27,
+          "mask_row": 27,
+          "mask_nonzero": 12,
+          "model_label": "formula",
+          "original_bbox": [
+            659.580872,
+            1086.15112,
+            697.065063,
+            1122.98962
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0071",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            728,
+            1091,
+            810,
+            1123
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.753149807,
+          "candidate_rank": 226,
+          "original_class_id": 15,
+          "candidate_id": 26,
+          "mask_row": 26,
+          "mask_nonzero": 22,
+          "model_label": "formula",
+          "original_bbox": [
+            728.625061,
+            1091.26428,
+            809.179688,
+            1122.39661
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0068",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            448,
+            1092,
+            531,
+            1123
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.776495457,
+          "candidate_rank": 217,
+          "original_class_id": 15,
+          "candidate_id": 23,
+          "mask_row": 23,
+          "mask_nonzero": 23,
+          "model_label": "formula",
+          "original_bbox": [
+            448.877136,
+            1092.79663,
+            530.279846,
+            1122.14661
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0074",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            317,
+            1093,
+            417,
+            1125
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.722466171,
+          "candidate_rank": 215,
+          "original_class_id": 15,
+          "candidate_id": 29,
+          "mask_row": 29,
+          "mask_nonzero": 27,
+          "model_label": "formula",
+          "original_bbox": [
+            317.002228,
+            1093.93774,
+            416.492798,
+            1124.46826
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0054",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            459,
+            1925,
+            618,
+            1957
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.852483153,
+          "candidate_rank": 239,
+          "original_class_id": 15,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 28,
+          "model_label": "formula",
+          "original_bbox": [
+            459.244507,
+            1925.88501,
+            617.171021,
+            1956.59338
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0081",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            723,
+            1925,
+            827,
+            1958
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.446270823,
+          "candidate_rank": 246,
+          "original_class_id": 15,
+          "candidate_id": 36,
+          "mask_row": 36,
+          "mask_nonzero": 27,
+          "model_label": "formula",
+          "original_bbox": [
+            723.498535,
+            1925.61536,
+            826.770813,
+            1957.37244
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0057",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            1227,
+            1926,
+            1396,
+            1957
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.836809039,
+          "candidate_rank": 255,
+          "original_class_id": 15,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 30,
+          "model_label": "formula",
+          "original_bbox": [
+            1227.86755,
+            1926.10486,
+            1395.92798,
+            1956.24353
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0084",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            347,
+            2038,
+            411,
+            2068
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.420569807,
+          "candidate_rank": 262,
+          "original_class_id": 15,
+          "candidate_id": 39,
+          "mask_row": 39,
+          "mask_nonzero": 20,
+          "model_label": "formula",
+          "original_bbox": [
+            347.904388,
+            2038.22388,
+            410.742554,
+            2067.11768
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0061",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            480,
+            2038,
+            590,
+            2069
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.821589828,
+          "candidate_rank": 267,
+          "original_class_id": 15,
+          "candidate_id": 16,
+          "mask_row": 16,
+          "mask_nonzero": 30,
+          "model_label": "formula",
+          "original_bbox": [
+            480.456421,
+            2038.43127,
+            589.356079,
+            2068.87915
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0062",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            315,
+            2095,
+            465,
+            2126
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.820669591,
+          "candidate_rank": 275,
+          "original_class_id": 15,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 39,
+          "model_label": "formula",
+          "original_bbox": [
+            315.215332,
+            2095.21533,
+            464.73999,
+            2125.8938
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0077",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            721,
+            2095,
+            824,
+            2127
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.655177891,
+          "candidate_rank": 285,
+          "original_class_id": 15,
+          "candidate_id": 32,
+          "mask_row": 32,
+          "mask_nonzero": 27,
+          "model_label": "formula",
+          "original_bbox": [
+            721.601257,
+            2095.18677,
+            823.914917,
+            2126.91187
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0078",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            974,
+            2096,
+            1018,
+            2126
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.536169171,
+          "candidate_rank": 289,
+          "original_class_id": 15,
+          "candidate_id": 33,
+          "mask_row": 33,
+          "mask_nonzero": 11,
+          "model_label": "formula",
+          "original_bbox": [
+            974.829956,
+            2096.28491,
+            1017.97424,
+            2125.67944
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0065",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            1144,
+            2096,
+            1275,
+            2127
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.79501009,
+          "candidate_rank": 295,
+          "original_class_id": 15,
+          "candidate_id": 20,
+          "mask_row": 20,
+          "mask_nonzero": 35,
+          "model_label": "formula",
+          "original_bbox": [
+            1144.61609,
+            2096.65771,
+            1274.77734,
+            2126.7312
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0073",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            564,
+            2097,
+            627,
+            2127
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.730008245,
+          "candidate_rank": 277,
+          "original_class_id": 15,
+          "candidate_id": 28,
+          "mask_row": 28,
+          "mask_nonzero": 18,
+          "model_label": "formula",
+          "original_bbox": [
+            564.427551,
+            2097.10669,
+            626.043396,
+            2126.65967
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            265,
+            200,
+            536,
+            353
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "table"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            560,
+            258,
+            1103,
+            296
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003",
+            "l0070",
+            "l0086"
+          ],
+          "bbox": [
+            244,
+            369,
+            1123,
+            407
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004",
+            "l0075",
+            "l0083",
+            "l0080",
+            "l0082"
+          ],
+          "bbox": [
+            243,
+            428,
+            1354,
+            466
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005",
+            "l0066",
+            "l0063",
+            "l0069",
+            "l0088",
+            "l0079"
+          ],
+          "bbox": [
+            239,
+            492,
+            1370,
+            610
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006",
+            "l0067",
+            "l0076"
+          ],
+          "bbox": [
+            244,
+            629,
+            1396,
+            722
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            264,
+            785,
+            533,
+            940
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "table"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            559,
+            844,
+            1116,
+            882
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009",
+            "l0087",
+            "l0064",
+            "l0085"
+          ],
+          "bbox": [
+            243,
+            954,
+            1200,
+            990
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            245,
+            1013,
+            450,
+            1049
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011",
+            "l0072",
+            "l0071",
+            "l0068",
+            "l0074"
+          ],
+          "bbox": [
+            242,
+            1086,
+            917,
+            1128
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012",
+            "l0054",
+            "l0081",
+            "l0057"
+          ],
+          "bbox": [
+            242,
+            1923,
+            1402,
+            2013
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013",
+            "l0084",
+            "l0061"
+          ],
+          "bbox": [
+            244,
+            2036,
+            597,
+            2071
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014",
+            "l0062",
+            "l0077",
+            "l0078",
+            "l0065",
+            "l0073"
+          ],
+          "bbox": [
+            241,
+            2093,
+            1408,
+            2129
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            265,
+            200,
+            536,
+            353
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "html",
+            "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+            "resource": "assets/p0001-b0001.png",
+            "table": {
+              "rows": 2,
+              "columns": 2,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "评卷人",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "得分",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 77,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                265,
+                200,
+                536,
+                353
+              ],
+              "canvas_size": [
+                352,
+                224
+              ],
+              "content_size": [
+                352,
+                199
+              ],
+              "pad_offset": [
+                0,
+                12
+              ],
+              "scale": 1.2988929889298892,
+              "rounding_error": [
+                0,
+                0.2693726937269503
+              ],
+              "canvas_to_page_affine": [
+                0.7698863636363636,
+                0,
+                265,
+                0,
+                0.7688442211055276,
+                190.77386934673368
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2868,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2534,
+                    "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      352,
+                      224
+                    ],
+                    "content_size": [
+                      352,
+                      199
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      12
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.2693726937269503
+                    ],
+                    "scale": 1.2988929889298892,
+                    "token_count": 77
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2534,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            560,
+            258,
+            1103,
+            296
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 二、 填空题(共4题，每题5分，共20分)\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## 二、 填空题(共4题，每题5分，共20分)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 93,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                560,
+                258,
+                1103,
+                296
+              ],
+              "canvas_size": [
+                992,
+                96
+              ],
+              "content_size": [
+                992,
+                69
+              ],
+              "pad_offset": [
+                0,
+                13
+              ],
+              "scale": 1.8268876611418048,
+              "rounding_error": [
+                0,
+                -0.4217311233885823
+              ],
+              "canvas_to_page_affine": [
+                0.5473790322580645,
+                0,
+                560,
+                0,
+                0.5507246376811594,
+                250.84057971014494
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2262,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1846,
+                    "raw_output": "## 二、 填空题(共4题，每题5分，共20分)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 二、 填空题(共4题，每题5分，共20分)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      96
+                    ],
+                    "content_size": [
+                      992,
+                      69
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      13
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4217311233885823
+                    ],
+                    "scale": 1.8268876611418048,
+                    "token_count": 93
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1846,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 二、 填空题(共4题，每题5分，共20分)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            244,
+            369,
+            1123,
+            407
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                244,
+                369,
+                1123,
+                407
+              ],
+              "canvas_size": [
+                1248,
+                64
+              ],
+              "content_size": [
+                1248,
+                54
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 1.4197952218430034,
+              "rounding_error": [
+                0,
+                0.047781569965870574
+              ],
+              "canvas_to_page_affine": [
+                0.7043269230769231,
+                0,
+                244,
+                0,
+                0.7037037037037037,
+                365.48148148148147
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2535,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2186,
+                    "raw_output": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1248,
+                      64
+                    ],
+                    "content_size": [
+                      1248,
+                      54
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.047781569965870574
+                    ],
+                    "scale": 1.4197952218430034,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2186,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            243,
+            428,
+            1354,
+            466
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 88,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                243,
+                428,
+                1354,
+                466
+              ],
+              "canvas_size": [
+                1408,
+                64
+              ],
+              "content_size": [
+                1408,
+                48
+              ],
+              "pad_offset": [
+                0,
+                8
+              ],
+              "scale": 1.2673267326732673,
+              "rounding_error": [
+                0,
+                -0.15841584158415856
+              ],
+              "canvas_to_page_affine": [
+                0.7890625,
+                0,
+                243,
+                0,
+                0.7916666666666666,
+                421.6666666666667
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3059,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2669,
+                    "raw_output": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1408,
+                      64
+                    ],
+                    "content_size": [
+                      1408,
+                      48
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      8
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.15841584158415856
+                    ],
+                    "scale": 1.2673267326732673,
+                    "token_count": 88
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2669,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            239,
+            492,
+            1370,
+            610
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 140,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                239,
+                492,
+                1370,
+                610
+              ],
+              "canvas_size": [
+                1120,
+                128
+              ],
+              "content_size": [
+                1120,
+                117
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 0.9902740937223696,
+              "rounding_error": [
+                0,
+                0.14765694076038471
+              ],
+              "canvas_to_page_affine": [
+                1.0098214285714286,
+                0,
+                239,
+                0,
+                1.0085470085470085,
+                486.95726495726495
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3966,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3311,
+                    "raw_output": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      128
+                    ],
+                    "content_size": [
+                      1120,
+                      117
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.14765694076038471
+                    ],
+                    "scale": 0.9902740937223696,
+                    "token_count": 140
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3311,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            244,
+            629,
+            1396,
+            722
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 108,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                244,
+                629,
+                1396,
+                722
+              ],
+              "canvas_size": [
+                1152,
+                96
+              ],
+              "content_size": [
+                1152,
+                93
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 1,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1,
+                0,
+                244,
+                0,
+                1,
+                628
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2934,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2426,
+                    "raw_output": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      96
+                    ],
+                    "content_size": [
+                      1152,
+                      93
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 1.0,
+                    "token_count": 108
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2426,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            264,
+            785,
+            533,
+            940
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "html",
+            "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+            "resource": "assets/p0001-b0007.png",
+            "table": {
+              "rows": 2,
+              "columns": 2,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "评卷人",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "得分",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 77,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                264,
+                785,
+                533,
+                940
+              ],
+              "canvas_size": [
+                352,
+                224
+              ],
+              "content_size": [
+                352,
+                203
+              ],
+              "pad_offset": [
+                0,
+                10
+              ],
+              "scale": 1.308550185873606,
+              "rounding_error": [
+                0,
+                0.1747211895910823
+              ],
+              "canvas_to_page_affine": [
+                0.7642045454545454,
+                0,
+                264,
+                0,
+                0.7635467980295566,
+                777.3645320197045
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2345,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2020,
+                    "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      352,
+                      224
+                    ],
+                    "content_size": [
+                      352,
+                      203
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      10
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.1747211895910823
+                    ],
+                    "scale": 1.308550185873606,
+                    "token_count": 77
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2020,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            559,
+            844,
+            1116,
+            882
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 三、 解答题(共7题，每题12分，共84分)\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "## 三、 解答题(共7题，每题12分，共84分)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 93,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                559,
+                844,
+                1116,
+                882
+              ],
+              "canvas_size": [
+                992,
+                96
+              ],
+              "content_size": [
+                992,
+                68
+              ],
+              "pad_offset": [
+                0,
+                14
+              ],
+              "scale": 1.7809694793536803,
+              "rounding_error": [
+                0,
+                0.32315978456014705
+              ],
+              "canvas_to_page_affine": [
+                0.561491935483871,
+                0,
+                559,
+                0,
+                0.5588235294117647,
+                836.1764705882352
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2266,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1857,
+                    "raw_output": "## 三、 解答题(共7题，每题12分，共84分)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 三、 解答题(共7题，每题12分，共84分)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      96
+                    ],
+                    "content_size": [
+                      992,
+                      68
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      14
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.32315978456014705
+                    ],
+                    "scale": 1.7809694793536803,
+                    "token_count": 93
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1857,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 三、 解答题(共7题，每题12分，共84分)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            243,
+            954,
+            1200,
+            990
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                243,
+                954,
+                1200,
+                990
+              ],
+              "canvas_size": [
+                1344,
+                64
+              ],
+              "content_size": [
+                1344,
+                51
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 1.4043887147335423,
+              "rounding_error": [
+                0,
+                0.4420062695924756
+              ],
+              "canvas_to_page_affine": [
+                0.7120535714285714,
+                0,
+                243,
+                0,
+                0.7058823529411765,
+                949.7647058823529
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2561,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2182,
+                    "raw_output": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1344,
+                      64
+                    ],
+                    "content_size": [
+                      1344,
+                      51
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4420062695924756
+                    ],
+                    "scale": 1.4043887147335423,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2182,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            245,
+            1013,
+            450,
+            1049
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(1)求角 C 的值;\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "(1)求角 C 的值;\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                245,
+                1013,
+                450,
+                1049
+              ],
+              "canvas_size": [
+                640,
+                128
+              ],
+              "content_size": [
+                640,
+                112
+              ],
+              "pad_offset": [
+                0,
+                8
+              ],
+              "scale": 3.1219512195121952,
+              "rounding_error": [
+                0,
+                -0.39024390243902474
+              ],
+              "canvas_to_page_affine": [
+                0.3203125,
+                0,
+                245,
+                0,
+                0.32142857142857145,
+                1010.4285714285714
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1944,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1594,
+                    "raw_output": "(1)求角 C 的值;\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(1)求角 C 的值;\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      640,
+                      128
+                    ],
+                    "content_size": [
+                      640,
+                      112
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      8
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.39024390243902474
+                    ],
+                    "scale": 3.1219512195121952,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1594,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(1)求角 C 的值;\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            242,
+            1086,
+            917,
+            1128
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                242,
+                1086,
+                917,
+                1128
+              ],
+              "canvas_size": [
+                1056,
+                64
+              ],
+              "content_size": [
+                1029,
+                64
+              ],
+              "pad_offset": [
+                13,
+                0
+              ],
+              "scale": 1.5238095238095237,
+              "rounding_error": [
+                0.4285714285715585,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.6559766763848397,
+                0,
+                233.47230320699708,
+                0,
+                0.65625,
+                1086
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2261,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1975,
+                    "raw_output": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      64
+                    ],
+                    "content_size": [
+                      1029,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      13,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.4285714285715585,
+                      0.0
+                    ],
+                    "scale": 1.5238095238095237,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1975,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 10,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            242,
+            1923,
+            1402,
+            2013
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 108,
+              "source_crop": "assets/p0001-b0012.png",
+              "source_bbox": [
+                242,
+                1923,
+                1402,
+                2013
+              ],
+              "canvas_size": [
+                1152,
+                96
+              ],
+              "content_size": [
+                1152,
+                89
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 0.993103448275862,
+              "rounding_error": [
+                0,
+                -0.3793103448275872
+              ],
+              "canvas_to_page_affine": [
+                1.0069444444444444,
+                0,
+                242,
+                0,
+                1.0112359550561798,
+                1919.9662921348315
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3368,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2856,
+                    "raw_output": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      96
+                    ],
+                    "content_size": [
+                      1152,
+                      89
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3793103448275872
+                    ],
+                    "scale": 0.993103448275862,
+                    "token_count": 108
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2856,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 11,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            244,
+            2036,
+            597,
+            2071
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0013.png",
+              "source_bbox": [
+                244,
+                2036,
+                597,
+                2071
+              ],
+              "canvas_size": [
+                832,
+                96
+              ],
+              "content_size": [
+                832,
+                82
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 2.356940509915014,
+              "rounding_error": [
+                0,
+                -0.49291784702549535
+              ],
+              "canvas_to_page_affine": [
+                0.42427884615384615,
+                0,
+                244,
+                0,
+                0.4268292682926829,
+                2033.0121951219512
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2203,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1857,
+                    "raw_output": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      832,
+                      96
+                    ],
+                    "content_size": [
+                      832,
+                      82
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.49291784702549535
+                    ],
+                    "scale": 2.356940509915014,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1857,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 12,
+          "id": "b0014",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0014"
+          ],
+          "bbox": [
+            241,
+            2093,
+            1408,
+            2129
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0014",
+            "raw_output": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 92,
+              "source_crop": "assets/p0001-b0014.png",
+              "source_bbox": [
+                241,
+                2093,
+                1408,
+                2129
+              ],
+              "canvas_size": [
+                1472,
+                64
+              ],
+              "content_size": [
+                1472,
+                45
+              ],
+              "pad_offset": [
+                0,
+                9
+              ],
+              "scale": 1.2613538988860327,
+              "rounding_error": [
+                -2.2737367544323206e-13,
+                -0.4087403598971733
+              ],
+              "canvas_to_page_affine": [
+                0.7927989130434783,
+                0,
+                241,
+                0,
+                0.8,
+                2085.8
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3145,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2745,
+                    "raw_output": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1472,
+                      64
+                    ],
+                    "content_size": [
+                      1472,
+                      45
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      9
+                    ],
+                    "rounding_error": [
+                      -2.2737367544323206e-13,
+                      -0.4087403598971733
+                    ],
+                    "scale": 1.2613538988860327,
+                    "token_count": 92
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2745,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0070",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0086",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0075",
+          "owner_block_id": "b0004"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0083",
+          "owner_block_id": "b0004"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0080",
+          "owner_block_id": "b0004"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0082",
+          "owner_block_id": "b0004"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0066",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0063",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0069",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0088",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0079",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0067",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0076",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0087",
+          "owner_block_id": "b0009"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0064",
+          "owner_block_id": "b0009"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0085",
+          "owner_block_id": "b0009"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0072",
+          "owner_block_id": "b0011"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0071",
+          "owner_block_id": "b0011"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0068",
+          "owner_block_id": "b0011"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0074",
+          "owner_block_id": "b0011"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0054",
+          "owner_block_id": "b0012"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0081",
+          "owner_block_id": "b0012"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0057",
+          "owner_block_id": "b0012"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0084",
+          "owner_block_id": "b0013"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0061",
+          "owner_block_id": "b0013"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0062",
+          "owner_block_id": "b0014"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0077",
+          "owner_block_id": "b0014"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0078",
+          "owner_block_id": "b0014"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0065",
+          "owner_block_id": "b0014"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0073",
+          "owner_block_id": "b0014"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0002",
+          "target_block_id": "b0003",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0008",
+          "target_block_id": "b0009",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 271,
+      "height": 153,
+      "bbox": [
+        265,
+        200,
+        536,
+        353
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 543,
+      "height": 38,
+      "bbox": [
+        560,
+        258,
+        1103,
+        296
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 879,
+      "height": 38,
+      "bbox": [
+        244,
+        369,
+        1123,
+        407
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 1111,
+      "height": 38,
+      "bbox": [
+        243,
+        428,
+        1354,
+        466
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 1131,
+      "height": 118,
+      "bbox": [
+        239,
+        492,
+        1370,
+        610
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 1152,
+      "height": 93,
+      "bbox": [
+        244,
+        629,
+        1396,
+        722
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 269,
+      "height": 155,
+      "bbox": [
+        264,
+        785,
+        533,
+        940
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 557,
+      "height": 38,
+      "bbox": [
+        559,
+        844,
+        1116,
+        882
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 957,
+      "height": 36,
+      "bbox": [
+        243,
+        954,
+        1200,
+        990
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 205,
+      "height": 36,
+      "bbox": [
+        245,
+        1013,
+        450,
+        1049
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 675,
+      "height": 42,
+      "bbox": [
+        242,
+        1086,
+        917,
+        1128
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 1160,
+      "height": 90,
+      "bbox": [
+        242,
+        1923,
+        1402,
+        2013
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 353,
+      "height": 35,
+      "bbox": [
+        244,
+        2036,
+        597,
+        2071
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0014",
+      "path": "assets/p0001-b0014.png",
+      "media_type": "image/png",
+      "source_block_id": "b0014",
+      "width": 1167,
+      "height": 36,
+      "bbox": [
+        241,
+        2093,
+        1408,
+        2129
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n\n## 二、 填空题(共4题，每题5分，共20分)\n\n\n13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n\n\n14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n\n\n15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n\n\n16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n\n\n<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n\n## 三、 解答题(共7题，每题12分，共84分)\n\n\n17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n\n\n(1)求角 C 的值;\n\n\n(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n\n\n18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n\n\n(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n\n\n(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n\n",
+  "quality": {
+    "text": {
+      "denominator": 12,
+      "matched": 12,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 0,
+          "category": "title",
+          "order": 2,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 20,
+          "reference_range": [
+            0,
+            20
+          ],
+          "actual_range": [
+            0,
+            24
+          ],
+          "raw_range": [
+            0,
+            24
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 5,
+          "category": "text_block",
+          "order": 3,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 148,
+          "reference_range": [
+            0,
+            148
+          ],
+          "actual_range": [
+            0,
+            72
+          ],
+          "raw_range": [
+            0,
+            72
+          ],
+          "edit_distance": 89,
+          "raw_edit_distance": 89,
+          "exact": false
+        },
+        {
+          "annotation_id": 13,
+          "category": "text_block",
+          "order": 4,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 130,
+          "reference_range": [
+            0,
+            130
+          ],
+          "actual_range": [
+            0,
+            96
+          ],
+          "raw_range": [
+            0,
+            96
+          ],
+          "edit_distance": 53,
+          "raw_edit_distance": 53,
+          "exact": false
+        },
+        {
+          "annotation_id": 4,
+          "category": "text_block",
+          "order": 5,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 217,
+          "reference_range": [
+            0,
+            217
+          ],
+          "actual_range": [
+            0,
+            157
+          ],
+          "raw_range": [
+            0,
+            157
+          ],
+          "edit_distance": 78,
+          "raw_edit_distance": 78,
+          "exact": false
+        },
+        {
+          "annotation_id": 6,
+          "category": "text_block",
+          "order": 6,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 86,
+          "reference_range": [
+            0,
+            86
+          ],
+          "actual_range": [
+            0,
+            86
+          ],
+          "raw_range": [
+            0,
+            86
+          ],
+          "edit_distance": 15,
+          "raw_edit_distance": 15,
+          "exact": false
+        },
+        {
+          "annotation_id": 1,
+          "category": "title",
+          "order": 8,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 21,
+          "reference_range": [
+            0,
+            21
+          ],
+          "actual_range": [
+            0,
+            25
+          ],
+          "raw_range": [
+            0,
+            25
+          ],
+          "edit_distance": 6,
+          "raw_edit_distance": 6,
+          "exact": false
+        },
+        {
+          "annotation_id": 9,
+          "category": "text_block",
+          "order": 9,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 74,
+          "reference_range": [
+            0,
+            74
+          ],
+          "actual_range": [
+            0,
+            81
+          ],
+          "raw_range": [
+            0,
+            81
+          ],
+          "edit_distance": 19,
+          "raw_edit_distance": 19,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "text_block",
+          "order": 10,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 13,
+          "reference_range": [
+            0,
+            13
+          ],
+          "actual_range": [
+            0,
+            11
+          ],
+          "raw_range": [
+            0,
+            11
+          ],
+          "edit_distance": 7,
+          "raw_edit_distance": 7,
+          "exact": false
+        },
+        {
+          "annotation_id": 8,
+          "category": "text_block",
+          "order": 11,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 87,
+          "reference_range": [
+            0,
+            87
+          ],
+          "actual_range": [
+            0,
+            70
+          ],
+          "raw_range": [
+            0,
+            70
+          ],
+          "edit_distance": 26,
+          "raw_edit_distance": 26,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "text_block",
+          "order": 12,
+          "block_id": "b0012",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 143,
+          "reference_range": [
+            0,
+            143
+          ],
+          "actual_range": [
+            0,
+            105
+          ],
+          "raw_range": [
+            0,
+            105
+          ],
+          "edit_distance": 67,
+          "raw_edit_distance": 67,
+          "exact": false
+        },
+        {
+          "annotation_id": 11,
+          "category": "text_block",
+          "order": 13,
+          "block_id": "b0013",
+          "status": "ok",
+          "reading_order_position": 12,
+          "reference_chars": 43,
+          "reference_range": [
+            0,
+            43
+          ],
+          "actual_range": [
+            0,
+            36
+          ],
+          "raw_range": [
+            0,
+            36
+          ],
+          "edit_distance": 20,
+          "raw_edit_distance": 20,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "text_block",
+          "order": 14,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 13,
+          "reference_chars": 159,
+          "reference_range": [
+            0,
+            159
+          ],
+          "actual_range": [
+            0,
+            99
+          ],
+          "raw_range": [
+            0,
+            99
+          ],
+          "edit_distance": 68,
+          "raw_edit_distance": 68,
+          "exact": false
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 1141,
+      "edit_distance": 452,
+      "raw_edit_distance": 452
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 2,
+      "matched": 2,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 2,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 10,
+          "category": "table",
+          "order": 1,
+          "block_id": "b0001",
+          "coverage": 0.979,
+          "status": "ok",
+          "structure_exact": true,
+          "cell_exact": 4,
+          "cell_denominator": 4,
+          "exact": true,
+          "reading_order_position": 0
+        },
+        {
+          "annotation_id": 12,
+          "category": "table",
+          "order": 7,
+          "block_id": "b0007",
+          "coverage": 0.9997,
+          "status": "ok",
+          "structure_exact": true,
+          "cell_exact": 4,
+          "cell_denominator": 4,
+          "exact": true,
+          "reading_order_position": 6
+        }
+      ],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 91,
+      "evaluable": 91,
+      "correct": 91,
+      "missing_pairs": 0,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 14
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      0,
+      5,
+      13,
+      4,
+      6,
+      1,
+      9,
+      7,
+      8,
+      2,
+      11,
+      3
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 14,
+    "parent_reference_count": 14
+  },
+  "alignment": [
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "二、填空题(共4题，每题5分，共20分)",
+      "actual": "## 二、 填空题(共4题，每题5分，共20分)",
+      "raw_output": "## 二、 填空题(共4题，每题5分，共20分)\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        560,
+        258,
+        1103,
+        296
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 二、 填空题(共4题，每题5分，共20分)\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        5
+      ],
+      "expected": "\\t13．已知函数 $ f ( x ) \\!=\\! a x \\!-\\! \\operatorname{l o g}_{2} ( 2^{x} \\!+\\! 1 ) \\!+\\! \\operatorname{c o s} x ( a \\! \\in\\! \\mathbf{R} ) $为偶函数，则a=____.",
+      "actual": "13. 已知函数 $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则 $a=$ ___.",
+      "raw_output": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+      "edit_distance": 89,
+      "raw_edit_distance": 89,
+      "bbox": [
+        244,
+        369,
+        1123,
+        407
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "13. 已知函数  $f(x)=ax-\\log_2(2^x+1)+\\cos x(a\\in\\mathbb{R})$ 为偶函数，则  $a=$ ___.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003",
+        "l0070",
+        "l0086"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        13
+      ],
+      "expected": "\\t14. 已知 $ S_{n} $是等比数列 $ \\left \\{ a_{n} \\right \\} $的前 n项和, 且 $ S_{3}, S_{9}, S_{6} $成等差数列 $ a_{2}+a_{5}=6, $ ,则 $ a_ {8}= $ ____.",
+      "actual": "14. 已知 $S_n$ 是等比数列 $\\{a_n\\}$ 的前 $n$ 项和, 且 $S_3, S_9, S_6$ 成等差数列, $a_2 + a_5 = 6$, 则 $a_8 =$ ___.",
+      "raw_output": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+      "edit_distance": 53,
+      "raw_edit_distance": 53,
+      "bbox": [
+        243,
+        428,
+        1354,
+        466
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "14. 已知  $S_n$ 是等比数列  $\\{a_n\\}$ 的前  $n$ 项和, 且  $S_3, S_9, S_6$ 成等差数列,  $a_2 + a_5 = 6$, 则  $a_8 =$ ___.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004",
+        "l0075",
+        "l0083",
+        "l0080",
+        "l0082"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "\\t15. 若 $ f ( x ) {=} 2 \\operatorname{s i n} ( 2 x {+} \\varphi) ( \\varphi{>} 0 ) $的图象关于直线 $ x={\\frac{\\pi} {1 2}} $对称,且当 $ \\varphi $取最小值时, $ \\exists x_{0} \\in( 0, \\frac{\\pi} {2} ) $ ,使得 $ f ( x_{0} )=a $ ,则a的取值范围是____.",
+      "actual": "15. 若 $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线 $x=\\frac{\\pi}{12}$ 对称，且当 $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得 $f(x_0)=a$，则 $a$ 的取值范围是 ___.",
+      "raw_output": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+      "edit_distance": 78,
+      "raw_edit_distance": 78,
+      "bbox": [
+        239,
+        492,
+        1370,
+        610
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "15. 若  $f(x)=2\\sin(2x+\\varphi)(\\varphi>0)$ 的图象关于直线  $x=\\frac{\\pi}{12}$ 对称，且当  $\\varphi$ 取最小值时， $\\exists x_0\\in(0,\\frac{\\pi}{2})$，使得  $f(x_0)=a$，则  $a$ 的取值范围是 ___.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005",
+        "l0066",
+        "l0063",
+        "l0069",
+        "l0088",
+        "l0079"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        6
+      ],
+      "expected": "\\t16. 在四面体 PABC中, $ \\triangle A B C $为等边三角形, 边长为6, PA=6,PB=8,PC=10 ,则四面体 PABC的体积为____.",
+      "actual": "16. 在四面体 PABC 中, $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.",
+      "raw_output": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+      "edit_distance": 15,
+      "raw_edit_distance": 15,
+      "bbox": [
+        244,
+        629,
+        1396,
+        722
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "16. 在四面体 PABC 中,  $\\triangle ABC$ 为等边三角形, 边长为 6, PA=6, PB=8, PC=10, 则四面体 PABC 的体积为 ___.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006",
+        "l0067",
+        "l0076"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        1
+      ],
+      "expected": "三、解答题（共7题，每题12分，共84分）",
+      "actual": "## 三、 解答题(共7题，每题12分，共84分)",
+      "raw_output": "## 三、 解答题(共7题，每题12分，共84分)\n",
+      "edit_distance": 6,
+      "raw_edit_distance": 6,
+      "bbox": [
+        559,
+        844,
+        1116,
+        882
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 三、 解答题(共7题，每题12分，共84分)\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        9
+      ],
+      "expected": "\\t17. 已知 $ \\triangle A B C $的内角 A,B,C的对边分别为 a,b,c,且 asin(A+B-C)=csin(B+C).",
+      "actual": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.",
+      "raw_output": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+      "edit_distance": 19,
+      "raw_edit_distance": 19,
+      "bbox": [
+        243,
+        954,
+        1200,
+        990
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "17. 已知 $\\triangle ABC$的内角 $A, B, C$的对边分别为 $a, b, c$, 且 $a\\sin(A+B-C)=c\\sin(B+C)$.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009",
+        "l0087",
+        "l0064",
+        "l0085"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        7
+      ],
+      "expected": "\\t\\t(1)求角C的值；",
+      "actual": "(1)求角 C 的值;",
+      "raw_output": "(1)求角 C 的值;\n",
+      "edit_distance": 7,
+      "raw_edit_distance": 7,
+      "bbox": [
+        245,
+        1013,
+        450,
+        1049
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(1)求角 C 的值;\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        8
+      ],
+      "expected": "\\t\\t(2)若 2a+b=6 ,且 $ \\triangle A B C $的面积为 $ \\sqrt{3} $ ,求 $ \\bigtriangleup A B C $的周长.",
+      "actual": "(2)若 $2a+b=6$，且 $\\triangle ABC$ 的面积为 $\\sqrt{3}$，求 $\\triangle ABC$ 的周长.",
+      "raw_output": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+      "edit_distance": 26,
+      "raw_edit_distance": 26,
+      "bbox": [
+        242,
+        1086,
+        917,
+        1128
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(2)若  $2a+b=6$，且  $\\triangle ABC$ 的面积为  $\\sqrt{3}$，求  $\\triangle ABC$ 的周长.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011",
+        "l0072",
+        "l0071",
+        "l0068",
+        "l0074"
+      ]
+    },
+    {
+      "block_id": "b0012",
+      "source_region_ids": [
+        "r0012"
+      ],
+      "annotation_ids": [
+        2
+      ],
+      "expected": "18.如图，三棱柱 $ A B C \\mathrm{-} A_{1} B_{1} C_{1} $中，侧面 $ B B_{1} C_{1} C $是菱形，其对角线的交点为 O且 $ A B {=} A C_{1} {\\mathrm{,}} A B {\\bot} $ $ B_{1}C. $",
+      "actual": "18. 如图, 三棱柱 $ABC-A_{1}B_{1}C_{1}$ 中, 侧面 $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为 $O$, 且 $AB=AC_{1}, AB \\perp B_{1}C$.",
+      "raw_output": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+      "edit_distance": 67,
+      "raw_edit_distance": 67,
+      "bbox": [
+        242,
+        1923,
+        1402,
+        2013
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "18. 如图, 三棱柱  $ABC-A_{1}B_{1}C_{1}$ 中, 侧面  $BB_{1}C_{1}C$ 是菱形, 其对角线的交点为  $O$, 且  $AB=AC_{1}, AB \\perp B_{1}C$.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0012",
+        "l0054",
+        "l0081",
+        "l0057"
+      ]
+    },
+    {
+      "block_id": "b0013",
+      "source_region_ids": [
+        "r0013"
+      ],
+      "annotation_ids": [
+        11
+      ],
+      "expected": "/t（1）求证： AO $ \\bot $平面 $ B B_{1} C_{1} C; $",
+      "actual": "(1)求证: $AO \\perp$ 平面 $BB_{1}C_{1}C$;",
+      "raw_output": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+      "edit_distance": 20,
+      "raw_edit_distance": 20,
+      "bbox": [
+        244,
+        2036,
+        597,
+        2071
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(1)求证:  $AO \\perp$ 平面  $BB_{1}C_{1}C$;\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0013",
+        "l0084",
+        "l0061"
+      ]
+    },
+    {
+      "block_id": "b0014",
+      "source_region_ids": [
+        "r0014"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "/t(2)设 $ \\angle B_{1} B C=6 0^{\\circ} $ ,若直线 $ A_{1} B_{1} $与平面 $ B B_{1} C_{1} C $所成的角为 $ 4 5^{\\circ} $求二面角 $ A_{1} \\mathrm{-} B_{1} C_{1} \\mathrm{-} B $的余弦值.",
+      "actual": "(2)设 $\\angle B_1BC=60^\\circ$，若直线 $A_1B_1$ 与平面 $BB_1C_1C$ 所成的角为 $45^\\circ$，求二面角 $A_1-B_1C_1-B$ 的余弦值.",
+      "raw_output": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+      "edit_distance": 68,
+      "raw_edit_distance": 68,
+      "bbox": [
+        241,
+        2093,
+        1408,
+        2129
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(2)设  $\\angle B_1BC=60^\\circ$，若直线  $A_1B_1$ 与平面  $BB_1C_1C$ 所成的角为  $45^\\circ$，求二面角  $A_1-B_1C_1-B$ 的余弦值.\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0014",
+        "l0062",
+        "l0077",
+        "l0078",
+        "l0065",
+        "l0073"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "table",
+      "annotation_id": 10,
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          263.46160888671875,
+          198.04779052734375,
+          536.1398315429688,
+          198.04779052734375,
+          536.1398315429688,
+          353.3748474121094,
+          263.46160888671875,
+          353.3748474121094
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 10,
+        "html": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+      "content": {
+        "format": "html",
+        "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "resource": "assets/p0001-b0001.png",
+        "table": {
+          "rows": 2,
+          "columns": 2,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "table",
+      "annotation_id": 12,
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          265.7821867478338,
+          787.3591698472704,
+          533.0865108102912,
+          787.3591698472704,
+          533.0865108102912,
+          939.1705930240464,
+          265.7821867478338,
+          939.1705930240464
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 12,
+        "html": "<table border=\"1\"><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "raw_output": "<table border=1><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>\n",
+      "content": {
+        "format": "html",
+        "text": "<table><tr><td>评卷人</td><td>得分</td></tr><tr><td></td><td></td></tr></table>",
+        "resource": "assets/p0001-b0007.png",
+        "table": {
+          "rows": 2,
+          "columns": 2,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "评卷人",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "得分",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

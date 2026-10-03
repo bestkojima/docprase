@@ -1,0 +1,2615 @@
+{
+  "key": "development/odb-11",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+    "sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-11/job"
+    ],
+    "input_sha256": "eef6c21bb09527779db3f723a9ac60360d5456b76fb5094761dfbdc7eff64c68",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 108.91163519400288,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "8a48e213f732e90a982194425b412c82b39b67d0c72424255cad9903bd9a4cf5",
+      "job/assets/p0001-b0002.png": "0917cecdebe60ac296129a5b80d343e9219f87a6a130fe42ecd377290e882ab6",
+      "job/assets/p0001-b0003.png": "9e085f6626c8757e4316e67d1dfee92253f44ab96a19a9cbce176fc248c7bef3",
+      "job/assets/p0001-b0004.png": "5a9571f69b5be070072a7b59522fffde6a880ef32b32235b1b900f893c8ea167",
+      "job/assets/p0001-b0005.png": "245d71e7e29feacb0b53ccb3e843473002f9422a6b38535eada4520b22fcf8fb",
+      "job/assets/p0001-b0006.png": "0918191ce11684c643cb2ea95031c594fb3081c114fe4957d9702ee0d2106646",
+      "job/assets/p0001-b0007.png": "7bfb31d0d05aaadefd9e92ff042f9d7403a34851f67239921bcaacb742bb30b4",
+      "job/assets/p0001-b0008.png": "1a8f004adf4aa82aa07fecff8ebbdbd92efea8e262ed38e669be0a141ab955b7",
+      "job/assets/p0001-fetch_name_0.f32": "032a2bcfef4b98b8008208d6b656154c12626c933281d8af781ef07cba45fd92",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "72bcd45b965d15d5e565f54d88f3fc1570b1a905ed15a8274b5a83ef6f6a167f",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "dbbe04a61f320483fc4140cc971da84be234872c71490011d6bcfefeb3db7e8d",
+      "job/assets/p0001-layout-overlay.png": "09f9c95387c94bfdba44f5705103fd997bd3d236f7c5f27592f960b8f9805540",
+      "job/assets/p0001-mask-c0.png": "ddb5b30bb228504fafe775be0d77a23a8f68ec0258ba648477555218267a28fd",
+      "job/assets/p0001-mask-c1.png": "419f7e4a1c7a5af14ea1bb3c06fa1b63737985656316bbf8689f476ed6a06948",
+      "job/assets/p0001-mask-c11.png": "c78ef8c1975af2295f81c3328e94594f7dc87dd41ac483065ec2d8632a75172c",
+      "job/assets/p0001-mask-c12.png": "8fdd05ed8248da309c1935caebaa9d282e6f0c583507f6dd18d593a90b7f81f8",
+      "job/assets/p0001-mask-c2.png": "230bf318ca2a754134d342698203ea4972f69c3a66808f184883133004f2fb55",
+      "job/assets/p0001-mask-c3.png": "7706fac2a9b4d331f9e768d346ad75d368fd2feadb7276b0079962e0e6dc49f3",
+      "job/assets/p0001-mask-c4.png": "79f293fb53675cce5b6925fbb473b9f99771759844d51b8f6e41cf62edc323c4",
+      "job/assets/p0001-mask-c5.png": "5665a72574bfc93b33ae0595aed18066c84b1f72fd465846402de4e3ad2eb8f0",
+      "job/assets/p0001-mask-c6.png": "7210ad027c460baaeeae8003b928f35a74dbfb601422ee84f93f5267a92099f9",
+      "job/assets/p0001-mask-c7.png": "68d513f5d22f4ebe84972d4ae6d84c82ec71bec3ef719ef1e4a6ec8abe801c93",
+      "job/assets/p0001-mask-c8.png": "41c29ccca418872577daa3be346849c72ff83b44859e819aaac18c73031537b6",
+      "job/assets/p0001-mask-c9.png": "a882249ca35e092eda31509fa3a4a5512abeb97abdcdfc6dac98d75bd579f627",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "257686bad3f6e68f155e9dc3d73eaf0d4cff3eda4347e480dbe992836ee3bdfd",
+      "job/document.md": "237aa824ef126ef28b4c05be4b1306c3e9dd06e54e0a1553b6d7313b3594b8a2",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "63f906bae187ad35b3954a406c3c7607a9832b52e9ef889fb59fe91ad37702b2",
+      "job/job-status.json": "d9118cb5294df929c2aad3933de894bcf947a345167533be98bf196561c100f1",
+      "job/run-manifest.json": "c7fadaae8d0c5c080c5db36d21b771b9c61619a1b5648a5b0a1abdd2377c04fc",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "74f9207134df2ab2f6a56b392f4c3eafc5f64aa6b6ec4d298b34f698a8911577",
+      "time.txt": "918d39e08c1f6b74c762addd6d1b09506fe97f40f4da8a44ac356b89934ed17d"
+    }
+  },
+  "document_status": "partial",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "poly": [
+          2167.876915424859,
+          459.29476431702096,
+          3511.1597080905854,
+          459.29476431702096,
+          3511.1597080905854,
+          776.3786853325355,
+          2167.876915424859,
+          776.3786853325355
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 0,
+        "text": "全书大归纳",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          2327.9411449183453,
+          1248.0708898487374,
+          3492.503909375327,
+          1248.0708898487374,
+          3492.503909375327,
+          1472.9122156597386,
+          2327.9411449183453,
+          1472.9122156597386
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 5,
+        "text": "核心知识归纳",
+        "attribute": {}
+      },
+      {
+        "category_type": "table_caption",
+        "poly": [
+          769.7759954110653,
+          1635.3878531745663,
+          1628.7851632530962,
+          1635.3878531745663,
+          1628.7851632530962,
+          1796.8123947824647,
+          769.7759954110653,
+          1796.8123947824647
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 6,
+        "text": "一元一次方程",
+        "attribute": {}
+      },
+      {
+        "category_type": "table",
+        "poly": [
+          502.7744311311984,
+          1837.1685301844395,
+          5312.723809233351,
+          1837.1685301844395,
+          5312.723809233351,
+          7596.565568266244,
+          502.7744311311984,
+          7596.565568266244
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 2,
+        "html": "<table border=\"1\"><tr><td>知识点</td><td colspan=\"4\">内容</td></tr><tr><td>方程的解的概念</td><td colspan=\"4\">使方程左、右两边的值相等的未知数的值就是该方程的解. 提示：将方程的解代入方程，等式成立</td></tr><tr><td>等式的基本性质</td><td colspan=\"4\">(1)等式两边都加上(或都减去)同一个数或同一个整式, 所得结果仍是等式. 如果 a=b, 那么a+c=b+c, a-c=b-c；\n(2)等式两边都乘以(或都除以)同一个数(除数不能为0), 所得结果仍是等式, 如果a=b, 那么ac=bc, $\\frac{a}{c} = \\frac{b}{c}$ ($c \\ne 0$)</td></tr><tr><td>方程的变形规则</td><td colspan=\"4\">(1)方程两边都加上(或都减去)同一个数或同一个整式, 方程的解不变;\n(2)方程两边都乘以(或都除以)同一个不等于0的数, 方程的解不变</td></tr><tr><td>移项</td><td colspan=\"4\">将方程中的某些项改变符号后，从方程的一边移到另一边的变形. 注意：移项后要改变符号</td></tr><tr><td>一元一次方程的定义</td><td colspan=\"4\">只含有一个未知数, 并且含有未知数的式子都是整式, 未知数的次数都是1, 像这样的方程叫做一元一次方程. 提示：一般式为ax = b (a,b为常数，且 $a \\ne 0$)</td></tr><tr><td>解一元一次方程的步骤</td><td colspan=\"4\">(1)去分母；(2)去括号；(3)移项；(4)合并同类项；(5)将未知数的系数化为1.\n提示：应根据方程特点，灵活选择解题步骤</td></tr><tr><td rowspan=\"8\">列一元一次方程解应用题的几种常见题型及特点</td><td colspan=\"2\">类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td colspan=\"2\">和、差、倍、分问题</td><td></td><td>明确“倍数”关系及“多、少”关系等</td></tr><tr><td colspan=\"2\">等积变形问题</td><td>长方体体积 = 长×宽×高；\n圆柱体体积 = $\\pi r^{2}h$ (其中h为高,r为底面半径)</td><td>变形前后体积相等</td></tr><tr><td rowspan=\"3\">行程问题</td><td>相遇问题</td><td rowspan=\"3\">路程 = 速度×时间；\n时间 = 路程÷速度；\n速度 = 路程÷时间</td><td>快行的距离 + 慢行的距离 = 总距离 (相向而行)</td></tr><tr><td>追及问题</td><td>快行的距离 - 慢行的距离 = 距离差 (同向而行)</td></tr><tr><td>水流问题</td><td>静水速度 + 水流速度 = 顺水速度\n静水速度 - 水流速度 = 逆水速度\n（顺水路程 = 逆水路程）</td></tr><tr><td colspan=\"2\">调配问题</td><td colspan=\"2\">从调配后的数量关系中找等量关系. 注意：调配对象流动的方向和数量</td></tr><tr><td colspan=\"2\">比例分配问题</td><td colspan=\"2\">全部数量 = 各份的数量之和. 提示：可把一份数量设为x</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          728.9524847776602,
+          423.5744836856052,
+          1015.0026343923888,
+          423.5744836856052,
+          1015.0026343923888,
+          709.7768828329909,
+          728.9524847776602,
+          709.7768828329909
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 4,
+        "text": "附",
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          200.3053812237766,
+          5332.322375328111,
+          329.4710774525265,
+          5332.322375328111,
+          329.4710774525265,
+          5916.242252160871,
+          200.3053812237766,
+          5916.242252160871
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 3,
+        "text": "全书大归纳",
+        "attribute": {}
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          370.6490343236778,
+          7730.072177366819,
+          532.0787134497086,
+          7730.072177366819,
+          532.0787134497086,
+          7828.0503044377165,
+          370.6490343236778,
+          7828.0503044377165
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 7,
+        "text": "284",
+        "attribute": {}
+      },
+      {
+        "category_type": "footer",
+        "poly": [
+          1392.4135130415307,
+          8017.422408886837,
+          4142.395882576086,
+          8017.422408886837,
+          4142.395882576086,
+          8175,
+          1392.4135130415307,
+          8175
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 1,
+        "text": "关注微信公众号“初高教辅站”获取更多初高中教辅资料",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": [
+        {
+          "source_anno_id": 2,
+          "target_anno_id": 6,
+          "relation_type": "parent_son"
+        }
+      ]
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "colorful_textbook",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [
+          "table_full_line",
+          "table_horizontal",
+          "table_span",
+          "table_with_formula",
+          "colorful_backgroud"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 2218,
+      "height": 8175,
+      "width": 5556,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_2399.jpg",
+      "sample_id": 470
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        5556,
+        8175
+      ],
+      "coordinate_space": "raster_page",
+      "status": "partial",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_geometry_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header_image",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            495,
+            2,
+            1253,
+            892
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.699128747,
+          "candidate_rank": 21,
+          "original_class_id": 13,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 416,
+          "model_label": "header",
+          "original_bbox": [
+            495.824707,
+            2.771306,
+            1252.019897,
+            891.911377
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            2170,
+            475,
+            3499,
+            763
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.489561856,
+          "candidate_rank": 68,
+          "original_class_id": 17,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 231,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            2170.334229,
+            475.721436,
+            3498.434326,
+            762.269043
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1982,
+            1259,
+            3501,
+            1496
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.598882973,
+          "candidate_rank": 73,
+          "original_class_id": 17,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 213,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            1982.172119,
+            1259.286621,
+            3500.227051,
+            1495.993164
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            751,
+            1638,
+            1606,
+            1796
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.609971583,
+          "candidate_rank": 84,
+          "original_class_id": 17,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 84,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            751.257019,
+            1638.95166,
+            1605.766602,
+            1795.633179
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "table",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            450,
+            1841,
+            5319,
+            7579
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.973287582,
+          "candidate_rank": 89,
+          "original_class_id": 21,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 16609,
+          "model_label": "table",
+          "original_bbox": [
+            450.238556,
+            1841.491333,
+            5318.008789,
+            7578.591309
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "aside_text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            182,
+            5308,
+            346,
+            5924
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.697253644,
+          "candidate_rank": 1,
+          "original_class_id": 2,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 67,
+          "model_label": "aside_text",
+          "original_bbox": [
+            182.454987,
+            5308.27832,
+            345.883118,
+            5923.423828
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            345,
+            7703,
+            545,
+            7847
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.502132177,
+          "candidate_rank": 275,
+          "original_class_id": 16,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 20,
+          "model_label": "number",
+          "original_bbox": [
+            345.429779,
+            7703.635254,
+            544.333069,
+            7846.222656
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "footer",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1389,
+            8035,
+            4167,
+            8173
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.73709172,
+          "candidate_rank": 293,
+          "original_class_id": 8,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 205,
+          "model_label": "footer",
+          "original_bbox": [
+            1389.457275,
+            8035.29248,
+            4166.5,
+            8172.995605
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0025",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            4744,
+            2463,
+            5034,
+            2573
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.373637676,
+          "candidate_rank": 110,
+          "original_class_id": 15,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 21,
+          "model_label": "formula",
+          "original_bbox": [
+            4744.12305,
+            2463.12817,
+            5033.53223,
+            2572.29272
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0024",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            4752,
+            2801,
+            5046,
+            2912
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.398499608,
+          "candidate_rank": 126,
+          "original_class_id": 15,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 24,
+          "model_label": "formula",
+          "original_bbox": [
+            4752.17139,
+            2801.12402,
+            5045.49707,
+            2911.04761
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            1037,
+            2947,
+            2091,
+            3187
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.810944438,
+          "candidate_rank": 119,
+          "original_class_id": 15,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 156,
+          "model_label": "formula",
+          "original_bbox": [
+            1037.60681,
+            2947.53906,
+            2090.42847,
+            3186.40332
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0018",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            2809,
+            4365,
+            3142,
+            4485
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.643107772,
+          "candidate_rank": 168,
+          "original_class_id": 15,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 24,
+          "model_label": "formula",
+          "original_bbox": [
+            2809.90259,
+            4365.37354,
+            3141.32129,
+            4484.61279
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            495,
+            2,
+            1253,
+            892
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            2170,
+            475,
+            3499,
+            763
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            1982,
+            1259,
+            3501,
+            1496
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            751,
+            1638,
+            1606,
+            1796
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005",
+            "l0025",
+            "l0024",
+            "l0014",
+            "l0018"
+          ],
+          "bbox": [
+            450,
+            1841,
+            5319,
+            7579
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "table"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            182,
+            5308,
+            346,
+            5924
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            345,
+            7703,
+            545,
+            7847
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            1389,
+            8035,
+            4167,
+            8173
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            495,
+            2,
+            1253,
+            892
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            2170,
+            475,
+            3499,
+            763
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 全书大归纳\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## 全书大归纳\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 296,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                2170,
+                475,
+                3499,
+                763
+              ],
+              "canvas_size": [
+                1184,
+                256
+              ],
+              "content_size": [
+                1181,
+                256
+              ],
+              "pad_offset": [
+                1,
+                0
+              ],
+              "scale": 0.8888888888888888,
+              "rounding_error": [
+                -0.33333333333325754,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1253175275190517,
+                0,
+                2168.874682472481,
+                0,
+                1.125,
+                475
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5074,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3227,
+                    "raw_output": "## 全书大归纳\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 全书大归纳\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      256
+                    ],
+                    "content_size": [
+                      1181,
+                      256
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      1,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.33333333333325754,
+                      0.0
+                    ],
+                    "scale": 0.8888888888888888,
+                    "token_count": 296
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3227,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 全书大归纳\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            1982,
+            1259,
+            3501,
+            1496
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 核心知识归纳\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "## 核心知识归纳\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 301,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                1982,
+                1259,
+                3501,
+                1496
+              ],
+              "canvas_size": [
+                1376,
+                224
+              ],
+              "content_size": [
+                1376,
+                215
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 0.9058591178406846,
+              "rounding_error": [
+                0,
+                0.31138907175773056
+              ],
+              "canvas_to_page_affine": [
+                1.103924418604651,
+                0,
+                1982,
+                0,
+                1.1023255813953488,
+                1254.5906976744186
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4631,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2698,
+                    "raw_output": "## 核心知识归纳\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 核心知识归纳\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1376,
+                      224
+                    ],
+                    "content_size": [
+                      1376,
+                      215
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.31138907175773056
+                    ],
+                    "scale": 0.9058591178406846,
+                    "token_count": 301
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2698,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 核心知识归纳\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            751,
+            1638,
+            1606,
+            1796
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 一 元一次方程\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "## 一 元一次方程\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 135,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                751,
+                1638,
+                1606,
+                1796
+              ],
+              "canvas_size": [
+                864,
+                160
+              ],
+              "content_size": [
+                864,
+                160
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 1.0105263157894737,
+              "rounding_error": [
+                0,
+                0.33684210526314473
+              ],
+              "canvas_to_page_affine": [
+                0.9895833333333334,
+                0,
+                751,
+                0,
+                0.9875,
+                1638
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2504,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1859,
+                    "raw_output": "## 一 元一次方程\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 一 元一次方程\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      864,
+                      160
+                    ],
+                    "content_size": [
+                      864,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.33684210526314473
+                    ],
+                    "scale": 1.0105263157894737,
+                    "token_count": 135
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1859,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 一 元一次方程\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            450,
+            1841,
+            5319,
+            7579
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "partial",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "",
+            "resource": "assets/p0001-b0005.png",
+            "table": null
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>明确“倍数”关系及“多”、“少”关系等</td></tr><tr><td>等变形问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>变形前后体积相等</td></tr><tr><td>相遇问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离+慢行的距离=总距离(相向而行)</td></tr><tr><td>追及问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离-慢行的距离=距离乘(同向而行)</td></tr><tr><td>水流问题</td><td>静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td><td>静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td></tr><tr><td>调配问题</td><td>从调配后的数量关系中找等量关系</td><td>注意:调配对象流动的方向和数量</td></tr><tr><td>比例分配问题</td><td>全部数量=各份的数量之和</td><td>提示:可把一份数量设为$x$</td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 304,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                450,
+                1841,
+                5319,
+                7579
+              ],
+              "canvas_size": [
+                512,
+                608
+              ],
+              "content_size": [
+                512,
+                603
+              ],
+              "pad_offset": [
+                0,
+                2
+              ],
+              "scale": 0.10515506264119942,
+              "rounding_error": [
+                0,
+                -0.3797494352022568
+              ],
+              "canvas_to_page_affine": [
+                9.509765625,
+                0,
+                450,
+                0,
+                9.51575456053068,
+                1821.9684908789386
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 13710,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "ovis_token_limit",
+                    "error_base64": null,
+                    "finish_reason": "truncated",
+                    "generation_elapsed_ms": 11222,
+                    "raw_output": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\",
+                    "raw_output_base64": null,
+                    "stop_reason": "token_limit",
+                    "text": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      512,
+                      608
+                    ],
+                    "content_size": [
+                      512,
+                      603
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3797494352022568
+                    ],
+                    "scale": 0.10515506264119942,
+                    "token_count": 304
+                  }
+                },
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 4096,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "increase_token_budget",
+                  "elapsed_ms": 19129,
+                  "index": 2,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 17175,
+                    "raw_output": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>明确“倍数”关系及“多”、“少”关系等</td></tr><tr><td>等变形问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>变形前后体积相等</td></tr><tr><td>相遇问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离+慢行的距离=总距离(相向而行)</td></tr><tr><td>追及问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离-慢行的距离=距离乘(同向而行)</td></tr><tr><td>水流问题</td><td>静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td><td>静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td></tr><tr><td>调配问题</td><td>从调配后的数量关系中找等量关系</td><td>注意:调配对象流动的方向和数量</td></tr><tr><td>比例分配问题</td><td>全部数量=各份的数量之和</td><td>提示:可把一份数量设为$x$</td></tr></table>\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>明确“倍数”关系及“多”、“少”关系等</td></tr><tr><td>等变形问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>变形前后体积相等</td></tr><tr><td>相遇问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离+慢行的距离=总距离(相向而行)</td></tr><tr><td>追及问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离-慢行的距离=距离乘(同向而行)</td></tr><tr><td>水流问题</td><td>静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td><td>静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td></tr><tr><td>调配问题</td><td>从调配后的数量关系中找等量关系</td><td>注意:调配对象流动的方向和数量</td></tr><tr><td>比例分配问题</td><td>全部数量=各份的数量之和</td><td>提示:可把一份数量设为$x$</td></tr></table>\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      512,
+                      608
+                    ],
+                    "content_size": [
+                      512,
+                      603
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3797494352022568
+                    ],
+                    "scale": 0.10515506264119942,
+                    "token_count": 304
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 240000,
+              "generation_elapsed_ms": 28397,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 2
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "unverified",
+              "reason": "invalid_table_structure",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>明确“倍数”关系及“多”、“少”关系等</td></tr><tr><td>等变形问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>变形前后体积相等</td></tr><tr><td>相遇问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离+慢行的距离=总距离(相向而行)</td></tr><tr><td>追及问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离-慢行的距离=距离乘(同向而行)</td></tr><tr><td>水流问题</td><td>静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td><td>静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td></tr><tr><td>调配问题</td><td>从调配后的数量关系中找等量关系</td><td>注意:调配对象流动的方向和数量</td></tr><tr><td>比例分配问题</td><td>全部数量=各份的数量之和</td><td>提示:可把一份数量设为$x$</td></tr></table>\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": "invalid_table_structure",
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            182,
+            5308,
+            346,
+            5924
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 全书大归纳\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "## 全书大归纳\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 95,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                182,
+                5308,
+                346,
+                5924
+              ],
+              "canvas_size": [
+                160,
+                608
+              ],
+              "content_size": [
+                160,
+                601
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 0.975609756097561,
+              "rounding_error": [
+                0,
+                0.02439024390241684
+              ],
+              "canvas_to_page_affine": [
+                1.025,
+                0,
+                182,
+                0,
+                1.0249584026622296,
+                5304.925124792013
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2039,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1606,
+                    "raw_output": "## 全书大归纳\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 全书大归纳\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      160,
+                      608
+                    ],
+                    "content_size": [
+                      160,
+                      601
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.02439024390241684
+                    ],
+                    "scale": 0.975609756097561,
+                    "token_count": 95
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1606,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 全书大归纳\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            345,
+            7703,
+            545,
+            7847
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 284\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "## 284\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                345,
+                7703,
+                545,
+                7847
+              ],
+              "canvas_size": [
+                320,
+                224
+              ],
+              "content_size": [
+                311,
+                224
+              ],
+              "pad_offset": [
+                4,
+                0
+              ],
+              "scale": 1.5555555555555556,
+              "rounding_error": [
+                -0.11111111111114269,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.6430868167202572,
+                0,
+                342.427652733119,
+                0,
+                0.6428571428571429,
+                7703
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1787,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1486,
+                    "raw_output": "## 284\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 284\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      320,
+                      224
+                    ],
+                    "content_size": [
+                      311,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      4,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.11111111111114269,
+                      0.0
+                    ],
+                    "scale": 1.5555555555555556,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1486,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 284\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            1389,
+            8035,
+            4167,
+            8173
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 304,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                1389,
+                8035,
+                4167,
+                8173
+              ],
+              "canvas_size": [
+                2432,
+                128
+              ],
+              "content_size": [
+                2432,
+                121
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 0.8754499640028798,
+              "rounding_error": [
+                0,
+                0.18790496760259146
+              ],
+              "canvas_to_page_affine": [
+                1.1422697368421053,
+                0,
+                1389,
+                0,
+                1.140495867768595,
+                8031.578512396694
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4759,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2891,
+                    "raw_output": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      2432,
+                      128
+                    ],
+                    "content_size": [
+                      2432,
+                      121
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.18790496760259146
+                    ],
+                    "scale": 0.8754499640028798,
+                    "token_count": 304
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2891,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0025",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0024",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0014",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0018",
+          "owner_block_id": "b0005"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0003",
+          "target_block_id": "b0005",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0004",
+          "target_block_id": "b0005",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 758,
+      "height": 890,
+      "bbox": [
+        495,
+        2,
+        1253,
+        892
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 1329,
+      "height": 288,
+      "bbox": [
+        2170,
+        475,
+        3499,
+        763
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 1519,
+      "height": 237,
+      "bbox": [
+        1982,
+        1259,
+        3501,
+        1496
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 855,
+      "height": 158,
+      "bbox": [
+        751,
+        1638,
+        1606,
+        1796
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 4869,
+      "height": 5738,
+      "bbox": [
+        450,
+        1841,
+        5319,
+        7579
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 164,
+      "height": 616,
+      "bbox": [
+        182,
+        5308,
+        346,
+        5924
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 200,
+      "height": 144,
+      "bbox": [
+        345,
+        7703,
+        545,
+        7847
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 2778,
+      "height": 138,
+      "bbox": [
+        1389,
+        8035,
+        4167,
+        8173
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## 全书大归纳\n\n\n## 核心知识归纳\n\n\n## 一 元一次方程\n\n\n![原图](assets/p0001-b0005.png)\n\n[待核验：b0005](assets/p0001-b0005.png)\n\n> 输出的完整性或结构尚未确认，请核对原图。\n",
+  "quality": {
+    "text": {
+      "denominator": 7,
+      "matched": 6,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 0,
+          "category": "title",
+          "order": 1,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 5,
+          "category": "title",
+          "order": 2,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 6,
+          "category": "table_caption",
+          "order": 3,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            10
+          ],
+          "raw_range": [
+            0,
+            10
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "header",
+          "order": null,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "page_number",
+          "order": null,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 3,
+          "reference_range": [
+            0,
+            3
+          ],
+          "actual_range": [
+            0,
+            6
+          ],
+          "raw_range": [
+            0,
+            6
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 1,
+          "category": "footer",
+          "order": null,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 25,
+          "reference_range": [
+            0,
+            25
+          ],
+          "actual_range": [
+            0,
+            28
+          ],
+          "raw_range": [
+            0,
+            28
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 4,
+          "category": "header",
+          "order": null,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 1,
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 51,
+      "edit_distance": 20,
+      "raw_edit_distance": 20
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 1,
+      "matched": 1,
+      "missing": 0,
+      "fallback": 1,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 2,
+          "category": "table",
+          "order": 4,
+          "block_id": "b0005",
+          "coverage": 0.9963,
+          "status": "partial",
+          "structure_exact": false,
+          "cell_exact": 0,
+          "cell_denominator": 36,
+          "exact": false,
+          "reading_order_position": 4
+        }
+      ],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 1,
+      "rows": [],
+      "extra_outputs": [
+        {
+          "block_id": "b0001",
+          "reason": "unmatched",
+          "status": "ok"
+        }
+      ]
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 6,
+      "evaluable": 6,
+      "correct": 6,
+      "missing_pairs": 0,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 7,
+      "partial": 1
+    },
+    "document_status": "partial",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "table:inexact_or_missing",
+      "figure:extra_output",
+      "document_non_ok",
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "table:inexact_or_missing",
+      "figure:extra_output",
+      "document_non_ok",
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      0,
+      5,
+      6,
+      3,
+      7,
+      1,
+      4
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 8,
+    "parent_reference_count": 8
+  },
+  "alignment": [
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "全书大归纳",
+      "actual": "## 全书大归纳",
+      "raw_output": "## 全书大归纳\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        2170,
+        475,
+        3499,
+        763
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 全书大归纳\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        5
+      ],
+      "expected": "核心知识归纳",
+      "actual": "## 核心知识归纳",
+      "raw_output": "## 核心知识归纳\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        1982,
+        1259,
+        3501,
+        1496
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 核心知识归纳\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        6
+      ],
+      "expected": "一元一次方程",
+      "actual": "## 一 元一次方程",
+      "raw_output": "## 一 元一次方程\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        751,
+        1638,
+        1606,
+        1796
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 一 元一次方程\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "全书大归纳",
+      "actual": "## 全书大归纳",
+      "raw_output": "## 全书大归纳\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        182,
+        5308,
+        346,
+        5924
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 全书大归纳\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        7
+      ],
+      "expected": "284",
+      "actual": "## 284",
+      "raw_output": "## 284\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        345,
+        7703,
+        545,
+        7847
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 284\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        1
+      ],
+      "expected": "关注微信公众号“初高教辅站”获取更多初高中教辅资料",
+      "actual": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料",
+      "raw_output": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        1389,
+        8035,
+        4167,
+        8173
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 关注微信公众号“初高教辅站”获取更多初高中教辅资料\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "table",
+      "annotation_id": 2,
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          502.7744311311984,
+          1837.1685301844395,
+          5312.723809233351,
+          1837.1685301844395,
+          5312.723809233351,
+          7596.565568266244,
+          502.7744311311984,
+          7596.565568266244
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 2,
+        "html": "<table border=\"1\"><tr><td>知识点</td><td colspan=\"4\">内容</td></tr><tr><td>方程的解的概念</td><td colspan=\"4\">使方程左、右两边的值相等的未知数的值就是该方程的解. 提示：将方程的解代入方程，等式成立</td></tr><tr><td>等式的基本性质</td><td colspan=\"4\">(1)等式两边都加上(或都减去)同一个数或同一个整式, 所得结果仍是等式. 如果 a=b, 那么a+c=b+c, a-c=b-c；\n(2)等式两边都乘以(或都除以)同一个数(除数不能为0), 所得结果仍是等式, 如果a=b, 那么ac=bc, $\\frac{a}{c} = \\frac{b}{c}$ ($c \\ne 0$)</td></tr><tr><td>方程的变形规则</td><td colspan=\"4\">(1)方程两边都加上(或都减去)同一个数或同一个整式, 方程的解不变;\n(2)方程两边都乘以(或都除以)同一个不等于0的数, 方程的解不变</td></tr><tr><td>移项</td><td colspan=\"4\">将方程中的某些项改变符号后，从方程的一边移到另一边的变形. 注意：移项后要改变符号</td></tr><tr><td>一元一次方程的定义</td><td colspan=\"4\">只含有一个未知数, 并且含有未知数的式子都是整式, 未知数的次数都是1, 像这样的方程叫做一元一次方程. 提示：一般式为ax = b (a,b为常数，且 $a \\ne 0$)</td></tr><tr><td>解一元一次方程的步骤</td><td colspan=\"4\">(1)去分母；(2)去括号；(3)移项；(4)合并同类项；(5)将未知数的系数化为1.\n提示：应根据方程特点，灵活选择解题步骤</td></tr><tr><td rowspan=\"8\">列一元一次方程解应用题的几种常见题型及特点</td><td colspan=\"2\">类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td colspan=\"2\">和、差、倍、分问题</td><td></td><td>明确“倍数”关系及“多、少”关系等</td></tr><tr><td colspan=\"2\">等积变形问题</td><td>长方体体积 = 长×宽×高；\n圆柱体体积 = $\\pi r^{2}h$ (其中h为高,r为底面半径)</td><td>变形前后体积相等</td></tr><tr><td rowspan=\"3\">行程问题</td><td>相遇问题</td><td rowspan=\"3\">路程 = 速度×时间；\n时间 = 路程÷速度；\n速度 = 路程÷时间</td><td>快行的距离 + 慢行的距离 = 总距离 (相向而行)</td></tr><tr><td>追及问题</td><td>快行的距离 - 慢行的距离 = 距离差 (同向而行)</td></tr><tr><td>水流问题</td><td>静水速度 + 水流速度 = 顺水速度\n静水速度 - 水流速度 = 逆水速度\n（顺水路程 = 逆水路程）</td></tr><tr><td colspan=\"2\">调配问题</td><td colspan=\"2\">从调配后的数量关系中找等量关系. 注意：调配对象流动的方向和数量</td></tr><tr><td colspan=\"2\">比例分配问题</td><td colspan=\"2\">全部数量 = 各份的数量之和. 提示：可把一份数量设为x</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "raw_output": "<table border=1><tr><td>知识点</td><td>内容</td></tr><tr><td>方程的解的概念</td><td>使方程左、右两边的值相等的未知数的值就是方程的解。提示:将方程的解代入方程,等式成立</td></tr><tr><td>等式的基本性质</td><td>(1)等式两边都加上(或都减去)同一个数或同一个整式,所得结果仍是等式,如果$a=b$,那么$ac=b+c$, $ac=b-c$;(2)等式两边都乘以(或除以)同一个数(除数不能为0),所得结果仍是等式,如果$a=b$,那么$ac=b\\cdot\\frac{a}{c}=b\\cdot\\frac{b}{c}(c\\neq0)$</td></tr><tr><td>方程的变形规则</td><td>(1)方程两边都加上(或都减去)同一个数或同一个整式,方程的解不变;(2)方程两边都乘以(或除以)同一个不等于0的数,方程的解不变</td></tr><tr><td>移项</td><td>将方程中的某些项改变符号后,从方程的一边移到另一边的变形。注意:移项法要改变符号</td></tr><tr><td>一元一次方程的定义</td><td>只含有一个未知数,并且含有未知数的式了都是整式,未知数的次数都是1,像这样的方程叫做一元一次方程。提示:一般式写为$ax=b(a,b$为常数,且$a\\neq0)$</td></tr><tr><td>解一元一次方程的步骤</td><td>(1)去分母;(2)去括号;(3)移项;(4)合并同类项;(5)将未知数的系数化为1。提示:应根据方程特点,灵活选择解题步骤</td></tr><tr><td rowspan=\"7\">列一元一次方程解应用题的几种常见题型特点</td><td>类型</td><td>题中涉及的数量关系及公式</td><td>等量关系</td></tr><tr><td>和差、倍、同问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>明确“倍数”关系及“多”、“少”关系等</td></tr><tr><td>等变形问题</td><td>长方程体积$=x$长$\\times$宽$\\times$高;测柱体体积$=x$长$\\times$其中$h$为高,$r$为底面半径</td><td>变形前后体积相等</td></tr><tr><td>相遇问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离+慢行的距离=总距离(相向而行)</td></tr><tr><td>追及问题</td><td>路程=速度$\\times$时间;时间=路程$\\div$速度;速度=路程$\\div$时间</td><td>快行的距离-慢行的距离=距离乘(同向而行)</td></tr><tr><td>水流问题</td><td>静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td><td>静水速度-水流速度=顺水速度静水速度-水流速度=逆水速度(顺水路程=逆水路程)</td></tr><tr><td>调配问题</td><td>从调配后的数量关系中找等量关系</td><td>注意:调配对象流动的方向和数量</td></tr><tr><td>比例分配问题</td><td>全部数量=各份的数量之和</td><td>提示:可把一份数量设为$x$</td></tr></table>\n",
+      "content": {
+        "format": "markdown",
+        "text": "",
+        "resource": "assets/p0001-b0005.png",
+        "table": null
+      },
+      "error": "invalid_table_structure",
+      "status": "partial",
+      "exact": false
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

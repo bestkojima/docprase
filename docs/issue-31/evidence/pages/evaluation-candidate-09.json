@@ -1,0 +1,3715 @@
+{
+  "key": "evaluation/candidate-09",
+  "input": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+    "sha256": "853341856d6a39050db422a0aa65a0efae85716484f8c2397b1b22c5dba075d7"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/evaluation/candidate-09/job"
+    ],
+    "input_sha256": "853341856d6a39050db422a0aa65a0efae85716484f8c2397b1b22c5dba075d7",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 42.629987807013094,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "4221fd6525b2e12069082175f1c7c200592b9395551d770f688c218c006b02b8",
+      "job/assets/p0001-b0002.png": "ae79cf20590fea2117f1b42fd716ab49f430621efa1e6df5e49b3974e632ae65",
+      "job/assets/p0001-b0003.png": "1e6d22d69d604b0dbc5afe3946d7d9ee627490f450fcaf623bf6c123fa3a95e8",
+      "job/assets/p0001-b0004.png": "44f1ac257850045aca91a632336fa126d0a856ed7595768ee4c7c6109c4a578c",
+      "job/assets/p0001-b0005.png": "2ba63fcd5a429f9319c788ad60b385b0d609ffd0ec92d259e0b90392c1798852",
+      "job/assets/p0001-b0006.png": "277b718fbfd87221af393ea1e71a6710c03e93460310b6aabe918536524be8fb",
+      "job/assets/p0001-b0007.png": "fe647aff2f60df57250b328f5cd5fcf9f71cc622f430f6c9d46057ef82def0c3",
+      "job/assets/p0001-b0008.png": "9a6191d0e6825101c0955f5120488b6311071a0f5b9ac1f736cecbc0dce63de4",
+      "job/assets/p0001-b0009.png": "f3e70b8c3d3cc437c0f7146eb95b1421772dea2ffba8b400b6679924a2c06367",
+      "job/assets/p0001-b0010.png": "53e6db314bafc2a67b7f7d81d6e7752bba87e836b79eb7f285caf6ba3e9762cb",
+      "job/assets/p0001-b0011.png": "df5295b19fbd9d6780a48713f2371c7bfeac078883be0901beb72aa8d1be7590",
+      "job/assets/p0001-fetch_name_0.f32": "84ca0b2da5465867fec056be0334eb664080660364a647fb34986c9b29c4d552",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "11684fb8a9bf38380df4bb31ca0519477df24484e814763ebe5bac9998da19b5",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "81a8740a27bc6f3e9ded109d5a1502cd349dec2f929a00f820a96966d08d8baf",
+      "job/assets/p0001-layout-overlay.png": "4495e82f18fd5ae18434a4f24597330b6c6b118944c01260276e0734cad7c3ed",
+      "job/assets/p0001-mask-c0.png": "32154b4d353ac6b7dd846bc2afa27ce308585118f927e1145e95a29893983cfb",
+      "job/assets/p0001-mask-c1.png": "33c1ff7ad51b4b663ba0afa877ccd3f6fbaa0c0049887d3b179bbe091fc68ab0",
+      "job/assets/p0001-mask-c10.png": "3c6592466a4aed0e676078964c2ebf5cfbd30b4e38ca175e367850c5092a6ba4",
+      "job/assets/p0001-mask-c11.png": "06956d3be6aea8d62c386a0ab948c03d4d955cd0659558db5648c0a596c601b8",
+      "job/assets/p0001-mask-c12.png": "e1f39835acf8d4c2bc21d921ad9817e4d2141b6f6d258f425d8571ecec209740",
+      "job/assets/p0001-mask-c13.png": "68654095c69cc8cc4b3afe71771ad28690c26ddb680ad02678d908b94fb1a72c",
+      "job/assets/p0001-mask-c14.png": "48c0c7e41658ae715de0c1596c830dc15b909ceb54febd27b62c7e54f082dba1",
+      "job/assets/p0001-mask-c2.png": "690c326975667573dd88683b67433febc50c7f6cf1a9fa97c349f9abdb958ef7",
+      "job/assets/p0001-mask-c3.png": "1a8554c8081d90368fcbb1ac5cd4c550b76eecfec326cd8e31e1e16c177bc2e7",
+      "job/assets/p0001-mask-c4.png": "0fd6ccd11dd20ec5d98a556d438d30ad38f72988fe64cb0635e232b8b3fbd74e",
+      "job/assets/p0001-mask-c5.png": "170dab9b7c32ec627a4819698a0efe8b6d8ccdd6b566fa522512e9cf17c4c7e2",
+      "job/assets/p0001-mask-c6.png": "17729676e5e427b7fabfc2706ef6192eb57a50bbe9a3a01ac8338e053065f064",
+      "job/assets/p0001-mask-c7.png": "3e0b49e30cd9af3a63666baec611a1bcc238e172ea794baede6d5492fb55309d",
+      "job/assets/p0001-mask-c8.png": "68f9b47d488993dfa7f6f5e1d56b26c41bc404aeef12dd37db362bedb7a5bb4f",
+      "job/assets/p0001-mask-c9.png": "9028968961c5d701e4a5950ab31dd3d7bc84e8b222238e5f54cc7ec1f3df0670",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "e323132bd8fa8264897966df98cff8a843bd69f2f18d5751a8b936b7da048624",
+      "job/document.md": "0ed3eb800cb1136d5d3d3eee41cfd329ac8750a2631da55c197980ec44b8ac50",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "a694607266467c222dac5387219c19e3f70cd61bfa311d984454273dcf32587b",
+      "job/job-status.json": "420b8ebd4048060a9d2fb5ebdeda2963695ace3b62d04df48b6383aad7d8b982",
+      "job/run-manifest.json": "9b36f5a061f13dc0428d141acc8ea5846d3aa5a65846b0f0c8b154e92c924c29",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "90c179d76b2896c28a60bd39340ea84866325eb999cf35ffa90e467892b8c0f3",
+      "time.txt": "86876d62433a69f282cd7a5c05ee581bf5a1bdca8618157cfa80e2b98ff5edc3"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "poly": [
+          214.03054809570312,
+          215.56649780273438,
+          1250.1153564453125,
+          215.56649780273438,
+          1250.1153564453125,
+          301.81854248046875,
+          214.03054809570312,
+          301.81854248046875
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 8,
+        "text": "【例题2】实验得到甲、乙的溶解度曲线如图，将 $ \\mathsf{t}_{2} \\mathrm{^{o} C} $甲、乙的饱和溶液分别降温到 $ \\mathrm{t_{1}} \\mathrm{^{o} C} $训说 兑法一定正确的是      （    ）",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          575.7557373046875,
+          339.9219970703125,
+          888.6632690429688,
+          339.9219970703125,
+          888.6632690429688,
+          577.8765258789062,
+          575.7557373046875,
+          577.8765258789062
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 7,
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          203.70914163158625,
+          608.8242167557731,
+          557.6915229774761,
+          608.8242167557731,
+          557.6915229774761,
+          801.5026086183972,
+          203.70914163158625,
+          801.5026086183972
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 17,
+        "text": "A.甲溶液仍饱和\nB.两溶液仍饱和\nC.溶质质量分数：甲=乙\nD.溶液质量：甲=乙",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              213.47367858886707,
+              611.1719970703127,
+              551.6846313476561,
+              611.1719970703127,
+              551.6846313476561,
+              641.4957624718448,
+              213.47367858886707,
+              641.4957624718448
+            ],
+            "ignore": false,
+            "order": 4,
+            "anno_id": 9,
+            "text": "A.甲溶液仍饱和",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  219.43093566750485,
+                  609.9189473383636,
+                  439.9669006549294,
+                  609.9189473383636,
+                  439.9669006549294,
+                  643.5930409907779,
+                  219.43093566750485,
+                  643.5930409907779
+                ],
+                "text": "A.甲溶液仍饱和"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              217.6938744946548,
+              653.413009057758,
+              439.22853161747645,
+              653.413009057758,
+              439.22853161747645,
+              692.4539527310419,
+              217.6938744946548,
+              692.4539527310419
+            ],
+            "ignore": false,
+            "order": 5,
+            "anno_id": 18,
+            "text": "B.两溶液仍饱和",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  217.5285380016766,
+                  660.5856140050304,
+                  437.49543865660615,
+                  660.5856140050304,
+                  437.49543865660615,
+                  693.1215789924547,
+                  217.5285380016766,
+                  693.1215789924547
+                ],
+                "text": "B.两溶液仍饱和"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              217.6938744946548,
+              706.9808154931943,
+              547.2720734109838,
+              706.9808154931943,
+              547.2720734109838,
+              743.2979723985746,
+              217.6938744946548,
+              743.2979723985746
+            ],
+            "ignore": false,
+            "order": 6,
+            "anno_id": 15,
+            "text": "C.溶质质量分数：甲=乙",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  218.6106936185577,
+                  710.2368339544073,
+                  452.87279123366517,
+                  710.2368339544073,
+                  452.87279123366517,
+                  743.866582200818,
+                  218.6106936185577,
+                  743.866582200818
+                ],
+                "text": "C.溶质质量分数："
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  461.6602350799844,
+                  705.050570207712,
+                  550.9389449718724,
+                  705.050570207712,
+                  550.9389449718724,
+                  742.6982189573034,
+                  461.6602350799844,
+                  742.6982189573034
+                ],
+                "text": "甲=乙"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              217.69387449465484,
+              758.7327640833616,
+              493.7042669755474,
+              758.7327640833616,
+              493.7042669755474,
+              793.2340631434731,
+              217.69387449465484,
+              793.2340631434731
+            ],
+            "ignore": false,
+            "order": 7,
+            "anno_id": 13,
+            "text": "D.溶液质量：甲=乙",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  219.99999999999994,
+                  761.3333333333337,
+                  399.68027599988716,
+                  761.3333333333337,
+                  399.68027599988716,
+                  793.3951202024946,
+                  219.99999999999994,
+                  793.3951202024946
+                ],
+                "text": "D.溶液质量："
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  406.5752912949007,
+                  759.118926385501,
+                  499.08094250818226,
+                  759.118926385501,
+                  499.08094250818226,
+                  792.4639867065678,
+                  406.5752912949007,
+                  792.4639867065678
+                ],
+                "text": "甲=乙"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          207.53460693359375,
+          837.8366088867188,
+          1253.1724853515625,
+          837.8366088867188,
+          1253.1724853515625,
+          981.9359130859375,
+          207.53460693359375,
+          981.9359130859375
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 1,
+        "text": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、 N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（    ）",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          530.4027099609375,
+          1013.6456909179688,
+          937.1158447265625,
+          1013.6456909179688,
+          937.1158447265625,
+          1319.2607421875,
+          530.4027099609375,
+          1319.2607421875
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 5,
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          211.19635455172974,
+          1346.2967342679433,
+          1259.9204213262324,
+          1346.2967342679433,
+          1259.9204213262324,
+          1596.582547615199,
+          211.19635455172974,
+          1596.582547615199
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 19,
+        "text": "A. 升温 $ 1 0^{\\circ} \\mathrm{C} $后，M点沿曲线向上移，N点向右平移。\nB. 加水稀释（假设温度都不变）时，M、N点均不动。\nC. 都降温 $ 1 0^{\\circ} \\mathrm{C} $后，M点沿曲线向左下移，N点向左平移。\nD. 蒸发溶剂（假设温度不变）时，先是M点不动，N点左平移至曲线；继续蒸发溶剂， M、N点都不动。",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              208.9873504638674,
+              1358.078002929688,
+              875.3546894970909,
+              1358.078002929688,
+              875.3546894970909,
+              1396.2296307937288,
+              208.9873504638674,
+              1396.2296307937288
+            ],
+            "ignore": false,
+            "order": 11,
+            "anno_id": 3,
+            "text": "A. 升温 $ 1 0^{\\circ} \\mathrm{C} $后，M点沿曲线向上移，N点向右平移。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  220.00000000000009,
+                  1360.9024857161858,
+                  329.76418095048115,
+                  1360.9024857161858,
+                  329.76418095048115,
+                  1392.430847617148,
+                  220.00000000000009,
+                  1392.430847617148
+                ],
+                "text": "A. 升温"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  326.67964377054614,
+                  1362.4053950773284,
+                  386.33580829001045,
+                  1362.4053950773284,
+                  386.33580829001045,
+                  1389.0936792044572,
+                  326.67964377054614,
+                  1389.0936792044572
+                ],
+                "latex": "$ 1 0^{\\circ} \\mathrm{C} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  386.0471638099039,
+                  1362.1414914297113,
+                  877.4811980910586,
+                  1362.1414914297113,
+                  877.4811980910586,
+                  1394.2893561874366,
+                  386.0471638099039,
+                  1394.2893561874366
+                ],
+                "text": "后，M点沿曲线向上移，N点向右平移。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              220.16181549205643,
+              1411.0345410174987,
+              884.7657868605214,
+              1411.0345410174987,
+              884.7657868605214,
+              1443.719982232341,
+              220.16181549205643,
+              1443.719982232341
+            ],
+            "ignore": false,
+            "order": 12,
+            "anno_id": 14,
+            "text": "B. 加水稀释（假设温度都不变）时，M、N点均不动。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  217.85850857028888,
+                  1410.3301466693265,
+                  888.8616952342958,
+                  1410.3301466693265,
+                  888.8616952342958,
+                  1443.0975142838147,
+                  217.85850857028888,
+                  1443.0975142838147
+                ],
+                "text": "B. 加水稀释（假设温度都不变）时，M、N点均不动。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              219.25388656942198,
+              1461.8785606850315,
+              931.9780908375163,
+              1461.8785606850315,
+              931.9780908375163,
+              1494.564001899874,
+              219.25388656942198,
+              1494.564001899874
+            ],
+            "ignore": false,
+            "order": 13,
+            "anno_id": 12,
+            "text": "C. 都降温 $ 1 0^{\\circ} \\mathrm{C} $后，M点沿曲线向左下移，N点向左平移。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  218.66666666666674,
+                  1461.8207521354877,
+                  357.0179731397795,
+                  1461.8207521354877,
+                  357.0179731397795,
+                  1492.845914531179,
+                  218.66666666666674,
+                  1492.845914531179
+                ],
+                "text": "C. 都降温"
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  356.5077260302783,
+                  1459.215837499266,
+                  411.9774930396047,
+                  1459.215837499266,
+                  411.9774930396047,
+                  1491.660418202834,
+                  356.5077260302783,
+                  1491.660418202834
+                ],
+                "latex": "$ 1 0^{\\circ} \\mathrm{C} $"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  411.47482476304464,
+                  1461.6163161927557,
+                  933.9120457082064,
+                  1461.6163161927557,
+                  933.9120457082064,
+                  1494.2893561874364,
+                  411.47482476304464,
+                  1494.2893561874364
+                ],
+                "text": "后，M点沿曲线向左下移，N点向左平移。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              221.06974441469106,
+              1511.81465142993,
+              1244.6010098180695,
+              1511.81465142993,
+              1244.6010098180695,
+              1584.7606999398172,
+              221.06974441469106,
+              1584.7606999398172
+            ],
+            "ignore": false,
+            "order": 14,
+            "anno_id": 16,
+            "text": "D. 蒸发溶剂（假设温度不变）时，先是M点不动，N点左平移至曲线；继续蒸发溶剂， M、N点都不动。",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  215.11080846127436,
+                  1508.888283589216,
+                  1248.8900994882363,
+                  1508.888283589216,
+                  1248.8900994882363,
+                  1544.000453974755,
+                  215.11080846127436,
+                  1544.000453974755
+                ],
+                "text": "D. 蒸发溶剂（假设温度不变）时，先是M点不动，N点左平移至曲线；继续蒸发溶剂，"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  262.66621269191165,
+                  1563.1108084612742,
+                  475.5563121801476,
+                  1563.1108084612742,
+                  475.5563121801476,
+                  1593.7781560900735,
+                  262.66621269191165,
+                  1593.7781560900735
+                ],
+                "text": "M、N点都不动。"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "multi_colored",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          260.64825659847133,
+          122.96353508007428,
+          372.11454575104466,
+          122.96353508007428,
+          372.11454575104466,
+          153.56068876497386,
+          260.64825659847133,
+          153.56068876497386
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 2,
+        "text": "有道精品课",
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          419.1332509289457,
+          124.34591323601717,
+          672.9322963927109,
+          124.34591323601717,
+          672.9322963927109,
+          155.73684780653548,
+          419.1332509289457,
+          155.73684780653548
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 10,
+        "text": "中考化学寒假班讲义",
+        "attribute": {}
+      },
+      {
+        "category_type": "abandon",
+        "poly": [
+          696.8008024024109,
+          129.61024505867385,
+          717.11410897423,
+          129.61024505867385,
+          717.11410897423,
+          150.25118560745784,
+          696.8008024024109,
+          150.25118560745784
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 11,
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          37.854445693426996,
+          513.5227152619827,
+          71.53788575348199,
+          513.5227152619827,
+          71.53788575348199,
+          598.3386433805958,
+          37.854445693426996,
+          598.3386433805958
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 0,
+        "text": "第二讲",
+        "attribute": {}
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          216.72825622558594,
+          1932.3084716796875,
+          261.4601745605469,
+          1932.3084716796875,
+          261.4601745605469,
+          1963.343505859375,
+          216.72825622558594,
+          1963.343505859375
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 6,
+        "text": "20",
+        "attribute": {}
+      },
+      {
+        "category_type": "footer",
+        "poly": [
+          54.65752410888672,
+          1993.5306396484375,
+          1130.3651123046875,
+          1993.5306396484375,
+          1130.3651123046875,
+          2067.377685546875,
+          54.65752410888672,
+          2067.377685546875
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 4,
+        "text": "（微信公众号：实用视界）免费分享",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": []
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [
+          "watermark"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 2007,
+      "height": 2095,
+      "width": 1504,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_1308.jpg",
+      "sample_id": 411
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1504,
+        2095
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_geometry_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0002",
+          "r0003",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header_image",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            221,
+            121,
+            377,
+            157
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.518761098,
+          "candidate_rank": 1,
+          "original_class_id": 13,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 56,
+          "model_label": "header",
+          "original_bbox": [
+            221.925949,
+            121.378761,
+            376.373413,
+            156.749451
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "header",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            418,
+            122,
+            675,
+            158
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.806698084,
+          "candidate_rank": 7,
+          "original_class_id": 12,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 75,
+          "model_label": "header",
+          "original_bbox": [
+            418.132751,
+            122.656425,
+            674.550232,
+            157.318848
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            207,
+            216,
+            1251,
+            303
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.908251286,
+          "candidate_rank": 42,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 799,
+          "model_label": "text",
+          "original_bbox": [
+            207.815094,
+            216.703201,
+            1250.499878,
+            302.768768
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "chart",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            582,
+            342,
+            880,
+            570
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.921910584,
+          "candidate_rank": 87,
+          "original_class_id": 3,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 604,
+          "model_label": "chart",
+          "original_bbox": [
+            582.229248,
+            342.283051,
+            879.591675,
+            569.361938
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "aside_text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            37,
+            514,
+            69,
+            597
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.715380788,
+          "candidate_rank": 0,
+          "original_class_id": 2,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 24,
+          "model_label": "aside_text",
+          "original_bbox": [
+            37.956848,
+            514.242859,
+            68.443329,
+            596.011536
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            213,
+            609,
+            552,
+            796
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.911229372,
+          "candidate_rank": 116,
+          "original_class_id": 22,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 580,
+          "model_label": "text",
+          "original_bbox": [
+            213.998627,
+            609.220215,
+            551.576538,
+            795.081299
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            210,
+            841,
+            1251,
+            979
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.94240576,
+          "candidate_rank": 134,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 1329,
+          "model_label": "text",
+          "original_bbox": [
+            210.84671,
+            841.617432,
+            1250.538574,
+            978.663025
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "chart",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            518,
+            1013,
+            931,
+            1310
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.905281007,
+          "candidate_rank": 157,
+          "original_class_id": 3,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 1085,
+          "model_label": "chart",
+          "original_bbox": [
+            518.877197,
+            1013.810608,
+            930.40332,
+            1309.415161
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            209,
+            1357,
+            1243,
+            1597
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.939997911,
+          "candidate_rank": 212,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 2249,
+          "model_label": "text",
+          "original_bbox": [
+            209.9991,
+            1357.73584,
+            1242.99939,
+            1596.801147
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            214,
+            1931,
+            262,
+            1965
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.762294352,
+          "candidate_rank": 270,
+          "original_class_id": 16,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 16,
+          "model_label": "number",
+          "original_bbox": [
+            214.988358,
+            1931.133545,
+            261.131409,
+            1964.280151
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "footer",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            42,
+            1990,
+            1130,
+            2065
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.903266191,
+          "candidate_rank": 292,
+          "original_class_id": 8,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 721,
+          "model_label": "footer",
+          "original_bbox": [
+            42.957661,
+            1990.171387,
+            1129.385254,
+            2064.026611
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0030",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            825,
+            219,
+            884,
+            250
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.330538571,
+          "candidate_rank": 45,
+          "original_class_id": 15,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 18,
+          "model_label": "formula",
+          "original_bbox": [
+            825.947449,
+            219.508835,
+            883.985352,
+            249.517487
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0029",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            216,
+            268,
+            272,
+            301
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.423515022,
+          "candidate_rank": 55,
+          "original_class_id": 15,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 15,
+          "model_label": "formula",
+          "original_bbox": [
+            216.334976,
+            268.465698,
+            271.314514,
+            300.300354
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0027",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            329,
+            1362,
+            385,
+            1393
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.603739142,
+          "candidate_rank": 214,
+          "original_class_id": 15,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 16,
+          "model_label": "formula",
+          "original_bbox": [
+            329.723267,
+            1362.05481,
+            384.984253,
+            1392.08594
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0026",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            354,
+            1460,
+            424,
+            1494
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.661883712,
+          "candidate_rank": 240,
+          "original_class_id": 15,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 27,
+          "model_label": "formula",
+          "original_bbox": [
+            354.210876,
+            1460.59204,
+            423.074768,
+            1493.47473
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            221,
+            121,
+            377,
+            157
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            418,
+            122,
+            675,
+            158
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003",
+            "l0030",
+            "l0029"
+          ],
+          "bbox": [
+            207,
+            216,
+            1251,
+            303
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            582,
+            342,
+            880,
+            570
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            37,
+            514,
+            69,
+            597
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            213,
+            609,
+            552,
+            796
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            210,
+            841,
+            1251,
+            979
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            518,
+            1013,
+            931,
+            1310
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009",
+            "l0027",
+            "l0026"
+          ],
+          "bbox": [
+            209,
+            1357,
+            1243,
+            1597
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            214,
+            1931,
+            262,
+            1965
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            42,
+            1990,
+            1130,
+            2065
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            221,
+            121,
+            377,
+            157
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            418,
+            122,
+            675,
+            158
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 中考化学寒假班讲义\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## 中考化学寒假班讲义\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                418,
+                122,
+                675,
+                158
+              ],
+              "canvas_size": [
+                704,
+                96
+              ],
+              "content_size": [
+                685,
+                96
+              ],
+              "pad_offset": [
+                9,
+                0
+              ],
+              "scale": 2.6666666666666665,
+              "rounding_error": [
+                -0.33333333333325754,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.37518248175182484,
+                0,
+                414.6233576642336,
+                0,
+                0.375,
+                122
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2287,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2000,
+                    "raw_output": "## 中考化学寒假班讲义\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 中考化学寒假班讲义\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      704,
+                      96
+                    ],
+                    "content_size": [
+                      685,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      9,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.33333333333325754,
+                      0.0
+                    ],
+                    "scale": 2.6666666666666665,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2000,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 中考化学寒假班讲义\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            207,
+            216,
+            1251,
+            303
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 99,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                207,
+                216,
+                1251,
+                303
+              ],
+              "canvas_size": [
+                1056,
+                96
+              ],
+              "content_size": [
+                1056,
+                88
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 1.0114942528735633,
+              "rounding_error": [
+                0,
+                -1.4210854715202004e-14
+              ],
+              "canvas_to_page_affine": [
+                0.9886363636363636,
+                0,
+                207,
+                0,
+                0.9886363636363636,
+                212.04545454545453
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2853,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2406,
+                    "raw_output": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      96
+                    ],
+                    "content_size": [
+                      1056,
+                      88
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -1.4210854715202004e-14
+                    ],
+                    "scale": 1.0114942528735633,
+                    "token_count": 99
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2406,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            582,
+            342,
+            880,
+            570
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            37,
+            514,
+            69,
+            597
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 第二讲\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "## 第二讲\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 65,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                37,
+                514,
+                69,
+                597
+              ],
+              "canvas_size": [
+                160,
+                416
+              ],
+              "content_size": [
+                160,
+                415
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 5,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.2,
+                0,
+                37,
+                0,
+                0.2,
+                514
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1731,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1456,
+                    "raw_output": "## 第二讲\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 第二讲\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      160,
+                      416
+                    ],
+                    "content_size": [
+                      160,
+                      415
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 5.0,
+                    "token_count": 65
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1456,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 第二讲\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            213,
+            609,
+            552,
+            796
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "A. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "A. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                213,
+                609,
+                552,
+                796
+              ],
+              "canvas_size": [
+                352,
+                192
+              ],
+              "content_size": [
+                348,
+                192
+              ],
+              "pad_offset": [
+                2,
+                0
+              ],
+              "scale": 1.0267379679144386,
+              "rounding_error": [
+                -0.06417112299470773,
+                -2.842170943040401e-14
+              ],
+              "canvas_to_page_affine": [
+                0.9741379310344828,
+                0,
+                211.05172413793105,
+                0,
+                0.9739583333333334,
+                609
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2259,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1975,
+                    "raw_output": "A. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "A. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      352,
+                      192
+                    ],
+                    "content_size": [
+                      348,
+                      192
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      2,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.06417112299470773,
+                      -2.842170943040401e-14
+                    ],
+                    "scale": 1.0267379679144386,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1975,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "A. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n",
+              "nonempty_lines": 4,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            210,
+            841,
+            1251,
+            979
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 132,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                210,
+                841,
+                1251,
+                979
+              ],
+              "canvas_size": [
+                1056,
+                128
+              ],
+              "content_size": [
+                966,
+                128
+              ],
+              "pad_offset": [
+                45,
+                0
+              ],
+              "scale": 0.927536231884058,
+              "rounding_error": [
+                0.43478260869562746,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0776397515527951,
+                0,
+                161.5062111801242,
+                0,
+                1.078125,
+                841
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3382,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2715,
+                    "raw_output": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      128
+                    ],
+                    "content_size": [
+                      966,
+                      128
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      45,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.43478260869562746,
+                      0.0
+                    ],
+                    "scale": 0.927536231884058,
+                    "token_count": 132
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2715,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            518,
+            1013,
+            931,
+            1310
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            209,
+            1357,
+            1243,
+            1597
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "A. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "A. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 256,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                209,
+                1357,
+                1243,
+                1597
+              ],
+              "canvas_size": [
+                1024,
+                256
+              ],
+              "content_size": [
+                1024,
+                238
+              ],
+              "pad_offset": [
+                0,
+                9
+              ],
+              "scale": 0.9903288201160542,
+              "rounding_error": [
+                0,
+                0.3210831721470129
+              ],
+              "canvas_to_page_affine": [
+                1.009765625,
+                0,
+                209,
+                0,
+                1.0084033613445378,
+                1347.9243697478992
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5882,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4337,
+                    "raw_output": "A. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "A. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      256
+                    ],
+                    "content_size": [
+                      1024,
+                      238
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      9
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3210831721470129
+                    ],
+                    "scale": 0.9903288201160542,
+                    "token_count": 256
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4337,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "A. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n",
+              "nonempty_lines": 4,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            214,
+            1931,
+            262,
+            1965
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 20\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "## 20\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                214,
+                1931,
+                262,
+                1965
+              ],
+              "canvas_size": [
+                320,
+                224
+              ],
+              "content_size": [
+                316,
+                224
+              ],
+              "pad_offset": [
+                2,
+                0
+              ],
+              "scale": 6.588235294117647,
+              "rounding_error": [
+                -0.2352941176470722,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.1518987341772152,
+                0,
+                213.69620253164558,
+                0,
+                0.15178571428571427,
+                1931
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1770,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1477,
+                    "raw_output": "## 20\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 20\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      320,
+                      224
+                    ],
+                    "content_size": [
+                      316,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      2,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.2352941176470722,
+                      0.0
+                    ],
+                    "scale": 6.588235294117647,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1477,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 20\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            42,
+            1990,
+            1130,
+            2065
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## （微信公众号：实用视界）免费分享\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "## （微信公众号：实用视界）免费分享\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 68,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                42,
+                1990,
+                1130,
+                2065
+              ],
+              "canvas_size": [
+                1088,
+                64
+              ],
+              "content_size": [
+                928,
+                64
+              ],
+              "pad_offset": [
+                80,
+                0
+              ],
+              "scale": 0.8533333333333334,
+              "rounding_error": [
+                -0.42666666666673336,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1724137931034482,
+                0,
+                -51.79310344827586,
+                0,
+                1.171875,
+                1990
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1815,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1526,
+                    "raw_output": "## （微信公众号：实用视界）免费分享\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## （微信公众号：实用视界）免费分享\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1088,
+                      64
+                    ],
+                    "content_size": [
+                      928,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      80,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.42666666666673336,
+                      0.0
+                    ],
+                    "scale": 0.8533333333333334,
+                    "token_count": 68
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1526,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## （微信公众号：实用视界）免费分享\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0030",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0029",
+          "owner_block_id": "b0003"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0027",
+          "owner_block_id": "b0009"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0026",
+          "owner_block_id": "b0009"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 156,
+      "height": 36,
+      "bbox": [
+        221,
+        121,
+        377,
+        157
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 257,
+      "height": 36,
+      "bbox": [
+        418,
+        122,
+        675,
+        158
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 1044,
+      "height": 87,
+      "bbox": [
+        207,
+        216,
+        1251,
+        303
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 298,
+      "height": 228,
+      "bbox": [
+        582,
+        342,
+        880,
+        570
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 32,
+      "height": 83,
+      "bbox": [
+        37,
+        514,
+        69,
+        597
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 339,
+      "height": 187,
+      "bbox": [
+        213,
+        609,
+        552,
+        796
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 1041,
+      "height": 138,
+      "bbox": [
+        210,
+        841,
+        1251,
+        979
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 413,
+      "height": 297,
+      "bbox": [
+        518,
+        1013,
+        931,
+        1310
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 1034,
+      "height": 240,
+      "bbox": [
+        209,
+        1357,
+        1243,
+        1597
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 48,
+      "height": 34,
+      "bbox": [
+        214,
+        1931,
+        262,
+        1965
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1088,
+      "height": 75,
+      "bbox": [
+        42,
+        1990,
+        1130,
+        2065
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n\n\n![插图](assets/p0001-b0004.png)\n\nA. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n\n\n【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n\n\n![插图](assets/p0001-b0008.png)\n\nA. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n\n",
+  "quality": {
+    "text": {
+      "denominator": 9,
+      "matched": 8,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 8,
+          "category": "title",
+          "order": 1,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 120,
+          "reference_range": [
+            0,
+            120
+          ],
+          "actual_range": [
+            0,
+            83
+          ],
+          "raw_range": [
+            0,
+            83
+          ],
+          "edit_distance": 53,
+          "raw_edit_distance": 53,
+          "exact": false
+        },
+        {
+          "annotation_id": 17,
+          "category": "text_block",
+          "order": 3,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 41,
+          "reference_range": [
+            0,
+            41
+          ],
+          "actual_range": [
+            0,
+            49
+          ],
+          "raw_range": [
+            0,
+            49
+          ],
+          "edit_distance": 8,
+          "raw_edit_distance": 8,
+          "exact": false
+        },
+        {
+          "annotation_id": 1,
+          "category": "title",
+          "order": 8,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 108,
+          "reference_range": [
+            0,
+            108
+          ],
+          "actual_range": [
+            0,
+            106
+          ],
+          "raw_range": [
+            0,
+            106
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 19,
+          "category": "text_block",
+          "order": 10,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 180,
+          "reference_range": [
+            0,
+            180
+          ],
+          "actual_range": [
+            0,
+            164
+          ],
+          "raw_range": [
+            0,
+            164
+          ],
+          "edit_distance": 36,
+          "raw_edit_distance": 36,
+          "exact": false
+        },
+        {
+          "annotation_id": 10,
+          "category": "header",
+          "order": null,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 9,
+          "reference_range": [
+            0,
+            9
+          ],
+          "actual_range": [
+            0,
+            12
+          ],
+          "raw_range": [
+            0,
+            12
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 0,
+          "category": "header",
+          "order": null,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 3,
+          "reference_range": [
+            0,
+            3
+          ],
+          "actual_range": [
+            0,
+            6
+          ],
+          "raw_range": [
+            0,
+            6
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 6,
+          "category": "page_number",
+          "order": null,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 2,
+          "reference_range": [
+            0,
+            2
+          ],
+          "actual_range": [
+            0,
+            5
+          ],
+          "raw_range": [
+            0,
+            5
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 4,
+          "category": "footer",
+          "order": null,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 16,
+          "reference_range": [
+            0,
+            16
+          ],
+          "actual_range": [
+            0,
+            19
+          ],
+          "raw_range": [
+            0,
+            19
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "header",
+          "order": null,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 5,
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 484,
+      "edit_distance": 116,
+      "raw_edit_distance": 116
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 2,
+      "matched": 2,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 2,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 1,
+      "rows": [
+        {
+          "annotation_id": 7,
+          "category": "figure",
+          "order": 2,
+          "block_id": "b0004",
+          "coverage": 0.9125,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 3
+        },
+        {
+          "annotation_id": 5,
+          "category": "figure",
+          "order": 9,
+          "block_id": "b0008",
+          "coverage": 0.9551,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 7
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0001",
+          "reason": "unmatched",
+          "status": "ok"
+        }
+      ]
+    },
+    "inline_formula": {
+      "denominator": 2,
+      "matched": 2,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "parent_annotation_id": 19,
+          "block_id": "b0009",
+          "status": "ok",
+          "exact": false,
+          "reference": "$ 1 0^{\\circ} \\mathrm{C} $",
+          "actual_range": null
+        },
+        {
+          "parent_annotation_id": 19,
+          "block_id": "b0009",
+          "status": "ok",
+          "exact": false,
+          "reference": "$ 1 0^{\\circ} \\mathrm{C} $",
+          "actual_range": null
+        }
+      ],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 15,
+      "evaluable": 15,
+      "correct": 15,
+      "missing_pairs": 0,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 11
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "figure:extra_output",
+      "text:inexact_or_missing",
+      "inline_content_or_representation_difference_unreviewed"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "figure:extra_output",
+      "text:inexact_or_missing",
+      "inline_content_or_representation_difference_unreviewed"
+    ],
+    "unresolved_annotation_ids": [
+      8,
+      17,
+      1,
+      19,
+      10,
+      0,
+      6,
+      4,
+      2
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 12,
+    "parent_reference_count": 12
+  },
+  "alignment": [
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        8
+      ],
+      "expected": "【例题2】实验得到甲、乙的溶解度曲线如图，将 $ \\mathsf{t}_{2} \\mathrm{^{o} C} $甲、乙的饱和溶液分别降温到 $ \\mathrm{t_{1}} \\mathrm{^{o} C} $训说 兑法一定正确的是 （ ）",
+      "actual": "【例题2】实验得到甲、乙的溶解度曲线如图，将 $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到 $t_{1}^{\\circ}$C。下列说法一定正确的是（）",
+      "raw_output": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n",
+      "edit_distance": 53,
+      "raw_edit_distance": 53,
+      "bbox": [
+        207,
+        216,
+        1251,
+        303
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例题2】实验得到甲、乙的溶解度曲线如图，将  $t_{2}^{\\circ}$C 甲、乙的饱和溶液分别降温到  $t_{1}^{\\circ}$C。下列说法一定正确的是（）\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003",
+        "l0030",
+        "l0029"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        17
+      ],
+      "expected": "A.甲溶液仍饱和 B.两溶液仍饱和 C.溶质质量分数：甲=乙 D.溶液质量：甲=乙",
+      "actual": "A. 甲溶液仍饱和 B. 两溶液仍饱和 C. 溶质质量分数：甲 = 乙 D. 溶液质量：甲 = 乙",
+      "raw_output": "A. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n",
+      "edit_distance": 8,
+      "raw_edit_distance": 8,
+      "bbox": [
+        213,
+        609,
+        552,
+        796
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "A. 甲溶液仍饱和\n\nB. 两溶液仍饱和\n\nC. 溶质质量分数：甲 = 乙\n\nD. 溶液质量：甲 = 乙\n",
+        "nonempty_lines": 4,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        1
+      ],
+      "expected": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、 N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（ ）",
+      "actual": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）",
+      "raw_output": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        210,
+        841,
+        1251,
+        979
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例题3】某固体溶解度随温度变化的曲线。该固体从溶液中析出时不带结晶水。M、N两点分别表示该固体形成的两份溶液在不同温度时的浓度。当条件改变时，溶液新的状态在图中对应的点的位置可能也随之变化，其中判断正确的是（）\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        19
+      ],
+      "expected": "A. 升温 $ 1 0^{\\circ} \\mathrm{C} $后，M点沿曲线向上移，N点向右平移。 B. 加水稀释（假设温度都不变）时，M、N点均不动。 C. 都降温 $ 1 0^{\\circ} \\mathrm{C} $后，M点沿曲线向左下移，N点向左平移。 D. 蒸发溶剂（假设温度不变）时，先是M点不动，N点左平移至曲线；继续蒸发溶剂， M、N点都不动。",
+      "actual": "A. 升温 $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。 B. 加水稀释（假设温度都不变）时，M、N 点均不动。 C. 都降温 $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。 D. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。",
+      "raw_output": "A. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n",
+      "edit_distance": 36,
+      "raw_edit_distance": 36,
+      "bbox": [
+        209,
+        1357,
+        1243,
+        1597
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "A. 升温  $10^{\\circ}$C 后，M 点沿曲线向上移，N 点向右平移。\n\nB. 加水稀释（假设温度都不变）时，M、N 点均不动。\n\nC. 都降温  $10^{\\circ}$C 后，M 点沿曲线向左下移，N 点向左平移。\n\nD. 蒸发溶剂（假设温度不变）时，先是 M 点不动，N 点左平移至曲线；继续蒸发溶剂，M、N 点都不动。\n",
+        "nonempty_lines": 4,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009",
+        "l0027",
+        "l0026"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        10
+      ],
+      "expected": "中考化学寒假班讲义",
+      "actual": "## 中考化学寒假班讲义",
+      "raw_output": "## 中考化学寒假班讲义\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        418,
+        122,
+        675,
+        158
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 中考化学寒假班讲义\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "第二讲",
+      "actual": "## 第二讲",
+      "raw_output": "## 第二讲\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        37,
+        514,
+        69,
+        597
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 第二讲\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        6
+      ],
+      "expected": "20",
+      "actual": "## 20",
+      "raw_output": "## 20\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        214,
+        1931,
+        262,
+        1965
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 20\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "（微信公众号：实用视界）免费分享",
+      "actual": "## （微信公众号：实用视界）免费分享",
+      "raw_output": "## （微信公众号：实用视界）免费分享\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        42,
+        1990,
+        1130,
+        2065
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## （微信公众号：实用视界）免费分享\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "figure",
+      "annotation_id": 7,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          575.7557373046875,
+          339.9219970703125,
+          888.6632690429688,
+          339.9219970703125,
+          888.6632690429688,
+          577.8765258789062,
+          575.7557373046875,
+          577.8765258789062
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 7,
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0004.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 5,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          530.4027099609375,
+          1013.6456909179688,
+          937.1158447265625,
+          1013.6456909179688,
+          937.1158447265625,
+          1319.2607421875,
+          530.4027099609375,
+          1319.2607421875
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 5,
+        "attribute": {}
+      },
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0008.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [
+    {
+      "parent_annotation_id": 19,
+      "block_id": "b0009",
+      "status": "ok",
+      "exact": false,
+      "reference": "$ 1 0^{\\circ} \\mathrm{C} $",
+      "actual_range": null,
+      "observed_parent_formulas": [
+        {
+          "range": [
+            6,
+            18
+          ],
+          "latex": "10^{\\circ}"
+        },
+        {
+          "range": [
+            76,
+            88
+          ],
+          "latex": "10^{\\circ}"
+        }
+      ],
+      "classification": "unreviewed_content_or_representation_difference"
+    },
+    {
+      "parent_annotation_id": 19,
+      "block_id": "b0009",
+      "status": "ok",
+      "exact": false,
+      "reference": "$ 1 0^{\\circ} \\mathrm{C} $",
+      "actual_range": null,
+      "observed_parent_formulas": [
+        {
+          "range": [
+            6,
+            18
+          ],
+          "latex": "10^{\\circ}"
+        },
+        {
+          "range": [
+            76,
+            88
+          ],
+          "latex": "10^{\\circ}"
+        }
+      ],
+      "classification": "unreviewed_content_or_representation_difference"
+    }
+  ],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

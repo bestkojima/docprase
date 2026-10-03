@@ -1,0 +1,15 @@
+{
+  "returncode": 0,
+  "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "summary_sha256": "6c84bc171c968897f70d664ddac238ac36a6b135a3fd75d7d81e0651b2a4158b",
+  "command": [
+    "/usr/bin/python3.12",
+    "/home/dr/project/docprase/tests/issue22_real.py",
+    "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/libdococr_c.so",
+    "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+    "/home/dr/project/docprase/output/issue31-final-20261003/safety"
+  ],
+  "source_config_sha256": "27a4855cb6b2379c43bb61af70115a031eac198a96eeb8fce9ee540d1e9b0fec",
+  "passed": true
+}

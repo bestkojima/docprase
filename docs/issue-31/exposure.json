@@ -233,5 +233,16 @@
       "exposure": "历史与本轮诊断/评测材料，不声明独立泛化"
     }
   ],
-  "margin_probe": "output/issue31-margin-probe-20261003"
+  "margin_probe": "output/issue31-margin-probe-20261003",
+  "margin_production_diagnostic": {
+    "path": "output/issue31-margin-production-20261003",
+    "code_commit": "5e36fea",
+    "withdrawn_by": "0dc4559",
+    "decision": "真实旧样本出现新转写与漏内容错误，否决生产",
+    "pages": [
+      "evaluation/candidate-07",
+      "old-seven/zh_formula",
+      "old-seven/zh_merged_table"
+    ]
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "code_commit": "0dc455939e191aa9e5734738a8a77c9bd78b5768",
+  "frozen_code_commit": "7d8869768d6b17af4160be7b816ee4babe99012f",
+  "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+  "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+  "restored_runtime_sha256": {
+    "dococr_cli": "b37366dcbd012cf5b6a7be6d1ef6fb0b5c6ac61e122d912eacc4ae7a8a58aa6f",
+    "libdococr_c.so": "2013fb4b25ec12d2a76be9c0e48fad1ee159394a51903e10152fbfa51ae5f0a9"
+  },
+  "preexisting_region_structure_patch_sha256": "fc35d2b8737b2049406598fdccd5363eeeed02c18dbb3c19aa201e797aee06f5",
+  "rationale": "撤回去边后所有源码、评分工具、实际运行依赖与原完整新跑候选一致；重新编译产物也逐字节一致",
+  "report_recheck": {
+    "returncode": 2,
+    "blockers": 45,
+    "identical_sha256": "0b783466a1dcdf8c1f715eef847a3e1f852dba58808044463bd061a8ce9967b2"
+  }
+}

@@ -1,0 +1,3153 @@
+{
+  "key": "development/odb-07",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+    "sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-07/job"
+    ],
+    "input_sha256": "c53f4e83600eb9db20b9e37a6ee598969b8dbfeb6af4fa1e2cdd4710c8840cd4",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 41.43675151100615,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "f69897aeb860b99b5eaa7cd57c102fe6dbe17c05faf92f5d2fddcc327958f825",
+      "job/assets/p0001-b0002.png": "d3b1a4311144fe423d3fb4df89940684bc4efdfa5fde954c2df6f078b884399a",
+      "job/assets/p0001-b0003.png": "7fef05d0fda50d1d06d277deae24a9d079c81247d53e97efcc60f3f514ec2326",
+      "job/assets/p0001-b0004.png": "d82819757a413271babeeb431c74df14fb0ef97af68b7689169279a7708d93f1",
+      "job/assets/p0001-b0005.png": "b51270d6a83a3b70d3666b8df338fddcddf6b1dcaec866a948574bef154949e7",
+      "job/assets/p0001-b0006.png": "3a434c11180fae08736dd4f676c537fe2da016c97c467169034ee2ee3861153d",
+      "job/assets/p0001-b0007.png": "c9a7145c1c618a973109f9d3f698614e2397a616518101ab0c2a2d32eb18d796",
+      "job/assets/p0001-b0008.png": "7332e0fd74c663f11c5cec993cd0893a2ff0ad358a56830244bbfe0a28908cee",
+      "job/assets/p0001-b0009.png": "5f39d1435f9c08c17a0dfeab878dd1c2a5c3d84164f5f812a91cb34499a05313",
+      "job/assets/p0001-b0010.png": "232c53ed547a956bf4bbf51beac48bda5395cf23ef2c80754adb1ee8c644c3e2",
+      "job/assets/p0001-b0011.png": "e80060dc308795ddefc219a616dcef53717d59d51ea6358b786ebfebe14ed7f6",
+      "job/assets/p0001-fetch_name_0.f32": "e515e853aa9db3e8b604bb69f174714ad4b5ea4071b2a389d87c69a34b98ff09",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "a3e9908197e27263b14ff9de5597e40a97d3d436980c15ae1632b84952440daf",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "c78b955bd59a1266fa852ef1e2870088e6bebedadfc2ea1022f8eefdc866200b",
+      "job/assets/p0001-layout-overlay.png": "48d727bc88dbebff6836ef7e209d109095fcb01d2d096103d4d9528356bf8b88",
+      "job/assets/p0001-mask-c0.png": "b70b23112b55cb5c79cef8d0951edc422aaf0f20a820e731de10e5de296ff317",
+      "job/assets/p0001-mask-c1.png": "6ef2482d77dfd0c4232c024efb387a54f327bdd66eaa0c9933a72f38be54e4cb",
+      "job/assets/p0001-mask-c10.png": "3f5acd4e0d213ff29f048e893fc212f3fe69ef90edc0ca6bf5b0c5cb04886d6a",
+      "job/assets/p0001-mask-c2.png": "ae62bed81230239c31166c535b4933ffd26685ec92675b7ae74800c4d980a933",
+      "job/assets/p0001-mask-c3.png": "9281403f9c31244822d8e7751346639f0da337802bfe5c74f360c7e295701345",
+      "job/assets/p0001-mask-c4.png": "be1e72b737334d03a7b029b291751fbc41a7965c038ec408f8f13d04830a36f3",
+      "job/assets/p0001-mask-c5.png": "6c00f1b772d3ab75dae2cf41fc27832b61fcc7288e071ddae5fdab9ff9d5fe83",
+      "job/assets/p0001-mask-c6.png": "c40d0c486351e5a59b39a938e4a110ce4639843d97e4fcf89f6cf8cf365b3773",
+      "job/assets/p0001-mask-c7.png": "08992cbccde585cfde840d122d922bf55d029ec8a31f4c1a7cf365a2e1541ee2",
+      "job/assets/p0001-mask-c8.png": "fe856969a3c766aa06ba0d9f5c9e7524bd149e1ef84e6171e9f8ce96d55c74fa",
+      "job/assets/p0001-mask-c9.png": "f4dbad9618380e703ffc273e9996b7822619511b861af1b01add452b4c8f20c8",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "040893351a1370b4f7dfaf05381be2886731289ae4e8d3c071c3d480eec42b98",
+      "job/document.md": "9568008bfdad5e216961478313007321ab0fc11daf2ff430223f93904e43f2b3",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "5ede0c17595218757b864d535b4d5349c081b0465a06a5838ea7e1d973f93f17",
+      "job/job-status.json": "525fe8a5e6b29ddd7c53b3997c47a5a428379b9aaf3a4a71162e239ccb4d578a",
+      "job/run-manifest.json": "adb7817cc9665a4c26baa65df2c1bf624f7f23ece237df74a1b685e7006df651",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "14b16944402763094ebaeeb9c578aa085c3bc5da4703a0742bfbd9e632519717",
+      "time.txt": "be68ea10b85acdb806703aa21ec48837fd4f76523218878cd361392304359490"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "figure",
+        "poly": [
+          145.0788200793819,
+          339.10629554840085,
+          511.94030320197976,
+          339.10629554840085,
+          511.94030320197976,
+          756.3893747154848,
+          145.0788200793819,
+          756.3893747154848
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": "box_id_0",
+        "attribute": {},
+        "text": ""
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          161.90561040039051,
+          1661.4846975585938,
+          1371.5656036073544,
+          1661.4846975585938,
+          1371.5656036073544,
+          1871.7980067691665,
+          161.90561040039051,
+          1871.7980067691665
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": "box_id_7",
+        "attribute": {},
+        "text": "欧洲人迟迟不肯接受负数和他们自古以来对”数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量?”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数．不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论."
+      },
+      {
+        "category_type": "footer",
+        "poly": [
+          524.9727,
+          1975.9104,
+          927.9395999999999,
+          1975.9104,
+          927.9395999999999,
+          2035.0976,
+          524.9727,
+          2035.0976
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": "box_id_8",
+        "attribute": {},
+        "text": "人民教育出版社"
+      },
+      {
+        "category_type": "footer",
+        "poly": [
+          1080.9540000000002,
+          1922.0479999999998,
+          1263.7437805506477,
+          1922.0479999999998,
+          1263.7437805506477,
+          1956.3628301804017,
+          1080.9540000000002,
+          1956.3628301804017
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": "box_id_9",
+        "attribute": {},
+        "text": "第一章有理数"
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          524.9727,
+          7.9872,
+          927.0702,
+          7.9872,
+          927.0702,
+          66.9696,
+          524.9727,
+          66.9696
+        ],
+        "ignore": false,
+        "order": 0,
+        "anno_id": "box_id_10",
+        "attribute": {},
+        "text": "人民教育出版社"
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          320.1499057806996,
+          876.3300967522116,
+          520.2341846324874,
+          876.3300967522116,
+          520.2341846324874,
+          913.3827353695012,
+          320.1499057806996,
+          913.3827353695012
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": "box-dm53hgru",
+        "attribute": {},
+        "text": "12—13 世纪"
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          257.568747711238,
+          1096.3475477318573,
+          591.7412330627991,
+          1096.3475477318573,
+          591.7412330627991,
+          1461.5503675560744,
+          257.568747711238,
+          1461.5503675560744
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": "box-yk1sg3iz",
+        "attribute": {},
+        "text": ""
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          322.195968768109,
+          1472.5828872173902,
+          446.100024820835,
+          1472.5828872173902,
+          446.100024820835,
+          1511.7104202368218,
+          322.195968768109,
+          1511.7104202368218
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": "box-gykg0ufn",
+        "attribute": {},
+        "text": "斐波那契"
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          183.54060956775368,
+          1521.0529691399845,
+          597.5503481058206,
+          1521.0529691399845,
+          597.5503481058206,
+          1560.2491789021658,
+          183.54060956775368,
+          1560.2491789021658
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": "box-uewggp45",
+        "attribute": {},
+        "text": "（Fibonacci，约1170—约1250）"
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          767.3235404022921,
+          875.3099129037472,
+          973.5585819740652,
+          875.3099129037472,
+          973.5585819740652,
+          916.5569303894251,
+          767.3235404022921,
+          916.5569303894251
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": "box-mcqx33zy",
+        "attribute": {},
+        "text": "16—17 世纪"
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          1177.9586738801602,
+          875.6975814732792,
+          1295.9926434578972,
+          875.6975814732792,
+          1295.9926434578972,
+          913.5575141017235,
+          1177.9586738801602,
+          913.5575141017235
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": "box-v03vc9wi",
+        "attribute": {},
+        "text": "19 世纪"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          759.5688330527889,
+          1080.730399408739,
+          1241.2980700023602,
+          1080.730399408739,
+          1241.2980700023602,
+          1401.883187050783,
+          759.5688330527889,
+          1401.883187050783
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": "box-3a3vzctm",
+        "attribute": {},
+        "text": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数.  如笛卡儿，虽然他接受并比较全面和系统地使用 了负数，但他把方程的负根称作 “假根”."
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          586.3411669842576,
+          314.39291819558036,
+          940.8027392498806,
+          314.39291819558036,
+          940.8027392498806,
+          697.7365064524142,
+          586.3411669842576,
+          697.7365064524142
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": "box-4akuy4y9",
+        "attribute": {},
+        "text": ""
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          691.5274008573608,
+          707.531618987892,
+          789.9964135701708,
+          707.531618987892,
+          789.9964135701708,
+          741.5816520810607,
+          691.5274008573608,
+          741.5816520810607
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": "box-7sy4rvg6",
+        "attribute": {},
+        "text": "笛卡儿"
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          575.8401242258429,
+          757.1624498594782,
+          912.278179889788,
+          757.1624498594782,
+          912.278179889788,
+          795.6971667348778,
+          575.8401242258429,
+          795.6971667348778
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": "box-tmoi7cxn",
+        "attribute": {},
+        "text": "（Descartes，1596-1650）"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1034.6351125546641,
+          327.89548606445874,
+          1364.6111607268542,
+          327.89548606445874,
+          1364.6111607268542,
+          686.5651425213615,
+          1034.6351125546641,
+          686.5651425213615
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": "box-w8hqpqrg",
+        "attribute": {},
+        "text": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员."
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          1289.3763793479536,
+          1924.6272704474436,
+          1317.4501124064234,
+          1924.6272704474436,
+          1317.4501124064234,
+          1953.9216332778667,
+          1289.3763793479536,
+          1953.9216332778667
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": "box-hg06maop",
+        "attribute": {},
+        "text": "19"
+      }
+    ],
+    "page_info": {
+      "page_no": 0,
+      "height": 2048,
+      "width": 1449,
+      "image_path": "page-c32797b5-0a58-40da-82b4-b35dded00f25.png",
+      "page_attribute": {
+        "data_source": "colorful_textbook",
+        "language": "simplified_chinese",
+        "layout": "other_layout",
+        "special_issue": [],
+        "subset": "layout_hard"
+      }
+    },
+    "extra": {
+      "relation": []
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1449,
+        2048
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0004",
+        "b0005",
+        "b0007",
+        "b0003",
+        "b0006",
+        "b0002",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_column_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0004",
+          "b0005",
+          "b0007",
+          "b0003",
+          "b0006",
+          "b0002",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011"
+        ],
+        "captions": [
+          {
+            "caption_block_id": "b0007",
+            "image_block_id": "b0005"
+          }
+        ],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0004",
+          "r0007",
+          "r0003",
+          "r0006",
+          "r0008",
+          "r0009",
+          "r0010"
+        ],
+        "region_order": [
+          "r0001",
+          "r0004",
+          "r0005",
+          "r0007",
+          "r0003",
+          "r0006",
+          "r0002",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header_image",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            522,
+            8,
+            928,
+            67
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.857800603,
+          "candidate_rank": 28,
+          "original_class_id": 13,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 232,
+          "model_label": "header",
+          "original_bbox": [
+            522.905701,
+            8.678476,
+            927.935669,
+            66.54612
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            158,
+            341,
+            507,
+            741
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.691875696,
+          "candidate_rank": 47,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 1324,
+          "model_label": "text",
+          "original_bbox": [
+            158.763489,
+            341.625702,
+            506.532806,
+            740.012573
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            142,
+            1084,
+            652,
+            1469
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.635730982,
+          "candidate_rank": 197,
+          "original_class_id": 14,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 1833,
+          "model_label": "image",
+          "original_bbox": [
+            142.496979,
+            1084.959961,
+            651.495544,
+            1468.77002
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "vision_footnote",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            169,
+            1476,
+            596,
+            1565
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.462496102,
+          "candidate_rank": 230,
+          "original_class_id": 24,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 365,
+          "model_label": "vision_footnote",
+          "original_bbox": [
+            169.96048,
+            1476.783325,
+            595.759583,
+            1564.547974
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1041,
+            339,
+            1357,
+            685
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.698845208,
+          "candidate_rank": 107,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 1044,
+          "model_label": "text",
+          "original_bbox": [
+            1041.528076,
+            339.417175,
+            1356.07019,
+            684.737061
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            772,
+            1102,
+            1238,
+            1398
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.787842274,
+          "candidate_rank": 238,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1265,
+          "model_label": "text",
+          "original_bbox": [
+            772.096558,
+            1102.275391,
+            1237.303955,
+            1397.599121
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            531,
+            312,
+            975,
+            695
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.771836221,
+          "candidate_rank": 69,
+          "original_class_id": 14,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 1641,
+          "model_label": "image",
+          "original_bbox": [
+            531.743713,
+            312.196411,
+            974.86261,
+            694.315674
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            146,
+            1673,
+            1366,
+            1869
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.945512116,
+          "candidate_rank": 258,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 2363,
+          "model_label": "text",
+          "original_bbox": [
+            146.415253,
+            1673.442383,
+            1365.286743,
+            1868.990723
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "footer",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1078,
+            1922,
+            1263,
+            1958
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.83412993,
+          "candidate_rank": 260,
+          "original_class_id": 8,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 54,
+          "model_label": "footer",
+          "original_bbox": [
+            1078.616699,
+            1922.314941,
+            1262.371094,
+            1957.330811
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1284,
+            1924,
+            1321,
+            1956
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.749915302,
+          "candidate_rank": 296,
+          "original_class_id": 16,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 9,
+          "model_label": "number",
+          "original_bbox": [
+            1284.468872,
+            1924.073608,
+            1320.658936,
+            1955.492554
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "footer_image",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            523,
+            1976,
+            928,
+            2034
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.836060345,
+          "candidate_rank": 283,
+          "original_class_id": 9,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 240,
+          "model_label": "footer",
+          "original_bbox": [
+            523.993835,
+            1976.410767,
+            927.087769,
+            2033.798462
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            522,
+            8,
+            928,
+            67
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            158,
+            341,
+            507,
+            741
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            142,
+            1084,
+            652,
+            1469
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            169,
+            1476,
+            596,
+            1565
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            1041,
+            339,
+            1357,
+            685
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            772,
+            1102,
+            1238,
+            1398
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            531,
+            312,
+            975,
+            695
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            146,
+            1673,
+            1366,
+            1869
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            1078,
+            1922,
+            1263,
+            1958
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            1284,
+            1924,
+            1321,
+            1956
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            523,
+            1976,
+            928,
+            2034
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            522,
+            8,
+            928,
+            67
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            158,
+            341,
+            507,
+            741
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 132,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                158,
+                341,
+                507,
+                741
+              ],
+              "canvas_size": [
+                352,
+                384
+              ],
+              "content_size": [
+                335,
+                384
+              ],
+              "pad_offset": [
+                8,
+                0
+              ],
+              "scale": 0.96,
+              "rounding_error": [
+                -0.03999999999996362,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0417910447761194,
+                0,
+                149.66567164179105,
+                0,
+                1.0416666666666667,
+                341
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3667,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2998,
+                    "raw_output": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      352,
+                      384
+                    ],
+                    "content_size": [
+                      335,
+                      384
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      8,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.03999999999996362,
+                      0.0
+                    ],
+                    "scale": 0.96,
+                    "token_count": 132
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2998,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            142,
+            1084,
+            652,
+            1469
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            169,
+            1476,
+            596,
+            1565
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                169,
+                1476,
+                596,
+                1565
+              ],
+              "canvas_size": [
+                576,
+                128
+              ],
+              "content_size": [
+                576,
+                120
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 1.3489461358313817,
+              "rounding_error": [
+                0,
+                -0.05620608899296542
+              ],
+              "canvas_to_page_affine": [
+                0.7413194444444444,
+                0,
+                169,
+                0,
+                0.7416666666666667,
+                1473.0333333333333
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2114,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1794,
+                    "raw_output": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      576,
+                      128
+                    ],
+                    "content_size": [
+                      576,
+                      120
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.05620608899296542
+                    ],
+                    "scale": 1.3489461358313817,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1794,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            1041,
+            339,
+            1357,
+            685
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 110,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                1041,
+                339,
+                1357,
+                685
+              ],
+              "canvas_size": [
+                320,
+                352
+              ],
+              "content_size": [
+                320,
+                350
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 1.0126582278481013,
+              "rounding_error": [
+                0,
+                -0.3797468354430862
+              ],
+              "canvas_to_page_affine": [
+                0.9875,
+                0,
+                1041,
+                0,
+                0.9885714285714285,
+                338.01142857142855
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2666,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2170,
+                    "raw_output": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      320,
+                      352
+                    ],
+                    "content_size": [
+                      320,
+                      350
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3797468354430862
+                    ],
+                    "scale": 1.0126582278481013,
+                    "token_count": 110
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2170,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            772,
+            1102,
+            1238,
+            1398
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 135,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                772,
+                1102,
+                1238,
+                1398
+              ],
+              "canvas_size": [
+                480,
+                288
+              ],
+              "content_size": [
+                453,
+                288
+              ],
+              "pad_offset": [
+                13,
+                0
+              ],
+              "scale": 0.972972972972973,
+              "rounding_error": [
+                -0.4054054054054177,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0286975717439293,
+                0,
+                758.6269315673289,
+                0,
+                1.0277777777777777,
+                1102
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3371,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2672,
+                    "raw_output": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      288
+                    ],
+                    "content_size": [
+                      453,
+                      288
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      13,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4054054054054177,
+                      0.0
+                    ],
+                    "scale": 0.972972972972973,
+                    "token_count": 135
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2672,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            531,
+            312,
+            975,
+            695
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            146,
+            1673,
+            1366,
+            1869
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 228,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                146,
+                1673,
+                1366,
+                1869
+              ],
+              "canvas_size": [
+                1216,
+                192
+              ],
+              "content_size": [
+                1195,
+                192
+              ],
+              "pad_offset": [
+                10,
+                0
+              ],
+              "scale": 0.9795918367346939,
+              "rounding_error": [
+                -0.10204081632650741,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0209205020920502,
+                0,
+                135.7907949790795,
+                0,
+                1.0208333333333333,
+                1673
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5384,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3881,
+                    "raw_output": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1216,
+                      192
+                    ],
+                    "content_size": [
+                      1195,
+                      192
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      10,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.10204081632650741,
+                      0.0
+                    ],
+                    "scale": 0.9795918367346939,
+                    "token_count": 228
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3881,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            1078,
+            1922,
+            1263,
+            1958
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 第一章 有理数\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "## 第一章 有理数\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                1078,
+                1922,
+                1263,
+                1958
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                118
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 3.2864864864864867,
+              "rounding_error": [
+                0,
+                -0.3135135135135272
+              ],
+              "canvas_to_page_affine": [
+                0.3042763157894737,
+                0,
+                1078,
+                0,
+                0.3050847457627119,
+                1920.4745762711864
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2011,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1659,
+                    "raw_output": "## 第一章 有理数\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 第一章 有理数\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      118
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3135135135135272
+                    ],
+                    "scale": 3.2864864864864867,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1659,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 第一章 有理数\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            1284,
+            1924,
+            1321,
+            1956
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 19\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "## 19\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                1284,
+                1924,
+                1321,
+                1956
+              ],
+              "canvas_size": [
+                288,
+                256
+              ],
+              "content_size": [
+                288,
+                249
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 7.783783783783784,
+              "rounding_error": [
+                0,
+                -0.08108108108109491
+              ],
+              "canvas_to_page_affine": [
+                0.1284722222222222,
+                0,
+                1284,
+                0,
+                0.1285140562248996,
+                1923.6144578313254
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1934,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1591,
+                    "raw_output": "## 19\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 19\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      288,
+                      256
+                    ],
+                    "content_size": [
+                      288,
+                      249
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.08108108108109491
+                    ],
+                    "scale": 7.783783783783784,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1591,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 19\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            523,
+            1976,
+            928,
+            2034
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "caption_of",
+          "source_block_id": "b0007",
+          "target_block_id": "b0005",
+          "evidence": "pre_recognition_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 406,
+      "height": 59,
+      "bbox": [
+        522,
+        8,
+        928,
+        67
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 349,
+      "height": 400,
+      "bbox": [
+        158,
+        341,
+        507,
+        741
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 510,
+      "height": 385,
+      "bbox": [
+        142,
+        1084,
+        652,
+        1469
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 427,
+      "height": 89,
+      "bbox": [
+        169,
+        1476,
+        596,
+        1565
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 316,
+      "height": 346,
+      "bbox": [
+        1041,
+        339,
+        1357,
+        685
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 466,
+      "height": 296,
+      "bbox": [
+        772,
+        1102,
+        1238,
+        1398
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 444,
+      "height": 383,
+      "bbox": [
+        531,
+        312,
+        975,
+        695
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 1220,
+      "height": 196,
+      "bbox": [
+        146,
+        1673,
+        1366,
+        1869
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 185,
+      "height": 36,
+      "bbox": [
+        1078,
+        1922,
+        1263,
+        1958
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 37,
+      "height": 32,
+      "bbox": [
+        1284,
+        1924,
+        1321,
+        1956
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 405,
+      "height": 58,
+      "bbox": [
+        523,
+        1976,
+        928,
+        2034
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "在欧洲，对于负数的认识和使用进程缓慢而又艰难。意大利数学家斐波那契在《算盘书》（1202年）中面对“一个相对较小的数减去一个更大的数”时使用了负数。\n\n\n![插图](assets/p0001-b0005.png)\n\n斐波那契\n\n(Fibonacci，约 1170—约 1250)\n\n\n随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n\n\n面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n\n\n![插图](assets/p0001-b0002.png)\n\n欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n\n",
+  "quality": {
+    "text": {
+      "denominator": 14,
+      "matched": 7,
+      "missing": 7,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 1,
+      "rows": [
+        {
+          "annotation_id": "box_id_7",
+          "category": "text_block",
+          "order": 13,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 147,
+          "reference_range": [
+            0,
+            147
+          ],
+          "actual_range": [
+            0,
+            147
+          ],
+          "raw_range": [
+            0,
+            147
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_9",
+          "category": "footer",
+          "order": 14,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            10
+          ],
+          "raw_range": [
+            0,
+            10
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-gykg0ufn",
+          "category": "figure_caption",
+          "order": 4,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-uewggp45",
+          "category": "figure_caption",
+          "order": 5,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 23,
+          "reference_range": [
+            4,
+            27
+          ],
+          "actual_range": [
+            7,
+            33
+          ],
+          "raw_range": [
+            7,
+            33
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-3a3vzctm",
+          "category": "text_block",
+          "order": 7,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 76,
+          "reference_range": [
+            0,
+            76
+          ],
+          "actual_range": [
+            0,
+            73
+          ],
+          "raw_range": [
+            0,
+            73
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-w8hqpqrg",
+          "category": "text_block",
+          "order": 12,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 65,
+          "reference_range": [
+            0,
+            65
+          ],
+          "actual_range": [
+            0,
+            65
+          ],
+          "raw_range": [
+            0,
+            65
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": "box-hg06maop",
+          "category": "page_number",
+          "order": 15,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 2,
+          "reference_range": [
+            0,
+            2
+          ],
+          "actual_range": [
+            0,
+            5
+          ],
+          "raw_range": [
+            0,
+            5
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": "box_id_8",
+          "category": "footer",
+          "order": 16,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 7,
+          "edit_distance": 7,
+          "raw_edit_distance": 7,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        },
+        {
+          "annotation_id": "box_id_10",
+          "category": "header",
+          "order": 0,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 7,
+          "edit_distance": 7,
+          "raw_edit_distance": 7,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        },
+        {
+          "annotation_id": "box-dm53hgru",
+          "category": "title",
+          "order": 1,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 8,
+          "edit_distance": 8,
+          "raw_edit_distance": 8,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        },
+        {
+          "annotation_id": "box-mcqx33zy",
+          "category": "title",
+          "order": 6,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 8,
+          "edit_distance": 8,
+          "raw_edit_distance": 8,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        },
+        {
+          "annotation_id": "box-v03vc9wi",
+          "category": "title",
+          "order": 11,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 5,
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        },
+        {
+          "annotation_id": "box-7sy4rvg6",
+          "category": "figure_caption",
+          "order": 9,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 3,
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        },
+        {
+          "annotation_id": "box-tmoi7cxn",
+          "category": "figure_caption",
+          "order": 10,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 21,
+          "edit_distance": 21,
+          "raw_edit_distance": 21,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0004",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 74
+        }
+      ],
+      "reference_chars": 382,
+      "edit_distance": 158,
+      "raw_edit_distance": 84
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 3,
+      "matched": 2,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 2,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 2,
+      "rows": [
+        {
+          "annotation_id": "box_id_0",
+          "category": "figure",
+          "order": 2,
+          "block_id": null,
+          "coverage": 0,
+          "status": "missing",
+          "exact": false,
+          "reading_order_position": null
+        },
+        {
+          "annotation_id": "box-yk1sg3iz",
+          "category": "figure",
+          "order": 3,
+          "block_id": "b0005",
+          "coverage": 1.0,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 2
+        },
+        {
+          "annotation_id": "box-4akuy4y9",
+          "category": "figure",
+          "order": 8,
+          "block_id": "b0002",
+          "coverage": 0.9929,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 6
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0001",
+          "reason": "unmatched",
+          "status": "ok"
+        },
+        {
+          "block_id": "b0011",
+          "reason": "unmatched",
+          "status": "ok"
+        }
+      ]
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 136,
+      "evaluable": 35,
+      "correct": 33,
+      "missing_pairs": 101,
+      "unresolved_internal_pairs": [
+        [
+          "box-gykg0ufn",
+          "box-uewggp45"
+        ]
+      ]
+    },
+    "block_statuses": {
+      "ok": 11
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "figure:inexact_or_missing",
+      "figure:extra_output",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "figure:inexact_or_missing",
+      "figure:extra_output",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "unresolved_annotation_ids": [
+      "box_id_7",
+      "box_id_9",
+      "box-gykg0ufn",
+      "box-uewggp45",
+      "box-3a3vzctm",
+      "box-w8hqpqrg",
+      "box-hg06maop",
+      "box_id_8",
+      "box_id_10",
+      "box-dm53hgru",
+      "box-mcqx33zy",
+      "box-v03vc9wi",
+      "box-7sy4rvg6",
+      "box-tmoi7cxn"
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 17,
+    "parent_reference_count": 17
+  },
+  "alignment": [
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        "box_id_7"
+      ],
+      "expected": "欧洲人迟迟不肯接受负数和他们自古以来对”数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量?”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数．不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论.",
+      "actual": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。",
+      "raw_output": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        146,
+        1673,
+        1366,
+        1869
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "欧洲人迟迟不肯接受负数和他们自古以来对“数”的观念有关，比如0表示一无所有，“世界上怎么还有比一无所有小的量？”而我国古代是在方程背景下，从“相对”角度认识正负数，于是自然地接受并使用负数。不过，欧洲人的“质疑”“争论”也促使他们不断地探寻负数及其他新数的意义，并最终建立了关于数的严密的理论。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        "box_id_9"
+      ],
+      "expected": "第一章有理数",
+      "actual": "## 第一章 有理数",
+      "raw_output": "## 第一章 有理数\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        1078,
+        1922,
+        1263,
+        1958
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 第一章 有理数\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        "box-gykg0ufn",
+        "box-uewggp45"
+      ],
+      "expected": "斐波那契（Fibonacci，约1170—约1250）",
+      "actual": "## 斐波那契 (Fibonacci，约 1170—约 1250)",
+      "raw_output": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+      "edit_distance": 8,
+      "raw_edit_distance": 8,
+      "bbox": [
+        169,
+        1476,
+        596,
+        1565
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 斐波那契\n\n(Fibonacci，约 1170—约 1250)\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        "box-3a3vzctm"
+      ],
+      "expected": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数. 如笛卡儿，虽然他接受并比较全面和系统地使用 了负数，但他把方程的负根称作 “假根”.",
+      "actual": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。",
+      "raw_output": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        772,
+        1102,
+        1238,
+        1398
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "面对负数，欧洲大多数数学家一方面使用着负数，另一方面又不理解负数。如笛卡儿，虽然他接受并比较全面和系统地使用了负数，但他把方程的负根称作“假根”。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        "box-w8hqpqrg"
+      ],
+      "expected": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员.",
+      "actual": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。",
+      "raw_output": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        1041,
+        339,
+        1357,
+        685
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "随着数学的发展，代数越来越抽象，与数字的“实际”意义相比，抽象运算越来越重要，对于负数的质疑消失了，负数完全成了数字系统中的一员。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        "box-hg06maop"
+      ],
+      "expected": "19",
+      "actual": "## 19",
+      "raw_output": "## 19\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        1284,
+        1924,
+        1321,
+        1956
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 19\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "figure",
+      "annotation_id": "box_id_0",
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          145.0788200793819,
+          339.10629554840085,
+          511.94030320197976,
+          339.10629554840085,
+          511.94030320197976,
+          756.3893747154848,
+          145.0788200793819,
+          756.3893747154848
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": "box_id_0",
+        "attribute": {},
+        "text": ""
+      },
+      "block_id": null,
+      "source_region_ids": [],
+      "raw_output": null,
+      "content": null,
+      "error": null,
+      "status": "missing",
+      "exact": false
+    },
+    {
+      "kind": "figure",
+      "annotation_id": "box-yk1sg3iz",
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          257.568747711238,
+          1096.3475477318573,
+          591.7412330627991,
+          1096.3475477318573,
+          591.7412330627991,
+          1461.5503675560744,
+          257.568747711238,
+          1461.5503675560744
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": "box-yk1sg3iz",
+        "attribute": {},
+        "text": ""
+      },
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0005.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": "box-4akuy4y9",
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          586.3411669842576,
+          314.39291819558036,
+          940.8027392498806,
+          314.39291819558036,
+          940.8027392498806,
+          697.7365064524142,
+          586.3411669842576,
+          697.7365064524142
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": "box-4akuy4y9",
+        "attribute": {},
+        "text": ""
+      },
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0002.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

@@ -1,0 +1,4317 @@
+{
+  "key": "evaluation/candidate-12",
+  "input": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+    "sha256": "11485df0351fbc277beb14493273db2600a9ecc60fcf446fb078a8411e0b56b2"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/evaluation/candidate-12/job"
+    ],
+    "input_sha256": "11485df0351fbc277beb14493273db2600a9ecc60fcf446fb078a8411e0b56b2",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 61.090990451019024,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "50e4e4f0d9536a14da59b4470caeb9034eaf58afdf0ec734cd75e47f226681be",
+      "job/assets/p0001-b0002.png": "d4accccfa55e0714cfbefc8019d06e41020def5e695118c3ba764bfcc6916de4",
+      "job/assets/p0001-b0003.png": "e2e925212b23a95e52e2ceaa97c808b3783a09040c4631758f2ecb7d140b9c85",
+      "job/assets/p0001-b0004.png": "36c91f59b80b9c49b04fbe1e82b140b567ff39ef22598fef66c3d6d0c841d9c9",
+      "job/assets/p0001-b0005.png": "14061915f7cc0022e8e7976c910c708fe97faeb94759cc385fde658a96b6b81b",
+      "job/assets/p0001-b0006.png": "2d714e0a28c8466fe3cb1645639a1f08d6302ff818d9994f3add5f164d584171",
+      "job/assets/p0001-b0007.png": "486866a5a2f4f976ae6a323df1565ce3c11cd050a9473a917ff80b35570d9d72",
+      "job/assets/p0001-b0008.png": "34c90063425ff5ff7c61c67b21619f374f5397b17d03e660f311c4322fa9df7f",
+      "job/assets/p0001-b0009.png": "7970e933ba2becf58e7409b49535c993fbdc1f4cd50cff9ea852d225a32f5d5e",
+      "job/assets/p0001-b0010.png": "a6b8cbab96b03aaa6c09df94d3be71b4f14ec7318d11d3aba5a43a44a4e97eb4",
+      "job/assets/p0001-b0011.png": "4ae202ec220c55659d4b48a2387df0ba9a4d291da4870bbde7a49d996bbaa984",
+      "job/assets/p0001-b0012.png": "4be8d01b3031bcfba68bcb37ebb8798020c7f20d8454db612e4080b96a1ba139",
+      "job/assets/p0001-b0013.png": "e4756dbd0d2408c70365c2d1c3a698cc4f57cd47b9606b1edb3591b9b336429e",
+      "job/assets/p0001-fetch_name_0.f32": "f6b77eaa0315b0dc304a6aea52e77b247e43026cd7e9e9a1b5e49ef2645d3cad",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "7d3274443f79b76b6bef429c77f75203772a14ae339556a048d0f3f8fff06fcb",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "99488204ce85346af9abc6b7e2be420040de57f18022218326aa396d39605f7a",
+      "job/assets/p0001-layout-overlay.png": "4426784f3bb46da57d193cd6295f91ea5db90bbe275911f633fa4bc28ae44820",
+      "job/assets/p0001-mask-c0.png": "a1311aca0a844059aa7dc7391bc0b928509b555117b3470e098dfd47f477428d",
+      "job/assets/p0001-mask-c1.png": "5dd14000ac906e8866b906990d8436c43b2db67fc64cf67695de80951047a1d5",
+      "job/assets/p0001-mask-c10.png": "eda5865ab07482ab236b2b81683b489cbcdef6d6ed814453cacfbf42d96b7233",
+      "job/assets/p0001-mask-c11.png": "02ddd773a790034f77e46615b7c1116bef9bc8d9ff4c5c8dbad21b06c1a1377e",
+      "job/assets/p0001-mask-c13.png": "777580d584c6835d83945018dadc79c8b510f364a0b9ead6cce26b393c1c6675",
+      "job/assets/p0001-mask-c15.png": "281932b9a2aefc9cd14667cf541d732c8dc2040938d30afcfb4ac57eebdb2932",
+      "job/assets/p0001-mask-c2.png": "61a5abe1029d001c7721b9fafda7d6314a23f0150ea2abe1a9d0d8285ea4276e",
+      "job/assets/p0001-mask-c3.png": "aa23e7f5dfa38bd62b9747a584465bec954ec22622bb155d2d7390278a51df0c",
+      "job/assets/p0001-mask-c4.png": "c00d8ac16724a8827abf601f216e0115bb7df50f6efbfddde91447945316ad81",
+      "job/assets/p0001-mask-c5.png": "95fe4e7b57370fb9fc7f8821b97304e0ce65c996eed76be6359cb4f9b21dc32f",
+      "job/assets/p0001-mask-c6.png": "49762f6ef93dda07c5f5b0374d0d8b8db5cad5afc7e2e167af371f034e61edc0",
+      "job/assets/p0001-mask-c7.png": "9c23d1d03d62fb65febe9ea53969f8f17b26376dac3799af82626639aa425317",
+      "job/assets/p0001-mask-c9.png": "e06545b878f2f9ed42428946bfffe4efe1d1c1e81cd6b2426fa2ea41b5bd2f5e",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "5a67e882800240b1a41e6ec2ff9dea3ac02929582c7a4bbc7ecb91856589a137",
+      "job/document.md": "572161b52133e50aa1564be0425d710177744211b4a224fb454b4fd9a6fa5617",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "dc158e9b2bd5c2281dc2e9117265f2fed5c00a3d9d1cd1795376936d5cd7a474",
+      "job/job-status.json": "234dd948112a70e4bb053a53f710dfe2e61769baea3f5c370ffac6505199e2ab",
+      "job/run-manifest.json": "1ff8d9ea0933061c5857dfbb467ce06051508a716b305e7e276288c54f5de071",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "a3b24669d24b112b3670cd49a27223b614fd6007f21389d7f1741755daac0a6d",
+      "time.txt": "231e11702fd892cd6cbbde35d02922c1706fb5648a94c53ba32a15f03a68227e"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "page_info": {
+      "image_path": "exam_paper_2016年安徽省中考英语试题（解析）_page_003.png",
+      "page_no": 3,
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "english",
+        "layout": "single_column",
+        "special_issue": [
+          "None"
+        ],
+        "subset": "v1.5"
+      },
+      "width": 1654,
+      "height": 2339,
+      "sample_id": 1258
+    },
+    "layout_dets": [
+      {
+        "category_type": "text_block",
+        "anno_id": 1,
+        "order": 1,
+        "ignore": false,
+        "poly": [
+          148,
+          209.33333333333334,
+          484,
+          209.33333333333334,
+          484,
+          248,
+          148,
+          248
+        ],
+        "attribute": {},
+        "text": "考点：考查介词短语辨析。"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 16,
+        "order": 2,
+        "ignore": false,
+        "poly": [
+          149.5351023634851,
+          345.9930318501433,
+          1064.8295105478126,
+          345.9930318501433,
+          1064.8295105478126,
+          382.60480817751636,
+          149.5351023634851,
+          382.60480817751636
+        ],
+        "attribute": {},
+        "text": "37．Please don't make so much noise. I ____ hear the speaker very well."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 3,
+        "order": 3,
+        "ignore": false,
+        "poly": [
+          150.40890237698196,
+          409.4307218163884,
+          1234.5692781836112,
+          409.4307218163884,
+          1234.5692781836112,
+          446.76405514972146,
+          150.40890237698196,
+          446.76405514972146
+        ],
+        "attribute": {},
+        "text": "A. needn't B. mustn't C. can't D. shouldn't"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 4,
+        "order": 4,
+        "ignore": false,
+        "poly": [
+          157.33333333333334,
+          474.6666666666667,
+          290.6666666666667,
+          474.6666666666667,
+          290.6666666666667,
+          513.3333333333334,
+          157.33333333333334,
+          513.3333333333334
+        ],
+        "attribute": {},
+        "text": "【答案】Ｃ"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 5,
+        "order": 5,
+        "ignore": false,
+        "poly": [
+          157.33333333333334,
+          542.6666666666666,
+          258.6666666666667,
+          542.6666666666666,
+          258.6666666666667,
+          578.6666666666666,
+          157.33333333333334,
+          578.6666666666666
+        ],
+        "attribute": {},
+        "text": "【解析】"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 17,
+        "order": 6,
+        "ignore": false,
+        "poly": [
+          149.32864581587725,
+          601.046900855073,
+          1522.7831423012037,
+          601.046900855073,
+          1522.7831423012037,
+          788.8056013647188,
+          149.32864581587725,
+          788.8056013647188
+        ],
+        "attribute": {},
+        "text": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn’t 不必，不需要；B mustn't 千万别，一定不要，表示禁止的意思；C. can’t 不能；D. shouldn’t 不应该。结合句意，可知是不能听到演讲者讲话，故选C。"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 7,
+        "order": 7,
+        "ignore": false,
+        "poly": [
+          148,
+          828,
+          486.6666666666667,
+          828,
+          486.6666666666667,
+          866.6666666666666,
+          148,
+          866.6666666666666
+        ],
+        "attribute": {},
+        "text": "考点：考查情态动词辨析。"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 18,
+        "order": 8,
+        "ignore": false,
+        "poly": [
+          142.7801987036682,
+          959.6396825157192,
+          970.4900643623326,
+          959.6396825157192,
+          970.4900643623326,
+          1000.8062049347212,
+          142.7801987036682,
+          1000.8062049347212
+        ],
+        "attribute": {},
+        "text": "38. —Look at the stone bridge! Do you know ____it was built?"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 19,
+        "order": 9,
+        "ignore": false,
+        "poly": [
+          167.4376195905629,
+          1019.1997575049139,
+          516.9151184242212,
+          1019.1997575049139,
+          516.9151184242212,
+          1066.4974641139802,
+          167.4376195905629,
+          1066.4974641139802
+        ],
+        "attribute": {},
+        "text": "--In the 1860s. It's quite old."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 9,
+        "order": 10,
+        "ignore": false,
+        "poly": [
+          150.66666666666666,
+          1096,
+          1172,
+          1096,
+          1172,
+          1132,
+          150.66666666666666,
+          1132
+        ],
+        "attribute": {},
+        "text": "A.when B.how C. where D. why"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 20,
+        "order": 11,
+        "ignore": false,
+        "poly": [
+          152.3947942578916,
+          1152.0676540102384,
+          304.4489801637636,
+          1152.0676540102384,
+          304.4489801637636,
+          1196.5713181778108,
+          152.3947942578916,
+          1196.5713181778108
+        ],
+        "attribute": {},
+        "text": "【答案】A"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 11,
+        "order": 12,
+        "ignore": false,
+        "poly": [
+          159.967228278543,
+          1229.2369508933941,
+          254.26894707711656,
+          1229.2369508933941,
+          254.26894707711656,
+          1264.4183604113855,
+          159.967228278543,
+          1264.4183604113855
+        ],
+        "attribute": {},
+        "text": "【解析】"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 21,
+        "order": 13,
+        "ignore": false,
+        "poly": [
+          147.4340030343474,
+          1285.3106441623438,
+          1504.1655586350835,
+          1285.3106441623438,
+          1504.1655586350835,
+          1462.687723786791,
+          147.4340030343474,
+          1462.687723786791
+        ],
+        "attribute": {},
+        "text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，\n故选A。"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 22,
+        "order": 14,
+        "ignore": false,
+        "poly": [
+          148.78802654293096,
+          1485.7061234327123,
+          373.55592896780337,
+          1485.7061234327123,
+          373.55592896780337,
+          1538.513040267471,
+          148.78802654293096,
+          1538.513040267471
+        ],
+        "attribute": {},
+        "text": "考点：考查连词。"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 12,
+        "order": 15,
+        "ignore": false,
+        "poly": [
+          141.33333333333348,
+          1621.391763269087,
+          1225.3333333333337,
+          1621.391763269087,
+          1225.3333333333337,
+          1661.3917632690868,
+          141.33333333333348,
+          1661.3917632690868
+        ],
+        "attribute": {},
+        "text": "39. Don't hurry him. You will just have to be ____ and wait until he finishes the work."
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 13,
+        "order": 16,
+        "ignore": false,
+        "poly": [
+          144.0000000000001,
+          1690.099735984921,
+          1209.3333333333335,
+          1690.099735984921,
+          1209.3333333333335,
+          1728.7664026515874,
+          144.0000000000001,
+          1728.7664026515874
+        ],
+        "attribute": {},
+        "text": "A. active B. careful C. patient D. famous"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 14,
+        "order": 17,
+        "ignore": false,
+        "poly": [
+          157.33333333333334,
+          1757.3333333333333,
+          290.6666666666667,
+          1757.3333333333333,
+          290.6666666666667,
+          1794.6666666666667,
+          157.33333333333334,
+          1794.6666666666667
+        ],
+        "attribute": {},
+        "text": "【答案】Ｃ"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 23,
+        "order": 18,
+        "ignore": false,
+        "poly": [
+          160.42790545605925,
+          1820.5108276787325,
+          260.1917662477238,
+          1820.5108276787325,
+          260.1917662477238,
+          1862.3166360104779,
+          160.42790545605925,
+          1862.3166360104779
+        ],
+        "attribute": {},
+        "text": "【解析】"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 24,
+        "order": 19,
+        "ignore": false,
+        "poly": [
+          147.62365345378106,
+          1884.395553353197,
+          1502.9106692970445,
+          1884.395553353197,
+          1502.9106692970445,
+          2066.9570463549144,
+          147.62365345378106,
+          2066.9570463549144
+        ],
+        "attribute": {},
+        "text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔 细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选C。"
+      },
+      {
+        "category_type": "text_block",
+        "anno_id": 25,
+        "order": 20,
+        "ignore": false,
+        "poly": [
+          149.1707847504057,
+          2080.8812280245374,
+          474.06835704159903,
+          2080.8812280245374,
+          474.06835704159903,
+          2131.936560813154,
+          149.1707847504057,
+          2131.936560813154
+        ],
+        "attribute": {},
+        "text": "考点：考查形容词辨析。"
+      }
+    ],
+    "extra": {
+      "relation": []
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1654,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011",
+        "b0012",
+        "b0013"
+      ],
+      "reading_order_evidence": {
+        "source": "model",
+        "reason": "unique_rank"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011",
+          "b0012",
+          "b0013"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "text",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            143,
+            212,
+            491,
+            249
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.675997317,
+          "candidate_rank": 11,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 90,
+          "model_label": "text",
+          "original_bbox": [
+            143.988708,
+            212.395111,
+            490.159607,
+            248.579269
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            141,
+            346,
+            1236,
+            448
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.897642732,
+          "candidate_rank": 19,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 803,
+          "model_label": "text",
+          "original_bbox": [
+            141.023148,
+            346.673218,
+            1235.827637,
+            447.859009
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            155,
+            476,
+            294,
+            513
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.371950209,
+          "candidate_rank": 62,
+          "original_class_id": 22,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 34,
+          "model_label": "text",
+          "original_bbox": [
+            155.576401,
+            476.297607,
+            293.894165,
+            512.402405
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            155,
+            541,
+            262,
+            580
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.366558462,
+          "candidate_rank": 76,
+          "original_class_id": 22,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 36,
+          "model_label": "text",
+          "original_bbox": [
+            155.216019,
+            541.178223,
+            261.889038,
+            579.605713
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            150,
+            609,
+            1526,
+            788
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.690332234,
+          "candidate_rank": 82,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1793,
+          "model_label": "text",
+          "original_bbox": [
+            150.185226,
+            609.764832,
+            1525.238525,
+            787.323486
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            144,
+            829,
+            491,
+            867
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.471578181,
+          "candidate_rank": 110,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 88,
+          "model_label": "text",
+          "original_bbox": [
+            144.538376,
+            829.186584,
+            490.194122,
+            866.506714
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            140,
+            963,
+            1180,
+            1136
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.899153709,
+          "candidate_rank": 116,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 1275,
+          "model_label": "text",
+          "original_bbox": [
+            140.435806,
+            963.707031,
+            1179.21167,
+            1135.697388
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            154,
+            1161,
+            296,
+            1198
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.338070661,
+          "candidate_rank": 151,
+          "original_class_id": 22,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 65,
+          "model_label": "text",
+          "original_bbox": [
+            154.789566,
+            1161.9823,
+            295.104675,
+            1197.710449
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            155,
+            1225,
+            262,
+            1265
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.367278278,
+          "candidate_rank": 162,
+          "original_class_id": 22,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 32,
+          "model_label": "text",
+          "original_bbox": [
+            155.40419,
+            1225.41626,
+            261.216278,
+            1264.501343
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            138,
+            1295,
+            1503,
+            1528
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.551217556,
+          "candidate_rank": 184,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 2193,
+          "model_label": "text",
+          "original_bbox": [
+            138.828735,
+            1295.969849,
+            1502.610107,
+            1527.26123
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            140,
+            1626,
+            1225,
+            1731
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.910526693,
+          "candidate_rank": 217,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 837,
+          "model_label": "text",
+          "original_bbox": [
+            140.343155,
+            1626.61145,
+            1224.938965,
+            1730.835571
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            151,
+            1757,
+            293,
+            1864
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.31183067,
+          "candidate_rank": 238,
+          "original_class_id": 22,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 97,
+          "model_label": "text",
+          "original_bbox": [
+            151.450882,
+            1757.297363,
+            292.480682,
+            1863.343994
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            141,
+            1889,
+            1511,
+            2128
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.81071341,
+          "candidate_rank": 259,
+          "original_class_id": 22,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 2337,
+          "model_label": "text",
+          "original_bbox": [
+            141.236465,
+            1889.035522,
+            1510.776245,
+            2127.540527
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            143,
+            212,
+            491,
+            249
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            141,
+            346,
+            1236,
+            448
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            155,
+            476,
+            294,
+            513
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            155,
+            541,
+            262,
+            580
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            150,
+            609,
+            1526,
+            788
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            144,
+            829,
+            491,
+            867
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            140,
+            963,
+            1180,
+            1136
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            154,
+            1161,
+            296,
+            1198
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            155,
+            1225,
+            262,
+            1265
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            138,
+            1295,
+            1503,
+            1528
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            140,
+            1626,
+            1225,
+            1731
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            151,
+            1757,
+            293,
+            1864
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            141,
+            1889,
+            1511,
+            2128
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": 1,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            143,
+            212,
+            491,
+            249
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 考点：考查介词短语辨析。\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "## 考点：考查介词短语辨析。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                143,
+                212,
+                491,
+                249
+              ],
+              "canvas_size": [
+                800,
+                96
+              ],
+              "content_size": [
+                800,
+                85
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 2.2988505747126435,
+              "rounding_error": [
+                0,
+                -0.057471264367805475
+              ],
+              "canvas_to_page_affine": [
+                0.435,
+                0,
+                143,
+                0,
+                0.43529411764705883,
+                209.8235294117647
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2622,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2268,
+                    "raw_output": "## 考点：考查介词短语辨析。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 考点：考查介词短语辨析。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      800,
+                      96
+                    ],
+                    "content_size": [
+                      800,
+                      85
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.057471264367805475
+                    ],
+                    "scale": 2.2988505747126435,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2268,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 考点：考查介词短语辨析。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            141,
+            346,
+            1236,
+            448
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 102,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                141,
+                346,
+                1236,
+                448
+              ],
+              "canvas_size": [
+                1088,
+                96
+              ],
+              "content_size": [
+                1031,
+                96
+              ],
+              "pad_offset": [
+                28,
+                0
+              ],
+              "scale": 0.9411764705882353,
+              "rounding_error": [
+                0.4117647058824332,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0620756547041708,
+                0,
+                111.26188166828322,
+                0,
+                1.0625,
+                346
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2819,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2296,
+                    "raw_output": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1088,
+                      96
+                    ],
+                    "content_size": [
+                      1031,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      28,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.4117647058824332,
+                      0.0
+                    ],
+                    "scale": 0.9411764705882353,
+                    "token_count": 102
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2296,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            155,
+            476,
+            294,
+            513
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【答案】C\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "## 【答案】C\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                155,
+                476,
+                294,
+                513
+              ],
+              "canvas_size": [
+                512,
+                160
+              ],
+              "content_size": [
+                512,
+                136
+              ],
+              "pad_offset": [
+                0,
+                12
+              ],
+              "scale": 3.683453237410072,
+              "rounding_error": [
+                0,
+                -0.2877697841726672
+              ],
+              "canvas_to_page_affine": [
+                0.271484375,
+                0,
+                155,
+                0,
+                0.27205882352941174,
+                472.7352941176471
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1889,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1541,
+                    "raw_output": "## 【答案】C\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【答案】C\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      512,
+                      160
+                    ],
+                    "content_size": [
+                      512,
+                      136
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      12
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.2877697841726672
+                    ],
+                    "scale": 3.683453237410072,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1541,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【答案】C\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            155,
+            541,
+            262,
+            580
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【解析】\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "## 【解析】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                155,
+                541,
+                262,
+                580
+              ],
+              "canvas_size": [
+                448,
+                160
+              ],
+              "content_size": [
+                439,
+                160
+              ],
+              "pad_offset": [
+                4,
+                0
+              ],
+              "scale": 4.102564102564102,
+              "rounding_error": [
+                0.02564102564105042,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.2437357630979499,
+                0,
+                154.0250569476082,
+                0,
+                0.24375,
+                541
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1746,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1457,
+                    "raw_output": "## 【解析】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【解析】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      448,
+                      160
+                    ],
+                    "content_size": [
+                      439,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      4,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.02564102564105042,
+                      0.0
+                    ],
+                    "scale": 4.102564102564102,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1457,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【解析】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            150,
+            609,
+            1526,
+            788
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 258,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                150,
+                609,
+                1526,
+                788
+              ],
+              "canvas_size": [
+                1376,
+                192
+              ],
+              "content_size": [
+                1376,
+                179
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 1,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1,
+                0,
+                150,
+                0,
+                1,
+                603
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5255,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3628,
+                    "raw_output": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1376,
+                      192
+                    ],
+                    "content_size": [
+                      1376,
+                      179
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 1.0,
+                    "token_count": 258
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3628,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            144,
+            829,
+            491,
+            867
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 考点：考查情态动词辨析。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "## 考点：考查情态动词辨析。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                144,
+                829,
+                491,
+                867
+              ],
+              "canvas_size": [
+                800,
+                96
+              ],
+              "content_size": [
+                800,
+                88
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 2.3054755043227666,
+              "rounding_error": [
+                0,
+                0.3919308357348683
+              ],
+              "canvas_to_page_affine": [
+                0.43375,
+                0,
+                144,
+                0,
+                0.4318181818181818,
+                827.2727272727273
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1910,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1591,
+                    "raw_output": "## 考点：考查情态动词辨析。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 考点：考查情态动词辨析。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      800,
+                      96
+                    ],
+                    "content_size": [
+                      800,
+                      88
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3919308357348683
+                    ],
+                    "scale": 2.3054755043227666,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1591,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 考点：考查情态动词辨析。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            140,
+            963,
+            1180,
+            1136
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 160,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                140,
+                963,
+                1180,
+                1136
+              ],
+              "canvas_size": [
+                1024,
+                160
+              ],
+              "content_size": [
+                962,
+                160
+              ],
+              "pad_offset": [
+                31,
+                0
+              ],
+              "scale": 0.9248554913294798,
+              "rounding_error": [
+                0.15028901734103783,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0810810810810811,
+                0,
+                106.48648648648648,
+                0,
+                1.08125,
+                963
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3497,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2681,
+                    "raw_output": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      160
+                    ],
+                    "content_size": [
+                      962,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      31,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.15028901734103783,
+                      0.0
+                    ],
+                    "scale": 0.9248554913294798,
+                    "token_count": 160
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2681,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+              "nonempty_lines": 6,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            154,
+            1161,
+            296,
+            1198
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【答案】A\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "## 【答案】A\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                154,
+                1161,
+                296,
+                1198
+              ],
+              "canvas_size": [
+                512,
+                160
+              ],
+              "content_size": [
+                512,
+                133
+              ],
+              "pad_offset": [
+                0,
+                13
+              ],
+              "scale": 3.6056338028169015,
+              "rounding_error": [
+                0,
+                -0.4084507042253449
+              ],
+              "canvas_to_page_affine": [
+                0.27734375,
+                0,
+                154,
+                0,
+                0.2781954887218045,
+                1157.3834586466166
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1888,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1540,
+                    "raw_output": "## 【答案】A\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【答案】A\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      512,
+                      160
+                    ],
+                    "content_size": [
+                      512,
+                      133
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      13
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4084507042253449
+                    ],
+                    "scale": 3.6056338028169015,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1540,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【答案】A\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            155,
+            1225,
+            262,
+            1265
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【解析】\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "## 【解析】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                155,
+                1225,
+                262,
+                1265
+              ],
+              "canvas_size": [
+                448,
+                160
+              ],
+              "content_size": [
+                428,
+                160
+              ],
+              "pad_offset": [
+                10,
+                0
+              ],
+              "scale": 4,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.25,
+                0,
+                152.5,
+                0,
+                0.25,
+                1225
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1775,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1479,
+                    "raw_output": "## 【解析】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【解析】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      448,
+                      160
+                    ],
+                    "content_size": [
+                      428,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      10,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 4.0,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1479,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【解析】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 10,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            138,
+            1295,
+            1503,
+            1528
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 301,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                138,
+                1295,
+                1503,
+                1528
+              ],
+              "canvas_size": [
+                1376,
+                224
+              ],
+              "content_size": [
+                1312,
+                224
+              ],
+              "pad_offset": [
+                32,
+                0
+              ],
+              "scale": 0.9613733905579399,
+              "rounding_error": [
+                -0.27467811158794575,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0403963414634145,
+                0,
+                104.70731707317074,
+                0,
+                1.0401785714285714,
+                1295
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5656,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3824,
+                    "raw_output": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1376,
+                      224
+                    ],
+                    "content_size": [
+                      1312,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      32,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.27467811158794575,
+                      0.0
+                    ],
+                    "scale": 0.9613733905579399,
+                    "token_count": 301
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3824,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+              "nonempty_lines": 3,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 11,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            140,
+            1626,
+            1225,
+            1731
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 102,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                140,
+                1626,
+                1225,
+                1731
+              ],
+              "canvas_size": [
+                1088,
+                96
+              ],
+              "content_size": [
+                992,
+                96
+              ],
+              "pad_offset": [
+                48,
+                0
+              ],
+              "scale": 0.9142857142857143,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.09375,
+                0,
+                87.5,
+                0,
+                1.09375,
+                1626
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2641,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2164,
+                    "raw_output": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1088,
+                      96
+                    ],
+                    "content_size": [
+                      992,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      48,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 0.9142857142857143,
+                    "token_count": 102
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2164,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 12,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            151,
+            1757,
+            293,
+            1864
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【答案】C\n\n## 【解析】\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "## 【答案】C\n\n## 【解析】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0012.png",
+              "source_bbox": [
+                151,
+                1757,
+                293,
+                1864
+              ],
+              "canvas_size": [
+                320,
+                224
+              ],
+              "content_size": [
+                297,
+                224
+              ],
+              "pad_offset": [
+                11,
+                0
+              ],
+              "scale": 2.0934579439252334,
+              "rounding_error": [
+                -0.2710280373831324,
+                2.842170943040401e-14
+              ],
+              "canvas_to_page_affine": [
+                0.4781144781144781,
+                0,
+                145.74074074074073,
+                0,
+                0.47767857142857145,
+                1757
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1860,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1567,
+                    "raw_output": "## 【答案】C\n\n## 【解析】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【答案】C\n\n## 【解析】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      320,
+                      224
+                    ],
+                    "content_size": [
+                      297,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      11,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.2710280373831324,
+                      2.842170943040401e-14
+                    ],
+                    "scale": 2.0934579439252334,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1567,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【答案】C\n\n## 【解析】\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 13,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            141,
+            1889,
+            1511,
+            2128
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 301,
+              "source_crop": "assets/p0001-b0013.png",
+              "source_bbox": [
+                141,
+                1889,
+                1511,
+                2128
+              ],
+              "canvas_size": [
+                1376,
+                224
+              ],
+              "content_size": [
+                1284,
+                224
+              ],
+              "pad_offset": [
+                46,
+                0
+              ],
+              "scale": 0.9372384937238494,
+              "rounding_error": [
+                -0.016736401673597356,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0669781931464175,
+                0,
+                91.91900311526479,
+                0,
+                1.0669642857142858,
+                1889
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5592,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3769,
+                    "raw_output": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1376,
+                      224
+                    ],
+                    "content_size": [
+                      1284,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      46,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.016736401673597356,
+                      0.0
+                    ],
+                    "scale": 0.9372384937238494,
+                    "token_count": 301
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3769,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 348,
+      "height": 37,
+      "bbox": [
+        143,
+        212,
+        491,
+        249
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 1095,
+      "height": 102,
+      "bbox": [
+        141,
+        346,
+        1236,
+        448
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 139,
+      "height": 37,
+      "bbox": [
+        155,
+        476,
+        294,
+        513
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 107,
+      "height": 39,
+      "bbox": [
+        155,
+        541,
+        262,
+        580
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 1376,
+      "height": 179,
+      "bbox": [
+        150,
+        609,
+        1526,
+        788
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 347,
+      "height": 38,
+      "bbox": [
+        144,
+        829,
+        491,
+        867
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 1040,
+      "height": 173,
+      "bbox": [
+        140,
+        963,
+        1180,
+        1136
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 142,
+      "height": 37,
+      "bbox": [
+        154,
+        1161,
+        296,
+        1198
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 107,
+      "height": 40,
+      "bbox": [
+        155,
+        1225,
+        262,
+        1265
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 1365,
+      "height": 233,
+      "bbox": [
+        138,
+        1295,
+        1503,
+        1528
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1085,
+      "height": 105,
+      "bbox": [
+        140,
+        1626,
+        1225,
+        1731
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 142,
+      "height": 107,
+      "bbox": [
+        151,
+        1757,
+        293,
+        1864
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 1370,
+      "height": 239,
+      "bbox": [
+        141,
+        1889,
+        1511,
+        2128
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## 考点：考查介词短语辨析。\n\n\n37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n\n\n## 【答案】C\n\n\n## 【解析】\n\n\n试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n\n\n## 考点：考查情态动词辨析。\n\n\n38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n\n\n## 【答案】A\n\n\n## 【解析】\n\n\n试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n\n\n39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n\n\n## 【答案】C\n\n## 【解析】\n\n\n试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n\n",
+  "quality": {
+    "text": {
+      "denominator": 20,
+      "matched": 20,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 1,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 1,
+          "category": "text_block",
+          "order": 1,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 12,
+          "reference_range": [
+            0,
+            12
+          ],
+          "actual_range": [
+            0,
+            15
+          ],
+          "raw_range": [
+            0,
+            15
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 16,
+          "category": "text_block",
+          "order": 2,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 70,
+          "reference_range": [
+            0,
+            70
+          ],
+          "actual_range": [
+            0,
+            70
+          ],
+          "raw_range": [
+            0,
+            70
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "text_block",
+          "order": 3,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 43,
+          "reference_range": [
+            70,
+            113
+          ],
+          "actual_range": [
+            70,
+            114
+          ],
+          "raw_range": [
+            70,
+            114
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 4,
+          "category": "text_block",
+          "order": 4,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 5,
+          "category": "text_block",
+          "order": 5,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 17,
+          "category": "text_block",
+          "order": 6,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 130,
+          "reference_range": [
+            0,
+            130
+          ],
+          "actual_range": [
+            0,
+            132
+          ],
+          "raw_range": [
+            0,
+            132
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "text_block",
+          "order": 7,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 12,
+          "reference_range": [
+            0,
+            12
+          ],
+          "actual_range": [
+            0,
+            15
+          ],
+          "raw_range": [
+            0,
+            15
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 18,
+          "category": "text_block",
+          "order": 8,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 60,
+          "reference_range": [
+            0,
+            60
+          ],
+          "actual_range": [
+            0,
+            60
+          ],
+          "raw_range": [
+            0,
+            60
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 19,
+          "category": "text_block",
+          "order": 9,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 31,
+          "reference_range": [
+            60,
+            91
+          ],
+          "actual_range": [
+            60,
+            92
+          ],
+          "raw_range": [
+            60,
+            92
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 9,
+          "category": "text_block",
+          "order": 10,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 28,
+          "reference_range": [
+            91,
+            119
+          ],
+          "actual_range": [
+            92,
+            123
+          ],
+          "raw_range": [
+            92,
+            123
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 20,
+          "category": "text_block",
+          "order": 11,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 11,
+          "category": "text_block",
+          "order": 12,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 21,
+          "category": "text_block",
+          "order": 13,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 117,
+          "reference_range": [
+            0,
+            117
+          ],
+          "actual_range": [
+            0,
+            117
+          ],
+          "raw_range": [
+            0,
+            117
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 22,
+          "category": "text_block",
+          "order": 14,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 8,
+          "reference_range": [
+            117,
+            125
+          ],
+          "actual_range": [
+            117,
+            126
+          ],
+          "raw_range": [
+            117,
+            126
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 12,
+          "category": "text_block",
+          "order": 15,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 87,
+          "reference_range": [
+            0,
+            87
+          ],
+          "actual_range": [
+            0,
+            86
+          ],
+          "raw_range": [
+            0,
+            86
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 13,
+          "category": "text_block",
+          "order": 16,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 41,
+          "reference_range": [
+            87,
+            128
+          ],
+          "actual_range": [
+            86,
+            128
+          ],
+          "raw_range": [
+            86,
+            128
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 14,
+          "category": "text_block",
+          "order": 17,
+          "block_id": "b0012",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            12
+          ],
+          "raw_range": [
+            0,
+            12
+          ],
+          "edit_distance": 8,
+          "raw_edit_distance": 8,
+          "exact": false
+        },
+        {
+          "annotation_id": 23,
+          "category": "text_block",
+          "order": 18,
+          "block_id": "b0012",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 4,
+          "reference_range": [
+            5,
+            9
+          ],
+          "actual_range": [
+            12,
+            16
+          ],
+          "raw_range": [
+            12,
+            16
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 24,
+          "category": "text_block",
+          "order": 19,
+          "block_id": "b0013",
+          "status": "ok",
+          "reading_order_position": 12,
+          "reference_chars": 128,
+          "reference_range": [
+            0,
+            128
+          ],
+          "actual_range": [
+            0,
+            128
+          ],
+          "raw_range": [
+            0,
+            128
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 25,
+          "category": "text_block",
+          "order": 20,
+          "block_id": "b0013",
+          "status": "ok",
+          "reading_order_position": 12,
+          "reference_chars": 11,
+          "reference_range": [
+            128,
+            139
+          ],
+          "actual_range": [
+            128,
+            140
+          ],
+          "raw_range": [
+            128,
+            140
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 805,
+      "edit_distance": 49,
+      "raw_edit_distance": 49
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 190,
+      "evaluable": 182,
+      "correct": 182,
+      "missing_pairs": 8,
+      "unresolved_internal_pairs": [
+        [
+          16,
+          3
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          18,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          23
+        ],
+        [
+          24,
+          25
+        ]
+      ]
+    },
+    "block_statuses": {
+      "ok": 13
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      1,
+      16,
+      3,
+      4,
+      5,
+      17,
+      7,
+      18,
+      19,
+      9,
+      20,
+      11,
+      21,
+      22,
+      12,
+      13,
+      14,
+      24,
+      25
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 20,
+    "parent_reference_count": 20
+  },
+  "alignment": [
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        1
+      ],
+      "expected": "考点：考查介词短语辨析。",
+      "actual": "## 考点：考查介词短语辨析。",
+      "raw_output": "## 考点：考查介词短语辨析。\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        143,
+        212,
+        491,
+        249
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 考点：考查介词短语辨析。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        16,
+        3
+      ],
+      "expected": "37．Please don't make so much noise. I ____ hear the speaker very well.A. needn't B. mustn't C. can't D. shouldn't",
+      "actual": "37. Please don't make so much noise. I ___ hear the speaker very well. A. needn't B. mustn't C. can't D. shouldn't",
+      "raw_output": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        141,
+        346,
+        1236,
+        448
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "37. Please don't make so much noise. I ___ hear the speaker very well.\n\nA. needn't\n\nB. mustn't\n\nC. can't\n\nD. shouldn't\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "【答案】Ｃ",
+      "actual": "## 【答案】C",
+      "raw_output": "## 【答案】C\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        155,
+        476,
+        294,
+        513
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【答案】C\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        5
+      ],
+      "expected": "【解析】",
+      "actual": "## 【解析】",
+      "raw_output": "## 【解析】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        155,
+        541,
+        262,
+        580
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【解析】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        17
+      ],
+      "expected": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn’t 不必，不需要；B mustn't 千万别，一定不要，表示禁止的意思；C. can’t 不能；D. shouldn’t 不应该。结合句意，可知是不能听到演讲者讲话，故选C。",
+      "actual": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。",
+      "raw_output": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        150,
+        609,
+        1526,
+        788
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "试题分析：句意：请不要发出那么多的声响。我不能很好的听到演讲者讲话。A. needn't 不必，不需要；B. mustn't 千万别，一定不要，表示禁止的意思；C. can't 不能；D. shouldn't 不应该。结合句意，可知是不能听到演讲者讲话，故选 C。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        7
+      ],
+      "expected": "考点：考查情态动词辨析。",
+      "actual": "## 考点：考查情态动词辨析。",
+      "raw_output": "## 考点：考查情态动词辨析。\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        144,
+        829,
+        491,
+        867
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 考点：考查情态动词辨析。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        18,
+        19,
+        9
+      ],
+      "expected": "38. —Look at the stone bridge! Do you know ____it was built?--In the 1860s. It's quite old.A.when B.how C. where D. why",
+      "actual": "38. —Look at the stone bridge! Do you know ___ it was built? --In the 1860s. It's quite old. A. when B. how C. where D. why",
+      "raw_output": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        140,
+        963,
+        1180,
+        1136
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "38. —Look at the stone bridge! Do you know ___ it was built?\n\n--In the 1860s. It's quite old.\n\nA. when\n\nB. how\n\nC. where\n\nD. why\n",
+        "nonempty_lines": 6,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        20
+      ],
+      "expected": "【答案】A",
+      "actual": "## 【答案】A",
+      "raw_output": "## 【答案】A\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        154,
+        1161,
+        296,
+        1198
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【答案】A\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        11
+      ],
+      "expected": "【解析】",
+      "actual": "## 【解析】",
+      "raw_output": "## 【解析】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        155,
+        1225,
+        262,
+        1265
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【解析】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        21,
+        22
+      ],
+      "expected": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。 A. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间， 故选A。考点：考查连词。",
+      "actual": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。 A. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。 考点：考查连词。",
+      "raw_output": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        138,
+        1295,
+        1503,
+        1528
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "试题分析：句意：看那座石桥！你知道它是在什么时间被建造的吗？--在十九世纪六十年代。它相当古老了。\n\nA. when 什么时间，何时；B. how 怎么，如何；C. where 在哪里；D. why 为什么。根据回答的是时间，故选 A。\n\n考点：考查连词。\n",
+        "nonempty_lines": 3,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        12,
+        13
+      ],
+      "expected": "39. Don't hurry him. You will just have to be ____ and wait until he finishes the work.A. active B. careful C. patient D. famous",
+      "actual": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work. A. active B. careful C. patient D. famous",
+      "raw_output": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        140,
+        1626,
+        1225,
+        1731
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "39. Don't hurry him. You will just have to be ___ and wait until he finishes the work.\n\nA. active\n\nB. careful\n\nC. patient\n\nD. famous\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011"
+      ]
+    },
+    {
+      "block_id": "b0012",
+      "source_region_ids": [
+        "r0012"
+      ],
+      "annotation_ids": [
+        14,
+        23
+      ],
+      "expected": "【答案】Ｃ【解析】",
+      "actual": "## 【答案】C ## 【解析】",
+      "raw_output": "## 【答案】C\n\n## 【解析】\n",
+      "edit_distance": 8,
+      "raw_edit_distance": 8,
+      "bbox": [
+        151,
+        1757,
+        293,
+        1864
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【答案】C\n\n## 【解析】\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0012"
+      ]
+    },
+    {
+      "block_id": "b0013",
+      "source_region_ids": [
+        "r0013"
+      ],
+      "annotation_ids": [
+        24,
+        25
+      ],
+      "expected": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔 细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选C。考点：考查形容词辨析。",
+      "actual": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。 考点：考查形容词辨析。",
+      "raw_output": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        141,
+        1889,
+        1511,
+        2128
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "试题分析：句意：不要催他。你就是要有耐心等候，直到他完成这项工作。A. active 积极的；B. careful 仔细的，认真的；C. patient 有耐心的；D. famous 著名的，出名的。根据上文不要催，及后文的等候，可知是有耐心的，故选 C。\n\n考点：考查形容词辨析。\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0013"
+      ]
+    }
+  ],
+  "non_text_evidence": [],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

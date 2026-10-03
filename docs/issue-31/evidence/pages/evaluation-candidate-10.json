@@ -1,0 +1,5405 @@
+{
+  "key": "evaluation/candidate-10",
+  "input": {
+    "path": "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+    "sha256": "190bc1e05bb282d5df78d0621938af245147b68531119a934743cbfdc1895c1f"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/issue-23/annotated-evaluation-v2/images/jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/evaluation/candidate-10/job"
+    ],
+    "input_sha256": "190bc1e05bb282d5df78d0621938af245147b68531119a934743cbfdc1895c1f",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 55.55348154599778,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "5323eecff307591e6daf501d4b158038821d17828c51fdd3a8df50cad7bd7d56",
+      "job/assets/p0001-b0002.png": "46a726ed85ed54aad237108fff3b46699fc011533a3b4c3a4c582f0cd9ea7d45",
+      "job/assets/p0001-b0003.png": "0b98c0b0a163a7b262c30c759466137b5de64a797c57e994a594dba0e1299f7c",
+      "job/assets/p0001-b0004.png": "7dc30e5bdf4794ecc9ee6d77aee13c2636621eecce54abcc2ca645f0d0b3fbc4",
+      "job/assets/p0001-b0005.png": "e53faf52107a09c398aa19dec512233ac5ba043dcb31d98ce116322d24a21405",
+      "job/assets/p0001-b0006.png": "0ddf75d32114a255855e4e2f81326632e26abcb7065141504475722340bc7598",
+      "job/assets/p0001-b0007.png": "fe2fe0477f1f7deca3d20aa5c72f46519cfd883bb1d5c1fbb57fceeb0c1d92e6",
+      "job/assets/p0001-b0008.png": "d7076dd9faeab88ed67017a19d973144695c77b26e91f7aa0c63744ac5bb1312",
+      "job/assets/p0001-b0009.png": "1af024ef7735e055af681251baa0e5ee596cb9a6f044649c0d9cd09c0a1484c4",
+      "job/assets/p0001-b0010.png": "cb06faf5fecfe0d91a393c752d808e48811004f4389d9fc4834535bd866e66c2",
+      "job/assets/p0001-b0011.png": "19a3f2abf0b3f293802e4b931dff38362f8ae22e9b9c00e99a7d095339ff498a",
+      "job/assets/p0001-b0012.png": "fa3327cac92b581a722ead9b638f5f97d4fbacfee6f039c93dc8ff480a386913",
+      "job/assets/p0001-b0013.png": "3808d4d698453e28251af13b814c5e3640d2f28f0fb1df8d185e6bdb3b0aec70",
+      "job/assets/p0001-b0014.png": "f2fd58e6cf9987eb27bbc36b088146a041c563b850a062723827bd8071d922c0",
+      "job/assets/p0001-b0015.png": "147768304cb1e9bdf10421081226d6c095e04b07c2757a620917f58034fc7083",
+      "job/assets/p0001-b0016.png": "d67da7618817cde216729f9ef7b334106772d228acd61641366911df68b623d1",
+      "job/assets/p0001-b0017.png": "b8b9df80577b4e4ab89e82f2ebbebea09e6db976c948da253f3c5463d7617be8",
+      "job/assets/p0001-b0018.png": "c274b7bfcf5476d0834355152beafc7efa773d5982f3ae14c30369a91ff43adf",
+      "job/assets/p0001-fetch_name_0.f32": "0a166bf8731956ab93e9782697ed57d1c026a9fa6b51eb096d3660f464b762a8",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "a588787c8900fbd8fd6c81a0a10681fc9f2b73dd3776ffea0f5bacb90e8a4b2a",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "99f932c79b916a64216b1241f71580190bd209a23c40f1f67da4875a919affbf",
+      "job/assets/p0001-layout-overlay.png": "b9e912978fa629638ead449746ac53491f8276e58225df76bf9a3b0b1011d41d",
+      "job/assets/p0001-mask-c0.png": "876ffaf742fb7e9d60325791f7547becf32d40c6faba8ad98f8522d77ad04150",
+      "job/assets/p0001-mask-c1.png": "33e8e9d89d74f6ba5e2bba24fa0d2224dd280af40b0fe378eade4d5d0676247e",
+      "job/assets/p0001-mask-c10.png": "46f357edb20c941ed5c43c7aa43f4317a11ce831d09a92a1b4fd8230aae67837",
+      "job/assets/p0001-mask-c11.png": "b2dabf7d02d2e3884343738427add1530539ad3e5c2cfe5b3ed94493ed3e4d56",
+      "job/assets/p0001-mask-c12.png": "503d2af1a2a23421972f5b9f676a81c35cbe23d1b9f0eb43e94b04acf09a86f6",
+      "job/assets/p0001-mask-c13.png": "fdd4e16430cd391c793f985c35563d627f9b0f770d4b09963b8ee0456d698cb2",
+      "job/assets/p0001-mask-c14.png": "31b20e1baeb7cf5fca6127e7a0f0b466691ad41b1fc419e93bcba6d625072aa4",
+      "job/assets/p0001-mask-c15.png": "4c3f6f1141fe555002751966e99a6a5ad763ec2801129fa2c22732cd14cbe5de",
+      "job/assets/p0001-mask-c16.png": "e99d023d2b5e87b3705f893c432d81e1b3cbc73722bd9dad33d2332924c101de",
+      "job/assets/p0001-mask-c17.png": "33eaa934f9af33fcc0f92c2d00f57375e3c2c0dc6c2674bfc93ecd4c21dc26e1",
+      "job/assets/p0001-mask-c2.png": "ca1e44b9330da7c251bb65bab17696d57ba9f34b1b2edc21883dc7bfb3f4826b",
+      "job/assets/p0001-mask-c3.png": "f6630b1bebf51e9d39e82b4622126d794da0bd083768d79e19eb575445ff13e5",
+      "job/assets/p0001-mask-c4.png": "b46c26976f839e9a760dd655d30f292b33764d1a3297605adade121433812f36",
+      "job/assets/p0001-mask-c5.png": "46e13924b7757720bfa13ee9cef11a9ac0c35d4fd4f7b52f831aad6c588f55e4",
+      "job/assets/p0001-mask-c6.png": "ff8488a3b005731954b7bf87b82d36eb680ccc9075351e78e59041f4c985393c",
+      "job/assets/p0001-mask-c7.png": "c8e2cdafa3b3039c8abb64b3dfab769c693aca685d8ff9d2a0e29773e93a1435",
+      "job/assets/p0001-mask-c8.png": "6dfb2d9d2364fd1495a24f75f2059ea98da02a51141111ad03059255f74a59fb",
+      "job/assets/p0001-mask-c9.png": "f94459e796d320dfb37e79293ae89ff93ca2a96de14b4908034e0cb69bfa922f",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "562c6fad62dd95c6f487a2bc65275ef8a7c29294f56527249942fa227bd6efa7",
+      "job/document.md": "d5d15ef834ce8306f6fa480098be948a0a46ef675e23610b4bc9185c0f87c3de",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "aeb263b88de0194362c8c057d4d618b562910178e05220b5689bac9de6264d2b",
+      "job/job-status.json": "6f80f47f068a3d54e45dc6b3047f541b84d8e417669d9184fd77ced68326d5f7",
+      "job/run-manifest.json": "c2920c6e1deb348711ac33fc26a218fb3e07e557827ed91894b97b167d21d3f5",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "013360f3cd8ed1d544bb8417c1df353ee2010143230088782cdaa361fe6a7c7b",
+      "time.txt": "4d92c8b2cf096c41b1d482dfe5dc446ed1872d78e9cebf25cf7da2154621d12f"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "text_block",
+        "poly": [
+          537.835205078125,
+          182.87208557128906,
+          1289.219970703125,
+          182.87208557128906,
+          1289.219970703125,
+          488.1962585449219,
+          537.835205078125,
+          488.1962585449219
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 10,
+        "text": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          204.46333385908315,
+          530.9536027459378,
+          322.0103869216447,
+          530.9536027459378,
+          322.0103869216447,
+          570.9019472929327,
+          204.46333385908315,
+          570.9019472929327
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 16,
+        "text": "技能训练",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          674.7479248046875,
+          600.1179809570312,
+          752.3592529296875,
+          600.1179809570312,
+          752.3592529296875,
+          641.0017700195312,
+          674.7479248046875,
+          641.0017700195312
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 0,
+        "text": "比较",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          531.6842754638591,
+          703.6046691088824,
+          893.240879237444,
+          703.6046691088824,
+          893.240879237444,
+          956.1990087315239,
+          531.6842754638591,
+          956.1990087315239
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 9,
+        "text": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          173.22319055819875,
+          691.8416974107691,
+          505.681916973293,
+          691.8416974107691,
+          505.681916973293,
+          1024.9195275994484,
+          173.22319055819875,
+          1024.9195275994484
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 5,
+        "attribute": {}
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          253.90084838867188,
+          1046.35107421875,
+          424.2879943847656,
+          1046.35107421875,
+          424.2879943847656,
+          1117.1453857421875,
+          253.90084838867188,
+          1117.1453857421875
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 17,
+        "text": "白网纹草 (双子叶植物)",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          932.6316845231137,
+          694.5555784935799,
+          1255.1675696905777,
+          694.5555784935799,
+          1255.1675696905777,
+          1067.3306981108049,
+          932.6316845231137,
+          1067.3306981108049
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 12,
+        "attribute": {}
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          1007.9392308787543,
+          1045.965697412773,
+          1187.3026261042185,
+          1045.965697412773,
+          1187.3026261042185,
+          1119.4935488716587,
+          1007.9392308787543,
+          1119.4935488716587
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 1,
+        "text": "银线鸟巢凤梨 (单子叶植物)",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          728.66259620321,
+          1252.2419102038664,
+          794.28759620321,
+          1252.2419102038664,
+          794.28759620321,
+          1291.705592636299,
+          728.66259620321,
+          1291.705592636299
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 18,
+        "text": "练习",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          144.72113037109375,
+          1331.6688232421875,
+          1061.730224609375,
+          1331.6688232421875,
+          1061.730224609375,
+          1373.4390869140625,
+          144.72113037109375,
+          1373.4390869140625
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 7,
+        "text": "1. 判断下列说法是否正确。正确的画 $“\\surd” $错误的画 $“\\times” $",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          139.54809359099963,
+          1379.3976680383564,
+          1283.089949581628,
+          1379.3976680383564,
+          1283.089949581628,
+          1533.4041349016188,
+          139.54809359099963,
+          1533.4041349016188
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 20,
+        "text": "\\t(1) 松的球果不是果实。 (    )\n\\t(2) 裸子植物和被子植物的种子中都有胚。 (    )\n\\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。 (    )",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              186.47363281249997,
+              1387.5429687499998,
+              1272.7240581452656,
+              1387.5429687499998,
+              1272.7240581452656,
+              1421.7042236328123,
+              186.47363281249997,
+              1421.7042236328123
+            ],
+            "ignore": false,
+            "order": 12,
+            "anno_id": 19,
+            "text": "\\t(1) 松的球果不是果实。 (    )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  186.66666666666666,
+                  1388,
+                  540,
+                  1388,
+                  540,
+                  1421.3333333333333,
+                  186.66666666666666,
+                  1421.3333333333333
+                ],
+                "text": "\\t(1) 松的球果不是果实。"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1213.409405216239,
+                  1385.7560712712766,
+                  1272.0302688324402,
+                  1385.7560712712766,
+                  1272.0302688324402,
+                  1421.644210274504,
+                  1213.409405216239,
+                  1421.644210274504
+                ],
+                "text": "(    )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              187.64752197265625,
+              1435.22705078125,
+              1279.253662109375,
+              1435.22705078125,
+              1279.253662109375,
+              1478.366943359375,
+              187.64752197265625,
+              1478.366943359375
+            ],
+            "ignore": false,
+            "order": 13,
+            "anno_id": 3,
+            "text": "\\t(2) 裸子植物和被子植物的种子中都有胚。 (    )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  188,
+                  1440,
+                  802.6666666666666,
+                  1440,
+                  802.6666666666666,
+                  1472,
+                  188,
+                  1472
+                ],
+                "text": "\\t(2) 裸子植物和被子植物的种子中都有胚。"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1214.1187055517075,
+                  1442.0383506131125,
+                  1270.2745749327669,
+                  1442.0383506131125,
+                  1270.2745749327669,
+                  1475.1788286633507,
+                  1214.1187055517075,
+                  1475.1788286633507
+                ],
+                "text": "(    )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              173.39012145996094,
+              1486.6986083984375,
+              1272.421630859375,
+              1486.6986083984375,
+              1272.421630859375,
+              1529.5263671875,
+              173.39012145996094,
+              1529.5263671875
+            ],
+            "ignore": false,
+            "order": 14,
+            "anno_id": 8,
+            "text": "\\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。 (    )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  188,
+                  1493.3333333333333,
+                  1040,
+                  1493.3333333333333,
+                  1040,
+                  1526.6666666666665,
+                  188,
+                  1526.6666666666665
+                ],
+                "text": "\\t(3)裸子植物的种子比被子植物的种子能得到更好的保护。"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1213.2408586018705,
+                  1491.7490676884702,
+                  1270.7556350612774,
+                  1491.7490676884702,
+                  1270.7556350612774,
+                  1524.6788624707476,
+                  1213.2408586018705,
+                  1524.6788624707476
+                ],
+                "text": "(    )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          143.4394989013672,
+          1542.0078125,
+          842.8079833984375,
+          1542.0078125,
+          842.8079833984375,
+          1579.8057861328125,
+          143.4394989013672,
+          1579.8057861328125
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 11,
+        "text": "2. 将种子的结构与其相应的功能用线连接起来。",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          242.54065119024338,
+          1590.878985278303,
+          918.1353085486971,
+          1590.878985278303,
+          918.1353085486971,
+          1735.9278850338037,
+          242.54065119024338,
+          1735.9278850338037
+        ],
+        "ignore": false,
+        "order": 16,
+        "anno_id": 22,
+        "text": "种皮储藏养料\n胚保护胚\n胚乳能发育成新植株",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              246.0102440499592,
+              1593.3295717592064,
+              793.3264298700683,
+              1593.3295717592064,
+              793.3264298700683,
+              1632.0446885284498,
+              246.0102440499592,
+              1632.0446885284498
+            ],
+            "ignore": false,
+            "order": 17,
+            "anno_id": 6,
+            "text": "种皮储藏养料",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  254.66666666666666,
+                  1594.6666666666665,
+                  324,
+                  1594.6666666666665,
+                  324,
+                  1632,
+                  254.66666666666666,
+                  1632
+                ],
+                "text": "种皮"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  653.3333333333333,
+                  1596,
+                  788,
+                  1596,
+                  788,
+                  1629.3333333333333,
+                  653.3333333333333,
+                  1629.3333333333333
+                ],
+                "text": "储藏养料"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              286.6115558357202,
+              1648.6418214641214,
+              760.7148057048236,
+              1648.6418214641214,
+              760.7148057048236,
+              1680.732286011799,
+              286.6115558357202,
+              1680.732286011799
+            ],
+            "ignore": false,
+            "order": 18,
+            "anno_id": 21,
+            "text": "胚保护胚",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  290.66666666666663,
+                  1648,
+                  325.3333333333333,
+                  1648,
+                  325.3333333333333,
+                  1682.6666666666665,
+                  290.66666666666663,
+                  1682.6666666666665
+                ],
+                "text": "胚"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  652,
+                  1648,
+                  754.6666666666666,
+                  1648,
+                  754.6666666666666,
+                  1681.3333333333333,
+                  652,
+                  1681.3333333333333
+                ],
+                "text": "保护胚"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              254.09321842740724,
+              1699.9865647404056,
+              889.6016426815595,
+              1699.9865647404056,
+              889.6016426815595,
+              1733.7885207306254,
+              254.09321842740724,
+              1733.7885207306254
+            ],
+            "ignore": false,
+            "order": 19,
+            "anno_id": 23,
+            "text": "胚乳能发育成新植株",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  256.42858149657513,
+                  1701.3333333333335,
+                  325.3333333333335,
+                  1701.3333333333335,
+                  325.3333333333335,
+                  1733.1190425850457,
+                  256.42858149657513,
+                  1733.1190425850457
+                ],
+                "text": "胚乳"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  656.0000000000001,
+                  1702.6666666666665,
+                  889.3519094640257,
+                  1702.6666666666665,
+                  889.3519094640257,
+                  1733.3426213986793,
+                  656.0000000000001,
+                  1733.3426213986793
+                ],
+                "text": "能发育成新植株"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          145.8543701171875,
+          1751.2899169921875,
+          1183.08642578125,
+          1751.2899169921875,
+          1183.08642578125,
+          1791.0689697265625,
+          145.8543701171875,
+          1791.0689697265625
+        ],
+        "ignore": false,
+        "order": 20,
+        "anno_id": 2,
+        "text": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？",
+        "attribute": {}
+      },
+      {
+        "category_type": "abandon",
+        "poly": [
+          115.83449318114005,
+          514.6304426640465,
+          201.24608597217755,
+          514.6304426640465,
+          201.24608597217755,
+          595.4390154843096,
+          115.83449318114005,
+          595.4390154843096
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 13,
+        "attribute": {}
+      },
+      {
+        "category_type": "abandon",
+        "poly": [
+          639.5367516086154,
+          1226.967416960623,
+          723.3416502572641,
+          1226.967416960623,
+          723.3416502572641,
+          1309.8854912849474,
+          639.5367516086154,
+          1309.8854912849474
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 15,
+        "attribute": {}
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          143.8163484699266,
+          1926.0346916127262,
+          190.54850564715193,
+          1926.0346916127262,
+          190.54850564715193,
+          1962.2415881644504,
+          143.8163484699266,
+          1962.2415881644504
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 4,
+        "text": "86",
+        "attribute": {}
+      },
+      {
+        "category_type": "footer",
+        "poly": [
+          208.71975501212677,
+          1926.2120361328125,
+          568.5632934570312,
+          1926.2120361328125,
+          568.5632934570312,
+          1961.5273235844152,
+          208.71975501212677,
+          1961.5273235844152
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 14,
+        "text": "第三单元生物圈中的绿色植物",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": [
+        {
+          "source_anno_id": 5,
+          "target_anno_id": 17,
+          "relation_type": "parent_son"
+        },
+        {
+          "source_anno_id": 12,
+          "target_anno_id": 1,
+          "relation_type": "parent_son"
+        }
+      ]
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "simplified_chinese",
+        "layout": "other_layout",
+        "special_issue": [
+          "fuzzy_scan"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 1875,
+      "height": 2100,
+      "width": 1500,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_601.jpg",
+      "sample_id": 543
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1500,
+        2100
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0002",
+        "b0004",
+        "b0008",
+        "b0005",
+        "b0007",
+        "b0001",
+        "b0003",
+        "b0006",
+        "b0009",
+        "b0010",
+        "b0011",
+        "b0012",
+        "b0013",
+        "b0014",
+        "b0015",
+        "b0016",
+        "b0017",
+        "b0018"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_column_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0002",
+          "b0004",
+          "b0008",
+          "b0005",
+          "b0007",
+          "b0001",
+          "b0003",
+          "b0006",
+          "b0009",
+          "b0010",
+          "b0011",
+          "b0012",
+          "b0013",
+          "b0014",
+          "b0015",
+          "b0016",
+          "b0017",
+          "b0018"
+        ],
+        "captions": [
+          {
+            "caption_block_id": "b0008",
+            "image_block_id": "b0004"
+          }
+        ],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0002",
+          "r0008",
+          "r0007",
+          "r0001",
+          "r0003",
+          "r0006",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013",
+          "r0014",
+          "r0015",
+          "r0016",
+          "r0017",
+          "r0018"
+        ],
+        "region_order": [
+          "r0002",
+          "r0004",
+          "r0008",
+          "r0005",
+          "r0007",
+          "r0001",
+          "r0003",
+          "r0006",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012",
+          "r0013",
+          "r0014",
+          "r0015",
+          "r0016",
+          "r0017",
+          "r0018"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            202,
+            534,
+            329,
+            572
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.764647245,
+          "candidate_rank": 43,
+          "original_class_id": 17,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 36,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            202.035721,
+            534.197205,
+            328.671295,
+            571.674683
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            174,
+            685,
+            496,
+            1016
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.924577832,
+          "candidate_rank": 51,
+          "original_class_id": 14,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 955,
+          "model_label": "image",
+          "original_bbox": [
+            174.97908,
+            685.729126,
+            495.180054,
+            1015.154358
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "vision_footnote",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            247,
+            1045,
+            426,
+            1121
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.740491211,
+          "candidate_rank": 61,
+          "original_class_id": 24,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 133,
+          "model_label": "vision_footnote",
+          "original_bbox": [
+            247.227936,
+            1045.108032,
+            425.249451,
+            1120.233521
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            929,
+            692,
+            1255,
+            1055
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.907939494,
+          "candidate_rank": 128,
+          "original_class_id": 14,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 1037,
+          "model_label": "image",
+          "original_bbox": [
+            929.45697,
+            692.010071,
+            1254.466187,
+            1054.809814
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "vision_footnote",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1012,
+            1044,
+            1188,
+            1120
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.770435929,
+          "candidate_rank": 164,
+          "original_class_id": 24,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 127,
+          "model_label": "vision_footnote",
+          "original_bbox": [
+            1012.354858,
+            1044.919556,
+            1187.026611,
+            1119.637207
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            532,
+            181,
+            1292,
+            491
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.950118124,
+          "candidate_rank": 20,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 2177,
+          "model_label": "text",
+          "original_bbox": [
+            532.188538,
+            181.398331,
+            1291.896729,
+            490.328491
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            674,
+            598,
+            754,
+            644
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.607969999,
+          "candidate_rank": 71,
+          "original_class_id": 17,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 28,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            674.507385,
+            598.664978,
+            753.55896,
+            643.311768
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "vision_footnote",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            526,
+            701,
+            897,
+            961
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.702451348,
+          "candidate_rank": 95,
+          "original_class_id": 24,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 862,
+          "model_label": "vision_footnote",
+          "original_bbox": [
+            526.344666,
+            701.708374,
+            896.763855,
+            960.926636
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            721,
+            1252,
+            799,
+            1291
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.779277384,
+          "candidate_rank": 169,
+          "original_class_id": 17,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 32,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            721.827271,
+            1252.425415,
+            798.008179,
+            1290.671265
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            141,
+            1331,
+            1078,
+            1375
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.79396522,
+          "candidate_rank": 174,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 356,
+          "model_label": "text",
+          "original_bbox": [
+            141.617767,
+            1331.85437,
+            1077.759888,
+            1374.333984
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            177,
+            1383,
+            1278,
+            1428
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.804904044,
+          "candidate_rank": 180,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 424,
+          "model_label": "text",
+          "original_bbox": [
+            177.358765,
+            1383.415039,
+            1277.759155,
+            1427.253662
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            179,
+            1435,
+            1278,
+            1479
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.831305146,
+          "candidate_rank": 193,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 428,
+          "model_label": "text",
+          "original_bbox": [
+            179.998764,
+            1435.414429,
+            1277.476318,
+            1478.774414
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            181,
+            1487,
+            1277,
+            1532
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.832142055,
+          "candidate_rank": 200,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 436,
+          "model_label": "text",
+          "original_bbox": [
+            181.242584,
+            1487.019897,
+            1276.883911,
+            1531.142822
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            139,
+            1540,
+            848,
+            1583
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.754447639,
+          "candidate_rank": 210,
+          "original_class_id": 22,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 268,
+          "model_label": "text",
+          "original_bbox": [
+            139.280853,
+            1540.775635,
+            847.150574,
+            1582.959473
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0015",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            245,
+            1591,
+            901,
+            1739
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.66264689,
+          "candidate_rank": 225,
+          "original_class_id": 22,
+          "candidate_id": 16,
+          "mask_row": 16,
+          "mask_nonzero": 905,
+          "model_label": "text",
+          "original_bbox": [
+            245.292465,
+            1591.650146,
+            900.391785,
+            1738.81958
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0016",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            139,
+            1749,
+            1183,
+            1792
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.792995274,
+          "candidate_rank": 263,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 396,
+          "model_label": "text",
+          "original_bbox": [
+            139.509293,
+            1749.257812,
+            1182.595703,
+            1791.911011
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "footer",
+          "id": "l0017",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            208,
+            1924,
+            568,
+            1961
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.861641228,
+          "candidate_rank": 288,
+          "original_class_id": 8,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 140,
+          "model_label": "footer",
+          "original_bbox": [
+            208.370697,
+            1924.823853,
+            567.394653,
+            1960.150635
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0018",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            145,
+            1928,
+            186,
+            1959
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.740687311,
+          "candidate_rank": 277,
+          "original_class_id": 16,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 12,
+          "model_label": "number",
+          "original_bbox": [
+            145.059296,
+            1928.138794,
+            185.900436,
+            1958.89856
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            202,
+            534,
+            329,
+            572
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            174,
+            685,
+            496,
+            1016
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            247,
+            1045,
+            426,
+            1121
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            929,
+            692,
+            1255,
+            1055
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            1012,
+            1044,
+            1188,
+            1120
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            532,
+            181,
+            1292,
+            491
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            674,
+            598,
+            754,
+            644
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            526,
+            701,
+            897,
+            961
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            721,
+            1252,
+            799,
+            1291
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            141,
+            1331,
+            1078,
+            1375
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            177,
+            1383,
+            1278,
+            1428
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            179,
+            1435,
+            1278,
+            1479
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            181,
+            1487,
+            1277,
+            1532
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014"
+          ],
+          "bbox": [
+            139,
+            1540,
+            848,
+            1583
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0015",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0015"
+          ],
+          "bbox": [
+            245,
+            1591,
+            901,
+            1739
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0016",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0016"
+          ],
+          "bbox": [
+            139,
+            1749,
+            1183,
+            1792
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0017",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0017"
+          ],
+          "bbox": [
+            208,
+            1924,
+            568,
+            1961
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0018",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0018"
+          ],
+          "bbox": [
+            145,
+            1928,
+            186,
+            1959
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": 1,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            202,
+            534,
+            329,
+            572
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 技能训练\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## 技能训练\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                202,
+                534,
+                329,
+                572
+              ],
+              "canvas_size": [
+                480,
+                160
+              ],
+              "content_size": [
+                480,
+                144
+              ],
+              "pad_offset": [
+                0,
+                8
+              ],
+              "scale": 3.779527559055118,
+              "rounding_error": [
+                0,
+                0.37795275590551114
+              ],
+              "canvas_to_page_affine": [
+                0.26458333333333334,
+                0,
+                202,
+                0,
+                0.2638888888888889,
+                531.8888888888889
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2322,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1990,
+                    "raw_output": "## 技能训练\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 技能训练\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      160
+                    ],
+                    "content_size": [
+                      480,
+                      144
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      8
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.37795275590551114
+                    ],
+                    "scale": 3.779527559055118,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1990,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 技能训练\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            174,
+            685,
+            496,
+            1016
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            247,
+            1045,
+            426,
+            1121
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 白网纹草\n\n(双子叶植物)\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "## 白网纹草\n\n(双子叶植物)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                247,
+                1045,
+                426,
+                1121
+              ],
+              "canvas_size": [
+                416,
+                192
+              ],
+              "content_size": [
+                416,
+                177
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 2.3240223463687153,
+              "rounding_error": [
+                -5.684341886080802e-14,
+                0.3743016759776481
+              ],
+              "canvas_to_page_affine": [
+                0.43028846153846156,
+                0,
+                247,
+                0,
+                0.4293785310734463,
+                1041.9943502824858
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2008,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1654,
+                    "raw_output": "## 白网纹草\n\n(双子叶植物)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 白网纹草\n\n(双子叶植物)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      416,
+                      192
+                    ],
+                    "content_size": [
+                      416,
+                      177
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      -5.684341886080802e-14,
+                      0.3743016759776481
+                    ],
+                    "scale": 2.3240223463687153,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1654,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 白网纹草\n\n(双子叶植物)\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            929,
+            692,
+            1255,
+            1055
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            1012,
+            1044,
+            1188,
+            1120
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                1012,
+                1044,
+                1188,
+                1120
+              ],
+              "canvas_size": [
+                416,
+                192
+              ],
+              "content_size": [
+                416,
+                180
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 2.3636363636363638,
+              "rounding_error": [
+                0,
+                0.36363636363634555
+              ],
+              "canvas_to_page_affine": [
+                0.4230769230769231,
+                0,
+                1012,
+                0,
+                0.4222222222222222,
+                1041.4666666666667
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1650,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1291,
+                    "raw_output": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      416,
+                      192
+                    ],
+                    "content_size": [
+                      416,
+                      180
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.36363636363634555
+                    ],
+                    "scale": 2.3636363636363638,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1291,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            532,
+            181,
+            1292,
+            491
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 240,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                532,
+                181,
+                1292,
+                491
+              ],
+              "canvas_size": [
+                768,
+                320
+              ],
+              "content_size": [
+                768,
+                313
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 1.0105263157894737,
+              "rounding_error": [
+                0,
+                -0.263157894736878
+              ],
+              "canvas_to_page_affine": [
+                0.9895833333333334,
+                0,
+                532,
+                0,
+                0.9904153354632588,
+                178.02875399361022
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4937,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3422,
+                    "raw_output": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      768,
+                      320
+                    ],
+                    "content_size": [
+                      768,
+                      313
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.263157894736878
+                    ],
+                    "scale": 1.0105263157894737,
+                    "token_count": 240
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3422,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            674,
+            598,
+            754,
+            644
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 比较\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "## 比较\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 77,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                674,
+                598,
+                754,
+                644
+              ],
+              "canvas_size": [
+                352,
+                224
+              ],
+              "content_size": [
+                352,
+                202
+              ],
+              "pad_offset": [
+                0,
+                11
+              ],
+              "scale": 4.4,
+              "rounding_error": [
+                0,
+                -0.4000000000000057
+              ],
+              "canvas_to_page_affine": [
+                0.22727272727272727,
+                0,
+                674,
+                0,
+                0.22772277227722773,
+                595.4950495049505
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1820,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1479,
+                    "raw_output": "## 比较\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 比较\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      352,
+                      224
+                    ],
+                    "content_size": [
+                      352,
+                      202
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      11
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4000000000000057
+                    ],
+                    "scale": 4.4,
+                    "token_count": 77
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1479,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 比较\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            526,
+            701,
+            897,
+            961
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 96,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                526,
+                701,
+                897,
+                961
+              ],
+              "canvas_size": [
+                384,
+                256
+              ],
+              "content_size": [
+                365,
+                256
+              ],
+              "pad_offset": [
+                9,
+                0
+              ],
+              "scale": 0.9846153846153847,
+              "rounding_error": [
+                -0.2923076923077019,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0164383561643835,
+                0,
+                516.8520547945205,
+                0,
+                1.015625,
+                701
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2460,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1996,
+                    "raw_output": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      384,
+                      256
+                    ],
+                    "content_size": [
+                      365,
+                      256
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      9,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.2923076923077019,
+                      0.0
+                    ],
+                    "scale": 0.9846153846153847,
+                    "token_count": 96
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1996,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            721,
+            1252,
+            799,
+            1291
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 练习\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "## 练习\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                721,
+                1252,
+                799,
+                1291
+              ],
+              "canvas_size": [
+                384,
+                192
+              ],
+              "content_size": [
+                384,
+                192
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 4.923076923076923,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.203125,
+                0,
+                721,
+                0,
+                0.203125,
+                1252
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1784,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1459,
+                    "raw_output": "## 练习\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 练习\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      384,
+                      192
+                    ],
+                    "content_size": [
+                      384,
+                      192
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 4.923076923076923,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1459,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 练习\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            141,
+            1331,
+            1078,
+            1375
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 74,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                141,
+                1331,
+                1078,
+                1375
+              ],
+              "canvas_size": [
+                1184,
+                64
+              ],
+              "content_size": [
+                1184,
+                56
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 1.2636072572038421,
+              "rounding_error": [
+                0,
+                0.4012806830309472
+              ],
+              "canvas_to_page_affine": [
+                0.7913851351351351,
+                0,
+                141,
+                0,
+                0.7857142857142857,
+                1327.857142857143
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1996,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1682,
+                    "raw_output": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      64
+                    ],
+                    "content_size": [
+                      1184,
+                      56
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4012806830309472
+                    ],
+                    "scale": 1.2636072572038421,
+                    "token_count": 74
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1682,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            177,
+            1383,
+            1278,
+            1428
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(1) 松的球果不是果实。\n\n( )\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "(1) 松的球果不是果实。\n\n( )\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                177,
+                1383,
+                1278,
+                1428
+              ],
+              "canvas_size": [
+                1280,
+                64
+              ],
+              "content_size": [
+                1280,
+                52
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 1.1625794732061763,
+              "rounding_error": [
+                0,
+                -0.31607629427793427
+              ],
+              "canvas_to_page_affine": [
+                0.86015625,
+                0,
+                177,
+                0,
+                0.8653846153846154,
+                1377.8076923076924
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2014,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1662,
+                    "raw_output": "(1) 松的球果不是果实。\n\n( )\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(1) 松的球果不是果实。\n\n( )\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1280,
+                      64
+                    ],
+                    "content_size": [
+                      1280,
+                      52
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.31607629427793427
+                    ],
+                    "scale": 1.1625794732061763,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1662,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(1) 松的球果不是果实。\n\n( )\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            179,
+            1435,
+            1278,
+            1479
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0012.png",
+              "source_bbox": [
+                179,
+                1435,
+                1278,
+                1479
+              ],
+              "canvas_size": [
+                1280,
+                64
+              ],
+              "content_size": [
+                1280,
+                51
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 1.1646951774340308,
+              "rounding_error": [
+                0,
+                -0.24658780709735595
+              ],
+              "canvas_to_page_affine": [
+                0.85859375,
+                0,
+                179,
+                0,
+                0.8627450980392157,
+                1429.8235294117646
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1677,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1328,
+                    "raw_output": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1280,
+                      64
+                    ],
+                    "content_size": [
+                      1280,
+                      51
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.24658780709735595
+                    ],
+                    "scale": 1.1646951774340308,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1328,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            181,
+            1487,
+            1277,
+            1532
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0013.png",
+              "source_bbox": [
+                181,
+                1487,
+                1277,
+                1532
+              ],
+              "canvas_size": [
+                1280,
+                64
+              ],
+              "content_size": [
+                1280,
+                53
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 1.167883211678832,
+              "rounding_error": [
+                0,
+                0.44525547445255853
+              ],
+              "canvas_to_page_affine": [
+                0.85625,
+                0,
+                181,
+                0,
+                0.8490566037735849,
+                1482.754716981132
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1712,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1355,
+                    "raw_output": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1280,
+                      64
+                    ],
+                    "content_size": [
+                      1280,
+                      53
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.44525547445255853
+                    ],
+                    "scale": 1.167883211678832,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1355,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0014",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0014"
+          ],
+          "bbox": [
+            139,
+            1540,
+            848,
+            1583
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0014",
+            "raw_output": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0014.png",
+              "source_bbox": [
+                139,
+                1540,
+                848,
+                1583
+              ],
+              "canvas_size": [
+                1056,
+                64
+              ],
+              "content_size": [
+                1055,
+                64
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 1.4883720930232558,
+              "rounding_error": [
+                -0.2558139534883139,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.6720379146919432,
+                0,
+                139,
+                0,
+                0.671875,
+                1540
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1903,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1609,
+                    "raw_output": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      64
+                    ],
+                    "content_size": [
+                      1055,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.2558139534883139,
+                      0.0
+                    ],
+                    "scale": 1.4883720930232558,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1609,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 10,
+          "id": "b0015",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0015"
+          ],
+          "bbox": [
+            245,
+            1591,
+            901,
+            1739
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0015",
+            "raw_output": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 100,
+              "source_crop": "assets/p0001-b0015.png",
+              "source_bbox": [
+                245,
+                1591,
+                901,
+                1739
+              ],
+              "canvas_size": [
+                640,
+                160
+              ],
+              "content_size": [
+                640,
+                144
+              ],
+              "pad_offset": [
+                0,
+                8
+              ],
+              "scale": 0.975609756097561,
+              "rounding_error": [
+                0,
+                -0.3902439024390105
+              ],
+              "canvas_to_page_affine": [
+                1.025,
+                0,
+                245,
+                0,
+                1.0277777777777777,
+                1582.7777777777778
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2289,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1848,
+                    "raw_output": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      640,
+                      160
+                    ],
+                    "content_size": [
+                      640,
+                      144
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      8
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.3902439024390105
+                    ],
+                    "scale": 0.975609756097561,
+                    "token_count": 100
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1848,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+              "nonempty_lines": 6,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 11,
+          "id": "b0016",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0016"
+          ],
+          "bbox": [
+            139,
+            1749,
+            1183,
+            1792
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0016",
+            "raw_output": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0016.png",
+              "source_bbox": [
+                139,
+                1749,
+                1183,
+                1792
+              ],
+              "canvas_size": [
+                1280,
+                64
+              ],
+              "content_size": [
+                1280,
+                53
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 1.2260536398467432,
+              "rounding_error": [
+                0,
+                0.2796934865900411
+              ],
+              "canvas_to_page_affine": [
+                0.815625,
+                0,
+                139,
+                0,
+                0.8113207547169812,
+                1744.9433962264152
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2129,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1774,
+                    "raw_output": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1280,
+                      64
+                    ],
+                    "content_size": [
+                      1280,
+                      53
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.2796934865900411
+                    ],
+                    "scale": 1.2260536398467432,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1774,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0017",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0017"
+          ],
+          "bbox": [
+            208,
+            1924,
+            568,
+            1961
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 第三单元 生物圈中的绿色植物\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0017",
+            "raw_output": "## 第三单元 生物圈中的绿色植物\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0017.png",
+              "source_bbox": [
+                208,
+                1924,
+                568,
+                1961
+              ],
+              "canvas_size": [
+                800,
+                96
+              ],
+              "content_size": [
+                800,
+                82
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 2.2222222222222223,
+              "rounding_error": [
+                0,
+                -0.22222222222222854
+              ],
+              "canvas_to_page_affine": [
+                0.45,
+                0,
+                208,
+                0,
+                0.45121951219512196,
+                1920.841463414634
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1925,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1597,
+                    "raw_output": "## 第三单元 生物圈中的绿色植物\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 第三单元 生物圈中的绿色植物\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      800,
+                      96
+                    ],
+                    "content_size": [
+                      800,
+                      82
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.22222222222222854
+                    ],
+                    "scale": 2.2222222222222223,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1597,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 第三单元 生物圈中的绿色植物\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0018",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0018"
+          ],
+          "bbox": [
+            145,
+            1928,
+            186,
+            1959
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 86\n",
+            "resource": "assets/p0001-b0018.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0018",
+            "raw_output": "## 86\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0018.png",
+              "source_bbox": [
+                145,
+                1928,
+                186,
+                1959
+              ],
+              "canvas_size": [
+                320,
+                256
+              ],
+              "content_size": [
+                320,
+                242
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 7.804878048780488,
+              "rounding_error": [
+                0,
+                0.04878048780489053
+              ],
+              "canvas_to_page_affine": [
+                0.128125,
+                0,
+                145,
+                0,
+                0.128099173553719,
+                1927.103305785124
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1861,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1506,
+                    "raw_output": "## 86\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 86\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      320,
+                      256
+                    ],
+                    "content_size": [
+                      320,
+                      242
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.04878048780489053
+                    ],
+                    "scale": 7.804878048780488,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1506,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 86\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0009",
+          "target_block_id": "b0010",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "caption_of",
+          "source_block_id": "b0008",
+          "target_block_id": "b0004",
+          "evidence": "pre_recognition_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 127,
+      "height": 38,
+      "bbox": [
+        202,
+        534,
+        329,
+        572
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 322,
+      "height": 331,
+      "bbox": [
+        174,
+        685,
+        496,
+        1016
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 179,
+      "height": 76,
+      "bbox": [
+        247,
+        1045,
+        426,
+        1121
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 326,
+      "height": 363,
+      "bbox": [
+        929,
+        692,
+        1255,
+        1055
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 176,
+      "height": 76,
+      "bbox": [
+        1012,
+        1044,
+        1188,
+        1120
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 760,
+      "height": 310,
+      "bbox": [
+        532,
+        181,
+        1292,
+        491
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 80,
+      "height": 46,
+      "bbox": [
+        674,
+        598,
+        754,
+        644
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 371,
+      "height": 260,
+      "bbox": [
+        526,
+        701,
+        897,
+        961
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 78,
+      "height": 39,
+      "bbox": [
+        721,
+        1252,
+        799,
+        1291
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 937,
+      "height": 44,
+      "bbox": [
+        141,
+        1331,
+        1078,
+        1375
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1101,
+      "height": 45,
+      "bbox": [
+        177,
+        1383,
+        1278,
+        1428
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 1099,
+      "height": 44,
+      "bbox": [
+        179,
+        1435,
+        1278,
+        1479
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 1096,
+      "height": 45,
+      "bbox": [
+        181,
+        1487,
+        1277,
+        1532
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0014",
+      "path": "assets/p0001-b0014.png",
+      "media_type": "image/png",
+      "source_block_id": "b0014",
+      "width": 709,
+      "height": 43,
+      "bbox": [
+        139,
+        1540,
+        848,
+        1583
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0015",
+      "path": "assets/p0001-b0015.png",
+      "media_type": "image/png",
+      "source_block_id": "b0015",
+      "width": 656,
+      "height": 148,
+      "bbox": [
+        245,
+        1591,
+        901,
+        1739
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0016",
+      "path": "assets/p0001-b0016.png",
+      "media_type": "image/png",
+      "source_block_id": "b0016",
+      "width": 1044,
+      "height": 43,
+      "bbox": [
+        139,
+        1749,
+        1183,
+        1792
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0017",
+      "path": "assets/p0001-b0017.png",
+      "media_type": "image/png",
+      "source_block_id": "b0017",
+      "width": 360,
+      "height": 37,
+      "bbox": [
+        208,
+        1924,
+        568,
+        1961
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0018",
+      "path": "assets/p0001-b0018.png",
+      "media_type": "image/png",
+      "source_block_id": "b0018",
+      "width": 41,
+      "height": 31,
+      "bbox": [
+        145,
+        1928,
+        186,
+        1959
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## 技能训练\n\n\n![插图](assets/p0001-b0004.png)\n\n白网纹草\n\n(双子叶植物)\n\n\n![插图](assets/p0001-b0005.png)\n\n银线乌巢凤梨\n\n(单子叶植物)\n\n\n被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n\n\n## 比较\n\n\n叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n\n\n## 练习\n\n\n1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n\n\n(1) 松的球果不是果实。\n\n( )\n\n\n(2) 裸子植物和被子植物的种子中都有胚。\n\n( )\n\n\n(3) 裸子植物的种子比被子植物的种子能得到更好的保护。\n\n( )\n\n\n2. 将种子的结构与其相应的功能用线连接起来。\n\n\n种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n\n\n3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n\n",
+  "quality": {
+    "text": {
+      "denominator": 14,
+      "matched": 13,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 3,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 3,
+      "rows": [
+        {
+          "annotation_id": 10,
+          "category": "text_block",
+          "order": 1,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 126,
+          "reference_range": [
+            0,
+            126
+          ],
+          "actual_range": [
+            0,
+            126
+          ],
+          "raw_range": [
+            0,
+            126
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 16,
+          "category": "title",
+          "order": 2,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 4,
+          "reference_range": [
+            0,
+            4
+          ],
+          "actual_range": [
+            0,
+            7
+          ],
+          "raw_range": [
+            0,
+            7
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 0,
+          "category": "title",
+          "order": 3,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 2,
+          "reference_range": [
+            0,
+            2
+          ],
+          "actual_range": [
+            0,
+            5
+          ],
+          "raw_range": [
+            0,
+            5
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 9,
+          "category": "text_block",
+          "order": 4,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 48,
+          "reference_range": [
+            0,
+            48
+          ],
+          "actual_range": [
+            0,
+            49
+          ],
+          "raw_range": [
+            0,
+            49
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 17,
+          "category": "figure_caption",
+          "order": 6,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 12,
+          "reference_range": [
+            0,
+            12
+          ],
+          "actual_range": [
+            0,
+            15
+          ],
+          "raw_range": [
+            0,
+            15
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 1,
+          "category": "figure_caption",
+          "order": 8,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 14,
+          "reference_range": [
+            0,
+            14
+          ],
+          "actual_range": [
+            0,
+            20
+          ],
+          "raw_range": [
+            0,
+            20
+          ],
+          "edit_distance": 7,
+          "raw_edit_distance": 7,
+          "exact": false
+        },
+        {
+          "annotation_id": 18,
+          "category": "title",
+          "order": 9,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 2,
+          "reference_range": [
+            0,
+            2
+          ],
+          "actual_range": [
+            0,
+            5
+          ],
+          "raw_range": [
+            0,
+            5
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "title",
+          "order": 10,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 45,
+          "reference_range": [
+            0,
+            45
+          ],
+          "actual_range": [
+            0,
+            30
+          ],
+          "raw_range": [
+            0,
+            30
+          ],
+          "edit_distance": 19,
+          "raw_edit_distance": 19,
+          "exact": false
+        },
+        {
+          "annotation_id": 11,
+          "category": "title",
+          "order": 15,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 13,
+          "reference_chars": 23,
+          "reference_range": [
+            0,
+            23
+          ],
+          "actual_range": [
+            0,
+            23
+          ],
+          "raw_range": [
+            0,
+            23
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 22,
+          "category": "text_block",
+          "order": 16,
+          "block_id": "b0015",
+          "status": "ok",
+          "reading_order_position": 14,
+          "reference_chars": 21,
+          "reference_range": [
+            0,
+            21
+          ],
+          "actual_range": [
+            0,
+            24
+          ],
+          "raw_range": [
+            0,
+            24
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "title",
+          "order": 20,
+          "block_id": "b0016",
+          "status": "ok",
+          "reading_order_position": 15,
+          "reference_chars": 33,
+          "reference_range": [
+            0,
+            33
+          ],
+          "actual_range": [
+            0,
+            33
+          ],
+          "raw_range": [
+            0,
+            33
+          ],
+          "edit_distance": 0,
+          "raw_edit_distance": 0,
+          "exact": true
+        },
+        {
+          "annotation_id": 4,
+          "category": "page_number",
+          "order": null,
+          "block_id": "b0018",
+          "status": "ok",
+          "reading_order_position": 17,
+          "reference_chars": 2,
+          "reference_range": [
+            0,
+            2
+          ],
+          "actual_range": [
+            0,
+            5
+          ],
+          "raw_range": [
+            0,
+            5
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 14,
+          "category": "footer",
+          "order": null,
+          "block_id": "b0017",
+          "status": "ok",
+          "reading_order_position": 16,
+          "reference_chars": 13,
+          "reference_range": [
+            0,
+            13
+          ],
+          "actual_range": [
+            0,
+            17
+          ],
+          "raw_range": [
+            0,
+            17
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 20,
+          "category": "text_block",
+          "order": 11,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 81,
+          "edit_distance": 81,
+          "raw_edit_distance": 81,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0011",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 17
+        },
+        {
+          "block_id": "b0012",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 25
+        },
+        {
+          "block_id": "b0013",
+          "reason": "unmatched",
+          "status": "ok",
+          "insertion_chars": 32
+        }
+      ],
+      "reference_chars": 426,
+      "edit_distance": 204,
+      "raw_edit_distance": 130
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 2,
+      "matched": 2,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 2,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 5,
+          "category": "figure",
+          "order": 5,
+          "block_id": "b0004",
+          "coverage": 0.9426,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 1
+        },
+        {
+          "annotation_id": 12,
+          "category": "figure",
+          "order": 7,
+          "block_id": "b0005",
+          "coverage": 0.9664,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 3
+        }
+      ],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 91,
+      "evaluable": 78,
+      "correct": 65,
+      "missing_pairs": 13,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 18
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "text:extra_output"
+    ],
+    "unresolved_annotation_ids": [
+      16,
+      0,
+      9,
+      17,
+      1,
+      18,
+      7,
+      22,
+      4,
+      14,
+      20
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 18,
+    "parent_reference_count": 18
+  },
+  "alignment": [
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        10
+      ],
+      "expected": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？",
+      "actual": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？",
+      "raw_output": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+      "edit_distance": 0,
+      "raw_edit_distance": 0,
+      "bbox": [
+        532,
+        181,
+        1292,
+        491
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "被子植物与我们的生活息息相关，我们日常生活中的衣、食、住、行，往往都离不开它们。例如，制造汽车和自行车轮胎的原料就来自橡胶树。许多中药材也来自被子植物，如人参、枸杞、杜仲、黄连、甘草等。关于被子植物与我们日常生活的关系，你还能举出哪些更为重要的例子呢？\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        16
+      ],
+      "expected": "技能训练",
+      "actual": "## 技能训练",
+      "raw_output": "## 技能训练\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        202,
+        534,
+        329,
+        572
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 技能训练\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "比较",
+      "actual": "## 比较",
+      "raw_output": "## 比较\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        674,
+        598,
+        754,
+        644
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 比较\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        9
+      ],
+      "expected": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别",
+      "actual": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。",
+      "raw_output": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        526,
+        701,
+        897,
+        961
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "叶片上粗细不等的脉络叫叶脉。请仔细观察左右两图中的植物，比较它们的叶脉，说说这两者之间有什么区别。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        17
+      ],
+      "expected": "白网纹草 (双子叶植物)",
+      "actual": "## 白网纹草 (双子叶植物)",
+      "raw_output": "## 白网纹草\n\n(双子叶植物)\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        247,
+        1045,
+        426,
+        1121
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 白网纹草\n\n(双子叶植物)\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        1
+      ],
+      "expected": "银线鸟巢凤梨 (单子叶植物)",
+      "actual": "## 银线乌巢凤梨 ## (单子叶植物)",
+      "raw_output": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+      "edit_distance": 7,
+      "raw_edit_distance": 7,
+      "bbox": [
+        1012,
+        1044,
+        1188,
+        1120
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 银线乌巢凤梨\n\n## (单子叶植物)\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        18
+      ],
+      "expected": "练习",
+      "actual": "## 练习",
+      "raw_output": "## 练习\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        721,
+        1252,
+        799,
+        1291
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 练习\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        7
+      ],
+      "expected": "1. 判断下列说法是否正确。正确的画 $“\\surd” $错误的画 $“\\times” $",
+      "actual": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。",
+      "raw_output": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+      "edit_distance": 19,
+      "raw_edit_distance": 19,
+      "bbox": [
+        141,
+        1331,
+        1078,
+        1375
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "1. 判断下列说法是否正确。正确的画“√”，错误的画“×”。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0014",
+      "source_region_ids": [
+        "r0014"
+      ],
+      "annotation_ids": [
+        11
+      ],
+      "expected": "2. 将种子的结构与其相应的功能用线连接起来。",
+      "actual": "2. 将种子的结构与其相应的功能用线连接起来。",
+      "raw_output": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+      "edit_distance": 0,
+      "raw_edit_distance": 0,
+      "bbox": [
+        139,
+        1540,
+        848,
+        1583
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "2. 将种子的结构与其相应的功能用线连接起来。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0014"
+      ]
+    },
+    {
+      "block_id": "b0015",
+      "source_region_ids": [
+        "r0015"
+      ],
+      "annotation_ids": [
+        22
+      ],
+      "expected": "种皮储藏养料 胚保护胚 胚乳能发育成新植株",
+      "actual": "种皮 储藏养料 胚 保护胚 胚乳 能发育成新植株",
+      "raw_output": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        245,
+        1591,
+        901,
+        1739
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "种皮\n\n储藏养料\n\n胚\n\n保护胚\n\n胚乳\n\n能发育成新植株\n",
+        "nonempty_lines": 6,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0015"
+      ]
+    },
+    {
+      "block_id": "b0016",
+      "source_region_ids": [
+        "r0016"
+      ],
+      "annotation_ids": [
+        2
+      ],
+      "expected": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？",
+      "actual": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？",
+      "raw_output": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+      "edit_distance": 0,
+      "raw_edit_distance": 0,
+      "bbox": [
+        139,
+        1749,
+        1183,
+        1792
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "3. 被子植物具有哪些特点，使它们成为地球上分布最广泛的植物类群？\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0016"
+      ]
+    },
+    {
+      "block_id": "b0018",
+      "source_region_ids": [
+        "r0018"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "86",
+      "actual": "## 86",
+      "raw_output": "## 86\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        145,
+        1928,
+        186,
+        1959
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 86\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0018"
+      ]
+    },
+    {
+      "block_id": "b0017",
+      "source_region_ids": [
+        "r0017"
+      ],
+      "annotation_ids": [
+        14
+      ],
+      "expected": "第三单元生物圈中的绿色植物",
+      "actual": "## 第三单元 生物圈中的绿色植物",
+      "raw_output": "## 第三单元 生物圈中的绿色植物\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        208,
+        1924,
+        568,
+        1961
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 第三单元 生物圈中的绿色植物\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0017"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "figure",
+      "annotation_id": 5,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          173.22319055819875,
+          691.8416974107691,
+          505.681916973293,
+          691.8416974107691,
+          505.681916973293,
+          1024.9195275994484,
+          173.22319055819875,
+          1024.9195275994484
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 5,
+        "attribute": {}
+      },
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0004.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 12,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          932.6316845231137,
+          694.5555784935799,
+          1255.1675696905777,
+          694.5555784935799,
+          1255.1675696905777,
+          1067.3306981108049,
+          932.6316845231137,
+          1067.3306981108049
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 12,
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0005.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

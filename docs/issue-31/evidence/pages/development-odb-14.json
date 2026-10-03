@@ -1,0 +1,4822 @@
+{
+  "key": "development/odb-14",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+    "sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-14/job"
+    ],
+    "input_sha256": "1a3c7076817bffc0834ceeb4979ea0bb5aa5fac4df191ac6fcc11a2399ca2c8a",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 61.014351783000166,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "964cc315e373340eb6635ff2011c0c4956fd257d74d30284969b5afc3c4affec",
+      "job/assets/p0001-b0002.png": "7e963d102cfa08ece7c29fd8fe275c12e5a3a0dd8aece08e160a62383f13ac9f",
+      "job/assets/p0001-b0003.png": "890b76792126fca4d1db353b282ef9879ff6b83c3a7d2c649a309770a1e1ce99",
+      "job/assets/p0001-b0004.png": "673760ffbaedd7031176a16239aa952dc987c6ae73212ef53a1acdba0a77c025",
+      "job/assets/p0001-b0005.png": "3192b2ce05761ff84dcacea4dd0750f21bf817a17422900e7388c32a57c64737",
+      "job/assets/p0001-b0006.png": "d87b217cc4e80f3f649bf52551de7bd90e9e35bf1ba69c6e5eba97bd51b07d92",
+      "job/assets/p0001-b0007.png": "be4fda099f633fb4603208162b0cd7e2e898737540a1f5562d0a49ff3ac5123c",
+      "job/assets/p0001-b0008.png": "e528036be2d416a9245f75167613fe26550effbba861e1017318e37fc06c92b8",
+      "job/assets/p0001-b0009.png": "13bc45147d17bf4f0ff390be0fb19288548ee49835c134b78aff51513423b2b6",
+      "job/assets/p0001-fetch_name_0.f32": "f3e616e8ec7f98d1a577200b9135ce77cd56b80653e2675628c09531a081082a",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "b597657357809c6ec711a4a32a20a0915df5472bb2cdbe91225e67534d399b41",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "2c755d19991df2e4d37720f11a3979bbeb9490c714dc613df6ef94460ea8e783",
+      "job/assets/p0001-layout-overlay.png": "26c25fcfb3906922f621e08e15e9b35a53370cf343ec94038d96dda1ec8a7e02",
+      "job/assets/p0001-mask-c0.png": "c82ee5fce8b36bbbb07f1357257e434716def37121dc1afd5aea52e5c1f764f6",
+      "job/assets/p0001-mask-c1.png": "334d3c12e3fda9a2d4815f455d0d144293df6a7ea27352c8739624393ab323bf",
+      "job/assets/p0001-mask-c10.png": "ca41c8a03caa8b5f1b03f56e8dc0fdc3ec6ffa952cbee1f7c83205401a33407d",
+      "job/assets/p0001-mask-c11.png": "ad2511d462a8b56269f0b8a9686c2bfd6584518065854b0e08e6db021094a72c",
+      "job/assets/p0001-mask-c12.png": "d4b259911ff05b202b006e55e1caf1de5f4adf4806115324db77ebf0070b09a4",
+      "job/assets/p0001-mask-c2.png": "93c33345a9b3f570dab3de297137b24a372fc8207f3d2a05056aaac20422e3ea",
+      "job/assets/p0001-mask-c3.png": "c034312b03029eeedfbec4e39f470592dd4d2280bc73f0cfeea1af96185ed027",
+      "job/assets/p0001-mask-c4.png": "31e14dbab86365762e5a6e7be0c9be52e7d43d3eb7ff4aeb6f364dc853be58ae",
+      "job/assets/p0001-mask-c5.png": "a08a64721011229d2065e7c508a911fcc57aa4295e1881ac3f8df26f85f709de",
+      "job/assets/p0001-mask-c6.png": "a72457eef68f30c4716f6c3886857f6e17460392a5d928bbf36385abfa11f725",
+      "job/assets/p0001-mask-c7.png": "902eea91b10eb477737d016c790e5133188657d62626487f29c02341dff3a180",
+      "job/assets/p0001-mask-c8.png": "f639510e62fedce8910d1fddff1cbab74b3ff89863af15de865ead65c3882cf5",
+      "job/assets/p0001-mask-c9.png": "246ae33456b7443cb2a94ed758f3fca47a717063fdd340ade3f56fd418a6d301",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "c01ffab0bf67d9e3edaa8feec476a8b498a988507f0fac286239f2cf2e280bad",
+      "job/document.md": "88d5836efddf8b1c4bff7871d24788f3c101bfc637cbc6573f48544cba7c3477",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "223f400a8c0a3e4aed63ae32f1b1c119063001586764972c1e04cc8faf0714f6",
+      "job/job-status.json": "f56841a54fdcd3b17832b2666f37eafe153d0488e6308f4987859e5e128ecea1",
+      "job/run-manifest.json": "35d42c5cc68766949db150efd2fccdcae5d11eda676fc12be21adf3499fbcd9c",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "ff4549be239b506bc05ba09bb8defa86b6a632063a648bc88f8114dde8561ab6",
+      "time.txt": "2fa0efc50bfb5ae0857b062606c98a6805b5341d5e57802791bce173c0deec52"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "text_block",
+        "poly": [
+          43.00030303684576,
+          91.59793208900771,
+          941.030326167214,
+          91.59793208900771,
+          941.030326167214,
+          331.07856640164823,
+          43.00030303684576,
+          331.07856640164823
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 18,
+        "text": "【例21】（2005-河池)下列例子中属于利用内能来做功的是（    ）\nA.  火箭点火发射\nB.  电热水器给水加热\nC.  用高炉熔化铁块\nD.  用热水袋取暖",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              44.92260074017982,
+              96.35260009765625,
+              935.2996215820314,
+              96.35260009765625,
+              935.2996215820314,
+              145.55433119625397,
+              44.92260074017982,
+              145.55433119625397
+            ],
+            "ignore": false,
+            "order": 2,
+            "anno_id": 1,
+            "text": "【例21】（2005-河池)下列例子中属于利用内能来做功的是（    ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  46.95529080404031,
+                  101.0033948269363,
+                  936.096208045791,
+                  101.0033948269363,
+                  936.096208045791,
+                  139.09281321885533,
+                  46.95529080404031,
+                  139.09281321885533
+                ],
+                "text": "【例21】（2005-河池)下列例子中属于利用内能来做功的是（    ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              152.19949421904056,
+              149.87531003377762,
+              414.00028083582123,
+              149.87531003377762,
+              414.00028083582123,
+              181.70280050804138,
+              152.19949421904056,
+              181.70280050804138
+            ],
+            "ignore": false,
+            "order": 3,
+            "anno_id": 3,
+            "text": "A.  火箭点火发射",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  153.71816551649812,
+                  152.1924160915827,
+                  413.4708557481479,
+                  152.1924160915827,
+                  413.4708557481479,
+                  184.94850115016857,
+                  153.71816551649812,
+                  184.94850115016857
+                ],
+                "text": "A.  火箭点火发射"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              151.18616771758056,
+              198.19687588669535,
+              473.89056856440135,
+              198.19687588669535,
+              473.89056856440135,
+              233.0149822938523,
+              151.18616771758056,
+              233.0149822938523
+            ],
+            "ignore": false,
+            "order": 4,
+            "anno_id": 19,
+            "text": "B.  电热水器给水加热",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  155.38143735622882,
+                  198.24052011447827,
+                  475.5189597710435,
+                  198.24052011447827,
+                  475.5189597710435,
+                  229.75947988552196,
+                  155.38143735622882,
+                  229.75947988552196
+                ],
+                "text": "B.  电热水器给水加热"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              156.2815003625303,
+              243.205647583752,
+              441.62012847971926,
+              243.205647583752,
+              441.62012847971926,
+              283.1190866358588,
+              156.2815003625303,
+              283.1190866358588
+            ],
+            "ignore": false,
+            "order": 5,
+            "anno_id": 17,
+            "text": "C.  用高炉熔化铁块",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  156.71477068956207,
+                  246.1443120686871,
+                  444.3299385063972,
+                  246.1443120686871,
+                  444.3299385063972,
+                  279.09281321885555,
+                  156.71477068956207,
+                  279.09281321885555
+                ],
+                "text": "C.  用高炉熔化铁块"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              155.43227825503865,
+              289.91286349579184,
+              412.7465768250037,
+              289.91286349579184,
+              412.7465768250037,
+              327.2786362254238,
+              155.43227825503865,
+              327.2786362254238
+            ],
+            "ignore": false,
+            "order": 6,
+            "anno_id": 16,
+            "text": "D.  用热水袋取暖",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  153.5257494249157,
+                  293.52574942491606,
+                  414.0894183919189,
+                  293.52574942491606,
+                  414.0894183919189,
+                  325.75947988552207,
+                  153.5257494249157,
+                  325.75947988552207
+                ],
+                "text": "D.  用热水袋取暖"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          36.58674313737437,
+          426.4194628476712,
+          710.6652831799337,
+          426.4194628476712,
+          710.6652831799337,
+          668.7646937037119,
+          36.58674313737437,
+          668.7646937037119
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 27,
+        "text": "【例22】下列属于内能转化为机械能的是（    ）\nA.  两手相互摩擦能发热\nB.  水沸腾时蒸汽冲开壶盖\nC.  锯木头锯子发烫\nD.  压缩空气引火",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              43.39064025878906,
+              436.3436279296875,
+              702.4293823242188,
+              436.3436279296875,
+              702.4293823242188,
+              479.14678955078125,
+              43.39064025878906,
+              479.14678955078125
+            ],
+            "ignore": false,
+            "order": 8,
+            "anno_id": 9,
+            "text": "【例22】下列属于内能转化为机械能的是（    ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  47.89623018281272,
+                  440.54560187994844,
+                  698.7593579799418,
+                  440.54560187994844,
+                  698.7593579799418,
+                  476.78773145338516,
+                  47.89623018281272,
+                  476.78773145338516
+                ],
+                "text": "【例22】下列属于内能转化为机械能的是（    ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              137.37239074707023,
+              487.00051879882835,
+              541.8350830078124,
+              487.00051879882835,
+              541.8350830078124,
+              519.5474499374445,
+              137.37239074707023,
+              519.5474499374445
+            ],
+            "ignore": false,
+            "order": 9,
+            "anno_id": 4,
+            "text": "A.  两手相互摩擦能发热",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  145.52796166142335,
+                  489.1289383290437,
+                  506.8710616709564,
+                  489.1289383290437,
+                  506.8710616709564,
+                  520.6034183366702,
+                  145.52796166142335,
+                  520.6034183366702
+                ],
+                "text": "A.  两手相互摩擦能发热"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              146.60969661781874,
+              536.5994210745422,
+              539.5576591419717,
+              536.5994210745422,
+              539.5576591419717,
+              567.896161452572,
+              146.60969661781874,
+              567.896161452572
+            ],
+            "ignore": false,
+            "order": 10,
+            "anno_id": 22,
+            "text": "B.  水沸腾时蒸汽冲开壶盖",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  145.33333333333317,
+                  535.5780385643419,
+                  539.2996088201539,
+                  535.5780385643419,
+                  539.2996088201539,
+                  567.6498044100772,
+                  145.33333333333317,
+                  567.6498044100772
+                ],
+                "text": "B.  水沸腾时蒸汽冲开壶盖"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              145.21873037879521,
+              582.5013069623194,
+              442.88550552983503,
+              582.5013069623194,
+              442.88550552983503,
+              620.0573954159553,
+              145.21873037879521,
+              620.0573954159553
+            ],
+            "ignore": false,
+            "order": 11,
+            "anno_id": 21,
+            "text": "C.  锯木头锯子发烫",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  147.4029407693801,
+                  583.6139214872096,
+                  443.8607851279061,
+                  583.6139214872096,
+                  443.8607851279061,
+                  615.6498044100773,
+                  147.4029407693801,
+                  615.6498044100773
+                ],
+                "text": "C.  锯木头锯子发烫"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              143.13228102026,
+              629.0986759696083,
+              412.2842482713169,
+              629.0986759696083,
+              412.2842482713169,
+              665.2637981842206,
+              143.13228102026,
+              665.2637981842206
+            ],
+            "ignore": false,
+            "order": 12,
+            "anno_id": 20,
+            "text": "D.  压缩空气引火",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  146.66666666666657,
+                  632.4631338304246,
+                  410.7275976802418,
+                  632.4631338304246,
+                  410.7275976802418,
+                  661.1602660038789,
+                  146.66666666666657,
+                  661.1602660038789
+                ],
+                "text": "D.  压缩空气引火"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1198.011805381406,
+          92.06164308485211,
+          2207.1237595264984,
+          92.06164308485211,
+          2207.1237595264984,
+          332.32639407177857,
+          1198.011805381406,
+          332.32639407177857
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 26,
+        "text": "【例23】（2012-南京）关于温度、内能和热量，下列说法正确的是（    ）\nA.  物体内能增大，一定从外界吸收热量\nB.  汽油机在做功冲程中把机械能转化为内能\nC.  物体内能减少时，温度可能不变\nD.  锯条锯木板时，锯条的内能增加，木板的内能减少",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              1204.883963839944,
+              95.87826538085938,
+              2196.118408203125,
+              95.87826538085938,
+              2196.118408203125,
+              140.0165311999691,
+              1204.883963839944,
+              140.0165311999691
+            ],
+            "ignore": false,
+            "order": 14,
+            "anno_id": 15,
+            "text": "【例23】（2012-南京）关于温度、内能和热量，下列说法正确的是（    ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1205.2595835875543,
+                  103.92625025422126,
+                  2192.024583248592,
+                  103.92625025422126,
+                  2192.024583248592,
+                  138.74041641244526,
+                  1205.2595835875543,
+                  138.74041641244526
+                ],
+                "text": "【例23】（2012-南京）关于温度、内能和热量，下列说法正确的是（    ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1305.5267956318987,
+              149.44684737779244,
+              2108.55712890625,
+              149.44684737779244,
+              2108.55712890625,
+              187.37317754551316,
+              1305.5267956318987,
+              187.37317754551316
+            ],
+            "ignore": false,
+            "order": 15,
+            "anno_id": 10,
+            "text": "A.  物体内能增大，一定从外界吸收热量",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1311.580492616834,
+                  151.48162890343383,
+                  1896.8390147663313,
+                  151.48162890343383,
+                  1896.8390147663313,
+                  183.90113628659935,
+                  1311.580492616834,
+                  183.90113628659935
+                ],
+                "text": "A.  物体内能增大，一定从外界吸收热量"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1310.4026702810672,
+              196.02806802917542,
+              1961.7328445930366,
+              196.02806802917542,
+              1961.7328445930366,
+              237.00296759270668,
+              1310.4026702810672,
+              237.00296759270668
+            ],
+            "ignore": false,
+            "order": 16,
+            "anno_id": 25,
+            "text": "B.  汽油机在做功冲程中把机械能转化为内能",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1312.4901739726795,
+                  198.02929018307168,
+                  1958.7452748852288,
+                  198.02929018307168,
+                  1958.7452748852288,
+                  231.44123173496712,
+                  1312.4901739726795,
+                  231.44123173496712
+                ],
+                "text": "B.  汽油机在做功冲程中把机械能转化为内能"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1314.6708889856018,
+              243.83211751996214,
+              1831.978995975187,
+              243.83211751996214,
+              1831.978995975187,
+              282.24608586077284,
+              1314.6708889856018,
+              282.24608586077284
+            ],
+            "ignore": false,
+            "order": 17,
+            "anno_id": 36,
+            "text": "C.  物体内能减少时，温度可能不变",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1313.8235073060125,
+                  246.3822755710455,
+                  1831.657028538235,
+                  246.3822755710455,
+                  1831.657028538235,
+                  278.107898401634,
+                  1313.8235073060125,
+                  278.107898401634
+                ],
+                "text": "C.  物体内能减少时，温度可能不变"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1312.109957762881,
+              289.9288795289351,
+              2091.4866932108866,
+              289.9288795289351,
+              2091.4866932108866,
+              329.1964916106526,
+              1312.109957762881,
+              329.1964916106526
+            ],
+            "ignore": false,
+            "order": 18,
+            "anno_id": 31,
+            "text": "D.  锯条锯木板时，锯条的内能增加，木板的内能减少",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1312.6273625573856,
+                  293.96069589071885,
+                  2090.8138691775816,
+                  293.96069589071885,
+                  2090.8138691775816,
+                  325.9707098169281,
+                  1312.6273625573856,
+                  325.9707098169281
+                ],
+                "text": "D.  锯条锯木板时，锯条的内能增加，木板的内能减少"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1195.0843629896203,
+          432.16263169742086,
+          2100.282350435254,
+          432.16263169742086,
+          2100.282350435254,
+          676.3278783110455,
+          1195.0843629896203,
+          676.3278783110455
+        ],
+        "ignore": false,
+        "order": 19,
+        "anno_id": 30,
+        "text": "【例24】（2012-兰州）下列说法中正确的是（    ）\nA.  升高相同温度时，吸收热量越多的物体比热容越大\nB.  燃料不完全燃烧时，热值变小\nC.  物体吸收热量，温度不一定升高\nD.  扫地时尘土飞扬，是分子不停地无规则运动造成的",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              1200.14404296875,
+              441.3679504394531,
+              1855.4542236328125,
+              441.3679504394531,
+              1855.4542236328125,
+              482.2402038574219,
+              1200.14404296875,
+              482.2402038574219
+            ],
+            "ignore": false,
+            "order": 20,
+            "anno_id": 0,
+            "text": "【例24】（2012-兰州）下列说法中正确的是（    ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1205.5034039616337,
+                  446.26938983597375,
+                  1861.1945026800288,
+                  446.26938983597375,
+                  1861.1945026800288,
+                  482.8938728690589,
+                  1205.5034039616337,
+                  482.8938728690589
+                ],
+                "text": "【例24】（2012-兰州）下列说法中正确的是（    ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1294.6492919921875,
+              487.8149719238281,
+              2088.860175081838,
+              487.8149719238281,
+              2088.860175081838,
+              526.400559394698,
+              1294.6492919921875,
+              526.400559394698
+            ],
+            "ignore": false,
+            "order": 21,
+            "anno_id": 6,
+            "text": "A.  升高相同温度时，吸收热量越多的物体比热容越大",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1306.6101351660116,
+                  494.91072073307134,
+                  2088.4136485683694,
+                  494.91072073307134,
+                  2088.4136485683694,
+                  525.6339189003928,
+                  1306.6101351660116,
+                  525.6339189003928
+                ],
+                "text": "A.  升高相同温度时，吸收热量越多的物体比热容越大"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1302.818458490329,
+              539.9521600969531,
+              1788.5417470663583,
+              539.9521600969531,
+              1788.5417470663583,
+              578.3661284377637,
+              1302.818458490329,
+              578.3661284377637
+            ],
+            "ignore": false,
+            "order": 22,
+            "anno_id": 24,
+            "text": "B.  燃料不完全燃烧时，热值变小",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1308,
+                  542.1220270332024,
+                  1788.0565315006552,
+                  542.1220270332024,
+                  1788.0565315006552,
+                  573.0892792669287,
+                  1308,
+                  573.0892792669287
+                ],
+                "text": "B.  燃料不完全燃烧时，热值变小"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1304.3555025222147,
+              587.7813100242083,
+              1826.7854719572415,
+              587.7813100242083,
+              1826.7854719572415,
+              627.0489221059258,
+              1304.3555025222147,
+              627.0489221059258
+            ],
+            "ignore": false,
+            "order": 23,
+            "anno_id": 28,
+            "text": "C.  物体吸收热量，温度不一定升高",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1309.0892792669288,
+                  587.1547747994758,
+                  1823.267837800786,
+                  587.1547747994758,
+                  1823.267837800786,
+                  621.3898648339883,
+                  1309.0892792669288,
+                  621.3898648339883
+                ],
+                "text": "C.  物体吸收热量，温度不一定升高"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1307.7700774858422,
+              632.1707845513674,
+              2087.1468129338477,
+              632.1707845513674,
+              2087.1468129338477,
+              669.7311091512711,
+              1307.7700774858422,
+              669.7311091512711
+            ],
+            "ignore": false,
+            "order": 24,
+            "anno_id": 29,
+            "text": "D.  扫地时尘土飞扬，是分子不停地无规则运动造成的",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1306.9107207330712,
+                  635.6994144329402,
+                  2086.479144100917,
+                  635.6994144329402,
+                  2086.479144100917,
+                  667.5118918671903,
+                  1306.9107207330712,
+                  667.5118918671903
+                ],
+                "text": "D.  扫地时尘土飞扬，是分子不停地无规则运动造成的"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          37.41459203208458,
+          913.0009142900244,
+          1165.7508707532838,
+          913.0009142900244,
+          1165.7508707532838,
+          1198.153680962662,
+          37.41459203208458,
+          1198.153680962662
+        ],
+        "ignore": false,
+        "order": 25,
+        "anno_id": 39,
+        "text": "【例25】（2012-兰州）用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为（    ）\nA. $ 0. 9 \\times1 0^{3} \\mathrm{J} / ( \\mathrm{k g}{\\cdot}^\\circ \\mathrm{C} ) $\nB. $ \\mathbf{1.8\\times10^{3}J/((kg\\cdot^{\\circ}C)} $\nC. $ 3.6\\times10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $\nD. $ 1.2\\!\\times\\!10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              42.139808654785156,
+              923.559400899271,
+              1150.575963938227,
+              923.559400899271,
+              1150.575963938227,
+              1009.5482788085938,
+              42.139808654785156,
+              1009.5482788085938
+            ],
+            "ignore": false,
+            "order": 26,
+            "anno_id": 11,
+            "text": "【例25】（2012-兰州）用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为（    ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  49.33333333333333,
+                  932,
+                  1146.6666666666665,
+                  932,
+                  1146.6666666666665,
+                  962.6666666666666,
+                  49.33333333333333,
+                  962.6666666666666
+                ],
+                "text": "【例25】（2012-兰州）用两个相同的电热器分别给质量相同的水和某种液体加热，"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  152,
+                  972,
+                  1069.3333333333333,
+                  972,
+                  1069.3333333333333,
+                  1004,
+                  152,
+                  1004
+                ],
+                "text": "每隔1min记录一次数据，如表所示，则该液体的比热容为（    ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              141.48849487304693,
+              1013.9390258789065,
+              462.08618164062506,
+              1013.9390258789065,
+              462.08618164062506,
+              1050.9544751333763,
+              141.48849487304693,
+              1050.9544751333763
+            ],
+            "ignore": false,
+            "order": 27,
+            "anno_id": 7,
+            "text": "A. $ 0. 9 \\times1 0^{3} \\mathrm{J} / ( \\mathrm{k g}{\\cdot}^\\circ \\mathrm{C} ) $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  148.00000000000006,
+                  1017.3333333333335,
+                  193.46648510694519,
+                  1017.3333333333335,
+                  193.46648510694519,
+                  1049.3333333333335,
+                  148.00000000000006,
+                  1049.3333333333335
+                ],
+                "text": "A."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  201.33333333333331,
+                  1012,
+                  449.3333333333333,
+                  1012,
+                  449.3333333333333,
+                  1052,
+                  201.33333333333331,
+                  1052
+                ],
+                "latex": "$ 0. 9 \\times1 0^{3} \\mathrm{J} / ( \\mathrm{k g}{\\cdot}^\\circ \\mathrm{C} ) $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_english",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              143.84661687107615,
+              1060.5099531554717,
+              449.1915094710403,
+              1060.5099531554717,
+              449.1915094710403,
+              1096.7373132944506,
+              143.84661687107615,
+              1096.7373132944506
+            ],
+            "ignore": false,
+            "order": 28,
+            "anno_id": 37,
+            "text": "B. $ \\mathbf{1.8\\times10^{3}J/((kg\\cdot^{\\circ}C)} $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  148.00000000000006,
+                  1064.0000000000002,
+                  193.06651104404813,
+                  1064.0000000000002,
+                  193.06651104404813,
+                  1096.0000000000002,
+                  148.00000000000006,
+                  1096.0000000000002
+                ],
+                "text": "B."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  200.00000000000006,
+                  1060.0000000000002,
+                  450.6666666666667,
+                  1060.0000000000002,
+                  450.6666666666667,
+                  1098.6666666666667,
+                  200.00000000000006,
+                  1098.6666666666667
+                ],
+                "latex": "$ \\mathbf{1.8\\times10^{3}J/((kg\\cdot^{\\circ}C)} $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_english",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              148.15939784000233,
+              1111.400768588799,
+              454.36684663375155,
+              1111.400768588799,
+              454.36684663375155,
+              1145.0404601464222,
+              148.15939784000233,
+              1145.0404601464222
+            ],
+            "ignore": false,
+            "order": 29,
+            "anno_id": 35,
+            "text": "C. $ 3.6\\times10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  146.5841532177779,
+                  1110.639162183704,
+                  189.38397165805642,
+                  1110.639162183704,
+                  189.38397165805642,
+                  1141.3058288503705,
+                  146.5841532177779,
+                  1141.3058288503705
+                ],
+                "text": "C."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  200,
+                  1106.6666666666665,
+                  450.66666666666663,
+                  1106.6666666666665,
+                  450.66666666666663,
+                  1145.3333333333333,
+                  200,
+                  1145.3333333333333
+                ],
+                "latex": "$ 3.6\\times10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_english",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              145.46659310642335,
+              1156.2536906656298,
+              455.98682286909855,
+              1156.2536906656298,
+              455.98682286909855,
+              1191.6184946108235,
+              145.46659310642335,
+              1191.6184946108235
+            ],
+            "ignore": false,
+            "order": 30,
+            "anno_id": 23,
+            "text": "D. $ 1.2\\!\\times\\!10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  148.00000000000009,
+                  1158.6666666666667,
+                  193.86645916984205,
+                  1158.6666666666667,
+                  193.86645916984205,
+                  1189.3333333333335,
+                  148.00000000000009,
+                  1189.3333333333335
+                ],
+                "text": "D."
+              },
+              {
+                "category_type": "equation_inline",
+                "poly": [
+                  201.33333333333331,
+                  1153.3333333333333,
+                  450.66666666666663,
+                  1153.3333333333333,
+                  450.66666666666663,
+                  1193.3333333333333,
+                  201.33333333333331,
+                  1193.3333333333333
+                ],
+                "latex": "$ 1.2\\!\\times\\!10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_english",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "table",
+        "poly": [
+          148.28578186035156,
+          1247.2115478515625,
+          731.590576171875,
+          1247.2115478515625,
+          731.590576171875,
+          1392.9947509765625,
+          148.28578186035156,
+          1392.9947509765625
+        ],
+        "ignore": false,
+        "order": 31,
+        "anno_id": 8,
+        "html": "<table border=\"1\"><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/℃</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/℃</td><td>20</td><td>34</td><td>48</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1200.925359769573,
+          910.5186273502047,
+          2226.7435436471706,
+          910.5186273502047,
+          2226.7435436471706,
+          1162.9141805056997,
+          1200.925359769573,
+          1162.9141805056997
+        ],
+        "ignore": false,
+        "order": 32,
+        "anno_id": 38,
+        "text": "【例26】（2009-呼伦贝尔）关于比热容，下列说法中正确的是（    ）\nA.  物体的比热容跟物体吸收和放出的热量有关\nB.  物体的比热容与物体的温度有关\nC.  物体的比热容与跟物体的质量有关\nD.  物体的比热容是物体的一种属性，与温度、质量都没有关系",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              1197.375732421875,
+              924.4296264648438,
+              2116.363037109375,
+              924.4296264648438,
+              2116.363037109375,
+              967.63623046875,
+              1197.375732421875,
+              967.63623046875
+            ],
+            "ignore": false,
+            "order": 33,
+            "anno_id": 2,
+            "text": "【例26】（2009-呼伦贝尔）关于比热容，下列说法中正确的是（    ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1203.9443776621931,
+                  927.944377662193,
+                  2118.200080138702,
+                  927.944377662193,
+                  2118.200080138702,
+                  963.7667067360175,
+                  1203.9443776621931,
+                  963.7667067360175
+                ],
+                "text": "【例26】（2009-呼伦贝尔）关于比热容，下列说法中正确的是（    ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1296.1727294921875,
+              969.9322509765625,
+              1985.1206710009617,
+              969.9322509765625,
+              1985.1206710009617,
+              1014.3243485945923,
+              1296.1727294921875,
+              1014.3243485945923
+            ],
+            "ignore": false,
+            "order": 34,
+            "anno_id": 13,
+            "text": "A.  物体的比热容跟物体吸收和放出的热量有关",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1305.31859680145,
+                  977.3185968014499,
+                  1987.3738587960129,
+                  977.3185968014499,
+                  1987.3738587960129,
+                  1010.6887714644915,
+                  1305.31859680145,
+                  1010.6887714644915
+                ],
+                "text": "A.  物体的比热容跟物体吸收和放出的热量有关"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1303.7746825495792,
+              1017.5574806289221,
+              1822.1709550144897,
+              1017.5574806289221,
+              1822.1709550144897,
+              1059.8227341243974,
+              1303.7746825495792,
+              1059.8227341243974
+            ],
+            "ignore": false,
+            "order": 35,
+            "anno_id": 34,
+            "text": "B.  物体的比热容与物体的温度有关",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1305.9963158670291,
+                  1023.9778952021748,
+                  1822.7035079963755,
+                  1023.9778952021748,
+                  1822.7035079963755,
+                  1056.6850873315207,
+                  1305.9963158670291,
+                  1056.6850873315207
+                ],
+                "text": "B.  物体的比热容与物体的温度有关"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1305.4997949371495,
+              1070.17340844982,
+              1856.673202765898,
+              1070.17340844982,
+              1856.673202765898,
+              1107.2633247825838,
+              1305.4997949371495,
+              1107.2633247825838
+            ],
+            "ignore": false,
+            "order": 36,
+            "anno_id": 32,
+            "text": "C.  物体的比热容与跟物体的质量有关",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1305.3259650673915,
+                  1071.3149126684787,
+                  1856.7071921293461,
+                  1071.3149126684787,
+                  1856.7071921293461,
+                  1104.6850873315207,
+                  1305.3259650673915,
+                  1104.6850873315207
+                ],
+                "text": "C.  物体的比热容与跟物体的质量有关"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1304.6372387433644,
+              1117.6139991080065,
+              2210.3212422178335,
+              1117.6139991080065,
+              2210.3212422178335,
+              1154.7039154407703,
+              1304.6372387433644,
+              1154.7039154407703
+            ],
+            "ignore": false,
+            "order": 37,
+            "anno_id": 33,
+            "text": "D.  物体的比热容是物体的一种属性，与温度、质量都没有关系",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1304.6556142677541,
+                  1118.6408450990598,
+                  2216.7183424386903,
+                  1118.6408450990598,
+                  2216.7183424386903,
+                  1152.6925208710836,
+                  1304.6556142677541,
+                  1152.6925208710836
+                ],
+                "text": "D.  物体的比热容是物体的一种属性，与温度、质量都没有关系"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1195.021370222076,
+          1241.1420420100349,
+          2315.303386859625,
+          1241.1420420100349,
+          2315.303386859625,
+          1520.105548129266,
+          1195.021370222076,
+          1520.105548129266
+        ],
+        "ignore": false,
+        "order": 38,
+        "anno_id": 42,
+        "text": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（ \n   ）\nA.  它们之间不发生热传递\nB.  热会从甲传到乙\nC.  热会从乙传到甲\nD.  无法确定热传递的情况",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              1199.943359375,
+              1243.0792236328125,
+              2302.914794921875,
+              1243.0792236328125,
+              2302.914794921875,
+              1324.4930699245374,
+              1199.943359375,
+              1324.4930699245374
+            ],
+            "ignore": false,
+            "order": 39,
+            "anno_id": 12,
+            "text": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（ \n   ）",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1205.3189844542644,
+                  1249.1916884696755,
+                  2304.7168877434074,
+                  1249.1916884696755,
+                  2304.7168877434074,
+                  1287.4812306730105,
+                  1205.3189844542644,
+                  1287.4812306730105
+                ],
+                "text": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1308,
+                  1290.4694702137638,
+                  2153.333333333333,
+                  1290.4694702137638,
+                  2153.333333333333,
+                  1324,
+                  1308,
+                  1324
+                ],
+                "text": "分别冷却，当它们放出相同的热量后，彼此接触，则（ \n   ）"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1299.4406368623343,
+              1335.0226870112433,
+              1696.3259277343752,
+              1335.0226870112433,
+              1696.3259277343752,
+              1371.6262391405016,
+              1299.4406368623343,
+              1371.6262391405016
+            ],
+            "ignore": false,
+            "order": 40,
+            "anno_id": 5,
+            "text": "A.  它们之间不发生热传递",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1303.048008210842,
+                  1337.4571729189195,
+                  1693.9849378114845,
+                  1337.4571729189195,
+                  1693.9849378114845,
+                  1372.045823540388,
+                  1303.048008210842,
+                  1372.045823540388
+                ],
+                "text": "A.  它们之间不发生热传递"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1302.8459737597555,
+              1384.054589766193,
+              1592.6648548715857,
+              1384.054589766193,
+              1592.6648548715857,
+              1417.694281323816,
+              1302.8459737597555,
+              1417.694281323816
+            ],
+            "ignore": false,
+            "order": 41,
+            "anno_id": 41,
+            "text": "B.  热会从甲传到乙",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1303.6427682936037,
+                  1385.9840677512914,
+                  1590.3731639551054,
+                  1385.9840677512914,
+                  1590.3731639551054,
+                  1418.519915310886,
+                  1303.6427682936037,
+                  1418.519915310886
+                ],
+                "text": "B.  热会从甲传到乙"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1306.2961985348961,
+              1426.3198432616682,
+              1590.07718629023,
+              1426.3198432616682,
+              1590.07718629023,
+              1465.9974281757877,
+              1306.2961985348961,
+              1465.9974281757877
+            ],
+            "ignore": false,
+            "order": 42,
+            "anno_id": 43,
+            "text": "C.  热会从乙传到甲",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1305.9840677512916,
+                  1432.650734417958,
+                  1591.5278814352405,
+                  1432.650734417958,
+                  1591.5278814352405,
+                  1467.0238983730633,
+                  1305.9840677512916,
+                  1467.0238983730633
+                ],
+                "text": "C.  热会从乙传到甲"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1302.8459737597555,
+              1475.4855463074252,
+              1690.1337047693144,
+              1475.4855463074252,
+              1690.1337047693144,
+              1515.1631312215445,
+              1302.8459737597555,
+              1515.1631312215445
+            ],
+            "ignore": false,
+            "order": 43,
+            "anno_id": 40,
+            "text": "D.  无法确定热传递的情况",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1305.9840677512916,
+                  1480.976101626937,
+                  1693.3970623281687,
+                  1480.976101626937,
+                  1693.3970623281687,
+                  1510.5199153108856,
+                  1305.9840677512916,
+                  1510.5199153108856
+                ],
+                "text": "D.  无法确定热传递的情况"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          2267.14453125,
+          1511.955322265625,
+          2290.6953125,
+          1511.955322265625,
+          2290.6953125,
+          1539.7757568359375,
+          2267.14453125,
+          1539.7757568359375
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 14,
+        "text": "4",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": []
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "simplified_chinese",
+        "layout": "double_column",
+        "special_issue": [
+          "table_horizontal",
+          "table_full_line",
+          "table_with_formula"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 2331,
+      "height": 1654,
+      "width": 2339,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_2968.jpg",
+      "sample_id": 497
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        2339,
+        1654
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0003",
+        "b0006",
+        "b0008",
+        "b0002",
+        "b0004",
+        "b0005",
+        "b0007",
+        "b0009"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_column_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0003",
+          "b0006",
+          "b0008",
+          "b0002",
+          "b0004",
+          "b0005",
+          "b0007",
+          "b0009"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0003",
+          "r0006",
+          "r0008",
+          "r0002",
+          "r0004",
+          "r0005",
+          "r0007",
+          "r0009"
+        ],
+        "region_order": [
+          "r0001",
+          "r0003",
+          "r0006",
+          "r0008",
+          "r0002",
+          "r0004",
+          "r0005",
+          "r0007",
+          "r0009"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "text",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            40,
+            99,
+            944,
+            330
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.939370215,
+          "candidate_rank": 24,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 1524,
+          "model_label": "text",
+          "original_bbox": [
+            40.737732,
+            99.109993,
+            943.133423,
+            329.993347
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            42,
+            436,
+            704,
+            669
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.93534708,
+          "candidate_rank": 47,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1098,
+          "model_label": "text",
+          "original_bbox": [
+            42.200165,
+            436.715424,
+            703.590698,
+            668.179016
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            38,
+            925,
+            1150,
+            1196
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.937404633,
+          "candidate_rank": 101,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 2164,
+          "model_label": "text",
+          "original_bbox": [
+            38.290192,
+            925.397644,
+            1149.164673,
+            1195.173706
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "table",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            153,
+            1247,
+            727,
+            1389
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.936940074,
+          "candidate_rank": 242,
+          "original_class_id": 21,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 588,
+          "model_label": "table",
+          "original_bbox": [
+            153.772751,
+            1247.184448,
+            726.655396,
+            1388.575439
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1196,
+            99,
+            2198,
+            331
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.93937242,
+          "candidate_rank": 68,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 1707,
+          "model_label": "text",
+          "original_bbox": [
+            1196.851929,
+            99.511841,
+            2197.626709,
+            330.856537
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1196,
+            441,
+            2094,
+            675
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.928970754,
+          "candidate_rank": 78,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 1540,
+          "model_label": "text",
+          "original_bbox": [
+            1196.402344,
+            441.657806,
+            2093.197021,
+            674.014221
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1195,
+            924,
+            2221,
+            1157
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.934076667,
+          "candidate_rank": 269,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 1726,
+          "model_label": "text",
+          "original_bbox": [
+            1195.201538,
+            924.176331,
+            2220.232178,
+            1156.667236
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1194,
+            1246,
+            2308,
+            1520
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.931159854,
+          "candidate_rank": 280,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 2175,
+          "model_label": "text",
+          "original_bbox": [
+            1194.446777,
+            1246.48938,
+            2307.812744,
+            1519.763794
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            2264,
+            1511,
+            2291,
+            1541
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.429222167,
+          "candidate_rank": 299,
+          "original_class_id": 16,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 6,
+          "model_label": "number",
+          "original_bbox": [
+            2264.800049,
+            1511.542725,
+            2290.79126,
+            1540.332886
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0022",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            201,
+            1012,
+            451,
+            1052
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.784987211,
+          "candidate_rank": 126,
+          "original_class_id": 15,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 66,
+          "model_label": "formula",
+          "original_bbox": [
+            201.327713,
+            1012.26965,
+            450.453094,
+            1051.28601
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0023",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            201,
+            1059,
+            450,
+            1099
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.782183766,
+          "candidate_rank": 165,
+          "original_class_id": 15,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 66,
+          "model_label": "formula",
+          "original_bbox": [
+            201.539291,
+            1059.86108,
+            449.851532,
+            1098.68591
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0024",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            200,
+            1106,
+            454,
+            1146
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.729389668,
+          "candidate_rank": 212,
+          "original_class_id": 15,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 66,
+          "model_label": "formula",
+          "original_bbox": [
+            200.437256,
+            1106.86658,
+            453.673004,
+            1145.46887
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0025",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            203,
+            1153,
+            453,
+            1193
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.710125387,
+          "candidate_rank": 236,
+          "original_class_id": 15,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 66,
+          "model_label": "formula",
+          "original_bbox": [
+            203.228622,
+            1153.25732,
+            452.202759,
+            1192.17017
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            40,
+            99,
+            944,
+            330
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            42,
+            436,
+            704,
+            669
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006",
+            "l0022",
+            "l0023",
+            "l0024",
+            "l0025"
+          ],
+          "bbox": [
+            38,
+            925,
+            1150,
+            1196
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            153,
+            1247,
+            727,
+            1389
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "table"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            1196,
+            99,
+            2198,
+            331
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            1196,
+            441,
+            2094,
+            675
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            1195,
+            924,
+            2221,
+            1157
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            1194,
+            1246,
+            2308,
+            1520
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            2264,
+            1511,
+            2291,
+            1541
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": 1,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            40,
+            99,
+            944,
+            330
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 196,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                40,
+                99,
+                944,
+                330
+              ],
+              "canvas_size": [
+                896,
+                224
+              ],
+              "content_size": [
+                877,
+                224
+              ],
+              "pad_offset": [
+                9,
+                0
+              ],
+              "scale": 0.9696969696969697,
+              "rounding_error": [
+                0.3939393939393767,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0307867730900797,
+                0,
+                30.722919042189282,
+                0,
+                1.03125,
+                99
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4535,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3514,
+                    "raw_output": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      896,
+                      224
+                    ],
+                    "content_size": [
+                      877,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      9,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.3939393939393767,
+                      0.0
+                    ],
+                    "scale": 0.9696969696969697,
+                    "token_count": 196
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3514,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            42,
+            436,
+            704,
+            669
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 147,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                42,
+                436,
+                704,
+                669
+              ],
+              "canvas_size": [
+                672,
+                224
+              ],
+              "content_size": [
+                636,
+                224
+              ],
+              "pad_offset": [
+                18,
+                0
+              ],
+              "scale": 0.9613733905579399,
+              "rounding_error": [
+                -0.4291845493562505,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0408805031446542,
+                0,
+                23.264150943396224,
+                0,
+                1.0401785714285714,
+                436
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3313,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2606,
+                    "raw_output": "【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      672,
+                      224
+                    ],
+                    "content_size": [
+                      636,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      18,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4291845493562505,
+                      0.0
+                    ],
+                    "scale": 0.9613733905579399,
+                    "token_count": 147
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2606,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            38,
+            925,
+            1150,
+            1196
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 280,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                38,
+                925,
+                1150,
+                1196
+              ],
+              "canvas_size": [
+                1120,
+                256
+              ],
+              "content_size": [
+                1050,
+                256
+              ],
+              "pad_offset": [
+                35,
+                0
+              ],
+              "scale": 0.9446494464944649,
+              "rounding_error": [
+                -0.45018450184488756,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.059047619047619,
+                0,
+                0.9333333333333371,
+                0,
+                1.05859375,
+                925
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 7275,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 5615,
+                    "raw_output": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      256
+                    ],
+                    "content_size": [
+                      1050,
+                      256
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      35,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.45018450184488756,
+                      0.0
+                    ],
+                    "scale": 0.9446494464944649,
+                    "token_count": 280
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 5615,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            153,
+            1247,
+            727,
+            1389
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "html",
+            "text": "<table><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>",
+            "resource": "assets/p0001-b0008.png",
+            "table": {
+              "rows": 3,
+              "columns": 4,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "加热时间/min",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "0",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "1",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "2",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "水的温度/°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "20",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "26",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "32",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "液体的温度/°C",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "20",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "34",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "48",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "<table border=1><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                153,
+                1247,
+                727,
+                1389
+              ],
+              "canvas_size": [
+                576,
+                128
+              ],
+              "content_size": [
+                517,
+                128
+              ],
+              "pad_offset": [
+                29,
+                0
+              ],
+              "scale": 0.9014084507042254,
+              "rounding_error": [
+                -0.40845070422540175,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1102514506769825,
+                0,
+                120.80270793036752,
+                0,
+                1.109375,
+                1247
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3377,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3051,
+                    "raw_output": "<table border=1><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "<table border=1><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      576,
+                      128
+                    ],
+                    "content_size": [
+                      517,
+                      128
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      29,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.40845070422540175,
+                      0.0
+                    ],
+                    "scale": 0.9014084507042254,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3051,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "<table border=1><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            1196,
+            99,
+            2198,
+            331
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 217,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                1196,
+                99,
+                2198,
+                331
+              ],
+              "canvas_size": [
+                992,
+                224
+              ],
+              "content_size": [
+                967,
+                224
+              ],
+              "pad_offset": [
+                12,
+                0
+              ],
+              "scale": 0.9655172413793104,
+              "rounding_error": [
+                -0.44827586206895376,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0361944157187177,
+                0,
+                1183.5656670113754,
+                0,
+                1.0357142857142858,
+                99
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4696,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3531,
+                    "raw_output": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      224
+                    ],
+                    "content_size": [
+                      967,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      12,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.44827586206895376,
+                      0.0
+                    ],
+                    "scale": 0.9655172413793104,
+                    "token_count": 217
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3531,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            1196,
+            441,
+            2094,
+            675
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 196,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                1196,
+                441,
+                2094,
+                675
+              ],
+              "canvas_size": [
+                896,
+                224
+              ],
+              "content_size": [
+                860,
+                224
+              ],
+              "pad_offset": [
+                18,
+                0
+              ],
+              "scale": 0.9572649572649573,
+              "rounding_error": [
+                0.3760683760683605,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.044186046511628,
+                0,
+                1177.2046511627907,
+                0,
+                1.0446428571428572,
+                441
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4224,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3201,
+                    "raw_output": "【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      896,
+                      224
+                    ],
+                    "content_size": [
+                      860,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      18,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.3760683760683605,
+                      0.0
+                    ],
+                    "scale": 0.9572649572649573,
+                    "token_count": 196
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3201,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            1195,
+            924,
+            2221,
+            1157
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 224,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                1195,
+                924,
+                2221,
+                1157
+              ],
+              "canvas_size": [
+                1024,
+                224
+              ],
+              "content_size": [
+                986,
+                224
+              ],
+              "pad_offset": [
+                19,
+                0
+              ],
+              "scale": 0.9613733905579399,
+              "rounding_error": [
+                -0.3690987124463163,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0405679513184585,
+                0,
+                1175.2292089249493,
+                0,
+                1.0401785714285714,
+                924
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5125,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3723,
+                    "raw_output": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      224
+                    ],
+                    "content_size": [
+                      986,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      19,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.3690987124463163,
+                      0.0
+                    ],
+                    "scale": 0.9613733905579399,
+                    "token_count": 224
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3723,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            1194,
+            1246,
+            2308,
+            1520
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 306,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                1194,
+                1246,
+                2308,
+                1520
+              ],
+              "canvas_size": [
+                1088,
+                288
+              ],
+              "content_size": [
+                1088,
+                268
+              ],
+              "pad_offset": [
+                0,
+                10
+              ],
+              "scale": 0.9766606822262118,
+              "rounding_error": [
+                0,
+                0.39497307001795434
+              ],
+              "canvas_to_page_affine": [
+                1.0238970588235294,
+                0,
+                1194,
+                0,
+                1.0223880597014925,
+                1235.7761194029852
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5983,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3882,
+                    "raw_output": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1088,
+                      288
+                    ],
+                    "content_size": [
+                      1088,
+                      268
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      10
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.39497307001795434
+                    ],
+                    "scale": 0.9766606822262118,
+                    "token_count": 306
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3882,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            2264,
+            1511,
+            2291,
+            1541
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 4\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "## 4\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 64,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                2264,
+                1511,
+                2291,
+                1541
+              ],
+              "canvas_size": [
+                256,
+                256
+              ],
+              "content_size": [
+                230,
+                256
+              ],
+              "pad_offset": [
+                13,
+                0
+              ],
+              "scale": 8.533333333333333,
+              "rounding_error": [
+                -0.4000000000000057,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.11739130434782609,
+                0,
+                2262.473913043478,
+                0,
+                0.1171875,
+                1511
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1701,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1425,
+                    "raw_output": "## 4\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 4\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      256,
+                      256
+                    ],
+                    "content_size": [
+                      230,
+                      256
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      13,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4000000000000057,
+                      0.0
+                    ],
+                    "scale": 8.533333333333333,
+                    "token_count": 64
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1425,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 4\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0022",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0023",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0024",
+          "owner_block_id": "b0006"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0025",
+          "owner_block_id": "b0006"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 904,
+      "height": 231,
+      "bbox": [
+        40,
+        99,
+        944,
+        330
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 662,
+      "height": 233,
+      "bbox": [
+        42,
+        436,
+        704,
+        669
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 1112,
+      "height": 271,
+      "bbox": [
+        38,
+        925,
+        1150,
+        1196
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 574,
+      "height": 142,
+      "bbox": [
+        153,
+        1247,
+        727,
+        1389
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 1002,
+      "height": 232,
+      "bbox": [
+        1196,
+        99,
+        2198,
+        331
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 898,
+      "height": 234,
+      "bbox": [
+        1196,
+        441,
+        2094,
+        675
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 1026,
+      "height": 233,
+      "bbox": [
+        1195,
+        924,
+        2221,
+        1157
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 1114,
+      "height": 274,
+      "bbox": [
+        1194,
+        1246,
+        2308,
+        1520
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 27,
+      "height": 30,
+      "bbox": [
+        2264,
+        1511,
+        2291,
+        1541
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n\n\n【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n\n\n【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\n\n<table><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>\n\n【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n\n\n【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n\n\n【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n\n\n【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n\n",
+  "quality": {
+    "text": {
+      "denominator": 8,
+      "matched": 8,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 18,
+          "category": "text_block",
+          "order": 1,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 76,
+          "reference_range": [
+            0,
+            76
+          ],
+          "actual_range": [
+            0,
+            75
+          ],
+          "raw_range": [
+            0,
+            75
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 27,
+          "category": "text_block",
+          "order": 7,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 70,
+          "reference_range": [
+            0,
+            70
+          ],
+          "actual_range": [
+            0,
+            69
+          ],
+          "raw_range": [
+            0,
+            69
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 26,
+          "category": "text_block",
+          "order": 13,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 122,
+          "reference_range": [
+            0,
+            122
+          ],
+          "actual_range": [
+            0,
+            121
+          ],
+          "raw_range": [
+            0,
+            121
+          ],
+          "edit_distance": 6,
+          "raw_edit_distance": 6,
+          "exact": false
+        },
+        {
+          "annotation_id": 30,
+          "category": "text_block",
+          "order": 19,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 113,
+          "reference_range": [
+            0,
+            113
+          ],
+          "actual_range": [
+            0,
+            112
+          ],
+          "raw_range": [
+            0,
+            112
+          ],
+          "edit_distance": 6,
+          "raw_edit_distance": 6,
+          "exact": false
+        },
+        {
+          "annotation_id": 39,
+          "category": "text_block",
+          "order": 25,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 313,
+          "reference_range": [
+            0,
+            313
+          ],
+          "actual_range": [
+            0,
+            322
+          ],
+          "raw_range": [
+            0,
+            322
+          ],
+          "edit_distance": 122,
+          "raw_edit_distance": 122,
+          "exact": false
+        },
+        {
+          "annotation_id": 38,
+          "category": "text_block",
+          "order": 32,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 124,
+          "reference_range": [
+            0,
+            124
+          ],
+          "actual_range": [
+            0,
+            123
+          ],
+          "raw_range": [
+            0,
+            123
+          ],
+          "edit_distance": 6,
+          "raw_edit_distance": 6,
+          "exact": false
+        },
+        {
+          "annotation_id": 42,
+          "category": "text_block",
+          "order": 38,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 112,
+          "reference_range": [
+            0,
+            112
+          ],
+          "actual_range": [
+            0,
+            111
+          ],
+          "raw_range": [
+            0,
+            111
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 14,
+          "category": "page_number",
+          "order": null,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 1,
+          "reference_range": [
+            0,
+            1
+          ],
+          "actual_range": [
+            0,
+            4
+          ],
+          "raw_range": [
+            0,
+            4
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 931,
+      "edit_distance": 152,
+      "raw_edit_distance": 152
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 1,
+      "matched": 1,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 8,
+          "category": "table",
+          "order": 31,
+          "block_id": "b0008",
+          "coverage": 0.9571,
+          "status": "ok",
+          "structure_exact": true,
+          "cell_exact": 10,
+          "cell_denominator": 12,
+          "exact": false,
+          "reading_order_position": 3
+        }
+      ],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 4,
+      "matched": 4,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "parent_annotation_id": 39,
+          "block_id": "b0006",
+          "status": "ok",
+          "exact": false,
+          "reference": "$ 0. 9 \\times1 0^{3} \\mathrm{J} / ( \\mathrm{k g}{\\cdot}^\\circ \\mathrm{C} ) $",
+          "actual_range": null
+        },
+        {
+          "parent_annotation_id": 39,
+          "block_id": "b0006",
+          "status": "ok",
+          "exact": false,
+          "reference": "$ \\mathbf{1.8\\times10^{3}J/((kg\\cdot^{\\circ}C)} $",
+          "actual_range": null
+        },
+        {
+          "parent_annotation_id": 39,
+          "block_id": "b0006",
+          "status": "ok",
+          "exact": false,
+          "reference": "$ 3.6\\times10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+          "actual_range": null
+        },
+        {
+          "parent_annotation_id": 39,
+          "block_id": "b0006",
+          "status": "ok",
+          "exact": false,
+          "reference": "$ 1.2\\!\\times\\!10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+          "actual_range": null
+        }
+      ],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 28,
+      "evaluable": 28,
+      "correct": 24,
+      "missing_pairs": 0,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 9
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [
+      {
+        "block_id": "b0006",
+        "status": "ok",
+        "signals": [
+          "repeated_16_character_fragment"
+        ]
+      }
+    ],
+    "quality_claim_blockers": [
+      "table:inexact_or_missing",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "inline_content_or_representation_difference_unreviewed"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "table:inexact_or_missing",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing",
+      "inline_content_or_representation_difference_unreviewed"
+    ],
+    "unresolved_annotation_ids": [
+      18,
+      27,
+      26,
+      30,
+      39,
+      38,
+      42,
+      14
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 9,
+    "parent_reference_count": 9
+  },
+  "alignment": [
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        18
+      ],
+      "expected": "【例21】（2005-河池)下列例子中属于利用内能来做功的是（ ） A. 火箭点火发射 B. 电热水器给水加热 C. 用高炉熔化铁块 D. 用热水袋取暖",
+      "actual": "【例21】(2005·河池)下列例子中属于利用内能来做功的是() A. 火箭点火发射 B. 电热水器给水加热 C. 用高炉熔化铁块 D. 用热水袋取暖",
+      "raw_output": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        40,
+        99,
+        944,
+        330
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例21】(2005·河池)下列例子中属于利用内能来做功的是()\n\nA. 火箭点火发射\n\nB. 电热水器给水加热\n\nC. 用高炉熔化铁块\n\nD. 用热水袋取暖\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        27
+      ],
+      "expected": "【例22】下列属于内能转化为机械能的是（ ） A. 两手相互摩擦能发热 B. 水沸腾时蒸汽冲开壶盖 C. 锯木头锯子发烫 D. 压缩空气引火",
+      "actual": "【例22】下列属于内能转化为机械能的是() A. 两手相互摩擦能发热 B. 水沸腾时蒸汽冲开壶盖 C. 锯木头锯子发烫 D. 压缩空气引火",
+      "raw_output": "【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        42,
+        436,
+        704,
+        669
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例22】下列属于内能转化为机械能的是()\n\nA. 两手相互摩擦能发热\n\nB. 水沸腾时蒸汽冲开壶盖\n\nC. 锯木头锯子发烫\n\nD. 压缩空气引火\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        26
+      ],
+      "expected": "【例23】（2012-南京）关于温度、内能和热量，下列说法正确的是（ ） A. 物体内能增大，一定从外界吸收热量 B. 汽油机在做功冲程中把机械能转化为内能 C. 物体内能减少时，温度可能不变 D. 锯条锯木板时，锯条的内能增加，木板的内能减少",
+      "actual": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是() A. 物体内能增大，一定从外界吸收热量 B. 汽油机在做功冲程中把机械能转化为内能 C. 物体内能减少时，温度可能不变 D. 锯条锯木板时，锯条的内能增加，木板的内能减少",
+      "raw_output": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n",
+      "edit_distance": 6,
+      "raw_edit_distance": 6,
+      "bbox": [
+        1196,
+        99,
+        2198,
+        331
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例23】(2012·南京)关于温度、内能和热量，下列说法正确的是()\n\nA. 物体内能增大，一定从外界吸收热量\n\nB. 汽油机在做功冲程中把机械能转化为内能\n\nC. 物体内能减少时，温度可能不变\n\nD. 锯条锯木板时，锯条的内能增加，木板的内能减少\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        30
+      ],
+      "expected": "【例24】（2012-兰州）下列说法中正确的是（ ） A. 升高相同温度时，吸收热量越多的物体比热容越大 B. 燃料不完全燃烧时，热值变小 C. 物体吸收热量，温度不一定升高 D. 扫地时尘土飞扬，是分子不停地无规则运动造成的",
+      "actual": "【例24】(2012·兰州)下列说法中正确的是() A. 升高相同温度时，吸收热量越多的物体比热容越大 B. 燃料不完全燃烧时，热值变小 C. 物体吸收热量，温度不一定升高 D. 扫地时尘土飞扬，是分子不停地无规则运动造成的",
+      "raw_output": "【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n",
+      "edit_distance": 6,
+      "raw_edit_distance": 6,
+      "bbox": [
+        1196,
+        441,
+        2094,
+        675
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例24】(2012·兰州)下列说法中正确的是()\n\nA. 升高相同温度时，吸收热量越多的物体比热容越大\n\nB. 燃料不完全燃烧时，热值变小\n\nC. 物体吸收热量，温度不一定升高\n\nD. 扫地时尘土飞扬，是分子不停地无规则运动造成的\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        39
+      ],
+      "expected": "【例25】（2012-兰州）用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为（ ） A. $ 0. 9 \\times1 0^{3} \\mathrm{J} / ( \\mathrm{k g}{\\cdot}^\\circ \\mathrm{C} ) $ B. $ \\mathbf{1.8\\times10^{3}J/((kg\\cdot^{\\circ}C)} $ C. $ 3.6\\times10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $ D. $ 1.2\\!\\times\\!10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+      "actual": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( ) A. $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$ B. $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$ C. $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$ D. $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$",
+      "raw_output": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n",
+      "edit_distance": 122,
+      "raw_edit_distance": 122,
+      "bbox": [
+        38,
+        925,
+        1150,
+        1196
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例25】(2012·兰州)用两个相同的电热器分别给质量相同的水和某种液体加热，每隔1min记录一次数据，如表所示，则该液体的比热容为( )\n\nA.  $0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nB.  $1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nC.  $3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n\nD.  $1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}$\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006",
+        "l0022",
+        "l0023",
+        "l0024",
+        "l0025"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        38
+      ],
+      "expected": "【例26】（2009-呼伦贝尔）关于比热容，下列说法中正确的是（ ） A. 物体的比热容跟物体吸收和放出的热量有关 B. 物体的比热容与物体的温度有关 C. 物体的比热容与跟物体的质量有关 D. 物体的比热容是物体的一种属性，与温度、质量都没有关系",
+      "actual": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是() A. 物体的比热容跟物体吸收和放出的热量有关 B. 物体的比热容与物体的温度有关 C. 物体的比热容与跟物体的质量有关 D. 物体的比热容是物体的一种属性，与温度、质量都没有关系",
+      "raw_output": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n",
+      "edit_distance": 6,
+      "raw_edit_distance": 6,
+      "bbox": [
+        1195,
+        924,
+        2221,
+        1157
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例26】(2009·呼伦贝尔)关于比热容，下列说法中正确的是()\n\nA. 物体的比热容跟物体吸收和放出的热量有关\n\nB. 物体的比热容与物体的温度有关\n\nC. 物体的比热容与跟物体的质量有关\n\nD. 物体的比热容是物体的一种属性，与温度、质量都没有关系\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        42
+      ],
+      "expected": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（ ） A. 它们之间不发生热传递 B. 热会从甲传到乙 C. 热会从乙传到甲 D. 无法确定热传递的情况",
+      "actual": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（） A. 它们之间不发生热传递 B. 热会从甲传到乙 C. 热会从乙传到甲 D. 无法确定热传递的情况",
+      "raw_output": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        1194,
+        1246,
+        2308,
+        1520
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "【例27】从同一火炉中取出的质量不相等的甲、乙两个铁块，甲的质量大于乙，分别冷却，当它们放出相同的热量后，彼此接触，则（）\n\nA. 它们之间不发生热传递\n\nB. 热会从甲传到乙\n\nC. 热会从乙传到甲\n\nD. 无法确定热传递的情况\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        14
+      ],
+      "expected": "4",
+      "actual": "## 4",
+      "raw_output": "## 4\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        2264,
+        1511,
+        2291,
+        1541
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 4\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "table",
+      "annotation_id": 8,
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          148.28578186035156,
+          1247.2115478515625,
+          731.590576171875,
+          1247.2115478515625,
+          731.590576171875,
+          1392.9947509765625,
+          148.28578186035156,
+          1392.9947509765625
+        ],
+        "ignore": false,
+        "order": 31,
+        "anno_id": 8,
+        "html": "<table border=\"1\"><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/℃</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/℃</td><td>20</td><td>34</td><td>48</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "raw_output": "<table border=1><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>\n",
+      "content": {
+        "format": "html",
+        "text": "<table><tr><td>加热时间/min</td><td>0</td><td>1</td><td>2</td></tr><tr><td>水的温度/°C</td><td>20</td><td>26</td><td>32</td></tr><tr><td>液体的温度/°C</td><td>20</td><td>34</td><td>48</td></tr></table>",
+        "resource": "assets/p0001-b0008.png",
+        "table": {
+          "rows": 3,
+          "columns": 4,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "加热时间/min",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "0",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "1",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "2",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "水的温度/°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "20",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "26",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "32",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "液体的温度/°C",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "20",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "34",
+              "bbox": null
+            },
+            {
+              "row": 2,
+              "column": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "48",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "error": null,
+      "status": "ok",
+      "exact": false
+    }
+  ],
+  "inline_formula_diagnostics": [
+    {
+      "parent_annotation_id": 39,
+      "block_id": "b0006",
+      "status": "ok",
+      "exact": false,
+      "reference": "$ 0. 9 \\times1 0^{3} \\mathrm{J} / ( \\mathrm{k g}{\\cdot}^\\circ \\mathrm{C} ) $",
+      "actual_range": null,
+      "observed_parent_formulas": [
+        {
+          "range": [
+            74,
+            133
+          ],
+          "latex": "0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            137,
+            196
+          ],
+          "latex": "1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            200,
+            259
+          ],
+          "latex": "3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            263,
+            322
+          ],
+          "latex": "1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        }
+      ],
+      "classification": "unreviewed_content_or_representation_difference"
+    },
+    {
+      "parent_annotation_id": 39,
+      "block_id": "b0006",
+      "status": "ok",
+      "exact": false,
+      "reference": "$ \\mathbf{1.8\\times10^{3}J/((kg\\cdot^{\\circ}C)} $",
+      "actual_range": null,
+      "observed_parent_formulas": [
+        {
+          "range": [
+            74,
+            133
+          ],
+          "latex": "0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            137,
+            196
+          ],
+          "latex": "1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            200,
+            259
+          ],
+          "latex": "3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            263,
+            322
+          ],
+          "latex": "1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        }
+      ],
+      "classification": "unreviewed_content_or_representation_difference"
+    },
+    {
+      "parent_annotation_id": 39,
+      "block_id": "b0006",
+      "status": "ok",
+      "exact": false,
+      "reference": "$ 3.6\\times10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+      "actual_range": null,
+      "observed_parent_formulas": [
+        {
+          "range": [
+            74,
+            133
+          ],
+          "latex": "0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            137,
+            196
+          ],
+          "latex": "1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            200,
+            259
+          ],
+          "latex": "3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            263,
+            322
+          ],
+          "latex": "1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        }
+      ],
+      "classification": "unreviewed_content_or_representation_difference"
+    },
+    {
+      "parent_annotation_id": 39,
+      "block_id": "b0006",
+      "status": "ok",
+      "exact": false,
+      "reference": "$ 1.2\\!\\times\\!10^{3}\\mathrm{J/((kg\\cdot^{\\circ}C)} $",
+      "actual_range": null,
+      "observed_parent_formulas": [
+        {
+          "range": [
+            74,
+            133
+          ],
+          "latex": "0.9 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            137,
+            196
+          ],
+          "latex": "1.8 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            200,
+            259
+          ],
+          "latex": "3.6 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        },
+        {
+          "range": [
+            263,
+            322
+          ],
+          "latex": "1.2 \\times 10^{3} \\, \\text{J/(kg} \\cdot {}^\\circ\\text{C)}"
+        }
+      ],
+      "classification": "unreviewed_content_or_representation_difference"
+    }
+  ],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

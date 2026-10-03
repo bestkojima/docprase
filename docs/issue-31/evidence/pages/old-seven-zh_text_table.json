@@ -1,0 +1,4232 @@
+{
+  "key": "old-seven/zh_text_table",
+  "input": {
+    "path": "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+    "sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/ovis/source_page.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/old-seven/zh_text_table/job"
+    ],
+    "input_sha256": "c8cf71eb2f717727dc2d8a3ae5da1e388f6be7bb1e2c4addbde5d40dafb270f6",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 89.87226697799633,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "90fb4625d1da4a20f62da7483bc4a70f435121f7c89deab086afb71111b40de9",
+      "job/assets/p0001-b0002.png": "2cc19937b32b3a7da44ef749d83524c4551bd9e1197f8c96a8b23e9cbecd4d38",
+      "job/assets/p0001-b0003.png": "77374982bff0066b1c6343bf1d3a730170b07382e2047a730fc95367ce1fc1d6",
+      "job/assets/p0001-b0004.png": "dea0d8faabca5f1cc48c776e2fcdae72ffdb8f9e54e046ad9024f6350abe7ae3",
+      "job/assets/p0001-b0005.png": "03bd31ea3efa417d19e63dbabe34ae0ff67ad77e0d6b2c7257396532a2144336",
+      "job/assets/p0001-b0006.png": "199620c51f392f1976630196ac2199915fa976487597a1cde1dfb812a7cb9676",
+      "job/assets/p0001-b0007.png": "f9baafbbdd8d7daabf651c2dd195ad4b79c0e3ee1c4b4171d73eccaf15feb58d",
+      "job/assets/p0001-b0008.png": "7733efb373cf4e4b8409d2625d69b706d9a2e91e03330c66db630f8fc1563ea5",
+      "job/assets/p0001-b0009.png": "ac5bafcfc2061785178a97bcec2cf97bb7ad732486c20df8b72058b8d1c6b8f4",
+      "job/assets/p0001-b0010.png": "8c8d807a8dc4380a27adda40b1619495c9bae94450d9e8c262b31f2bd29390f4",
+      "job/assets/p0001-b0011.png": "d31e9ccddb98933a045cbac668fbd1557067cd72cc8c5f73ab3a37581210326c",
+      "job/assets/p0001-b0012.png": "cd49e9caa55f75421ea88bdcb26d694b959256d18a7cbc34d5614091a1c98fa9",
+      "job/assets/p0001-b0013.png": "d8c9947c4e10848692dd105b154181aa1155910c347ee3f423a1943462efb774",
+      "job/assets/p0001-b0014.png": "c2477fd062fca554accc3e9ea57b5acd5627b13c7068a6b0abce5181898b9b36",
+      "job/assets/p0001-b0015.png": "ea75916529ebf3b1ea8abd7f12f7190664ac61a123d353e75523ab68ae5af3b3",
+      "job/assets/p0001-b0016.png": "a2db2fefd5dcd909dd3b0cbc30dc2d1f1a8be259d544a7c446a09b0516092a1b",
+      "job/assets/p0001-b0017.png": "ccace84871ed3f9433a10bac950185b124a35fadbb1ad42911773615b9387102",
+      "job/assets/p0001-b0018.png": "0cb5b96547fce9a40c4b96632a99776fc636e4d9b0dcca117bef7653fb4af98b",
+      "job/assets/p0001-b0019.png": "d679a0c0090a4defb2fdb9951d19e44dd65571a5c3e9d2fa9766c9f81e22880b",
+      "job/assets/p0001-fetch_name_0.f32": "7784d3b61a1342e265e966dddd4301189ce75b88c842d96ff2c099f8db9929f0",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "626fcd0f0c4acb125d738ae7fce003cc9c1436d0e8985697628ee5e41b8f2d01",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "e2fb7cab56bcdd5be644cffaa1046003b1628930333fce6655d1a80258adee11",
+      "job/assets/p0001-layout-overlay.png": "c0166fdceb0daa5978cd9f4b694f16449df44108c52441f890238326f01860ec",
+      "job/assets/p0001-mask-c0.png": "19fc5485c46ceee23d500235f85f80e01adc216749a0cf87ccac00c630267514",
+      "job/assets/p0001-mask-c1.png": "1417698d1cad0f8267062bd65816cc59a64324eae949ad8e3d87dda5ab31f002",
+      "job/assets/p0001-mask-c10.png": "650b16af934b80e0408e97a80af0df6796c82c1c9e1c84c73e8d67aa5701183b",
+      "job/assets/p0001-mask-c11.png": "85c9299d1e2e73c9c66a2cbcefaa477a2aed9530eea1759d2e449a2ab08896b6",
+      "job/assets/p0001-mask-c12.png": "65a62749dea166c57e67641c7c563249e3f857ae17a83909544624d1310157d2",
+      "job/assets/p0001-mask-c13.png": "a5e8ebc4af25a7224d782fda3e244c0bb543edd96ff2b488ad1936418343c92b",
+      "job/assets/p0001-mask-c14.png": "2fbe3db18b3f241fd39bbd6e531d8712bfdfca89088e555a911ee98bbfcca708",
+      "job/assets/p0001-mask-c15.png": "f6441c98208580c916d3d96c60737ee4823a2329a07d23eff19e4216809979e5",
+      "job/assets/p0001-mask-c16.png": "425fb1fb5dad9ee2f7b08d4df16178913831918dde9d2bd020ad021711ce24f7",
+      "job/assets/p0001-mask-c17.png": "5db3d3d61d7ca24c1d819fd0014f52f9456bb39597fc51813a4ba89e6ad10dec",
+      "job/assets/p0001-mask-c18.png": "7c5b5172fe8e6c3485fccd30d9a5a945d4827fdb8f15d43f838491f2a0f9ff2a",
+      "job/assets/p0001-mask-c2.png": "eeae71bde8b5d9ad9b146ef62c9a12f3ada5e7d1a71ca7964aae69e5a671a62a",
+      "job/assets/p0001-mask-c3.png": "93d5312f775ad58918f2c4c5a80d4ca83333ffedb5f67151d8cb4c30c0a87792",
+      "job/assets/p0001-mask-c4.png": "8ccbd84f531f5733d7cebacfe1f63214070cb5fc0d30367015220f7ca6ea4d9b",
+      "job/assets/p0001-mask-c5.png": "075293c927409b50276e69686c7ffbe4dbe16dec6830141d0f5f9dc5f53ff73b",
+      "job/assets/p0001-mask-c6.png": "dd2e4e58926116521ca65a09ecd3031d797a2a64439bc93e8c9664928e83a4fa",
+      "job/assets/p0001-mask-c7.png": "3821f33a55b9798a81ab23ba21def73cfe35542111649073ab643b7df2a993d6",
+      "job/assets/p0001-mask-c8.png": "937426d0ac2abd9f806827ce3fefcf25a0efbbc685bf02d1efac5af5e82424f9",
+      "job/assets/p0001-mask-c9.png": "06c4d594e34a0d0b7c4f9c02c8f76e17e42e1afbc55e4b6fdd5d792aeb7b7481",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "95fe75ca812bcea06b842b4cd616615f0f3aefc34579596b9921a25269bdfdba",
+      "job/document.md": "2510566cf9bec40fe791997b73df7f7bcd5fefffef123cc55b9dd195f5a34382",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "ee9128e618f3139e957ff4336250da32e1c99984b9eddc97fb04d0c77d0292c3",
+      "job/job-status.json": "93138c889904690036991d9d8330f277e6b7c1423e55ee583c7cc03c269341d6",
+      "job/run-manifest.json": "cb1e558e489ee9f317c28aa6d22d9a88c7414d09d904274cb309af3a295338b1",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "5597c6f48268714c76354916b0657b7acfa913f963572ab3df028dae94144435",
+      "time.txt": "4bc9b880deeb061bb88d52afda202947d130acd469595aaa23c2a3dc98cae8fa"
+    }
+  },
+  "document_status": "partial",
+  "schema_version": "1.10",
+  "reference": null,
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1339,
+        1889
+      ],
+      "coordinate_space": "raster_page",
+      "status": "partial",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0012",
+        "b0011",
+        "b0009",
+        "b0010",
+        "b0013",
+        "b0014",
+        "b0015",
+        "b0016",
+        "b0017",
+        "b0018",
+        "b0019"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_column_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0012",
+          "b0011",
+          "b0009",
+          "b0010",
+          "b0013",
+          "b0014",
+          "b0015",
+          "b0016",
+          "b0017",
+          "b0018",
+          "b0019"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0012",
+          "r0011",
+          "r0009",
+          "r0010",
+          "r0013",
+          "r0014",
+          "r0015",
+          "r0016",
+          "r0017",
+          "r0018",
+          "r0019"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0012",
+          "r0011",
+          "r0009",
+          "r0010",
+          "r0013",
+          "r0014",
+          "r0015",
+          "r0016",
+          "r0017",
+          "r0018",
+          "r0019"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            773,
+            54,
+            1187,
+            86
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.888780951,
+          "candidate_rank": 22,
+          "original_class_id": 12,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 132,
+          "model_label": "header",
+          "original_bbox": [
+            773.853882,
+            54.828461,
+            1186.531982,
+            85.85051
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            151,
+            132,
+            319,
+            165
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.861000061,
+          "candidate_rank": 56,
+          "original_class_id": 17,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 55,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            151.265381,
+            132.219177,
+            318.63324,
+            164.87619
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            90,
+            176,
+            1242,
+            255
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.937528253,
+          "candidate_rank": 61,
+          "original_class_id": 22,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 969,
+          "model_label": "text",
+          "original_bbox": [
+            90.802605,
+            176.644974,
+            1241.063599,
+            254.921066
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            91,
+            263,
+            1243,
+            342
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.929781556,
+          "candidate_rank": 60,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 973,
+          "model_label": "text",
+          "original_bbox": [
+            91.569023,
+            263.09848,
+            1242.918579,
+            341.697449
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            150,
+            350,
+            718,
+            384
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.841544628,
+          "candidate_rank": 95,
+          "original_class_id": 22,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 240,
+          "model_label": "text",
+          "original_bbox": [
+            150.38736,
+            350.312805,
+            717.258423,
+            383.810638
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            92,
+            393,
+            1242,
+            473
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.929337263,
+          "candidate_rank": 93,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 968,
+          "model_label": "text",
+          "original_bbox": [
+            92.423325,
+            393.950592,
+            1241.398926,
+            472.671326
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            92,
+            481,
+            1241,
+            560
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.926404059,
+          "candidate_rank": 105,
+          "original_class_id": 22,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 968,
+          "model_label": "text",
+          "original_bbox": [
+            92.483932,
+            481.617584,
+            1240.979126,
+            559.196655
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            91,
+            569,
+            1243,
+            779
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.960506022,
+          "candidate_rank": 113,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 2683,
+          "model_label": "text",
+          "original_bbox": [
+            91.009193,
+            569.36377,
+            1242.609741,
+            778.316711
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "figure_title",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            143,
+            844,
+            249,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.856319904,
+          "candidate_rank": 142,
+          "original_class_id": 7,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 39,
+          "model_label": "figure_title",
+          "original_bbox": [
+            143.914429,
+            844.629395,
+            248.92984,
+            873.007019
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "vision_footnote",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1042,
+            843,
+            1214,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.851635873,
+          "candidate_rank": 170,
+          "original_class_id": 24,
+          "candidate_id": 16,
+          "mask_row": 16,
+          "mask_nonzero": 66,
+          "model_label": "vision_footnote",
+          "original_bbox": [
+            1042.638184,
+            843.407715,
+            1213.275024,
+            873.243774
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            146,
+            786,
+            900,
+            822
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.874178648,
+          "candidate_rank": 130,
+          "original_class_id": 22,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 317,
+          "model_label": "text",
+          "original_bbox": [
+            146.071594,
+            786.656067,
+            899.919983,
+            821.070129
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "figure_title",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            487,
+            843,
+            848,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.867935717,
+          "candidate_rank": 147,
+          "original_class_id": 7,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 150,
+          "model_label": "figure_title",
+          "original_bbox": [
+            487.943665,
+            843.715759,
+            847.523315,
+            873.643494
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "table",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            94,
+            883,
+            1239,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.964829504,
+          "candidate_rank": 186,
+          "original_class_id": 21,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 2904,
+          "model_label": "table",
+          "original_bbox": [
+            94.799004,
+            883.299744,
+            1238.744507,
+            1110.424072
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            91,
+            1137,
+            1242,
+            1261
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.95085907,
+          "candidate_rank": 218,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1575,
+          "model_label": "text",
+          "original_bbox": [
+            91.982048,
+            1137.59375,
+            1241.887329,
+            1260.307617
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0015",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            89,
+            1268,
+            1242,
+            1522
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.968997419,
+          "candidate_rank": 228,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 3293,
+          "model_label": "text",
+          "original_bbox": [
+            89.488464,
+            1268.865479,
+            1241.909668,
+            1521.805054
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0016",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            91,
+            1530,
+            1242,
+            1652
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.956257343,
+          "candidate_rank": 237,
+          "original_class_id": 22,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 1574,
+          "model_label": "text",
+          "original_bbox": [
+            91.345825,
+            1530.258179,
+            1241.503296,
+            1651.810303
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0017",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            92,
+            1660,
+            1244,
+            1740
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.936140835,
+          "candidate_rank": 253,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 970,
+          "model_label": "text",
+          "original_bbox": [
+            92.048927,
+            1660.886841,
+            1243.051514,
+            1739.693726
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "display_formula",
+          "id": "l0018",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            381,
+            1747,
+            953,
+            1783
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.897053361,
+          "candidate_rank": 262,
+          "original_class_id": 5,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 242,
+          "model_label": "formula",
+          "original_bbox": [
+            381.98999,
+            1747.822754,
+            952.982788,
+            1782.180786
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "number",
+          "id": "l0019",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1151,
+            1811,
+            1203,
+            1839
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.797312617,
+          "candidate_rank": 290,
+          "original_class_id": 16,
+          "candidate_id": 18,
+          "mask_row": 18,
+          "mask_nonzero": 15,
+          "model_label": "number",
+          "original_bbox": [
+            1151.223145,
+            1811.660645,
+            1202.887573,
+            1838.45105
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            773,
+            54,
+            1187,
+            86
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            151,
+            132,
+            319,
+            165
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            90,
+            176,
+            1242,
+            255
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            91,
+            263,
+            1243,
+            342
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            150,
+            350,
+            718,
+            384
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            92,
+            393,
+            1242,
+            473
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            92,
+            481,
+            1241,
+            560
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            91,
+            569,
+            1243,
+            779
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            143,
+            844,
+            249,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            1042,
+            843,
+            1214,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            146,
+            786,
+            900,
+            822
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            487,
+            843,
+            848,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            94,
+            883,
+            1239,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "table"
+        },
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014"
+          ],
+          "bbox": [
+            91,
+            1137,
+            1242,
+            1261
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0015",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0015"
+          ],
+          "bbox": [
+            89,
+            1268,
+            1242,
+            1522
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0016",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0016"
+          ],
+          "bbox": [
+            91,
+            1530,
+            1242,
+            1652
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0017",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0017"
+          ],
+          "bbox": [
+            92,
+            1660,
+            1244,
+            1740
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0018",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0018"
+          ],
+          "bbox": [
+            381,
+            1747,
+            953,
+            1783
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "formula"
+        },
+        {
+          "id": "r0019",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0019"
+          ],
+          "bbox": [
+            1151,
+            1811,
+            1203,
+            1839
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            773,
+            54,
+            1187,
+            86
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 第一节 水利水电工程项目成本构成\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "## 第一节 水利水电工程项目成本构成\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 87,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                773,
+                54,
+                1187,
+                86
+              ],
+              "canvas_size": [
+                928,
+                96
+              ],
+              "content_size": [
+                928,
+                72
+              ],
+              "pad_offset": [
+                0,
+                12
+              ],
+              "scale": 2.241545893719807,
+              "rounding_error": [
+                -1.1368683772161603e-13,
+                0.27053140096617767
+              ],
+              "canvas_to_page_affine": [
+                0.44612068965517243,
+                0,
+                773,
+                0,
+                0.4444444444444444,
+                48.666666666666664
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2767,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2353,
+                    "raw_output": "## 第一节 水利水电工程项目成本构成\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 第一节 水利水电工程项目成本构成\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      928,
+                      96
+                    ],
+                    "content_size": [
+                      928,
+                      72
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      12
+                    ],
+                    "rounding_error": [
+                      -1.1368683772161603e-13,
+                      0.27053140096617767
+                    ],
+                    "scale": 2.241545893719807,
+                    "token_count": 87
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2353,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 第一节 水利水电工程项目成本构成\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            151,
+            132,
+            319,
+            165
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "### 1. 基础单价\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "### 1. 基础单价\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                151,
+                132,
+                319,
+                165
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                119
+              ],
+              "pad_offset": [
+                0,
+                4
+              ],
+              "scale": 3.619047619047619,
+              "rounding_error": [
+                0,
+                -0.4285714285714306
+              ],
+              "canvas_to_page_affine": [
+                0.27631578947368424,
+                0,
+                151,
+                0,
+                0.2773109243697479,
+                130.890756302521
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2056,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1698,
+                    "raw_output": "### 1. 基础单价\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "### 1. 基础单价\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      119
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      4
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4285714285714306
+                    ],
+                    "scale": 3.619047619047619,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1698,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "### 1. 基础单价\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            90,
+            176,
+            1242,
+            255
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                90,
+                176,
+                1242,
+                255
+              ],
+              "canvas_size": [
+                1152,
+                64
+              ],
+              "content_size": [
+                933,
+                64
+              ],
+              "pad_offset": [
+                109,
+                0
+              ],
+              "scale": 0.810126582278481,
+              "rounding_error": [
+                -0.2658227848100978,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.234726688102894,
+                0,
+                -44.58520900321545,
+                0,
+                1.234375,
+                176
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2541,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2191,
+                    "raw_output": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      64
+                    ],
+                    "content_size": [
+                      933,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      109,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.2658227848100978,
+                      0.0
+                    ],
+                    "scale": 0.810126582278481,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2191,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            91,
+            263,
+            1243,
+            342
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                91,
+                263,
+                1243,
+                342
+              ],
+              "canvas_size": [
+                1152,
+                64
+              ],
+              "content_size": [
+                933,
+                64
+              ],
+              "pad_offset": [
+                109,
+                0
+              ],
+              "scale": 0.810126582278481,
+              "rounding_error": [
+                -0.2658227848100978,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.234726688102894,
+                0,
+                -43.58520900321545,
+                0,
+                1.234375,
+                263
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1909,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1563,
+                    "raw_output": "（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      64
+                    ],
+                    "content_size": [
+                      933,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      109,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.2658227848100978,
+                      0.0
+                    ],
+                    "scale": 0.810126582278481,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1563,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            150,
+            350,
+            718,
+            384
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "1）基本工资，由技能工资和岗位工资构成。\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "1）基本工资，由技能工资和岗位工资构成。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                150,
+                350,
+                718,
+                384
+              ],
+              "canvas_size": [
+                1056,
+                64
+              ],
+              "content_size": [
+                1056,
+                63
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 1.8591549295774648,
+              "rounding_error": [
+                0,
+                -0.21126760563380031
+              ],
+              "canvas_to_page_affine": [
+                0.5378787878787878,
+                0,
+                150,
+                0,
+                0.5396825396825397,
+                350
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2019,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1710,
+                    "raw_output": "1）基本工资，由技能工资和岗位工资构成。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "1）基本工资，由技能工资和岗位工资构成。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      64
+                    ],
+                    "content_size": [
+                      1056,
+                      63
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.21126760563380031
+                    ],
+                    "scale": 1.8591549295774648,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1710,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "1）基本工资，由技能工资和岗位工资构成。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            92,
+            393,
+            1242,
+            473
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                92,
+                393,
+                1242,
+                473
+              ],
+              "canvas_size": [
+                1152,
+                64
+              ],
+              "content_size": [
+                920,
+                64
+              ],
+              "pad_offset": [
+                116,
+                0
+              ],
+              "scale": 0.8,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.25,
+                0,
+                -53,
+                0,
+                1.25,
+                393
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2387,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2045,
+                    "raw_output": "技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      64
+                    ],
+                    "content_size": [
+                      920,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      116,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 0.8,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2045,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            92,
+            481,
+            1241,
+            560
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                92,
+                481,
+                1241,
+                560
+              ],
+              "canvas_size": [
+                1152,
+                64
+              ],
+              "content_size": [
+                931,
+                64
+              ],
+              "pad_offset": [
+                110,
+                0
+              ],
+              "scale": 0.810126582278481,
+              "rounding_error": [
+                0.1645569620253582,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.234156820622986,
+                0,
+                -43.75725026852845,
+                0,
+                1.234375,
+                481
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1799,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1455,
+                    "raw_output": "岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      64
+                    ],
+                    "content_size": [
+                      931,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      110,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.1645569620253582,
+                      0.0
+                    ],
+                    "scale": 0.810126582278481,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1455,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            91,
+            569,
+            1243,
+            779
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 252,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                91,
+                569,
+                1243,
+                779
+              ],
+              "canvas_size": [
+                1152,
+                224
+              ],
+              "content_size": [
+                1152,
+                210
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 1,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1,
+                0,
+                91,
+                0,
+                1,
+                562
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5802,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4051,
+                    "raw_output": "2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      224
+                    ],
+                    "content_size": [
+                      1152,
+                      210
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 1.0,
+                    "token_count": 252
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4051,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            143,
+            844,
+            249,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 表 11-1\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "## 表 11-1\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0012.png",
+              "source_bbox": [
+                143,
+                844,
+                249,
+                874
+              ],
+              "canvas_size": [
+                480,
+                160
+              ],
+              "content_size": [
+                480,
+                136
+              ],
+              "pad_offset": [
+                0,
+                12
+              ],
+              "scale": 4.528301886792453,
+              "rounding_error": [
+                0,
+                0.15094339622640973
+              ],
+              "canvas_to_page_affine": [
+                0.22083333333333333,
+                0,
+                143,
+                0,
+                0.22058823529411764,
+                841.3529411764706
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1892,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1568,
+                    "raw_output": "## 表 11-1\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 表 11-1\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      160
+                    ],
+                    "content_size": [
+                      480,
+                      136
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      12
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.15094339622640973
+                    ],
+                    "scale": 4.528301886792453,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1568,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 表 11-1\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            1042,
+            843,
+            1214,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 单位：元/工时\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "## 单位：元/工时\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                1042,
+                843,
+                1214,
+                874
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                110
+              ],
+              "pad_offset": [
+                0,
+                9
+              ],
+              "scale": 3.5348837209302326,
+              "rounding_error": [
+                0,
+                0.418604651162795
+              ],
+              "canvas_to_page_affine": [
+                0.28289473684210525,
+                0,
+                1042,
+                0,
+                0.2818181818181818,
+                840.4636363636364
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1869,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1539,
+                    "raw_output": "## 单位：元/工时\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 单位：元/工时\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      110
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      9
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.418604651162795
+                    ],
+                    "scale": 3.5348837209302326,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1539,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 单位：元/工时\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            146,
+            786,
+            900,
+            822
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 74,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                146,
+                786,
+                900,
+                822
+              ],
+              "canvas_size": [
+                1184,
+                64
+              ],
+              "content_size": [
+                1184,
+                57
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 1.570291777188329,
+              "rounding_error": [
+                0,
+                0.4694960212201593
+              ],
+              "canvas_to_page_affine": [
+                0.6368243243243243,
+                0,
+                146,
+                0,
+                0.631578947368421,
+                784.1052631578947
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2024,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1714,
+                    "raw_output": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1184,
+                      64
+                    ],
+                    "content_size": [
+                      1184,
+                      57
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4694960212201593
+                    ],
+                    "scale": 1.570291777188329,
+                    "token_count": 74
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1714,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            487,
+            843,
+            848,
+            874
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 一 般地区人工预算单价计算标准\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "## 一 般地区人工预算单价计算标准\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 81,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                487,
+                843,
+                848,
+                874
+              ],
+              "canvas_size": [
+                864,
+                96
+              ],
+              "content_size": [
+                864,
+                74
+              ],
+              "pad_offset": [
+                0,
+                11
+              ],
+              "scale": 2.3933518005540164,
+              "rounding_error": [
+                1.1368683772161603e-13,
+                -0.19390581717451028
+              ],
+              "canvas_to_page_affine": [
+                0.41782407407407407,
+                0,
+                487,
+                0,
+                0.4189189189189189,
+                838.3918918918919
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1978,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1633,
+                    "raw_output": "## 一 般地区人工预算单价计算标准\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 一 般地区人工预算单价计算标准\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      864,
+                      96
+                    ],
+                    "content_size": [
+                      864,
+                      74
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      11
+                    ],
+                    "rounding_error": [
+                      1.1368683772161603e-13,
+                      -0.19390581717451028
+                    ],
+                    "scale": 2.3933518005540164,
+                    "token_count": 81
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1633,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 一 般地区人工预算单价计算标准\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            94,
+            883,
+            1239,
+            1111
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "html",
+            "text": "<table><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>",
+            "resource": "assets/p0001-b0013.png",
+            "table": {
+              "rows": 5,
+              "columns": 3,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "序号",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "定额人等级",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "一般地区",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "1",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "高级熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "10.26",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "2",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 2,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "7.61",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "3",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "半熟练工",
+                  "bbox": null
+                },
+                {
+                  "row": 3,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "5.95",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "4",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "普工",
+                  "bbox": null
+                },
+                {
+                  "row": 4,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "4.90",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "<table border=1><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 252,
+              "source_crop": "assets/p0001-b0013.png",
+              "source_bbox": [
+                94,
+                883,
+                1239,
+                1111
+              ],
+              "canvas_size": [
+                1152,
+                224
+              ],
+              "content_size": [
+                1125,
+                224
+              ],
+              "pad_offset": [
+                13,
+                0
+              ],
+              "scale": 0.9824561403508771,
+              "rounding_error": [
+                0.0877192982457018,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0177777777777777,
+                0,
+                80.7688888888889,
+                0,
+                1.0178571428571428,
+                883
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 6166,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4545,
+                    "raw_output": "<table border=1><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "<table border=1><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      224
+                    ],
+                    "content_size": [
+                      1125,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      13,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0877192982457018,
+                      0.0
+                    ],
+                    "scale": 0.9824561403508771,
+                    "token_count": 252
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4545,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "<table border=1><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0014",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0014"
+          ],
+          "bbox": [
+            91,
+            1137,
+            1242,
+            1261
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0014",
+            "raw_output": "（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 144,
+              "source_crop": "assets/p0001-b0014.png",
+              "source_bbox": [
+                91,
+                1137,
+                1242,
+                1261
+              ],
+              "canvas_size": [
+                1152,
+                128
+              ],
+              "content_size": [
+                1152,
+                124
+              ],
+              "pad_offset": [
+                0,
+                2
+              ],
+              "scale": 1.000868809730669,
+              "rounding_error": [
+                0,
+                -0.10773240660296324
+              ],
+              "canvas_to_page_affine": [
+                0.9991319444444444,
+                0,
+                91,
+                0,
+                1,
+                1135
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3515,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2753,
+                    "raw_output": "（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      128
+                    ],
+                    "content_size": [
+                      1152,
+                      124
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.10773240660296324
+                    ],
+                    "scale": 1.000868809730669,
+                    "token_count": 144
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2753,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 10,
+          "id": "b0015",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0015"
+          ],
+          "bbox": [
+            89,
+            1268,
+            1242,
+            1522
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0015",
+            "raw_output": "1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 288,
+              "source_crop": "assets/p0001-b0015.png",
+              "source_bbox": [
+                89,
+                1268,
+                1242,
+                1522
+              ],
+              "canvas_size": [
+                1152,
+                256
+              ],
+              "content_size": [
+                1152,
+                254
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 0.9991326973113617,
+              "rounding_error": [
+                0,
+                0.22029488291414623
+              ],
+              "canvas_to_page_affine": [
+                1.0008680555555556,
+                0,
+                89,
+                0,
+                1,
+                1267
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 6424,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4458,
+                    "raw_output": "1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      256
+                    ],
+                    "content_size": [
+                      1152,
+                      254
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.22029488291414623
+                    ],
+                    "scale": 0.9991326973113617,
+                    "token_count": 288
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4458,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 11,
+          "id": "b0016",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0016"
+          ],
+          "bbox": [
+            91,
+            1530,
+            1242,
+            1652
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0016",
+            "raw_output": "2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 144,
+              "source_crop": "assets/p0001-b0016.png",
+              "source_bbox": [
+                91,
+                1530,
+                1242,
+                1652
+              ],
+              "canvas_size": [
+                1152,
+                128
+              ],
+              "content_size": [
+                1152,
+                122
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 1.000868809730669,
+              "rounding_error": [
+                0,
+                -0.10599478714162558
+              ],
+              "canvas_to_page_affine": [
+                0.9991319444444444,
+                0,
+                91,
+                0,
+                1,
+                1527
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3501,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2714,
+                    "raw_output": "2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      128
+                    ],
+                    "content_size": [
+                      1152,
+                      122
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.10599478714162558
+                    ],
+                    "scale": 1.000868809730669,
+                    "token_count": 144
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2714,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 12,
+          "id": "b0017",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0017"
+          ],
+          "bbox": [
+            92,
+            1660,
+            1244,
+            1740
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n",
+            "resource": "assets/p0001-b0017.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0017",
+            "raw_output": "3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0017.png",
+              "source_bbox": [
+                92,
+                1660,
+                1244,
+                1740
+              ],
+              "canvas_size": [
+                1152,
+                64
+              ],
+              "content_size": [
+                922,
+                64
+              ],
+              "pad_offset": [
+                115,
+                0
+              ],
+              "scale": 0.8,
+              "rounding_error": [
+                0.39999999999997726,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.2494577006507592,
+                0,
+                -51.687635574837316,
+                0,
+                1.25,
+                1660
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2192,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1869,
+                    "raw_output": "3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1152,
+                      64
+                    ],
+                    "content_size": [
+                      922,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      115,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.39999999999997726,
+                      0.0
+                    ],
+                    "scale": 0.8,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1869,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 13,
+          "id": "b0018",
+          "page_id": "p0001",
+          "type": "formula",
+          "source_region_ids": [
+            "r0018"
+          ],
+          "bbox": [
+            381,
+            1747,
+            953,
+            1783
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "partial",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 运输保险费=材料原价×材料运输保险费率\n",
+            "resource": "assets/p0001-b0018.png",
+            "display": true
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0018",
+            "raw_output": "## 运输保险费=材料原价×材料运输保险费率\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 96,
+              "source_crop": "assets/p0001-b0018.png",
+              "source_bbox": [
+                381,
+                1747,
+                953,
+                1783
+              ],
+              "canvas_size": [
+                1024,
+                96
+              ],
+              "content_size": [
+                1024,
+                64
+              ],
+              "pad_offset": [
+                0,
+                16
+              ],
+              "scale": 1.7902097902097902,
+              "rounding_error": [
+                0,
+                -0.4475524475524537
+              ],
+              "canvas_to_page_affine": [
+                0.55859375,
+                0,
+                381,
+                0,
+                0.5625,
+                1738
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2197,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1738,
+                    "raw_output": "## 运输保险费=材料原价×材料运输保险费率\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 运输保险费=材料原价×材料运输保险费率\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      96
+                    ],
+                    "content_size": [
+                      1024,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      16
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4475524475524537
+                    ],
+                    "scale": 1.7902097902097902,
+                    "token_count": 96
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1738,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "unverified",
+              "reason": "invalid_formula_syntax",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 运输保险费=材料原价×材料运输保险费率\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": "invalid_formula_syntax",
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0019",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0019"
+          ],
+          "bbox": [
+            1151,
+            1811,
+            1203,
+            1839
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 383\n",
+            "resource": "assets/p0001-b0019.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0019",
+            "raw_output": "## 383\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 77,
+              "source_crop": "assets/p0001-b0019.png",
+              "source_bbox": [
+                1151,
+                1811,
+                1203,
+                1839
+              ],
+              "canvas_size": [
+                352,
+                224
+              ],
+              "content_size": [
+                352,
+                190
+              ],
+              "pad_offset": [
+                0,
+                17
+              ],
+              "scale": 6.769230769230769,
+              "rounding_error": [
+                0,
+                0.4615384615384528
+              ],
+              "canvas_to_page_affine": [
+                0.14772727272727273,
+                0,
+                1151,
+                0,
+                0.14736842105263157,
+                1808.4947368421053
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1841,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1515,
+                    "raw_output": "## 383\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 383\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      352,
+                      224
+                    ],
+                    "content_size": [
+                      352,
+                      190
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      17
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4615384615384528
+                    ],
+                    "scale": 6.769230769230769,
+                    "token_count": 77
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1515,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 383\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0002",
+          "target_block_id": "b0003",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 414,
+      "height": 32,
+      "bbox": [
+        773,
+        54,
+        1187,
+        86
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 168,
+      "height": 33,
+      "bbox": [
+        151,
+        132,
+        319,
+        165
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 1152,
+      "height": 79,
+      "bbox": [
+        90,
+        176,
+        1242,
+        255
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 1152,
+      "height": 79,
+      "bbox": [
+        91,
+        263,
+        1243,
+        342
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 568,
+      "height": 34,
+      "bbox": [
+        150,
+        350,
+        718,
+        384
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 1150,
+      "height": 80,
+      "bbox": [
+        92,
+        393,
+        1242,
+        473
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 1149,
+      "height": 79,
+      "bbox": [
+        92,
+        481,
+        1241,
+        560
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 1152,
+      "height": 210,
+      "bbox": [
+        91,
+        569,
+        1243,
+        779
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 106,
+      "height": 30,
+      "bbox": [
+        143,
+        844,
+        249,
+        874
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 172,
+      "height": 31,
+      "bbox": [
+        1042,
+        843,
+        1214,
+        874
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 754,
+      "height": 36,
+      "bbox": [
+        146,
+        786,
+        900,
+        822
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 361,
+      "height": 31,
+      "bbox": [
+        487,
+        843,
+        848,
+        874
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 1145,
+      "height": 228,
+      "bbox": [
+        94,
+        883,
+        1239,
+        1111
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0014",
+      "path": "assets/p0001-b0014.png",
+      "media_type": "image/png",
+      "source_block_id": "b0014",
+      "width": 1151,
+      "height": 124,
+      "bbox": [
+        91,
+        1137,
+        1242,
+        1261
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0015",
+      "path": "assets/p0001-b0015.png",
+      "media_type": "image/png",
+      "source_block_id": "b0015",
+      "width": 1153,
+      "height": 254,
+      "bbox": [
+        89,
+        1268,
+        1242,
+        1522
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0016",
+      "path": "assets/p0001-b0016.png",
+      "media_type": "image/png",
+      "source_block_id": "b0016",
+      "width": 1151,
+      "height": 122,
+      "bbox": [
+        91,
+        1530,
+        1242,
+        1652
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0017",
+      "path": "assets/p0001-b0017.png",
+      "media_type": "image/png",
+      "source_block_id": "b0017",
+      "width": 1152,
+      "height": 80,
+      "bbox": [
+        92,
+        1660,
+        1244,
+        1740
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0018",
+      "path": "assets/p0001-b0018.png",
+      "media_type": "image/png",
+      "source_block_id": "b0018",
+      "width": 572,
+      "height": 36,
+      "bbox": [
+        381,
+        1747,
+        953,
+        1783
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0019",
+      "path": "assets/p0001-b0019.png",
+      "media_type": "image/png",
+      "source_block_id": "b0019",
+      "width": 52,
+      "height": 28,
+      "bbox": [
+        1151,
+        1811,
+        1203,
+        1839
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "### 1. 基础单价\n\n\n基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n\n\n（1）人工预算单价。是指支付给从事建筑及安装工程施工的生产工人的各项费用。包括生产工人的基本工资和辅助工资。\n\n\n1）基本工资，由技能工资和岗位工资构成。\n\n\n技能工资是根据不同技术岗位对劳动技能的要求和职工实际具备的劳动技能水平及工作实绩，经考试、考核合格确定的工资。\n\n\n岗位工资是根据职工所在岗位的责任、技能要求、劳动强度和劳动条件的差别所确定的工资。\n\n\n2）辅助工资，是在基本工资之外，以其他形式支付给职工的工资性收入。包括：①根据国家有关规定属于工资性质的各种津贴，主要包括地区津贴、施工津贴和加班津贴等；②生产工人年有效施工天数以外非作业天数的工资，包括职工学习、培训期间的工资，调动工作、探亲和休假期间的工资，因气候影响的停工工资，女工哺乳时间的工资，病假在6个月以内的工资及产、婚、丧假期的工资。\n\n\n表 11-1\n\n\n单位：元/工时\n\n\n本书仅列出了一般地区人工预算单价计算标准见表 11-1。\n\n\n一 般地区人工预算单价计算标准\n\n\n<table><tr><td>序号</td><td>定额人等级</td><td>一般地区</td></tr><tr><td>1</td><td>高级熟练工</td><td>10.26</td></tr><tr><td>2</td><td>熟练工</td><td>7.61</td></tr><tr><td>3</td><td>半熟练工</td><td>5.95</td></tr><tr><td>4</td><td>普工</td><td>4.90</td></tr></table>\n\n（2）材料预算价格。材料预算价格是指购买地运到工地分仓库（或堆放场地）的出库价格。材料预算价格一般包括材料原价、运杂费、运输保险费、采购及保管费4项，个别材料若规定另计包装费的另行计算。\n\n\n1）材料原价。除电及火工产品外，材料原价按工程所在地区就近的大物资供应公司、材料交易中心的市场成交价或设计选定的生产厂家的出厂价计算。有时也可以工程所在地建设工程造价管理部门公布的信息价计算。电及火工产品执行国家定价。包装费一般包含在材料原价中。若材料原价中未包括包装费用，而在运输和保管过程中必须包装的材料，则应另计包装费，按照包装材料的品种、规格、包装费用和正常的折旧摊销费，包装费按工程所在地实际资料和有关规定计算。\n\n\n2）运杂费。指材料由交货地点运至工地分仓库（或相当于工地分仓库的堆放场地）所发生的各种运载车辆的运费、调车费、装卸费和其他杂费等费用。一般分铁路、公路、水路几种方式计算其运杂费。\n\n\n3）运输保险费。指材料在运输过程中发生的保险费，按工程所在省、自治区、直辖市或中国人民保险公司的有关规定计算。\n\n\n![原图](assets/p0001-b0018.png)\n\n[待核验：b0018](assets/p0001-b0018.png)\n\n> 输出的完整性或结构尚未确认，请核对原图。\n",
+  "quality": {
+    "text_excerpt": {
+      "exact": true,
+      "edit_distance": 0,
+      "reference_chars": 63,
+      "cer": 0.0,
+      "actual": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n",
+      "reference": "基础单价是计算工程单价的基础，包括人工预算单价，材料预算价格，电、风、水预算价格，施工机械使用费，砂石料单价，混凝土材料单价。\n"
+    },
+    "tables": [
+      {
+        "annotation_id": 10,
+        "matched": true,
+        "block_id": "b0013",
+        "status": "ok",
+        "rows": 5,
+        "columns": 3,
+        "reference_rows": 5,
+        "reference_columns": 3,
+        "structure_exact": true,
+        "cell_exact": 14,
+        "cell_count": 15,
+        "cell_differences": [
+          {
+            "index": 0,
+            "exact": false,
+            "actual": "序号",
+            "reference": "序 号"
+          }
+        ]
+      }
+    ]
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "旧回归仅核验已有参考子集，不声明整页逐字正确"
+    ]
+  },
+  "reference_plan": null,
+  "alignment": [],
+  "non_text_evidence": [],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

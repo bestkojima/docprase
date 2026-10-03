@@ -1,0 +1,35 @@
+{
+  "reason": "Concurrent real-model validation exceeded available memory; SIGKILL observed; preserve failed attempt and rerun serially.",
+  "runner_pid": 401331,
+  "terminated_owned_children": [
+    402223
+  ],
+  "safety_returncode": 247,
+  "completed_receipts": {
+    "development/odb-01": {
+      "command": [
+        "/home/dr/project/docprase/output/issue31-full-20261003/candidate/runtime/dococr_cli",
+        "--config",
+        "/home/dr/project/docprase/output/issue31-full-20261003/candidate/config.json",
+        "--input",
+        "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_55196913.pdf_0.jpg",
+        "--out",
+        "/home/dr/project/docprase/output/issue31-full-20261003/development/odb-01/job"
+      ],
+      "input_sha256": "3b6067bb474e8d05d11d5404e4c8baf07f80d11c7fc327f8facf4b326c0a3c5d",
+      "returncode": 137,
+      "candidate_sha256": "b7acb7aaea3f2a4155228753ea36ae5e6e3e446c0651ae96915499b1d8c42836",
+      "evaluation_sha256": "ed367490e20d82af94779ed15b41d361a375ec7c961673a614a022f9a79e9ac7",
+      "execution": "fresh_public_cli_job",
+      "elapsed_seconds": 77.98833413299872,
+      "models_intact": true,
+      "files_sha256": {
+        "job/job-events.jsonl": "773de086c5411908bc45495737a0466d0f54b4bee9451e0fc761f82636b92033",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.log": "e3296b60baa18c909d9a2468f17322c189f13ef2395d513bed70886c11d50e72",
+        "time.txt": "343d19d8809db1e78b88997f307a0c2b371cd91367fc97b0a92d2dcedbcd1cfb"
+      }
+    }
+  },
+  "kernel_oom_log_available": false
+}

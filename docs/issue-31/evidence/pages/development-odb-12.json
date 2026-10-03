@@ -1,0 +1,4392 @@
+{
+  "key": "development/odb-12",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+    "sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-12/job"
+    ],
+    "input_sha256": "f5a03228dac83bea5afc50cf86488ab7bb82c65de0df47fdda828e09ea6d0b3f",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 51.92450763899251,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "fae5de9cf3eaf06b23bf2b461a8b97aa80237e2200a04b52c195b0de5c8cf3ee",
+      "job/assets/p0001-b0002.png": "99abfc36460abf908756b50c17fd79b8018217e047adfdf7eb7b487c48a370b6",
+      "job/assets/p0001-b0003.png": "74ae0a8b4a8c368450140f6ec67862401eebca651467cc29a261c23a9d8a93d0",
+      "job/assets/p0001-b0004.png": "d476887912eb954a91db2d5b8b9d0cc29755e3c1b452a9da09b6924dd9976fc2",
+      "job/assets/p0001-b0005.png": "519e22b98a45272e6ce8dec995084936b5dc7f3b18f4d201a8f243787ebe6784",
+      "job/assets/p0001-b0006.png": "ea17a353b8442f833b7ed9c3de95c2c7d37edf4ebd581a4a4b1ebdbab3e26eec",
+      "job/assets/p0001-b0007.png": "d713bed9cad0a5c22571ac80b802c74e23e0d686cc5589913eb3e60bee50eb75",
+      "job/assets/p0001-b0008.png": "f5c7cc8c60e3b6e20bb259d0484e1942c38b55a8774f1171f0fad826ce5c0671",
+      "job/assets/p0001-b0009.png": "a48226e0f00aeb66ff9538033402e2392853873a7fd6fd088137c47dbeb63b34",
+      "job/assets/p0001-b0010.png": "5b23f37770242f9c8b38143339760b51db81deadf166c5092cddbde0bb502cf2",
+      "job/assets/p0001-b0011.png": "f4a637e7338e73590faa5ea488c1ae2d4fddc8c373ab40b53246805bb2db0524",
+      "job/assets/p0001-b0012.png": "1cfe3f3019fada2d5219837e44fd09c853d82f2ce7efe603ac4afc4b4f7fe5bb",
+      "job/assets/p0001-b0013.png": "e8644e1082f56637476f64e3e74bbf67fadd53288677ebe6a9d33928dcd6ef33",
+      "job/assets/p0001-b0014.png": "224dcefa6346d9c1e23f203a565c9df9e950e7cd0a58c4f5be71aa1ec2db3cd9",
+      "job/assets/p0001-b0015.png": "501f1790f3a1d28fee5f9c234fa2c6f2c566f8f190ae2d10adf3a9deecedb64d",
+      "job/assets/p0001-fetch_name_0.f32": "5dc41942815625e4b2236b0b6bd5d4367a831c2747d5b5b365303b8d61f59157",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "2567da9cc4e6cdb7b5a799cb25f502c4fc5980a596310bc02edce58e4d94e826",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "140d4a2eb243b42c951db914d11f2d0d0b006976f601bc415c1634db54a4f9c4",
+      "job/assets/p0001-layout-overlay.png": "affa679f72ed632cee7922878661307d3c88ddadfd61c580c2733b9b15f7afcc",
+      "job/assets/p0001-mask-c0.png": "d9de06f6b952acd9d16bce8174f756a37076329322cd4651a63832b5e70b91e6",
+      "job/assets/p0001-mask-c1.png": "218240c77fa506c7a37e3abf443542ce4d3f7ebb3c42aa3bc1e04161a0595d83",
+      "job/assets/p0001-mask-c10.png": "9c04a93ef9ba62daabc2e05140df48d5e4394c19ba2d3617c1b41bcca438173c",
+      "job/assets/p0001-mask-c11.png": "930e5148c5e0e8ffd0229f3bfa5ea649b0bf19502962c37ad443a76cb77bf9f0",
+      "job/assets/p0001-mask-c12.png": "da6b1dcde29c06b55a50c099cd8e8afda64b1b71acfd38e966cfeb6f49423f15",
+      "job/assets/p0001-mask-c13.png": "9c02b35375dc06db404fb65a46b2e858b09132a7437d569e5eb56e317fc1bbca",
+      "job/assets/p0001-mask-c14.png": "932f3cb71ddd35ee96fc6e5d364466c7bbea8d6938bda7de94a7c9c3208c78ab",
+      "job/assets/p0001-mask-c15.png": "20af654ba49af09b43885c9c89a36b0fe39a7200a7a68c26097b35d8cf8c28e7",
+      "job/assets/p0001-mask-c16.png": "efa10cbff5c7384278b55702d1a4928a2fae1162eadfa0d97a27fe3ef1e1143a",
+      "job/assets/p0001-mask-c17.png": "8dc98492cee84607f88e5009c47dcb52e2a962a19e7997b402d00d3b1694cbce",
+      "job/assets/p0001-mask-c18.png": "472cfc0e4f592b5e3ec21e684be4a4273678fc524c2a88501f402dd0a67a502a",
+      "job/assets/p0001-mask-c19.png": "5599a72a21773280d1d0212e83a5e5ad8016936cced26b53bf320cd56adf5320",
+      "job/assets/p0001-mask-c2.png": "5bfd6f6991094f240444ab1fb1ef04abeeb85baa3dbb50c390305b3a2ed4e695",
+      "job/assets/p0001-mask-c3.png": "337c1cfc6194f9339ada5e2bf1642a7a89046b02a62520d7a64fa07b977e564b",
+      "job/assets/p0001-mask-c4.png": "b7da2daa3aa27ccba30ac6f600746f83a39535b173a6b9ee0665b547d1df780e",
+      "job/assets/p0001-mask-c5.png": "21a23e5fe51f9ccac195e2d543e493eabe497b08d667bd770b080c09b6b8f3a2",
+      "job/assets/p0001-mask-c6.png": "421fa1aa797ad77c26d36af57fb1daf2bc08f3aa53b9aa68d4ee5e40e589598e",
+      "job/assets/p0001-mask-c7.png": "8309dc8f4877da45117705df700d8b030d251825a3eaa73bed9821cf5bdb5d7d",
+      "job/assets/p0001-mask-c8.png": "3f11de006731d658e5acbdee634efce0c4663fda4104d6aeb35d680430e051fe",
+      "job/assets/p0001-mask-c9.png": "751386b95d923409f00c4c3f57e960f9a5af64a6984f3a11ca908c56d9c487f1",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "736408b7cf3c15da510111320ac40f5cfec15856b050f048902fb9048b81aef5",
+      "job/document.md": "ed8cbc54cf617a701fdc76865566e93342ad95ca580534740faca9ddc5c9087d",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "33b5aa55be8770b341a4d7bb6cbd25578f56cc9fdff88a5eb06e55f9f5ee6934",
+      "job/job-status.json": "09f91b23f9b7c1eb4fb0848be884560f3466ccc8818eceebef45983fcb0fefad",
+      "job/run-manifest.json": "e0919e1607a75ffbd555f94e396b2384976e9dbad4eb8f5c7a266fad8af3ed0e",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "7ca4701cab60680dabb10d562d5231904d62729727eda3bb73846fe579813ff6",
+      "time.txt": "3e6d33674e844e604ad69c3429db7e5ed3ab6043fb3b4dec5ac9c4e552f96f42"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "poly": [
+          469.4896545410156,
+          235.18092346191406,
+          1176.86962890625,
+          235.18092346191406,
+          1176.86962890625,
+          378.3006896972656,
+          469.4896545410156,
+          378.3006896972656
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 12,
+        "text": "函数图象上点的存在性问题中的距离与面积（常考知识点精析）",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          153.12791442871094,
+          479.2221374511719,
+          863.0964965820312,
+          479.2221374511719,
+          863.0964965820312,
+          527.0764770507812,
+          153.12791442871094,
+          527.0764770507812
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 3,
+        "text": "板块一探索抛物线上的点存在性之距离",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          154.03196716308594,
+          548.0751342773438,
+          487.1822814941406,
+          548.0751342773438,
+          487.1822814941406,
+          589.1617431640625,
+          154.03196716308594,
+          589.1617431640625
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 5,
+        "text": "一、二次函数与线段定值",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          154.70852661132812,
+          592.3170166015625,
+          571.5342407226562,
+          592.3170166015625,
+          571.5342407226562,
+          632.001220703125,
+          154.70852661132812,
+          632.001220703125
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 0,
+        "text": "探索：用距离来刻画动点的位置",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          163.91468811035156,
+          635.8688354492188,
+          295.53265380859375,
+          635.8688354492188,
+          295.53265380859375,
+          675.2927856445312,
+          163.91468811035156,
+          675.2927856445312
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 6,
+        "text": "【探索1】",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          152.15003967285156,
+          697.2713423421584,
+          1501.46533203125,
+          697.2713423421584,
+          1501.46533203125,
+          850.3565063476562,
+          152.15003967285156,
+          850.3565063476562
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 2,
+        "text": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 设抛物线的对称轴与 x轴交于点 M , 问在对称轴上是否存在点 P , 使 $ \\Delta CMP $为等腰三角形？若存在，请求出所有符合条件的点 P的坐标；若不存在，请说明理由。",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          1214.2742919921875,
+          870.749755859375,
+          1498.3065185546875,
+          870.749755859375,
+          1498.3065185546875,
+          1130.7921142578125,
+          1214.2742919921875,
+          1130.7921142578125
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 8,
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          166.73291015625,
+          1157.4300537109375,
+          290.3219909667969,
+          1157.4300537109375,
+          290.3219909667969,
+          1193.3046875,
+          166.73291015625,
+          1193.3046875
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 7,
+        "text": "【探索2】",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          150.38337651687885,
+          1218.326171875,
+          1496.12841796875,
+          1218.326171875,
+          1496.12841796875,
+          1364.531999171369,
+          150.38337651687885,
+          1364.531999171369
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 14,
+        "text": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 点 P为抛物线上一动点，若点 P到直线 y=x的距离为 $ \\frac{\\sqrt{2} }{2} $ ，求点 P的坐标。",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          1248.3803965348893,
+          1373.4651236694042,
+          1495.645032719644,
+          1373.4651236694042,
+          1495.645032719644,
+          1674.1065957185153,
+          1248.3803965348893,
+          1674.1065957185153
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 10,
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          163.5574496549223,
+          1677.5085984224706,
+          289.92863975850673,
+          1677.5085984224706,
+          289.92863975850673,
+          1715.2747012120476,
+          163.5574496549223,
+          1715.2747012120476
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 9,
+        "text": "【探索3】",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          150.80534775447754,
+          1739.0909848013139,
+          1495.375,
+          1739.0909848013139,
+          1495.375,
+          1847.2773437500002,
+          150.80534775447754,
+          1847.2773437500002
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 4,
+        "text": "抛物线 $ y=-x^{2}-2 x+3 $与x轴交于点A、B(点A在点B右侧)，与y轴交于点C，点P为抛物线上一动点，若点P到对称轴和y轴的距离相等，求P点坐标。",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          1269.1109619140627,
+          1854.2956039955209,
+          1499.3651123046877,
+          1854.2956039955209,
+          1499.3651123046877,
+          2139.283447265625,
+          1269.1109619140627,
+          2139.283447265625
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 11,
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          100.94787094218265,
+          18.636903397872175,
+          497.93395703237917,
+          18.636903397872175,
+          497.93395703237917,
+          104.44478862128949,
+          100.94787094218265,
+          104.44478862128949
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 13,
+        "text": "二轮复习",
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          1250.1227287260294,
+          59.20524311635563,
+          1501.0170634119786,
+          59.20524311635563,
+          1501.0170634119786,
+          121.70120954182153,
+          1250.1227287260294,
+          121.70120954182153
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 15,
+        "text": "学而思网校",
+        "attribute": {}
+      },
+      {
+        "category_type": "header",
+        "poly": [
+          1033.654122727431,
+          63.618326825496524,
+          1237.7398881405038,
+          63.618326825496524,
+          1237.7398881405038,
+          113.72867101174188,
+          1033.654122727431,
+          113.72867101174188
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 16,
+        "text": "xueersi",
+        "attribute": {}
+      },
+      {
+        "category_type": "abandon",
+        "poly": [
+          211.4071807861328,
+          2162.659727849911,
+          1486.6723779139916,
+          2162.659727849911,
+          1486.6723779139916,
+          2338.91259765625,
+          211.4071807861328,
+          2338.91259765625
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 1,
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": []
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "colorful_textbook",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [
+          "None"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 2497,
+      "height": 2339,
+      "width": 1654,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_3810.jpg",
+      "sample_id": 524
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1654,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0010",
+        "b0009",
+        "b0011",
+        "b0013",
+        "b0012",
+        "b0014",
+        "b0015"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_column_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0010",
+          "b0009",
+          "b0011",
+          "b0013",
+          "b0012",
+          "b0014",
+          "b0015"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0010",
+          "r0011",
+          "r0013",
+          "r0014"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0010",
+          "r0009",
+          "r0011",
+          "r0013",
+          "r0012",
+          "r0014",
+          "r0015"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header_image",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            75,
+            4,
+            504,
+            162
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.696031928,
+          "candidate_rank": 7,
+          "original_class_id": 13,
+          "candidate_id": 17,
+          "mask_row": 17,
+          "mask_nonzero": 522,
+          "model_label": "header",
+          "original_bbox": [
+            75.105637,
+            4.797628,
+            503.973022,
+            161.466751
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "header",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1029,
+            61,
+            1497,
+            120
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.781878889,
+          "candidate_rank": 75,
+          "original_class_id": 12,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 209,
+          "model_label": "header",
+          "original_bbox": [
+            1029.956055,
+            61.384647,
+            1496.634521,
+            119.031105
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "doc_title",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            470,
+            235,
+            1181,
+            378
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.841047704,
+          "candidate_rank": 107,
+          "original_class_id": 6,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 731,
+          "model_label": "doc_title",
+          "original_bbox": [
+            470.020813,
+            235.737137,
+            1180.123535,
+            377.587708
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            149,
+            480,
+            863,
+            528
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.871055901,
+          "candidate_rank": 128,
+          "original_class_id": 17,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 244,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            149.222031,
+            480.726898,
+            862.645203,
+            527.632202
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            149,
+            550,
+            489,
+            588
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.662294328,
+          "candidate_rank": 132,
+          "original_class_id": 17,
+          "candidate_id": 18,
+          "mask_row": 18,
+          "mask_nonzero": 87,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            149.020035,
+            550.744324,
+            488.662079,
+            587.367859
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            149,
+            594,
+            572,
+            631
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.770720899,
+          "candidate_rank": 136,
+          "original_class_id": 22,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 108,
+          "model_label": "text",
+          "original_bbox": [
+            149.073105,
+            594.332214,
+            571.974121,
+            630.908386
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            161,
+            637,
+            292,
+            674
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.745050251,
+          "candidate_rank": 140,
+          "original_class_id": 22,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 44,
+          "model_label": "text",
+          "original_bbox": [
+            161.056,
+            637.421082,
+            291.428558,
+            673.866455
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            145,
+            700,
+            1508,
+            852
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.887871325,
+          "candidate_rank": 143,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 1506,
+          "model_label": "text",
+          "original_bbox": [
+            145.689331,
+            700.204712,
+            1507.243896,
+            851.295471
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            161,
+            1157,
+            291,
+            1194
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.735186815,
+          "candidate_rank": 185,
+          "original_class_id": 22,
+          "candidate_id": 16,
+          "mask_row": 16,
+          "mask_nonzero": 33,
+          "model_label": "text",
+          "original_bbox": [
+            161.199493,
+            1157.059326,
+            290.656677,
+            1193.557983
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1216,
+            877,
+            1492,
+            1133
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.918148041,
+          "candidate_rank": 181,
+          "original_class_id": 14,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 528,
+          "model_label": "image",
+          "original_bbox": [
+            1216.958496,
+            877.187256,
+            1491.381104,
+            1132.741699
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            147,
+            1220,
+            1499,
+            1361
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.87154603,
+          "candidate_rank": 187,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1445,
+          "model_label": "text",
+          "original_bbox": [
+            147.571487,
+            1220.903198,
+            1498.526611,
+            1360.450562
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            161,
+            1677,
+            291,
+            1714
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.775936127,
+          "candidate_rank": 244,
+          "original_class_id": 22,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 44,
+          "model_label": "text",
+          "original_bbox": [
+            161.260849,
+            1677.716919,
+            290.873413,
+            1713.888184
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1260,
+            1370,
+            1491,
+            1672
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.942302644,
+          "candidate_rank": 240,
+          "original_class_id": 14,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 523,
+          "model_label": "image",
+          "original_bbox": [
+            1260.82312,
+            1370.928589,
+            1490.630127,
+            1671.11084
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            148,
+            1739,
+            1496,
+            1846
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.85750556,
+          "candidate_rank": 248,
+          "original_class_id": 22,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 1040,
+          "model_label": "text",
+          "original_bbox": [
+            148.422928,
+            1739.503784,
+            1495.506714,
+            1845.31189
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0015",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1277,
+            1850,
+            1498,
+            2141
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.887862265,
+          "candidate_rank": 299,
+          "original_class_id": 14,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 481,
+          "model_label": "image",
+          "original_bbox": [
+            1277.115479,
+            1850.380981,
+            1497.143188,
+            2140.591553
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0032",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            249,
+            702,
+            447,
+            737
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.780050039,
+          "candidate_rank": 146,
+          "original_class_id": 15,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 52,
+          "model_label": "formula",
+          "original_bbox": [
+            249.163376,
+            702.226501,
+            446.1828,
+            736.198547
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0040",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            723,
+            768,
+            819,
+            802
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.412511259,
+          "candidate_rank": 174,
+          "original_class_id": 15,
+          "candidate_id": 19,
+          "mask_row": 19,
+          "mask_nonzero": 24,
+          "model_label": "formula",
+          "original_bbox": [
+            723.711853,
+            768.412842,
+            818.358948,
+            801.612671
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0030",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            246,
+            1223,
+            446,
+            1258
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.787832737,
+          "candidate_rank": 192,
+          "original_class_id": 15,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 57,
+          "model_label": "formula",
+          "original_bbox": [
+            246.748367,
+            1223.26562,
+            445.798431,
+            1257.07385
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0035",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            528,
+            1289,
+            574,
+            1366
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.761995852,
+          "candidate_rank": 232,
+          "original_class_id": 15,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 27,
+          "model_label": "formula",
+          "original_bbox": [
+            528.011047,
+            1289.63562,
+            573.510132,
+            1365.35376
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "inline_formula",
+          "id": "l0029",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            247,
+            1742,
+            447,
+            1777
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.812535048,
+          "candidate_rank": 256,
+          "original_class_id": 15,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 54,
+          "model_label": "formula",
+          "original_bbox": [
+            247.222443,
+            1742.19397,
+            446.119232,
+            1776.48608
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            75,
+            4,
+            504,
+            162
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            1029,
+            61,
+            1497,
+            120
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            470,
+            235,
+            1181,
+            378
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            149,
+            480,
+            863,
+            528
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            149,
+            550,
+            489,
+            588
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            149,
+            594,
+            572,
+            631
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            161,
+            637,
+            292,
+            674
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008",
+            "l0032",
+            "l0040"
+          ],
+          "bbox": [
+            145,
+            700,
+            1508,
+            852
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            161,
+            1157,
+            291,
+            1194
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            1216,
+            877,
+            1492,
+            1133
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011",
+            "l0030",
+            "l0035"
+          ],
+          "bbox": [
+            147,
+            1220,
+            1499,
+            1366
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            161,
+            1677,
+            291,
+            1714
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            1260,
+            1370,
+            1491,
+            1672
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014",
+            "l0029"
+          ],
+          "bbox": [
+            148,
+            1739,
+            1496,
+            1846
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0015",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0015"
+          ],
+          "bbox": [
+            1277,
+            1850,
+            1498,
+            2141
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            75,
+            4,
+            504,
+            162
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            1029,
+            61,
+            1497,
+            120
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## xueersi 学而思网校\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## xueersi 学而思网校\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 69,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                1029,
+                61,
+                1497,
+                120
+              ],
+              "canvas_size": [
+                736,
+                96
+              ],
+              "content_size": [
+                736,
+                93
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 1.5726495726495726,
+              "rounding_error": [
+                0,
+                0.21367521367521647
+              ],
+              "canvas_to_page_affine": [
+                0.6358695652173914,
+                0,
+                1029,
+                0,
+                0.6344086021505376,
+                60.365591397849464
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2316,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2014,
+                    "raw_output": "## xueersi 学而思网校\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## xueersi 学而思网校\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      736,
+                      96
+                    ],
+                    "content_size": [
+                      736,
+                      93
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.21367521367521647
+                    ],
+                    "scale": 1.5726495726495726,
+                    "token_count": 69
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2014,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## xueersi 学而思网校\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            470,
+            235,
+            1181,
+            378
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 88,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                470,
+                235,
+                1181,
+                378
+              ],
+              "canvas_size": [
+                704,
+                128
+              ],
+              "content_size": [
+                636,
+                128
+              ],
+              "pad_offset": [
+                34,
+                0
+              ],
+              "scale": 0.8951048951048951,
+              "rounding_error": [
+                -0.4195804195803703,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1179245283018868,
+                0,
+                431.99056603773585,
+                0,
+                1.1171875,
+                235
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2164,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1776,
+                    "raw_output": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      704,
+                      128
+                    ],
+                    "content_size": [
+                      636,
+                      128
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      34,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4195804195803703,
+                      0.0
+                    ],
+                    "scale": 0.8951048951048951,
+                    "token_count": 88
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1776,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            149,
+            480,
+            863,
+            528
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 板块一 探索抛物线上的点存在性之距离\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "## 板块一 探索抛物线上的点存在性之距离\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 93,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                149,
+                480,
+                863,
+                528
+              ],
+              "canvas_size": [
+                992,
+                96
+              ],
+              "content_size": [
+                992,
+                67
+              ],
+              "pad_offset": [
+                0,
+                14
+              ],
+              "scale": 1.3893557422969187,
+              "rounding_error": [
+                0,
+                0.3109243697479087
+              ],
+              "canvas_to_page_affine": [
+                0.719758064516129,
+                0,
+                149,
+                0,
+                0.7164179104477612,
+                469.97014925373134
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2145,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1735,
+                    "raw_output": "## 板块一 探索抛物线上的点存在性之距离\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 板块一 探索抛物线上的点存在性之距离\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      96
+                    ],
+                    "content_size": [
+                      992,
+                      67
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      14
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3109243697479087
+                    ],
+                    "scale": 1.3893557422969187,
+                    "token_count": 93
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1735,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 板块一 探索抛物线上的点存在性之距离\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            149,
+            550,
+            489,
+            588
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 一、 二次函数与线段定值\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "## 一、 二次函数与线段定值\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                149,
+                550,
+                489,
+                588
+              ],
+              "canvas_size": [
+                768,
+                96
+              ],
+              "content_size": [
+                768,
+                86
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 2.2588235294117647,
+              "rounding_error": [
+                0,
+                0.1647058823529477
+              ],
+              "canvas_to_page_affine": [
+                0.4427083333333333,
+                0,
+                149,
+                0,
+                0.4418604651162791,
+                547.7906976744187
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1895,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1576,
+                    "raw_output": "## 一、 二次函数与线段定值\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 一、 二次函数与线段定值\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      768,
+                      96
+                    ],
+                    "content_size": [
+                      768,
+                      86
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.1647058823529477
+                    ],
+                    "scale": 2.2588235294117647,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1576,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 一、 二次函数与线段定值\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            149,
+            594,
+            572,
+            631
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 探索：用距离来刻画动点的位置\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "## 探索：用距离来刻画动点的位置\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                149,
+                594,
+                572,
+                631
+              ],
+              "canvas_size": [
+                896,
+                96
+              ],
+              "content_size": [
+                896,
+                78
+              ],
+              "pad_offset": [
+                0,
+                9
+              ],
+              "scale": 2.1182033096926713,
+              "rounding_error": [
+                0,
+                -0.37352245862884104
+              ],
+              "canvas_to_page_affine": [
+                0.4720982142857143,
+                0,
+                149,
+                0,
+                0.47435897435897434,
+                589.7307692307693
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2018,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1636,
+                    "raw_output": "## 探索：用距离来刻画动点的位置\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 探索：用距离来刻画动点的位置\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      896,
+                      96
+                    ],
+                    "content_size": [
+                      896,
+                      78
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      9
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.37352245862884104
+                    ],
+                    "scale": 2.1182033096926713,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1636,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 探索：用距离来刻画动点的位置\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            161,
+            637,
+            292,
+            674
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【探索1】\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "## 【探索1】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 80,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                161,
+                637,
+                292,
+                674
+              ],
+              "canvas_size": [
+                512,
+                160
+              ],
+              "content_size": [
+                512,
+                145
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 3.9083969465648853,
+              "rounding_error": [
+                0,
+                0.3893129770992516
+              ],
+              "canvas_to_page_affine": [
+                0.255859375,
+                0,
+                161,
+                0,
+                0.25517241379310346,
+                635.2137931034483
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1879,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1529,
+                    "raw_output": "## 【探索1】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【探索1】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      512,
+                      160
+                    ],
+                    "content_size": [
+                      512,
+                      145
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3893129770992516
+                    ],
+                    "scale": 3.9083969465648853,
+                    "token_count": 80
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1529,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【探索1】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            145,
+            700,
+            1508,
+            852
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 215,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                145,
+                700,
+                1508,
+                852
+              ],
+              "canvas_size": [
+                1376,
+                160
+              ],
+              "content_size": [
+                1376,
+                153
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 1.0095377842993396,
+              "rounding_error": [
+                2.2737367544323206e-13,
+                -0.4497432134996302
+              ],
+              "canvas_to_page_affine": [
+                0.9905523255813954,
+                0,
+                145,
+                0,
+                0.9934640522875817,
+                697.0196078431372
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5436,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4269,
+                    "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1376,
+                      160
+                    ],
+                    "content_size": [
+                      1376,
+                      153
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      2.2737367544323206e-13,
+                      -0.4497432134996302
+                    ],
+                    "scale": 1.0095377842993396,
+                    "token_count": 215
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4269,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            161,
+            1157,
+            291,
+            1194
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【探索2】\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "## 【探索2】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                161,
+                1157,
+                291,
+                1194
+              ],
+              "canvas_size": [
+                480,
+                160
+              ],
+              "content_size": [
+                480,
+                137
+              ],
+              "pad_offset": [
+                0,
+                11
+              ],
+              "scale": 3.6923076923076925,
+              "rounding_error": [
+                0,
+                0.3846153846153868
+              ],
+              "canvas_to_page_affine": [
+                0.2708333333333333,
+                0,
+                161,
+                0,
+                0.27007299270072993,
+                1154.029197080292
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1824,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1501,
+                    "raw_output": "## 【探索2】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【探索2】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      160
+                    ],
+                    "content_size": [
+                      480,
+                      137
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      11
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3846153846153868
+                    ],
+                    "scale": 3.6923076923076925,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1501,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【探索2】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            1216,
+            877,
+            1492,
+            1133
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            147,
+            1220,
+            1499,
+            1366
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 210,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                147,
+                1220,
+                1499,
+                1366
+              ],
+              "canvas_size": [
+                1344,
+                160
+              ],
+              "content_size": [
+                1344,
+                145
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 0.9940828402366864,
+              "rounding_error": [
+                0,
+                -0.1360946745562046
+              ],
+              "canvas_to_page_affine": [
+                1.005952380952381,
+                0,
+                147,
+                0,
+                1.006896551724138,
+                1212.951724137931
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5228,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 4016,
+                    "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1344,
+                      160
+                    ],
+                    "content_size": [
+                      1344,
+                      145
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.1360946745562046
+                    ],
+                    "scale": 0.9940828402366864,
+                    "token_count": 210
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 4016,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            161,
+            1677,
+            291,
+            1714
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 【探索3】\n",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "## 【探索3】\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 75,
+              "source_crop": "assets/p0001-b0013.png",
+              "source_bbox": [
+                161,
+                1677,
+                291,
+                1714
+              ],
+              "canvas_size": [
+                480,
+                160
+              ],
+              "content_size": [
+                480,
+                137
+              ],
+              "pad_offset": [
+                0,
+                11
+              ],
+              "scale": 3.6923076923076925,
+              "rounding_error": [
+                0,
+                0.3846153846153868
+              ],
+              "canvas_to_page_affine": [
+                0.2708333333333333,
+                0,
+                161,
+                0,
+                0.27007299270072993,
+                1674.029197080292
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1832,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1514,
+                    "raw_output": "## 【探索3】\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 【探索3】\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      480,
+                      160
+                    ],
+                    "content_size": [
+                      480,
+                      137
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      11
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3846153846153868
+                    ],
+                    "scale": 3.6923076923076925,
+                    "token_count": 75
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1514,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 【探索3】\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            1260,
+            1370,
+            1491,
+            1672
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 10,
+          "id": "b0014",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0014"
+          ],
+          "bbox": [
+            148,
+            1739,
+            1496,
+            1846
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0014",
+            "raw_output": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 126,
+              "source_crop": "assets/p0001-b0014.png",
+              "source_bbox": [
+                148,
+                1739,
+                1496,
+                1846
+              ],
+              "canvas_size": [
+                1344,
+                96
+              ],
+              "content_size": [
+                1209,
+                96
+              ],
+              "pad_offset": [
+                67,
+                0
+              ],
+              "scale": 0.897196261682243,
+              "rounding_error": [
+                -0.4205607476635578,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.1149710504549215,
+                0,
+                73.29693961952026,
+                0,
+                1.1145833333333333,
+                1739
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3550,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2924,
+                    "raw_output": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1344,
+                      96
+                    ],
+                    "content_size": [
+                      1209,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      67,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.4205607476635578,
+                      0.0
+                    ],
+                    "scale": 0.897196261682243,
+                    "token_count": 126
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2924,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0015",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0015"
+          ],
+          "bbox": [
+            1277,
+            1850,
+            1498,
+            2141
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0015",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0032",
+          "owner_block_id": "b0008"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0040",
+          "owner_block_id": "b0008"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0030",
+          "owner_block_id": "b0011"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0035",
+          "owner_block_id": "b0011"
+        },
+        {
+          "type": "content_owned_by",
+          "source_layout_block_id": "l0029",
+          "owner_block_id": "b0014"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0004",
+          "target_block_id": "b0006",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0005",
+          "target_block_id": "b0006",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 429,
+      "height": 158,
+      "bbox": [
+        75,
+        4,
+        504,
+        162
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 468,
+      "height": 59,
+      "bbox": [
+        1029,
+        61,
+        1497,
+        120
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 711,
+      "height": 143,
+      "bbox": [
+        470,
+        235,
+        1181,
+        378
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 714,
+      "height": 48,
+      "bbox": [
+        149,
+        480,
+        863,
+        528
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 340,
+      "height": 38,
+      "bbox": [
+        149,
+        550,
+        489,
+        588
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 423,
+      "height": 37,
+      "bbox": [
+        149,
+        594,
+        572,
+        631
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 131,
+      "height": 37,
+      "bbox": [
+        161,
+        637,
+        292,
+        674
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 1363,
+      "height": 152,
+      "bbox": [
+        145,
+        700,
+        1508,
+        852
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 130,
+      "height": 37,
+      "bbox": [
+        161,
+        1157,
+        291,
+        1194
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 276,
+      "height": 256,
+      "bbox": [
+        1216,
+        877,
+        1492,
+        1133
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1352,
+      "height": 146,
+      "bbox": [
+        147,
+        1220,
+        1499,
+        1366
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 130,
+      "height": 37,
+      "bbox": [
+        161,
+        1677,
+        291,
+        1714
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 231,
+      "height": 302,
+      "bbox": [
+        1260,
+        1370,
+        1491,
+        1672
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0014",
+      "path": "assets/p0001-b0014.png",
+      "media_type": "image/png",
+      "source_block_id": "b0014",
+      "width": 1348,
+      "height": 107,
+      "bbox": [
+        148,
+        1739,
+        1496,
+        1846
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0015",
+      "path": "assets/p0001-b0015.png",
+      "media_type": "image/png",
+      "source_block_id": "b0015",
+      "width": 221,
+      "height": 291,
+      "bbox": [
+        1277,
+        1850,
+        1498,
+        2141
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n\n\n## 板块一 探索抛物线上的点存在性之距离\n\n\n## 一、 二次函数与线段定值\n\n\n## 探索：用距离来刻画动点的位置\n\n\n## 【探索1】\n\n\n抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n\n\n## 【探索2】\n\n\n![插图](assets/p0001-b0009.png)\n\n抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n\n\n## 【探索3】\n\n\n![插图](assets/p0001-b0012.png)\n\n抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n\n\n![插图](assets/p0001-b0015.png)\n",
+  "quality": {
+    "text": {
+      "denominator": 13,
+      "matched": 12,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 12,
+          "category": "title",
+          "order": 1,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 28,
+          "reference_range": [
+            0,
+            28
+          ],
+          "actual_range": [
+            0,
+            29
+          ],
+          "raw_range": [
+            0,
+            29
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "title",
+          "order": 2,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 17,
+          "reference_range": [
+            0,
+            17
+          ],
+          "actual_range": [
+            0,
+            21
+          ],
+          "raw_range": [
+            0,
+            21
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 5,
+          "category": "text_block",
+          "order": 3,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 11,
+          "reference_range": [
+            0,
+            11
+          ],
+          "actual_range": [
+            0,
+            15
+          ],
+          "raw_range": [
+            0,
+            15
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 0,
+          "category": "text_block",
+          "order": 4,
+          "block_id": "b0006",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 14,
+          "reference_range": [
+            0,
+            14
+          ],
+          "actual_range": [
+            0,
+            17
+          ],
+          "raw_range": [
+            0,
+            17
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 6,
+          "category": "text_block",
+          "order": 5,
+          "block_id": "b0007",
+          "status": "ok",
+          "reading_order_position": 6,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "text_block",
+          "order": 6,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 150,
+          "reference_range": [
+            0,
+            150
+          ],
+          "actual_range": [
+            0,
+            175
+          ],
+          "raw_range": [
+            0,
+            175
+          ],
+          "edit_distance": 61,
+          "raw_edit_distance": 61,
+          "exact": false
+        },
+        {
+          "annotation_id": 7,
+          "category": "text_block",
+          "order": 8,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 14,
+          "category": "text_block",
+          "order": 9,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 10,
+          "reference_chars": 120,
+          "reference_range": [
+            0,
+            120
+          ],
+          "actual_range": [
+            0,
+            147
+          ],
+          "raw_range": [
+            0,
+            147
+          ],
+          "edit_distance": 54,
+          "raw_edit_distance": 54,
+          "exact": false
+        },
+        {
+          "annotation_id": 9,
+          "category": "text_block",
+          "order": 11,
+          "block_id": "b0013",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            8
+          ],
+          "raw_range": [
+            0,
+            8
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 4,
+          "category": "text_block",
+          "order": 12,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 13,
+          "reference_chars": 82,
+          "reference_range": [
+            0,
+            82
+          ],
+          "actual_range": [
+            0,
+            104
+          ],
+          "raw_range": [
+            0,
+            104
+          ],
+          "edit_distance": 30,
+          "raw_edit_distance": 30,
+          "exact": false
+        },
+        {
+          "annotation_id": 15,
+          "category": "header",
+          "order": null,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 5,
+          "reference_range": [
+            0,
+            5
+          ],
+          "actual_range": [
+            0,
+            3
+          ],
+          "raw_range": [
+            0,
+            3
+          ],
+          "edit_distance": 5,
+          "raw_edit_distance": 5,
+          "exact": false
+        },
+        {
+          "annotation_id": 16,
+          "category": "header",
+          "order": null,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 7,
+          "reference_range": [
+            5,
+            12
+          ],
+          "actual_range": [
+            3,
+            16
+          ],
+          "raw_range": [
+            3,
+            16
+          ],
+          "edit_distance": 6,
+          "raw_edit_distance": 6,
+          "exact": false
+        },
+        {
+          "annotation_id": 13,
+          "category": "header",
+          "order": null,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 4,
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 453,
+      "edit_distance": 181,
+      "raw_edit_distance": 181
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 3,
+      "matched": 3,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 3,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 1,
+      "rows": [
+        {
+          "annotation_id": 8,
+          "category": "figure",
+          "order": 7,
+          "block_id": "b0009",
+          "coverage": 0.9484,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 9
+        },
+        {
+          "annotation_id": 10,
+          "category": "figure",
+          "order": 10,
+          "block_id": "b0012",
+          "coverage": 0.9277,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 12
+        },
+        {
+          "annotation_id": 11,
+          "category": "figure",
+          "order": 13,
+          "block_id": "b0015",
+          "coverage": 0.9598,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 14
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0001",
+          "reason": "unmatched",
+          "status": "ok"
+        }
+      ]
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 78,
+      "evaluable": 78,
+      "correct": 76,
+      "missing_pairs": 0,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 15
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "figure:extra_output",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "figure:extra_output",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      12,
+      3,
+      5,
+      0,
+      6,
+      2,
+      7,
+      14,
+      9,
+      4,
+      15,
+      16,
+      13
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 17,
+    "parent_reference_count": 17
+  },
+  "alignment": [
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        12
+      ],
+      "expected": "函数图象上点的存在性问题中的距离与面积（常考知识点精析）",
+      "actual": "函数图象上点的存在性问题中的距离 与面积（常考知识点精析）",
+      "raw_output": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        470,
+        235,
+        1181,
+        378
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "函数图象上点的存在性问题中的距离\n\n与面积（常考知识点精析）\n",
+        "nonempty_lines": 2,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "板块一探索抛物线上的点存在性之距离",
+      "actual": "## 板块一 探索抛物线上的点存在性之距离",
+      "raw_output": "## 板块一 探索抛物线上的点存在性之距离\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        149,
+        480,
+        863,
+        528
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 板块一 探索抛物线上的点存在性之距离\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        5
+      ],
+      "expected": "一、二次函数与线段定值",
+      "actual": "## 一、 二次函数与线段定值",
+      "raw_output": "## 一、 二次函数与线段定值\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        149,
+        550,
+        489,
+        588
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 一、 二次函数与线段定值\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005"
+      ]
+    },
+    {
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "探索：用距离来刻画动点的位置",
+      "actual": "## 探索：用距离来刻画动点的位置",
+      "raw_output": "## 探索：用距离来刻画动点的位置\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        149,
+        594,
+        572,
+        631
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 探索：用距离来刻画动点的位置\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0006"
+      ]
+    },
+    {
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "annotation_ids": [
+        6
+      ],
+      "expected": "【探索1】",
+      "actual": "## 【探索1】",
+      "raw_output": "## 【探索1】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        161,
+        637,
+        292,
+        674
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【探索1】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0007"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        2
+      ],
+      "expected": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 设抛物线的对称轴与 x轴交于点 M , 问在对称轴上是否存在点 P , 使 $ \\Delta CMP $为等腰三角形？若存在，请求出所有符合条件的点 P的坐标；若不存在，请说明理由。",
+      "actual": "抛物线 $y = -x^2 - 2x + 3$ 与 $x$ 轴交于点 $A$、 $B$（点 $A$ 在点 $B$ 右侧），与 $y$ 轴交于点 $C$，设抛物线的对称轴与 $x$ 轴交于点 $M$，问在对称轴上是否存在点 $P$，使 $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点 $P$ 的坐标；若不存在，请说明理由。",
+      "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+      "edit_distance": 61,
+      "raw_edit_distance": 61,
+      "bbox": [
+        145,
+        700,
+        1508,
+        852
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，设抛物线的对称轴与  $x$ 轴交于点  $M$，问在对称轴上是否存在点  $P$，使  $\\triangle CMP$ 为等腰三角形？若存在，请求出所有符合条件的点  $P$ 的坐标；若不存在，请说明理由。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008",
+        "l0032",
+        "l0040"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        7
+      ],
+      "expected": "【探索2】",
+      "actual": "## 【探索2】",
+      "raw_output": "## 【探索2】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        161,
+        1157,
+        291,
+        1194
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【探索2】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        14
+      ],
+      "expected": "抛物线 $ y=-x^{2}-2 x+3 $与 x轴交于点 A、B (点 A在点 B右侧), 与 y轴交于点 C , 点 P为抛物线上一动点，若点 P到直线 y=x的距离为 $ \\frac{\\sqrt{2} }{2} $ ，求点 P的坐标。",
+      "actual": "抛物线 $y = -x^2 - 2x + 3$ 与 $x$ 轴交于点 $A$、 $B$（点 $A$ 在点 $B$ 右侧），与 $y$ 轴交于点 $C$，点 $P$ 为抛物线上一动点，若点 $P$ 到直线 $y = x$ 的距离为 $\\frac{\\sqrt{2}}{2}$，求点 $P$ 的坐标。",
+      "raw_output": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+      "edit_distance": 54,
+      "raw_edit_distance": 54,
+      "bbox": [
+        147,
+        1220,
+        1499,
+        1366
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "抛物线  $y = -x^2 - 2x + 3$ 与  $x$ 轴交于点  $A$、 $B$（点  $A$ 在点  $B$ 右侧），与  $y$ 轴交于点  $C$，点  $P$ 为抛物线上一动点，若点  $P$ 到直线  $y = x$ 的距离为  $\\frac{\\sqrt{2}}{2}$，求点  $P$ 的坐标。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011",
+        "l0030",
+        "l0035"
+      ]
+    },
+    {
+      "block_id": "b0013",
+      "source_region_ids": [
+        "r0013"
+      ],
+      "annotation_ids": [
+        9
+      ],
+      "expected": "【探索3】",
+      "actual": "## 【探索3】",
+      "raw_output": "## 【探索3】\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        161,
+        1677,
+        291,
+        1714
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 【探索3】\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0013"
+      ]
+    },
+    {
+      "block_id": "b0014",
+      "source_region_ids": [
+        "r0014"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "抛物线 $ y=-x^{2}-2 x+3 $与x轴交于点A、B(点A在点B右侧)，与y轴交于点C，点P为抛物线上一动点，若点P到对称轴和y轴的距离相等，求P点坐标。",
+      "actual": "抛物线 $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。",
+      "raw_output": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+      "edit_distance": 30,
+      "raw_edit_distance": 30,
+      "bbox": [
+        148,
+        1739,
+        1496,
+        1846
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "抛物线  $y = -x^{2} - 2x + 3$ 与 x 轴交于点 A、B（点 A 在点 B 右侧），与 y 轴交于点 C，点 P 为抛物线上一动点，若点 P 到对称轴和 y 轴的距离相等，求 P 点坐标。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0014",
+        "l0029"
+      ]
+    },
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        15,
+        16
+      ],
+      "expected": "学而思网校xueersi",
+      "actual": "## xueersi 学而思网校",
+      "raw_output": "## xueersi 学而思网校\n",
+      "edit_distance": 11,
+      "raw_edit_distance": 11,
+      "bbox": [
+        1029,
+        61,
+        1497,
+        120
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## xueersi 学而思网校\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "figure",
+      "annotation_id": 8,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          1214.2742919921875,
+          870.749755859375,
+          1498.3065185546875,
+          870.749755859375,
+          1498.3065185546875,
+          1130.7921142578125,
+          1214.2742919921875,
+          1130.7921142578125
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 8,
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0009.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 10,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          1248.3803965348893,
+          1373.4651236694042,
+          1495.645032719644,
+          1373.4651236694042,
+          1495.645032719644,
+          1674.1065957185153,
+          1248.3803965348893,
+          1674.1065957185153
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 10,
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "source_region_ids": [
+        "r0012"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0012.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 11,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          1269.1109619140627,
+          1854.2956039955209,
+          1499.3651123046877,
+          1854.2956039955209,
+          1499.3651123046877,
+          2139.283447265625,
+          1269.1109619140627,
+          2139.283447265625
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 11,
+        "attribute": {}
+      },
+      "block_id": "b0015",
+      "source_region_ids": [
+        "r0015"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0015.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

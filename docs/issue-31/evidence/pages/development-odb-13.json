@@ -1,0 +1,5404 @@
+{
+  "key": "development/odb-13",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+    "sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-13/job"
+    ],
+    "input_sha256": "63b11a697d37d0b7621e9f98edf32f594d3ff0db1adb513d2e0909f41ae35a8f",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 60.37112013899605,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "77df0f6696adc2854f0d94f5db235d4e4d2455495acd68b2d208b31253007809",
+      "job/assets/p0001-b0002.png": "910e0f70f82e7783ed7399e7edbd84d66eb383c9b2949cb08c10850ca087ac82",
+      "job/assets/p0001-b0003.png": "0780bdfc797f117e6d883f61b2582aa797990296dafcbf4108de49f239eadaeb",
+      "job/assets/p0001-b0004.png": "b86e70098ca505e214d0771533506430137996cec273c9724aeaa547c405a44a",
+      "job/assets/p0001-b0005.png": "250c698694b02e16ee2757e42a485a701afd01fd18d85ad3c2c9917a35608b16",
+      "job/assets/p0001-b0006.png": "2c51ae8088f30c65a893ada62d7356e250a38c8ac720c20e0f658b13b2072a96",
+      "job/assets/p0001-b0007.png": "a57bc77f31876acb12397c8886b6107da7db614ee975849034da0d57e8af9c5b",
+      "job/assets/p0001-b0008.png": "b41d66e2760b7ef3224a70e838b30412f455720be9d545ee468c45120512a7b4",
+      "job/assets/p0001-b0009.png": "b1f3399573b78ff56ceeaa0fb72d6c1f8ea43addce4418fdcb1e9ede3f63abe3",
+      "job/assets/p0001-b0010.png": "7b72cb6d81680946650ebba3c596202d290719437886f863866b4c2704ea4d87",
+      "job/assets/p0001-b0011.png": "9cc1936ce1197320498bdde27736a1a4500b10c51c38e548c220ad115881db72",
+      "job/assets/p0001-b0012.png": "c370a526c1cde88fff0c7b2230a2479b1bb7d623b9d23e5432f16ea54719ecba",
+      "job/assets/p0001-b0013.png": "86af92c4c445a0ccf682aff2f25ed577981d620d44bcdc841dbb722308c392b4",
+      "job/assets/p0001-b0014.png": "b9dedb9ab4e3ce1970fecc7c11a930ba1e83f24d7d737ee1c1e7c2fc16b9af4a",
+      "job/assets/p0001-b0015.png": "7f10124842c9e6e3117f490ab6bf8b61c8490bd4ebbeda4061ce4bac54f4dbe9",
+      "job/assets/p0001-b0016.png": "3450c939fb10b951302bbedb52335e902e9ac6dfcd3a6d8b95ac65fb86371e9f",
+      "job/assets/p0001-fetch_name_0.f32": "4753c19673463de6de171a8591dd226888c7e8d9fc9f5e751c0283e6a80dfb00",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "6aeae6e13bcea51aa64f3e14cfd62c4c140dfc84a872fbfe64e06116b25d22e6",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "6b2f000d0cfae86622aa7c366d056db0e2e36308a278fabe1597e1c1df301a61",
+      "job/assets/p0001-layout-overlay.png": "d061ec005698228b9e769d3a0ca2e24dc08698bb965089a34b9502a6d11c3ab6",
+      "job/assets/p0001-mask-c0.png": "4088d1694f72e04cc06fba508683e4437a4958d03bbdf518c451d14b32235bf4",
+      "job/assets/p0001-mask-c1.png": "7cfb92ebf3c70589cd8b981c54c818117ee9d983d437c18e1dd01c2255ed4fb5",
+      "job/assets/p0001-mask-c10.png": "9d8ecb32db21eacc72a7bb04d1357a42622afb98a75efae79a34fcdeee133170",
+      "job/assets/p0001-mask-c11.png": "eabbf6e2f6b5ebc2d4f49bbcb32ab00bb716d20a353e27c178b807bf811a08c1",
+      "job/assets/p0001-mask-c12.png": "7662deff5d39819008db33c55d1b2438f42d34b33bd6fb5eca4c0f2cdc59ba46",
+      "job/assets/p0001-mask-c13.png": "803980a777d6f592db2982f3f5b0936ee1aca236b3468190ab67808d48c6e972",
+      "job/assets/p0001-mask-c14.png": "5d6eb56b3d2a24d1e3894178f6e706e3c2df230fb988f9d7879f01b89a7c472a",
+      "job/assets/p0001-mask-c15.png": "5f01948ed941a4dec918c6e55a3da7e8ad1b641fe1ff9fd5bd999cf295eb3853",
+      "job/assets/p0001-mask-c2.png": "1c71f0e9bcfb6ce2496262e976818163dbc1265fe995eb79f6f966ccf1ee8562",
+      "job/assets/p0001-mask-c3.png": "5bb4ff38acdbfaa86deba085e3b3067dc55203caf748a1147ee9e219633a154d",
+      "job/assets/p0001-mask-c4.png": "3d3479aa5e3e45080e64f00b0b6f2f2a315b0d2393a26d1855b59db7817f910f",
+      "job/assets/p0001-mask-c5.png": "dc3e74de49ac6fadb6605fda13cd087f4f37cad3c29f01b91c019bc156985583",
+      "job/assets/p0001-mask-c6.png": "b1885ad9a9ed3cc42dba7fed732f1fabb89127fea5a574e3af781ad57187ed34",
+      "job/assets/p0001-mask-c7.png": "c280cd2853d81e2563c6e317e5aab40954d5bdd8c26862c61e68bd1f57391762",
+      "job/assets/p0001-mask-c8.png": "a7d51027f064b021098fc4bfcd32b6600e2ce3f9436d78d14f6293ad78c355a3",
+      "job/assets/p0001-mask-c9.png": "151039079da78835655c0393854999947f5dceceefc0ac9f651f7735a84d0974",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "9e33146598c6ca6fc643955d5c1c6acc4eed11417a95ee42d6052ef840278822",
+      "job/document.md": "e7a72b5bd47a0d249dedf0394f3ea5d7d35484aae08976759c885a2b3f20dbcb",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "b06a516a33a6f1999e25559e894ab4e59097bb6a32310cbae2e9a6b6899025c8",
+      "job/job-status.json": "2070f27b40566eba8107c779d8a94e21a40642cc82feb0246e6e6e56a87a5392",
+      "job/run-manifest.json": "be94d9c275022a3cb4162f76d1452ace4c5ca9367560a5f9e609329ad3fbf4b1",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "4edd1c4ca6531d590dbb81a0f1fc1eb93f92d1ed930f99735f9bbbe288365cff",
+      "time.txt": "373af02cdde0f59da188a40e33b72d7dafbda913e7782323174a5fc723eac03a"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "poly": [
+          33.04354476928711,
+          100.19380187988281,
+          926.716796875,
+          100.19380187988281,
+          926.716796875,
+          142.47528076171875,
+          33.04354476928711,
+          142.47528076171875
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 4,
+        "text": "27. 在“观察水的沸腾的实验”中，小明的实验记录表格如下：",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          65.16570281982422,
+          148.66551208496094,
+          1152.567626953125,
+          148.66551208496094,
+          1152.567626953125,
+          307.51116943359375,
+          65.16570281982422,
+          307.51116943359375
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 13,
+        "text": "\\t(1) 在烧杯上盖上硬纸片，是为了____ 。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体____和____同时发生的剧烈的____现象。液体在沸腾过程中要____热，但温度____。",
+        "attribute": {}
+      },
+      {
+        "category_type": "table",
+        "poly": [
+          126.42818668041251,
+          326.2890835687641,
+          1009.6643402576061,
+          326.2890835687641,
+          1009.6643402576061,
+          423.594878268215,
+          126.42818668041251,
+          423.594878268215
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 7,
+        "html": "<table border=\"1\"><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(℃)</td><td>90℃</td><td>92℃</td><td>94℃</td><td>96℃</td><td>98℃</td><td>99℃</td><td>99℃</td><td>96℃</td><td>99℃</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1239.6281530281553,
+          99.54386901855469,
+          2301.0972692390933,
+          99.54386901855469,
+          2301.0972692390933,
+          178.55673217773415,
+          1239.6281530281553,
+          178.55673217773415
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 2,
+        "text": "(3) 由表可知，加热了____分钟水开始沸腾，水的沸点是____ $ \\mathrm{^{o} C} $ ，水上方的大气压强____一个大气压（填“大于”或“小于”）。",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1242.7232666015625,
+          187.63365173339844,
+          2280.51953125,
+          187.63365173339844,
+          2280.51953125,
+          265.77581787109375,
+          1242.7232666015625,
+          265.77581787109375
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 1,
+        "text": "(4) 小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a) 、(b)所示，则图____是水沸腾前的情况，图____是水沸腾时的情况。",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          1690.8280547662305,
+          308.06511127298825,
+          1844.1508766230108,
+          308.06511127298825,
+          1844.1508766230108,
+          492.08977267233,
+          1690.8280547662305,
+          492.08977267233
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 0,
+        "attribute": {}
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          1745.0885588599845,
+          497.33209697827647,
+          1791.4695300924996,
+          497.33209697827647,
+          1791.4695300924996,
+          533.7093293175041,
+          1745.0885588599845,
+          533.7093293175041
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 10,
+        "text": "(a)",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          1910.3428530811925,
+          309.54802222325884,
+          2060.9974451392377,
+          309.54802222325884,
+          2060.9974451392377,
+          493.2657823297102,
+          1910.3428530811925,
+          493.2657823297102
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 14,
+        "attribute": {}
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          1955.1670756190235,
+          497.33209697827647,
+          2009.7329241278649,
+          497.33209697827647,
+          2009.7329241278649,
+          534.6187601259847,
+          1955.1670756190235,
+          534.6187601259847
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 3,
+        "text": "(b)",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          30.11776802128454,
+          919.4135207568197,
+          1131.2570974438513,
+          919.4135207568197,
+          1131.2570974438513,
+          1121.8007188500915,
+          30.11776802128454,
+          1121.8007188500915
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 5,
+        "text": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是____(填“晶体”或“非晶体”)，该液态物质从开始凝固到完全凝固所用的时间是____min，8s末温度计的示数如图乙所示，温度计的示数是____ $ \\mathrm{^{o} C}。 $",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          146.93466186523457,
+          1152.7226562500005,
+          539.660735027505,
+          1152.7226562500005,
+          539.660735027505,
+          1407.447628462603,
+          146.93466186523457,
+          1407.447628462603
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 12,
+        "attribute": {}
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          302.38445682981086,
+          1410.1004731313585,
+          337.45691923868145,
+          1410.1004731313585,
+          337.45691923868145,
+          1445.554932840188,
+          302.38445682981086,
+          1445.554932840188
+        ],
+        "ignore": false,
+        "order": 12,
+        "anno_id": 25,
+        "text": "甲",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          550.1816059912884,
+          1153.100803464326,
+          942.9076791535588,
+          1153.100803464326,
+          942.9076791535588,
+          1407.8257756769285,
+          550.1816059912884,
+          1407.8257756769285
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 26,
+        "attribute": {}
+      },
+      {
+        "category_type": "figure_caption",
+        "poly": [
+          673.1573809934995,
+          1411.0306567215875,
+          710.7609887515283,
+          1411.0306567215875,
+          710.7609887515283,
+          1442.8928500588004,
+          673.1573809934995,
+          1442.8928500588004
+        ],
+        "ignore": false,
+        "order": 14,
+        "anno_id": 24,
+        "text": "乙",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1185.0862342036714,
+          912.8164790056063,
+          2308.8004081772606,
+          912.8164790056063,
+          2308.8004081772606,
+          1201.6159280281754,
+          1185.0862342036714,
+          1201.6159280281754
+        ],
+        "ignore": false,
+        "order": 15,
+        "anno_id": 19,
+        "text": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是(    )\nA. 玻璃窗上的“汗”是水蒸气液化生成的\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\nC. “冰花”结在玻璃窗的内表面\nD. “汗”出在玻璃窗的外表面",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              1187.2816162109375,
+              920.421142578125,
+              2294.28173828125,
+              920.421142578125,
+              2294.28173828125,
+              1004.8407592773438,
+              1187.2816162109375,
+              1004.8407592773438
+            ],
+            "ignore": false,
+            "order": 16,
+            "anno_id": 15,
+            "text": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是(    )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1185.3954899268679,
+                  928.8372939561208,
+                  2295.658745421092,
+                  928.8372939561208,
+                  2295.658745421092,
+                  964.7751373625856,
+                  1185.3954899268679,
+                  964.7751373625856
+                ],
+                "text": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1242.6666666666665,
+                  969.3333333333333,
+                  1389.3333333333333,
+                  969.3333333333333,
+                  1389.3333333333333,
+                  1002.6666666666666,
+                  1242.6666666666665,
+                  1002.6666666666666
+                ],
+                "text": "确的是(    )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1235.0767822265625,
+              1008.4646606445312,
+              1824.8901179663376,
+              1008.4646606445312,
+              1824.8901179663376,
+              1056.2255156458928,
+              1235.0767822265625,
+              1056.2255156458928
+            ],
+            "ignore": false,
+            "order": 17,
+            "anno_id": 8,
+            "text": "A. 玻璃窗上的“汗”是水蒸气液化生成的",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1242.6666666666665,
+                  1018.6666666666666,
+                  1814.6666666666665,
+                  1018.6666666666666,
+                  1814.6666666666665,
+                  1046.6666666666665,
+                  1242.6666666666665,
+                  1046.6666666666665
+                ],
+                "text": "A. 玻璃窗上的“汗”是水蒸气液化生成的"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1236.6222734374385,
+              1059.687034158421,
+              1852.9983210219743,
+              1059.687034158421,
+              1852.9983210219743,
+              1099.056362547054,
+              1236.6222734374385,
+              1099.056362547054
+            ],
+            "ignore": false,
+            "order": 18,
+            "anno_id": 17,
+            "text": "B. 玻璃窗上的“冰花”是水蒸气凝华生成的",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1240,
+                  1065.3333333333333,
+                  1848,
+                  1065.3333333333333,
+                  1848,
+                  1094.6666666666665,
+                  1240,
+                  1094.6666666666665
+                ],
+                "text": "B. 玻璃窗上的“冰花”是水蒸气凝华生成的"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1234.3671405568225,
+              1103.5278487765213,
+              1680.9629594653782,
+              1103.5278487765213,
+              1680.9629594653782,
+              1144.127468677299,
+              1234.3671405568225,
+              1144.127468677299
+            ],
+            "ignore": false,
+            "order": 19,
+            "anno_id": 18,
+            "text": "C. “冰花”结在玻璃窗的内表面",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1242.6666666666665,
+                  1113.3333333333333,
+                  1672,
+                  1113.3333333333333,
+                  1672,
+                  1141.3333333333333,
+                  1242.6666666666665,
+                  1141.3333333333333
+                ],
+                "text": "C. “冰花”结在玻璃窗的内表面"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1238.058015093257,
+              1148.5293662555794,
+              1650.2056716617587,
+              1148.5293662555794,
+              1650.2056716617587,
+              1195.2804437170807,
+              1238.058015093257,
+              1195.2804437170807
+            ],
+            "ignore": false,
+            "order": 20,
+            "anno_id": 16,
+            "text": "D. “汗”出在玻璃窗的外表面",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1241.3333333333333,
+                  1160,
+                  1640,
+                  1160,
+                  1640,
+                  1189.3333333333333,
+                  1241.3333333333333,
+                  1189.3333333333333
+                ],
+                "text": "D. “汗”出在玻璃窗的外表面"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          1183.2322377567014,
+          1196.86657038403,
+          2301.5799872599573,
+          1196.86657038403,
+          2301.5799872599573,
+          1548.6770115737668,
+          1183.2322377567014,
+          1548.6770115737668
+        ],
+        "ignore": false,
+        "order": 21,
+        "anno_id": 21,
+        "text": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层 0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是( \n   )\nA. 铝膜与钢罐间的水把它们冻牢了\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\nD. 水结冰时放出的热量把它们焊牢了",
+        "merge_list": [
+          {
+            "category_type": "text_block",
+            "poly": [
+              1191.5291748046875,
+              1202.1875,
+              2300.236083984375,
+              1202.1875,
+              2300.236083984375,
+              1363.623291015625,
+              1191.5291748046875,
+              1363.623291015625
+            ],
+            "ignore": false,
+            "order": 22,
+            "anno_id": 11,
+            "text": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层 0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是( \n   )",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1189.3333333333333,
+                  1209.3333333333333,
+                  2092.500892861477,
+                  1209.3333333333333,
+                  2092.500892861477,
+                  1239.9999999999998,
+                  1189.3333333333333,
+                  1239.9999999999998
+                ],
+                "text": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层"
+              },
+              {
+                "category_type": "equation_ignore",
+                "poly": [
+                  2093.4238292558466,
+                  1204.9930514381917,
+                  2209.3897175314137,
+                  1204.9930514381917,
+                  2209.3897175314137,
+                  1239.7828179208618,
+                  2093.4238292558466,
+                  1239.7828179208618
+                ],
+                "text": "0.25mm"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  2206.2270114875346,
+                  1203.938816090232,
+                  2272.6438384089956,
+                  1203.938816090232,
+                  2272.6438384089956,
+                  1239.7828179208618,
+                  2206.2270114875346,
+                  1239.7828179208618
+                ],
+                "text": "厚的"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1241.1163919414944,
+                  1247.7830586081611,
+                  2288.775137362586,
+                  1247.7830586081611,
+                  2288.775137362586,
+                  1282.883608058505,
+                  1241.1163919414944,
+                  1282.883608058505
+                ],
+                "text": "铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1245.3333333333333,
+                  1288,
+                  2288,
+                  1288,
+                  2288,
+                  1317.3333333333333,
+                  1245.3333333333333,
+                  1317.3333333333333
+                ],
+                "text": "难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管"
+              },
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1241.891529304081,
+                  1326.1706272894542,
+                  2087.4418040292526,
+                  1326.1706272894542,
+                  2087.4418040292526,
+                  1358.3875686812928,
+                  1241.891529304081,
+                  1358.3875686812928
+                ],
+                "text": "使水结冰，然后铝膜与钢罐就压接在一起了。其原因是( \n   )"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1235.0589599609377,
+              1368.66064453125,
+              1765.7434564732382,
+              1368.66064453125,
+              1765.7434564732382,
+              1406.0026035200408,
+              1235.0589599609377,
+              1406.0026035200408
+            ],
+            "ignore": false,
+            "order": 23,
+            "anno_id": 9,
+            "text": "A. 铝膜与钢罐间的水把它们冻牢了",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1242.6666666666665,
+                  1376,
+                  1750.6666666666665,
+                  1376,
+                  1750.6666666666665,
+                  1404,
+                  1242.6666666666665,
+                  1404
+                ],
+                "text": "A. 铝膜与钢罐间的水把它们冻牢了"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1237.6449596594289,
+              1407.6068679833893,
+              1851.773945887072,
+              1407.6068679833893,
+              1851.773945887072,
+              1455.3950506865335,
+              1237.6449596594289,
+              1455.3950506865335
+            ],
+            "ignore": false,
+            "order": 24,
+            "anno_id": 23,
+            "text": "B. 结冰时铝膜与钢罐间的冰把它们粘牢了",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1241.3333333333333,
+                  1422.6666666666665,
+                  1848,
+                  1422.6666666666665,
+                  1848,
+                  1450.6666666666665,
+                  1241.3333333333333,
+                  1450.6666666666665
+                ],
+                "text": "B. 结冰时铝膜与钢罐间的冰把它们粘牢了"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1238.6617295041765,
+              1461.4956697550201,
+              1918.8807556404236,
+              1461.4956697550201,
+              1918.8807556404236,
+              1504.2000032344258,
+              1238.6617295041765,
+              1504.2000032344258
+            ],
+            "ignore": false,
+            "order": 25,
+            "anno_id": 20,
+            "text": "C. 水结冰时膨胀产生的巨大压力把它们压牢了",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1242.6666666666667,
+                  1470.6666666666665,
+                  1917.5502747251724,
+                  1470.6666666666665,
+                  1917.5502747251724,
+                  1495.9999999999998,
+                  1242.6666666666667,
+                  1495.9999999999998
+                ],
+                "text": "C. 水结冰时膨胀产生的巨大压力把它们压牢了"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          },
+          {
+            "category_type": "text_block",
+            "poly": [
+              1237.6449596594289,
+              1511.3173921476603,
+              1792.8012948917021,
+              1511.3173921476603,
+              1792.8012948917021,
+              1549.9546462480748,
+              1237.6449596594289,
+              1549.9546462480748
+            ],
+            "ignore": false,
+            "order": 26,
+            "anno_id": 22,
+            "text": "D. 水结冰时放出的热量把它们焊牢了",
+            "line_with_spans": [
+              {
+                "category_type": "text_span",
+                "poly": [
+                  1242.6666666666665,
+                  1517.3333333333333,
+                  1784,
+                  1517.3333333333333,
+                  1784,
+                  1545.3333333333333,
+                  1242.6666666666665,
+                  1545.3333333333333
+                ],
+                "text": "D. 水结冰时放出的热量把它们焊牢了"
+              }
+            ],
+            "attribute": {
+              "text_language": "text_simplified_chinese",
+              "text_background": "white",
+              "text_rotate": "normal"
+            }
+          }
+        ],
+        "attribute": {}
+      },
+      {
+        "category_type": "page_number",
+        "poly": [
+          2264.8681640625,
+          1510.5303955078125,
+          2292.9716796875,
+          1510.5303955078125,
+          2292.9716796875,
+          1540.685546875,
+          2264.8681640625,
+          1540.685546875
+        ],
+        "ignore": false,
+        "order": null,
+        "anno_id": 6,
+        "text": "6",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": [
+        {
+          "source_anno_id": 0,
+          "target_anno_id": 10,
+          "relation_type": "parent_son"
+        },
+        {
+          "source_anno_id": 14,
+          "target_anno_id": 3,
+          "relation_type": "parent_son"
+        }
+      ]
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "exam_paper",
+        "language": "simplified_chinese",
+        "layout": "double_column",
+        "special_issue": [
+          "table_full_line",
+          "table_horizontal",
+          "table_with_formula"
+        ],
+        "subset": "v1.5"
+      },
+      "page_no": 2290,
+      "height": 1654,
+      "width": 2339,
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_2755.jpg",
+      "sample_id": 489
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        2339,
+        1654
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0002",
+        "b0003",
+        "b0007",
+        "b0011",
+        "b0012",
+        "b0016",
+        "b0013",
+        "b0015",
+        "b0001",
+        "b0004",
+        "b0006",
+        "b0009",
+        "b0005",
+        "b0008",
+        "b0010",
+        "b0014"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "planned_horizontal_groups"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0002",
+          "b0003",
+          "b0007",
+          "b0011",
+          "b0012",
+          "b0016",
+          "b0013",
+          "b0015",
+          "b0001",
+          "b0004",
+          "b0006",
+          "b0009",
+          "b0005",
+          "b0008",
+          "b0010",
+          "b0014"
+        ],
+        "captions": [
+          {
+            "caption_block_id": "b0008",
+            "image_block_id": "b0005"
+          },
+          {
+            "caption_block_id": "b0009",
+            "image_block_id": "b0006"
+          },
+          {
+            "caption_block_id": "b0016",
+            "image_block_id": "b0012"
+          },
+          {
+            "caption_block_id": "b0015",
+            "image_block_id": "b0013"
+          }
+        ],
+        "groups": [
+          {
+            "bbox": [
+              1692,
+              306,
+              2063,
+              530
+            ],
+            "evidence": "fixed_anchor_and_shared_body_or_labels",
+            "id": "images-r0006",
+            "items": [
+              {
+                "caption_block_id": "b0009",
+                "image_block_id": "b0006"
+              },
+              {
+                "caption_block_id": "b0008",
+                "image_block_id": "b0005"
+              }
+            ],
+            "type": "horizontal_images"
+          },
+          {
+            "bbox": [
+              147,
+              1156,
+              889,
+              1441
+            ],
+            "evidence": "fixed_anchor_and_shared_body_or_labels",
+            "id": "images-r0012",
+            "items": [
+              {
+                "caption_block_id": "b0016",
+                "image_block_id": "b0012"
+              },
+              {
+                "caption_block_id": "b0015",
+                "image_block_id": "b0013"
+              }
+            ],
+            "type": "horizontal_images"
+          }
+        ],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0002",
+          "r0003",
+          "r0007",
+          "r0011",
+          "r0016",
+          "r0015",
+          "r0001",
+          "r0004",
+          "r0009",
+          "r0008",
+          "r0010",
+          "r0014"
+        ],
+        "region_order": [
+          "r0002",
+          "r0003",
+          "r0007",
+          "r0011",
+          "r0012",
+          "r0016",
+          "r0013",
+          "r0015",
+          "r0001",
+          "r0004",
+          "r0006",
+          "r0009",
+          "r0005",
+          "r0008",
+          "r0010",
+          "r0014"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "text",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            26,
+            103,
+            926,
+            142
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.850334704,
+          "candidate_rank": 27,
+          "original_class_id": 22,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 232,
+          "model_label": "text",
+          "original_bbox": [
+            26.415916,
+            103.147766,
+            925.198242,
+            141.691818
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            78,
+            151,
+            1154,
+            309
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.939110756,
+          "candidate_rank": 41,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 1276,
+          "model_label": "text",
+          "original_bbox": [
+            78.188293,
+            151.712311,
+            1153.030884,
+            308.148621
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "table",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "table",
+          "bbox": [
+            123,
+            325,
+            1007,
+            421
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.946053386,
+          "candidate_rank": 57,
+          "original_class_id": 21,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 602,
+          "model_label": "table",
+          "original_bbox": [
+            123.96756,
+            325.159302,
+            1006.631714,
+            420.333252
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            28,
+            926,
+            1134,
+            1125
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.950321853,
+          "candidate_rank": 166,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 1599,
+          "model_label": "text",
+          "original_bbox": [
+            28.024071,
+            926.474792,
+            1133.540283,
+            1124.026245
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            147,
+            1156,
+            534,
+            1412
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.848793626,
+          "candidate_rank": 184,
+          "original_class_id": 14,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 690,
+          "model_label": "image",
+          "original_bbox": [
+            147.265701,
+            1156.37085,
+            533.983826,
+            1411.879517
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "figure_title",
+          "id": "l0016",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            306,
+            1410,
+            337,
+            1441
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.680343807,
+          "candidate_rank": 228,
+          "original_class_id": 7,
+          "candidate_id": 13,
+          "mask_row": 13,
+          "mask_nonzero": 9,
+          "model_label": "figure_title",
+          "original_bbox": [
+            306.431335,
+            1410.086914,
+            336.215942,
+            1440.630371
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0013",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            538,
+            1162,
+            889,
+            1402
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.934742153,
+          "candidate_rank": 237,
+          "original_class_id": 14,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 595,
+          "model_label": "image",
+          "original_bbox": [
+            538.912109,
+            1162.701172,
+            888.958679,
+            1401.686523
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "figure_title",
+          "id": "l0015",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            673,
+            1408,
+            711,
+            1441
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.710942149,
+          "candidate_rank": 252,
+          "original_class_id": 7,
+          "candidate_id": 12,
+          "mask_row": 12,
+          "mask_nonzero": 10,
+          "model_label": "figure_title",
+          "original_bbox": [
+            673.358582,
+            1408.333008,
+            710.201294,
+            1440.447632
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1243,
+            102,
+            2304,
+            180
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.923129797,
+          "candidate_rank": 96,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 635,
+          "model_label": "text",
+          "original_bbox": [
+            1243.13208,
+            102.064491,
+            2303.668701,
+            179.051071
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1243,
+            188,
+            2279,
+            266
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.901603758,
+          "candidate_rank": 121,
+          "original_class_id": 22,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 623,
+          "model_label": "text",
+          "original_bbox": [
+            1243.815186,
+            188.018021,
+            2278.145264,
+            265.703735
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1692,
+            307,
+            1845,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.934235394,
+          "candidate_rank": 130,
+          "original_class_id": 14,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 199,
+          "model_label": "image",
+          "original_bbox": [
+            1692.084106,
+            307.896973,
+            1844.050537,
+            489.324341
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "figure_title",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1744,
+            498,
+            1791,
+            530
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.551391542,
+          "candidate_rank": 135,
+          "original_class_id": 7,
+          "candidate_id": 14,
+          "mask_row": 14,
+          "mask_nonzero": 12,
+          "model_label": "figure_title",
+          "original_bbox": [
+            1744.53479,
+            498.794678,
+            1790.381104,
+            529.861145
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            1907,
+            306,
+            2063,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.929754138,
+          "candidate_rank": 140,
+          "original_class_id": 14,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 199,
+          "model_label": "image",
+          "original_bbox": [
+            1907.614624,
+            306.472046,
+            2062.999023,
+            489.293579
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "figure_title",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1959,
+            497,
+            2006,
+            530
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.508255363,
+          "candidate_rank": 148,
+          "original_class_id": 7,
+          "candidate_id": 15,
+          "mask_row": 15,
+          "mask_nonzero": 14,
+          "model_label": "figure_title",
+          "original_bbox": [
+            1959.847534,
+            497.421112,
+            2005.646606,
+            529.714355
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1183,
+            925,
+            2298,
+            1194
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.946363986,
+          "candidate_rank": 264,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 2181,
+          "model_label": "text",
+          "original_bbox": [
+            1183.182739,
+            925.413879,
+            2297.270508,
+            1193.385986
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0014",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            1185,
+            1204,
+            2297,
+            1550
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.955659628,
+          "candidate_rank": 280,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 2846,
+          "model_label": "text",
+          "original_bbox": [
+            1185.318237,
+            1204.450928,
+            2296.845947,
+            1549.981445
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            26,
+            103,
+            926,
+            142
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            78,
+            151,
+            1154,
+            309
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            123,
+            325,
+            1007,
+            421
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "table"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            28,
+            926,
+            1134,
+            1125
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            147,
+            1156,
+            534,
+            1412
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0016",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0016"
+          ],
+          "bbox": [
+            306,
+            1410,
+            337,
+            1441
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0013",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0013"
+          ],
+          "bbox": [
+            538,
+            1162,
+            889,
+            1402
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0015",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0015"
+          ],
+          "bbox": [
+            673,
+            1408,
+            711,
+            1441
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            1243,
+            102,
+            2304,
+            180
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            1243,
+            188,
+            2279,
+            266
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            1692,
+            307,
+            1845,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            1744,
+            498,
+            1791,
+            530
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            1907,
+            306,
+            2063,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            1959,
+            497,
+            2006,
+            530
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            1183,
+            925,
+            2298,
+            1194
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0014",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0014"
+          ],
+          "bbox": [
+            1185,
+            1204,
+            2297,
+            1550
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": 1,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            26,
+            103,
+            926,
+            142
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                26,
+                103,
+                926,
+                142
+              ],
+              "canvas_size": [
+                1248,
+                64
+              ],
+              "content_size": [
+                1248,
+                54
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 1.3866666666666667,
+              "rounding_error": [
+                0,
+                -0.0799999999999983
+              ],
+              "canvas_to_page_affine": [
+                0.7211538461538461,
+                0,
+                26,
+                0,
+                0.7222222222222222,
+                99.38888888888889
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2641,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2287,
+                    "raw_output": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1248,
+                      64
+                    ],
+                    "content_size": [
+                      1248,
+                      54
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.0799999999999983
+                    ],
+                    "scale": 1.3866666666666667,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2287,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            78,
+            151,
+            1154,
+            309
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 170,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                78,
+                151,
+                1154,
+                309
+              ],
+              "canvas_size": [
+                1088,
+                160
+              ],
+              "content_size": [
+                1088,
+                160
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 1.0111524163568772,
+              "rounding_error": [
+                0,
+                0.23791821561340498
+              ],
+              "canvas_to_page_affine": [
+                0.9889705882352942,
+                0,
+                78,
+                0,
+                0.9875,
+                151
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3820,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2968,
+                    "raw_output": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1088,
+                      160
+                    ],
+                    "content_size": [
+                      1088,
+                      160
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.23791821561340498
+                    ],
+                    "scale": 1.0111524163568772,
+                    "token_count": 170
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2968,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "table",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            123,
+            325,
+            1007,
+            421
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "html",
+            "text": "<table><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>",
+            "resource": "assets/p0001-b0007.png",
+            "table": {
+              "rows": 2,
+              "columns": 10,
+              "cells": [
+                {
+                  "row": 0,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "时间(分)",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "0",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "1",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "2",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 4,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "3",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 5,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "4",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 6,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "5",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 7,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "6",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 8,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "7",
+                  "bbox": null
+                },
+                {
+                  "row": 0,
+                  "column": 9,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "8",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 0,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "温度(°C)",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 1,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "90°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 2,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "92°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 3,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "94°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 4,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "96°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 5,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "98°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 6,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "99°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 7,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "99°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 8,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "96°C",
+                  "bbox": null
+                },
+                {
+                  "row": 1,
+                  "column": 9,
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "header": false,
+                  "text": "99°C",
+                  "bbox": null
+                }
+              ]
+            }
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "<table border=1><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                123,
+                325,
+                1007,
+                421
+              ],
+              "canvas_size": [
+                896,
+                96
+              ],
+              "content_size": [
+                884,
+                96
+              ],
+              "pad_offset": [
+                6,
+                0
+              ],
+              "scale": 1,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1,
+                0,
+                117,
+                0,
+                1,
+                325
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4311,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3924,
+                    "raw_output": "<table border=1><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "<table border=1><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      896,
+                      96
+                    ],
+                    "content_size": [
+                      884,
+                      96
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      6,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 1.0,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3924,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "<table border=1><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            28,
+            926,
+            1134,
+            1125
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 210,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                28,
+                926,
+                1134,
+                1125
+              ],
+              "canvas_size": [
+                1120,
+                192
+              ],
+              "content_size": [
+                1067,
+                192
+              ],
+              "pad_offset": [
+                26,
+                0
+              ],
+              "scale": 0.964824120603015,
+              "rounding_error": [
+                -0.09547738693458996,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0365510777881912,
+                0,
+                1.0496719775070282,
+                0,
+                1.0364583333333333,
+                926
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4800,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3577,
+                    "raw_output": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      192
+                    ],
+                    "content_size": [
+                      1067,
+                      192
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      26,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.09547738693458996,
+                      0.0
+                    ],
+                    "scale": 0.964824120603015,
+                    "token_count": 210
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3577,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            147,
+            1156,
+            534,
+            1412
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0016",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0016"
+          ],
+          "bbox": [
+            306,
+            1410,
+            337,
+            1441
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 甲\n",
+            "resource": "assets/p0001-b0016.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0016",
+            "raw_output": "## 甲\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 64,
+              "source_crop": "assets/p0001-b0016.png",
+              "source_bbox": [
+                306,
+                1410,
+                337,
+                1441
+              ],
+              "canvas_size": [
+                256,
+                256
+              ],
+              "content_size": [
+                256,
+                256
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 8.258064516129032,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.12109375,
+                0,
+                306,
+                0,
+                0.12109375,
+                1410
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1703,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1426,
+                    "raw_output": "## 甲\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 甲\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      256,
+                      256
+                    ],
+                    "content_size": [
+                      256,
+                      256
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 8.258064516129032,
+                    "token_count": 64
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1426,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 甲\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0013",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0013"
+          ],
+          "bbox": [
+            538,
+            1162,
+            889,
+            1402
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0013.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0013",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0015",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0015"
+          ],
+          "bbox": [
+            673,
+            1408,
+            711,
+            1441
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 乙\n",
+            "resource": "assets/p0001-b0015.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0015",
+            "raw_output": "## 乙\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 72,
+              "source_crop": "assets/p0001-b0015.png",
+              "source_bbox": [
+                673,
+                1408,
+                711,
+                1441
+              ],
+              "canvas_size": [
+                288,
+                256
+              ],
+              "content_size": [
+                288,
+                250
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 7.578947368421052,
+              "rounding_error": [
+                0,
+                -0.10526315789471141
+              ],
+              "canvas_to_page_affine": [
+                0.13194444444444445,
+                0,
+                673,
+                0,
+                0.132,
+                1407.604
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1780,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1460,
+                    "raw_output": "## 乙\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 乙\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      288,
+                      256
+                    ],
+                    "content_size": [
+                      288,
+                      250
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.10526315789471141
+                    ],
+                    "scale": 7.578947368421052,
+                    "token_count": 72
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1460,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 乙\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            1243,
+            102,
+            2304,
+            180
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                1243,
+                102,
+                2304,
+                180
+              ],
+              "canvas_size": [
+                1056,
+                64
+              ],
+              "content_size": [
+                871,
+                64
+              ],
+              "pad_offset": [
+                92,
+                0
+              ],
+              "scale": 0.8205128205128205,
+              "rounding_error": [
+                0.4358974358974592,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.2181400688863375,
+                0,
+                1130.931113662457,
+                0,
+                1.21875,
+                102
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2267,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1982,
+                    "raw_output": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      64
+                    ],
+                    "content_size": [
+                      871,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      92,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.4358974358974592,
+                      0.0
+                    ],
+                    "scale": 0.8205128205128205,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1982,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            1243,
+            188,
+            2279,
+            266
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 64,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                1243,
+                188,
+                2279,
+                266
+              ],
+              "canvas_size": [
+                1024,
+                64
+              ],
+              "content_size": [
+                850,
+                64
+              ],
+              "pad_offset": [
+                87,
+                0
+              ],
+              "scale": 0.8205128205128205,
+              "rounding_error": [
+                -0.05128205128198715,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.2188235294117646,
+                0,
+                1136.9623529411765,
+                0,
+                1.21875,
+                188
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2284,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2007,
+                    "raw_output": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      64
+                    ],
+                    "content_size": [
+                      850,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      87,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.05128205128198715,
+                      0.0
+                    ],
+                    "scale": 0.8205128205128205,
+                    "token_count": 64
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2007,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            1692,
+            307,
+            1845,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            1744,
+            498,
+            1791,
+            530
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## (a)\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "## (a)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                1744,
+                498,
+                1791,
+                530
+              ],
+              "canvas_size": [
+                320,
+                224
+              ],
+              "content_size": [
+                320,
+                218
+              ],
+              "pad_offset": [
+                0,
+                3
+              ],
+              "scale": 6.808510638297872,
+              "rounding_error": [
+                0,
+                0.1276595744680833
+              ],
+              "canvas_to_page_affine": [
+                0.146875,
+                0,
+                1744,
+                0,
+                0.14678899082568808,
+                497.5596330275229
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1759,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1464,
+                    "raw_output": "## (a)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## (a)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      320,
+                      224
+                    ],
+                    "content_size": [
+                      320,
+                      218
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      3
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.1276595744680833
+                    ],
+                    "scale": 6.808510638297872,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1464,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## (a)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            1907,
+            306,
+            2063,
+            490
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            1959,
+            497,
+            2006,
+            530
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## (b)\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "## (b)\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                1959,
+                497,
+                2006,
+                530
+              ],
+              "canvas_size": [
+                320,
+                224
+              ],
+              "content_size": [
+                319,
+                224
+              ],
+              "pad_offset": [
+                0,
+                0
+              ],
+              "scale": 6.787878787878788,
+              "rounding_error": [
+                -0.030303030303059586,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.14733542319749215,
+                0,
+                1959,
+                0,
+                0.14732142857142858,
+                497
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1357,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1065,
+                    "raw_output": "## (b)\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## (b)\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      320,
+                      224
+                    ],
+                    "content_size": [
+                      319,
+                      224
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.030303030303059586,
+                      0.0
+                    ],
+                    "scale": 6.787878787878788,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1065,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## (b)\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            1183,
+            925,
+            2298,
+            1194
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 280,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                1183,
+                925,
+                2298,
+                1194
+              ],
+              "canvas_size": [
+                1120,
+                256
+              ],
+              "content_size": [
+                1061,
+                256
+              ],
+              "pad_offset": [
+                29,
+                0
+              ],
+              "scale": 0.9516728624535316,
+              "rounding_error": [
+                -0.11524163568765289,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1.0508953817153628,
+                0,
+                1152.5240339302545,
+                0,
+                1.05078125,
+                925
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 5409,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3753,
+                    "raw_output": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      256
+                    ],
+                    "content_size": [
+                      1061,
+                      256
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      29,
+                      0
+                    ],
+                    "rounding_error": [
+                      -0.11524163568765289,
+                      0.0
+                    ],
+                    "scale": 0.9516728624535316,
+                    "token_count": 280
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3753,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n",
+              "nonempty_lines": 5,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0014",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0014"
+          ],
+          "bbox": [
+            1185,
+            1204,
+            2297,
+            1550
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n",
+            "resource": "assets/p0001-b0014.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0014",
+            "raw_output": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 300,
+              "source_crop": "assets/p0001-b0014.png",
+              "source_bbox": [
+                1185,
+                1204,
+                2297,
+                1550
+              ],
+              "canvas_size": [
+                960,
+                320
+              ],
+              "content_size": [
+                960,
+                299
+              ],
+              "pad_offset": [
+                0,
+                10
+              ],
+              "scale": 0.8633093525179856,
+              "rounding_error": [
+                0,
+                0.2949640287769739
+              ],
+              "canvas_to_page_affine": [
+                1.1583333333333334,
+                0,
+                1185,
+                0,
+                1.157190635451505,
+                1192.428093645485
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 7163,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 5125,
+                    "raw_output": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      960,
+                      320
+                    ],
+                    "content_size": [
+                      960,
+                      299
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      10
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.2949640287769739
+                    ],
+                    "scale": 0.8633093525179856,
+                    "token_count": 300
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 5125,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n",
+              "nonempty_lines": 6,
+              "empty_number_lines": 1,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "caption_of",
+          "source_block_id": "b0008",
+          "target_block_id": "b0005",
+          "evidence": "pre_recognition_geometry"
+        },
+        {
+          "type": "caption_of",
+          "source_block_id": "b0009",
+          "target_block_id": "b0006",
+          "evidence": "pre_recognition_geometry"
+        },
+        {
+          "type": "caption_of",
+          "source_block_id": "b0016",
+          "target_block_id": "b0012",
+          "evidence": "pre_recognition_geometry"
+        },
+        {
+          "type": "caption_of",
+          "source_block_id": "b0015",
+          "target_block_id": "b0013",
+          "evidence": "pre_recognition_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 900,
+      "height": 39,
+      "bbox": [
+        26,
+        103,
+        926,
+        142
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 1076,
+      "height": 158,
+      "bbox": [
+        78,
+        151,
+        1154,
+        309
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 884,
+      "height": 96,
+      "bbox": [
+        123,
+        325,
+        1007,
+        421
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 1106,
+      "height": 199,
+      "bbox": [
+        28,
+        926,
+        1134,
+        1125
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 387,
+      "height": 256,
+      "bbox": [
+        147,
+        1156,
+        534,
+        1412
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0016",
+      "path": "assets/p0001-b0016.png",
+      "media_type": "image/png",
+      "source_block_id": "b0016",
+      "width": 31,
+      "height": 31,
+      "bbox": [
+        306,
+        1410,
+        337,
+        1441
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0013",
+      "path": "assets/p0001-b0013.png",
+      "media_type": "image/png",
+      "source_block_id": "b0013",
+      "width": 351,
+      "height": 240,
+      "bbox": [
+        538,
+        1162,
+        889,
+        1402
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0015",
+      "path": "assets/p0001-b0015.png",
+      "media_type": "image/png",
+      "source_block_id": "b0015",
+      "width": 38,
+      "height": 33,
+      "bbox": [
+        673,
+        1408,
+        711,
+        1441
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 1061,
+      "height": 78,
+      "bbox": [
+        1243,
+        102,
+        2304,
+        180
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 1036,
+      "height": 78,
+      "bbox": [
+        1243,
+        188,
+        2279,
+        266
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 153,
+      "height": 183,
+      "bbox": [
+        1692,
+        307,
+        1845,
+        490
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 47,
+      "height": 32,
+      "bbox": [
+        1744,
+        498,
+        1791,
+        530
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 156,
+      "height": 184,
+      "bbox": [
+        1907,
+        306,
+        2063,
+        490
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 47,
+      "height": 33,
+      "bbox": [
+        1959,
+        497,
+        2006,
+        530
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 1115,
+      "height": 269,
+      "bbox": [
+        1183,
+        925,
+        2298,
+        1194
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0014",
+      "path": "assets/p0001-b0014.png",
+      "media_type": "image/png",
+      "source_block_id": "b0014",
+      "width": 1112,
+      "height": 346,
+      "bbox": [
+        1185,
+        1204,
+        2297,
+        1550
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n\n\n(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n\n\n<table><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>\n\n28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n\n\n![插图](assets/p0001-b0012.png)\n\n甲\n\n\n![插图](assets/p0001-b0013.png)\n\n乙\n\n\n(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n\n\n(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n\n\n![插图](assets/p0001-b0006.png)\n\n(a)\n\n\n![插图](assets/p0001-b0005.png)\n\n(b)\n\n\n29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n\n\n30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n\n",
+  "quality": {
+    "text": {
+      "denominator": 12,
+      "matched": 12,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 4,
+          "category": "title",
+          "order": 1,
+          "block_id": "b0002",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 30,
+          "reference_range": [
+            0,
+            30
+          ],
+          "actual_range": [
+            0,
+            32
+          ],
+          "raw_range": [
+            0,
+            32
+          ],
+          "edit_distance": 2,
+          "raw_edit_distance": 2,
+          "exact": false
+        },
+        {
+          "annotation_id": 13,
+          "category": "text_block",
+          "order": 2,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 1,
+          "reference_chars": 126,
+          "reference_range": [
+            0,
+            126
+          ],
+          "actual_range": [
+            0,
+            116
+          ],
+          "raw_range": [
+            0,
+            116
+          ],
+          "edit_distance": 10,
+          "raw_edit_distance": 10,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "text_block",
+          "order": 4,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 8,
+          "reference_chars": 85,
+          "reference_range": [
+            0,
+            85
+          ],
+          "actual_range": [
+            0,
+            61
+          ],
+          "raw_range": [
+            0,
+            61
+          ],
+          "edit_distance": 27,
+          "raw_edit_distance": 27,
+          "exact": false
+        },
+        {
+          "annotation_id": 1,
+          "category": "text_block",
+          "order": 5,
+          "block_id": "b0004",
+          "status": "ok",
+          "reading_order_position": 9,
+          "reference_chars": 73,
+          "reference_range": [
+            0,
+            73
+          ],
+          "actual_range": [
+            0,
+            69
+          ],
+          "raw_range": [
+            0,
+            69
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 10,
+          "category": "figure_caption",
+          "order": 7,
+          "block_id": "b0009",
+          "status": "ok",
+          "reading_order_position": 11,
+          "reference_chars": 3,
+          "reference_range": [
+            0,
+            3
+          ],
+          "actual_range": [
+            0,
+            6
+          ],
+          "raw_range": [
+            0,
+            6
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 3,
+          "category": "figure_caption",
+          "order": 9,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 13,
+          "reference_chars": 3,
+          "reference_range": [
+            0,
+            3
+          ],
+          "actual_range": [
+            0,
+            6
+          ],
+          "raw_range": [
+            0,
+            6
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 5,
+          "category": "title",
+          "order": 10,
+          "block_id": "b0011",
+          "status": "ok",
+          "reading_order_position": 3,
+          "reference_chars": 177,
+          "reference_range": [
+            0,
+            177
+          ],
+          "actual_range": [
+            0,
+            155
+          ],
+          "raw_range": [
+            0,
+            155
+          ],
+          "edit_distance": 25,
+          "raw_edit_distance": 25,
+          "exact": false
+        },
+        {
+          "annotation_id": 25,
+          "category": "figure_caption",
+          "order": 12,
+          "block_id": "b0016",
+          "status": "ok",
+          "reading_order_position": 5,
+          "reference_chars": 1,
+          "reference_range": [
+            0,
+            1
+          ],
+          "actual_range": [
+            0,
+            4
+          ],
+          "raw_range": [
+            0,
+            4
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 24,
+          "category": "figure_caption",
+          "order": 14,
+          "block_id": "b0015",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 1,
+          "reference_range": [
+            0,
+            1
+          ],
+          "actual_range": [
+            0,
+            4
+          ],
+          "raw_range": [
+            0,
+            4
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 19,
+          "category": "text_block",
+          "order": 15,
+          "block_id": "b0010",
+          "status": "ok",
+          "reading_order_position": 14,
+          "reference_chars": 118,
+          "reference_range": [
+            0,
+            118
+          ],
+          "actual_range": [
+            0,
+            117
+          ],
+          "raw_range": [
+            0,
+            117
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        },
+        {
+          "annotation_id": 21,
+          "category": "text_block",
+          "order": 21,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 15,
+          "reference_chars": 211,
+          "reference_range": [
+            0,
+            211
+          ],
+          "actual_range": [
+            0,
+            209
+          ],
+          "raw_range": [
+            0,
+            209
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 6,
+          "category": "page_number",
+          "order": null,
+          "block_id": "b0014",
+          "status": "ok",
+          "reading_order_position": 15,
+          "reference_chars": 1,
+          "reference_range": [
+            211,
+            212
+          ],
+          "actual_range": [
+            209,
+            211
+          ],
+          "raw_range": [
+            209,
+            211
+          ],
+          "edit_distance": 1,
+          "raw_edit_distance": 1,
+          "exact": false
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 829,
+      "edit_distance": 86,
+      "raw_edit_distance": 86
+    },
+    "independent_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "table": {
+      "denominator": 1,
+      "matched": 1,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 7,
+          "category": "table",
+          "order": 3,
+          "block_id": "b0007",
+          "coverage": 0.9704,
+          "status": "ok",
+          "structure_exact": true,
+          "cell_exact": 10,
+          "cell_denominator": 20,
+          "exact": false,
+          "reading_order_position": 2
+        }
+      ],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 4,
+      "matched": 4,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 4,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 0,
+          "category": "figure",
+          "order": 6,
+          "block_id": "b0006",
+          "coverage": 0.9811,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 10
+        },
+        {
+          "annotation_id": 14,
+          "category": "figure",
+          "order": 8,
+          "block_id": "b0005",
+          "coverage": 0.9822,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 12
+        },
+        {
+          "annotation_id": 12,
+          "category": "figure",
+          "order": 11,
+          "block_id": "b0012",
+          "coverage": 0.9727,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 4
+        },
+        {
+          "annotation_id": 26,
+          "category": "figure",
+          "order": 13,
+          "block_id": "b0013",
+          "coverage": 0.8129,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 6
+        }
+      ],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 120,
+      "evaluable": 120,
+      "correct": 90,
+      "missing_pairs": 0,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 16
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "table:inexact_or_missing",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "table:inexact_or_missing",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      4,
+      13,
+      2,
+      1,
+      10,
+      3,
+      5,
+      25,
+      24,
+      19,
+      21,
+      6
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 17,
+    "parent_reference_count": 17
+  },
+  "alignment": [
+    {
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "27. 在“观察水的沸腾的实验”中，小明的实验记录表格如下：",
+      "actual": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：",
+      "raw_output": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n",
+      "edit_distance": 2,
+      "raw_edit_distance": 2,
+      "bbox": [
+        26,
+        103,
+        926,
+        142
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "27. 在 “观察水的沸腾的实验” 中，小明的实验记录表格如下：\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0002"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        13
+      ],
+      "expected": "\\t(1) 在烧杯上盖上硬纸片，是为了____ 。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体____和____同时发生的剧烈的____现象。液体在沸腾过程中要____热，但温度____。",
+      "actual": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。",
+      "raw_output": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n",
+      "edit_distance": 10,
+      "raw_edit_distance": 10,
+      "bbox": [
+        78,
+        151,
+        1154,
+        309
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(1)在烧杯上盖上硬纸片，是为了___。观察到当水沸腾时，水中形成大量的气泡上升到水面破裂开来，里面的水蒸气散发到空气中。从实验可得出，沸腾是从液体___和___同时发生的剧烈的___现象。液体在沸腾过程中要___热，但温度___。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        2
+      ],
+      "expected": "(3) 由表可知，加热了____分钟水开始沸腾，水的沸点是____ $ \\mathrm{^{o} C} $ ，水上方的大气压强____一个大气压（填“大于”或“小于”）。",
+      "actual": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。",
+      "raw_output": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n",
+      "edit_distance": 27,
+      "raw_edit_distance": 27,
+      "bbox": [
+        1243,
+        102,
+        2304,
+        180
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(3)由表可知，加热了___分钟水开始沸腾，水的沸点是___℃，水上方的大气压强___一个大气压(填“大于”或“小于”)。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0004",
+      "source_region_ids": [
+        "r0004"
+      ],
+      "annotation_ids": [
+        1
+      ],
+      "expected": "(4) 小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a) 、(b)所示，则图____是水沸腾前的情况，图____是水沸腾时的情况。",
+      "actual": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。",
+      "raw_output": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        1243,
+        188,
+        2279,
+        266
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "(4)小丽观察到沸腾前和沸腾时水中气泡上升过程中的两种情况，如图(a)、(b)所示，则图___是水沸腾前的情况，图___是水沸腾时的情况。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0004"
+      ]
+    },
+    {
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "annotation_ids": [
+        10
+      ],
+      "expected": "(a)",
+      "actual": "## (a)",
+      "raw_output": "## (a)\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        1744,
+        498,
+        1791,
+        530
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## (a)\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0009"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "(b)",
+      "actual": "## (b)",
+      "raw_output": "## (b)\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        1959,
+        497,
+        2006,
+        530
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## (b)\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    },
+    {
+      "block_id": "b0011",
+      "source_region_ids": [
+        "r0011"
+      ],
+      "annotation_ids": [
+        5
+      ],
+      "expected": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是____(填“晶体”或“非晶体”)，该液态物质从开始凝固到完全凝固所用的时间是____min，8s末温度计的示数如图乙所示，温度计的示数是____ $ \\mathrm{^{o} C}。 $",
+      "actual": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。",
+      "raw_output": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n",
+      "edit_distance": 25,
+      "raw_edit_distance": 25,
+      "bbox": [
+        28,
+        926,
+        1134,
+        1125
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "28. 如图乙所示，是探究某液态物质凝固过程中温度随时间变化的实验装置，依据实验数据描绘出了该液态物质在凝固过程中温度随时间变化的图像，如图甲所示。由图像可知该物质是___（填“晶体”或“非晶体”），该液态物质从开始凝固到完全凝固所用的时间是___min，8s末温度计的示数如图乙所示，温度计的示数是___℃。\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0011"
+      ]
+    },
+    {
+      "block_id": "b0016",
+      "source_region_ids": [
+        "r0016"
+      ],
+      "annotation_ids": [
+        25
+      ],
+      "expected": "甲",
+      "actual": "## 甲",
+      "raw_output": "## 甲\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        306,
+        1410,
+        337,
+        1441
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 甲\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0016"
+      ]
+    },
+    {
+      "block_id": "b0015",
+      "source_region_ids": [
+        "r0015"
+      ],
+      "annotation_ids": [
+        24
+      ],
+      "expected": "乙",
+      "actual": "## 乙",
+      "raw_output": "## 乙\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        673,
+        1408,
+        711,
+        1441
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 乙\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0015"
+      ]
+    },
+    {
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "annotation_ids": [
+        19
+      ],
+      "expected": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是( ) A. 玻璃窗上的“汗”是水蒸气液化生成的 B. 玻璃窗上的“冰花”是水蒸气凝华生成的 C. “冰花”结在玻璃窗的内表面 D. “汗”出在玻璃窗的外表面",
+      "actual": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是() A. 玻璃窗上的“汗”是水蒸气液化生成的 B. 玻璃窗上的“冰花”是水蒸气凝华生成的 C. “冰花”结在玻璃窗的内表面 D. “汗”出在玻璃窗的外表面",
+      "raw_output": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n",
+      "edit_distance": 1,
+      "raw_edit_distance": 1,
+      "bbox": [
+        1183,
+        925,
+        2298,
+        1194
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "29. 寒冷的冬天，居民楼的玻璃窗上会“出汗”或结“冰花”。下列说法不正确的是()\n\nA. 玻璃窗上的“汗”是水蒸气液化生成的\n\nB. 玻璃窗上的“冰花”是水蒸气凝华生成的\n\nC. “冰花”结在玻璃窗的内表面\n\nD. “汗”出在玻璃窗的外表面\n",
+        "nonempty_lines": 5,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0010"
+      ]
+    },
+    {
+      "block_id": "b0014",
+      "source_region_ids": [
+        "r0014"
+      ],
+      "annotation_ids": [
+        21,
+        6
+      ],
+      "expected": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层 0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是( ) A. 铝膜与钢罐间的水把它们冻牢了 B. 结冰时铝膜与钢罐间的冰把它们粘牢了 C. 水结冰时膨胀产生的巨大压力把它们压牢了 D. 水结冰时放出的热量把它们焊牢了6",
+      "actual": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（） A. 铝膜与钢罐间的水把它们冻牢了 B. 结冰时铝膜与钢罐间的冰把它们粘牢了 C. 水结冰时膨胀产生的巨大压力把它们压牢了 D. 水结冰时放出的热量把它们焊牢了 6",
+      "raw_output": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n",
+      "edit_distance": 5,
+      "raw_edit_distance": 5,
+      "bbox": [
+        1185,
+        1204,
+        2297,
+        1550
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "30. 工厂要制造一种特殊用途的钢铝罐，钢罐内表面要压接一层0.25mm厚的铝膜，一时难住了焊接和锻压专家。后经技术人员的联合攻关解决了这一难题：他们先把铝膜紧贴到钢罐内表面，再往钢罐内灌满水，插入冷冻管使水结冰，然后铝膜与钢罐就压接在一起了。其原因是（）\n\nA. 铝膜与钢罐间的水把它们冻牢了\n\nB. 结冰时铝膜与钢罐间的冰把它们粘牢了\n\nC. 水结冰时膨胀产生的巨大压力把它们压牢了\n\nD. 水结冰时放出的热量把它们焊牢了\n\n6\n",
+        "nonempty_lines": 6,
+        "empty_number_lines": 1,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0014"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "table",
+      "annotation_id": 7,
+      "reference": {
+        "category_type": "table",
+        "poly": [
+          126.42818668041251,
+          326.2890835687641,
+          1009.6643402576061,
+          326.2890835687641,
+          1009.6643402576061,
+          423.594878268215,
+          126.42818668041251,
+          423.594878268215
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 7,
+        "html": "<table border=\"1\"><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(℃)</td><td>90℃</td><td>92℃</td><td>94℃</td><td>96℃</td><td>98℃</td><td>99℃</td><td>99℃</td><td>96℃</td><td>99℃</td></tr></table>",
+        "attribute": {},
+        "table_edit_status": "good"
+      },
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "raw_output": "<table border=1><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>\n",
+      "content": {
+        "format": "html",
+        "text": "<table><tr><td>时间(分)</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>温度(°C)</td><td>90°C</td><td>92°C</td><td>94°C</td><td>96°C</td><td>98°C</td><td>99°C</td><td>99°C</td><td>96°C</td><td>99°C</td></tr></table>",
+        "resource": "assets/p0001-b0007.png",
+        "table": {
+          "rows": 2,
+          "columns": 10,
+          "cells": [
+            {
+              "row": 0,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "时间(分)",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "0",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "1",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "2",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "3",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "4",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "5",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 7,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "6",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 8,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "7",
+              "bbox": null
+            },
+            {
+              "row": 0,
+              "column": 9,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "8",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "温度(°C)",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "90°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "92°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "94°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 4,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "96°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 5,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "98°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 6,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "99°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 7,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "99°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 8,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "96°C",
+              "bbox": null
+            },
+            {
+              "row": 1,
+              "column": 9,
+              "rowspan": 1,
+              "colspan": 1,
+              "header": false,
+              "text": "99°C",
+              "bbox": null
+            }
+          ]
+        }
+      },
+      "error": null,
+      "status": "ok",
+      "exact": false
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 0,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          1690.8280547662305,
+          308.06511127298825,
+          1844.1508766230108,
+          308.06511127298825,
+          1844.1508766230108,
+          492.08977267233,
+          1690.8280547662305,
+          492.08977267233
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 0,
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0006.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 14,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          1910.3428530811925,
+          309.54802222325884,
+          2060.9974451392377,
+          309.54802222325884,
+          2060.9974451392377,
+          493.2657823297102,
+          1910.3428530811925,
+          493.2657823297102
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 14,
+        "attribute": {}
+      },
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0005.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 12,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          146.93466186523457,
+          1152.7226562500005,
+          539.660735027505,
+          1152.7226562500005,
+          539.660735027505,
+          1407.447628462603,
+          146.93466186523457,
+          1407.447628462603
+        ],
+        "ignore": false,
+        "order": 11,
+        "anno_id": 12,
+        "attribute": {}
+      },
+      "block_id": "b0012",
+      "source_region_ids": [
+        "r0012"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0012.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 26,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          550.1816059912884,
+          1153.100803464326,
+          942.9076791535588,
+          1153.100803464326,
+          942.9076791535588,
+          1407.8257756769285,
+          550.1816059912884,
+          1407.8257756769285
+        ],
+        "ignore": false,
+        "order": 13,
+        "anno_id": 26,
+        "attribute": {}
+      },
+      "block_id": "b0013",
+      "source_region_ids": [
+        "r0013"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0013.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

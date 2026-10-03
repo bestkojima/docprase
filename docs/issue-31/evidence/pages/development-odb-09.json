@@ -1,0 +1,2911 @@
+{
+  "key": "development/odb-09",
+  "input": {
+    "path": "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+    "sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/output/omnidocbench/selected-20/images/jiaocaineedrop_j70ke43p.pdf_69.jpg",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/development/odb-09/job"
+    ],
+    "input_sha256": "9f9a0969fe7056dc3c8965b224ab61628aae7b9459723b5a0910011802553522",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 45.68177242099773,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "2876f27543f7cccb2b63637fe1fefd9168d9db7af190119033d790607e4dd0f4",
+      "job/assets/p0001-b0002.png": "71f2cb47b99dd3df4558e34de81f8929dbe75a015be7c92063c12386fa1def97",
+      "job/assets/p0001-b0003.png": "afddd62c229ba82e49a6401d4b49506a23d47df9ace60698b00ff74826e45b2f",
+      "job/assets/p0001-b0004.png": "7199130e4917bb88d3521376d149fc877d2ca60791f7b564490dbaca10c929bc",
+      "job/assets/p0001-b0005.png": "58e792ee4403d417c0fc12d4f517321dfdc4f39edbf5affd79b08881602cff7d",
+      "job/assets/p0001-b0006.png": "56b134a2074f9cb48f77fa5e40b0538df574da8971e6231e0dfb3b4ff3b3ce2c",
+      "job/assets/p0001-b0007.png": "b1a8095ca740976e342c3d023247fcce7564ae7f74e3ac222874720b9f356576",
+      "job/assets/p0001-b0008.png": "076fdc17c7dee9e83b3af35f608cd44b896d73460e3a90ad5db92b3c3ce904c1",
+      "job/assets/p0001-b0009.png": "a7fe1d7e276af5defbfbf804dbe2addfa04e712a8ac683fe90e3f2cb4bafc5ca",
+      "job/assets/p0001-b0010.png": "92e2a5dae56d4028766eebef7f9d9032f0d4e048a59f7c737c1cb404810ae646",
+      "job/assets/p0001-fetch_name_0.f32": "b2c5f87e7b8238f0bef58bb322908bc2bbcc42af3cf75f0cab395d78624feec9",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "c805a51fd7ba0522c0167ff0cdc398e43ef598aafa12da919ae7544266810d30",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "ed4d9ca432aebe8edf1c131e450ae22c2a8d5c1385e2c55c64b335671d8a3eff",
+      "job/assets/p0001-layout-overlay.png": "d10c8da7cd31e876f00ffcff44ff935f53d986e154571af6af50cb3eb4ca1108",
+      "job/assets/p0001-mask-c0.png": "1f7b46f1dbc1bfa9f46d8e6afea7aa8b255980259138f0a04db335683ffe6684",
+      "job/assets/p0001-mask-c1.png": "abc539a06ac48281696aeaa2f3e0f55115031ac204b300a80836baa4a6ce6659",
+      "job/assets/p0001-mask-c2.png": "7fb66d1423bcfafd1a0c09b6d59a4c4d7be2a6ae49d6f6472bae3914efb571ae",
+      "job/assets/p0001-mask-c3.png": "abd39a4075968bca69453c53ef2a16f0b689c6ca724f8433c263c081c6394a10",
+      "job/assets/p0001-mask-c4.png": "8deb69f6c6a1899d8a65f5a44c12410353580431211a2cc2076398a0940bd3c9",
+      "job/assets/p0001-mask-c5.png": "c2f80502878e3b43e8706a488f0e98988c5527f14205c9703f67429e1f8d28f4",
+      "job/assets/p0001-mask-c6.png": "48a99f4ca7e51fb082bfadf1ad5886bda32413f7745f6e9bbbf19c5bdf1b7303",
+      "job/assets/p0001-mask-c7.png": "38977561674152d05976d1341865bfaded646746c44952a307a6a48f4b891175",
+      "job/assets/p0001-mask-c8.png": "119194223151acf625a02a3d21d16560847d5d5051075f4520d4f0e314e433e4",
+      "job/assets/p0001-mask-c9.png": "de06b977e6f987ba8093d7892c5f3666e280fe300d6bd44c52828f3ec7be65b1",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "cf1634627d62ba55c09ba4f2bf6f62d9b9417243dda0bda55334365ef07ac33e",
+      "job/document.md": "4579cceeb42f0ced96fbadcd3eb18b883855426722d639c831c2e24789d69df0",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "76244329773eb5939b6e639335c7081e354309984de858a0f0016a6e1199e54f",
+      "job/job-status.json": "f56841a54fdcd3b17832b2666f37eafe153d0488e6308f4987859e5e128ecea1",
+      "job/run-manifest.json": "e9947dbe9a1a47ec8f4600cdc72873bf01f84a03c8cefa977e95755588a09d85",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "730ee99e5bc4be91e8cf6d005179a5d919d8945dcc2ae98a45947d51723cd661",
+      "time.txt": "f73cc126b94e7c60ac16d647215c58340eb4b7611558173dc17383a087034840"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.11",
+  "reference": {
+    "layout_dets": [
+      {
+        "category_type": "title",
+        "poly": [
+          698.0430908203125,
+          201.1630859375,
+          956.6536254882812,
+          201.1630859375,
+          956.6536254882812,
+          253.31271362304688,
+          698.0430908203125,
+          253.31271362304688
+        ],
+        "ignore": false,
+        "order": 1,
+        "anno_id": 3,
+        "text": "理科拓展专题",
+        "attribute": {}
+      },
+      {
+        "category_type": "figure",
+        "poly": [
+          350.1260070800781,
+          303.574951171875,
+          1325.563232421875,
+          303.574951171875,
+          1325.563232421875,
+          1237.3575439453125,
+          350.1260070800781,
+          1237.3575439453125
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 6,
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          315.40740966796875,
+          1287.77197265625,
+          567.087890625,
+          1287.77197265625,
+          567.087890625,
+          1330.8184814453125,
+          315.40740966796875,
+          1330.8184814453125
+        ],
+        "ignore": false,
+        "order": 3,
+        "anno_id": 0,
+        "text": "1. 三角恒等变换",
+        "attribute": {}
+      },
+      {
+        "category_type": "text_block",
+        "poly": [
+          310.26080322265625,
+          1358.9283447265625,
+          1292.137451171875,
+          1358.9283447265625,
+          1292.137451171875,
+          1502.026611328125,
+          310.26080322265625,
+          1502.026611328125
+        ],
+        "ignore": false,
+        "order": 4,
+        "anno_id": 1,
+        "text": "万能置换公式： $ \\operatorname{s i n} x=\\frac{2 \\operatorname{t a n} \\frac{x} {2}} {1+\\operatorname{t a n}^{2} \\frac{x} {2}}； $ $ \\operatorname{c o s} x={\\frac{1-\\operatorname{t a n}^{2} {\\frac{x} {2}}} {1+\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $ $ \\operatorname{t a n} x={\\frac{2 \\operatorname{t a n} {\\frac{x} {2}}} {1-\\operatorname{t a n}^{2} {\\frac{x} {2}}}}； $",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          319.6069641113281,
+          1529.1983642578125,
+          562.7801513671875,
+          1529.1983642578125,
+          562.7801513671875,
+          1571.44482421875,
+          319.6069641113281,
+          1571.44482421875
+        ],
+        "ignore": false,
+        "order": 5,
+        "anno_id": 2,
+        "text": "(1) 积化和差公式",
+        "attribute": {}
+      },
+      {
+        "category_type": "equation_isolated",
+        "poly": [
+          305.9783630371095,
+          1593.6657903013013,
+          1402.0595351283143,
+          1593.6657903013013,
+          1402.0595351283143,
+          1672.9411008727668,
+          305.9783630371095,
+          1672.9411008727668
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 5,
+        "latex": "$$\n\\operatorname{s i n} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )+\\operatorname{s i n} ( A-B ) ] \\, ; \\, \\operatorname{c o s} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )-\\operatorname{s i n} ( A-B ) ];\n$$",
+        "attribute": {}
+      },
+      {
+        "category_type": "equation_isolated",
+        "poly": [
+          306.3105675080968,
+          1699.8991821404204,
+          1422.8356947219036,
+          1699.8991821404204,
+          1422.8356947219036,
+          1778.311633822611,
+          306.3105675080968,
+          1778.311633822611
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 8,
+        "latex": "$$\n\\operatorname{c o s} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{c o s} ( A+B )+\\operatorname{c o s} ( A-B ) ] \\; ; \\; \\operatorname{s i n} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{c o s} ( A-B )-\\operatorname{c o s} ( A+B ) ];\n$$",
+        "attribute": {}
+      },
+      {
+        "category_type": "title",
+        "poly": [
+          318.92108154296875,
+          1810.0552978515625,
+          564.61279296875,
+          1810.0552978515625,
+          564.61279296875,
+          1851.6492919921875,
+          318.92108154296875,
+          1851.6492919921875
+        ],
+        "ignore": false,
+        "order": 8,
+        "anno_id": 4,
+        "text": "\\t(2) 和差化积公式",
+        "attribute": {}
+      },
+      {
+        "category_type": "equation_isolated",
+        "poly": [
+          305.1359252929689,
+          1866.8802490234377,
+          1327.3210744658413,
+          1866.8802490234377,
+          1327.3210744658413,
+          1957.8119430961503,
+          305.1359252929689,
+          1957.8119430961503
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 7,
+        "latex": "$$\n\\operatorname{s i n} A+\\operatorname{s i n} B=2 \\operatorname{s i n} {\\frac{A+B} {2}} \\operatorname{c o s} {\\frac{A-B} {2}} ; ~ ~ \\operatorname{s i n} A-\\operatorname{s i n} B=2 \\operatorname{c o s} {\\frac{A+B} {2}} \\operatorname{s i n} {\\frac{A-B} {2}};\n$$",
+        "attribute": {}
+      },
+      {
+        "category_type": "equation_isolated",
+        "poly": [
+          310.90133047843636,
+          1964.5855300598957,
+          1352.4232430397124,
+          1964.5855300598957,
+          1352.4232430397124,
+          2061.7487854052188,
+          310.90133047843636,
+          2061.7487854052188
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 9,
+        "latex": "$$\n\\operatorname{c o s} A+\\operatorname{c o s} B=2 \\operatorname{c o s} \\frac{A+B} {2} \\operatorname{c o s} \\frac{A-B} {2} ; ~ ~ \\operatorname{c o s} A-\\operatorname{c o s} B=-2 \\operatorname{s i n} \\frac{A+B} {2} \\operatorname{s i n} \\frac{A-B} {2};\n$$",
+        "attribute": {}
+      }
+    ],
+    "extra": {
+      "relation": []
+    },
+    "page_info": {
+      "page_attribute": {
+        "data_source": "colorful_textbook",
+        "language": "simplified_chinese",
+        "layout": "single_column",
+        "special_issue": [],
+        "subset": "v1.5"
+      },
+      "page_no": 1754,
+      "height": 2339,
+      "width": 1653,
+      "image_path": "jiaocaineedrop_j70ke43p.pdf_69.jpg",
+      "sample_id": 395
+    }
+  },
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1653,
+        2339
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0004",
+        "b0005",
+        "b0006",
+        "b0007",
+        "b0008",
+        "b0009",
+        "b0010"
+      ],
+      "reading_order_evidence": {
+        "source": "model",
+        "reason": "unique_rank"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0004",
+          "b0005",
+          "b0006",
+          "b0007",
+          "b0008",
+          "b0009",
+          "b0010"
+        ],
+        "captions": [],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0004",
+          "r0005",
+          "r0006",
+          "r0007",
+          "r0008",
+          "r0009",
+          "r0010"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            692,
+            202,
+            956,
+            251
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.88389194,
+          "candidate_rank": 24,
+          "original_class_id": 17,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 94,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            692.703979,
+            202.827621,
+            955.367676,
+            250.80481
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            339,
+            297,
+            1330,
+            1238
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.942902744,
+          "candidate_rank": 51,
+          "original_class_id": 14,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 6774,
+          "model_label": "image",
+          "original_bbox": [
+            339.296051,
+            297.871613,
+            1329.881836,
+            1237.353149
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            309,
+            1290,
+            566,
+            1330
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.828623176,
+          "candidate_rank": 105,
+          "original_class_id": 17,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 88,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            309.430908,
+            1290.709229,
+            565.510071,
+            1329.552856
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "display_formula",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            300,
+            1355,
+            1292,
+            1511
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.928197205,
+          "candidate_rank": 123,
+          "original_class_id": 5,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 1110,
+          "model_label": "formula",
+          "original_bbox": [
+            300.16803,
+            1355.73938,
+            1291.502808,
+            1510.911377
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            315,
+            1532,
+            566,
+            1568
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.835947692,
+          "candidate_rank": 187,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 65,
+          "model_label": "text",
+          "original_bbox": [
+            315.937927,
+            1532.025024,
+            565.062134,
+            1567.743652
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "display_formula",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            303,
+            1590,
+            1402,
+            1672
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.920554399,
+          "candidate_rank": 192,
+          "original_class_id": 5,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 658,
+          "model_label": "formula",
+          "original_bbox": [
+            303.12381,
+            1590.587158,
+            1401.862427,
+            1671.453247
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "display_formula",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            302,
+            1697,
+            1424,
+            1780
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.91433084,
+          "candidate_rank": 238,
+          "original_class_id": 5,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 671,
+          "model_label": "formula",
+          "original_bbox": [
+            302.937164,
+            1697.903442,
+            1423.903076,
+            1779.166626
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            317,
+            1812,
+            568,
+            1848
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.844010532,
+          "candidate_rank": 246,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 66,
+          "model_label": "text",
+          "original_bbox": [
+            317.84491,
+            1812.937744,
+            567.295349,
+            1847.719482
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "display_formula",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            304,
+            1870,
+            1319,
+            1953
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.919885814,
+          "candidate_rank": 251,
+          "original_class_id": 5,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 607,
+          "model_label": "formula",
+          "original_bbox": [
+            304.395844,
+            1870.004761,
+            1318.018311,
+            1952.860107
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "display_formula",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "formula",
+          "bbox": [
+            305,
+            1975,
+            1353,
+            2057
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.919638336,
+          "candidate_rank": 281,
+          "original_class_id": 5,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 630,
+          "model_label": "formula",
+          "original_bbox": [
+            305.203033,
+            1975.516846,
+            1352.592285,
+            2056.856201
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            692,
+            202,
+            956,
+            251
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            339,
+            297,
+            1330,
+            1238
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            309,
+            1290,
+            566,
+            1330
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            300,
+            1355,
+            1292,
+            1511
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "formula"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            315,
+            1532,
+            566,
+            1568
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            303,
+            1590,
+            1402,
+            1672
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "formula"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            302,
+            1697,
+            1424,
+            1780
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "formula"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            317,
+            1812,
+            568,
+            1848
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            304,
+            1870,
+            1319,
+            1953
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "formula"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            305,
+            1975,
+            1353,
+            2057
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "formula"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": 1,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            692,
+            202,
+            956,
+            251
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## 理科拓展专题\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "## 理科拓展专题\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                692,
+                202,
+                956,
+                251
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                113
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 2.303030303030303,
+              "rounding_error": [
+                0,
+                0.1515151515151416
+              ],
+              "canvas_to_page_affine": [
+                0.4342105263157895,
+                0,
+                692,
+                0,
+                0.4336283185840708,
+                198.9646017699115
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2365,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2027,
+                    "raw_output": "## 理科拓展专题\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## 理科拓展专题\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      113
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.1515151515151416
+                    ],
+                    "scale": 2.303030303030303,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2027,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## 理科拓展专题\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            339,
+            297,
+            1330,
+            1238
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            309,
+            1290,
+            566,
+            1330
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "### 1. 三角恒等变换\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "### 1. 三角恒等变换\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                309,
+                1290,
+                566,
+                1330
+              ],
+              "canvas_size": [
+                672,
+                128
+              ],
+              "content_size": [
+                672,
+                105
+              ],
+              "pad_offset": [
+                0,
+                11
+              ],
+              "scale": 2.614785992217899,
+              "rounding_error": [
+                0,
+                0.4085603112840488
+              ],
+              "canvas_to_page_affine": [
+                0.38244047619047616,
+                0,
+                309,
+                0,
+                0.38095238095238093,
+                1285.8095238095239
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2028,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1635,
+                    "raw_output": "### 1. 三角恒等变换\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "### 1. 三角恒等变换\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      672,
+                      128
+                    ],
+                    "content_size": [
+                      672,
+                      105
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      11
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4085603112840488
+                    ],
+                    "scale": 2.614785992217899,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1635,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "### 1. 三角恒等变换\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "formula",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            300,
+            1355,
+            1292,
+            1511
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n",
+            "resource": "assets/p0001-b0004.png",
+            "display": false
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 155,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                300,
+                1355,
+                1292,
+                1511
+              ],
+              "canvas_size": [
+                992,
+                160
+              ],
+              "content_size": [
+                992,
+                156
+              ],
+              "pad_offset": [
+                0,
+                2
+              ],
+              "scale": 1,
+              "rounding_error": [
+                0,
+                0
+              ],
+              "canvas_to_page_affine": [
+                1,
+                0,
+                300,
+                0,
+                1,
+                1353
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 4152,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 3400,
+                    "raw_output": "万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      992,
+                      160
+                    ],
+                    "content_size": [
+                      992,
+                      156
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.0
+                    ],
+                    "scale": 1.0,
+                    "token_count": 155
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 3400,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            315,
+            1532,
+            566,
+            1568
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## (1) 积化和差公式\n",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "## (1) 积化和差公式\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 88,
+              "source_crop": "assets/p0001-b0005.png",
+              "source_bbox": [
+                315,
+                1532,
+                566,
+                1568
+              ],
+              "canvas_size": [
+                704,
+                128
+              ],
+              "content_size": [
+                704,
+                101
+              ],
+              "pad_offset": [
+                0,
+                13
+              ],
+              "scale": 2.804780876494024,
+              "rounding_error": [
+                0,
+                0.027888446215129647
+              ],
+              "canvas_to_page_affine": [
+                0.3565340909090909,
+                0,
+                315,
+                0,
+                0.3564356435643564,
+                1527.3663366336634
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2043,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1646,
+                    "raw_output": "## (1) 积化和差公式\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## (1) 积化和差公式\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      704,
+                      128
+                    ],
+                    "content_size": [
+                      704,
+                      101
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      13
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.027888446215129647
+                    ],
+                    "scale": 2.804780876494024,
+                    "token_count": 88
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1646,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## (1) 积化和差公式\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "formula",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            303,
+            1590,
+            1402,
+            1672
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "latex",
+            "text": "\\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；}",
+            "resource": "assets/p0001-b0006.png",
+            "display": true
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "$$ \\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；} $$\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 102,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                303,
+                1590,
+                1402,
+                1672
+              ],
+              "canvas_size": [
+                1088,
+                96
+              ],
+              "content_size": [
+                1088,
+                81
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 0.9899909008189263,
+              "rounding_error": [
+                0,
+                -0.17925386715195657
+              ],
+              "canvas_to_page_affine": [
+                1.010110294117647,
+                0,
+                303,
+                0,
+                1.0123456790123457,
+                1582.9135802469136
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2920,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2447,
+                    "raw_output": "$$ \\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；} $$\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "$$ \\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；} $$\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1088,
+                      96
+                    ],
+                    "content_size": [
+                      1088,
+                      81
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.17925386715195657
+                    ],
+                    "scale": 0.9899909008189263,
+                    "token_count": 102
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2447,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "$$ \\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；} $$\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "formula",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            302,
+            1697,
+            1424,
+            1780
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+            "resource": "assets/p0001-b0007.png",
+            "display": false
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 105,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                302,
+                1697,
+                1424,
+                1780
+              ],
+              "canvas_size": [
+                1120,
+                96
+              ],
+              "content_size": [
+                1120,
+                83
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 0.9982174688057041,
+              "rounding_error": [
+                0,
+                0.14795008912656726
+              ],
+              "canvas_to_page_affine": [
+                1.0017857142857143,
+                0,
+                302,
+                0,
+                1,
+                1691
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2949,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2485,
+                    "raw_output": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      96
+                    ],
+                    "content_size": [
+                      1120,
+                      83
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.14795008912656726
+                    ],
+                    "scale": 0.9982174688057041,
+                    "token_count": 105
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2485,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            317,
+            1812,
+            568,
+            1848
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## (2) 和差化积公式\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "## (2) 和差化积公式\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 88,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                317,
+                1812,
+                568,
+                1848
+              ],
+              "canvas_size": [
+                704,
+                128
+              ],
+              "content_size": [
+                704,
+                101
+              ],
+              "pad_offset": [
+                0,
+                13
+              ],
+              "scale": 2.804780876494024,
+              "rounding_error": [
+                0,
+                0.027888446215129647
+              ],
+              "canvas_to_page_affine": [
+                0.3565340909090909,
+                0,
+                317,
+                0,
+                0.3564356435643564,
+                1807.3663366336634
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2037,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1647,
+                    "raw_output": "## (2) 和差化积公式\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## (2) 和差化积公式\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      704,
+                      128
+                    ],
+                    "content_size": [
+                      704,
+                      101
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      13
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.027888446215129647
+                    ],
+                    "scale": 2.804780876494024,
+                    "token_count": 88
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1647,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## (2) 和差化积公式\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "formula",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            304,
+            1870,
+            1319,
+            1953
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+            "resource": "assets/p0001-b0009.png",
+            "display": false
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 96,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                304,
+                1870,
+                1319,
+                1953
+              ],
+              "canvas_size": [
+                1024,
+                96
+              ],
+              "content_size": [
+                1024,
+                84
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 1.0088669950738915,
+              "rounding_error": [
+                1.1368683772161603e-13,
+                0.2640394088670064
+              ],
+              "canvas_to_page_affine": [
+                0.9912109375,
+                0,
+                304,
+                0,
+                0.9880952380952381,
+                1864.0714285714287
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2919,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2462,
+                    "raw_output": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1024,
+                      96
+                    ],
+                    "content_size": [
+                      1024,
+                      84
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      1.1368683772161603e-13,
+                      0.2640394088670064
+                    ],
+                    "scale": 1.0088669950738915,
+                    "token_count": 96
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2462,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "formula",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            305,
+            1975,
+            1353,
+            2057
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "model",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+            "resource": "assets/p0001-b0010.png",
+            "display": false
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 99,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                305,
+                1975,
+                1353,
+                2057
+              ],
+              "canvas_size": [
+                1056,
+                96
+              ],
+              "content_size": [
+                1056,
+                83
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 1.0076335877862594,
+              "rounding_error": [
+                0,
+                0.3740458015267194
+              ],
+              "canvas_to_page_affine": [
+                0.9924242424242424,
+                0,
+                305,
+                0,
+                0.9879518072289156,
+                1969.0722891566265
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 3006,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2571,
+                    "raw_output": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      96
+                    ],
+                    "content_size": [
+                      1056,
+                      83
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.3740458015267194
+                    ],
+                    "scale": 1.0076335877862594,
+                    "token_count": 99
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2571,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0001",
+          "target_block_id": "b0002",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0003",
+          "target_block_id": "b0004",
+          "evidence": "model_heading_and_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 264,
+      "height": 49,
+      "bbox": [
+        692,
+        202,
+        956,
+        251
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 991,
+      "height": 941,
+      "bbox": [
+        339,
+        297,
+        1330,
+        1238
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 257,
+      "height": 40,
+      "bbox": [
+        309,
+        1290,
+        566,
+        1330
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 992,
+      "height": 156,
+      "bbox": [
+        300,
+        1355,
+        1292,
+        1511
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 251,
+      "height": 36,
+      "bbox": [
+        315,
+        1532,
+        566,
+        1568
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 1099,
+      "height": 82,
+      "bbox": [
+        303,
+        1590,
+        1402,
+        1672
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 1122,
+      "height": 83,
+      "bbox": [
+        302,
+        1697,
+        1424,
+        1780
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 251,
+      "height": 36,
+      "bbox": [
+        317,
+        1812,
+        568,
+        1848
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 1015,
+      "height": 83,
+      "bbox": [
+        304,
+        1870,
+        1319,
+        1953
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 1048,
+      "height": 82,
+      "bbox": [
+        305,
+        1975,
+        1353,
+        2057
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## 理科拓展专题\n\n\n![插图](assets/p0001-b0002.png)\n\n### 1. 三角恒等变换\n\n\n万能置换公式： $\\sin x = \\frac{2 \\tan \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\cos x = \\frac{1 - \\tan^2 \\frac{x}{2}}{1 + \\tan^2 \\frac{x}{2}}$； $\\tan x = \\frac{2 \\tan \\frac{x}{2}}{1 - \\tan^2 \\frac{x}{2}}$；\n\n\n## (1) 积化和差公式\n\n\n$$\n\\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；}\n$$\n\n$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n\n\n## (2) 和差化积公式\n\n\n$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n\n\n$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n\n",
+  "quality": {
+    "text": {
+      "denominator": 5,
+      "matched": 4,
+      "missing": 1,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 3,
+          "category": "title",
+          "order": 1,
+          "block_id": "b0001",
+          "status": "ok",
+          "reading_order_position": 0,
+          "reference_chars": 6,
+          "reference_range": [
+            0,
+            6
+          ],
+          "actual_range": [
+            0,
+            9
+          ],
+          "raw_range": [
+            0,
+            9
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 0,
+          "category": "title",
+          "order": 3,
+          "block_id": "b0003",
+          "status": "ok",
+          "reading_order_position": 2,
+          "reference_chars": 9,
+          "reference_range": [
+            0,
+            9
+          ],
+          "actual_range": [
+            0,
+            13
+          ],
+          "raw_range": [
+            0,
+            13
+          ],
+          "edit_distance": 4,
+          "raw_edit_distance": 4,
+          "exact": false
+        },
+        {
+          "annotation_id": 2,
+          "category": "title",
+          "order": 5,
+          "block_id": "b0005",
+          "status": "ok",
+          "reading_order_position": 4,
+          "reference_chars": 10,
+          "reference_range": [
+            0,
+            10
+          ],
+          "actual_range": [
+            0,
+            13
+          ],
+          "raw_range": [
+            0,
+            13
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 4,
+          "category": "title",
+          "order": 8,
+          "block_id": "b0008",
+          "status": "ok",
+          "reading_order_position": 7,
+          "reference_chars": 12,
+          "reference_range": [
+            0,
+            12
+          ],
+          "actual_range": [
+            0,
+            13
+          ],
+          "raw_range": [
+            0,
+            13
+          ],
+          "edit_distance": 3,
+          "raw_edit_distance": 3,
+          "exact": false
+        },
+        {
+          "annotation_id": 1,
+          "category": "text_block",
+          "order": 4,
+          "block_id": null,
+          "status": "missing",
+          "reading_order_position": null,
+          "reference_chars": 362,
+          "edit_distance": 362,
+          "raw_edit_distance": 362,
+          "exact": false,
+          "actual_range": null,
+          "candidate_block_ids": []
+        }
+      ],
+      "extra_outputs": [],
+      "reference_chars": 399,
+      "edit_distance": 375,
+      "raw_edit_distance": 375
+    },
+    "independent_formula": {
+      "denominator": 4,
+      "matched": 4,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 1,
+      "rows": [
+        {
+          "annotation_id": 5,
+          "category": "equation_isolated",
+          "order": 6,
+          "block_id": "b0006",
+          "coverage": 0.9881,
+          "status": "ok",
+          "exact": false,
+          "reading_order_position": 5
+        },
+        {
+          "annotation_id": 8,
+          "category": "equation_isolated",
+          "order": 7,
+          "block_id": "b0007",
+          "coverage": 1.0,
+          "status": "ok",
+          "exact": false,
+          "reading_order_position": 6
+        },
+        {
+          "annotation_id": 7,
+          "category": "equation_isolated",
+          "order": 9,
+          "block_id": "b0009",
+          "coverage": 0.9053,
+          "status": "ok",
+          "exact": false,
+          "reading_order_position": 8
+        },
+        {
+          "annotation_id": 9,
+          "category": "equation_isolated",
+          "order": 10,
+          "block_id": "b0010",
+          "coverage": 0.8439,
+          "status": "ok",
+          "exact": false,
+          "reading_order_position": 9
+        }
+      ],
+      "extra_outputs": [
+        {
+          "block_id": "b0004",
+          "reason": "unmatched",
+          "status": "ok"
+        }
+      ]
+    },
+    "table": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "figure": {
+      "denominator": 1,
+      "matched": 1,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 1,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [
+        {
+          "annotation_id": 6,
+          "category": "figure",
+          "order": 2,
+          "block_id": "b0002",
+          "coverage": 1.0,
+          "status": "ok",
+          "exact": true,
+          "reading_order_position": 1
+        }
+      ],
+      "extra_outputs": []
+    },
+    "inline_formula": {
+      "denominator": 0,
+      "matched": 0,
+      "missing": 0,
+      "fallback": 0,
+      "exact": 0,
+      "duplicate_outputs": 0,
+      "unmatched_outputs": 0,
+      "rows": [],
+      "extra_outputs": []
+    },
+    "reading_order": {
+      "denominator": 45,
+      "evaluable": 36,
+      "correct": 36,
+      "missing_pairs": 9,
+      "unresolved_internal_pairs": []
+    },
+    "block_statuses": {
+      "ok": 10
+    },
+    "document_status": "ok",
+    "raw_repetition_suspicions": [],
+    "quality_claim_blockers": [
+      "independent_formula:inexact_or_missing",
+      "independent_formula:extra_output",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "quality_claim_blocked": true
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "independent_formula:inexact_or_missing",
+      "independent_formula:extra_output",
+      "reading_order:wrong_or_unverified",
+      "text:inexact_or_missing"
+    ],
+    "unresolved_annotation_ids": [
+      3,
+      0,
+      2,
+      4,
+      1
+    ]
+  },
+  "reference_plan": {
+    "owned_references": [],
+    "unresolved": [],
+    "original_reference_count": 10,
+    "parent_reference_count": 10
+  },
+  "alignment": [
+    {
+      "block_id": "b0001",
+      "source_region_ids": [
+        "r0001"
+      ],
+      "annotation_ids": [
+        3
+      ],
+      "expected": "理科拓展专题",
+      "actual": "## 理科拓展专题",
+      "raw_output": "## 理科拓展专题\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        692,
+        202,
+        956,
+        251
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## 理科拓展专题\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0001"
+      ]
+    },
+    {
+      "block_id": "b0003",
+      "source_region_ids": [
+        "r0003"
+      ],
+      "annotation_ids": [
+        0
+      ],
+      "expected": "1. 三角恒等变换",
+      "actual": "### 1. 三角恒等变换",
+      "raw_output": "### 1. 三角恒等变换\n",
+      "edit_distance": 4,
+      "raw_edit_distance": 4,
+      "bbox": [
+        309,
+        1290,
+        566,
+        1330
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "### 1. 三角恒等变换\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0003"
+      ]
+    },
+    {
+      "block_id": "b0005",
+      "source_region_ids": [
+        "r0005"
+      ],
+      "annotation_ids": [
+        2
+      ],
+      "expected": "(1) 积化和差公式",
+      "actual": "## (1) 积化和差公式",
+      "raw_output": "## (1) 积化和差公式\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        315,
+        1532,
+        566,
+        1568
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## (1) 积化和差公式\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0005"
+      ]
+    },
+    {
+      "block_id": "b0008",
+      "source_region_ids": [
+        "r0008"
+      ],
+      "annotation_ids": [
+        4
+      ],
+      "expected": "\\t(2) 和差化积公式",
+      "actual": "## (2) 和差化积公式",
+      "raw_output": "## (2) 和差化积公式\n",
+      "edit_distance": 3,
+      "raw_edit_distance": 3,
+      "bbox": [
+        317,
+        1812,
+        568,
+        1848
+      ],
+      "assessment": {
+        "policy": "region-output-v1",
+        "state": "ok",
+        "reason": "normal_completion",
+        "finish_reason": "complete",
+        "stop_reason": "normal",
+        "evidence_source": "raw_output",
+        "backend_error": null,
+        "generation_text": "## (2) 和差化积公式\n",
+        "nonempty_lines": 1,
+        "empty_number_lines": 0,
+        "repeat_offset": 0,
+        "repeat_unit_bytes": 0,
+        "repeat_count": 0,
+        "repeat_coverage": 0
+      },
+      "source_layout_block_ids": [
+        "l0008"
+      ]
+    }
+  ],
+  "non_text_evidence": [
+    {
+      "kind": "independent_formula",
+      "annotation_id": 5,
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          305.9783630371095,
+          1593.6657903013013,
+          1402.0595351283143,
+          1593.6657903013013,
+          1402.0595351283143,
+          1672.9411008727668,
+          305.9783630371095,
+          1672.9411008727668
+        ],
+        "ignore": false,
+        "order": 6,
+        "anno_id": 5,
+        "latex": "$$\n\\operatorname{s i n} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )+\\operatorname{s i n} ( A-B ) ] \\, ; \\, \\operatorname{c o s} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{s i n} ( A+B )-\\operatorname{s i n} ( A-B ) ];\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0006",
+      "source_region_ids": [
+        "r0006"
+      ],
+      "raw_output": "$$ \\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；} $$\n",
+      "content": {
+        "format": "latex",
+        "text": "\\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]\\text{；}\\cos A\\sin B=\\frac{1}{2}[\\sin(A+B)-\\sin(A-B)]\\text{；}",
+        "resource": "assets/p0001-b0006.png",
+        "display": true
+      },
+      "error": null,
+      "status": "ok",
+      "exact": false
+    },
+    {
+      "kind": "independent_formula",
+      "annotation_id": 8,
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          306.3105675080968,
+          1699.8991821404204,
+          1422.8356947219036,
+          1699.8991821404204,
+          1422.8356947219036,
+          1778.311633822611,
+          306.3105675080968,
+          1778.311633822611
+        ],
+        "ignore": false,
+        "order": 7,
+        "anno_id": 8,
+        "latex": "$$\n\\operatorname{c o s} A \\operatorname{c o s} B=\\frac{1} {2} [ \\operatorname{c o s} ( A+B )+\\operatorname{c o s} ( A-B ) ] \\; ; \\; \\operatorname{s i n} A \\operatorname{s i n} B=\\frac{1} {2} [ \\operatorname{c o s} ( A-B )-\\operatorname{c o s} ( A+B ) ];\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0007",
+      "source_region_ids": [
+        "r0007"
+      ],
+      "raw_output": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+      "content": {
+        "format": "markdown",
+        "text": "$\\cos A \\cos B = \\frac{1}{2} [\\cos(A + B) + \\cos(A - B)]$;  $\\sin A \\sin B = \\frac{1}{2} [\\cos(A - B) - \\cos(A + B)]$;\n",
+        "resource": "assets/p0001-b0007.png",
+        "display": false
+      },
+      "error": null,
+      "status": "ok",
+      "exact": false
+    },
+    {
+      "kind": "independent_formula",
+      "annotation_id": 7,
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          305.1359252929689,
+          1866.8802490234377,
+          1327.3210744658413,
+          1866.8802490234377,
+          1327.3210744658413,
+          1957.8119430961503,
+          305.1359252929689,
+          1957.8119430961503
+        ],
+        "ignore": false,
+        "order": 9,
+        "anno_id": 7,
+        "latex": "$$\n\\operatorname{s i n} A+\\operatorname{s i n} B=2 \\operatorname{s i n} {\\frac{A+B} {2}} \\operatorname{c o s} {\\frac{A-B} {2}} ; ~ ~ \\operatorname{s i n} A-\\operatorname{s i n} B=2 \\operatorname{c o s} {\\frac{A+B} {2}} \\operatorname{s i n} {\\frac{A-B} {2}};\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0009",
+      "source_region_ids": [
+        "r0009"
+      ],
+      "raw_output": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+      "content": {
+        "format": "markdown",
+        "text": "$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$;  $\\sin A - \\sin B = 2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}$;\n",
+        "resource": "assets/p0001-b0009.png",
+        "display": false
+      },
+      "error": null,
+      "status": "ok",
+      "exact": false
+    },
+    {
+      "kind": "independent_formula",
+      "annotation_id": 9,
+      "reference": {
+        "category_type": "equation_isolated",
+        "poly": [
+          310.90133047843636,
+          1964.5855300598957,
+          1352.4232430397124,
+          1964.5855300598957,
+          1352.4232430397124,
+          2061.7487854052188,
+          310.90133047843636,
+          2061.7487854052188
+        ],
+        "ignore": false,
+        "order": 10,
+        "anno_id": 9,
+        "latex": "$$\n\\operatorname{c o s} A+\\operatorname{c o s} B=2 \\operatorname{c o s} \\frac{A+B} {2} \\operatorname{c o s} \\frac{A-B} {2} ; ~ ~ \\operatorname{c o s} A-\\operatorname{c o s} B=-2 \\operatorname{s i n} \\frac{A+B} {2} \\operatorname{s i n} \\frac{A-B} {2};\n$$",
+        "attribute": {}
+      },
+      "block_id": "b0010",
+      "source_region_ids": [
+        "r0010"
+      ],
+      "raw_output": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+      "content": {
+        "format": "markdown",
+        "text": "$\\cos A + \\cos B = 2 \\cos \\frac{A + B}{2} \\cos \\frac{A - B}{2}$;  $\\cos A - \\cos B = -2 \\sin \\frac{A + B}{2} \\sin \\frac{A - B}{2}$;\n",
+        "resource": "assets/p0001-b0010.png",
+        "display": false
+      },
+      "error": null,
+      "status": "ok",
+      "exact": false
+    },
+    {
+      "kind": "figure",
+      "annotation_id": 6,
+      "reference": {
+        "category_type": "figure",
+        "poly": [
+          350.1260070800781,
+          303.574951171875,
+          1325.563232421875,
+          303.574951171875,
+          1325.563232421875,
+          1237.3575439453125,
+          350.1260070800781,
+          1237.3575439453125
+        ],
+        "ignore": false,
+        "order": 2,
+        "anno_id": 6,
+        "attribute": {}
+      },
+      "block_id": "b0002",
+      "source_region_ids": [
+        "r0002"
+      ],
+      "raw_output": "",
+      "content": {
+        "format": "resource",
+        "text": "",
+        "resource": "assets/p0001-b0002.png"
+      },
+      "error": null,
+      "status": "ok",
+      "exact": true
+    }
+  ],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}

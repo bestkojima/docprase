@@ -1,0 +1,2735 @@
+{
+  "key": "old-seven/en_two_column",
+  "input": {
+    "path": "/home/dr/project/docprase/tests/fixtures/issue15/printed_science_2col.png",
+    "sha256": "b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9"
+  },
+  "command": {
+    "command": [
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/runtime/dococr_cli",
+      "--config",
+      "/home/dr/project/docprase/output/issue31-final-20261003/candidate/config.json",
+      "--input",
+      "/home/dr/project/docprase/tests/fixtures/issue15/printed_science_2col.png",
+      "--out",
+      "/home/dr/project/docprase/output/issue31-final-20261003/old-seven/en_two_column/job"
+    ],
+    "input_sha256": "b92f53ba81cde0012c20bf492f0b5d02f4955411d580e998b0682395f75d5eb9",
+    "returncode": 0,
+    "candidate_sha256": "3f84cbca5d0bca993fdeb578e524a513c1594bcc40fc0eec95f50ed94b7be03d",
+    "evaluation_sha256": "d460f3ad443e611c6c1a17eeb459d6b7fac26f95cd41cbe3b662e53aaffb07b8",
+    "execution": "fresh_public_cli_job",
+    "elapsed_seconds": 42.68089739599964,
+    "models_intact": true,
+    "files_sha256": {
+      "job/assets/p0001-b0001.png": "ae1fee0be872b95518e599bab23c2be8ffef0a087831771e5053f068f58f335a",
+      "job/assets/p0001-b0002.png": "83b794eac0cd9ec11b394bd025d0500aac0b076ce22c30f8e43576f7f0255386",
+      "job/assets/p0001-b0003.png": "208a0825825fe3d490242446b7f79ea1b6d0ba02a6ffecb5b17d040e2357eb68",
+      "job/assets/p0001-b0004.png": "6c36dd63d2ce81ac066786d55fd1cc7f7bc0561c7e2f27d6c3db38db0273019c",
+      "job/assets/p0001-b0005.png": "687226a17b80b4060e8ee969052046de7f5069bcd831b6a323635d92d11a10d6",
+      "job/assets/p0001-b0006.png": "ec369c571b6acdadc4b877e55bb2a882dc3669bd218ae397d247204a9ea00640",
+      "job/assets/p0001-b0007.png": "779e87740bcbfb4746472da0e9d5a695aca3c4cf30e312689b436b22cc4b007b",
+      "job/assets/p0001-b0008.png": "18a3e3ff15842d2807c80d2e26f300c8cf1cb3bbaf2a875c7478349d923ae7c6",
+      "job/assets/p0001-b0009.png": "7776246bb0eeec4e5710cba9df50b3e1b21acb89d66520b14393f707b2b5d2e1",
+      "job/assets/p0001-b0010.png": "6dffa22913882ed84d8e03eba03aafec5b3486a4890b69087c5b2fd466f37ae5",
+      "job/assets/p0001-b0011.png": "fc9ca0d20e280668f3535d7436b491105f58d9a1b8cdfdc4af09e45255e0e757",
+      "job/assets/p0001-b0012.png": "f9cbee0ffe97d66adb32b6907f5084b69da6855ae204cbb925787de545eab584",
+      "job/assets/p0001-fetch_name_0.f32": "5abee9d50d238972c9e726a5eb101cfe6c94bab87d5ed2e782ec55cde1428d56",
+      "job/assets/p0001-fetch_name_1.i32": "f2dadabeae2223ad5a889fd86b220e112bad5cc37be496a1308e2c13f21d2bf4",
+      "job/assets/p0001-fetch_name_2.rle": "369556afe42aea369fc87990d97d319b69a67771413d0b72d6d7708e358f5689",
+      "job/assets/p0001-im_shape.f32": "85a5cc701c2f2b79d8e2f345f5b1ccdc47bcd1615b472e841a14227ef484fa08",
+      "job/assets/p0001-image.f32": "e503d11bcb876a62b492514a3d4e6600ba21fcf305437dcf7f8e186867fee811",
+      "job/assets/p0001-layout-overlay.png": "66ef2b0d60c69c9a421064b8433ddf5ec98a2c32ec55b9782259d4aedd87e1bc",
+      "job/assets/p0001-mask-c0.png": "b923ea17268311eae5c3ee3053b00bab80647dfac1e1c7087dd34f717fd698e1",
+      "job/assets/p0001-mask-c1.png": "88cf86639555abbbd562c97247b0c4781269eb022361a60e95c8143cdbc0fffd",
+      "job/assets/p0001-mask-c10.png": "ad3a321383daef1c7c01bcef03a0ba7e73ec809637200db6565e80fb7e43fe4d",
+      "job/assets/p0001-mask-c11.png": "b2648a64fc9bd4d84915757db4a8bd3bacf310de3bb37dbe9e689ef3bfebc4c7",
+      "job/assets/p0001-mask-c2.png": "5d0564590d7e49c85430b13e5252d0fc1d5fb9cf57b0b954d074db7871685a38",
+      "job/assets/p0001-mask-c3.png": "82b0962eefedf8aacf21b9ec08bddc23a989053aedb4669ed0fa570b241f903b",
+      "job/assets/p0001-mask-c4.png": "56205b970fa9b7efd7dea9e023175998466d3045b055d4edcebb9e0291e13129",
+      "job/assets/p0001-mask-c5.png": "e9022f825716b3b7b3f61debc1d1936035ac4b599d3064ecd8858d31656236c6",
+      "job/assets/p0001-mask-c6.png": "f8e999df5ccbe85cb898f0647cde2c562ed92d0be1541eaa2010822be93ba72a",
+      "job/assets/p0001-mask-c7.png": "ca02bc0c313c838206cb142062769dae1f721a6d526feccfb443cddc37058670",
+      "job/assets/p0001-mask-c8.png": "1e7e6ed1bae53a0089137eab7069c9f546996dd910bd9706e50ade7a18b4391c",
+      "job/assets/p0001-mask-c9.png": "f8d63ae53254ce48463fe1d5bf76b4f6c9719a19899237c82627247429b53be6",
+      "job/assets/p0001-scale_factor.f32": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "job/document.json": "a6db82f2bf1b0a55cbd7ae4a4ed1b5605747e9590d4fa69cc278b05cfdfd290f",
+      "job/document.md": "1fc9af16154711522648a22c4aeb10503dd7c165ad34e6108aed7bf37a8cfb0b",
+      "job/execution-plan.json": "500102de8f8ec47eab4ae138dd7b33de0ceea2e59a2042e61c302772c4cf7421",
+      "job/job-events.jsonl": "939d8d934d9a2b7920fcdb2e354f96a2422d7d189f232f8a9e8754896573be90",
+      "job/job-status.json": "09f91b23f9b7c1eb4fb0848be884560f3466ccc8818eceebef45983fcb0fefad",
+      "job/run-manifest.json": "a4d104e5efda1aa89d9508a844b56fb76ccdb86d1ce8835e6ae0a93c97cbed87",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "e57c399e810d551cd7b5fa6c758de5ea7c88af0bb6fb49785f80107cc0ed56ca",
+      "time.txt": "28971c3b361d23c356ae62c8a673c52d65e40e2725fef247fbe5c236bd3ace32"
+    }
+  },
+  "document_status": "ok",
+  "schema_version": "1.10",
+  "reference": null,
+  "pages": [
+    {
+      "page_id": "p0001",
+      "page_index": 0,
+      "raster_size": [
+        1200,
+        1500
+      ],
+      "coordinate_space": "raster_page",
+      "status": "ok",
+      "reading_order": [
+        "b0001",
+        "b0002",
+        "b0003",
+        "b0006",
+        "b0007",
+        "b0004",
+        "b0005",
+        "b0008",
+        "b0009",
+        "b0010",
+        "b0011",
+        "b0012"
+      ],
+      "reading_order_evidence": {
+        "source": "geometry",
+        "reason": "model_column_conflict"
+      },
+      "structure_plan": {
+        "ambiguous_caption_ids": [],
+        "block_order": [
+          "b0001",
+          "b0002",
+          "b0003",
+          "b0006",
+          "b0007",
+          "b0004",
+          "b0005",
+          "b0008",
+          "b0009",
+          "b0010",
+          "b0011",
+          "b0012"
+        ],
+        "captions": [
+          {
+            "caption_block_id": "b0008",
+            "image_block_id": "b0005"
+          }
+        ],
+        "groups": [],
+        "policy": "image_structure_v2",
+        "recognition_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0006",
+          "r0007",
+          "r0004",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012"
+        ],
+        "region_order": [
+          "r0001",
+          "r0002",
+          "r0003",
+          "r0006",
+          "r0007",
+          "r0004",
+          "r0005",
+          "r0008",
+          "r0009",
+          "r0010",
+          "r0011",
+          "r0012"
+        ],
+        "stage": "before_recognition"
+      },
+      "layout_blocks": [
+        {
+          "semantic_label": "header",
+          "id": "l0001",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            73,
+            60,
+            763,
+            103
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.653629184,
+          "candidate_rank": 13,
+          "original_class_id": 12,
+          "candidate_id": 11,
+          "mask_row": 11,
+          "mask_nonzero": 552,
+          "model_label": "header",
+          "original_bbox": [
+            73.996056,
+            60.462269,
+            762.522583,
+            102.804634
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0002",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            71,
+            171,
+            579,
+            213
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.88837868,
+          "candidate_rank": 56,
+          "original_class_id": 17,
+          "candidate_id": 3,
+          "mask_row": 3,
+          "mask_nonzero": 346,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            71.754829,
+            171.758835,
+            578.194092,
+            212.665634
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0003",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            71,
+            268,
+            513,
+            349
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.907120049,
+          "candidate_rank": 78,
+          "original_class_id": 22,
+          "candidate_id": 2,
+          "mask_row": 2,
+          "mask_nonzero": 643,
+          "model_label": "text",
+          "original_bbox": [
+            71.786613,
+            268.665527,
+            512.681885,
+            348.984772
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0006",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            70,
+            429,
+            491,
+            510
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.915430844,
+          "candidate_rank": 129,
+          "original_class_id": 22,
+          "candidate_id": 1,
+          "mask_row": 1,
+          "mask_nonzero": 618,
+          "model_label": "text",
+          "original_bbox": [
+            70.792892,
+            429.679779,
+            490.022552,
+            509.167664
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0007",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            71,
+            609,
+            503,
+            689
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.92628628,
+          "candidate_rank": 149,
+          "original_class_id": 22,
+          "candidate_id": 0,
+          "mask_row": 0,
+          "mask_nonzero": 638,
+          "model_label": "text",
+          "original_bbox": [
+            71.432762,
+            609.373474,
+            502.499603,
+            688.755798
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0004",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            633,
+            269,
+            1057,
+            351
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.858760715,
+          "candidate_rank": 94,
+          "original_class_id": 22,
+          "candidate_id": 8,
+          "mask_row": 8,
+          "mask_nonzero": 625,
+          "model_label": "text",
+          "original_bbox": [
+            633.374756,
+            269.435944,
+            1056.470215,
+            350.030029
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "image",
+          "id": "l0005",
+          "page_id": "p0001",
+          "label": "image",
+          "bbox": [
+            717,
+            416,
+            1042,
+            632
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.69000423,
+          "candidate_rank": 162,
+          "original_class_id": 14,
+          "candidate_id": 10,
+          "mask_row": 10,
+          "mask_nonzero": 1234,
+          "model_label": "image",
+          "original_bbox": [
+            717.196594,
+            416.178711,
+            1041.193359,
+            631.575439
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "figure_title",
+          "id": "l0008",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            714,
+            658,
+            1038,
+            691
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.87520802,
+          "candidate_rank": 199,
+          "original_class_id": 7,
+          "candidate_id": 6,
+          "mask_row": 6,
+          "mask_nonzero": 172,
+          "model_label": "figure_title",
+          "original_bbox": [
+            714.74469,
+            658.949463,
+            1037.040771,
+            690.149963
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0009",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            633,
+            739,
+            1057,
+            820
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.888018489,
+          "candidate_rank": 231,
+          "original_class_id": 22,
+          "candidate_id": 4,
+          "mask_row": 4,
+          "mask_nonzero": 570,
+          "model_label": "text",
+          "original_bbox": [
+            633.550903,
+            739.787476,
+            1056.338623,
+            819.381836
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "paragraph_title",
+          "id": "l0010",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            71,
+            951,
+            572,
+            994
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.885910749,
+          "candidate_rank": 248,
+          "original_class_id": 17,
+          "candidate_id": 5,
+          "mask_row": 5,
+          "mask_nonzero": 376,
+          "model_label": "paragraph_title",
+          "original_bbox": [
+            71.596237,
+            951.97052,
+            571.004639,
+            993.167236
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0011",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            70,
+            1044,
+            728,
+            1079
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.873430848,
+          "candidate_rank": 271,
+          "original_class_id": 22,
+          "candidate_id": 7,
+          "mask_row": 7,
+          "mask_nonzero": 440,
+          "model_label": "text",
+          "original_bbox": [
+            70.662758,
+            1044.882812,
+            727.896851,
+            1078.294434
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        },
+        {
+          "semantic_label": "text",
+          "id": "l0012",
+          "page_id": "p0001",
+          "label": "text",
+          "bbox": [
+            71,
+            1149,
+            349,
+            1184
+          ],
+          "coordinate_space": "raster_page",
+          "detection_score": 0.841934621,
+          "candidate_rank": 287,
+          "original_class_id": 22,
+          "candidate_id": 9,
+          "mask_row": 9,
+          "mask_nonzero": 189,
+          "model_label": "text",
+          "original_bbox": [
+            71.666107,
+            1149.463135,
+            348.187531,
+            1183.904419
+          ],
+          "clamped": false,
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "layout-p0001"
+          }
+        }
+      ],
+      "regions": [
+        {
+          "id": "r0001",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0001"
+          ],
+          "bbox": [
+            73,
+            60,
+            763,
+            103
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0002",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0002"
+          ],
+          "bbox": [
+            71,
+            171,
+            579,
+            213
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0003",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0003"
+          ],
+          "bbox": [
+            71,
+            268,
+            513,
+            349
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0006",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0006"
+          ],
+          "bbox": [
+            70,
+            429,
+            491,
+            510
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0007",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0007"
+          ],
+          "bbox": [
+            71,
+            609,
+            503,
+            689
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0004",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0004"
+          ],
+          "bbox": [
+            633,
+            269,
+            1057,
+            351
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0005",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0005"
+          ],
+          "bbox": [
+            717,
+            416,
+            1042,
+            632
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "image"
+        },
+        {
+          "id": "r0008",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0008"
+          ],
+          "bbox": [
+            714,
+            658,
+            1038,
+            691
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0009",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0009"
+          ],
+          "bbox": [
+            633,
+            739,
+            1057,
+            820
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0010",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0010"
+          ],
+          "bbox": [
+            71,
+            951,
+            572,
+            994
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0011",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0011"
+          ],
+          "bbox": [
+            70,
+            1044,
+            728,
+            1079
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        },
+        {
+          "id": "r0012",
+          "page_id": "p0001",
+          "source_layout_block_ids": [
+            "l0012"
+          ],
+          "bbox": [
+            71,
+            1149,
+            349,
+            1184
+          ],
+          "coordinate_space": "raster_page",
+          "recognition_type": "text"
+        }
+      ],
+      "blocks": [
+        {
+          "block_order": null,
+          "id": "b0001",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0001"
+          ],
+          "bbox": [
+            73,
+            60,
+            763,
+            103
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## Printed Science Practice - Form A\n",
+            "resource": "assets/p0001-b0001.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0001",
+            "raw_output": "## Printed Science Practice - Form A\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 66,
+              "source_crop": "assets/p0001-b0001.png",
+              "source_bbox": [
+                73,
+                60,
+                763,
+                103
+              ],
+              "canvas_size": [
+                1056,
+                64
+              ],
+              "content_size": [
+                1027,
+                64
+              ],
+              "pad_offset": [
+                14,
+                0
+              ],
+              "scale": 1.4883720930232558,
+              "rounding_error": [
+                0.023255813953483084,
+                0
+              ],
+              "canvas_to_page_affine": [
+                0.6718597857838364,
+                0,
+                63.59396299902629,
+                0,
+                0.671875,
+                60
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2488,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 2172,
+                    "raw_output": "## Printed Science Practice - Form A\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## Printed Science Practice - Form A\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1056,
+                      64
+                    ],
+                    "content_size": [
+                      1027,
+                      64
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      14,
+                      0
+                    ],
+                    "rounding_error": [
+                      0.023255813953483084,
+                      0.0
+                    ],
+                    "scale": 1.4883720930232558,
+                    "token_count": 66
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 2172,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## Printed Science Practice - Form A\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 1,
+          "id": "b0002",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0002"
+          ],
+          "bbox": [
+            71,
+            171,
+            579,
+            213
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## Section 1: Measurement\n",
+            "resource": "assets/p0001-b0002.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0002",
+            "raw_output": "## Section 1: Measurement\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0002.png",
+              "source_bbox": [
+                71,
+                171,
+                579,
+                213
+              ],
+              "canvas_size": [
+                896,
+                96
+              ],
+              "content_size": [
+                896,
+                74
+              ],
+              "pad_offset": [
+                0,
+                11
+              ],
+              "scale": 1.763779527559055,
+              "rounding_error": [
+                0,
+                -0.07874015748031127
+              ],
+              "canvas_to_page_affine": [
+                0.5669642857142857,
+                0,
+                71,
+                0,
+                0.5675675675675675,
+                164.75675675675674
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2117,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1705,
+                    "raw_output": "## Section 1: Measurement\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## Section 1: Measurement\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      896,
+                      96
+                    ],
+                    "content_size": [
+                      896,
+                      74
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      11
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.07874015748031127
+                    ],
+                    "scale": 1.763779527559055,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1705,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## Section 1: Measurement\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 2,
+          "id": "b0003",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0003"
+          ],
+          "bbox": [
+            71,
+            268,
+            513,
+            349
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n",
+            "resource": "assets/p0001-b0003.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0003",
+            "raw_output": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0003.png",
+              "source_bbox": [
+                71,
+                268,
+                513,
+                349
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                111
+              ],
+              "pad_offset": [
+                0,
+                8
+              ],
+              "scale": 1.3755656108597285,
+              "rounding_error": [
+                0,
+                -0.4208144796380111
+              ],
+              "canvas_to_page_affine": [
+                0.7269736842105263,
+                0,
+                71,
+                0,
+                0.7297297297297297,
+                262.1621621621622
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2195,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1846,
+                    "raw_output": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      111
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      8
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.4208144796380111
+                    ],
+                    "scale": 1.3755656108597285,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1846,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 3,
+          "id": "b0006",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0006"
+          ],
+          "bbox": [
+            70,
+            429,
+            491,
+            510
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "2. A meter has one hundred centimeters. Convert 2 m to cm.\n",
+            "resource": "assets/p0001-b0006.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0006",
+            "raw_output": "2. A meter has one hundred centimeters. Convert 2 m to cm.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0006.png",
+              "source_bbox": [
+                70,
+                429,
+                491,
+                510
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                117
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 1.4441805225653206,
+              "rounding_error": [
+                0,
+                0.02137767220902731
+              ],
+              "canvas_to_page_affine": [
+                0.6924342105263158,
+                0,
+                70,
+                0,
+                0.6923076923076923,
+                425.53846153846155
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1753,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1407,
+                    "raw_output": "2. A meter has one hundred centimeters. Convert 2 m to cm.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "2. A meter has one hundred centimeters. Convert 2 m to cm.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      117
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.02137767220902731
+                    ],
+                    "scale": 1.4441805225653206,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1407,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "2. A meter has one hundred centimeters. Convert 2 m to cm.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 4,
+          "id": "b0007",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0007"
+          ],
+          "bbox": [
+            71,
+            609,
+            503,
+            689
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "3. Explain why repeated readings can reduce random error.\n",
+            "resource": "assets/p0001-b0007.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0007",
+            "raw_output": "3. Explain why repeated readings can reduce random error.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0007.png",
+              "source_bbox": [
+                71,
+                609,
+                503,
+                689
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                113
+              ],
+              "pad_offset": [
+                0,
+                7
+              ],
+              "scale": 1.4074074074074074,
+              "rounding_error": [
+                0,
+                0.4074074074074048
+              ],
+              "canvas_to_page_affine": [
+                0.7105263157894737,
+                0,
+                71,
+                0,
+                0.7079646017699115,
+                604.0442477876106
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1637,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1295,
+                    "raw_output": "3. Explain why repeated readings can reduce random error.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "3. Explain why repeated readings can reduce random error.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      113
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      7
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4074074074074048
+                    ],
+                    "scale": 1.4074074074074074,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1295,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "3. Explain why repeated readings can reduce random error.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 5,
+          "id": "b0004",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0004"
+          ],
+          "bbox": [
+            633,
+            269,
+            1057,
+            351
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "4. The chart shows two readings.\n\nWhich reading is larger?\n",
+            "resource": "assets/p0001-b0004.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0004",
+            "raw_output": "4. The chart shows two readings.\n\nWhich reading is larger?\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0004.png",
+              "source_bbox": [
+                633,
+                269,
+                1057,
+                351
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                118
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 1.4339622641509433,
+              "rounding_error": [
+                0,
+                0.4150943396226552
+              ],
+              "canvas_to_page_affine": [
+                0.6973684210526315,
+                0,
+                633,
+                0,
+                0.6949152542372882,
+                265.52542372881356
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1701,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1355,
+                    "raw_output": "4. The chart shows two readings.\n\nWhich reading is larger?\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "4. The chart shows two readings.\n\nWhich reading is larger?\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      118
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4150943396226552
+                    ],
+                    "scale": 1.4339622641509433,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1355,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "4. The chart shows two readings.\n\nWhich reading is larger?\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0005",
+          "page_id": "p0001",
+          "type": "image",
+          "source_region_ids": [
+            "r0005"
+          ],
+          "bbox": [
+            717,
+            416,
+            1042,
+            632
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "resource",
+            "text": "",
+            "resource": "assets/p0001-b0005.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0005",
+            "raw_output": "",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "recognition": {
+              "attempts": [],
+              "configured_generation_budget_ms": 0,
+              "generation_elapsed_ms": 0,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": null
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "resource_saved",
+              "finish_reason": "",
+              "stop_reason": "",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "",
+              "nonempty_lines": 0,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": null,
+          "id": "b0008",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0008"
+          ],
+          "bbox": [
+            714,
+            658,
+            1038,
+            691
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "Figure 1. Recorded readings.\n",
+            "resource": "assets/p0001-b0008.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0008",
+            "raw_output": "Figure 1. Recorded readings.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 78,
+              "source_crop": "assets/p0001-b0008.png",
+              "source_bbox": [
+                714,
+                658,
+                1038,
+                691
+              ],
+              "canvas_size": [
+                832,
+                96
+              ],
+              "content_size": [
+                832,
+                85
+              ],
+              "pad_offset": [
+                0,
+                5
+              ],
+              "scale": 2.567901234567901,
+              "rounding_error": [
+                0,
+                0.25925925925926663
+              ],
+              "canvas_to_page_affine": [
+                0.3894230769230769,
+                0,
+                714,
+                0,
+                0.38823529411764707,
+                656.0588235294117
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2081,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1704,
+                    "raw_output": "Figure 1. Recorded readings.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "Figure 1. Recorded readings.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      832,
+                      96
+                    ],
+                    "content_size": [
+                      832,
+                      85
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      5
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.25925925925926663
+                    ],
+                    "scale": 2.567901234567901,
+                    "token_count": 78
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1704,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "Figure 1. Recorded readings.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 6,
+          "id": "b0009",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0009"
+          ],
+          "bbox": [
+            633,
+            739,
+            1057,
+            820
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "5. Write the result as a sentence.\n\nInclude the unit in your answer.\n",
+            "resource": "assets/p0001-b0009.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0009",
+            "raw_output": "5. Write the result as a sentence.\n\nInclude the unit in your answer.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 76,
+              "source_crop": "assets/p0001-b0009.png",
+              "source_bbox": [
+                633,
+                739,
+                1057,
+                820
+              ],
+              "canvas_size": [
+                608,
+                128
+              ],
+              "content_size": [
+                608,
+                116
+              ],
+              "pad_offset": [
+                0,
+                6
+              ],
+              "scale": 1.4339622641509433,
+              "rounding_error": [
+                0,
+                -0.15094339622640973
+              ],
+              "canvas_to_page_affine": [
+                0.6973684210526315,
+                0,
+                633,
+                0,
+                0.6982758620689655,
+                734.8103448275862
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 2147,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1784,
+                    "raw_output": "5. Write the result as a sentence.\n\nInclude the unit in your answer.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "5. Write the result as a sentence.\n\nInclude the unit in your answer.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      608,
+                      128
+                    ],
+                    "content_size": [
+                      608,
+                      116
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      6
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      -0.15094339622640973
+                    ],
+                    "scale": 1.4339622641509433,
+                    "token_count": 76
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1784,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "5. Write the result as a sentence.\n\nInclude the unit in your answer.\n",
+              "nonempty_lines": 2,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 7,
+          "id": "b0010",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0010"
+          ],
+          "bbox": [
+            71,
+            951,
+            572,
+            994
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## Section 2: Short answer\n",
+            "resource": "assets/p0001-b0010.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0010",
+            "raw_output": "## Section 2: Short answer\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 84,
+              "source_crop": "assets/p0001-b0010.png",
+              "source_bbox": [
+                71,
+                951,
+                572,
+                994
+              ],
+              "canvas_size": [
+                896,
+                96
+              ],
+              "content_size": [
+                896,
+                77
+              ],
+              "pad_offset": [
+                0,
+                9
+              ],
+              "scale": 1.7884231536926147,
+              "rounding_error": [
+                0,
+                0.09780439121756501
+              ],
+              "canvas_to_page_affine": [
+                0.5591517857142857,
+                0,
+                71,
+                0,
+                0.5584415584415584,
+                945.974025974026
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1964,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1586,
+                    "raw_output": "## Section 2: Short answer\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## Section 2: Short answer\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      896,
+                      96
+                    ],
+                    "content_size": [
+                      896,
+                      77
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      9
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.09780439121756501
+                    ],
+                    "scale": 1.7884231536926147,
+                    "token_count": 84
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1586,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## Section 2: Short answer\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 8,
+          "id": "b0011",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0011"
+          ],
+          "bbox": [
+            70,
+            1044,
+            728,
+            1079
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "6. State one reason to check a measurement twice.\n",
+            "resource": "assets/p0001-b0011.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0011",
+            "raw_output": "6. State one reason to check a measurement twice.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 70,
+              "source_crop": "assets/p0001-b0011.png",
+              "source_bbox": [
+                70,
+                1044,
+                728,
+                1079
+              ],
+              "canvas_size": [
+                1120,
+                64
+              ],
+              "content_size": [
+                1120,
+                60
+              ],
+              "pad_offset": [
+                0,
+                2
+              ],
+              "scale": 1.702127659574468,
+              "rounding_error": [
+                0,
+                0.4255319148936181
+              ],
+              "canvas_to_page_affine": [
+                0.5875,
+                0,
+                70,
+                0,
+                0.5833333333333334,
+                1042.8333333333333
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1865,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1574,
+                    "raw_output": "6. State one reason to check a measurement twice.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "6. State one reason to check a measurement twice.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      1120,
+                      64
+                    ],
+                    "content_size": [
+                      1120,
+                      60
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      2
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.4255319148936181
+                    ],
+                    "scale": 1.702127659574468,
+                    "token_count": 70
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1574,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "6. State one reason to check a measurement twice.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        },
+        {
+          "block_order": 9,
+          "id": "b0012",
+          "page_id": "p0001",
+          "type": "text",
+          "source_region_ids": [
+            "r0012"
+          ],
+          "bbox": [
+            71,
+            1149,
+            349,
+            1184
+          ],
+          "coordinate_space": "raster_page",
+          "geometry_granularity": "region",
+          "reading_order_source": "geometry",
+          "status": "ok",
+          "confidence": null,
+          "content": {
+            "format": "markdown",
+            "text": "## End of practice page.\n",
+            "resource": "assets/p0001-b0012.png"
+          },
+          "provenance": {
+            "model_profile": "MNN/3.6.1/PP-DocLayoutV3=5f1a43441d70f6843012b47eb294bed7edd3d0ef2344f0074700a38cb2e29c67/OvisOCR2=f09832b6ee9d63167ef456e83dea7f5df28e3983953e28b0a1e63e598cb45d32/RuntimeConfig=a705a71e115fdd89726a1427c77632d0a2a8292a36431ef4b0b7a10bedf42836",
+            "request_id": "reqr0012",
+            "raw_output": "## End of practice page.\n",
+            "raw_output_base64": null,
+            "text_base64": null,
+            "visual": {
+              "evidence": "image_pad_tokens",
+              "token_count": 69,
+              "source_crop": "assets/p0001-b0012.png",
+              "source_bbox": [
+                71,
+                1149,
+                349,
+                1184
+              ],
+              "canvas_size": [
+                736,
+                96
+              ],
+              "content_size": [
+                736,
+                93
+              ],
+              "pad_offset": [
+                0,
+                1
+              ],
+              "scale": 2.647482014388489,
+              "rounding_error": [
+                0,
+                0.33812949640288537
+              ],
+              "canvas_to_page_affine": [
+                0.37771739130434784,
+                0,
+                71,
+                0,
+                0.3763440860215054,
+                1148.6236559139784
+              ],
+              "stop_reason": "normal"
+            },
+            "recognition": {
+              "attempts": [
+                {
+                  "config": {
+                    "generation_timeout_ms": 120000,
+                    "max_new_tokens": 512,
+                    "visual_max_pixels": 313600,
+                    "visual_min_pixels": 65536
+                  },
+                  "correction": "initial",
+                  "elapsed_ms": 1779,
+                  "index": 1,
+                  "input_visual": null,
+                  "output": {
+                    "error": "",
+                    "error_base64": null,
+                    "finish_reason": "complete",
+                    "generation_elapsed_ms": 1488,
+                    "raw_output": "## End of practice page.\n",
+                    "raw_output_base64": null,
+                    "stop_reason": "normal",
+                    "text": "## End of practice page.\n",
+                    "text_base64": null
+                  },
+                  "visual": {
+                    "canvas_size": [
+                      736,
+                      96
+                    ],
+                    "content_size": [
+                      736,
+                      93
+                    ],
+                    "evidence": "image_pad_tokens",
+                    "pad_offset": [
+                      0,
+                      1
+                    ],
+                    "rounding_error": [
+                      0.0,
+                      0.33812949640288537
+                    ],
+                    "scale": 2.647482014388489,
+                    "token_count": 69
+                  }
+                }
+              ],
+              "configured_generation_budget_ms": 120000,
+              "generation_elapsed_ms": 1488,
+              "max_attempts": 2,
+              "max_total_generation_budget_ms": 240000,
+              "policy": "targeted-retry-v1",
+              "selected_attempt": 1
+            },
+            "assessment": {
+              "policy": "region-output-v1",
+              "state": "ok",
+              "reason": "normal_completion",
+              "finish_reason": "complete",
+              "stop_reason": "normal",
+              "evidence_source": "raw_output",
+              "backend_error": null,
+              "generation_text": "## End of practice page.\n",
+              "nonempty_lines": 1,
+              "empty_number_lines": 0,
+              "repeat_offset": 0,
+              "repeat_unit_bytes": 0,
+              "repeat_count": 0,
+              "repeat_coverage": 0
+            }
+          },
+          "error": null,
+          "error_base64": null
+        }
+      ],
+      "relations": [
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0002",
+          "target_block_id": "b0003",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "heading_precedes",
+          "source_block_id": "b0010",
+          "target_block_id": "b0011",
+          "evidence": "model_heading_and_geometry"
+        },
+        {
+          "type": "caption_of",
+          "source_block_id": "b0008",
+          "target_block_id": "b0005",
+          "evidence": "pre_recognition_geometry"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "asset-b0001",
+      "path": "assets/p0001-b0001.png",
+      "media_type": "image/png",
+      "source_block_id": "b0001",
+      "width": 690,
+      "height": 43,
+      "bbox": [
+        73,
+        60,
+        763,
+        103
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0002",
+      "path": "assets/p0001-b0002.png",
+      "media_type": "image/png",
+      "source_block_id": "b0002",
+      "width": 508,
+      "height": 42,
+      "bbox": [
+        71,
+        171,
+        579,
+        213
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0003",
+      "path": "assets/p0001-b0003.png",
+      "media_type": "image/png",
+      "source_block_id": "b0003",
+      "width": 442,
+      "height": 81,
+      "bbox": [
+        71,
+        268,
+        513,
+        349
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0006",
+      "path": "assets/p0001-b0006.png",
+      "media_type": "image/png",
+      "source_block_id": "b0006",
+      "width": 421,
+      "height": 81,
+      "bbox": [
+        70,
+        429,
+        491,
+        510
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0007",
+      "path": "assets/p0001-b0007.png",
+      "media_type": "image/png",
+      "source_block_id": "b0007",
+      "width": 432,
+      "height": 80,
+      "bbox": [
+        71,
+        609,
+        503,
+        689
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0004",
+      "path": "assets/p0001-b0004.png",
+      "media_type": "image/png",
+      "source_block_id": "b0004",
+      "width": 424,
+      "height": 82,
+      "bbox": [
+        633,
+        269,
+        1057,
+        351
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0005",
+      "path": "assets/p0001-b0005.png",
+      "media_type": "image/png",
+      "source_block_id": "b0005",
+      "width": 325,
+      "height": 216,
+      "bbox": [
+        717,
+        416,
+        1042,
+        632
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0008",
+      "path": "assets/p0001-b0008.png",
+      "media_type": "image/png",
+      "source_block_id": "b0008",
+      "width": 324,
+      "height": 33,
+      "bbox": [
+        714,
+        658,
+        1038,
+        691
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0009",
+      "path": "assets/p0001-b0009.png",
+      "media_type": "image/png",
+      "source_block_id": "b0009",
+      "width": 424,
+      "height": 81,
+      "bbox": [
+        633,
+        739,
+        1057,
+        820
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0010",
+      "path": "assets/p0001-b0010.png",
+      "media_type": "image/png",
+      "source_block_id": "b0010",
+      "width": 501,
+      "height": 43,
+      "bbox": [
+        71,
+        951,
+        572,
+        994
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0011",
+      "path": "assets/p0001-b0011.png",
+      "media_type": "image/png",
+      "source_block_id": "b0011",
+      "width": 658,
+      "height": 35,
+      "bbox": [
+        70,
+        1044,
+        728,
+        1079
+      ],
+      "coordinate_space": "raster_page"
+    },
+    {
+      "id": "asset-b0012",
+      "path": "assets/p0001-b0012.png",
+      "media_type": "image/png",
+      "source_block_id": "b0012",
+      "width": 278,
+      "height": 35,
+      "bbox": [
+        71,
+        1149,
+        349,
+        1184
+      ],
+      "coordinate_space": "raster_page"
+    }
+  ],
+  "markdown": "## Section 1: Measurement\n\n\n1. Measure the length of a pencil.\n\nRecord the answer in centimeters.\n\n\n2. A meter has one hundred centimeters. Convert 2 m to cm.\n\n\n3. Explain why repeated readings can reduce random error.\n\n\n4. The chart shows two readings.\n\nWhich reading is larger?\n\n\n![插图](assets/p0001-b0005.png)\n\nFigure 1. Recorded readings.\n\n\n5. Write the result as a sentence.\n\nInclude the unit in your answer.\n\n\n## Section 2: Short answer\n\n\n6. State one reason to check a measurement twice.\n\n\n## End of practice page.\n\n",
+  "quality": {
+    "anchors": [
+      {
+        "anchor": "Printed Science Practice - Form A",
+        "locations": [
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Section 1: Measurement",
+        "locations": [
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "1. Measure the length of a pencil.",
+        "locations": [
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Record the answer in centimeters.",
+        "locations": [
+          [
+            0,
+            2,
+            36
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "2. A meter has one hundred",
+        "locations": [
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "centimeters. Convert 2 m to cm.",
+        "locations": [
+          [
+            0,
+            3,
+            27
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "3. Explain why repeated readings",
+        "locations": [
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "can reduce random error.",
+        "locations": [
+          [
+            0,
+            4,
+            33
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "4. The chart shows two readings.",
+        "locations": [
+          [
+            0,
+            5,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Which reading is larger?",
+        "locations": [
+          [
+            0,
+            5,
+            34
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Figure 1. Recorded readings.",
+        "locations": [
+          [
+            0,
+            7,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "5. Write the result as a sentence.",
+        "locations": [
+          [
+            0,
+            8,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Include the unit in your answer.",
+        "locations": [
+          [
+            0,
+            8,
+            36
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "Section 2: Short answer",
+        "locations": [
+          [
+            0,
+            9,
+            3
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "6. State one reason to check a measurement twice.",
+        "locations": [
+          [
+            0,
+            10,
+            0
+          ]
+        ],
+        "found": true,
+        "unique": true
+      },
+      {
+        "anchor": "End of practice page.",
+        "locations": [
+          [
+            0,
+            11,
+            3
+          ]
+        ],
+        "found": true,
+        "unique": true
+      }
+    ],
+    "pair_correct": 120,
+    "pair_decidable": 120,
+    "wrong_pairs": [],
+    "missing": []
+  },
+  "content_audit": {
+    "verified": false,
+    "blockers": [
+      "旧回归仅核验已有参考子集，不声明整页逐字正确"
+    ]
+  },
+  "reference_plan": null,
+  "alignment": [],
+  "non_text_evidence": [],
+  "inline_formula_diagnostics": [],
+  "full_character_alignment": "output/issue31-final-20261003/issue31-report.json"
+}
