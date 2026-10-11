@@ -68,8 +68,11 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   "${CMAKE_CURRENT_SOURCE_DIR}/configs/formula-symbols.json")
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/configs/formula-symbols.json" FORMULA_SYMBOLS_JSON)
 configure_file(src/formula_symbols.hpp.in "${CMAKE_CURRENT_BINARY_DIR}/generated/formula_symbols.hpp" @ONLY)
-add_library(dococr_core STATIC src/core.cpp src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/region_structure.cpp src/layout_region_policy.cpp src/label_export_policy.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
-target_sources(dococr_core PRIVATE src/formula_scripts.cpp)
+add_library(dococr_core STATIC src/config.cpp src/sha256.cpp src/layout_preprocess.cpp src/visual_adaptation.cpp src/table_parser.cpp src/output_assessment.cpp src/region_recognition.cpp src/region_structure.cpp src/layout_region_policy.cpp src/label_export_policy.cpp src/markdown.cpp src/pdf_renderer.cpp src/pdf_job.cpp)
+target_sources(dococr_core PRIVATE src/formula_scripts.cpp src/page_plan.cpp
+  src/content_validation.cpp src/block_result.cpp src/document_export.cpp src/layout_filter.cpp
+  src/layout_output.cpp src/image_resources.cpp src/page_identity.cpp src/candidate_review.cpp
+  src/layout_inference.cpp src/page_execution.cpp src/page_pipeline.cpp)
 set_target_properties(dococr_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_include_directories(dococr_core PUBLIC include PRIVATE third_party/stb third_party/nlohmann
   "${CMAKE_CURRENT_BINARY_DIR}/generated")
@@ -130,6 +133,35 @@ if(DOCOCR_BUILD_TESTS)
   add_executable(dococr_contract_test tests/contract.cpp)
   target_link_libraries(dococr_contract_test PRIVATE dococr_c_test)
   add_test(NAME contract COMMAND dococr_contract_test)
+  add_executable(dococr_page_pipeline_test tests/page_pipeline.cpp)
+  target_include_directories(dococr_page_pipeline_test PRIVATE src third_party/nlohmann)
+  target_link_libraries(dococr_page_pipeline_test PRIVATE dococr_core)
+  add_test(NAME page_pipeline COMMAND dococr_page_pipeline_test)
+  add_executable(dococr_page_plan_test tests/page_plan.cpp)
+  target_include_directories(dococr_page_plan_test PRIVATE src)
+  target_link_libraries(dococr_page_plan_test PRIVATE dococr_core)
+  add_test(NAME page_plan COMMAND dococr_page_plan_test)
+  add_executable(dococr_block_result_test tests/block_result.cpp)
+  target_include_directories(dococr_block_result_test PRIVATE src)
+  target_link_libraries(dococr_block_result_test PRIVATE dococr_core)
+  add_test(NAME block_result COMMAND dococr_block_result_test)
+  add_executable(dococr_document_export_test tests/document_export.cpp)
+  target_include_directories(dococr_document_export_test PRIVATE src third_party/nlohmann)
+  target_link_libraries(dococr_document_export_test PRIVATE dococr_core)
+  add_test(NAME document_export COMMAND dococr_document_export_test)
+  add_executable(dococr_layout_filter_test tests/layout_filter.cpp)
+  target_include_directories(dococr_layout_filter_test PRIVATE src)
+  target_link_libraries(dococr_layout_filter_test PRIVATE dococr_core)
+  add_test(NAME layout_filter COMMAND dococr_layout_filter_test)
+  add_executable(dococr_layout_output_test tests/layout_output.cpp)
+  target_include_directories(dococr_layout_output_test PRIVATE src)
+  target_link_libraries(dococr_layout_output_test PRIVATE dococr_core)
+  add_test(NAME layout_output COMMAND dococr_layout_output_test)
+  add_executable(dococr_image_resources_test tests/image_resources.cpp)
+  target_include_directories(dococr_image_resources_test PRIVATE src)
+  target_link_libraries(dococr_image_resources_test PRIVATE dococr_core)
+  add_test(NAME image_resources COMMAND dococr_image_resources_test
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures)
   add_executable(dococr_layout_preprocess_probe tests/layout_preprocess_probe.cpp)
   target_include_directories(dococr_layout_preprocess_probe PRIVATE src)
   target_link_libraries(dococr_layout_preprocess_probe PRIVATE dococr_core)
@@ -238,6 +270,9 @@ if(DOCOCR_BUILD_TESTS)
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli> $<TARGET_FILE:dococr_c_test>)
   add_test(NAME issue26_structure COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue26_structure.py
+    $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
+  add_test(NAME issue27_structure COMMAND ${Python3_EXECUTABLE}
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue27_structure.py
     $<TARGET_FILE:dococr_cli_fixture> $<TARGET_FILE:dococr_cli>)
   add_test(NAME issue26_region_mapping COMMAND ${Python3_EXECUTABLE}
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/issue26_region_mapping.py

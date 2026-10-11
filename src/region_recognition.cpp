@@ -71,4 +71,33 @@ RegionRecognition recognize_region(IInferenceEngine& backend, const Image& crop,
     }
     return result;
 }
+GenericRegionRecognition recognize_generic_region(IInferenceEngine& backend, Image crop, Box source_box,
+    const std::string& type, const std::string& request_id, uint64_t max_new_tokens,
+    bool backend_unavailable, ExecutionContext& context) {
+    GenericRegionRecognition result;
+    result.skipped_after_backend_failure = result.backend_unavailable = backend_unavailable;
+    try {
+        if (backend_unavailable) result.error = "region backend unavailable after prior failure";
+        else if (!backend.reset()) {
+            result.error = "region reset failed";
+            result.reset_failed = result.backend_unavailable = true;
+        } else {
+            result.reset_completed = true;
+            auto recognized = backend.execute({request_id,
+                GenerationRequest{std::move(crop), source_box, type, request_id, max_new_tokens}}, context);
+            if (auto* value = std::get_if<GenerationOutput>(&recognized.payload)) result.output = std::move(*value);
+            else {
+                result.error = "generation response type mismatch";
+                result.backend_unavailable = true;
+            }
+        }
+    } catch (const std::bad_alloc&) { throw; }
+      catch (...) {
+        result.error = "region inference exception";
+        if (!result.reset_completed) result.reset_failed = true;
+        result.backend_unavailable = true;
+    }
+    return result;
+}
+
 }

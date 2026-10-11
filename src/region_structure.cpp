@@ -47,9 +47,9 @@ RegionStructure plan_image_structure(const std::vector<StructureItem>& items,
             const bool above = cap.y1 <= image.y0 + edge_tolerance;
             int gap;
             double offset;
-            if (below || (above && items[c].purpose == LayoutPurpose::Annotation)) {
-                const int overlap = std::min(cap.x1, image.x1) - std::max(cap.x0, image.x0);
-                if (overlap < width(cap) * .5) continue;
+            const int horizontal_overlap = std::min(cap.x1, image.x1) - std::max(cap.x0, image.x0);
+            if ((below || (above && items[c].purpose == LayoutPurpose::Annotation)) &&
+                horizontal_overlap >= width(cap) * .5) {
                 gap = std::max(0, below ? cap.y0 - image.y1 : image.y0 - cap.y1);
                 if (gap > std::max(8, std::min(int(page_height * .04), height(image) / 2))) continue;
                 offset = std::abs((cap.x0 + cap.x1 - image.x0 - image.x1) / 2.);
@@ -57,13 +57,17 @@ RegionStructure plan_image_structure(const std::vector<StructureItem>& items,
                 // Compact side labels such as a subquestion number belong to
                 // the adjacent drawing, not after the entire option row.
                 const int overlap = std::min(cap.y1, image.y1) - std::max(cap.y0, image.y0);
-                if (overlap < height(cap) * .8 || (cap.x1 > image.x0 && cap.x0 < image.x1) ||
+                const bool lower_corner = cap.y0 >= image.y0 && cap.y0 <= image.y1 + edge_tolerance &&
+                    cap.y1 <= image.y1 + height(cap);
+                if ((overlap < height(cap) * .8 && !lower_corner) ||
+                    (cap.x1 > image.x0 && cap.x0 < image.x1) ||
                     width(cap) > std::min(width(image) * .45, page_width * .09) ||
-                    height(cap) > std::max(8, int(height(image) * .3))) continue;
+                    height(cap) > std::max(8, int(height(image) *
+                        (items[c].purpose == LayoutPurpose::Annotation ? .6 : .3)))) continue;
                 gap = cap.x1 <= image.x0 ? image.x0 - cap.x1 : cap.x0 - image.x1;
                 offset = std::abs((cap.y0 + cap.y1 - image.y0 - image.y1) / 2.);
                 if (gap > std::max(8, std::min(int(page_width * .035), width(image) / 2)) ||
-                    offset > height(image) * .3) continue;
+                    offset > height(image) * .5 + height(cap) * .5) continue;
             }
             if (gap < best_gap || (gap == best_gap && offset < best_offset)) {
                 best = i; best_gap = gap; best_offset = offset; tie = false;
@@ -120,7 +124,33 @@ RegionStructure plan_image_structure(const std::vector<StructureItem>& items,
                 item.bbox.x0 <= bounds.x0 + page_width * .05 &&
                 item.bbox.x1 >= bounds.x1 - page_width * .05) common_body = true;
         }
-        if (!(common_body || (row.size() >= 3 && captions >= 2 && width(bounds) >= page_width * .5))) continue;
+        bool aligned_captions = captions == row.size();
+        if (aligned_captions) {
+            const Box first = items[caption_for.at(row.front())].bbox;
+            for (size_t i : row) {
+                const Box cap = items[caption_for.at(i)].bbox;
+                if (items[caption_for.at(i)].purpose != LayoutPurpose::Annotation ||
+                    std::abs(cap.y0 - first.y0) > std::max(2, std::min(height(cap), height(first)) / 4))
+                    aligned_captions = false;
+            }
+        }
+        if (aligned_captions && !common_body) {
+            std::set<size_t> column_bodies;
+            for (size_t image : row) for (size_t body = 0; body < items.size(); ++body) {
+                const auto& item = items[body];
+                if (item.type != "text" || (item.purpose != LayoutPurpose::Body &&
+                                            item.purpose != LayoutPurpose::Heading)) continue;
+                const Box picture = items[image].bbox;
+                const int gap = picture.y0 - item.bbox.y1;
+                if (gap >= 0 && gap <= std::max(12, std::min(int(page_height * .1), height(picture))) &&
+                    item.bbox.x0 >= picture.x0 - page_width * .05 &&
+                    item.bbox.x1 <= picture.x1 + page_width * .05 &&
+                    width(item.bbox) >= width(picture) * .5) column_bodies.insert(body);
+            }
+            if (column_bodies.size() >= 2) aligned_captions = false;
+        }
+        if (!(common_body || (((row.size() >= 3 && captions >= 2) || aligned_captions) &&
+                              width(bounds) >= page_width * .5))) continue;
         ImageGroup group;
         group.id = "images-" + items[row.front()].region_id;
         group.bbox = bounds;
